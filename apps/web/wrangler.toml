@@ -9,9 +9,3 @@ NEXT_PUBLIC_TYPESENSE_URL = "https://uibn03zvateqwdx2p-1.a1.typesense.net"
 [[r2_buckets]]
 binding = "PHOTO_BUCKET"
 bucket_name = "wildphoto-storage"
-
-[[queues.producers]]
-queue = "smugmug-import"
-
-[[queues.consumers]]
-queue = "image-derivatives"

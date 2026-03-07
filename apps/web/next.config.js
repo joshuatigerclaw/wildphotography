@@ -1,12 +1,12 @@
-const withCloudflare = require('@opennextjs/cloudflare').default;
+const { defineCloudflareConfig } = require('@opennextjs/cloudflare');
 
 const nextConfig = {
   reactStrictMode: true,
   transpilePackages: ['@wildphotography/db', '@wildphotography/search', '@wildphotography/smugmug', '@wildphotography/payments'],
-  // Cloudflare-specific config
   images: {
-    unoptimized: true, // Required for Cloudflare Pages
+    unoptimized: true,
   },
+  output: 'standalone',
 };
 
-module.exports = withCloudflare(nextConfig);
+module.exports = defineCloudflareConfig(nextConfig);
