@@ -1,0 +1,7 @@
+name = "wildphotography"
+compatibility_date = "2026-03-07"
+pages_build_output_dir = ".open-next/static-assets"
+
+[vars]
+NEXT_PUBLIC_TYPESENSE_SEARCH_KEY = "Hhg7V2CK3DsS94nZwgEkRzikLnEYiizE"
+NEXT_PUBLIC_TYPESENSE_URL = "https://uibn03zvateqwdx2p-1.a1.typesense.net"
