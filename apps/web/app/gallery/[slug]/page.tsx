@@ -1,35 +1,21 @@
 import Link from 'next/link';
-import MasonryGrid from '../../../components/MasonryGrid';
-
-// Mock data - replace with DB queries
-const galleries = [
-  { id: '1', slug: 'birds', title: 'Birds of Costa Rica', description: 'Stunning photographs of Costa Rica\'s incredible avian diversity.' },
-  { id: '2', slug: 'wildlife', title: 'Wildlife', description: 'Mammals, reptiles, and more from Costa Rica.' },
-  { id: '3', slug: 'landscapes', title: 'Landscapes', description: 'Breathtaking landscapes from volcanic peaks to pristine beaches.' },
-  { id: '4', slug: 'rainforests', title: 'Rainforests', description: 'The lush beauty of Costa Rica\'s tropical rainforests.' },
-];
-
-const mockPhotos: { id: string; slug: string; title: string; thumbUrl: string | null; smallUrl: string | null; mediumUrl: string | null; locationName: string | null }[] = [
-  { id: '1', slug: 'scarlet-macaw', title: 'Scarlet Macaw', thumbUrl: 'https://images.unsplash.com/photo-1552728089-57bdde30beb3?w=400', smallUrl: 'https://images.unsplash.com/photo-1552728089-57bdde30beb3?w=900', mediumUrl: 'https://images.unsplash.com/photo-1552728089-57bdde30beb3?w=1600', locationName: 'Carara' },
-  { id: '2', slug: 'quetzal', title: 'Resplendent Quetzal', thumbUrl: 'https://images.unsplash.com/photo-1555169062-013468b47731?w=400', smallUrl: 'https://images.unsplash.com/photo-1555169062-013468b47731?w=900', mediumUrl: 'https://images.unsplash.com/photo-1555169062-013468b47731?w=1600', locationName: 'Monteverde' },
-  { id: '3', slug: 'toucan', title: 'Keel-billed Toucan', thumbUrl: 'https://images.unsplash.com/photo-1549608276-5786777e6587?w=400', smallUrl: 'https://images.unsplash.com/photo-1549608276-5786777e6587?w=900', mediumUrl: 'https://images.unsplash.com/photo-1549608276-5786777e6587?w=1600', locationName: 'Manuel Antonio' },
-  { id: '4', slug: 'sloth', title: 'Three-toed Sloth', thumbUrl: 'https://images.unsplash.com/photo-1599388167667-4a1122bc13d4?w=400', smallUrl: 'https://images.unsplash.com/photo-1599388167667-4a1122bc13d4?w=900', mediumUrl: 'https://images.unsplash.com/photo-1599388167667-4a1122bc13d4?w=1600', locationName: 'Manuel Antonio' },
-  { id: '5', slug: 'monkey', title: 'Capuchin Monkey', thumbUrl: 'https://images.unsplash.com/photo-1540573133985-87b6da6d54a9?w=400', smallUrl: 'https://images.unsplash.com/photo-1540573133985-87b6da6d54a9?w=900', mediumUrl: 'https://images.unsplash.com/photo-1540573133985-87b6da6d54a9?w=1600', locationName: 'Corcovado' },
-  { id: '6', slug: 'iguana', title: 'Green Iguana', thumbUrl: 'https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=400', smallUrl: 'https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=900', mediumUrl: 'https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=1600', locationName: 'Tortuguero' },
-  { id: '7', slug: 'butterfly', title: 'Blue Morpho', thumbUrl: 'https://images.unsplash.com/photo-1452570053594-1b985d6ea890?w=400', smallUrl: 'https://images.unsplash.com/photo-1452570053594-1b985d6ea890?w=900', mediumUrl: 'https://images.unsplash.com/photo-1452570053594-1b985d6ea890?w=1600', locationName: 'La Selva' },
-  { id: '8', slug: 'owl', title: 'Spectacled Owl', thumbUrl: 'https://images.unsplash.com/photo-1543549790-8b5f4c0283cf?w=400', smallUrl: 'https://images.unsplash.com/photo-1543549790-8b5f4c0283cf?w=900', mediumUrl: 'https://images.unsplash.com/photo-1543549790-8b5f4c0283cf?w=1600', locationName: 'Monteverde' },
-];
+import { db } from '../../../lib/db';
+import { galleries, photos, galleryPhotos } from '../../../lib/schema';
+import { eq, desc, asc } from 'drizzle-orm';
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const gallery = galleries.find(g => g.slug === slug);
-  if (!gallery) return { title: 'Gallery Not Found' };
-  return { title: `${gallery.title} | Wildphotography`, description: gallery.description };
+  const gallery = await db.select().from(galleries).where(eq(galleries.slug, slug)).limit(1);
+  if (!gallery.length) return { title: 'Gallery Not Found' };
+  return { title: `${gallery[0].name} | Wildphotography`, description: gallery[0].description || '' };
 }
 
 export default async function GalleryPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const gallery = galleries.find(g => g.slug === slug);
+  
+  // Get gallery
+  const galleryResult = await db.select().from(galleries).where(eq(galleries.slug, slug)).limit(1);
+  const gallery = galleryResult[0];
   
   if (!gallery) {
     return (
@@ -40,21 +26,79 @@ export default async function GalleryPage({ params }: { params: Promise<{ slug: 
     );
   }
 
+  // Get photos in this gallery
+  const galleryPhotoData = await db
+    .select({
+      photoId: galleryPhotos.photoId,
+      position: galleryPhotos.position,
+    })
+    .from(galleryPhotos)
+    .where(eq(galleryPhotos.galleryId, gallery.id))
+    .orderBy(asc(galleryPhotos.position));
+
+  const photoIds = galleryPhotoData.map(gp => gp.photoId);
+  
+  let galleryPhotosList: any[] = [];
+  if (photoIds.length > 0) {
+    // Use raw query to get photos by IDs in correct order
+    const photoData = await db.execute<any>(`
+      SELECT p.* FROM photos p 
+      WHERE p.id IN (${photoIds.map((_: any, i: number) => `'${photoIds[i]}'`).join(',')})
+    `);
+    
+    // Sort by position
+    const photoMap = new Map(photoData.rows.map((p: any) => [p.id, p]));
+    galleryPhotosList = galleryPhotoData.map(gp => ({
+      ...photoMap.get(gp.photoId),
+      position: gp.position
+    })).sort((a, b) => a.position - b.position);
+  }
+
+  const photoCount = galleryPhotosList.length;
+
   return (
     <div className="container mx-auto px-4 py-8">
       <nav className="text-sm mb-6">
         <Link href="/" className="text-blue-600 hover:underline">Home</Link>
         <span className="mx-2">/</span>
-        <span className="text-gray-600">{gallery.title}</span>
+        <span className="text-gray-600">{gallery.name}</span>
       </nav>
       
       <header className="mb-8">
-        <h1 className="text-4xl font-bold mb-2">{gallery.title}</h1>
+        <h1 className="text-4xl font-bold mb-2">{gallery.name}</h1>
         <p className="text-gray-600 text-lg">{gallery.description}</p>
-        <p className="text-sm text-gray-500 mt-2">{mockPhotos.length} photos</p>
+        <p className="text-sm text-gray-500 mt-2">{photoCount} photos</p>
       </header>
       
-      <MasonryGrid photos={mockPhotos} columns={4} />
+      {photoCount > 0 ? (
+        <div className="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
+          {galleryPhotosList.map((photo: any) => (
+            <Link 
+              key={photo.id} 
+              href={`/photo/${photo.slug}`}
+              className="block break-inside-avoid group"
+            >
+              <div className="relative overflow-hidden rounded-lg">
+                <img
+                  src={photo.smallUrl || photo.thumbUrl || photo.mediumUrl}
+                  alt={photo.title || ''}
+                  className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-300" />
+                <div className="absolute bottom-0 left-0 right-0 p-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <p className="text-white font-medium text-sm">{photo.title}</p>
+                  {photo.locationName && (
+                    <p className="text-white/80 text-xs">{photo.locationName}</p>
+                  )}
+                </div>
+              </div>
+            </Link>
+          ))}
+        </div>
+      ) : (
+        <p className="text-gray-500">No photos in this gallery yet.</p>
+      )}
     </div>
   );
 }

@@ -1,14 +1,34 @@
 import Link from 'next/link';
+import { db } from '../lib/db';
+import { galleries, galleryPhotos } from '../lib/schema';
+import { eq, sql } from 'drizzle-orm';
 
-// Mock data - replace with DB queries later
-const galleries = [
-  { id: '1', slug: 'birds', title: 'Birds of Costa Rica', description: 'Stunning photographs of Costa Rica\'s incredible avian diversity.', photoCount: 150 },
-  { id: '2', slug: 'wildlife', title: 'Wildlife', description: 'Mammals, reptiles, and more from Costa Rica.', photoCount: 120 },
-  { id: '3', slug: 'landscapes', title: 'Landscapes', description: 'Breathtaking landscapes from volcanic peaks to pristine beaches.', photoCount: 85 },
-  { id: '4', slug: 'rainforests', title: 'Rainforests', description: 'The lush beauty of Costa Rica\'s tropical rainforests.', photoCount: 95 },
-];
+export default async function Home() {
+  // Get galleries with photo counts
+  const galleriesData = await db
+    .select({
+      id: galleries.id,
+      slug: galleries.slug,
+      name: galleries.name,
+      description: galleries.description,
+    })
+    .from(galleries)
+    .where(eq(galleries.status, 'public'));
 
-export default function Home() {
+  // Get photo counts for each gallery
+  const galleriesWithCounts = await Promise.all(
+    galleriesData.map(async (gallery) => {
+      const countResult = await db
+        .select({ count: sql<number>`count(*)` })
+        .from(galleryPhotos)
+        .where(eq(galleryPhotos.galleryId, gallery.id));
+      return {
+        ...gallery,
+        photoCount: countResult[0]?.count || 0
+      };
+    })
+  );
+
   return (
     <div className="container mx-auto px-4 py-12">
       <section className="text-center py-16">
@@ -38,7 +58,7 @@ export default function Home() {
       <section className="py-12">
         <h2 className="text-3xl font-bold text-center mb-8">Featured Galleries</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {galleries.map((gallery) => (
+          {galleriesWithCounts.map((gallery) => (
             <Link 
               key={gallery.id}
               href={`/gallery/${gallery.slug}`}
@@ -50,7 +70,7 @@ export default function Home() {
                 </div>
               </div>
               <h3 className="text-lg font-semibold group-hover:text-blue-600 transition">
-                {gallery.title}
+                {gallery.name}
               </h3>
               <p className="text-gray-500 text-sm">
                 {gallery.photoCount} photos

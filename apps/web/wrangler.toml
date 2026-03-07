@@ -1,5 +1,7 @@
 name = "wildphotography-worker"
+main = ".open-next/worker.js"
 compatibility_date = "2024-10-01"
+compatibility_flags = ["nodejs_compat"]
 
 [vars]
 NEXT_PUBLIC_TYPESENSE_SEARCH_KEY = "Hhg7V2CK3DsS94nZwgEkRzikLnEYiizE"

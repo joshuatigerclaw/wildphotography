@@ -13,7 +13,9 @@
     "dev:cloudflare": "wrangler pages dev .open-next/static-assets --binding NEXT_PUBLIC_TYPESENSE_SEARCH_KEY=Hhg7V2CK3DsS94nZwgEkRzikLnEYiizE"
   },
   "dependencies": {
+    "@neondatabase/serverless": "^1.0.2",
     "@opennextjs/cloudflare": "^1.17.1",
+    "drizzle-orm": "^0.45.1",
     "next": "^16.1.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
