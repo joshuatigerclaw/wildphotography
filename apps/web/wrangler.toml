@@ -1,0 +1,6 @@
+name = "wildphotography-worker"
+compatibility_date = "2024-10-01"
+
+[vars]
+NEXT_PUBLIC_TYPESENSE_SEARCH_KEY = "Hhg7V2CK3DsS94nZwgEkRzikLnEYiizE"
+NEXT_PUBLIC_TYPESENSE_URL = "https://uibn03zvateqwdx2p-1.a1.typesense.net"
