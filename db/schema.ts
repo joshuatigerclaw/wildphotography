@@ -1,156 +1,144 @@
-import { pgTable, serial, varchar, text, timestamp, integer, boolean, decimal, jsonb, pgEnum } from 'drizzle-orm/pg-core';
+import { pgTable, uuid, varchar, text, timestamp, integer, numeric, boolean, jsonb, pgEnum, serial, primaryKey } from 'drizzle-orm/pg-core';
 
 // Enums
-export const orderStatusEnum = pgEnum('order_status', ['pending', 'processing', 'completed', 'cancelled', 'refunded']);
-export const fulfillmentStatusEnum = pgEnum('fulfillment_status', ['pending', 'processing', 'shipped', 'delivered', 'failed']);
-export const ingestStatusEnum = pgEnum('ingest_status', ['queued', 'running', 'completed', 'failed']);
+export const statusEnum = pgEnum('status', ['pending', 'processing', 'completed', 'failed', 'cancelled', 'refunded', 'public', 'private']);
+export const orientationEnum = pgEnum('orientation', ['landscape', 'portrait', 'square']);
+export const jobTypeEnum = pgEnum('job_type', ['metadata', 'download', 'derivative', 'index']);
 
 // Photos table
 export const photos = pgTable('photos', {
-  id: serial('id').primaryKey(),
-  title: varchar('title', { length: 255 }),
-  description: text('description'),
-  filename: varchar('filename', { length: 255 }).notNull(),
-  originalFilename: varchar('original_filename', { length: 255 }),
-  imageUrl: varchar('image_url', { length: 500 }),
-  thumbnailUrl: varchar('thumbnail_url', { length: 500 }),
+  id: uuid('id').primaryKey().defaultRandom(),
+  smugmugImageKey: varchar('smugmug_image_key', { length: 255 }).notNull().unique(),
+  title: varchar('title', { length: 500 }),
+  slug: varchar('slug', { length: 500 }).unique(),
+  captionShort: text('caption_short'),
+  descriptionLong: text('description_long'),
+  takenAt: timestamp('taken_at'),
+  uploadedAt: timestamp('uploaded_at'),
+  cameraMake: varchar('camera_make', { length: 100 }),
+  cameraModel: varchar('camera_model', { length: 100 }),
+  lens: varchar('lens', { length: 255 }),
+  focalLengthMm: numeric('focal_length_mm', { precision: 10, scale: 2 }),
+  aperture: numeric('aperture', { precision: 5, scale: 2 }),
+  shutterS: numeric('shutter_s', { precision: 10, scale: 2 }),
+  iso: integer('iso'),
   width: integer('width'),
   height: integer('height'),
-  fileSize: integer('file_size'),
-  mimeType: varchar('mime_type', { length: 50 }),
-  photographer: varchar('photographer', { length: 255 }),
-  location: varchar('location', { length: 255 }),
-  dateTaken: timestamp('date_taken'),
-  dateUploaded: timestamp('date_uploaded').defaultNow(),
-  dateModified: timestamp('date_modified').defaultNow(),
-  isActive: boolean('is_active').default(true),
-  metadata: jsonb('metadata'),
+  orientation: orientationEnum('orientation'),
+  lat: numeric('lat', { precision: 10, scale: 7 }),
+  lon: numeric('lon', { precision: 10, scale: 7 }),
+  locationName: varchar('location_name', { length: 255 }),
+  country: varchar('country', { length: 100 }),
+  status: statusEnum('status').default('public').notNull(),
+  copyrightNotice: text('copyright_notice'),
+  originalR2Key: varchar('original_r2_key', { length: 500 }),
+  thumbR2Key: varchar('thumb_r2_key', { length: 500 }),
+  smallR2Key: varchar('small_r2_key', { length: 500 }),
+  mediumR2Key: varchar('medium_r2_key', { length: 500 }),
+  largeR2Key: varchar('large_r2_key', { length: 500 }),
+  previewR2Key: varchar('preview_r2_key', { length: 500 }),
+  downloadableR2Key: varchar('downloadable_r2_key', { length: 500 }),
+  priceDownload: numeric('price_download', { precision: 10, scale: 2 }),
+  originalStored: boolean('original_stored').default(false).notNull(),
+  createdAt: timestamp('created_at').defaultNow().notNull(),
+  updatedAt: timestamp('updated_at').defaultNow().notNull(),
 });
 
 // Keywords table
 export const keywords = pgTable('keywords', {
-  id: serial('id').primaryKey(),
-  name: varchar('name', { length: 255 }).notNull().unique(),
+  id: uuid('id').primaryKey().defaultRandom(),
+  keyword: varchar('keyword', { length: 255 }).notNull().unique(),
   slug: varchar('slug', { length: 255 }).notNull().unique(),
-  category: varchar('category', { length: 100 }),
-  usageCount: integer('usage_count').default(0),
-  dateCreated: timestamp('date_created').defaultNow(),
+  keywordType: varchar('keyword_type', { length: 50 }),
+  createdAt: timestamp('created_at').defaultNow().notNull(),
 });
 
 // Photo_Keywords junction table
 export const photoKeywords = pgTable('photo_keywords', {
-  id: serial('id').primaryKey(),
-  photoId: integer('photo_id').references(() => photos.id).notNull(),
-  keywordId: integer('keyword_id').references(() => keywords.id).notNull(),
-  confidence: decimal('confidence', { precision: 5, scale: 2 }),
-  dateAssigned: timestamp('date_assigned').defaultNow(),
-});
+  photoId: uuid('photo_id').references(() => photos.id).notNull(),
+  keywordId: uuid('keyword_id').references(() => keywords.id).notNull(),
+}, (t) => ({
+  pk: primaryKey(t.photoId, t.keywordId),
+}));
 
 // Galleries table
 export const galleries = pgTable('galleries', {
-  id: serial('id').primaryKey(),
-  name: varchar('name', { length: 255 }).notNull(),
-  slug: varchar('slug', { length: 255 }).notNull().unique(),
+  id: uuid('id').primaryKey().defaultRandom(),
+  smugmugAlbumKey: varchar('smugmug_album_key', { length: 255 }).unique(),
+  title: varchar('title', { length: 500 }).notNull(),
+  slug: varchar('slug', { length: 500 }).unique(),
   description: text('description'),
-  coverPhotoId: integer('cover_photo_id').references(() => photos.id),
-  parentGalleryId: integer('parent_gallery_id'),
-  sortOrder: integer('sort_order').default(0),
-  isActive: boolean('is_active').default(true),
-  dateCreated: timestamp('date_created').defaultNow(),
-  dateModified: timestamp('date_modified').defaultNow(),
+  coverPhotoId: uuid('cover_photo_id').references(() => photos.id),
+  parentGalleryId: uuid('parent_gallery_id'),
+  status: statusEnum('status').default('public').notNull(),
+  createdAt: timestamp('created_at').defaultNow().notNull(),
+  updatedAt: timestamp('updated_at').defaultNow().notNull(),
 });
 
 // Gallery_Photos junction table
 export const galleryPhotos = pgTable('gallery_photos', {
-  id: serial('id').primaryKey(),
-  galleryId: integer('gallery_id').references(() => galleries.id).notNull(),
-  photoId: integer('photo_id').references(() => photos.id).notNull(),
-  sortOrder: integer('sort_order').default(0),
-  dateAdded: timestamp('date_added').defaultNow(),
-});
+  galleryId: uuid('gallery_id').references(() => galleries.id).notNull(),
+  photoId: uuid('photo_id').references(() => photos.id).notNull(),
+  position: integer('position'),
+}, (t) => ({
+  pk: primaryKey(t.galleryId, t.photoId),
+}));
 
 // Orders table
 export const orders = pgTable('orders', {
-  id: serial('id').primaryKey(),
-  orderNumber: varchar('order_number', { length: 50 }).notNull().unique(),
-  customerEmail: varchar('customer_email', { length: 255 }).notNull(),
-  customerName: varchar('customer_name', { length: 255 }),
-  customerPhone: varchar('customer_phone', { length: 50 }),
-  subtotal: decimal('subtotal', { precision: 10, scale: 2 }),
-  tax: decimal('tax', { precision: 10, scale: 2 }),
-  shipping: decimal('shipping', { precision: 10, scale: 2 }),
-  total: decimal('total', { precision: 10, scale: 2 }).notNull(),
-  status: orderStatusEnum('status').default('pending'),
-  notes: text('notes'),
-  metadata: jsonb('metadata'),
-  dateCreated: timestamp('date_created').defaultNow(),
-  dateModified: timestamp('date_modified').defaultNow(),
+  id: uuid('id').primaryKey().defaultRandom(),
+  email: varchar('email', { length: 255 }).notNull(),
+  status: statusEnum('status').default('pending').notNull(),
+  paypalOrderId: varchar('paypal_order_id', { length: 100 }).unique(),
+  amountCents: integer('amount_cents').notNull(),
+  currency: varchar('currency', { length: 3 }).default('USD').notNull(),
+  createdAt: timestamp('created_at').defaultNow().notNull(),
+  updatedAt: timestamp('updated_at').defaultNow().notNull(),
 });
 
 // Order_Items table
 export const orderItems = pgTable('order_items', {
-  id: serial('id').primaryKey(),
-  orderId: integer('order_id').references(() => orders.id).notNull(),
-  photoId: integer('photo_id').references(() => photos.id),
-  productType: varchar('product_type', { length: 100 }).notNull(),
-  productName: varchar('product_name', { length: 255 }).notNull(),
-  quantity: integer('quantity').default(1),
-  unitPrice: decimal('unit_price', { precision: 10, scale: 2 }).notNull(),
-  totalPrice: decimal('total_price', { precision: 10, scale: 2 }).notNull(),
-  licenseType: varchar('license_type', { length: 50 }),
-  downloadUrl: varchar('download_url', { length: 500 }),
-  dateCreated: timestamp('date_created').defaultNow(),
+  id: uuid('id').primaryKey().defaultRandom(),
+  orderId: uuid('order_id').references(() => orders.id).notNull(),
+  photoId: uuid('photo_id').references(() => photos.id),
+  sku: varchar('sku', { length: 100 }).notNull(),
+  unitAmountCents: integer('unit_amount_cents').notNull(),
 });
 
 // Fulfillments table
 export const fulfillments = pgTable('fulfillments', {
-  id: serial('id').primaryKey(),
-  orderId: integer('order_id').references(() => orders.id).notNull(),
-  orderItemId: integer('order_item_id').references(() => orderItems.id),
-  status: fulfillmentStatusEnum('status').default('pending'),
-  trackingNumber: varchar('tracking_number', { length: 100 }),
-  trackingUrl: varchar('tracking_url', { length: 500 }),
-  carrier: varchar('carrier', { length: 100 }),
-  dateShipped: timestamp('date_shipped'),
-  dateDelivered: timestamp('date_delivered'),
-  notes: text('notes'),
-  metadata: jsonb('metadata'),
-  dateCreated: timestamp('date_created').defaultNow(),
-  dateModified: timestamp('date_modified').defaultNow(),
+  id: uuid('id').primaryKey().defaultRandom(),
+  orderId: uuid('order_id').references(() => orders.id).notNull(),
+  downloadToken: varchar('download_token', { length: 255 }).unique().notNull(),
+  expiresAt: timestamp('expires_at').notNull(),
+  maxDownloads: integer('max_downloads').default(5).notNull(),
+  downloadCount: integer('download_count').default(0).notNull(),
 });
 
 // Ingest_Runs table
 export const ingestRuns = pgTable('ingest_runs', {
-  id: serial('id').primaryKey(),
-  runNumber: integer('run_number'),
-  source: varchar('source', { length: 100 }).notNull(),
-  status: ingestStatusEnum('status').default('queued'),
-  photosProcessed: integer('photos_processed').default(0),
-  photosImported: integer('photos_imported').default(0),
-  photosSkipped: integer('photos_skipped').default(0),
-  photosFailed: integer('photos_failed').default(0),
-  errors: jsonb('errors'),
-  dateStarted: timestamp('date_started'),
-  dateCompleted: timestamp('date_completed'),
-  dateCreated: timestamp('date_created').defaultNow(),
+  id: uuid('id').primaryKey().defaultRandom(),
+  source: varchar('source', { length: 50 }).notNull(),
+  status: statusEnum('status').default('pending').notNull(),
+  startedAt: timestamp('started_at').defaultNow().notNull(),
+  endedAt: timestamp('ended_at'),
+  statsJson: jsonb('stats_json'),
 });
 
 // Ingest_Jobs table
 export const ingestJobs = pgTable('ingest_jobs', {
-  id: serial('id').primaryKey(),
-  runId: integer('run_id').references(() => ingestRuns.id),
-  sourceId: varchar('source_id', { length: 255 }),
-  sourceUrl: varchar('source_url', { length: 500 }),
-  status: ingestStatusEnum('status').default('queued'),
-  photoId: integer('photo_id').references(() => photos.id),
-  errorMessage: text('error_message'),
-  retryCount: integer('retry_count').default(0),
-  dateStarted: timestamp('date_started'),
-  dateCompleted: timestamp('date_completed'),
-  dateCreated: timestamp('date_created').defaultNow(),
+  id: uuid('id').primaryKey().defaultRandom(),
+  ingestRunId: uuid('ingest_run_id').references(() => ingestRuns.id),
+  jobType: jobTypeEnum('job_type').notNull(),
+  sourceKey: varchar('source_key', { length: 255 }),
+  status: statusEnum('status').default('pending').notNull(),
+  attempts: integer('attempts').default(0).notNull(),
+  lastError: text('last_error'),
+  createdAt: timestamp('created_at').defaultNow().notNull(),
+  updatedAt: timestamp('updated_at').defaultNow().notNull(),
 });
 
-// Type exports for queries
+// Type exports
 export type Photo = typeof photos.$inferSelect;
 export type NewPhoto = typeof photos.$inferInsert;
 export type Keyword = typeof keywords.$inferSelect;
