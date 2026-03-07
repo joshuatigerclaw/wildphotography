@@ -1,31 +1,26 @@
 {
   "name": "wildphotography",
   "private": true,
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ],
   "scripts": {
-    "build": "turbo build",
-    "dev": "turbo dev",
-    "lint": "turbo lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "db:push": "turbo db:push",
-    "db:generate": "turbo db:generate",
-    "search:sync": "turbo search:sync"
+    "dev": "cd apps/web && npm run dev",
+    "build": "cd apps/web && npm run build",
+    "build:worker": "cd apps/web && npm run build:worker",
+    "deploy": "cd apps/web && npm run deploy"
   },
   "devDependencies": {
+    "drizzle-kit": "^0.31.9",
     "prettier": "^3.0.0",
-    "turbo": "^2.0.0",
     "typescript": "^5.3.0"
   },
-  "packageManager": "npm@10.0.0",
   "dependencies": {
+    "@neondatabase/serverless": "^1.0.2",
+    "autoprefixer": "^10.4.27",
+    "drizzle-orm": "^0.45.1",
     "next": "^16.1.6",
+    "postcss": "^8.5.8",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
-    "react-window": "^2.2.7",
-    "tailwindcss": "^4.2.1",
-    "typesense-instantsearch-adapter": "^2.9.0"
+    "react-virtuoso": "^4.18.3",
+    "tailwindcss": "^3.4.19"
   }
 }
