@@ -13,22 +13,22 @@ export default function Home() {
         </p>
         <div className="flex gap-4 justify-center">
           <Link 
-            href="/galleries" 
+            href="/search" 
             className="px-6 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition"
           >
-            View Galleries
+            Search Photos
           </Link>
           <Link 
-            href="/shop" 
+            href="/galleries" 
             className="px-6 py-3 border border-gray-300 rounded-lg hover:bg-gray-50 transition"
           >
-            Shop Prints
+            Browse Galleries
           </Link>
         </div>
       </section>
 
       <section className="py-16">
-        <h2 className="text-3xl font-bold text-center mb-12">Featured Collections</h2>
+        <h2 className="text-3xl font-bold text-center mb-12">Featured Galleries</h2>
         <div className="grid md:grid-cols-3 gap-8">
           {[
             { name: 'Birds of Costa Rica', slug: 'birds', count: 150 },
@@ -37,7 +37,7 @@ export default function Home() {
           ].map((gallery) => (
             <Link 
               key={gallery.slug}
-              href={`/galleries/${gallery.slug}`}
+              href={`/g/${gallery.slug}`}
               className="group block"
             >
               <div className="aspect-video bg-gray-200 rounded-lg mb-4 overflow-hidden">
