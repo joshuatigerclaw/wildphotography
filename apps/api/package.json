@@ -1,0 +1,17 @@
+{
+  "name": "@wildphotography/api",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy"
+  },
+  "dependencies": {
+    "@wildphotography/db": "workspace:*",
+    "@wildphotography/search": "workspace:*",
+    "@wildphotography/shared": "workspace:*"
+  },
+  "devDependencies": {
+    "wrangler": "^3.0.0"
+  }
+}

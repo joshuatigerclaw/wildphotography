@@ -3,14 +3,43 @@ compatibility_date = "2024-10-01"
 pages_build_output_dir = ".open-next/static-assets"
 
 [vars]
-# These are set as plain text vars (not secrets)
-# For production, use Cloudflare Dashboard or WAF for sensitive values
 NEXT_PUBLIC_TYPESENSE_SEARCH_KEY = "Hhg7V2CK3DsS94nZwgEkRzikLnEYiizE"
 NEXT_PUBLIC_TYPESENSE_URL = "https://uibn03zvateqwdx2p-1.a1.typesense.net"
 
-# These should be set as secrets in production
-# DATABASE_URL will be passed at runtime via environment
-
+# R2 bucket for photo storage
 [[r2_buckets]]
 binding = "PHOTO_BUCKET"
 bucket_name = "wildphoto-storage"
+
+# Queues for importer pipeline
+# Note: Queues will be created via wrangler CLI after Workers are set up
+# [[queues.producers]]
+#   binding = "SMUGMUG_METADATA"
+#   queue = "smugmug-metadata"
+
+# [[queues.producers]]
+#   binding = "SMUGMUG_DOWNLOAD"
+#   queue = "smugmug-download"
+
+# [[queues.producers]]
+#   binding = "TYPESENSE_INDEX"
+#   queue = "typesense-index"
+
+# Queue consumers (for workers)
+# [[queues.consumers]]
+#   binding = "SMUGMUG_METADATA"
+#   queue = "smugmug-metadata"
+
+# [[queues.consumers]]
+#   binding = "SMUGMUG_DOWNLOAD"
+#   queue = "smugmug-download"
+
+# [[queues.consumers]]
+#   binding = "TYPESENSE_INDEX"
+#   queue = "typesense-index"
+
+# Database (for Workers with D1/Neon)
+# [[d1_databases]]
+#   binding = "DATABASE"
+#   database_name = "wildphotography"
+#   database_id = "your-d1-database-id"
