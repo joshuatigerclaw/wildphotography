@@ -2,38 +2,58 @@
  * Media URL Generation
  * 
  * Centralized utility for generating media URLs.
- * This can be updated to point to the final production domain.
  * 
- * PRODUCTION: media.wildphotography.com (via Worker)
- * DEVELOPMENT: localhost:8787 (local Worker)
+ * IMPORTANT:
+ * - All URLs generated here are for PUBLIC derivative assets only
+ * - Originals are NEVER exposed - we store original_r2_key internally
+ * - Downloads are PROTECTED (require signed URLs/auth)
+ * 
+ * Production: media.wildphotography.com (via Worker)
+ * Development: localhost:8787 (local Worker)
  */
 
 const config = {
-  // Production: Use Worker-based delivery
-  // This will be: https://media.wildphotography.com
-  baseUrl: process.env.MEDIA_BASE_URL || 'https://wildphotography-media.josh.workers.dev',
-  
-  // Fallback for direct R2 access (if Worker not available)
-  fallbackBaseUrl: 'https://wildphoto-storage.r2.cloudflarestorage.com',
+  // Central configuration - update this to switch domains
+  mediaBaseUrl: process.env.MEDIA_BASE_URL || 'https://wildphotography-media.josh.workers.dev',
 };
 
 /**
  * Generate media URLs for different sizes
- * All URLs use derivative paths only - originals are never exposed
+ * 
+ * @param filename - Original filename (e.g., "scarlet-macaw.jpg")
+ * @returns Object with derivative URLs for each size
+ * 
+ * Note: preview, large are derivatives - NOT originals
+ * Downloads are NOT included in public URLs
  */
 export function getMediaUrls(filename: string): MediaUrls {
-  // Extract base name without extension
   const baseName = filename.replace(/\.[^/.]+$/, '');
-  const ext = filename.split('.').pop() || 'jpg';
+  const ext = 'jpg';
+  const base = `${config.mediaBaseUrl}/derivatives`;
   
   return {
-    thumb: `${config.baseUrl}/derivatives/thumbs/${baseName}-thumb.${ext}`,
-    small: `${config.baseUrl}/derivatives/small/${baseName}-small.${ext}`,
-    medium: `${config.baseUrl}/derivatives/medium/${baseName}-medium.${ext}`,
-    large: `${config.baseUrl}/derivatives/large/${baseName}-large.${ext}`,
-    preview: `${config.baseUrl}/derivatives/preview/${baseName}-preview.${ext}`,
-    download: `${config.baseUrl}/downloads/${baseName}-download.${ext}`,
+    // Public derivatives
+    thumb: `${base}/thumbs/${baseName}-thumb.${ext}`,
+    small: `${base}/small/${baseName}-small.${ext}`,
+    medium: `${base}/medium/${baseName}-medium.${ext}`,
+    large: `${base}/large/${baseName}-large.${ext}`,
+    preview: `${base}/preview/${baseName}-preview.${ext}`,
+    
+    // Downloads NOT exposed - protected by Worker
   };
+}
+
+/**
+ * Generate original storage key (internal use only)
+ * 
+ * This stores the R2 key for the original file.
+ * NEVER exposed through public APIs.
+ * 
+ * @param filename - Original filename
+ * @returns R2 key for original file
+ */
+export function getOriginalR2Key(filename: string): string {
+  return `originals/${filename}`;
 }
 
 /**
@@ -50,23 +70,37 @@ export interface MediaUrls {
   medium: string;
   large: string;
   preview: string;
-  download: string;
+  // downloads: string;  // NOT exposed - protected
 }
 
-export type MediaSize = 'thumb' | 'small' | 'medium' | 'large' | 'preview' | 'download';
+export type MediaSize = 'thumb' | 'small' | 'medium' | 'large' | 'preview';
 
 /**
- * Check if a path is a derivative (publicly accessible)
+ * Check if a path is a derivative (publicly accessible via Worker)
  */
 export function isDerivativePath(path: string): boolean {
-  return path.startsWith('derivatives/') || path.startsWith('downloads/');
+  return path.startsWith('derivatives/');
 }
 
 /**
- * Check if a path is an original (private)
+ * Check if a path is an original (private - never accessible)
  */
 export function isOriginalPath(path: string): boolean {
   return path.startsWith('originals/');
 }
 
-export default { getMediaUrls, getMediaUrl, isDerivativePath, isOriginalPath };
+/**
+ * Check if a path is a download (protected - requires auth)
+ */
+export function isDownloadPath(path: string): boolean {
+  return path.startsWith('downloads/');
+}
+
+export default { 
+  getMediaUrls, 
+  getMediaUrl, 
+  getOriginalR2Key,
+  isDerivativePath, 
+  isOriginalPath,
+  isDownloadPath 
+};

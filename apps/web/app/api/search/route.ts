@@ -49,7 +49,7 @@ export async function GET(request: NextRequest) {
         page,
         per_page: perPage,
         facet_by: ['keywords', 'gallery', 'location', 'orientation', 'camera_model', 'lens', 'taken_year'],
-        include_fields: 'id,slug,title,thumb_url,small_url,medium_url,large_url,keywords,gallery,location,taken_year',
+        include_fields: 'id,slug,title,thumb_url,small_url,medium_url,large_url,preview_url,keywords,gallery,location,taken_year',
       });
 
     // Transform to API response format
@@ -62,6 +62,7 @@ export async function GET(request: NextRequest) {
         smallUrl: hit.document.small_url,
         mediumUrl: hit.document.medium_url,
         largeUrl: hit.document.large_url,
+        previewUrl: hit.document.preview_url,
         keywords: hit.document.keywords,
         locationName: hit.document.location,
         gallery: hit.document.gallery,

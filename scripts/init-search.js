@@ -16,15 +16,18 @@ const MEDIA_BASE_URL = process.env.MEDIA_BASE_URL || 'https://wildphotography-me
 
 function buildUrls(filename) {
   const baseName = filename.replace(/\.[^/.]+$/, '');
-  const ext = 'jpg'; // Default extension
+  const ext = 'jpg';
   
   return {
+    // Public derivatives
     thumb_url: `${MEDIA_BASE_URL}/derivatives/thumbs/${baseName}-thumb.${ext}`,
     small_url: `${MEDIA_BASE_URL}/derivatives/small/${baseName}-small.${ext}`,
     medium_url: `${MEDIA_BASE_URL}/derivatives/medium/${baseName}-medium.${ext}`,
     large_url: `${MEDIA_BASE_URL}/derivatives/large/${baseName}-large.${ext}`,
-    // Original URL - stored but NEVER exposed via API
-    original_url: `private:originals/${filename}`,
+    preview_url: `${MEDIA_BASE_URL}/derivatives/preview/${baseName}-preview.${ext}`,
+    
+    // Private: Original R2 key - NEVER exposed via API
+    original_r2_key: `originals/${filename}`,
   };
 }
 
