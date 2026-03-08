@@ -1,19 +1,22 @@
-const { Client } = require('typesense');
+/**
+ * Cloudflare R2 Storage Path Configuration
+ * 
+ * All image URLs follow this structure:
+ * - Originals:     originals/{filename}         (PRIVATE)
+ * - Thumbnails:   derivatives/thumbs/{filename}   (PUBLIC)
+ * - Small:        derivatives/small/{filename}   (PUBLIC)
+ * - Medium:       derivatives/medium/{filename}  (PUBLIC)
+ * - Large:        derivatives/large/{filename}   (PUBLIC)
+ * - Preview:      derivatives/preview/{filename}  (PUBLIC)
+ * - Downloads:    downloads/{filename}           (PUBLIC)
+ */
 
-const client = new Client({
-  nodes: [{
-    host: 'uibn03zvateqwdx2p-1.a1.typesense.net',
-    port: 443,
-    protocol: 'https',
-  }],
-  apiKey: 'MPphr9zDlLzHRFQHDH4AyQb5hw2ugew7',
-});
-
-// R2 Configuration
 const R2_PUBLIC_URL = process.env.R2_PUBLIC_URL || 'https://wildphotography-media.example.com';
 
-function buildUrls(filename) {
+function buildUrls(filename: string) {
+  // Extract base name without extension
   const baseName = filename.replace(/\.[^/.]+$/, '');
+  
   return {
     thumb_url: `${R2_PUBLIC_URL}/derivatives/thumbs/${baseName}-thumb.jpg`,
     small_url: `${R2_PUBLIC_URL}/derivatives/small/${baseName}-small.jpg`,
@@ -23,7 +26,7 @@ function buildUrls(filename) {
   };
 }
 
-// Sample photos with R2 paths - ONLY DERIVATIVES ARE PUBLIC
+// Sample photos with R2-style URLs
 const samplePhotos = [
   {
     id: '1',
@@ -185,72 +188,5 @@ const samplePhotos = [
   },
 ];
 
-async function initSearch() {
-  console.log('Initializing Typesense search with R2 paths...');
-  
-  try {
-    // Delete existing collection
-    try {
-      await client.collections('photos').delete();
-      console.log('Deleted existing collection');
-    } catch (e) {
-      // Collection doesn't exist
-    }
-    
-    // Create collection with schema
-    const schema = {
-      name: 'photos',
-      fields: [
-        { name: 'id', type: 'string', facet: false },
-        { name: 'slug', type: 'string', facet: false },
-        { name: 'title', type: 'string', facet: false },
-        { name: 'description', type: 'string', facet: false, optional: true },
-        // Image URLs - all derivative paths (public)
-        { name: 'thumb_url', type: 'string', facet: false, optional: true },
-        { name: 'small_url', type: 'string', facet: false, optional: true },
-        { name: 'medium_url', type: 'string', facet: false, optional: true },
-        { name: 'large_url', type: 'string', facet: false, optional: true },
-        // Original URL - stored but never exposed via API
-        { name: 'original_url', type: 'string', facet: false, optional: true },
-        // Facets
-        { name: 'keywords', type: 'string[]', facet: true, optional: true },
-        { name: 'gallery', type: 'string', facet: true, optional: true },
-        { name: 'gallery_id', type: 'string', facet: true, optional: true },
-        { name: 'location', type: 'string', facet: true, optional: true },
-        { name: 'orientation', type: 'string', facet: true, optional: true },
-        { name: 'camera_model', type: 'string', facet: true, optional: true },
-        { name: 'lens', type: 'string', facet: true, optional: true },
-        { name: 'taken_year', type: 'int32', facet: true, optional: true },
-        { name: 'taken_month', type: 'int32', facet: true, optional: true },
-        { name: 'date_taken', type: 'int64', facet: false, optional: true },
-        { name: 'date_uploaded', type: 'int64', facet: false, optional: true },
-        { name: 'popularity', type: 'int32', facet: false, optional: true },
-        { name: 'width', type: 'int32', facet: false, optional: true },
-        { name: 'height', type: 'int32', facet: false, optional: true },
-      ]
-    };
-    
-    const result = await client.collections().create(schema);
-    console.log('Collection created:', result.name);
-    
-    // Import documents
-    const importResult = await client.collections('photos').documents().import(samplePhotos, { action: 'emplace' });
-    console.log('Indexed', importResult.length, 'photos');
-    console.log('All successful:', importResult.every((r) => r.success));
-    
-    console.log('\n✅ R2 Storage Paths:');
-    console.log('  - originals/           (PRIVATE)');
-    console.log('  - derivatives/thumbs/  (PUBLIC)');  
-    console.log('  - derivatives/small/   (PUBLIC)');
-    console.log('  - derivatives/medium/  (PUBLIC)');
-    console.log('  - derivatives/large/   (PUBLIC)');
-    console.log('  - downloads/           (PUBLIC)');
-    console.log('\n✅ UI only exposes derivative URLs');
-    console.log('✅ Originals remain private');
-    
-  } catch (error) {
-    console.error('Error:', error);
-  }
-}
-
-initSearch();
+// Export for use in other modules
+module.exports = { samplePhotos, buildUrls, R2_PUBLIC_URL };
