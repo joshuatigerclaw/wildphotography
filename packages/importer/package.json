@@ -1,0 +1,16 @@
+{
+  "name": "@wildphotography/importer",
+  "version": "0.1.0",
+  "main": "src/smugmug.ts",
+  "scripts": {
+    "import": "npx ts-node src/smugmug.ts import"
+  },
+  "dependencies": {
+    "@neondatabase/serverless": "^0.9.0",
+    "typesense": "^3.0.2"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.0",
+    "typescript": "^5.3.0"
+  }
+}
