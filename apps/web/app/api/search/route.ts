@@ -1,60 +1,83 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { Client } from 'typesense';
+
+const typesense = new Client({
+  nodes: [{
+    host: 'uibn03zvateqwdx2p-1.a1.typesense.net',
+    port: 443,
+    protocol: 'https',
+  }],
+  apiKey: process.env.TYPESENSE_SEARCH_KEY || 'Hhg7V2CK3DsS94nZwgEkRzikLnEYiizE',
+});
+
+const COLLECTION = 'photos';
 
 export const dynamic = 'force-dynamic';
 
-// Mock search data
-const mockPhotos = [
-  { id: '1', slug: 'scarlet-macaw', title: 'Scarlet Macaw', thumbUrl: 'https://images.unsplash.com/photo-1552728089-57bdde30beb3?w=400', smallUrl: 'https://images.unsplash.com/photo-1552728089-57bdde30beb3?w=800', mediumUrl: 'https://images.unsplash.com/photo-1552728089-57bdde30beb3?w=1200', largeUrl: 'https://images.unsplash.com/photo-1552728089-57bdde30beb3', locationName: 'Carara', keywords: ['macaw', 'parrot', 'tropical', 'bird'] },
-  { id: '2', slug: 'quetzal', title: 'Resplendent Quetzal', thumbUrl: 'https://images.unsplash.com/photo-1555169062-013468b47731?w=400', smallUrl: 'https://images.unsplash.com/photo-1555169062-013468b47731?w=800', mediumUrl: 'https://images.unsplash.com/photo-1555169062-013468b47731?w=1200', largeUrl: 'https://images.unsplash.com/photo-1555169062-013468b47731', locationName: 'Monteverde', keywords: ['quetzal', 'bird', 'cloud-forest'] },
-  { id: '3', slug: 'toucan', title: 'Keel-billed Toucan', thumbUrl: 'https://images.unsplash.com/photo-1549608276-5786777e6587?w=400', smallUrl: 'https://images.unsplash.com/photo-1549608276-5786777e6587?w=800', mediumUrl: 'https://images.unsplash.com/photo-1549608276-5786777e6587?w=1200', largeUrl: 'https://images.unsplash.com/photo-1549608276-5786777e6587', locationName: 'Manuel Antonio', keywords: ['toucan', 'tropical', 'bird'] },
-  { id: '4', slug: 'sloth', title: 'Three-toed Sloth', thumbUrl: 'https://images.unsplash.com/photo-1599388167667-4a1122bc13d4?w=400', smallUrl: 'https://images.unsplash.com/photo-1599388167667-4a1122bc13d4?w=800', mediumUrl: 'https://images.unsplash.com/photo-1599388167667-4a1122bc13d4?w=1200', largeUrl: 'https://images.unsplash.com/photo-1599388167667-4a1122bc13d4', locationName: 'Manuel Antonio', keywords: ['sloth', 'mammal', 'wildlife'] },
-  { id: '5', slug: 'monkey', title: 'Capuchin Monkey', thumbUrl: 'https://images.unsplash.com/photo-1540573133985-87b6da6d54a9?w=400', smallUrl: 'https://images.unsplash.com/photo-1540573133985-87b6da6d54a9?w=800', mediumUrl: 'https://images.unsplash.com/photo-1540573133985-87b6da6d54a9?w=1200', largeUrl: 'https://images.unsplash.com/photo-1540573133985-87b6da6d54a9', locationName: 'Corcovado', keywords: ['monkey', 'primate', 'wildlife'] },
-  { id: '6', slug: 'iguana', title: 'Green Iguana', thumbUrl: 'https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=400', smallUrl: 'https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=800', mediumUrl: 'https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=1200', largeUrl: 'https://images.unsplash.com/photo-1558642452-9d2a7deb7f62', locationName: 'Tortuguero', keywords: ['iguana', 'reptile', 'tropical'] },
-  { id: '7', slug: 'butterfly', title: 'Blue Morpho', thumbUrl: 'https://images.unsplash.com/photo-1452570053594-1b985d6ea890?w=400', smallUrl: 'https://images.unsplash.com/photo-1452570053594-1b985d6ea890?w=800', mediumUrl: 'https://images.unsplash.com/photo-1452570053594-1b985d6ea890?w=1200', largeUrl: 'https://images.unsplash.com/photo-1452570053594-1b985d6ea890', locationName: 'La Selva', keywords: ['butterfly', 'morpho', 'insect'] },
-  { id: '8', slug: 'owl', title: 'Spectacled Owl', thumbUrl: 'https://images.unsplash.com/photo-1543549790-8b5f4c0283cf?w=400', smallUrl: 'https://images.unsplash.com/photo-1543549790-8b5f4c0283cf?w=800', mediumUrl: 'https://images.unsplash.com/photo-1543549790-8b5f4c0283cf?w=1200', largeUrl: 'https://images.unsplash.com/photo-1543549790-8b5f4c0283cf', locationName: 'Monteverde', keywords: ['owl', 'bird', 'nocturnal'] },
-  { id: '9', slug: 'toucan-barbet', title: 'Toucan Barbet', thumbUrl: 'https://images.unsplash.com/photo-1557166983-593964444d89?w=400', smallUrl: 'https://images.unsplash.com/photo-1557166983-593964444d89?w=800', mediumUrl: 'https://images.unsplash.com/photo-1557166983-593964444d89?w=1200', largeUrl: 'https://images.unsplash.com/photo-1557166983-593964444d89', locationName: 'Costa Rica', keywords: ['toucan', 'barbet', 'bird'] },
-  { id: '10', slug: 'hummingbird', title: 'Rufous-tailed Hummingbird', thumbUrl: 'https://images.unsplash.com/photo-1551085254-e96b210db58a?w=400', smallUrl: 'https://images.unsplash.com/photo-1551085254-e96b210db58a?w=800', mediumUrl: 'https://images.unsplash.com/photo-1551085254-e96b210db58a?w=1200', largeUrl: 'https://images.unsplash.com/photo-1551085254-e96b210db58a', locationName: 'Costa Rica', keywords: ['hummingbird', 'bird', 'tiny'] },
-];
-
-function searchPhotos(query: string): typeof mockPhotos {
-  const q = query.toLowerCase();
-  return mockPhotos.filter(photo => 
-    photo.title.toLowerCase().includes(q) ||
-    photo.locationName?.toLowerCase().includes(q) ||
-    photo.keywords.some(k => k.toLowerCase().includes(q))
-  );
-}
-
 export async function GET(request: NextRequest) {
   const searchParams = request.nextUrl.searchParams;
-  const query = searchParams.get('q') || '';
-  const limit = parseInt(searchParams.get('limit') || '50', 10);
-  const offset = parseInt(searchParams.get('offset') || '0', 10);
-
-  if (!query.trim()) {
-    return NextResponse.json({
-      photos: [],
-      total: 0,
-      hasMore: false,
-    });
-  }
+  const query = searchParams.get('q') || '*';
+  const page = parseInt(searchParams.get('page') || '1', 10);
+  const perPage = parseInt(searchParams.get('per_page') || searchParams.get('limit') || '50', 10);
+  
+  // Filter parameters
+  const gallery = searchParams.get('gallery');
+  const location = searchParams.get('location');
+  const camera = searchParams.get('camera');
+  const year = searchParams.get('year');
+  const orientation = searchParams.get('orientation');
+  
+  // Build filter_by
+  const filters: string[] = [];
+  if (gallery) filters.push(`gallery:=${gallery}`);
+  if (location) filters.push(`location:=${location}`);
+  if (camera) filters.push(`camera_model:=${camera}`);
+  if (year) filters.push(`taken_year:=${year}`);
+  if (orientation) filters.push(`orientation:=${orientation}`);
+  
+  const filterBy = filters.length > 0 ? filters.join(' && ') : undefined;
 
   try {
-    // Search in mock data (replace with DB query in production)
-    const results = searchPhotos(query);
-    const total = results.length;
-    const hasMore = offset + limit < total;
-    const photos = results.slice(offset, offset + limit);
+    const searchResult = await typesense
+      .collections(COLLECTION)
+      .documents()
+      .search({
+        q: query === '*' || !query ? '*' : query,
+        query_by: 'title,description,keywords,location,gallery',
+        filter_by: filterBy,
+        sort_by: 'date_uploaded:desc',
+        page,
+        per_page: perPage,
+        facet_by: ['keywords', 'gallery', 'location', 'orientation', 'camera_model', 'lens', 'taken_year'],
+        include_fields: 'id,slug,title,thumb_url,small_url,medium_url,large_url,keywords,gallery,location,taken_year',
+      });
 
-    return NextResponse.json({
-      photos,
-      total,
-      hasMore,
-    });
+    // Transform to API response format
+    const response = {
+      photos: (searchResult.hits || []).map((hit: any) => ({
+        id: hit.document.id,
+        slug: hit.document.slug,
+        title: hit.document.title,
+        thumbUrl: hit.document.thumb_url,
+        smallUrl: hit.document.small_url,
+        mediumUrl: hit.document.medium_url,
+        largeUrl: hit.document.large_url,
+        keywords: hit.document.keywords,
+        locationName: hit.document.location,
+        gallery: hit.document.gallery,
+        takenYear: hit.document.taken_year,
+      })),
+      total: searchResult.found || 0,
+      page: searchResult.page || page,
+      per_page: perPage,
+      hasMore: (searchResult.page || page) * perPage < (searchResult.found || 0),
+    };
+
+    return NextResponse.json(response);
   } catch (error) {
     console.error('Search API error:', error);
     return NextResponse.json(
-      { error: 'Search failed' },
+      { error: 'Search failed', message: error instanceof Error ? error.message : 'Unknown error' },
       { status: 500 }
     );
   }
