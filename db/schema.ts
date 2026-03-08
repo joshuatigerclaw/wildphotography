@@ -1,31 +1,61 @@
-import { pgTable, serial, varchar, text, timestamp, integer, boolean, decimal, jsonb, pgEnum } from 'drizzle-orm/pg-core';
+import { pgTable, serial, varchar, text, timestamp, integer, boolean, decimal, jsonb, pgEnum, index } from 'drizzle-orm/pg-core';
 
 // Enums
 export const orderStatusEnum = pgEnum('order_status', ['pending', 'processing', 'completed', 'cancelled', 'refunded']);
 export const fulfillmentStatusEnum = pgEnum('fulfillment_status', ['pending', 'processing', 'shipped', 'delivered', 'failed']);
 export const ingestStatusEnum = pgEnum('ingest_status', ['queued', 'running', 'completed', 'failed']);
 
-// Photos table
+// Photos table - Updated with R2 storage
 export const photos = pgTable('photos', {
   id: serial('id').primaryKey(),
   title: varchar('title', { length: 255 }),
+  slug: varchar('slug', { length: 255 }).notNull().unique(),
   description: text('description'),
-  filename: varchar('filename', { length: 255 }).notNull(),
+  
+  // R2 Storage Keys (internal - never exposed)
+  originalR2Key: varchar('original_r2_key', { length: 500 }),
+  
+  // Public Derivative URLs (exposed in API)
+  thumbUrl: varchar('thumb_url', { length: 500 }),
+  smallUrl: varchar('small_url', { length: 500 }),
+  mediumUrl: varchar('medium_url', { length: 500 }),
+  largeUrl: varchar('large_url', { length: 500 }),
+  previewUrl: varchar('preview_url', { length: 500 }),
+  
+  // Legacy fields (for migration)
+  filename: varchar('filename', { length: 255 }),
   originalFilename: varchar('original_filename', { length: 255 }),
   imageUrl: varchar('image_url', { length: 500 }),
   thumbnailUrl: varchar('thumbnail_url', { length: 500 }),
+  
+  // Metadata
   width: integer('width'),
   height: integer('height'),
   fileSize: integer('file_size'),
   mimeType: varchar('mime_type', { length: 50 }),
+  orientation: varchar('orientation', { length: 20 }),
+  
+  // Attribution
   photographer: varchar('photographer', { length: 255 }),
   location: varchar('location', { length: 255 }),
+  cameraModel: varchar('camera_model', { length: 255 }),
+  lens: varchar('lens', { length: 255 }),
+  
+  // Dates
   dateTaken: timestamp('date_taken'),
   dateUploaded: timestamp('date_uploaded').defaultNow(),
   dateModified: timestamp('date_modified').defaultNow(),
+  
+  // Status
   isActive: boolean('is_active').default(true),
+  popularity: integer('popularity').default(0),
+  
+  // Extra
   metadata: jsonb('metadata'),
-});
+}, (table) => ({
+  slugIndex: index('idx_photos_slug').on(table.slug),
+  activeIndex: index('idx_photos_active').on(table.isActive),
+}));
 
 // Keywords table
 export const keywords = pgTable('keywords', {
@@ -44,7 +74,10 @@ export const photoKeywords = pgTable('photo_keywords', {
   keywordId: integer('keyword_id').references(() => keywords.id).notNull(),
   confidence: decimal('confidence', { precision: 5, scale: 2 }),
   dateAssigned: timestamp('date_assigned').defaultNow(),
-});
+}, (table) => ({
+  photoKeywordIndex: index('idx_photo_keywords_photo').on(table.photoId),
+  keywordPhotoIndex: index('idx_photo_keywords_keyword').on(table.keywordId),
+}));
 
 // Galleries table
 export const galleries = pgTable('galleries', {
@@ -67,7 +100,9 @@ export const galleryPhotos = pgTable('gallery_photos', {
   photoId: integer('photo_id').references(() => photos.id).notNull(),
   sortOrder: integer('sort_order').default(0),
   dateAdded: timestamp('date_added').defaultNow(),
-});
+}, (table) => ({
+  galleryPhotoIndex: index('idx_gallery_photos_gallery').on(table.galleryId),
+}));
 
 // Orders table
 export const orders = pgTable('orders', {

@@ -1,13 +1,17 @@
 import Link from 'next/link';
+import { getGalleries, getAllPhotos } from '@/lib/db';
 
-const galleries = [
-  { id: '1', slug: 'birds', title: 'Birds of Costa Rica', description: 'Stunning photographs of Costa Rica\'s incredible avian diversity.', photoCount: 150 },
-  { id: '2', slug: 'wildlife', title: 'Wildlife', description: 'Mammals, reptiles, and more from Costa Rica.', photoCount: 120 },
-  { id: '3', slug: 'landscapes', title: 'Landscapes', description: 'Breathtaking landscapes from volcanic peaks to pristine beaches.', photoCount: 85 },
-  { id: '4', slug: 'rainforests', title: 'Rainforests', description: 'The lush beauty of Costa Rica\'s tropical rainforests.', photoCount: 95 },
-];
+export const dynamic = 'force-dynamic';
 
-export default function Home() {
+export const metadata = {
+  title: 'Wildphotography | Costa Rica Nature Photography',
+  description: 'Professional wildlife and nature photography from Costa Rica.',
+};
+
+export default async function Home() {
+  const galleries = await getGalleries();
+  const photos = await getAllPhotos(8);
+
   return (
     <div className="container mx-auto px-4 py-12">
       <section className="text-center py-16">
@@ -34,6 +38,39 @@ export default function Home() {
         </div>
       </section>
 
+      {photos.length > 0 && (
+        <section className="py-12">
+          <h2 className="text-3xl font-bold text-center mb-8">Featured Photos</h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {photos.map((photo) => (
+              <Link
+                key={photo.id}
+                href={`/photo/${photo.slug}`}
+                className="group block"
+              >
+                <div className="aspect-[3/4] bg-gray-200 rounded-lg overflow-hidden">
+                  {photo.thumb_url ? (
+                    <img
+                      src={photo.thumb_url}
+                      alt={photo.title || ''}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      loading="lazy"
+                    />
+                  ) : (
+                    <div className="w-full h-full bg-blue-100 flex items-center justify-center text-blue-400">
+                      <span className="text-3xl">📷</span>
+                    </div>
+                  )}
+                </div>
+                <h3 className="text-sm font-medium mt-2 group-hover:text-blue-600 truncate">
+                  {photo.title}
+                </h3>
+              </Link>
+            ))}
+          </div>
+        </section>
+      )}
+
       <section className="py-12">
         <h2 className="text-3xl font-bold text-center mb-8">Featured Galleries</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -44,16 +81,30 @@ export default function Home() {
               className="group block"
             >
               <div className="aspect-square bg-gray-200 rounded-lg mb-3 overflow-hidden">
-                <div className="w-full h-full bg-blue-100 flex items-center justify-center text-blue-400">
-                  <span className="text-4xl">📷</span>
-                </div>
+                {gallery.coverPhotoUrl ? (
+                  <img
+                    src={gallery.coverPhotoUrl}
+                    alt={gallery.name}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    loading="lazy"
+                  />
+                ) : (
+                  <div className="w-full h-full bg-blue-100 flex items-center justify-center text-blue-400">
+                    <span className="text-4xl">📷</span>
+                  </div>
+                )}
               </div>
               <h3 className="text-lg font-semibold group-hover:text-blue-600 transition">
-                {gallery.title}
+                {gallery.name}
               </h3>
               <p className="text-gray-500 text-sm">
                 {gallery.photoCount} photos
               </p>
+              {gallery.description && (
+                <p className="text-gray-600 text-sm mt-1 line-clamp-2">
+                  {gallery.description}
+                </p>
+              )}
             </Link>
           ))}
         </div>

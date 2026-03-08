@@ -1,44 +1,15 @@
 import Link from 'next/link';
-import { notFound } from 'next/navigation';
+import { getGalleries } from '@/lib/db';
 
 export const dynamic = 'force-dynamic';
 
-// Types
-interface GalleryRow {
-  id: string;
-  slug: string;
-  name: string;
-  description: string | null;
-  coverPhotoUrl: string | null;
-  photoCount: number;
-}
-
-interface PhotoRow {
-  id: string;
-  slug: string;
-  title: string;
-  description?: string | null;
-  thumbUrl: string | null;
-  smallUrl: string | null;
-  mediumUrl: string | null;
-  largeUrl: string | null;
-  locationName: string | null;
-  keywords: string[];
-}
-
-// Server-side data fetching
-async function fetchGalleries(): Promise<GalleryRow[]> {
-  // For now, return mock data - will integrate with DB later
-  return [
-    { id: '1', slug: 'birds', name: 'Birds of Costa Rica', description: 'Stunning photographs of Costa Rica\'s incredible avian diversity.', coverPhotoUrl: null, photoCount: 150 },
-    { id: '2', slug: 'wildlife', name: 'Wildlife', description: 'Mammals, reptiles, and more from Costa Rica.', coverPhotoUrl: null, photoCount: 120 },
-    { id: '3', slug: 'landscapes', name: 'Landscapes', description: 'Breathtaking landscapes from volcanic peaks to pristine beaches.', coverPhotoUrl: null, photoCount: 85 },
-    { id: '4', slug: 'rainforests', name: 'Rainforests', description: 'The lush beauty of Costa Rica\'s tropical rainforests.', coverPhotoUrl: null, photoCount: 95 },
-  ];
-}
+export const metadata = {
+  title: 'Photo Galleries | Wildphotography',
+  description: 'Browse our collection of nature and wildlife photography from Costa Rica.',
+};
 
 export default async function GalleriesPage() {
-  const galleries = await fetchGalleries();
+  const galleries = await getGalleries();
 
   return (
     <div className="container mx-auto px-4 py-8">
