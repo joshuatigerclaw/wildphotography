@@ -5,8 +5,11 @@
  * 
  * Access Rules:
  * - derivatives/*  : PUBLIC - served with long-lived cache
- * - downloads/*  : PROTECTED - requires signed URL or auth
- * - originals/*  : BLOCKED - returns 403
+ * - downloads/*   : PROTECTED - returns 403 (requires signed URL)
+ * - originals/*    : BLOCKED - returns 403
+ * 
+ * TEMPORARY ENDPOINT: https://wildphotography-media.josh-ec6.workers.dev
+ * PRODUCTION: https://media.wildphotography.com (pending custom domain)
  */
 
 export default {

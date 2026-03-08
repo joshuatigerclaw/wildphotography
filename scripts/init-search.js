@@ -10,9 +10,9 @@ const client = new Client({
 });
 
 // R2 Configuration - Worker-based public URL
-// Production: media.wildphotography.com (via Worker)
-// Dev: localhost:8787 (local Worker)
-const MEDIA_BASE_URL = process.env.MEDIA_BASE_URL || 'https://wildphotography-media.josh.workers.dev';
+// Production: media.wildphotography.com (via Worker) - pending domain setup
+// Current: https://wildphotography-media.josh-ec6.workers.dev (Workers.dev subdomain)
+const MEDIA_BASE_URL = process.env.MEDIA_BASE_URL || 'https://wildphotography-media.josh-ec6.workers.dev';
 
 function buildUrls(filename) {
   const baseName = filename.replace(/\.[^/.]+$/, '');

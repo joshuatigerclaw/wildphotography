@@ -14,7 +14,9 @@
 
 const config = {
   // Central configuration - update this to switch domains
-  mediaBaseUrl: process.env.MEDIA_BASE_URL || 'https://wildphotography-media.josh.workers.dev',
+  // Current: Workers.dev subdomain (temporary)
+  // Production: media.wildphotography.com (when custom domain is attached)
+  mediaBaseUrl: process.env.MEDIA_BASE_URL || 'https://wildphotography-media.josh-ec6.workers.dev',
 };
 
 /**
