@@ -10,7 +10,7 @@ const client = new Client({
 });
 
 // R2 Configuration
-const R2_PUBLIC_URL = process.env.R2_PUBLIC_URL || 'https://wildphotography-media.example.com';
+const R2_PUBLIC_URL = process.env.R2_PUBLIC_URL || 'https://pub-wildphoto-storage.existing.blog';
 
 function buildUrls(filename) {
   const baseName = filename.replace(/\.[^/.]+$/, '');

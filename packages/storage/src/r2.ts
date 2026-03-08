@@ -1,52 +1,48 @@
-#!/usr/bin/env node
 /**
- * Cloudflare R2 Storage Configuration
+ * Cloudflare R2 Storage Path Configuration
  * 
- * Bucket: wildphotography-media
- * Public URL: https://pub-wildphotography-media.existing.blog
+ * Bucket: wildphoto-storage
  * 
  * Path Structure:
- * - originals/           # Private - original high-res images
- * - derivatives/thumbs/  # Public - thumbnail sized
- * - derivatives/small/  # Public - small web size
- * - derivatives/medium/ # Public - medium web size
- * - derivatives/large/  # Public - large web size
- * - derivatives/preview/ # Public - preview sized
- * - downloads/          # Public - downloadable versions
+ * - originals/              (PRIVATE)
+ * - derivatives/thumbs/    (PUBLIC)
+ * - derivatives/small/      (PUBLIC)
+ * - derivatives/medium/    (PUBLIC)
+ * - derivatives/large/     (PUBLIC)
+ * - downloads/             (PUBLIC)
  */
 
 const R2_CONFIG = {
-  bucketName: 'wildphotography-media',
-  accountId: process.env.CLOUDFLARE_ACCOUNT_ID,
-  accessKeyId: process.env.R2_ACCESS_KEY_ID,
-  secretAccessKey: process.env.R2_SECRET_ACCESS_KEY,
-  publicUrl: process.env.R2_PUBLIC_URL || 'https://wildphotography-media.example.com',
+  bucketName: 'wildphoto-storage',
+  publicUrl: 'https://pub-wildphoto-storage.existing.blog', // R2.dev public URL
+  // Alternative: custom domain (requires DNS setup)
+  // publicUrl: 'https://media.wildphotography.com',
 };
 
-// Path builders
-export const paths = {
-  originals: (filename: string) => `originals/${filename}`,
-  thumb: (filename: string) => `derivatives/thumbs/${filename}`,
-  small: (filename: string) => `derivatives/small/${filename}`,
-  medium: (filename: string) => `derivatives/medium/${filename}`,
-  large: (filename: string) => `derivatives/large/${filename}`,
-  preview: (filename: string) => `derivatives/preview/${filename}`,
-  download: (filename: string) => `downloads/${filename}`,
+function buildUrls(filename) {
+  const baseName = filename.replace(/\.[^/.]+$/, '');
+  
+  return {
+    thumb_url: `${R2_CONFIG.publicUrl}/derivatives/thumbs/${baseName}-thumb.jpg`,
+    small_url: `${R2_CONFIG.publicUrl}/derivatives/small/${baseName}-small.jpg`,
+    medium_url: `${R2_CONFIG.publicUrl}/derivatives/medium/${baseName}-medium.jpg`,
+    large_url: `${R2_CONFIG.publicUrl}/derivatives/large/${baseName}-large.jpg`,
+    original_url: `${R2_CONFIG.publicUrl}/originals/${filename}`,
+  };
+}
+
+// Only expose derivative URLs
+function getPublicUrls(filename) {
+  const urls = buildUrls(filename);
+  // Remove original_url - it's private
+  delete urls.original_url;
+  return urls;
+}
+
+module.exports = { 
+  R2_CONFIG, 
+  buildUrls, 
+  getPublicUrls,
+  isDerivative: (path) => path.startsWith('derivatives/') || path.startsWith('downloads/'),
+  isOriginal: (path) => path.startsWith('originals/'),
 };
-
-// URL builder - returns public URL for a given path
-export function getPublicUrl(path: string): string {
-  return `${R2_CONFIG.publicUrl}/${path}`;
-}
-
-// Check if URL is a derivative (publicly accessible)
-export function isDerivative(path: string): boolean {
-  return path.startsWith('derivatives/') || path.startsWith('downloads/');
-}
-
-// Check if URL is an original (private)
-export function isOriginal(path: string): boolean {
-  return path.startsWith('originals/');
-}
-
-export default R2_CONFIG;
