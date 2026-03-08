@@ -1,0 +1,7 @@
+{
+  "name": "@wildphotography/media",
+  "version": "0.1.0",
+  "main": "src/urls.ts",
+  "types": "src/urls.ts",
+  "dependencies": {}
+}

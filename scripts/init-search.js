@@ -9,17 +9,22 @@ const client = new Client({
   apiKey: 'MPphr9zDlLzHRFQHDH4AyQb5hw2ugew7',
 });
 
-// R2 Configuration
-const R2_PUBLIC_URL = process.env.R2_PUBLIC_URL || 'https://pub-wildphoto-storage.existing.blog';
+// R2 Configuration - Worker-based public URL
+// Production: media.wildphotography.com (via Worker)
+// Dev: localhost:8787 (local Worker)
+const MEDIA_BASE_URL = process.env.MEDIA_BASE_URL || 'https://wildphotography-media.josh.workers.dev';
 
 function buildUrls(filename) {
   const baseName = filename.replace(/\.[^/.]+$/, '');
+  const ext = 'jpg'; // Default extension
+  
   return {
-    thumb_url: `${R2_PUBLIC_URL}/derivatives/thumbs/${baseName}-thumb.jpg`,
-    small_url: `${R2_PUBLIC_URL}/derivatives/small/${baseName}-small.jpg`,
-    medium_url: `${R2_PUBLIC_URL}/derivatives/medium/${baseName}-medium.jpg`,
-    large_url: `${R2_PUBLIC_URL}/derivatives/large/${baseName}-large.jpg`,
-    original_url: `${R2_PUBLIC_URL}/originals/${filename}`,
+    thumb_url: `${MEDIA_BASE_URL}/derivatives/thumbs/${baseName}-thumb.${ext}`,
+    small_url: `${MEDIA_BASE_URL}/derivatives/small/${baseName}-small.${ext}`,
+    medium_url: `${MEDIA_BASE_URL}/derivatives/medium/${baseName}-medium.${ext}`,
+    large_url: `${MEDIA_BASE_URL}/derivatives/large/${baseName}-large.${ext}`,
+    // Original URL - stored but NEVER exposed via API
+    original_url: `private:originals/${filename}`,
   };
 }
 
