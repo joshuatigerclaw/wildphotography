@@ -46,16 +46,7 @@ export default async function GalleryPage({ params }: { params: Promise<{ slug: 
       </header>
       
       <VirtualizedGallery 
-        photos={photos.map(p => ({
-          id: String(p.id),
-          slug: p.slug,
-          title: p.title || '',
-          thumbUrl: p.thumb_url,
-          smallUrl: p.small_url,
-          mediumUrl: p.medium_url,
-          largeUrl: p.large_url,
-          locationName: p.location,
-        }))} 
+        photos={photos} 
         columns={4}
       />
     </div>

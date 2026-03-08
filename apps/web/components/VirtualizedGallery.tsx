@@ -11,11 +11,11 @@ export interface Photo {
   id: string;
   slug: string;
   title: string;
-  thumbUrl: string | null;
-  smallUrl: string | null;
-  mediumUrl: string | null;
-  largeUrl: string | null;
-  locationName: string | null;
+  thumbUrl?: string | null;
+  smallUrl?: string | null;
+  mediumUrl?: string | null;
+  largeUrl?: string | null;
+  locationName?: string | null;
   keywords?: string[];
 }
 

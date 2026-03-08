@@ -49,9 +49,9 @@ export default async function Home() {
                 className="group block"
               >
                 <div className="aspect-[3/4] bg-gray-200 rounded-lg overflow-hidden">
-                  {photo.thumb_url ? (
+                  {photo.thumbUrl ? (
                     <img
-                      src={photo.thumb_url}
+                      src={photo.thumbUrl}
                       alt={photo.title || ''}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                       loading="lazy"

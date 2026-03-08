@@ -16,10 +16,10 @@ export interface Photo {
   slug: string;
   title: string;
   description?: string | null;
-  thumbUrl?: string | null;
-  smallUrl?: string | null;
-  mediumUrl?: string | null;
-  largeUrl?: string | null;
+  thumbUrl: string | null;
+  smallUrl: string | null;
+  mediumUrl: string | null;
+  largeUrl: string | null;
   locationName?: string | null;
 }
 
