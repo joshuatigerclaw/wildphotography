@@ -28,16 +28,23 @@ export function normalizeKeyword(keyword: string): NormalizedKeyword {
 /**
  * Normalize multiple keywords
  */
-export function normalizeKeywords(keywords: string[]): NormalizedKeyword[] {
-  // Handle array or comma-separated string
-  const keywordList = Array.isArray(keywords) 
-    ? keywords 
-    : keywords.split(',').map(k => k.trim());
+export function normalizeKeywords(keywords: string[] | string | undefined | null): NormalizedKeyword[] {
+  // Handle array or comma-separated string or empty
+  if (!keywords) return [];
+  
+  let keywordList: string[];
+  if (Array.isArray(keywords)) {
+    keywordList = keywords;
+  } else if (typeof keywords === 'string') {
+    keywordList = keywords.split(',');
+  } else {
+    return [];
+  }
   
   // Normalize each
   const normalized = keywordList
-    .map(k => normalizeKeyword(k))
-    .filter(k => k.normalized.length > 0);
+    .map((k: string) => normalizeKeyword(k))
+    .filter((k: NormalizedKeyword) => k.normalized.length > 0);
   
   // Deduplicate by normalized value
   const seen = new Set<string>();
@@ -68,9 +75,9 @@ function slugify(text: string): string {
 /**
  * Generate keyword slugs for Typesense
  */
-export function generateKeywordSlugs(keywords: string[]): string[] {
+export function generateKeywordSlugs(keywords: string[] | string | undefined | null): string[] {
   const normalized = normalizeKeywords(keywords);
-  return normalized.map(k => k.slug);
+  return normalized.map((k: NormalizedKeyword) => k.slug);
 }
 
 export default {
