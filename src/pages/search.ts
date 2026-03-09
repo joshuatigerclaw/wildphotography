@@ -21,7 +21,7 @@ export async function renderSearch(env: Env, url: URL): Promise<Response> {
           ${photos.map(p => `
             <div class="photo-card">
               <a href="/photo/${p.slug}">
-                <img src="${MEDIA_BASE}/derivatives/thumbs/${(p.filename || 'placeholder.jpg').replace('.jpg', '-thumb.jpg')}" alt="${p.title}" loading="lazy">
+                <img src="${MEDIA_BASE}/derivatives/thumbs/${(p.filename || p.slug + '.jpg').replace('.jpg', '-thumb.jpg')}" alt="${p.title}" loading="lazy">
                 <div class="caption">
                   <h3>${p.title}</h3>
                   ${p.locationName ? `<p>📍 ${p.locationName}</p>` : ''}

@@ -36,9 +36,9 @@ export async function searchPhotos(query: string, limit = 20): Promise<Photo[]> 
     return data.hits?.map((hit: any) => ({
       id: hit.document.id,
       slug: hit.document.slug,
-      title: hit.document.title,
+      title: hit.document.title || 'Untitled',
       description: hit.document.description,
-      filename: hit.document.filename || 'placeholder.jpg',
+      filename: hit.document.slug + '.jpg',
       locationName: hit.document.location,
     })) || [];
   } catch (error) {
