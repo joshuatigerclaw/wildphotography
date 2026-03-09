@@ -9,6 +9,7 @@ export interface Env {
   TYPESENSE_INDEX: Queue;
   SITE_URL: string;
   MEDIA_BASE_URL: string;
+  NEON_TOKEN: string;
 }
 
 export interface Photo {

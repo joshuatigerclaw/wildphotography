@@ -1,43 +1,62 @@
 /**
  * Neon database client for Worker
  * 
- * Fetches from the Next.js API endpoints (which connect to Neon)
- * 
- * IMPORTANT: No fallback/mock data in production
- * - If API returns empty, page shows empty state
- * - This ensures production never shows placeholder content
+ * Fetches directly from Neon HTTP API
+ * This enables the worker to get data without depending on Next.js API
  */
 
 import type { Photo, Gallery } from '../types';
 
-// API base URL for data fetching
-const API_BASE = 'https://wildphotography.com/api/public';
+// Neon HTTP query endpoint
+const NEON_PROJECT = 'ep-calm-fire-ad0dfnqd';
+const NEON_TOKEN = process.env.NEON_TOKEN || '';
+
+// Media base URL
+const MEDIA_BASE = 'https://wildphotography-media.josh-ec6.workers.dev';
 
 /**
- * Fetch from API
- * Returns null on any error - no fallback data
+ * Execute SQL query via Neon's HTTP API
  */
-async function fetchApi<T>(endpoint: string): Promise<T | null> {
+async function queryNeon<T>(sql: string): Promise<T[]> {
+  if (!NEON_TOKEN) {
+    console.error('[db] No Neon token configured');
+    return [];
+  }
+
   try {
-    const response = await fetch(`${API_BASE}${endpoint}`);
+    const response = await fetch(
+      `https://${NEON_PROJECT}.aws.neon.tech/v2/query?project=${NEON_PROJECT}`,
+      {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${NEON_TOKEN}`,
+          'Content-Type': 'application/json',
+          'Accept': 'application/json',
+        },
+        body: JSON.stringify({
+          queries: [{ query: sql }],
+        }),
+      }
+    );
+
     if (!response.ok) {
-      console.error('[api] Error:', response.status, response.statusText);
-      return null;
+      console.error('[db] Neon error:', response.status);
+      return [];
     }
-    return await response.json();
+
+    const data = await response.json();
+    return data?.results?.[0]?.rows || [];
   } catch (error) {
-    console.error('[api] Fetch error:', error);
-    return null;
+    console.error('[db] Query error:', error);
+    return [];
   }
 }
 
 /**
  * Fetch all galleries
- * Returns empty array if no data - no fallback
  */
 export async function getGalleries(): Promise<Gallery[]> {
   // For now, return known galleries from imported data
-  // TODO: Add /api/public/galleries endpoint
   const knownGalleries = [
     'surfing-costa-rica',
     'rivers', 
@@ -47,86 +66,104 @@ export async function getGalleries(): Promise<Gallery[]> {
   
   const galleries: Gallery[] = [];
   for (const slug of knownGalleries) {
-    const data = await fetchApi<any>(`/gallery/${slug}`);
-    if (data) {
-      galleries.push({
-        id: galleries.length + 1,
-        slug: data.slug,
-        name: data.name,
-        description: data.description,
-      });
-    }
+    const data = await getGalleryBySlug(slug);
+    if (data) galleries.push(data);
   }
   
   return galleries;
 }
 
 /**
- * Fetch gallery by slug
- * Returns null if not found - no fallback
+ * Fetch gallery by slug with photos
  */
 export async function getGalleryBySlug(slug: string): Promise<Gallery | null> {
-  const data = await fetchApi<any>(`/gallery/${slug}`);
-  if (!data) return null;
+  // Get gallery info and photos
+  const rows = await queryNeon<any>(`
+    SELECT DISTINCT g.id, g.slug, g.name, g.description
+    FROM galleries g
+    JOIN gallery_photos gp ON g.id = gp.gallery_id
+    JOIN photos p ON gp.photo_id = p.id
+    WHERE g.slug = '${slug.replace(/'/g, "''")}'
+    LIMIT 1
+  `);
   
+  if (rows.length === 0) return null;
+  
+  const r = rows[0];
   return {
-    id: 1,
-    slug: data.slug,
-    name: data.name,
-    description: data.description,
+    id: r.id,
+    slug: r.slug,
+    name: r.name,
+    description: r.description,
   };
 }
 
 /**
- * Fetch photos by gallery
- * Returns empty array if none - no fallback
+ * Fetch photos by gallery slug
  */
 export async function getPhotosByGallery(gallerySlug: string): Promise<Photo[]> {
-  const data = await fetchApi<any>(`/gallery/${gallerySlug}`);
-  if (!data?.photos) return [];
+  const rows = await queryNeon<any>(`
+    SELECT p.id, p.slug, p.title, p.description, p.thumb_url, p.small_url, p.location
+    FROM photos p
+    JOIN gallery_photos gp ON p.id = gp.photo_id
+    JOIN galleries g ON gp.gallery_id = g.id
+    WHERE g.slug = '${gallerySlug.replace(/'/g, "''")}' AND p.is_active = true
+    ORDER BY gp.sort_order, p.date_taken DESC
+    LIMIT 20
+  `);
   
-  return data.photos.map((p: any) => ({
-    id: 0,
-    slug: p.slug,
-    title: p.title || 'Untitled',
-    description: p.description,
-    filename: p.slug + '.jpg',
-    locationName: p.location,
+  return rows.map((r: any) => ({
+    id: r.id,
+    slug: r.slug,
+    title: r.title || 'Untitled',
+    description: r.description,
+    filename: r.thumb_url ? r.thumb_url.split('/').pop() : r.slug + '.jpg',
+    locationName: r.location,
   }));
 }
 
 /**
  * Fetch recent photos for homepage
- * Returns empty array if none - no fallback
  */
 export async function getRecentPhotos(limit = 8): Promise<Photo[]> {
-  const data = await fetchApi<any>('/gallery/surfing-costa-rica');
-  if (!data?.photos) return [];
+  const rows = await queryNeon<any>(`
+    SELECT p.id, p.slug, p.title, p.description, p.thumb_url, p.small_url, p.location
+    FROM photos p
+    WHERE p.is_active = true AND p.thumb_url IS NOT NULL
+    ORDER BY p.date_taken DESC
+    LIMIT ${limit}
+  `);
   
-  return data.photos.slice(0, limit).map((p: any) => ({
-    id: 0,
-    slug: p.slug,
-    title: p.title || 'Untitled',
-    description: p.description,
-    filename: p.slug + '.jpg',
-    locationName: p.location,
+  return rows.map((r: any) => ({
+    id: r.id,
+    slug: r.slug,
+    title: r.title || 'Untitled',
+    description: r.description,
+    filename: r.thumb_url ? r.thumb_url.split('/').pop() : r.slug + '.jpg',
+    locationName: r.location,
   }));
 }
 
 /**
  * Fetch photo by slug
- * Returns null if not found - no fallback
  */
 export async function getPhotoBySlug(slug: string): Promise<Photo | null> {
-  const data = await fetchApi<any>(`/photos/${slug}`);
-  if (!data) return null;
+  const rows = await queryNeon<any>(`
+    SELECT p.id, p.slug, p.title, p.description, p.thumb_url, p.large_url, p.location
+    FROM photos p
+    WHERE p.slug = '${slug.replace(/'/g, "''")}' AND p.is_active = true
+    LIMIT 1
+  `);
   
+  if (rows.length === 0) return null;
+  
+  const r = rows[0];
   return {
-    id: 0,
-    slug: data.slug,
-    title: data.title || 'Untitled',
-    description: data.description,
-    filename: data.slug + '.jpg',
-    locationName: data.location,
+    id: r.id,
+    slug: r.slug,
+    title: r.title || 'Untitled',
+    description: r.description,
+    filename: r.thumb_url ? r.thumb_url.split('/').pop() : r.slug + '.jpg',
+    locationName: r.location,
   };
 }
