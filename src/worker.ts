@@ -1,22 +1,11 @@
 /**
- * Wildphotography Queue Consumers
+ * Wildphotography - Combined Worker
  * 
  * Handles:
- * - smugmug-metadata: Album/image metadata import
- * - smugmug-download: Image download and processing
- * - typesense-index: Search index updates
- * 
- * Message Formats:
- * 
- * smugmug-metadata:
- *   { type: 'album', action: 'upsert'|'delete', data: { albumId, ... } }
- *   { type: 'image', action: 'upsert'|'delete', data: { imageId, ... } }
- * 
- * smugmug-download:
- *   { type: 'image', imageKey: string, sourceUrl: string, photoId: number }
- * 
- * typesense-index:
- *   { type: 'image', action: 'upsert'|'delete', document: { ... } }
+ * - Media serving (derivatives from R2)
+ * - Health check
+ * - Static pages (homepage, galleries, search, photo pages)
+ * - Queue processing
  */
 
 export interface Env {
@@ -24,36 +13,83 @@ export interface Env {
   SMUGMUG_METADATA: Queue;
   SMUGMUG_DOWNLOAD: Queue;
   TYPESENSE_INDEX: Queue;
+  SITE_URL: string;
+  MEDIA_BASE_URL: string;
 }
 
-// ============================================================
-// Message Types
-// ============================================================
+const HTML_HOME = `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wildphotography | Costa Rica Nature Photography</title>
+  <meta name="description" content="Professional wildlife and nature photography from Costa Rica">
+  <link rel="icon" href="/favicon.ico">
+</head>
+<body>
+  <header style="padding: 2rem; text-align: center;">
+    <h1>Wildphotography</h1>
+    <p>Costa Rica Nature Photography</p>
+    <nav style="margin-top: 1rem;">
+      <a href="/galleries" style="margin: 0 1rem;">Galleries</a>
+      <a href="/search" style="margin: 0 1rem;">Search</a>
+    </nav>
+  </header>
+  <main style="padding: 2rem;">
+    <section>
+      <h2>Welcome</h2>
+      <p>Professional wildlife and nature photography from Costa Rica.</p>
+    </section>
+  </main>
+  <footer style="padding: 2rem; text-align: center; margin-top: 2rem;">
+    <p>&copy; 2026 Joshua ten Brink / Wildphotography</p>
+  </footer>
+</body>
+</html>`;
 
-export interface MetadataMessage {
-  type: 'album' | 'image';
-  action: 'upsert' | 'delete';
-  data: Record<string, any>;
-}
+const HTML_GALLERIES = `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galleries | Wildphotography</title>
+</head>
+<body>
+  <header style="padding: 2rem; text-align: center;">
+    <h1>Photo Galleries</h1>
+    <nav><a href="/">Home</a> | <a href="/search">Search</a></nav>
+  </header>
+  <main style="padding: 2rem;">
+    <ul>
+      <li><a href="/gallery/surfing-costa-rica">Surfing Costa Rica</a></li>
+      <li><a href="/gallery/rivers">Rivers</a></li>
+      <li><a href="/gallery/volcan-poas">Volcan Poas</a></li>
+      <li><a href="/gallery/turtles">Turtles</a></li>
+    </ul>
+  </main>
+</body>
+</html>`;
 
-export interface DownloadMessage {
-  type: 'image';
-  imageKey: string;
-  sourceUrl: string;
-  photoId: number;
-}
-
-export interface TypesenseMessage {
-  type: 'image';
-  action: 'upsert' | 'delete';
-  document: Record<string, any>;
-}
-
-export type QueueMessage = MetadataMessage | DownloadMessage | TypesenseMessage;
-
-// ============================================================
-// Queue Handlers
-// ============================================================
+const HTML_SEARCH = `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search | Wildphotography</title>
+</head>
+<body>
+  <header style="padding: 2rem; text-align: center;">
+    <h1>Search Photos</h1>
+    <nav><a href="/">Home</a> | <a href="/galleries">Galleries</a></nav>
+  </header>
+  <main style="padding: 2rem;">
+    <form action="/search" method="get">
+      <input type="text" name="q" placeholder="Search photos..." style="padding: 0.5rem; width: 300px;">
+      <button type="submit" style="padding: 0.5rem 1rem;">Search</button>
+    </form>
+  </main>
+</body>
+</html>`;
 
 export default {
   async fetch(request: Request, env: Env): Promise<Response> {
@@ -65,175 +101,85 @@ export default {
       return Response.json({ status: 'ok', timestamp: Date.now() });
     }
 
-    // Admin: Enqueue test message
+    // Queue test
     if (path === 'api/v1/queue/test') {
       const queueName = url.searchParams.get('queue') || 'smugmug-metadata';
-      const message = {
-        type: 'test',
-        timestamp: Date.now(),
-        message: 'Test message from queue API',
-      };
-
       let queue;
       switch (queueName) {
-        case 'metadata':
-          queue = env.SMUGMUG_METADATA;
-          break;
-        case 'download':
-          queue = env.SMUGMUG_DOWNLOAD;
-          break;
-        case 'typesense':
-          queue = env.TYPESENSE_INDEX;
-          break;
-        default:
-          return Response.json({ error: 'Unknown queue' }, { status: 400 });
+        case 'metadata': queue = env.SMUGMUG_METADATA; break;
+        case 'download': queue = env.SMUGMUG_DOWNLOAD; break;
+        case 'typesense': queue = env.TYPESENSE_INDEX; break;
+        default: return Response.json({ error: 'Unknown queue' }, { status: 400 });
       }
-
-      await queue.send(message);
-      return Response.json({ success: true, queue: queueName, message });
+      await queue.send({ type: 'test', timestamp: Date.now() });
+      return Response.json({ success: true, queue: queueName });
     }
 
-    // Block originals
-    if (path.startsWith('originals/')) {
-      return new Response('Forbidden - originals are private', { status: 403 });
+    // Block originals and downloads
+    if (path.startsWith('originals/') || path.startsWith('downloads/')) {
+      return new Response('Forbidden', { status: 403 });
     }
 
-    // Block downloads
-    if (path.startsWith('downloads/')) {
-      return new Response('Downloads require authentication', { status: 403 });
-    }
-
-    // Serve derivatives
+    // Serve derivatives from R2
     if (path.startsWith('derivatives/')) {
       try {
         const object = await env.PHOTO_BUCKET.get(path);
         if (!object) return new Response('Not Found', { status: 404 });
-
         const headers = new Headers();
         object.writeHttpMetadata(headers);
         headers.set('Cache-Control', 'public, max-age=31536000, immutable');
-        
         return new Response(object.body, { headers });
       } catch (error) {
-        console.error('[worker] Error serving derivative:', error);
         return new Response('Internal Server Error', { status: 500 });
       }
+    }
+
+    // Static pages
+    if (path === '' || path === '/') {
+      return new Response(HTML_HOME, {
+        headers: { 'Content-Type': 'text/html' }
+      });
+    }
+
+    if (path === 'galleries' || path === 'galleries/') {
+      return new Response(HTML_GALLERIES, {
+        headers: { 'Content-Type': 'text/html' }
+      });
+    }
+
+    if (path === 'search' || path === 'search/') {
+      return new Response(HTML_SEARCH, {
+        headers: { 'Content-Type': 'text/html' }
+      });
+    }
+
+    // Gallery pages
+    if (path.startsWith('gallery/')) {
+      const slug = path.replace('gallery/', '').replace('/', '');
+      return new Response(`<!DOCTYPE html>
+<html><head><title>Gallery: ${slug} | Wildphotography</title></head>
+<body><h1>Gallery: ${slug}</h1><p>Gallery page for ${slug}</p><a href="/galleries">Back to Galleries</a></body></html>`, {
+        headers: { 'Content-Type': 'text/html' }
+      });
+    }
+
+    // Photo pages
+    if (path.startsWith('photo/')) {
+      const slug = path.replace('photo/', '').replace('/', '');
+      return new Response(`<!DOCTYPE html>
+<html><head><title>Photo: ${slug} | Wildphotography</title></head>
+<body><h1>Photo: ${slug}</h1><p>Photo page for ${slug}</p><a href="/">Home</a></body></html>`, {
+        headers: { 'Content-Type': 'text/html' }
+      });
     }
 
     return new Response('Not Found', { status: 404 });
   },
 
-  // ============================================================
-  // Queue Consumers
-  // ============================================================
-
   async queue(batch: MessageBatch, env: Env): Promise<void> {
-    const queueName = batch.queue;
-    
-    console.log(`[queue] Received ${batch.messages.length} messages from ${queueName}`);
-    
-    for (const message of batch.messages) {
-      const body = message.body as QueueMessage;
-      
-      console.log(`[queue] Processing:`, {
-        type: body.type,
-        timestamp: Date.now(),
-        attempts: message.workspaceId || 'unknown',
-      });
-      
-      try {
-        switch (queueName) {
-          case 'smugmug-metadata':
-            await handleMetadataMessage(body as MetadataMessage, env);
-            break;
-          case 'smugmug-download':
-            await handleDownloadMessage(body as DownloadMessage, env);
-            break;
-          case 'typesense-index':
-            await handleTypesenseMessage(body as TypesenseMessage, env);
-            break;
-          default:
-            console.warn(`[queue] Unknown queue: ${queueName}`);
-        }
-        
-        message.ack();
-        console.log(`[queue] Success:`, { type: body.type });
-        
-      } catch (error) {
-        console.error(`[queue] Error:`, {
-          type: body.type,
-          error: error instanceof Error ? error.message : 'Unknown error',
-        });
-        
-        // Retry with backoff
-        message.retry();
-      }
+    for (const msg of batch.messages) {
+      console.log(`[queue] ${batch.queue}:`, msg.body);
+      msg.ack();
     }
   },
 } satisfies ExportedHandler<Env>;
-
-// ============================================================
-// Metadata Queue Handler
-// ============================================================
-
-async function handleMetadataMessage(msg: MetadataMessage, env: Env): Promise<void> {
-  console.log(`[metadata] ${msg.action} ${msg.type}:`, msg.data);
-  
-  // TODO: Implement actual metadata sync to Neon
-  // For now, just log
-  
-  switch (msg.type) {
-    case 'album':
-      if (msg.action === 'upsert') {
-        console.log(`[metadata] Would upsert album:`, msg.data.albumId);
-      } else if (msg.action === 'delete') {
-        console.log(`[metadata] Would delete album:`, msg.data.albumId);
-      }
-      break;
-      
-    case 'image':
-      if (msg.action === 'upsert') {
-        console.log(`[metadata] Would upsert image:`, msg.data.imageId);
-      } else if (msg.action === 'delete') {
-        console.log(`[metadata] Would delete image:`, msg.data.imageId);
-      }
-      break;
-  }
-}
-
-// ============================================================
-// Download Queue Handler
-// ============================================================
-
-async function handleDownloadMessage(msg: DownloadMessage, env: Env): Promise<void> {
-  console.log(`[download] Processing:`, {
-    imageKey: msg.imageKey,
-    photoId: msg.photoId,
-  });
-  
-  // TODO: Implement actual download + processing
-  // 1. Download from source URL
-  // 2. Upload original to R2
-  // 3. Generate derivatives
-  // 4. Update Neon DB
-  
-  console.log(`[download] Would download:`, msg.sourceUrl);
-  console.log(`[download] Would process with photoId:`, msg.photoId);
-}
-
-// ============================================================
-// Typesense Index Queue Handler
-// ============================================================
-
-async function handleTypesenseMessage(msg: TypesenseMessage, env: Env): Promise<void> {
-  console.log(`[typesense] ${msg.action}:`, msg.document?.slug || 'unknown');
-  
-  // TODO: Implement actual Typesense indexing
-  // For now, just log
-  
-  if (msg.action === 'upsert') {
-    console.log(`[typesense] Would index:`, msg.document?.slug);
-  } else if (msg.action === 'delete') {
-    console.log(`[typesense] Would remove:`, msg.document?.slug || msg.document?.id);
-  }
-}
