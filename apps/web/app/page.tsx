@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { getGalleries, getAllPhotos } from '@/lib/db';
+import VirtualizedGallery from '@/components/VirtualizedGallery';
 
 export const dynamic = 'force-dynamic';
 
@@ -40,39 +41,32 @@ export default async function Home() {
 
       {photos.length > 0 && (
         <section className="py-12">
-          <h2 className="text-3xl font-bold text-center mb-8">Featured Photos</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {photos.map((photo) => (
-              <Link
-                key={photo.id}
-                href={`/photo/${photo.slug}`}
-                className="group block"
-              >
-                <div className="aspect-[3/4] bg-gray-200 rounded-lg overflow-hidden">
-                  {photo.thumbUrl ? (
-                    <img
-                      src={photo.thumbUrl}
-                      alt={photo.title || ''}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                      loading="lazy"
-                    />
-                  ) : (
-                    <div className="w-full h-full bg-blue-100 flex items-center justify-center text-blue-400">
-                      <span className="text-3xl">📷</span>
-                    </div>
-                  )}
-                </div>
-                <h3 className="text-sm font-medium mt-2 group-hover:text-blue-600 truncate">
-                  {photo.title}
-                </h3>
-              </Link>
-            ))}
+          <div className="flex justify-between items-center mb-8">
+            <h2 className="text-3xl font-bold">Featured Photos</h2>
+            <Link 
+              href="/search" 
+              className="text-blue-600 hover:underline text-sm"
+            >
+              View all →
+            </Link>
           </div>
+          <VirtualizedGallery 
+            photos={photos} 
+            columns={4}
+          />
         </section>
       )}
 
       <section className="py-12">
-        <h2 className="text-3xl font-bold text-center mb-8">Featured Galleries</h2>
+        <div className="flex justify-between items-center mb-8">
+          <h2 className="text-3xl font-bold">Featured Galleries</h2>
+          <Link 
+            href="/galleries" 
+            className="text-blue-600 hover:underline text-sm"
+          >
+            View all →
+          </Link>
+        </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {galleries.map((gallery) => (
             <Link 
