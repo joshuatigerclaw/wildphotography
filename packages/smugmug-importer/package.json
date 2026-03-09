@@ -1,0 +1,17 @@
+{
+  "name": "@wildphotography/smugmug-importer",
+  "version": "0.1.0",
+  "main": "src/index.ts",
+  "scripts": {
+    "import": "npx ts-node src/cli.ts"
+  },
+  "dependencies": {
+    "axios": "^1.6.0",
+    "dotenv": "^16.4.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "ts-node": "^10.9.0",
+    "typescript": "^5.3.0"
+  }
+}
