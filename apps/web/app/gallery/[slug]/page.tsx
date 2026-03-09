@@ -1,17 +1,53 @@
 import Link from 'next/link';
+import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { getGalleryBySlug, getPhotosByGallery } from '@/lib/db';
+import { canonicalUrl } from '@/lib/seo';
 import VirtualizedGallery from '@/components/VirtualizedGallery';
 
 export const dynamic = 'force-dynamic';
 
-export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+const SITE_URL = 'https://wildphotography.com';
+
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const gallery = await getGalleryBySlug(slug);
-  if (!gallery) return { title: 'Gallery Not Found' };
-  return { 
-    title: `${gallery.name} | Wildphotography`, 
-    description: gallery.description || `${gallery.name} - ${gallery.photoCount} photos`
+  
+  if (!gallery) {
+    return { title: 'Gallery Not Found' };
+  }
+  
+  const canonical = canonicalUrl(`/gallery/${gallery.slug}`);
+  const ogImage = gallery.coverPhotoUrl;
+  
+  return {
+    title: `${gallery.name} | Wildphotography`,
+    description: gallery.description || `${gallery.name} - ${gallery.photoCount} beautiful nature photography images from Costa Rica`,
+    metadataBase: new URL(SITE_URL),
+    alternates: {
+      canonical: canonical,
+    },
+    openGraph: {
+      title: `${gallery.name} | Wildphotography`,
+      description: gallery.description || `${gallery.name} - ${gallery.photoCount} photos from Costa Rica`,
+      url: canonical,
+      siteName: 'Wildphotography',
+      images: ogImage ? [
+        {
+          url: ogImage,
+          width: 1200,
+          height: 1200,
+          alt: gallery.name,
+        }
+      ] : [],
+      type: 'website',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${gallery.name} | Wildphotography`,
+      description: gallery.description || undefined,
+      images: ogImage ? [ogImage] : [],
+    },
   };
 }
 

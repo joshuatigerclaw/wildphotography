@@ -1,12 +1,33 @@
+import { Metadata } from 'next';
 import Link from 'next/link';
 import { getGalleries, getAllPhotos } from '@/lib/db';
 import VirtualizedGallery from '@/components/VirtualizedGallery';
 
 export const dynamic = 'force-dynamic';
 
-export const metadata = {
+const SITE_URL = 'https://wildphotography.com';
+
+export const metadata: Metadata = {
   title: 'Wildphotography | Costa Rica Nature Photography',
-  description: 'Professional wildlife and nature photography from Costa Rica.',
+  description: 'Professional wildlife, bird, and nature photography from Costa Rica. Explore our galleries of Scarlet Macaws, Toucans, Quetzals, and more.',
+  metadataBase: new URL(SITE_URL),
+  openGraph: {
+    title: 'Wildphotography | Costa Rica Nature Photography',
+    description: 'Professional wildlife, bird, and nature photography from Costa Rica.',
+    url: SITE_URL,
+    siteName: 'Wildphotography',
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Wildphotography | Costa Rica Nature Photography',
+    description: 'Professional wildlife and nature photography from Costa Rica.',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default async function Home() {

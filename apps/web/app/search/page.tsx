@@ -81,8 +81,7 @@ function SearchContent() {
   return (
     <>
       <header className="mb-8">
-        <h1 className="text-4xl font-bold mb-4">Search Photos</h1>
-        
+        <h1 className="text-4xl font-bold mb-4">Search Photos</h1>        
         <form onSubmit={handleSearch} className="flex gap-2 max-w-xl">
           <input
             type="text"
