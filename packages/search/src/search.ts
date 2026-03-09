@@ -82,7 +82,7 @@ export async function searchPhotos(options: SearchOptions): Promise<SearchResult
     const facets: Record<string, FacetCount[]> = {};
     if (searchResult.facet_counts) {
       for (const facet of searchResult.facet_counts) {
-        facets[facet.field_name] = facet counts.map((c: any) => ({
+        facets[facet.field_name] = facet.counts.map((c: any) => ({
           value: c.value,
           count: c.count,
         }));

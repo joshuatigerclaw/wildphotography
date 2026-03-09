@@ -9,18 +9,22 @@ const TYPESENSE_SEARCH_KEY = process.env.TYPESENSE_SEARCH_KEY || 'Hhg7V2CK3DsS94
 
 // Create admin client (for indexing)
 export const typesenseAdmin = new Client({
-  host: TYPESENSE_HOST,
-  port: TYPESENSE_PORT,
-  protocol: TYPESENSE_PROTOCOL,
+  nodes: [{
+    host: TYPESENSE_HOST,
+    port: TYPESENSE_PORT,
+    protocol: TYPESENSE_PROTOCOL,
+  }],
   apiKey: TYPESENSE_API_KEY,
   connectionTimeoutSeconds: 30,
 });
 
 // Create search client (for querying)
 export const typesenseSearch = new Client({
-  host: TYPESENSE_HOST,
-  port: TYPESENSE_PORT,
-  protocol: TYPESENSE_PROTOCOL,
+  nodes: [{
+    host: TYPESENSE_HOST,
+    port: TYPESENSE_PORT,
+    protocol: TYPESENSE_PROTOCOL,
+  }],
   apiKey: TYPESENSE_SEARCH_KEY,
   connectionTimeoutSeconds: 10,
 });
