@@ -31,7 +31,7 @@ export async function renderPhoto(slug: string, env: Env, url: URL): Promise<Res
   
   let mainImageHtml: string;
   if (imgResult.type === 'url') {
-    mainImageHtml = `<img src="${imgResult.url}" alt="${getDisplayTitle(photo)}" style="max-width:100%;border-radius:8px;">`;
+    mainImageHtml = `<img src="${imgResult.url}" alt="${getDisplayTitle(photo)}" style="width:100%;max-width:1200px;height:auto;border-radius:8px;">`;
   } else {
     mainImageHtml = renderPlaceholder('No image available');
   }

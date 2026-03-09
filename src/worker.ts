@@ -63,7 +63,17 @@ export default {
         });
       }
 
-      // Debug: check photos
+      // Debug: check single photo
+      if (path === 'api/v1/debug/photo') {
+        const url = new URL(request.url);
+        const slug = url.searchParams.get('slug') || 'img-9761-jpg-McvJMD';
+        const { getPhotoBySlug } = await import('./lib/db');
+        const photo = await getPhotoBySlug(slug);
+        return Response.json({ 
+          slug,
+          photo
+        });
+      }
       if (path === 'api/v1/debug/photos') {
         const { getRecentPhotos } = await import('./lib/db');
         const photos = await getRecentPhotos(20);
