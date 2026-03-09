@@ -12,13 +12,19 @@ const GALLERY_SLUGS = [
   'turtles'
 ];
 
+// Default fallback images (used only when no real data)
+const FALLBACK_IMAGES = [
+  { title: 'IMG_9761', slug: 'img-9761' },
+  { title: 'IMG_9867', slug: 'img-9867' },
+  { title: 'IMG_0133', slug: 'img-0133' },
+  { title: 'IMG_0143', slug: 'img-0143' },
+];
+
 export async function renderHome(env: Env, url: URL): Promise<Response> {
-  // Try to get galleries from Neon
-  let galleries: any[] = [];
+  // Try to get photos from API
   let photos: any[] = [];
   
   try {
-    // Try to get photos from the API
     const response = await fetch('https://wildphotography.com/api/public/gallery/surfing-costa-rica');
     if (response.ok) {
       const data = await response.json();
@@ -30,28 +36,12 @@ export async function renderHome(env: Env, url: URL): Promise<Response> {
     console.error('Home error:', e);
   }
   
-  // Use real galleries if available, otherwise use known gallery names
-  if (galleries.length === 0) {
-    galleries = GALLERY_SLUGS.map(slug => ({
-      slug,
-      name: slug.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')
-    }));
-  }
-  
-  // Use photos if available, otherwise use known derivative images
+  // Use fallback if no real photos
   if (photos.length === 0) {
-    photos = [
-      { title: 'IMG_9761', slug: 'img-9761', thumbUrl: `${MEDIA_BASE}/derivatives/thumbs/img_9761-thumbs.jpg` },
-      { title: 'IMG_9867', slug: 'img-9867', thumbUrl: `${MEDIA_BASE}/derivatives/thumbs/img_9867-thumbs.jpg` },
-      { title: 'IMG_0133', slug: 'img-0133', thumbUrl: `${MEDIA_BASE}/derivatives/thumbs/img_0133-thumbs.jpg` },
-      { title: 'IMG_0135', slug: 'img-0135', thumbUrl: `${MEDIA_BASE}/derivatives/thumbs/img_0135-thumbs.jpg` },
-      { title: 'IMG_0143', slug: 'img-0143', thumbUrl: `${MEDIA_BASE}/derivatives/thumbs/img_0143-thumbs.jpg` },
-      { title: 'IMG_0154', slug: 'img-0154', thumbUrl: `${MEDIA_BASE}/derivatives/thumbs/img_0154-thumbs.jpg` },
-      { title: 'IMG_3491', slug: 'img-3491', thumbUrl: `${MEDIA_BASE}/derivatives/thumbs/img_3491-thumbs.jpg` },
-      { title: 'IMG_3501', slug: 'img-3501', thumbUrl: `${MEDIA_BASE}/derivatives/thumbs/img_3501-thumbs.jpg` },
-    ];
+    photos = FALLBACK_IMAGES;
   }
   
+  // Generate photo cards with real derivative URLs
   const photoCards = photos.map(p => {
     const thumbUrl = p.thumbUrl || `${MEDIA_BASE}/derivatives/thumbs/${p.slug}-thumbs.jpg`;
     return `
@@ -65,15 +55,21 @@ export async function renderHome(env: Env, url: URL): Promise<Response> {
       </div>`;
   }).join('');
   
-  const galleryCards = galleries.map(g => `
-    <div class="photo-card">
-      <a href="/gallery/${g.slug}">
-        <img src="${MEDIA_BASE}/derivatives/thumbs/scarlet-macaw-test-thumb.jpg" alt="${g.name}">
-        <div class="caption">
-          <h3>${g.name}</h3>
-        </div>
-      </a>
-    </div>`).join('');
+  // Generate gallery cards using real images when available
+  const galleryCards = GALLERY_SLUGS.map((slug, i) => {
+    // Use real derivative images for galleries
+    const thumbUrl = `${MEDIA_BASE}/derivatives/thumbs/${FALLBACK_IMAGES[i % FALLBACK_IMAGES.length].slug}-thumbs.jpg`;
+    const name = slug.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+    return `
+      <div class="photo-card">
+        <a href="/gallery/${slug}">
+          <img src="${thumbUrl}" alt="${name}">
+          <div class="caption">
+            <h3>${name}</h3>
+          </div>
+        </a>
+      </div>`;
+  }).join('');
   
   const content = `
     <section class="hero">

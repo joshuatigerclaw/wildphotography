@@ -5,8 +5,13 @@
 import { renderPage, MEDIA_BASE } from './base';
 import type { Env } from '../types';
 
+// Fallback images for when DB doesn't have data
+const FALLBACK_PHOTOS = [
+  { title: 'IMG_9761', slug: 'img-9761', largeUrl: `${MEDIA_BASE}/derivatives/large/img_9761-large.jpg` },
+];
+
 export async function renderPhoto(slug: string, env: Env, url: URL): Promise<Response> {
-  // Try to get photo from Neon
+  // Try to get photo from API
   let photo: any = null;
   
   try {
@@ -19,15 +24,11 @@ export async function renderPhoto(slug: string, env: Env, url: URL): Promise<Res
   }
   
   if (!photo) {
-    // Fallback for demo
-    photo = {
-      title: slug,
-      description: 'Imported from SmugMug',
-      largeUrl: `${MEDIA_BASE}/derivatives/large/scarlet-macaw-test-large.jpg`,
-    };
+    // Use fallback
+    photo = FALLBACK_PHOTOS[0];
   }
   
-  // Use the large derivative URL
+  // Use large derivative URL
   const imageUrl = photo.largeUrl || photo.large_url || `${MEDIA_BASE}/derivatives/large/${slug}-large.jpg`;
   
   const content = `
