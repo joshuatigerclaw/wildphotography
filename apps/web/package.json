@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@cloudflare/next-on-pages": "^1.13.16",
     "@neondatabase/serverless": "^0.9.0",
     "@opennextjs/cloudflare": "^1.17.1",
     "drizzle-orm": "^0.29.0",
