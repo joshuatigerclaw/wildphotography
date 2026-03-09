@@ -95,6 +95,7 @@ export async function getGalleryBySlug(slug: string): Promise<Gallery | null> {
 
 /**
  * Fetch photos by gallery slug WITH derivative URLs
+ * Only returns photos that have at least one valid derivative URL (not mock/test)
  */
 export async function getPhotosByGallery(gallerySlug: string): Promise<PhotoDerivatives[]> {
   const rows = await queryNeon<any>(`
@@ -113,7 +114,11 @@ export async function getPhotosByGallery(gallerySlug: string): Promise<PhotoDeri
     FROM photos p
     JOIN gallery_photos gp ON p.id = gp.photo_id
     JOIN galleries g ON gp.gallery_id = g.id
-    WHERE g.slug = '${gallerySlug.replace(/'/g, "''")}' AND p.is_active = true
+    WHERE g.slug = '${gallerySlug.replace(/'/g, "''")}' 
+      AND p.is_active = true
+      AND (p.thumb_url IS NOT NULL AND p.thumb_url != '' AND p.thumb_url NOT LIKE '%scarlet-macaw-test%'
+           OR p.small_url IS NOT NULL AND p.small_url != '' AND p.small_url NOT LIKE '%scarlet-macaw-test%'
+           OR p.medium_url IS NOT NULL AND p.medium_url != '' AND p.medium_url NOT LIKE '%scarlet-macaw-test%')
     ORDER BY gp.sort_order, p.date_taken DESC
     LIMIT 20
   `);
@@ -137,6 +142,7 @@ export async function getPhotosByGallery(gallerySlug: string): Promise<PhotoDeri
 
 /**
  * Fetch recent photos for homepage WITH derivative URLs
+ * Excludes mock/test images
  */
 export async function getRecentPhotos(limit: number): Promise<PhotoDerivatives[]> {
   const rows = await queryNeon<any>(`
@@ -155,11 +161,10 @@ export async function getRecentPhotos(limit: number): Promise<PhotoDerivatives[]
     FROM photos p
     WHERE p.is_active = true 
       AND (
-        p.thumb_url IS NOT NULL 
-        OR p.small_url IS NOT NULL 
-        OR p.medium_url IS NOT NULL
-        OR p.large_url IS NOT NULL
-        OR p.preview_url IS NOT NULL
+        (p.thumb_url IS NOT NULL AND p.thumb_url != '' AND p.thumb_url NOT LIKE '%scarlet-macaw-test%')
+        OR (p.small_url IS NOT NULL AND p.small_url != '' AND p.small_url NOT LIKE '%scarlet-macaw-test%')
+        OR (p.medium_url IS NOT NULL AND p.medium_url != '' AND p.medium_url NOT LIKE '%scarlet-macaw-test%')
+        OR (p.large_url IS NOT NULL AND p.large_url != '' AND p.large_url NOT LIKE '%scarlet-macaw-test%')
       )
     ORDER BY p.date_taken DESC
     LIMIT ${limit}

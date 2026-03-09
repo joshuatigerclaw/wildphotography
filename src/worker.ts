@@ -66,9 +66,33 @@ export default {
       // Debug: check photos
       if (path === 'api/v1/debug/photos') {
         const { getRecentPhotos } = await import('./lib/db');
-        const photos = await getRecentPhotos(3);
+        const photos = await getRecentPhotos(20);
         return Response.json({ 
           count: photos.length,
+          photos: photos.map(p => ({ 
+            slug: p.slug, 
+            title: p.title,
+            thumb_key: p.thumb_r2_key,
+            small_key: p.small_r2_key
+          }))
+        });
+      }
+
+      // Debug: check gallery photos
+      if (path === 'api/v1/debug/gallery') {
+        const url = new URL(request.url);
+        const slug = url.searchParams.get('slug') || 'surfing-costa-rica';
+        const { getPhotosByGallery } = await import('./lib/db');
+        const photos = await getPhotosByGallery(slug);
+        
+        // Also check raw DB
+        const { queryNeon } = await import('./lib/db');
+        const rawRows = await queryNeon(`SELECT p.slug, p.thumb_url FROM photos p JOIN gallery_photos gp ON p.id=gp.photo_id JOIN galleries g ON gp.gallery_id=g.id WHERE g.slug = '${slug}' LIMIT 5`);
+        
+        return Response.json({ 
+          slug,
+          count: photos.length,
+          raw_thumb_urls: rawRows,
           photos: photos.map(p => ({ 
             slug: p.slug, 
             title: p.title,
