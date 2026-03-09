@@ -1,243 +1,155 @@
 /**
- * SmugMug Importer CLI
+ * SmugMug CLI - Fixed OAuth Implementation
  * 
  * Usage:
- *   npm run import -- --album <album-key>
- *   npm run import -- --album F3dK9M  (small test)
- *   npm run import -- --dry-run    (test without importing)
+ *   npx ts-node src/cli.ts --album <album-key>
+ *   npx ts-node src/cli.ts --album <album-key> --dry-run
  */
 
-import { SmugMugClient, Album, SmugMugImage } from './client';
-import { transformToNeon, transformKeywords, transformToTypesense } from './transform';
+import axios from 'axios';
+import OAuth from 'oauth-1.0a';
+import crypto from 'crypto';
 import { neon } from '@neondatabase/serverless';
 
-// Configuration
-const SMUGMUG_CONFIG = {
-  apiKey: 'SGL2kk9VfwBLPsRvH235gfsjLvxdKMdB',
-  apiSecret: 'QWj7VcjX9dnJN9Wn97cTT8dzR6KzvsC6Jx8pHsWfxb2dg4ffnBsPKXFK4Xp3dBxp',
-  accessToken: '3wMMdDs7h8n7M82ML5kD4WDk8TLhbGV8',
-  accessTokenSecret: 'V5Ggv3kvtffLpxqBjXP5HMQgrZHPfRfFP8c2sfdkTmdkrBD4Qx5ZZLgPQJzHR4LP',
-};
+// Configuration - set via environment or use defaults
+const API_KEY = process.env.SMUGMUG_API_KEY || 'SGL2kk9VfwBLPsRvH235gfsjLvxdKMdB';
+const API_SECRET = process.env.SMUGMUG_API_SECRET || 'QWj7VcjX9dnJN9Wn97cTT8dzR6KzvsC6Jx8pHsWfxb2dg4ffnBsPKXFK4Xp3dBxp';
+const ACCESS_TOKEN = process.env.SMUGMUG_ACCESS_TOKEN || '3wMMdDs7h8n7M82ML5kD4WDk8TLhbGV8';
+const ACCESS_TOKEN_SECRET = process.env.SMUGMUG_ACCESS_TOKEN_SECRET || 'V5Ggv3kvtffLpxqBjXP5HMQgrZHPfRfFP8c2sfdkTmdkrBD4Qx5ZZLgPQJzHR4LP';
+const DATABASE_URL = process.env.DATABASE_URL || 'postgresql://neondb_owner:npg_BvF2JsQ8drba@ep-calm-fire-ad0dfnqd-pooler.c-2.us-east-1.aws.neon.tech/wildphotography?sslmode=require';
 
-const NEON_DB_URL = process.env.DATABASE_URL || 
-  'postgresql://neondb_owner:npg_BvF2JsQ8drba@ep-calm-fire-ad0dfnqd-pooler.c-2.us-east-1.aws.neon.tech/wildphotography?sslmode=require';
+const sql = neon(DATABASE_URL);
 
-const sql = neon(NEON_DB_URL);
+// OAuth setup
+const oauth = new OAuth({
+  consumer: { key: API_KEY, secret: API_SECRET },
+  signature_method: 'HMAC-SHA1',
+  hash_function(base_string, key) {
+    return crypto.createHmac('sha1', key).update(base_string).digest('base64');
+  },
+});
 
-/**
- * Upsert gallery/album in Neon
- */
-async function upsertGallery(albumKey: string, album: Album): Promise<number> {
-  console.log(`[import] Upserting gallery: ${album.Name} (${albumKey})`);
-  
-  // Generate slug from album name
-  const slug = album.Name.toLowerCase()
+// Axios client
+const client = axios.create({
+  baseURL: 'https://api.smugmug.com/api/v2',
+  headers: { 'Accept': 'application/json' },
+});
+
+// Add OAuth interceptor
+client.interceptors.request.use((config) => {
+  const baseUrl = config.baseURL || '';
+  const url = baseUrl + (config.url || '');
+  const auth = oauth.toHeader(
+    oauth.authorize({ url, method: (config.method || 'GET').toUpperCase() }, { key: ACCESS_TOKEN, secret: ACCESS_TOKEN_SECRET })
+  );
+  config.headers['Authorization'] = auth['Authorization'];
+  return config;
+});
+
+function makeSlug(str: string): string {
+  return (str || 'untitled').toLowerCase()
     .replace(/[^a-z0-9]+/g, '-')
-    .replace(/^-|-$/g, '');
-  
-  const [existing] = await sql(
-    'SELECT id FROM galleries WHERE slug = $1',
-    [slug]
-  );
-  
-  if (existing) {
-    await sql(`
-      UPDATE galleries SET
-        name = $1,
-        description = $2,
-        date_modified = NOW()
-      WHERE id = $3
-    `, [album.Name, album.Description || null, existing.id]);
-    console.log(`[import] Updated gallery: ${slug} (id: ${existing.id})`);
-    return existing.id;
-  }
-  
-  const [result] = await sql(`
-    INSERT INTO galleries (name, slug, description, cover_photo_id, is_active, date_created)
-    VALUES ($1, $2, $3, NULL, true, NOW())
-    RETURNING id
-  `, [album.Name, slug, album.Description || null]);
-  
-  console.log(`[import] Created gallery: ${slug} (id: ${result.id})`);
-  return result.id;
+    .replace(/^-|-$/g, '')
+    .substring(0, 60);
 }
 
-/**
- * Upsert photo in Neon
- */
-async function upsertPhoto(
-  galleryId: number,
-  image: SmugMugImage,
-  albumKey: string,
-  albumName: string
-): Promise<number> {
-  const photoData = transformToNeon(image, albumKey, albumName);
-  
-  // Check if exists by smugmug_key
-  const [existing] = await sql(
-    'SELECT id FROM photos WHERE smugmug_key = $1',
-    [image.ImageKey]
-  );
-  
-  if (existing) {
-    await sql(`
-      UPDATE photos SET
-        title = $1,
-        description = $2,
-        location = $3,
-        camera_model = $4,
-        lens = $5,
-        width = $6,
-        height = $7,
-        orientation = $8,
-        date_taken = $9,
-        date_modified = NOW()
-      WHERE id = $10
-    `, [
-      photoData.title,
-      photoData.description,
-      photoData.location,
-      photoData.camera_model,
-      photoData.lens,
-      photoData.width,
-      photoData.height,
-      photoData.orientation,
-      photoData.date_taken,
-      existing.id
-    ]);
-    console.log(`[import] Updated photo: ${photoData.title} (id: ${existing.id})`);
-    return existing.id;
-  }
-  
-  const [result] = await sql(`
-    INSERT INTO photos (
-      smugmug_key, title, description, location,
-      camera_model, lens, width, height, orientation,
-      date_taken, date_uploaded, date_modified,
-      is_active, popularity, original_url
-    ) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, true, 0, $13)
-    RETURNING id
-  `, [
-    photoData.smugmug_key,
-    photoData.title,
-    photoData.description,
-    photoData.location,
-    photoData.camera_model,
-    photoData.lens,
-    photoData.width,
-    photoData.height,
-    photoData.orientation,
-    photoData.date_taken,
-    photoData.date_uploaded,
-    photoData.date_modified,
-    photoData.original_url,
-  ]);
-  
-  // Link to gallery
-  await sql(`
-    INSERT INTO gallery_photos (gallery_id, photo_id, sort_order, date_added)
-    VALUES ($1, $2, 0, NOW())
-    ON CONFLICT DO NOTHING
-  `, [galleryId, result.id]);
-  
-  console.log(`[import] Created photo: ${photoData.title} (id: ${result.id})`);
-  return result.id;
-}
-
-/**
- * Upsert keywords
- */
-async function upsertKeywords(photoId: number, keywords: string[]) {
-  const normalized = keywords.map(k => k.toLowerCase().trim()).filter(k => k.length > 0);
-  
-  for (const keyword of normalized) {
-    const slug = keyword.replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
-    
-    // Insert keyword if not exists
-    await sql(`
-      INSERT INTO keywords (name, slug)
-      VALUES ($1, $2)
-      ON CONFLICT (slug) DO NOTHING
-    `, [keyword, slug]);
-    
-    // Get keyword id
-    const [kw] = await sql('SELECT id FROM keywords WHERE slug = $1', [slug]);
-    
-    // Link to photo
-    await sql(`
-      INSERT INTO photo_keywords (photo_id, keyword_id)
-      VALUES ($1, $2)
-      ON CONFLICT DO NOTHING
-    `, [photoId, kw.id]);
-  }
-}
-
-/**
- * Import album
- */
 async function importAlbum(albumKey: string, dryRun: boolean = false) {
-  console.log(`\n=== Starting import for album: ${albumKey} ===\n`);
-  
-  const client = new SmugMugClient(SMUGMUG_CONFIG);
+  console.log(`\n=== Importing album: ${albumKey} ===\n`);
   
   // Get album info
   console.log('[import] Fetching album info...');
-  const album = await client.getAlbum(albumKey);
+  const albumRes = await client.get(`/album/${albumKey}`);
+  const album = albumRes.data.Response.Album;
   console.log(`[import] Album: ${album.Name} (${album.ImageCount} images)`);
   
   if (dryRun) {
-    console.log('[import] Dry run - would create gallery and import photos');
+    console.log('[import] Dry run - would import', album.ImageCount, 'photos');
     return;
   }
   
   // Upsert gallery
-  const galleryId = await upsertGallery(albumKey, album);
+  const slug = makeSlug(album.Name);
+  console.log('[import] Gallery slug:', slug);
   
-  // Get images
-  console.log(`[import] Fetching images from album...`);
-  let page = 1;
-  let totalImported = 0;
-  const pageSize = 50;
+  const [existing] = await sql('SELECT id FROM galleries WHERE slug = $1', [slug]);
+  let galleryId: number;
   
-  while (true) {
-    const result = await client.getAlbumImages(albumKey, { start: (page - 1) * pageSize, count: pageSize });
-    
-    console.log(`[import] Page ${page}: ${result.images.length} images`);
-    
-    for (const image of result.images) {
-      try {
-        // Get keywords
-        const keywords = image.Keywords || [];
-        
-        // Upsert photo
-        const photoId = await upsertPhoto(galleryId, image, albumKey, album.Name);
-        
-        // Upsert keywords
-        await upsertKeywords(photoId, keywords);
-        
-        totalImported++;
-      } catch (error) {
-        console.error(`[import] Error importing image ${image.ImageKey}:`, error);
-      }
-    }
-    
-    if ((page * pageSize) >= result.total) {
-      break;
-    }
-    
-    page++;
-    
-    // Rate limit check
-    const rateLimit = client.getRateLimitStatus();
-    console.log(`[import] Rate limit: ${rateLimit.remaining} remaining`);
+  if (existing) {
+    await sql('UPDATE galleries SET name = $1, description = $2, date_modified = NOW() WHERE id = $3', 
+      [album.Name, album.Description || null, existing.id]);
+    galleryId = existing.id;
+    console.log('[import] Updated gallery:', galleryId);
+  } else {
+    const [result] = await sql(
+      'INSERT INTO galleries (name, slug, description, is_active, date_created) VALUES ($1, $2, $3, true, NOW()) RETURNING id',
+      [album.Name, slug, album.Description || null]
+    );
+    galleryId = result.id;
+    console.log('[import] Created gallery:', galleryId);
   }
   
-  console.log(`\n=== Import complete: ${totalImported} photos ===\n`);
+  // Get images
+  console.log('[import] Fetching images...');
+  const imagesRes = await client.get(`/album/${albumKey}!images?count=100`);
+  const images = imagesRes.data.Response.AlbumImage || [];
+  console.log('[import] Found', images.length, 'images');
+  
+  let imported = 0;
+  for (const img of images) {
+    try {
+      const title = img.Caption || img.FileName || 'Untitled';
+      const pslug = makeSlug(title) + '-' + img.ImageKey.substring(0, 6);
+      
+      // Upsert photo
+      const [existingPhoto] = await sql('SELECT id FROM photos WHERE smugmug_key = $1', [img.ImageKey]);
+      
+      if (existingPhoto) {
+        await sql(
+          'UPDATE photos SET title = $1, slug = $2, description = $3, width = $4, height = $5, date_modified = NOW() WHERE id = $6',
+          [title, pslug, img.Description || null, img.Width || null, img.Height || null, existingPhoto.id]
+        );
+      } else {
+        const [result] = await sql(
+          'INSERT INTO photos (smugmug_key, slug, title, description, width, height, date_uploaded, date_modified, is_active, popularity) VALUES ($1, $2, $3, $4, $5, $6, NOW(), NOW(), true, 0) RETURNING id',
+          [img.ImageKey, pslug, title, img.Description || null, img.Width || null, img.Height || null]
+        );
+        
+        // Link to gallery
+        await sql(
+          'INSERT INTO gallery_photos (gallery_id, photo_id, sort_order, date_added) VALUES ($1, $2, 0, NOW()) ON CONFLICT DO NOTHING',
+          [galleryId, result.id]
+        );
+      }
+      
+      // Handle keywords
+      const keywords = img.Keywords || [];
+      const kwList = Array.isArray(keywords) ? keywords : [];
+      
+      for (const kw of kwList) {
+        const kslug = makeSlug(kw);
+        if (!kslug) continue;
+        
+        await sql('INSERT INTO keywords (name, slug) VALUES ($1, $2) ON CONFLICT (slug) DO NOTHING', [kw.toLowerCase().trim(), kslug]);
+        const [keyword] = await sql('SELECT id FROM keywords WHERE slug = $1', [kslug]);
+        
+        // Get the photo ID
+        const [photo] = await sql('SELECT id FROM photos WHERE smugmug_key = $1', [img.ImageKey]);
+        
+        if (keyword && photo) {
+          await sql('INSERT INTO photo_keywords (photo_id, keyword_id) VALUES ($1, $2) ON CONFLICT DO NOTHING', [photo.id, keyword.id]);
+        }
+      }
+      
+      imported++;
+      if (imported % 10 === 0) console.log('[import] Progress:', imported);
+    } catch (e: any) {
+      console.error('[import] Error:', e.message);
+    }
+  }
+  
+  console.log(`\n=== Import complete: ${imported} photos ===\n`);
 }
 
-/**
- * Main CLI
- */
 async function main() {
   const args = process.argv.slice(2);
   const options: { album?: string; dryRun: boolean } = { dryRun: false };
@@ -257,14 +169,18 @@ async function main() {
     console.log('Options:');
     console.log('  --album <key>   SmugMug album key to import');
     console.log('  --dry-run        Test without importing');
+    console.log('');
+    console.log('Examples:');
+    console.log('  npx ts-node src/cli.ts --album wNBfp9');
+    console.log('  npx ts-node src/cli.ts --album ZXn2L5 --dry-run');
     process.exit(1);
   }
   
   try {
     await importAlbum(options.album, options.dryRun);
     console.log('✅ Import complete!');
-  } catch (error) {
-    console.error('❌ Import failed:', error);
+  } catch (error: any) {
+    console.error('❌ Import failed:', error.message);
     process.exit(1);
   }
 }
