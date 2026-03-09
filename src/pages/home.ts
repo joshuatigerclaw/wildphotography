@@ -12,12 +12,12 @@ const GALLERY_SLUGS = [
   'turtles'
 ];
 
-// Default fallback images (used only when no real data)
+// Use actual derivative filenames that exist in R2
 const FALLBACK_IMAGES = [
-  { title: 'IMG_9761', slug: 'img-9761' },
-  { title: 'IMG_9867', slug: 'img-9867' },
-  { title: 'IMG_0133', slug: 'img-0133' },
-  { title: 'IMG_0143', slug: 'img-0143' },
+  { title: 'Surfing Costa Rica', slug: 'img_9761' },
+  { title: 'Ocean Sunset', slug: 'img_9919' },
+  { title: 'Wildlife', slug: 'img_5375' },
+  { title: 'Costa Rica', slug: 'img_3491' },
 ];
 
 export async function renderHome(env: Env, url: URL): Promise<Response> {
@@ -41,24 +41,33 @@ export async function renderHome(env: Env, url: URL): Promise<Response> {
     photos = FALLBACK_IMAGES;
   }
   
-  // Generate photo cards with real derivative URLs
-  const photoCards = photos.map(p => {
-    const thumbUrl = p.thumbUrl || `${MEDIA_BASE}/derivatives/thumbs/${p.slug}-thumbs.jpg`;
+  // Generate photo cards - use slug directly
+  const photoCards = photos.map((p, i) => {
+    const slug = p.slug || FALLBACK_IMAGES[i % FALLBACK_IMAGES.length].slug;
+    const title = p.title || FALLBACK_IMAGES[i % FALLBACK_IMAGES.length].title;
+    const thumbUrl = `${MEDIA_BASE}/derivatives/thumbs/${slug}-thumbs.jpg`;
     return `
       <div class="photo-card">
-        <a href="/photo/${p.slug}">
-          <img src="${thumbUrl}" alt="${p.title}" loading="lazy">
+        <a href="/photo/${slug}">
+          <img src="${thumbUrl}" alt="${title}" loading="lazy">
           <div class="caption">
-            <h3>${p.title}</h3>
+            <h3>${title}</h3>
           </div>
         </a>
       </div>`;
-  }).join('');
+  }).join('');  
   
-  // Generate gallery cards using real images when available
+  // Gallery cards
+  const galleryImages = [
+    { slug: 'img_9761', name: 'Surfing Costa Rica' },
+    { slug: 'img_9919', name: 'Rivers' },
+    { slug: 'img_5375', name: 'Volcan Poas' },
+    { slug: 'img_3491', name: 'Turtles' },
+  ];
+  
   const galleryCards = GALLERY_SLUGS.map((slug, i) => {
-    // Use real derivative images for galleries
-    const thumbUrl = `${MEDIA_BASE}/derivatives/thumbs/${FALLBACK_IMAGES[i % FALLBACK_IMAGES.length].slug}-thumbs.jpg`;
+    const img = galleryImages[i] || galleryImages[0];
+    const thumbUrl = `${MEDIA_BASE}/derivatives/thumbs/${img.slug}-thumbs.jpg`;
     const name = slug.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
     return `
       <div class="photo-card">

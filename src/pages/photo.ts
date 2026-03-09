@@ -5,9 +5,8 @@
 import { renderPage, MEDIA_BASE } from './base';
 import type { Env } from '../types';
 
-// Fallback images for when DB doesn't have data
-const FALLBACK_PHOTOS = [
-  { title: 'IMG_9761', slug: 'img-9761', largeUrl: `${MEDIA_BASE}/derivatives/large/img_9761-large.jpg` },
+const FALLBACK = [
+  { title: 'IMG_9761', slug: 'img_9761' },
 ];
 
 export async function renderPhoto(slug: string, env: Env, url: URL): Promise<Response> {
@@ -24,12 +23,11 @@ export async function renderPhoto(slug: string, env: Env, url: URL): Promise<Res
   }
   
   if (!photo) {
-    // Use fallback
-    photo = FALLBACK_PHOTOS[0];
+    photo = FALLBACK[0];
   }
   
-  // Use large derivative URL
-  const imageUrl = photo.largeUrl || photo.large_url || `${MEDIA_BASE}/derivatives/large/${slug}-large.jpg`;
+  // Use large derivative
+  const imageUrl = `${MEDIA_BASE}/derivatives/large/${slug}-large.jpg`;
   
   const content = `
     <a href="/gallery/surfing-costa-rica" class="back-link">← Gallery</a>
