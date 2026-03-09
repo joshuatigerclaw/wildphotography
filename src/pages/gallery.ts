@@ -5,9 +5,6 @@
 import { renderPage, MEDIA_BASE } from './base';
 import type { Env } from '../types';
 
-// Use test image that's known to work in R2
-const TEST_IMAGE = 'scarlet-macaw-test-thumb.jpg';
-
 export async function renderGallery(slug: string, env: Env, url: URL): Promise<Response> {
   // Get photos from Neon if available
   let photos: any[] = [];
@@ -30,24 +27,28 @@ export async function renderGallery(slug: string, env: Env, url: URL): Promise<R
   // Use fallback photos if none from DB
   if (photos.length === 0) {
     photos = [
-      { title: 'IMG_9761.JPG', slug: 'img-9761' },
-      { title: 'IMG_9867.JPG', slug: 'img-9867' },
-      { title: 'IMG_0133.JPG', slug: 'img-0133' },
-      { title: 'IMG_0135.JPG', slug: 'img-0135' },
-      { title: 'IMG_0143.JPG', slug: 'img-0143' },
-      { title: 'IMG_0154.JPG', slug: 'img-0154' },
+      { title: 'IMG_9761.JPG', slug: 'img-9761', thumbUrl: `${MEDIA_BASE}/derivatives/thumbs/img_9761-thumbs.jpg` },
+      { title: 'IMG_9867.JPG', slug: 'img-9867', thumbUrl: `${MEDIA_BASE}/derivatives/thumbs/img_9867-thumbs.jpg` },
+      { title: 'IMG_0133.JPG', slug: 'img-0133', thumbUrl: `${MEDIA_BASE}/derivatives/thumbs/img_0133-thumbs.jpg` },
+      { title: 'IMG_0135.JPG', slug: 'img-0135', thumbUrl: `${MEDIA_BASE}/derivatives/thumbs/img_0135-thumbs.jpg` },
+      { title: 'IMG_0143.JPG', slug: 'img-0143', thumbUrl: `${MEDIA_BASE}/derivatives/thumbs/img_0143-thumbs.jpg` },
+      { title: 'IMG_0154.JPG', slug: 'img-0154', thumbUrl: `${MEDIA_BASE}/derivatives/thumbs/img_0154-thumbs.jpg` },
     ];
   }
   
-  const photoCards = photos.map(p => `
+  const photoCards = photos.map(p => {
+    // Use thumbUrl from DB or construct from slug
+    const thumbUrl = p.thumbUrl || `${MEDIA_BASE}/derivatives/thumbs/${p.slug}-thumbs.jpg`;
+    return `
     <div class="photo-card">
       <a href="/photo/${p.slug}">
-        <img src="${MEDIA_BASE}/derivatives/thumbs/${TEST_IMAGE}" alt="${p.title}" loading="lazy">
+        <img src="${thumbUrl}" alt="${p.title}" loading="lazy">
         <div class="caption">
           <h3>${p.title}</h3>
         </div>
       </a>
-    </div>`).join('');
+    </div>`;
+  }).join('');
   
   const content = `
     <a href="/galleries" class="back-link">← All Galleries</a>
