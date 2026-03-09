@@ -54,6 +54,15 @@ export default {
         return handleHealth();
       }
 
+      // Debug: check Neon token
+      if (path === 'api/v1/debug') {
+        const token = (env as any).NEON_TOKEN;
+        return Response.json({ 
+          hasToken: !!token, 
+          tokenPrefix: token ? token.substring(0, 20) + '...' : 'none'
+        });
+      }
+
       if (path === 'api/v1/queue/test') {
         return handleQueueTest(request, env, url);
       }

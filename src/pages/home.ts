@@ -7,7 +7,8 @@ import { getRecentPhotos } from '../lib/db';
 import type { Env } from '../types';
 
 export async function renderHome(env: Env, url: URL): Promise<Response> {
-  const photos = await getRecentPhotos(8);
+  const neonToken = (env as any).NEON_TOKEN || '';
+  const photos = await getRecentPhotos(8, neonToken);
   
   const photoCards = photos.length > 0 
     ? photos.map(p => `

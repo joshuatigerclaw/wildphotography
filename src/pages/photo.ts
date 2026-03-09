@@ -7,7 +7,8 @@ import { getPhotoBySlug } from '../lib/db';
 import type { Env } from '../types';
 
 export async function renderPhoto(slug: string, env: Env, url: URL): Promise<Response> {
-  const photo = await getPhotoBySlug(slug);
+  const neonToken = (env as any).NEON_TOKEN || '';
+  const photo = await getPhotoBySlug(slug, neonToken);
   
   if (!photo) {
     return renderPage('Photo Not Found', `
