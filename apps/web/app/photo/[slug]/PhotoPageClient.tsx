@@ -25,6 +25,8 @@ interface PhotoPageClientProps {
 export default function PhotoPageClient({ photo }: PhotoPageClientProps) {
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [lightboxIndex, setLightboxIndex] = useState(0);
+  const [purchasing, setPurchasing] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   // Build slides for lightbox - use derivative URLs ONLY
   const slides: PhotoSlide[] = [
@@ -39,6 +41,36 @@ export default function PhotoPageClient({ photo }: PhotoPageClientProps) {
   const openLightbox = (index: number = 0) => {
     setLightboxIndex(index);
     setLightboxOpen(true);
+  };
+
+  const handlePurchase = async () => {
+    setPurchasing(true);
+    setError(null);
+    
+    try {
+      // Create checkout
+      const response = await fetch('/api/paypal/checkout', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ photoId: parseInt(photo.id) }),
+      });
+      
+      const data = await response.json();
+      
+      if (data.error) {
+        setError(data.error);
+        return;
+      }
+      
+      // Redirect to PayPal
+      if (data.approvalUrl) {
+        window.location.href = data.approvalUrl;
+      }
+    } catch (e: any) {
+      setError(e.message);
+    } finally {
+      setPurchasing(false);
+    }
   };
 
   return (
@@ -102,15 +134,31 @@ export default function PhotoPageClient({ photo }: PhotoPageClientProps) {
           <div>
             <div className="bg-gray-50 rounded-lg p-6 mb-6">
               <h3 className="text-lg font-semibold mb-4">Purchase</h3>
+              
+              {error && (
+                <div className="mb-4 p-3 bg-red-50 text-red-700 rounded-lg text-sm">
+                  {error}
+                </div>
+              )}
+              
               <div className="space-y-3">
-                <button className="w-full px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition" disabled>
+                <button 
+                  className="w-full px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition disabled:opacity-50"
+                  disabled
+                >
                   Buy Print ($49)
                 </button>
-                <button className="w-full px-6 py-3 border border-gray-300 text-gray-700 font-semibold rounded-lg hover:bg-gray-50 transition" disabled>
-                  Download ($29)
+                <button 
+                  onClick={handlePurchase}
+                  disabled={purchasing}
+                  className="w-full px-6 py-3 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 transition disabled:opacity-50"
+                >
+                  {purchasing ? 'Processing...' : 'Download ($29)'}
                 </button>
               </div>
-              <p className="text-xs text-gray-500 mt-3 text-center">Coming soon</p>
+              <p className="text-xs text-gray-500 mt-3 text-center">
+                Secure payment via PayPal
+              </p>
             </div>
           </div>
         </div>
