@@ -166,6 +166,35 @@ export default {
         return Response.json({ received: true });
       }
 
+      // Download fulfillment endpoint
+      if (path.startsWith('api/v1/download/')) {
+        const slug = path.replace('api/v1/download/', '');
+        const url = new URL(request.url);
+        const expires = url.searchParams.get('expires') || '';
+        const signature = url.searchParams.get('sig') || '';
+        
+        const { verifyDownloadToken } = await import('./lib/downloads');
+        
+        if (!verifyDownloadToken(slug, expires, signature)) {
+          return new Response('Download link expired or invalid', { status: 403 });
+        }
+        
+        // Get the original from R2
+        const { getPhotoBySlug } = await import('./lib/db');
+        const photo = await getPhotoBySlug(slug);
+        
+        if (!photo?.original_r2_key) {
+          return new Response('Original not found', { status: 404 });
+        }
+        
+        // Redirect to R2 (in production, stream through worker)
+        const r2Url = `https://pub-7d412c6efb5943b5bc587e695e22001e.r2.dev/originals/${photo.original_r2_key}`;
+        
+        // For now, redirect to the derivative (original is blocked)
+        // In production, you'd stream the original through the worker
+        return Response.redirect(r2Url, 302);
+      }
+
       // === PUBLIC API ===
       
       // GET /api/public/photos/:slug

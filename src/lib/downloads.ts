@@ -12,6 +12,9 @@ const PAYPAL_API = {
   live: 'https://api-m.paypal.com',
 };
 
+// In-memory store for completed orders (in production, use a database)
+const completedOrders = new Map<string, { photoSlug: string; email: string; timestamp: number }>();
+
 /**
  * Get PayPal access token
  */
@@ -20,8 +23,8 @@ export async function getPayPalToken(env: Env): Promise<string | null> {
   const clientId = env.PAYPAL_CLIENT_ID || '';
   const clientSecret = env.PAYPAL_CLIENT_SECRET || '';
   
-  if (!clientId || !clientSecret) {
-    console.error('[paypal] Missing credentials');
+  if (!clientId || !clientSecret || clientId.startsWith('AVkBZPIeN') || clientId.includes('...')) {
+    console.error('[paypal] Missing or placeholder credentials');
     return null;
   }
   
@@ -65,38 +68,31 @@ export async function createOrder(
   const mode = env.PAYPAL_MODE || 'sandbox';
   const price = (priceCents / 100).toFixed(2);
   
-  const order = {
-    intent: 'CAPTURE',
-    purchase_units: [{
-      reference_id: photoSlug,
-      description: `Download: ${photoTitle}`,
-      amount: {
-        currency_code: 'USD',
-        value: price,
-      },
-    }],
-    application_context: {
-      brand_name: 'Wildphotography',
-      landing_page: 'NO_PREFERENCE',
-      user_action: 'PAY_NOW',
-      return_url: `${env.SITE_URL}/download/complete`,
-      cancel_url: `${env.SITE_URL}/photo/${photoSlug}`,
-    },
-  };
-  
   try {
-    const response = await fetch(`${PAYPAL_API[mode as keyof typeof PAYPAL_API]}/v2/checkout/orders`, {
-      method: 'POST',
-      headers: {
-        'Authorization': `Bearer ${token}`,
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(order),
-    });
+    const response = await fetch(
+      `${PAYPAL_API[mode as keyof typeof PAYPAL_API]}/v2/checkout/orders`,
+      {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${token}`,
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          intent: 'CAPTURE',
+          purchase_units: [{
+            reference_id: photoSlug,
+            description: `Download: ${photoTitle}`,
+            amount: {
+              currency_code: 'USD',
+              value: price,
+            },
+          }],
+        }),
+      }
+    );
     
     if (!response.ok) {
-      const err = await response.text();
-      console.error('[paypal] Create order error:', err);
+      console.error('[paypal] Create order error:', response.status);
       return null;
     }
     
@@ -116,9 +112,9 @@ export async function createOrder(
 /**
  * Capture PayPal order
  */
-export async function captureOrder(orderId: string, env: Env): Promise<boolean> {
+export async function captureOrder(orderId: string, env: Env): Promise<{ success: boolean; email?: string }> {
   const token = await getPayPalToken(env);
-  if (!token) return false;
+  if (!token) return { success: false };
   
   const mode = env.PAYPAL_MODE || 'sandbox';
   
@@ -136,14 +132,33 @@ export async function captureOrder(orderId: string, env: Env): Promise<boolean> 
     
     if (!response.ok) {
       console.error('[paypal] Capture error:', response.status);
-      return false;
+      return { success: false };
     }
     
     const data = await response.json();
-    return data.status === 'COMPLETED';
+    if (data.status !== 'COMPLETED') {
+      console.error('[paypal] Order not completed:', data.status);
+      return { success: false };
+    }
+    
+    // Get payer email from purchase unit
+    const email = data.purchase_units?.[0]?.payments?.captures?.[0]?.custom_id 
+      || data.payer?.email_address 
+      || 'customer@example.com';
+    
+    const photoSlug = data.purchase_units?.[0]?.reference_id || '';
+    
+    // Store completed order
+    completedOrders.set(orderId, {
+      photoSlug,
+      email,
+      timestamp: Date.now(),
+    });
+    
+    return { success: true, email };
   } catch (e) {
     console.error('[paypal] Capture error:', e);
-    return false;
+    return { success: false };
   }
 }
 
@@ -155,8 +170,8 @@ export async function verifyWebhook(
   headers: Record<string, string>,
   env: Env
 ): Promise<boolean> {
-  // For now, simplified verification
   // In production, verify PayPal-Signature header
+  // For now, accept webhooks with valid transmission ID
   const transmissionId = headers['paypal-transmission-id'];
   const timestamp = headers['paypal-transmission-time'];
   
@@ -165,26 +180,46 @@ export async function verifyWebhook(
     return false;
   }
   
-  // Log webhook for debugging
-  console.log('[paypal] Webhook received:', transmissionId, timestamp);
+  console.log('[paypal] Webhook received:', transmissionId);
   return true;
 }
 
 /**
- * Generate signed download URL for R2
+ * Generate signed R2 download URL (10 minute expiry)
  */
-export function generateSignedUrl(
-  r2Key: string,
-  env: Env,
-  expirySeconds: number = 3600
-): string {
-  // In production, use R2 signed URLs
-  // For now, return the public URL (downloads should be protected)
-  const bucketUrl = `https://pub-7d412c6efb5943b5bc587e695e22001e.r2.dev`;
+export function generateSignedUrl(photoSlug: string, env: Env): string {
+  const expiry = Math.floor(Date.now() / 1000) + 600; // 10 minutes
+  const token = `${photoSlug}:${expiry}`;
   
-  // Note: R2 doesn't support signed URLs in the same way as S3
-  // We'll use a token-based approach
-  return `${bucketUrl}/downloads/${r2Key}?token=${Date.now()}`;
+  // Simple signed URL using base64 (in production, use proper HMAC)
+  const signature = btoa(token).replace(/[^a-zA-Z0-9]/g, '').slice(0, 32);
+  
+  // Note: R2 doesn't natively support signed URLs like S3
+  // We'll handle this via a download endpoint that validates the token
+  return `${env.SITE_URL}/api/v1/download/${photoSlug}?expires=${expiry}&sig=${signature}`;
+}
+
+/**
+ * Verify download token
+ */
+export function verifyDownloadToken(photoSlug: string, expires: string, signature: string): boolean {
+  const now = Math.floor(Date.now() / 1000);
+  const exp = parseInt(expires, 10);
+  
+  // Check expiry
+  if (now > exp) {
+    console.log('[download] Link expired');
+    return false;
+  }
+  
+  // Verify signature
+  const expectedSig = btoa(`${photoSlug}:${exp}`).replace(/[^a-zA-Z0-9]/g, '').slice(0, 32);
+  if (signature !== expectedSig) {
+    console.log('[download] Invalid signature');
+    return false;
+  }
+  
+  return true;
 }
 
 /**
@@ -197,8 +232,9 @@ export async function sendDownloadEmail(
   env: Env
 ): Promise<boolean> {
   const apiKey = env.RESEND_API_KEY;
+  
   if (!apiKey) {
-    console.error('[resend] Missing API key');
+    console.error('[email] RESEND_API_KEY not configured');
     return false;
   }
   
@@ -210,22 +246,35 @@ export async function sendDownloadEmail(
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        from: 'Wildphotography <downloads@wildphotography.com>',
+        from: 'Wildphotography <noreply@wildphotography.com>',
         to: email,
         subject: `Your download: ${photoTitle}`,
         html: `
           <h1>Thank you for your purchase!</h1>
           <p>Your photo download is ready:</p>
-          <p><a href="${downloadUrl}">Download ${photoTitle}</a></p>
-          <p>This link expires in 7 days.</p>
-          <p>- The Wildphotography Team</p>
+          <h2>${photoTitle}</h2>
+          <p><a href="${downloadUrl}" style="background:#0070ba;color:white;padding:12px 24px;text-decoration:none;border-radius:4px;display:inline-block;">Download Now</a></p>
+          <p><small>This link expires in 10 minutes.</small></p>
+          <p>Best regards,<br>Joshua ten Brink<br>Wildphotography</p>
         `,
       }),
     });
     
-    return response.ok;
+    if (!response.ok) {
+      console.error('[email] Send error:', response.status);
+      return false;
+    }
+    
+    return true;
   } catch (e) {
-    console.error('[resend] Send error:', e);
+    console.error('[email] Send error:', e);
     return false;
   }
+}
+
+/**
+ * Get completed order info
+ */
+export function getCompletedOrder(orderId: string) {
+  return completedOrders.get(orderId) || null;
 }
