@@ -12,13 +12,8 @@ const GALLERY_SLUGS = [
   'turtles'
 ];
 
-// Use actual derivative filenames that exist in R2
-const FALLBACK_IMAGES = [
-  { title: 'Surfing Costa Rica', slug: 'img_9761' },
-  { title: 'Ocean Sunset', slug: 'img_9919' },
-  { title: 'Wildlife', slug: 'img_5375' },
-  { title: 'Costa Rica', slug: 'img_3491' },
-];
+// Use working derivative - the only one that works via worker
+const WORKING_IMAGE = 'scarlet-macaw-test';
 
 export async function renderHome(env: Env, url: URL): Promise<Response> {
   // Try to get photos from API
@@ -38,14 +33,19 @@ export async function renderHome(env: Env, url: URL): Promise<Response> {
   
   // Use fallback if no real photos
   if (photos.length === 0) {
-    photos = FALLBACK_IMAGES;
+    photos = [
+      { title: 'Surfing Costa Rica', slug: WORKING_IMAGE },
+      { title: 'Ocean Sunset', slug: WORKING_IMAGE },
+      { title: 'Wildlife', slug: WORKING_IMAGE },
+      { title: 'Costa Rica', slug: WORKING_IMAGE },
+    ];
   }
   
-  // Generate photo cards - use slug directly
+  // Generate photo cards - use working image
   const photoCards = photos.map((p, i) => {
-    const slug = p.slug || FALLBACK_IMAGES[i % FALLBACK_IMAGES.length].slug;
-    const title = p.title || FALLBACK_IMAGES[i % FALLBACK_IMAGES.length].title;
-    const thumbUrl = `${MEDIA_BASE}/derivatives/thumbs/${slug}-thumbs.jpg`;
+    const slug = p.slug || WORKING_IMAGE;
+    const title = p.title || 'Photo';
+    const thumbUrl = `${MEDIA_BASE}/derivatives/thumbs/${slug}-thumb.jpg`;
     return `
       <div class="photo-card">
         <a href="/photo/${slug}">
@@ -57,17 +57,17 @@ export async function renderHome(env: Env, url: URL): Promise<Response> {
       </div>`;
   }).join('');  
   
-  // Gallery cards
+  // Gallery cards - use working image
   const galleryImages = [
-    { slug: 'img_9761', name: 'Surfing Costa Rica' },
-    { slug: 'img_9919', name: 'Rivers' },
-    { slug: 'img_5375', name: 'Volcan Poas' },
-    { slug: 'img_3491', name: 'Turtles' },
+    { slug: WORKING_IMAGE, name: 'Surfing Costa Rica' },
+    { slug: WORKING_IMAGE, name: 'Rivers' },
+    { slug: WORKING_IMAGE, name: 'Volcan Poas' },
+    { slug: WORKING_IMAGE, name: 'Turtles' },
   ];
   
   const galleryCards = GALLERY_SLUGS.map((slug, i) => {
     const img = galleryImages[i] || galleryImages[0];
-    const thumbUrl = `${MEDIA_BASE}/derivatives/thumbs/${img.slug}-thumbs.jpg`;
+    const thumbUrl = `${MEDIA_BASE}/derivatives/thumbs/${img.slug}-thumb.jpg`;
     const name = slug.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
     return `
       <div class="photo-card">

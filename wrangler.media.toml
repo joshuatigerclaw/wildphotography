@@ -1,0 +1,9 @@
+name = "wildphotography-media-v2"
+main = "src/media-worker.ts"
+compatibility_date = "2026-03-07"
+compatibility_flags = ["nodejs_compat"]
+workers_dev = true
+
+[[r2_buckets]]
+binding = "PHOTO_BUCKET"
+bucket_name = "wildphoto-storage"
