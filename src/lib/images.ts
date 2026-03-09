@@ -20,7 +20,11 @@ const R2_PUBLIC_BASE = 'https://pub-7d412c6efb5943b5bc587e695e22001e.r2.dev';
  */
 export function keyToUrl(key: string | null): string | null {
   if (!key || key.trim() === '') return null;
-  return R2_PUBLIC_BASE + '/' + key;
+  
+  // Ensure key has derivatives/ prefix
+  const fullKey = key.startsWith('derivatives/') ? key : `derivatives/${key}`;
+  
+  return R2_PUBLIC_BASE + '/' + fullKey;
 }
 
 /**

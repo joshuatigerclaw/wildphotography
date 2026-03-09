@@ -78,27 +78,16 @@ export default {
         });
       }
 
-      // Debug: raw DB query
-      if (path === 'api/v1/debug/raw') {
+      // Debug: check original_r2_key
+      if (path === 'api/v1/debug/originals') {
         const { queryNeon } = await import('./lib/db');
         try {
-          // Check columns
-          const cols = await queryNeon("SELECT column_name FROM information_schema.columns WHERE table_name = 'photos' ORDER BY ordinal_position");
-          // Check if is_active exists
-          const isActive = await queryNeon("SELECT COUNT(*) as cnt FROM photos WHERE is_active = true");
-          // Check if derivative keys exist
-          const withKeys = await queryNeon("SELECT COUNT(*) as cnt FROM photos WHERE thumb_r2_key IS NOT NULL OR small_r2_key IS NOT NULL OR medium_r2_key IS NOT NULL");
-          // Get sample photo
-          const sample = await queryNeon("SELECT id, slug, title, is_active, thumb_r2_key, small_r2_key FROM photos LIMIT 1");
-          
+          const rows = await queryNeon("SELECT slug, original_r2_key, thumb_url, small_url FROM photos WHERE original_r2_key IS NOT NULL LIMIT 5");
           return Response.json({ 
-            columns: cols,
-            is_active_count: isActive,
-            with_keys_count: withKeys,
-            sample_photo: sample
+            originals: rows
           });
         } catch (e: any) {
-          return Response.json({ error: e.message, stack: e.stack });
+          return Response.json({ error: e.message });
         }
       }
 
