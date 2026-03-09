@@ -3,11 +3,22 @@
  */
 
 import { renderPage, MEDIA_BASE } from './base';
+import { getRecentPhotos } from '../lib/db';
 import type { Env } from '../types';
 
 export async function renderHome(env: Env, url: URL): Promise<Response> {
-  // TODO: Fetch from Neon DB when Phase B3
-  // const photos = await getRecentPhotos();
+  const photos = await getRecentPhotos(8);
+  
+  const photoCards = photos.length > 0 
+    ? photos.map(p => `
+        <div class="photo-card">
+          <img src="${MEDIA_BASE}/derivatives/thumbs/${p.filename.replace('.jpg', '-thumb.jpg')}" alt="${p.title}" loading="lazy">
+          <div class="caption">
+            <h3>${p.title}</h3>
+            <p>${p.description || ''}</p>
+          </div>
+        </div>`).join('')
+    : `<p>No photos yet. Import from SmugMug to populate.</p>`;
   
   const content = `
     <section class="hero">
@@ -17,14 +28,7 @@ export async function renderHome(env: Env, url: URL): Promise<Response> {
     <section>
       <h2>Featured Photos</h2>
       <div class="gallery">
-        ${[1,2,3,4].map(i => `
-        <div class="photo-card">
-          <img src="${MEDIA_BASE}/derivatives/thumbs/scarlet-macaw-test-thumb.jpg" alt="Scarlet Macaw ${i}" loading="lazy">
-          <div class="caption">
-            <h3>Scarlet Macaw</h3>
-            <p>Costa Rica's most iconic bird</p>
-          </div>
-        </div>`).join('')}
+        ${photoCards}
       </div>
     </section>
   `;
