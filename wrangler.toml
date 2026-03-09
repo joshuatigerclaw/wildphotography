@@ -9,6 +9,19 @@ APP_ENV = "production"
 SITE_URL = "https://wildphotography.com"
 MEDIA_BASE_URL = "https://media.wildphotography.com"
 
+# PayPal
+PAYPAL_CLIENT_ID = "AVkBZPIeNPaypal-LIVE-..."
+PAYPAL_CLIENT_SECRET = "EVn5NPaypal-LIVE-..."
+PAYPAL_MODE = "sandbox"
+
+# Resend (email)
+RESEND_API_KEY = "re_..."
+
+# Download settings
+DOWNLOAD_PRICE_CENTS = 2900
+DOWNLOAD_EXPIRY_HOURS = 168
+DOWNLOAD_MAX_ATTEMPTS = 5
+
 [[r2_buckets]]
 binding = "PHOTO_BUCKET"
 bucket_name = "wildphoto-storage"

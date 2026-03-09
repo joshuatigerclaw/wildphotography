@@ -44,7 +44,45 @@ export async function renderPhoto(slug: string, env: Env, url: URL): Promise<Res
   const downloadSection = `
     <div class="downloads">
       <h3>Downloads</h3>
-      <p>Contact us for high-resolution versions.</p>
+      <p>High-resolution digital download available.</p>
+      <button 
+        id="buy-button"
+        onclick="buyDownload('${photo.slug}', '${displayTitle}')"
+        style="background:#0070ba;color:white;padding:12px 24px;border:none;border-radius:4px;font-size:16px;cursor:pointer;"
+      >
+        Buy Download - $29.00
+      </button>
+      <div id="checkout-status" style="margin-top:1rem;"></div>
+      <script>
+        async function buyDownload(slug, title) {
+          const btn = document.getElementById('buy-button');
+          const status = document.getElementById('checkout-status');
+          btn.disabled = true;
+          btn.textContent = 'Creating order...';
+          
+          try {
+            const res = await fetch('/api/v1/checkout/create', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ photoSlug: slug, photoTitle: title, priceCents: 2900 })
+            });
+            const data = await res.json();
+            
+            if (data.approveUrl) {
+              status.textContent = 'Redirecting to PayPal...';
+              window.location.href = data.approveUrl;
+            } else {
+              status.textContent = 'Error: ' + (data.error || 'Unknown error');
+              btn.disabled = false;
+              btn.textContent = 'Buy Download - $29.00';
+            }
+          } catch (e) {
+            status.textContent = 'Error: ' + e.message;
+            btn.disabled = false;
+            btn.textContent = 'Buy Download - $29.00';
+          }
+        }
+      </script>
     </div>
   `;
   

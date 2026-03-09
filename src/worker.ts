@@ -130,6 +130,52 @@ export default {
         return handleQueueTest(request, env, url);
       }
 
+      // Checkout API
+      if (path === 'api/v1/checkout/create') {
+        const { createOrder } = await import('./lib/downloads');
+        const body = await request.json();
+        const { photoSlug, photoTitle, priceCents } = body;
+        
+        const result = await createOrder(photoSlug, photoTitle, priceCents || 2900, env);
+        if (!result) {
+          return Response.json({ error: 'Failed to create order' }, { status: 500 });
+        }
+        return Response.json(result);
+      }
+
+      // PayPal webhook
+      if (path === 'api/v1/webhooks/paypal') {
+        const { verifyWebhook, captureOrder } = await import('./lib/downloads');
+        const bodyText = await request.text();
+        const headers: Record<string, string> = {};
+        request.headers.forEach((v, k) => { headers[k] = v; });
+        
+        const verified = await verifyWebhook(bodyText, headers, env);
+        if (!verified) {
+          return Response.json({ error: 'Webhook verification failed' }, { status: 400 });
+        }
+        
+        const body = JSON.parse(bodyText);
+        if (body.event_type === 'CHECKOUT.ORDER.APPROVED') {
+          const orderId = body.resource?.id;
+          if (orderId) {
+            await captureOrder(orderId, env);
+          }
+        }
+        
+        return Response.json({ received: true });
+      }
+
+      // Download fulfillment
+      if (path.startsWith('api/v1/download/')) {
+        const token = url.searchParams.get('token');
+        if (!token) {
+          return Response.json({ error: 'Missing token' }, { status: 401 });
+        }
+        // TODO: Verify token and serve file
+        return Response.json({ message: 'Download endpoint - implement token verification' });
+      }
+
       // Media routes (R2)
       if (path.startsWith('derivatives/')) {
         return handleMedia(path, env);
