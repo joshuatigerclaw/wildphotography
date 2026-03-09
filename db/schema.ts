@@ -1,4 +1,4 @@
-import { pgTable, serial, varchar, text, timestamp, integer, boolean, decimal, jsonb, pgEnum, index } from 'drizzle-orm/pg-core';
+import { pgTable, serial, varchar, text, timestamp, integer, boolean, decimal, jsonb, pgEnum } from 'drizzle-orm/pg-core';
 
 // Enums
 export const orderStatusEnum = pgEnum('order_status', ['pending', 'processing', 'completed', 'cancelled', 'refunded']);
@@ -52,10 +52,7 @@ export const photos = pgTable('photos', {
   
   // Extra
   metadata: jsonb('metadata'),
-}, (table) => ({
-  slugIndex: index('idx_photos_slug').on(table.slug),
-  activeIndex: index('idx_photos_active').on(table.isActive),
-}));
+});
 
 // Keywords table
 export const keywords = pgTable('keywords', {
@@ -74,10 +71,7 @@ export const photoKeywords = pgTable('photo_keywords', {
   keywordId: integer('keyword_id').references(() => keywords.id).notNull(),
   confidence: decimal('confidence', { precision: 5, scale: 2 }),
   dateAssigned: timestamp('date_assigned').defaultNow(),
-}, (table) => ({
-  photoKeywordIndex: index('idx_photo_keywords_photo').on(table.photoId),
-  keywordPhotoIndex: index('idx_photo_keywords_keyword').on(table.keywordId),
-}));
+});
 
 // Galleries table
 export const galleries = pgTable('galleries', {
@@ -100,9 +94,7 @@ export const galleryPhotos = pgTable('gallery_photos', {
   photoId: integer('photo_id').references(() => photos.id).notNull(),
   sortOrder: integer('sort_order').default(0),
   dateAdded: timestamp('date_added').defaultNow(),
-}, (table) => ({
-  galleryPhotoIndex: index('idx_gallery_photos_gallery').on(table.galleryId),
-}));
+});
 
 // Orders table
 export const orders = pgTable('orders', {

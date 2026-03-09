@@ -19,9 +19,11 @@ export async function GET(request: NextRequest) {
   const perPage = parseInt(searchParams.get('limit') || '20', 10);
   
   const typesense = new Client({
-    host: TYPESENSE_HOST,
-    port: 443,
-    protocol: 'https',
+    nodes: [{
+      host: TYPESENSE_HOST,
+      port: 443,
+      protocol: 'https',
+    }],
     apiKey: TYPESENSE_SEARCH_KEY,
   });
 

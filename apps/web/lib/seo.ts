@@ -72,7 +72,7 @@ export function generatePhotoMetadata(photo: {
       card: 'summary_large_image',
       title: photo.title,
       description: photo.description,
-      image: photo.imageUrl,
+      images: photo.imageUrl ? [photo.imageUrl] : [],
     },
   };
 }
