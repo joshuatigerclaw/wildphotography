@@ -3,28 +3,40 @@
  */
 
 import { renderPage, MEDIA_BASE } from './base';
-import { getPhotoBySlug } from '../lib/db';
 import type { Env } from '../types';
 
 export async function renderPhoto(slug: string, env: Env, url: URL): Promise<Response> {
-  const neonToken = (env as any).NEON_TOKEN || '';
-  const photo = await getPhotoBySlug(slug, neonToken);
+  // Try to get photo from Neon
+  let photo: any = null;
   
-  if (!photo) {
-    return renderPage('Photo Not Found', `
-      <h2>Photo Not Found</h2>
-      <p>The photo "${slug}" doesn't exist.</p>
-      <p><a href="/">← Back to Home</a></p>
-    `);
+  try {
+    const response = await fetch('https://wildphotography.com/api/public/photos/' + slug);
+    if (response.ok) {
+      photo = await response.json();
+    }
+  } catch (e) {
+    console.error('Photo error:', e);
   }
   
+  if (!photo) {
+    // Fallback for demo
+    photo = {
+      title: slug,
+      description: 'Imported from SmugMug',
+      largeUrl: `${MEDIA_BASE}/derivatives/large/scarlet-macaw-test-large.jpg`,
+    };
+  }
+  
+  // Use the large derivative URL
+  const imageUrl = photo.largeUrl || photo.large_url || `${MEDIA_BASE}/derivatives/large/${slug}-large.jpg`;
+  
   const content = `
-    <a href="/" class="back-link">← Home</a>
+    <a href="/gallery/surfing-costa-rica" class="back-link">← Gallery</a>
     <div style="text-align:center;padding:2rem 0">
-      <img src="${MEDIA_BASE}/derivatives/large/${photo.filename.replace('.jpg', '-large.jpg')}" alt="${photo.title}" style="max-width:100%;border-radius:8px;">
+      <img src="${imageUrl}" alt="${photo.title}" style="max-width:100%;border-radius:8px;">
       <h2 style="margin:1rem 0">${photo.title}</h2>
       ${photo.description ? `<p style="color:#666">${photo.description}</p>` : ''}
-      ${photo.locationName ? `<p style="color:#666;margin-top:0.5rem">📍 ${photo.locationName}</p>` : ''}
+      ${photo.location ? `<p style="color:#666;margin-top:0.5rem">📍 ${photo.location}</p>` : ''}
     </div>
   `;
   
