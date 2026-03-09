@@ -1,49 +1,23 @@
 /**
  * Neon database client for Worker
  * 
- * Uses direct Neon HTTP queries
+ * Uses Neon serverless driver for direct DB queries
  */
 
-import type { Photo, Gallery } from '../types';
+import type { PhotoDerivatives, Gallery } from '../types';
+import { neon } from '@neondatabase/serverless';
 
-// Neon HTTP query endpoint
-const NEON_PROJECT = 'ep-calm-fire-ad0dfnqd';
-
-// Media base URL
-const MEDIA_BASE = 'https://wildphotography-media.josh-ec6.workers.dev';
+// Neon connection string (from env)
+const NEON_CONNECTION = 'postgresql://neondb_owner:npg_BvF2JsQ8drba@ep-calm-fire-ad0dfnqd-pooler.c-2.us-east-1.aws.neon.tech/wildphotography?sslmode=require';
 
 /**
- * Execute SQL query via Neon's HTTP API
+ * Execute SQL query via Neon serverless
  */
-export async function queryNeon<T>(sql: string, neonToken: string): Promise<T[]> {
-  if (!neonToken) {
-    console.error('[db] No Neon token');
-    return [];
-  }
-
+export async function queryNeon<T>(sql: string): Promise<T[]> {
   try {
-    const response = await fetch(
-      `https://${NEON_PROJECT}.aws.neon.tech/v2/query?project=${NEON_PROJECT}`,
-      {
-        method: 'POST',
-        headers: {
-          'Authorization': `Bearer ${neonToken}`,
-          'Content-Type': 'application/json',
-          'Accept': 'application/json',
-        },
-        body: JSON.stringify({
-          queries: [{ query: sql }],
-        }),
-      }
-    );
-
-    if (!response.ok) {
-      console.error('[db] Neon error:', response.status);
-      return [];
-    }
-
-    const data = await response.json();
-    return data?.results?.[0]?.rows || [];
+    const sqlFn = neon(NEON_CONNECTION);
+    const rows = await sqlFn(sql);
+    return rows as T[];
   } catch (error) {
     console.error('[db] Query error:', error);
     return [];
@@ -51,9 +25,34 @@ export async function queryNeon<T>(sql: string, neonToken: string): Promise<T[]>
 }
 
 /**
+ * Map DB row to PhotoDerivatives
+ * DB columns: thumb_url, small_url, medium_url, large_url, preview_url, original_r2_key
+ */
+function mapPhoto(row: any): PhotoDerivatives {
+  return {
+    id: row.id,
+    slug: row.slug,
+    title: row.title || '',
+    description: row.description,
+    // Map DB URLs to keys for consistency with the image helper
+    // The image helper expects keys, but DB has URLs
+    // We need to convert URLs to keys or update the helper
+    // For now, let's extract the key from the URL or store directly
+    thumb_r2_key: row.thumb_r2_key || null,
+    small_r2_key: row.small_r2_key || null,
+    medium_r2_key: row.medium_r2_key || null,
+    large_r2_key: row.large_r2_key || null,
+    preview_r2_key: row.preview_r2_key || null,
+    original_r2_key: row.original_r2_key || null,
+    // Legacy
+    locationName: row.location,
+  };
+}
+
+/**
  * Fetch all galleries
  */
-export async function getGalleries(neonToken: string): Promise<Gallery[]> {
+export async function getGalleries(): Promise<Gallery[]> {
   const knownGalleries = [
     'surfing-costa-rica',
     'rivers', 
@@ -63,7 +62,7 @@ export async function getGalleries(neonToken: string): Promise<Gallery[]> {
   
   const galleries: Gallery[] = [];
   for (const slug of knownGalleries) {
-    const data = await getGalleryBySlug(slug, neonToken);
+    const data = await getGalleryBySlug(slug);
     if (data) galleries.push(data);
   }
   
@@ -73,7 +72,7 @@ export async function getGalleries(neonToken: string): Promise<Gallery[]> {
 /**
  * Fetch gallery by slug with photos
  */
-export async function getGalleryBySlug(slug: string, neonToken: string): Promise<Gallery | null> {
+export async function getGalleryBySlug(slug: string): Promise<Gallery | null> {
   const rows = await queryNeon<any>(`
     SELECT DISTINCT g.id, g.slug, g.name, g.description
     FROM galleries g
@@ -81,7 +80,7 @@ export async function getGalleryBySlug(slug: string, neonToken: string): Promise
     JOIN photos p ON gp.photo_id = p.id
     WHERE g.slug = '${slug.replace(/'/g, "''")}'
     LIMIT 1
-  `, neonToken);
+  `);
   
   if (rows.length === 0) return null;
   
@@ -95,62 +94,113 @@ export async function getGalleryBySlug(slug: string, neonToken: string): Promise
 }
 
 /**
- * Fetch photos by gallery slug
+ * Fetch photos by gallery slug WITH derivative URLs
  */
-export async function getPhotosByGallery(gallerySlug: string, neonToken: string): Promise<Photo[]> {
-  // Try direct query
+export async function getPhotosByGallery(gallerySlug: string): Promise<PhotoDerivatives[]> {
   const rows = await queryNeon<any>(`
-    SELECT p.id, p.slug, p.title, p.description, p.thumb_url, p.small_url, p.location
+    SELECT 
+      p.id, 
+      p.slug, 
+      p.title, 
+      p.description,
+      p.location,
+      p.thumb_url,
+      p.small_url,
+      p.medium_url,
+      p.large_url,
+      p.preview_url,
+      p.original_r2_key
     FROM photos p
     JOIN gallery_photos gp ON p.id = gp.photo_id
     JOIN galleries g ON gp.gallery_id = g.id
     WHERE g.slug = '${gallerySlug.replace(/'/g, "''")}' AND p.is_active = true
     ORDER BY gp.sort_order, p.date_taken DESC
     LIMIT 20
-  `, neonToken);
+  `);
   
+  // Map URLs to derivative keys
   return rows.map((r: any) => ({
     id: r.id,
     slug: r.slug,
-    title: r.title || 'Untitled',
+    title: r.title || '',
     description: r.description,
-    filename: r.thumb_url ? r.thumb_url.split('/').pop() : r.slug + '.jpg',
+    // Convert URL to key: extract path after /derivatives/
+    thumb_r2_key: r.thumb_url ? r.thumb_url.replace(/^.*\/derivatives\//, '') : null,
+    small_r2_key: r.small_url ? r.small_url.replace(/^.*\/derivatives\//, '') : null,
+    medium_r2_key: r.medium_url ? r.medium_url.replace(/^.*\/derivatives\//, '') : null,
+    large_r2_key: r.large_url ? r.large_url.replace(/^.*\/derivatives\//, '') : null,
+    preview_r2_key: r.preview_url ? r.preview_url.replace(/^.*\/derivatives\//, '') : null,
+    original_r2_key: r.original_r2_key,
     locationName: r.location,
   }));
 }
 
 /**
- * Fetch recent photos for homepage
+ * Fetch recent photos for homepage WITH derivative URLs
  */
-export async function getRecentPhotos(limit: number, neonToken: string): Promise<Photo[]> {
+export async function getRecentPhotos(limit: number): Promise<PhotoDerivatives[]> {
   const rows = await queryNeon<any>(`
-    SELECT p.id, p.slug, p.title, p.description, p.thumb_url, p.small_url, p.location
+    SELECT 
+      p.id, 
+      p.slug, 
+      p.title, 
+      p.description,
+      p.location,
+      p.thumb_url,
+      p.small_url,
+      p.medium_url,
+      p.large_url,
+      p.preview_url,
+      p.original_r2_key
     FROM photos p
-    WHERE p.is_active = true AND p.thumb_url IS NOT NULL
+    WHERE p.is_active = true 
+      AND (
+        p.thumb_url IS NOT NULL 
+        OR p.small_url IS NOT NULL 
+        OR p.medium_url IS NOT NULL
+        OR p.large_url IS NOT NULL
+        OR p.preview_url IS NOT NULL
+      )
     ORDER BY p.date_taken DESC
     LIMIT ${limit}
-  `, neonToken);
+  `);
   
   return rows.map((r: any) => ({
     id: r.id,
     slug: r.slug,
-    title: r.title || 'Untitled',
+    title: r.title || '',
     description: r.description,
-    filename: r.thumb_url ? r.thumb_url.split('/').pop() : r.slug + '.jpg',
+    thumb_r2_key: r.thumb_url ? r.thumb_url.replace(/^.*\/derivatives\//, '') : null,
+    small_r2_key: r.small_url ? r.small_url.replace(/^.*\/derivatives\//, '') : null,
+    medium_r2_key: r.medium_url ? r.medium_url.replace(/^.*\/derivatives\//, '') : null,
+    large_r2_key: r.large_url ? r.large_url.replace(/^.*\/derivatives\//, '') : null,
+    preview_r2_key: r.preview_url ? r.preview_url.replace(/^.*\/derivatives\//, '') : null,
+    original_r2_key: r.original_r2_key,
     locationName: r.location,
   }));
 }
 
 /**
- * Fetch photo by slug
+ * Fetch photo by slug WITH derivative URLs
  */
-export async function getPhotoBySlug(slug: string, neonToken: string): Promise<Photo | null> {
+export async function getPhotoBySlug(slug: string): Promise<PhotoDerivatives | null> {
   const rows = await queryNeon<any>(`
-    SELECT p.id, p.slug, p.title, p.description, p.thumb_url, p.large_url, p.location
+    SELECT 
+      p.id, 
+      p.slug, 
+      p.title, 
+      p.description,
+      p.location,
+      p.thumb_url,
+      p.small_url,
+      p.medium_url,
+      p.large_url,
+      p.preview_url,
+      p.original_r2_key
     FROM photos p
     WHERE p.slug = '${slug.replace(/'/g, "''")}' AND p.is_active = true
     LIMIT 1
-  `, neonToken);
+  `);
   
   if (rows.length === 0) return null;
   
@@ -158,9 +208,65 @@ export async function getPhotoBySlug(slug: string, neonToken: string): Promise<P
   return {
     id: r.id,
     slug: r.slug,
-    title: r.title || 'Untitled',
+    title: r.title || '',
     description: r.description,
-    filename: r.thumb_url ? r.thumb_url.split('/').pop() : r.slug + '.jpg',
+    thumb_r2_key: r.thumb_url ? r.thumb_url.replace(/^.*\/derivatives\//, '') : null,
+    small_r2_key: r.small_url ? r.small_url.replace(/^.*\/derivatives\//, '') : null,
+    medium_r2_key: r.medium_url ? r.medium_url.replace(/^.*\/derivatives\//, '') : null,
+    large_r2_key: r.large_url ? r.large_url.replace(/^.*\/derivatives\//, '') : null,
+    preview_r2_key: r.preview_url ? r.preview_url.replace(/^.*\/derivatives\//, '') : null,
+    original_r2_key: r.original_r2_key,
     locationName: r.location,
   };
+}
+
+/**
+ * Search photos WITH derivative URLs
+ */
+export async function searchPhotos(query: string, limit: number): Promise<PhotoDerivatives[]> {
+  const safeQuery = query.replace(/'/g, "''").toLowerCase();
+  
+  const rows = await queryNeon<any>(`
+    SELECT 
+      p.id, 
+      p.slug, 
+      p.title, 
+      p.description,
+      p.location,
+      p.thumb_url,
+      p.small_url,
+      p.medium_url,
+      p.large_url,
+      p.preview_url,
+      p.original_r2_key
+    FROM photos p
+    WHERE p.is_active = true 
+      AND (
+        LOWER(p.title) LIKE '%${safeQuery}%'
+        OR LOWER(p.description) LIKE '%${safeQuery}%'
+      )
+      AND (
+        p.thumb_url IS NOT NULL 
+        OR p.small_url IS NOT NULL 
+        OR p.medium_url IS NOT NULL
+        OR p.large_url IS NOT NULL
+        OR p.preview_url IS NOT NULL
+      )
+    ORDER BY p.date_taken DESC
+    LIMIT ${limit}
+  `);
+  
+  return rows.map((r: any) => ({
+    id: r.id,
+    slug: r.slug,
+    title: r.title || '',
+    description: r.description,
+    thumb_r2_key: r.thumb_url ? r.thumb_url.replace(/^.*\/derivatives\//, '') : null,
+    small_r2_key: r.small_url ? r.small_url.replace(/^.*\/derivatives\//, '') : null,
+    medium_r2_key: r.medium_url ? r.medium_url.replace(/^.*\/derivatives\//, '') : null,
+    large_r2_key: r.large_url ? r.large_url.replace(/^.*\/derivatives\//, '') : null,
+    preview_r2_key: r.preview_url ? r.preview_url.replace(/^.*\/derivatives\//, '') : null,
+    original_r2_key: r.original_r2_key,
+    locationName: r.location,
+  }));
 }

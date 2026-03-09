@@ -1,65 +1,74 @@
 /**
  * Gallery page renderer
+ * 
+ * Uses strict derivative selection:
+ * - Gets derivative keys from Neon DB
+ * - Uses getGalleryTileImage() for consistent selection
+ * - Shows readable titles, not raw filenames
  */
 
-import { renderPage, MEDIA_BASE } from './base';
+import { layout } from './base';
+import { getGalleryBySlug, getPhotosByGallery } from '../lib/db';
+import { getGalleryTileImage, getDisplayTitle, renderPlaceholder } from '../lib/images';
 import type { Env } from '../types';
 
-// Use existing derivative filenames with nice titles
-const FALLBACK_PHOTOS = [
-  { title: 'Surfing Wave', slug: 'img_9761' },
-  { title: 'Ocean Sunset', slug: 'img_9919' },
-  { title: 'Bird in Flight', slug: 'img_5375' },
-  { title: 'Costa Rica Landscape', slug: 'img_3491' },
-];
-
 export async function renderGallery(slug: string, env: Env, url: URL): Promise<Response> {
-  // Get photos from API
-  let photos: any[] = [];
-  let galleryName = slug;
-  let galleryDesc = '';
+  const gallery = await getGalleryBySlug(slug);
+  const photos = await getPhotosByGallery(slug);
   
-  try {
-    const response = await fetch('https://wildphotography.com/api/public/gallery/' + slug);
-    if (response.ok) {
-      const data = await response.json();
-      if (data.photos) photos = data.photos;
-      if (data.name) galleryName = data.name;
-      if (data.description) galleryDesc = data.description;
-    }
-  } catch (e) {
-    console.error('Gallery error:', e);
+  const galleryName = gallery?.name || slug;
+  const galleryDescription = gallery?.description || '';
+  
+  // Gallery tiles using strict derivative selection
+  let photoContent: string;
+  
+  if (photos.length > 0) {
+    const photoCards = photos.map(photo => {
+      // Use strict derivative selection for gallery tiles
+      const imgResult = getGalleryTileImage(photo);
+      
+      let imageHtml: string;
+      let cardClass = 'photo-card';
+      
+      if (imgResult.type === 'url') {
+        imageHtml = `<img src="${imgResult.url}" alt="${getDisplayTitle(photo)}" loading="lazy">`;
+      } else {
+        imageHtml = renderPlaceholder('No thumbnail');
+        cardClass += ' placeholder';
+      }
+      
+      // Use clean display title
+      const displayTitle = getDisplayTitle(photo);
+      
+      return `
+        <a href="/photo/${photo.slug}" class="${cardClass}">
+          ${imageHtml}
+          <div class="caption">
+            <h3>${displayTitle}</h3>
+          </div>
+        </a>
+      `;
+    }).join('');
+    
+    photoContent = `
+      <div class="gallery">
+        ${photoCards}
+      </div>
+    `;
+  } else {
+    photoContent = `
+      <p>No photos in this gallery yet.</p>
+    `;
   }
-  
-  // Use fallback if no photos from API
-  if (photos.length === 0) {
-    photos = FALLBACK_PHOTOS;
-  }
-  
-  const photoCards = photos.map((p, i) => {
-    const fallback = FALLBACK_PHOTOS[i % FALLBACK_PHOTOS.length];
-    const title = p.title || fallback.title;
-    const slugVal = p.slug || fallback.slug;
-    const thumbUrl = `${MEDIA_BASE}/derivatives/thumbs/${slugVal}-thumbs.jpg`;
-    return `
-    <div class="photo-card">
-      <a href="/photo/${slugVal}">
-        <img src="${thumbUrl}" alt="${title}" loading="lazy">
-        <div class="caption">
-          <h3>${title}</h3>
-        </div>
-      </a>
-    </div>`;
-  }).join('');
   
   const content = `
-    <a href="/galleries" class="back-link">← All Galleries</a>
+    <a href="/" class="back-link">← Back to Galleries</a>
+    
     <h2 style="margin:1rem 0">${galleryName}</h2>
-    ${galleryDesc ? `<p style="color:#666">${galleryDesc}</p>` : ''}
-    <div class="gallery">
-      ${photoCards}
-    </div>
+    ${galleryDescription ? `<p>${galleryDescription}</p>` : ''}
+    
+    ${photoContent}
   `;
   
-  return renderPage(`${galleryName} | Wildphotography`, content);
+  return layout(`${galleryName} - Wildphotography`, content);
 }

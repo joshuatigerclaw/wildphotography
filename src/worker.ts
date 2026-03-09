@@ -63,6 +63,45 @@ export default {
         });
       }
 
+      // Debug: check photos
+      if (path === 'api/v1/debug/photos') {
+        const { getRecentPhotos } = await import('./lib/db');
+        const photos = await getRecentPhotos(3);
+        return Response.json({ 
+          count: photos.length,
+          photos: photos.map(p => ({ 
+            slug: p.slug, 
+            title: p.title,
+            thumb_key: p.thumb_r2_key,
+            small_key: p.small_r2_key
+          }))
+        });
+      }
+
+      // Debug: raw DB query
+      if (path === 'api/v1/debug/raw') {
+        const { queryNeon } = await import('./lib/db');
+        try {
+          // Check columns
+          const cols = await queryNeon("SELECT column_name FROM information_schema.columns WHERE table_name = 'photos' ORDER BY ordinal_position");
+          // Check if is_active exists
+          const isActive = await queryNeon("SELECT COUNT(*) as cnt FROM photos WHERE is_active = true");
+          // Check if derivative keys exist
+          const withKeys = await queryNeon("SELECT COUNT(*) as cnt FROM photos WHERE thumb_r2_key IS NOT NULL OR small_r2_key IS NOT NULL OR medium_r2_key IS NOT NULL");
+          // Get sample photo
+          const sample = await queryNeon("SELECT id, slug, title, is_active, thumb_r2_key, small_r2_key FROM photos LIMIT 1");
+          
+          return Response.json({ 
+            columns: cols,
+            is_active_count: isActive,
+            with_keys_count: withKeys,
+            sample_photo: sample
+          });
+        } catch (e: any) {
+          return Response.json({ error: e.message, stack: e.stack });
+        }
+      }
+
       if (path === 'api/v1/queue/test') {
         return handleQueueTest(request, env, url);
       }

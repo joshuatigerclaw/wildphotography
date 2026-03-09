@@ -1,43 +1,79 @@
 /**
- * Photo page renderer
+ * Photo detail page renderer
+ * 
+ * Uses strict derivative selection:
+ * - Gets derivative keys from Neon DB
+ * - Uses getPhotoPageMainImage() for main display
+ * - Shows readable title, not raw filename
  */
 
-import { renderPage, MEDIA_BASE } from './base';
+import { layout } from './base';
+import { getPhotoBySlug } from '../lib/db';
+import { getPhotoPageMainImage, getDisplayTitle, renderPlaceholder, keyToUrl } from '../lib/images';
 import type { Env } from '../types';
 
-const FALLBACK = [
-  { title: 'IMG_9761', slug: 'img_9761' },
-];
-
 export async function renderPhoto(slug: string, env: Env, url: URL): Promise<Response> {
-  // Try to get photo from API
-  let photo: any = null;
-  
-  try {
-    const response = await fetch('https://wildphotography.com/api/public/photos/' + slug);
-    if (response.ok) {
-      photo = await response.json();
-    }
-  } catch (e) {
-    console.error('Photo error:', e);
-  }
+  const photo = await getPhotoBySlug(slug);
   
   if (!photo) {
-    photo = FALLBACK[0];
+    const content = `
+      <div style="text-align:center;padding:4rem 0">
+        <h2>Photo Not Found</h2>
+        <p>The requested photo could not be found.</p>
+        <a href="/">Return to homepage</a>
+      </div>
+    `;
+    return layout('Not Found - Wildphotography', content);
   }
   
-  // Use large derivative
-  const imageUrl = `${MEDIA_BASE}/derivatives/large/${slug}-large.jpg`;
+  // Main image using strict derivative selection (large → preview → medium → small → thumb)
+  const imgResult = getPhotoPageMainImage(photo);
   
-  const content = `
-    <a href="/gallery/surfing-costa-rica" class="back-link">← Gallery</a>
-    <div style="text-align:center;padding:2rem 0">
-      <img src="${imageUrl}" alt="${photo.title}" style="max-width:100%;border-radius:8px;">
-      <h2 style="margin:1rem 0">${photo.title}</h2>
-      ${photo.description ? `<p style="color:#666">${photo.description}</p>` : ''}
-      ${photo.location ? `<p style="color:#666;margin-top:0.5rem">📍 ${photo.location}</p>` : ''}
+  let mainImageHtml: string;
+  if (imgResult.type === 'url') {
+    mainImageHtml = `<img src="${imgResult.url}" alt="${getDisplayTitle(photo)}" style="max-width:100%;border-radius:8px;">`;
+  } else {
+    mainImageHtml = renderPlaceholder('No image available');
+  }
+  
+  // Use clean display title
+  const displayTitle = getDisplayTitle(photo);
+  
+  // Build download links (if user is authenticated - for now, show placeholder)
+  // Note: Downloads must remain private (403 for unauthorized)
+  const downloadSection = `
+    <div class="downloads">
+      <h3>Downloads</h3>
+      <p>Contact us for high-resolution versions.</p>
     </div>
   `;
   
-  return renderPage(`${photo.title} | Wildphotography`, content);
+  // Metadata
+  const metadata = [];
+  if (photo.locationName) {
+    metadata.push(`<li><strong>Location:</strong> ${photo.locationName}</li>`);
+  }
+  if (photo.description) {
+    metadata.push(`<li><strong>Description:</strong> ${photo.description}</li>`);
+  }
+  
+  const content = `
+    <a href="/gallery/surfing-costa-rica" class="back-link">← Back to Gallery</a>
+    
+    <div class="photo">
+      <h2>${displayTitle}</h2>
+      
+      ${mainImageHtml}
+      
+      ${metadata.length > 0 ? `
+        <ul style="list-style:none;padding:0;margin:1rem 0">
+          ${metadata.join('')}
+        </ul>
+      ` : ''}
+      
+      ${downloadSection}
+    </div>
+  `;
+  
+  return layout(`${displayTitle} - Wildphotography`, content);
 }
