@@ -166,6 +166,100 @@ export default {
         return Response.json({ received: true });
       }
 
+      // === PUBLIC API ===
+      
+      // GET /api/public/photos/:slug
+      if (path.startsWith('api/public/photos/')) {
+        const slug = path.replace('api/public/photos/', '');
+        const { getPhotoBySlug } = await import('./lib/db');
+        const photo = await getPhotoBySlug(slug);
+        
+        if (!photo) {
+          return Response.json({ error: 'Photo not found' }, { status: 404 });
+        }
+        
+        // Return only safe public fields
+        return Response.json({
+          slug: photo.slug,
+          title: photo.title,
+          description: photo.description,
+          location: photo.locationName,
+          // Derivative URLs (safe)
+          thumb_url: photo.thumb_r2_key ? `https://pub-7d412c6efb5943b5bc587e695e22001e.r2.dev/derivatives/${photo.thumb_r2_key}` : null,
+          small_url: photo.small_r2_key ? `https://pub-7d412c6efb5943b5bc587e695e22001e.r2.dev/derivatives/${photo.small_r2_key}` : null,
+          medium_url: photo.medium_r2_key ? `https://pub-7d412c6efb5943b5bc587e695e22001e.r2.dev/derivatives/${photo.medium_r2_key}` : null,
+          large_url: photo.large_r2_key ? `https://pub-7d412c6efb5943b5bc587e695e22001e.r2.dev/derivatives/${photo.large_r2_key}` : null,
+          // Canonical URL
+          canonical_url: `${env.SITE_URL}/photo/${photo.slug}`,
+          // No private fields exposed
+        });
+      }
+
+      // GET /api/public/search?q=
+      if (path === 'api/public/search') {
+        const q = url.searchParams.get('q') || '';
+        const { searchPhotos } = await import('./lib/db');
+        const photos = await searchPhotos(q, 20);
+        
+        return Response.json({
+          query: q,
+          count: photos.length,
+          results: photos.map(p => ({
+            slug: p.slug,
+            title: p.title,
+            thumb_url: p.thumb_r2_key ? `https://pub-7d412c6efb5943b5bc587e695e22001e.r2.dev/derivatives/${p.thumb_r2_key}` : null,
+            canonical_url: `${env.SITE_URL}/photo/${p.slug}`,
+          })),
+        });
+      }
+
+      // GET /api/public/gallery/:slug
+      if (path.startsWith('api/public/gallery/')) {
+        const slug = path.replace('api/public/gallery/', '');
+        const { getGalleryBySlug, getPhotosByGallery } = await import('./lib/db');
+        
+        const gallery = await getGalleryBySlug(slug);
+        if (!gallery) {
+          return Response.json({ error: 'Gallery not found' }, { status: 404 });
+        }
+        
+        const photos = await getPhotosByGallery(slug);
+        
+        return Response.json({
+          slug: gallery.slug,
+          name: gallery.name,
+          description: gallery.description,
+          photo_count: photos.length,
+          photos: photos.map(p => ({
+            slug: p.slug,
+            title: p.title,
+            thumb_url: p.thumb_r2_key ? `https://pub-7d412c6efb5943b5bc587e695e22001e.r2.dev/derivatives/${p.thumb_r2_key}` : null,
+            canonical_url: `${env.SITE_URL}/photo/${p.slug}`,
+          })),
+        });
+      }
+
+      // GET /api/public/tag/:keywordSlug
+      if (path.startsWith('api/public/tag/')) {
+        const keywordSlug = path.replace('api/public/tag/', '');
+        const keyword = keywordSlug.replace(/-/g, ' ');
+        
+        const { searchPhotos } = await import('./lib/db');
+        const photos = await searchPhotos(keyword, 20);
+        
+        return Response.json({
+          tag: keywordSlug,
+          keyword,
+          count: photos.length,
+          photos: photos.map(p => ({
+            slug: p.slug,
+            title: p.title,
+            thumb_url: p.thumb_r2_key ? `https://pub-7d412c6efb5943b5bc587e695e22001e.r2.dev/derivatives/${p.thumb_r2_key}` : null,
+            canonical_url: `${env.SITE_URL}/photo/${p.slug}`,
+          })),
+        });
+      }
+
       // Download fulfillment
       if (path.startsWith('api/v1/download/')) {
         const token = url.searchParams.get('token');
