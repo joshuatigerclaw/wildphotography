@@ -234,6 +234,9 @@ export default {
             slug: p.slug,
             title: p.title,
             thumb_url: p.thumb_r2_key ? `https://pub-7d412c6efb5943b5bc587e695e22001e.r2.dev/derivatives/${p.thumb_r2_key}` : null,
+            small_url: p.small_r2_key ? `https://pub-7d412c6efb5943b5bc587e695e22001e.r2.dev/derivatives/${p.small_r2_key}` : null,
+            medium_url: p.medium_r2_key ? `https://pub-7d412c6efb5943b5bc587e695e22001e.r2.dev/derivatives/${p.medium_r2_key}` : null,
+            large_url: p.large_r2_key ? `https://pub-7d412c6efb5943b5bc587e695e22001e.r2.dev/derivatives/${p.large_r2_key}` : null,
             canonical_url: `${env.SITE_URL}/photo/${p.slug}`,
           })),
         });
@@ -318,6 +321,9 @@ export default {
     console.log(`[queue] Processing ${batch.messages.length} messages from ${batch.queue}`);
     
     for (const msg of batch.messages) {
+      const maxRetries = 5;
+      const retryCount = msg.retryCount || 0;
+      
       try {
         const body = msg.body as any;
         
@@ -338,17 +344,27 @@ export default {
         
         msg.ack();
       } catch (error: any) {
-        // Retry logic
-        const retryCount = msg.retryCount || 0;
-        console.error(`[queue] Error processing message:`, error.message, `Retry: ${retryCount}`);
+        console.error(`[queue] Error (attempt ${retryCount + 1}/${maxRetries}):`, error.message);
         
-        if (retryCount < 3) {
-          // Will retry up to 3 times
-          console.log(`[queue] Will retry (${retryCount + 1}/3)`);
+        // Check for rate limit (429)
+        if (error.message?.includes('429') || error.status === 429) {
+          const retryAfter = parseInt(error.headers?.['retry-after'] || '60', 10);
+          const delay = (retryAfter || 60) * 1000;
+          console.log(`[queue] Rate limited, waiting ${delay}ms before retry`);
+          await new Promise(r => setTimeout(r, delay));
+        }
+        
+        if (retryCount < maxRetries) {
+          // Exponential backoff with jitter
+          const baseDelay = Math.pow(2, retryCount) * 1000;
+          const jitter = Math.random() * 1000;
+          const delay = baseDelay + jitter;
+          console.log(`[queue] Retrying in ${delay}ms (${retryCount + 1}/${maxRetries})`);
+          await new Promise(r => setTimeout(r, delay));
           msg.retry();
         } else {
-          console.error(`[queue] Max retries exceeded, discarding message`);
-          msg.ack(); // Discard after max retries
+          console.error(`[queue] Max retries exceeded, discarding:`, JSON.stringify(msg.body));
+          msg.ack();
         }
       }
     }
