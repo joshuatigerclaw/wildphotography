@@ -17,6 +17,8 @@ export interface Env {
   MEDIA_BASE_URL: string;
 }
 
+const MEDIA_BASE = 'https://wildphotography-media.josh-ec6.workers.dev';
+
 const HTML_HOME = `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,24 +26,52 @@ const HTML_HOME = `<!DOCTYPE html>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Wildphotography | Costa Rica Nature Photography</title>
   <meta name="description" content="Professional wildlife and nature photography from Costa Rica">
-  <link rel="icon" href="/favicon.ico">
+  <style>
+    body { font-family: system-ui, sans-serif; margin: 0; padding: 0; }
+    header { padding: 2rem; text-align: center; background: #1a1a1a; color: white; }
+    nav a { color: #aaa; margin: 0 1rem; text-decoration: none; }
+    nav a:hover { color: white; }
+    main { max-width: 1200px; margin: 0 auto; padding: 2rem; }
+    .hero { text-align: center; margin-bottom: 3rem; }
+    .gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 2rem; }
+    .photo-card { border: 1px solid #ddd; border-radius: 8px; overflow: hidden; }
+    .photo-card img { width: 100%; height: 250px; object-fit: cover; }
+    .photo-card .caption { padding: 1rem; }
+    footer { padding: 2rem; text-align: center; background: #1a1a1a; color: #666; margin-top: 3rem; }
+  </style>
 </head>
 <body>
-  <header style="padding: 2rem; text-align: center;">
+  <header>
     <h1>Wildphotography</h1>
     <p>Costa Rica Nature Photography</p>
-    <nav style="margin-top: 1rem;">
-      <a href="/galleries" style="margin: 0 1rem;">Galleries</a>
-      <a href="/search" style="margin: 0 1rem;">Search</a>
+    <nav>
+      <a href="/galleries">Galleries</a>
+      <a href="/search">Search</a>
     </nav>
   </header>
-  <main style="padding: 2rem;">
-    <section>
+  <main>
+    <section class="hero">
       <h2>Welcome</h2>
       <p>Professional wildlife and nature photography from Costa Rica.</p>
     </section>
+    <section class="gallery">
+      <div class="photo-card">
+        <img src="${MEDIA_BASE}/derivatives/thumbs/scarlet-macaw-test-thumb.jpg" alt="Scarlet Macaw">
+        <div class="caption">
+          <h3>Scarlet Macaw</h3>
+          <p>Costa Rica's most iconic bird</p>
+        </div>
+      </div>
+      <div class="photo-card">
+        <img src="${MEDIA_BASE}/derivatives/thumbs/scarlet-macaw-test-thumb.jpg" alt="Tropical">
+        <div class="caption">
+          <h3>Tropical Paradise</h3>
+          <p>Costa Rica landscapes</p>
+        </div>
+      </div>
+    </section>
   </main>
-  <footer style="padding: 2rem; text-align: center; margin-top: 2rem;">
+  <footer>
     <p>&copy; 2026 Joshua ten Brink / Wildphotography</p>
   </footer>
 </body>
@@ -53,14 +83,23 @@ const HTML_GALLERIES = `<!DOCTYPE html>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Galleries | Wildphotography</title>
+  <style>
+    body { font-family: system-ui, sans-serif; margin: 0; }
+    header { padding: 2rem; text-align: center; background: #1a1a1a; color: white; }
+    nav a { color: #aaa; margin: 0 1rem; text-decoration: none; }
+    main { max-width: 800px; margin: 0 auto; padding: 2rem; }
+    .gallery-list { list-style: none; padding: 0; }
+    .gallery-list li { padding: 1rem; border-bottom: 1px solid #eee; }
+    .gallery-list a { font-size: 1.2rem; color: #333; }
+  </style>
 </head>
 <body>
-  <header style="padding: 2rem; text-align: center;">
+  <header>
     <h1>Photo Galleries</h1>
     <nav><a href="/">Home</a> | <a href="/search">Search</a></nav>
   </header>
-  <main style="padding: 2rem;">
-    <ul>
+  <main>
+    <ul class="gallery-list">
       <li><a href="/gallery/surfing-costa-rica">Surfing Costa Rica</a></li>
       <li><a href="/gallery/rivers">Rivers</a></li>
       <li><a href="/gallery/volcan-poas">Volcan Poas</a></li>
@@ -76,16 +115,25 @@ const HTML_SEARCH = `<!DOCTYPE html>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Search | Wildphotography</title>
+  <style>
+    body { font-family: system-ui, sans-serif; margin: 0; }
+    header { padding: 2rem; text-align: center; background: #1a1a1a; color: white; }
+    nav a { color: #aaa; margin: 0 1rem; text-decoration: none; }
+    main { max-width: 600px; margin: 0 auto; padding: 2rem; }
+    form { display: flex; gap: 1rem; margin-top: 2rem; }
+    input { flex: 1; padding: 0.75rem; font-size: 1rem; }
+    button { padding: 0.75rem 1.5rem; font-size: 1rem; background: #333; color: white; border: none; cursor: pointer; }
+  </style>
 </head>
 <body>
-  <header style="padding: 2rem; text-align: center;">
+  <header>
     <h1>Search Photos</h1>
     <nav><a href="/">Home</a> | <a href="/galleries">Galleries</a></nav>
   </header>
-  <main style="padding: 2rem;">
+  <main>
     <form action="/search" method="get">
-      <input type="text" name="q" placeholder="Search photos..." style="padding: 0.5rem; width: 300px;">
-      <button type="submit" style="padding: 0.5rem 1rem;">Search</button>
+      <input type="text" name="q" placeholder="Search photos...">
+      <button type="submit">Search</button>
     </form>
   </main>
 </body>
@@ -136,29 +184,32 @@ export default {
 
     // Static pages
     if (path === '' || path === '/') {
-      return new Response(HTML_HOME, {
-        headers: { 'Content-Type': 'text/html' }
-      });
+      return new Response(HTML_HOME, { headers: { 'Content-Type': 'text/html' } });
     }
 
     if (path === 'galleries' || path === 'galleries/') {
-      return new Response(HTML_GALLERIES, {
-        headers: { 'Content-Type': 'text/html' }
-      });
+      return new Response(HTML_GALLERIES, { headers: { 'Content-Type': 'text/html' } });
     }
 
     if (path === 'search' || path === 'search/') {
-      return new Response(HTML_SEARCH, {
-        headers: { 'Content-Type': 'text/html' }
-      });
+      return new Response(HTML_SEARCH, { headers: { 'Content-Type': 'text/html' } });
     }
 
     // Gallery pages
     if (path.startsWith('gallery/')) {
       const slug = path.replace('gallery/', '').replace('/', '');
-      return new Response(`<!DOCTYPE html>
-<html><head><title>Gallery: ${slug} | Wildphotography</title></head>
-<body><h1>Gallery: ${slug}</h1><p>Gallery page for ${slug}</p><a href="/galleries">Back to Galleries</a></body></html>`, {
+      return new Response(`<html><!DOCTYPE html>
+<head><title>${slug} | Wildphotography</title>
+<style>body{font-family:system-ui;margin:0}header{background:#1a1a1a;color:white;padding:2rem;text-align:center}nav a{color:#aaa;margin:0 1rem}main{max-width:1200px;margin:0 auto;padding:2rem}.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:2rem}.photo-card{border:1px solid #ddd;border-radius:8px;overflow:hidden}.photo-card img{width:100%;height:250px;object-fit:cover}.caption{padding:1rem}</style>
+</head>
+<body>
+<header><h1>${slug}</h1><nav><a href="/">Home</a> | <a href="/galleries">Galleries</a></nav></header>
+<main>
+<div class="gallery">
+<div class="photo-card"><img src="${MEDIA_BASE}/derivatives/thumbs/scarlet-macaw-test-thumb.jpg" alt="Sample"><div class="caption"><h3>Sample Photo</h3></div></div>
+</div>
+</main>
+</body></html>`, {
         headers: { 'Content-Type': 'text/html' }
       });
     }
@@ -167,8 +218,16 @@ export default {
     if (path.startsWith('photo/')) {
       const slug = path.replace('photo/', '').replace('/', '');
       return new Response(`<!DOCTYPE html>
-<html><head><title>Photo: ${slug} | Wildphotography</title></head>
-<body><h1>Photo: ${slug}</h1><p>Photo page for ${slug}</p><a href="/">Home</a></body></html>`, {
+<html><head><title>${slug} | Wildphotography</title>
+<style>body{font-family:system-ui;margin:0}header{background:#1a1a1a;color:white;padding:2rem;text-align:center}nav a{color:#aaa;margin:0 1rem}main{max-width:1000px;margin:0 auto;padding:2rem}img{max-width:100%;height:auto}</style>
+</head>
+<body>
+<header><h1>${slug}</h1><nav><a href="/">Home</a> | <a href="/galleries">Galleries</a></nav></header>
+<main>
+<img src="${MEDIA_BASE}/derivatives/large/scarlet-macaw-test-large.jpg" alt="${slug}">
+<p><a href="${MEDIA_BASE}/derivatives/originals/scarlet-macaw-test.jpg" target="_blank">Download</a></p>
+</main>
+</body></html>`, {
         headers: { 'Content-Type': 'text/html' }
       });
     }
