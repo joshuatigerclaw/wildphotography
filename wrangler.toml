@@ -25,5 +25,23 @@ queue = "smugmug-download"
 binding = "TYPESENSE_INDEX"
 queue = "typesense-index"
 
+[[queues.consumers]]
+binding = "SMUGMUG_METADATA"
+queue = "smugmug-metadata"
+max_batch_size = 10
+max_wait_ms = 5000
+
+[[queues.consumers]]
+binding = "SMUGMUG_DOWNLOAD"
+queue = "smugmug-download"
+max_batch_size = 5
+max_wait_ms = 10000
+
+[[queues.consumers]]
+binding = "TYPESENSE_INDEX"
+queue = "typesense-index"
+max_batch_size = 20
+max_wait_ms = 5000
+
 [observability]
 enabled = true

@@ -16,6 +16,7 @@
  */
 
 import type { Env } from './types';
+import type { MessageBatch } from '@cloudflare/workers-types';
 
 // Route handlers
 import { handleHealth } from './routes/health';
@@ -172,11 +173,61 @@ export default {
     }
   },
 
-  // Queue consumers
+  // Queue consumers with retry logic
   async queue(batch: MessageBatch, env: Env): Promise<void> {
+    console.log(`[queue] Processing ${batch.messages.length} messages from ${batch.queue}`);
+    
     for (const msg of batch.messages) {
-      console.log(`[queue] ${batch.queue}:`, msg.body);
-      msg.ack();
+      try {
+        const body = msg.body as any;
+        
+        // Route to appropriate handler
+        switch (batch.queue) {
+          case 'smugmug-metadata':
+            await handleSmugMugMetadata(body, env);
+            break;
+          case 'smugmug-download':
+            await handleSmugMugDownload(body, env);
+            break;
+          case 'typesense-index':
+            await handleTypesenseIndex(body, env);
+            break;
+          default:
+            console.log(`[queue] Unknown queue: ${batch.queue}`);
+        }
+        
+        msg.ack();
+      } catch (error: any) {
+        // Retry logic
+        const retryCount = msg.retryCount || 0;
+        console.error(`[queue] Error processing message:`, error.message, `Retry: ${retryCount}`);
+        
+        if (retryCount < 3) {
+          // Will retry up to 3 times
+          console.log(`[queue] Will retry (${retryCount + 1}/3)`);
+          msg.retry();
+        } else {
+          console.error(`[queue] Max retries exceeded, discarding message`);
+          msg.ack(); // Discard after max retries
+        }
+      }
     }
   },
 } satisfies ExportedHandler<Env>;
+
+// Queue message handlers
+
+async function handleSmugMugMetadata(body: any, env: Env): Promise<void> {
+  console.log(`[smugmug-metadata] Processing:`, body);
+  // TODO: Implement metadata processing
+}
+
+async function handleSmugMugDownload(body: any, env: Env): Promise<void> {
+  console.log(`[smugmug-download] Processing:`, body);
+  // TODO: Implement download processing
+}
+
+async function handleTypesenseIndex(body: any, env: Env): Promise<void> {
+  console.log(`[typesense-index] Processing:`, body);
+  // TODO: Implement Typesense indexing
+}
