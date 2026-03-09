@@ -1,42 +1,28 @@
-name = "wildphotography-media"
+name = "wildphotography-web"
 main = "src/worker.ts"
-compatibility_date = "2024-01-01"
+compatibility_date = "2026-03-07"
+compatibility_flags = ["nodejs_compat"]
+workers_dev = true
 
-# Routes configured via Cloudflare Dashboard
-# To add custom domain:
-# 1. Go to Cloudflare Dashboard > Workers > wildphotography-media > Triggers
-# 2. Add custom domain: wildphotography.com
-# 3. Add custom domain: www.wildphotography.com
+[vars]
+APP_ENV = "production"
+SITE_URL = "https://wildphotography.com"
 
 [[r2_buckets]]
 binding = "PHOTO_BUCKET"
 bucket_name = "wildphoto-storage"
 
-# Queue producers (for metadata import jobs)
 [[queues.producers]]
-queue = "smugmug-metadata"
 binding = "SMUGMUG_METADATA"
-
-[[queues.producers]]
-queue = "smugmug-download"
-binding = "SMUGMUG_DOWNLOAD"
-
-[[queues.producers]]
-queue = "typesense-index"
-binding = "TYPESENSE_INDEX"
-
-# Queue consumers (for background processing)
-[[queues.consumers]]
 queue = "smugmug-metadata"
-max_batch_size = 25
-max_batch_timeout = 3
 
-[[queues.consumers]]
+[[queues.producers]]
+binding = "SMUGMUG_DOWNLOAD"
 queue = "smugmug-download"
-max_batch_size = 10
-max_batch_timeout = 2
 
-[[queues.consumers]]
+[[queues.producers]]
+binding = "TYPESENSE_INDEX"
 queue = "typesense-index"
-max_batch_size = 100
-max_batch_timeout = 5
+
+[observability]
+enabled = true
