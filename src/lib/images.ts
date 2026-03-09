@@ -163,6 +163,46 @@ export function getHeroImage(photo: PhotoDerivatives): ImageResult {
 }
 
 /**
+ * Get image for photo page lightbox/fullscreen view
+ * Priority: large → preview → medium → placeholder
+ */
+export function getPhotoPageLightboxImage(photo: PhotoDerivatives): ImageResult {
+  if (photo.large_r2_key) {
+    const url = keyToUrl(photo.large_r2_key);
+    if (url) return { type: 'url', url };
+  }
+  if (photo.preview_r2_key) {
+    const url = keyToUrl(photo.preview_r2_key);
+    if (url) return { type: 'url', url };
+  }
+  if (photo.medium_r2_key) {
+    const url = keyToUrl(photo.medium_r2_key);
+    if (url) return { type: 'url', url };
+  }
+  return { type: 'placeholder' };
+}
+
+/**
+ * Get image for related photo strip on photo page
+ * Priority: thumb → small → medium → placeholder
+ */
+export function getRelatedStripImage(photo: PhotoDerivatives): ImageResult {
+  if (photo.thumb_r2_key) {
+    const url = keyToUrl(photo.thumb_r2_key);
+    if (url) return { type: 'url', url };
+  }
+  if (photo.small_r2_key) {
+    const url = keyToUrl(photo.small_r2_key);
+    if (url) return { type: 'url', url };
+  }
+  if (photo.medium_r2_key) {
+    const url = keyToUrl(photo.medium_r2_key);
+    if (url) return { type: 'url', url };
+  }
+  return { type: 'placeholder' };
+}
+
+/**
  * Clean title for display
  * Priority: meaningful title → cleaned filename → description-derived → fallback
  */
