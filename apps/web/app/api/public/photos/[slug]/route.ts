@@ -26,7 +26,7 @@ export async function GET(
   // Get photo with keywords
   const photos = await sql(`
     SELECT p.*, 
-           array_agg(k.name) as keywords
+           COALESCE(array_agg(k.name) FILTER (WHERE k.name IS NOT NULL), '{}') as keywords
     FROM photos p
     LEFT JOIN photo_keywords pk ON p.id = pk.photo_id
     LEFT JOIN keywords k ON pk.keyword_id = k.id
