@@ -379,14 +379,19 @@ export default {
       }
 
       // Dynamic routes
-      if (path.startsWith('gallery/')) {
-        const slug = path.replace('gallery/', '').replace(/\/$/, '');
-        return renderGallery(slug, env, url);
-      }
+      try {
+        if (path.startsWith('gallery/')) {
+          const slug = path.replace('gallery/', '').replace(/\/$/, '');
+          return await renderGallery(slug, env, url);
+        }
 
-      if (path.startsWith('photo/')) {
-        const slug = path.replace('photo/', '').replace(/\/$/, '');
-        return renderPhoto(slug, env, url);
+        if (path.startsWith('photo/')) {
+          const slug = path.replace('photo/', '').replace(/\/$/, '');
+          return await renderPhoto(slug, env, url);
+        }
+      } catch (e) {
+        console.error('[worker] Dynamic route error:', e);
+        return new Response('Error: ' + String(e), { status: 500 });
       }
 
       // 404
