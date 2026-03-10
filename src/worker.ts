@@ -130,6 +130,20 @@ export default {
         return handleQueueTest(request, env, url);
       }
 
+      // Queue derivative generation
+      if (path === 'api/v1/queue/derivative') {
+        const { handleDerivativeGeneration } = await import('./routes/derivative');
+        const body = await request.json();
+        const { photoId, smugmugKey, slug } = body;
+        
+        if (!photoId || !smugmugKey || !slug) {
+          return Response.json({ error: 'Missing required fields' }, { status: 400 });
+        }
+        
+        const result = await handleDerivativeGeneration({ photoId, smugmugKey, slug }, env);
+        return Response.json(result);
+      }
+
       // Checkout API
       if (path === 'api/v1/checkout/create') {
         const { createOrder } = await import('./lib/downloads');
@@ -366,6 +380,10 @@ export default {
             break;
           case 'typesense-index':
             await handleTypesenseIndex(body, env);
+            break;
+          case 'derivative-generation':
+            const { handleDerivativeGeneration } = await import('./routes/derivative');
+            await handleDerivativeGeneration(body, env);
             break;
           default:
             console.log(`[queue] Unknown queue: ${batch.queue}`);
