@@ -95,7 +95,7 @@ export async function getGalleryBySlug(slug: string): Promise<Gallery | null> {
 
 /**
  * Fetch photos by gallery slug WITH derivative URLs
- * Only returns photos that have at least one valid derivative URL (not mock/test)
+ * Only returns photos that are ready_for_public_render
  */
 export async function getPhotosByGallery(gallerySlug: string): Promise<PhotoDerivatives[]> {
   const rows = await queryNeon<any>(`
@@ -116,6 +116,7 @@ export async function getPhotosByGallery(gallerySlug: string): Promise<PhotoDeri
     JOIN galleries g ON gp.gallery_id = g.id
     WHERE g.slug = '${gallerySlug.replace(/'/g, "''")}' 
       AND p.is_active = true
+      AND p.ready_for_public_render = true
       AND (p.thumb_url IS NOT NULL AND p.thumb_url != '' AND p.thumb_url NOT LIKE '%scarlet-macaw-test%'
            OR p.small_url IS NOT NULL AND p.small_url != '' AND p.small_url NOT LIKE '%scarlet-macaw-test%'
            OR p.medium_url IS NOT NULL AND p.medium_url != '' AND p.medium_url NOT LIKE '%scarlet-macaw-test%')
@@ -142,7 +143,7 @@ export async function getPhotosByGallery(gallerySlug: string): Promise<PhotoDeri
 
 /**
  * Fetch recent photos for homepage WITH derivative URLs
- * Excludes mock/test images
+ * Only returns ready_for_public_render photos
  */
 export async function getRecentPhotos(limit: number): Promise<PhotoDerivatives[]> {
   const rows = await queryNeon<any>(`
@@ -160,6 +161,7 @@ export async function getRecentPhotos(limit: number): Promise<PhotoDerivatives[]
       p.original_r2_key
     FROM photos p
     WHERE p.is_active = true 
+      AND p.ready_for_public_render = true
       AND (
         (p.thumb_url IS NOT NULL AND p.thumb_url != '' AND p.thumb_url NOT LIKE '%scarlet-macaw-test%')
         OR (p.small_url IS NOT NULL AND p.small_url != '' AND p.small_url NOT LIKE '%scarlet-macaw-test%')
