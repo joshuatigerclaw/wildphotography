@@ -46,9 +46,10 @@ interface RelatedPhoto {
 interface PhotoPageClientProps {
   photo: PhotoData;
   relatedPhotos?: RelatedPhoto[];
+  galleryPhotos?: RelatedPhoto[];
 }
 
-export default function PhotoPageClient({ photo, relatedPhotos = [] }: PhotoPageClientProps) {
+export default function PhotoPageClient({ photo, relatedPhotos = [], galleryPhotos = [] }: PhotoPageClientProps) {
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [lightboxIndex, setLightboxIndex] = useState(0);
   const [purchasing, setPurchasing] = useState(false);
@@ -208,6 +209,20 @@ export default function PhotoPageClient({ photo, relatedPhotos = [] }: PhotoPage
                 <h2 className="text-sm font-semibold text-gray-500 mb-4 uppercase tracking-wider">Related Photos</h2>
                 <VirtualizedGallery
                   photos={relatedPhotos.map(p => ({
+                    ...p,
+                    thumbUrl: p.smallUrl || p.thumbUrl,
+                  }))}
+                  columns={4}
+                />
+              </div>
+            )}
+
+            {/* More From This Gallery */}
+            {galleryPhotos.length > 0 && (
+              <div>
+                <h2 className="text-sm font-semibold text-gray-500 mb-4 uppercase tracking-wider">More From This Gallery</h2>
+                <VirtualizedGallery
+                  photos={galleryPhotos.map(p => ({
                     ...p,
                     thumbUrl: p.smallUrl || p.thumbUrl,
                   }))}

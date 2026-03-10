@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation';
 import { Metadata } from 'next';
-import { getPhotoBySlug, getGalleries, getRelatedPhotos } from '@/lib/db';
+import { getPhotoBySlug, getGalleries, getRelatedPhotos, getPhotosFromGallery } from '@/lib/db';
 import { generatePhotoJsonLd, canonicalUrl } from '@/lib/seo';
 import PhotoPageClient from './PhotoPageClient';
 
@@ -59,12 +59,28 @@ export default async function PhotoPage({ params }: { params: Promise<{ slug: st
     notFound();
   }
 
-  // Get related photos
+  // Get related photos (by keywords)
   let relatedPhotos: any[] = [];
   try {
     relatedPhotos = await getRelatedPhotos(slug, undefined, photo.keywords || '', 8);
   } catch (e) {
     console.error('Error fetching related photos:', e);
+  }
+
+  // Get photos from same gallery
+  let galleryPhotos: any[] = [];
+  try {
+    // Find which gallery this photo belongs to
+    const galleries = await getGalleries();
+    for (const gallery of galleries) {
+      const photos = await getPhotosFromGallery(gallery.slug, slug, 8);
+      if (photos.length > 0) {
+        galleryPhotos = photos;
+        break;
+      }
+    }
+  } catch (e) {
+    console.error('Error fetching gallery photos:', e);
   }
 
   // Generate JSON-LD
@@ -84,7 +100,11 @@ export default async function PhotoPage({ params }: { params: Promise<{ slug: st
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <PhotoPageClient photo={photo} relatedPhotos={relatedPhotos} />
+      <PhotoPageClient 
+        photo={photo} 
+        relatedPhotos={relatedPhotos}
+        galleryPhotos={galleryPhotos}
+      />
     </>
   );
 }

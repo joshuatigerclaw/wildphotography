@@ -8,15 +8,13 @@ interface LocationMapProps {
 }
 
 export default function LocationMap({ lat, lon, locationName, zoom = 10 }: LocationMapProps) {
-  // Don't Render if no valid coordinates
+  // Don't render if no valid coordinates
   if (!lat || !lon || lat === 0 || lon === 0) {
     return null;
   }
 
-  // Use OpenStreetMap static tile as a simple map display
-  // Center on the coordinates
-  const centerLat = lat;
-  const centerLon = lon;
+  // Use OpenStreetMap embed iframe - simplest approach that works
+  const embedUrl = `https://www.openstreetmap.org/export/embed.html?bbox=${lon-0.01}%2C${lat-0.01}%2C${lon+0.01}%2C${lat+0.01}&layer=mapnik&marker=${lat}%2C${lon}`;
 
   return (
     <div className="space-y-3">
@@ -27,28 +25,28 @@ export default function LocationMap({ lat, lon, locationName, zoom = 10 }: Locat
         </p>
       )}
       
-      {/* Static map using OpenStreetMap tiles with marker */}
-      <div className="relative rounded-xl overflow-hidden shadow-md">
-        <img
-          src={`https://staticmap.openstreetmap.de/staticmap.php?center=${centerLat},${centerLon}&zoom=${zoom}&size=600x300&markers=${centerLat},${centerLon},red-pushpin`}
-          alt={`Map showing ${locationName || 'photo location'}`}
-          className="w-full h-auto"
+      <div className="rounded-xl overflow-hidden shadow-md">
+        <iframe
+          width="100%"
+          height="300"
+          frameBorder="0"
+          scrolling="no"
+          marginHeight={0}
+          marginWidth={0}
+          src={embedUrl}
+          style={{ border: 'none' }}
+          title={`Map of ${locationName || 'photo location'}`}
         />
-        
-        {/* Fallback link to view on OSM */}
-        <a 
-          href={`https://www.openstreetmap.org/?mlat=${centerLat}&mlon=${centerLon}#map=${zoom}/${centerLat}/${centerLon}`}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="absolute bottom-2 right-2 bg-white/90 px-2 py-1 rounded text-xs text-gray-600 hover:bg-white"
-        >
-          View on OpenStreetMap ↗
-        </a>
       </div>
       
-      <p className="text-xs text-gray-400 text-center">
-        © OpenStreetMap contributors
-      </p>
+      <a 
+        href={`https://www.openstreetmap.org/?mlat=${lat}&mlon=${lon}#map=${zoom}/${lat}/${lon}`}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-blue-600 text-sm hover:underline"
+      >
+        View on OpenStreetMap ↗
+      </a>
     </div>
   );
 }

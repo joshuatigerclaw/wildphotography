@@ -579,6 +579,64 @@ export async function searchPhotos(
   return { photos, total, hasMore };
 }
 
+/**
+ * Get photos from the same gallery
+ */
+export async function getPhotosFromGallery(
+  gallerySlug: string,
+  excludePhotoSlug?: string,
+  limit = 8
+): Promise<Photo[]> {
+  const result = await sql(`
+    SELECT p.id, p.slug, p.title, p.description, p.description_long, p.keywords,
+           p.width, p.height, p.camera_make, p.camera_model, p.lens,
+           p.iso, p.aperture, p.shutter_speed, p.focal_length_mm,
+           p.lat, p.lon, p.views_count, p.date_taken, p.date_uploaded,
+           p.thumb_url, p.small_url, p.medium_url, p.large_url, p.location
+    FROM photos p
+    JOIN gallery_photos gp ON p.id = gp.photo_id
+    JOIN galleries g ON gp.gallery_id = g.id
+    WHERE g.slug = $1 AND p.is_active = true AND p.ready_for_public_render = true
+      ${excludePhotoSlug ? `AND p.slug != $2` : ''}
+      AND (
+        p.thumb_url IS NOT NULL 
+        OR p.small_url IS NOT NULL 
+        OR p.medium_url IS NOT NULL
+        OR p.large_url IS NOT NULL
+      )
+    ORDER BY gp.sort_order, p.date_uploaded DESC
+    LIMIT $${excludePhotoSlug ? 3 : 2}
+  `, excludePhotoSlug ? [gallerySlug, excludePhotoSlug] : [gallerySlug, limit]);
+  
+  return (result as any[]).map(row => ({
+    id: String(row.id),
+    slug: row.slug,
+    title: row.title || '',
+    description: row.description,
+    description_long: row.description_long,
+    keywords: row.keywords,
+    width: row.width,
+    height: row.height,
+    camera_make: row.camera_make,
+    camera_model: row.camera_model,
+    lens: row.lens,
+    iso: row.iso,
+    aperture: row.aperture,
+    shutter_speed: row.shutter_speed,
+    focal_length_mm: row.focal_length_mm,
+    lat: row.lat,
+    lon: row.lon,
+    views_count: row.views_count,
+    date_taken: row.date_taken,
+    date_uploaded: row.date_uploaded,
+    thumbUrl: row.thumb_url,
+    smallUrl: row.small_url,
+    mediumUrl: row.medium_url,
+    largeUrl: row.large_url,
+    locationName: row.location,
+  }));
+}
+
 export default { 
   getGalleries, 
   getGalleryBySlug, 
@@ -588,6 +646,7 @@ export default {
   getRandomPhotos,
   getPopularPhotos,
   getRelatedPhotos,
+  getPhotosFromGallery,
   searchPhotos,
   recordPhotoVisit 
 };
