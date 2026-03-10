@@ -18,15 +18,14 @@
 import type { Env } from './types';
 import type { MessageBatch } from '@cloudflare/workers-types';
 
-// Route handlers
-import { handleHealth } from './routes/health';
-import { handleQueueTest } from './routes/queue';
-import { handleMedia } from './routes/media';
-import { handleHome } from './routes/home';
-import { handleGalleries } from './routes/galleries';
-import { handleSearch } from './routes/search';
-import { handleGallery } from './routes/gallery';
-import { handlePhoto } from './routes/photo';
+// Queue handlers - Pipeline Stage 1-4
+import { handleSmugMugMetadataCrawl } from './routes/stage1-metadata';
+import { handleSmugMugDownload } from './routes/stage2-download';
+import { handleDerivativeGeneration } from './routes/stage3-derivative';
+import { handleTypesenseIndex } from './routes/stage4-typesense';
+
+// Repair mode
+import { handleRepairMode } from './routes/repair';
 
 // Pages
 import { renderHome } from './pages/home';
@@ -141,6 +140,46 @@ export default {
         }
         
         const result = await handleDerivativeGeneration({ photoId, smugmugKey, slug }, env);
+        return Response.json(result);
+      }
+
+      // Pipeline Stage 1: Metadata crawl
+      if (path === 'api/v1/pipeline/metadata') {
+        const { handleSmugMugMetadataCrawl } = await import('./routes/stage1-metadata');
+        const body = await request.json();
+        const result = await handleSmugMugMetadataCrawl(body, env);
+        return Response.json(result);
+      }
+
+      // Pipeline Stage 2: Download original
+      if (path === 'api/v1/pipeline/download') {
+        const { handleSmugMugDownload } = await import('./routes/stage2-download');
+        const body = await request.json();
+        const result = await handleSmugMugDownload(body, env);
+        return Response.json(result);
+      }
+
+      // Pipeline Stage 3: Generate derivatives
+      if (path === 'api/v1/pipeline/derivatives') {
+        const { handleDerivativeGeneration } = await import('./routes/stage3-derivative');
+        const body = await request.json();
+        const result = await handleDerivativeGeneration(body, env);
+        return Response.json(result);
+      }
+
+      // Pipeline Stage 4: Typesense index
+      if (path === 'api/v1/pipeline/typesense') {
+        const { handleTypesenseIndex } = await import('./routes/stage4-typesense');
+        const body = await request.json();
+        const result = await handleTypesenseIndex(body, env);
+        return Response.json(result);
+      }
+
+      // Repair mode
+      if (path === 'api/v1/repair') {
+        const { handleRepairMode } = await import('./routes/repair');
+        const body = await request.json();
+        const result = await handleRepairMode(body, env);
         return Response.json(result);
       }
 
@@ -370,20 +409,23 @@ export default {
       try {
         const body = msg.body as any;
         
-        // Route to appropriate handler
+        // Route to appropriate handler - 4-Stage Pipeline
         switch (batch.queue) {
           case 'smugmug-metadata':
-            await handleSmugMugMetadata(body, env);
+            // Stage 1: Metadata crawl
+            await handleSmugMugMetadataCrawl(body, env);
             break;
           case 'smugmug-download':
+            // Stage 2: Original download
             await handleSmugMugDownload(body, env);
             break;
-          case 'typesense-index':
-            await handleTypesenseIndex(body, env);
-            break;
           case 'derivative-generation':
-            const { handleDerivativeGeneration } = await import('./routes/derivative');
+            // Stage 3: Derivative generation
             await handleDerivativeGeneration(body, env);
+            break;
+          case 'typesense-index':
+            // Stage 4: Typesense indexing
+            await handleTypesenseIndex(body, env);
             break;
           default:
             console.log(`[queue] Unknown queue: ${batch.queue}`);
@@ -420,17 +462,4 @@ export default {
 
 // Queue message handlers
 
-async function handleSmugMugMetadata(body: any, env: Env): Promise<void> {
-  console.log(`[smugmug-metadata] Processing:`, body);
-  // TODO: Implement metadata processing
-}
-
-async function handleSmugMugDownload(body: any, env: Env): Promise<void> {
-  console.log(`[smugmug-download] Processing:`, body);
-  // TODO: Implement download processing
-}
-
-async function handleTypesenseIndex(body: any, env: Env): Promise<void> {
-  console.log(`[typesense-index] Processing:`, body);
-  // TODO: Implement Typesense indexing
-}
+// Old handlers removed - now using stage1-4 imports
