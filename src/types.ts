@@ -20,6 +20,14 @@ export interface PhotoDerivatives {
   slug: string;
   title: string;
   description: string | null;
+  description_long: string | null;
+  keywords: string | null;
+  width: number | null;
+  height: number | null;
+  camera_model: string | null;
+  lat: number | null;
+  lon: number | null;
+  views_count: number | null;
   // Derivative keys from Neon DB (source of truth)
   thumb_r2_key: string | null;
   small_r2_key: string | null;

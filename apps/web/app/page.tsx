@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { getGalleries, getAllPhotos } from '@/lib/db';
+import { getGalleries, getAllPhotos, getRandomPhotos } from '@/lib/db';
 import VirtualizedGallery from '@/components/VirtualizedGallery';
 
 export const dynamic = 'force-dynamic';
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   openGraph: {
     title: 'Wildphotography | Costa Rica Nature Photography',
-    description: 'Professional wildlife, bird, and nature photography from Costa Rica.',
+    description: 'Professional wildlife and nature photography from Costa Rica.',
     url: SITE_URL,
     siteName: 'Wildphotography',
     locale: 'en_US',
@@ -32,7 +32,8 @@ export const metadata: Metadata = {
 
 export default async function Home() {
   const galleries = await getGalleries();
-  const photos = await getAllPhotos(8);
+  const recentPhotos = await getAllPhotos(8);
+  const randomPhotos = await getRandomPhotos(12);
 
   return (
     <div className="container mx-auto px-4 py-12">
@@ -60,10 +61,10 @@ export default async function Home() {
         </div>
       </section>
 
-      {photos.length > 0 && (
+      {recentPhotos.length > 0 && (
         <section className="py-12">
           <div className="flex justify-between items-center mb-8">
-            <h2 className="text-3xl font-bold">Featured Photos</h2>
+            <h2 className="text-3xl font-bold">Recent Photos</h2>
             <Link 
               href="/search" 
               className="text-blue-600 hover:underline text-sm"
@@ -72,7 +73,34 @@ export default async function Home() {
             </Link>
           </div>
           <VirtualizedGallery 
-            photos={photos} 
+            photos={recentPhotos.map(p => ({
+              ...p,
+              thumbUrl: p.smallUrl || p.mediumUrl || p.thumbUrl,
+            }))} 
+            columns={4}
+          />
+        </section>
+      )}
+
+      {randomPhotos.length > 0 && (
+        <section className="py-12 bg-gray-50 -mx-4 px-4">
+          <div className="flex justify-between items-center mb-8">
+            <div>
+              <h2 className="text-3xl font-bold">Discover</h2>
+              <p className="text-gray-500 mt-1">Random selections from our collection</p>
+            </div>
+            <Link 
+              href="/search" 
+              className="text-blue-600 hover:underline text-sm"
+            >
+              Explore more →
+            </Link>
+          </div>
+          <VirtualizedGallery 
+            photos={randomPhotos.map(p => ({
+              ...p,
+              thumbUrl: p.smallUrl || p.mediumUrl || p.thumbUrl,
+            }))} 
             columns={4}
           />
         </section>

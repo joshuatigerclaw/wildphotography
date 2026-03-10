@@ -26,7 +26,6 @@ export async function queryNeon<T>(sql: string): Promise<T[]> {
 
 /**
  * Map DB row to PhotoDerivatives
- * DB columns: thumb_url, small_url, medium_url, large_url, preview_url, original_r2_key
  */
 function mapPhoto(row: any): PhotoDerivatives {
   return {
@@ -34,16 +33,13 @@ function mapPhoto(row: any): PhotoDerivatives {
     slug: row.slug,
     title: row.title || '',
     description: row.description,
-    // Map DB URLs to keys for consistency with the image helper
-    // The image helper expects keys, but DB has URLs
-    // We need to convert URLs to keys or update the helper
-    // For now, let's extract the key from the URL or store directly
-    thumb_r2_key: row.thumb_r2_key || null,
-    small_r2_key: row.small_r2_key || null,
-    medium_r2_key: row.medium_r2_key || null,
-    large_r2_key: row.large_r2_key || null,
-    preview_r2_key: row.preview_r2_key || null,
-    original_r2_key: row.original_r2_key || null,
+    description_long: row.description_long,
+    keywords: row.keywords,
+    width: row.width,
+    height: row.height,
+    camera_model: row.camera_model,
+    lat: row.lat,
+    lon: row.lon,
     // Legacy
     locationName: row.location,
   };
@@ -104,7 +100,14 @@ export async function getPhotosByGallery(gallerySlug: string): Promise<PhotoDeri
       p.slug, 
       p.title, 
       p.description,
+      p.description_long,
+      p.keywords,
       p.location,
+      p.width,
+      p.height,
+      p.camera_model,
+      p.lat,
+      p.lon,
       p.thumb_url,
       p.small_url,
       p.medium_url,
@@ -130,7 +133,13 @@ export async function getPhotosByGallery(gallerySlug: string): Promise<PhotoDeri
     slug: r.slug,
     title: r.title || '',
     description: r.description,
-    // Convert URL to key: extract path after /derivatives/
+    description_long: r.description_long,
+    keywords: r.keywords,
+    width: r.width,
+    height: r.height,
+    camera_model: r.camera_model,
+    lat: r.lat,
+    lon: r.lon,
     thumb_r2_key: r.thumb_url ? r.thumb_url.replace(/^.*\/derivatives\//, '') : null,
     small_r2_key: r.small_url ? r.small_url.replace(/^.*\/derivatives\//, '') : null,
     medium_r2_key: r.medium_url ? r.medium_url.replace(/^.*\/derivatives\//, '') : null,
@@ -152,7 +161,14 @@ export async function getRecentPhotos(limit: number): Promise<PhotoDerivatives[]
       p.slug, 
       p.title, 
       p.description,
+      p.description_long,
+      p.keywords,
       p.location,
+      p.width,
+      p.height,
+      p.camera_model,
+      p.lat,
+      p.lon,
       p.thumb_url,
       p.small_url,
       p.medium_url,
@@ -177,6 +193,13 @@ export async function getRecentPhotos(limit: number): Promise<PhotoDerivatives[]
     slug: r.slug,
     title: r.title || '',
     description: r.description,
+    description_long: r.description_long,
+    keywords: r.keywords,
+    width: r.width,
+    height: r.height,
+    camera_model: r.camera_model,
+    lat: r.lat,
+    lon: r.lon,
     thumb_r2_key: r.thumb_url ? r.thumb_url.replace(/^.*\/derivatives\//, '') : null,
     small_r2_key: r.small_url ? r.small_url.replace(/^.*\/derivatives\//, '') : null,
     medium_r2_key: r.medium_url ? r.medium_url.replace(/^.*\/derivatives\//, '') : null,
@@ -188,7 +211,67 @@ export async function getRecentPhotos(limit: number): Promise<PhotoDerivatives[]
 }
 
 /**
- * Fetch photo by slug WITH derivative URLs
+ * Fetch random photos for homepage - uses DB random ordering
+ * Only returns ready_for_public_render photos with valid derivatives
+ */
+export async function getRandomPhotos(limit: number): Promise<PhotoDerivatives[]> {
+  const rows = await queryNeon<any>(`
+    SELECT 
+      p.id, 
+      p.slug, 
+      p.title, 
+      p.description,
+      p.description_long,
+      p.keywords,
+      p.location,
+      p.width,
+      p.height,
+      p.camera_model,
+      p.lat,
+      p.lon,
+      p.thumb_url,
+      p.small_url,
+      p.medium_url,
+      p.large_url,
+      p.preview_url,
+      p.original_r2_key
+    FROM photos p
+    WHERE p.is_active = true 
+      AND p.ready_for_public_render = true
+      AND (
+        (p.thumb_url IS NOT NULL AND p.thumb_url != '' AND p.thumb_url NOT LIKE '%scarlet-macaw-test%')
+        OR (p.small_url IS NOT NULL AND p.small_url != '' AND p.small_url NOT LIKE '%scarlet-macaw-test%')
+        OR (p.medium_url IS NOT NULL AND p.medium_url != '' AND p.medium_url NOT LIKE '%scarlet-macaw-test%')
+        OR (p.large_url IS NOT NULL AND p.large_url != '' AND p.large_url NOT LIKE '%scarlet-macaw-test%')
+      )
+    ORDER BY RANDOM()
+    LIMIT ${limit}
+  `);
+  
+  return rows.map((r: any) => ({
+    id: r.id,
+    slug: r.slug,
+    title: r.title || '',
+    description: r.description,
+    description_long: r.description_long,
+    keywords: r.keywords,
+    width: r.width,
+    height: r.height,
+    camera_model: r.camera_model,
+    lat: r.lat,
+    lon: r.lon,
+    thumb_r2_key: r.thumb_url ? r.thumb_url.replace(/^.*\/derivatives\//, '') : null,
+    small_r2_key: r.small_url ? r.small_url.replace(/^.*\/derivatives\//, '') : null,
+    medium_r2_key: r.medium_url ? r.medium_url.replace(/^.*\/derivatives\//, '') : null,
+    large_r2_key: r.large_url ? r.large_url.replace(/^.*\/derivatives\//, '') : null,
+    preview_r2_key: r.preview_url ? r.preview_url.replace(/^.*\/derivatives\//, '') : null,
+    original_r2_key: r.original_r2_key,
+    locationName: r.location,
+  }));
+}
+
+/**
+ * Fetch photo by slug WITH derivative URLs and full metadata
  */
 export async function getPhotoBySlug(slug: string): Promise<PhotoDerivatives | null> {
   const rows = await queryNeon<any>(`
@@ -197,13 +280,21 @@ export async function getPhotoBySlug(slug: string): Promise<PhotoDerivatives | n
       p.slug, 
       p.title, 
       p.description,
+      p.description_long,
+      p.keywords,
       p.location,
+      p.width,
+      p.height,
+      p.camera_model,
+      p.lat,
+      p.lon,
       p.thumb_url,
       p.small_url,
       p.medium_url,
       p.large_url,
       p.preview_url,
-      p.original_r2_key
+      p.original_r2_key,
+      p.views_count
     FROM photos p
     WHERE p.slug = '${slug.replace(/'/g, "''")}' AND p.is_active = true
     LIMIT 1
@@ -217,6 +308,13 @@ export async function getPhotoBySlug(slug: string): Promise<PhotoDerivatives | n
     slug: r.slug,
     title: r.title || '',
     description: r.description,
+    description_long: r.description_long,
+    keywords: r.keywords,
+    width: r.width,
+    height: r.height,
+    camera_model: r.camera_model,
+    lat: r.lat,
+    lon: r.lon,
     thumb_r2_key: r.thumb_url ? r.thumb_url.replace(/^.*\/derivatives\//, '') : null,
     small_r2_key: r.small_url ? r.small_url.replace(/^.*\/derivatives\//, '') : null,
     medium_r2_key: r.medium_url ? r.medium_url.replace(/^.*\/derivatives\//, '') : null,
@@ -224,7 +322,36 @@ export async function getPhotoBySlug(slug: string): Promise<PhotoDerivatives | n
     preview_r2_key: r.preview_url ? r.preview_url.replace(/^.*\/derivatives\//, '') : null,
     original_r2_key: r.original_r2_key,
     locationName: r.location,
+    views_count: r.views_count,
   };
+}
+
+/**
+ * Record a photo visit
+ */
+export async function recordPhotoVisit(
+  photoId: number, 
+  slug: string, 
+  referrer?: string, 
+  userAgent?: string
+): Promise<void> {
+  try {
+    const sqlFn = neon(NEON_CONNECTION);
+    
+    // Insert visit record
+    await sqlFn`
+      INSERT INTO photo_visits (photo_id, slug, referrer, user_agent, visited_at)
+      VALUES (${photoId}, ${slug}, ${referrer || null}, ${userAgent || null}, NOW())
+    `;
+    
+    // Update aggregate count on photo
+    await sqlFn`
+      UPDATE photos SET views_count = COALESCE(views_count, 0) + 1
+      WHERE id = ${photoId}
+    `;
+  } catch (error) {
+    console.error('[db] Visit record error:', error);
+  }
 }
 
 /**
@@ -239,7 +366,14 @@ export async function searchPhotos(query: string, limit: number): Promise<PhotoD
       p.slug, 
       p.title, 
       p.description,
+      p.description_long,
+      p.keywords,
       p.location,
+      p.width,
+      p.height,
+      p.camera_model,
+      p.lat,
+      p.lon,
       p.thumb_url,
       p.small_url,
       p.medium_url,
@@ -251,6 +385,7 @@ export async function searchPhotos(query: string, limit: number): Promise<PhotoD
       AND (
         LOWER(p.title) LIKE '%${safeQuery}%'
         OR LOWER(p.description) LIKE '%${safeQuery}%'
+        OR LOWER(p.keywords) LIKE '%${safeQuery}%'
       )
       AND (
         p.thumb_url IS NOT NULL 
@@ -268,6 +403,13 @@ export async function searchPhotos(query: string, limit: number): Promise<PhotoD
     slug: r.slug,
     title: r.title || '',
     description: r.description,
+    description_long: r.description_long,
+    keywords: r.keywords,
+    width: r.width,
+    height: r.height,
+    camera_model: r.camera_model,
+    lat: r.lat,
+    lon: r.lon,
     thumb_r2_key: r.thumb_url ? r.thumb_url.replace(/^.*\/derivatives\//, '') : null,
     small_r2_key: r.small_url ? r.small_url.replace(/^.*\/derivatives\//, '') : null,
     medium_r2_key: r.medium_url ? r.medium_url.replace(/^.*\/derivatives\//, '') : null,

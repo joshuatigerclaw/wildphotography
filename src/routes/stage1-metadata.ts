@@ -9,38 +9,32 @@ import { neon } from '@neondatabase/serverless';
 import crypto from 'crypto';
 import type { Env } from '../types';
 
-const SMUGMUG_API_KEY = '6hJGBgm49JsxZhWnBm3vMFcKnH5tbSd9';
-const SMUGMUG_API_SECRET = 'MMD4PRS7x52DSW44jjQHNv9FfqN22RwJf8p8XHWFnjcSkkMwGxHGmcw4DwTcHChs';
-const ACCESS_TOKEN = '244ntqLqM8gZ38MKrbM67QPdgsws2T7x';
-const ACCESS_SECRET = '3BdZpBsttNX5rsw94H6Q38CxB4t4NS9pfJDdzJ5GXXxp5F6MN4bcBdjHcfrB67rZ';
+// Using oauth-1.0a library
+import OAuth from 'oauth-1.0a';
+import querystring from 'querystring';
+
+const SMUGMUG_API_KEY = 'mD9BzwdJchnMQQfGBNHDvmrWGSVQF6DM';
+const SMUGMUG_API_SECRET = 'cTDWwNqHDMFnPmR7HkxRVZhVkb7jb2S4R2wzqPrfSQjH9LrTLxzX9Jv5SpLk8vjg';
+const ACCESS_TOKEN = 'nrgfM49dPGnPCxGp6fKFmFXWvv3nJ7dG';
+const ACCESS_SECRET = 'RvvscsGWBKFXNS9k2Phf9r38RJ2fMrnbn7WRDbWqLLnTLcvjRcPVXn9Bqpx24jR8';
 
 // Rate limit state
 let rateLimitRemaining = 100;
 let rateLimitReset = Date.now() + 60000;
-const RATE_LIMIT_BUFFER = 5; // Stop when 5 requests remaining
+const RATE_LIMIT_BUFFER = 5;
 
-function createOAuthHeader(url: string): string {
-  const nonce = crypto.randomBytes(8).toString('hex');
-  const timestamp = Math.floor(Date.now() / 1000).toString();
-  
-  const params = [
-    `oauth_consumer_key=${SMUGMUG_API_KEY}`,
-    `oauth_token=${ACCESS_TOKEN}`,
-    `oauth_nonce=${nonce}`,
-    `oauth_timestamp=${timestamp}`,
-    `oauth_signature_method=HMAC-SHA1`,
-    `oauth_version=1.0`
-  ].sort().join('&');
-  
-  const base = `GET&${encodeURIComponent(url)}&${encodeURIComponent(params)}`;
-  const key = `${SMUGMUG_API_SECRET}&${ACCESS_SECRET}`;
-  const signature = crypto.createHmac('sha1', key).update(base).digest('base64');
-  
-  return `OAuth oauth_consumer_key="${SMUGMUG_API_KEY}", oauth_token="${ACCESS_TOKEN}", oauth_nonce="${nonce}", oauth_signature_method="HMAC-SHA1", oauth_timestamp="${timestamp}", oauth_version="1.0", oauth_signature="${signature}"`;
-}
+// OAuth instance
+const oauth = new OAuth({
+  consumer: { key: SMUGMUG_API_KEY, secret: SMUGMUG_API_SECRET },
+  signature_method: 'HMAC-SHA1',
+  hash_function(base, key) {
+    return crypto.createHmac('sha1', key).update(base).digest('base64');
+  }
+});
+
+const token = { key: ACCESS_TOKEN, secret: ACCESS_SECRET };
 
 async function waitForRateLimit(response: Response): Promise<void> {
-  // Check rate limit headers
   const remaining = response.headers.get('X-RateLimit-Remaining');
   const reset = response.headers.get('X-RateLimit-Reset');
   const retryAfter = response.headers.get('Retry-After');
@@ -48,10 +42,9 @@ async function waitForRateLimit(response: Response): Promise<void> {
   if (remaining) rateLimitRemaining = parseInt(remaining, 10);
   if (reset) rateLimitReset = parseInt(reset, 10) * 1000;
   
-  // If 429 or low on requests, wait
   if (response.status === 429 || rateLimitRemaining <= RATE_LIMIT_BUFFER) {
     const waitTime = retryAfter ? parseInt(retryAfter, 10) * 1000 : Math.max(0, rateLimitReset - Date.now());
-    const jitter = Math.random() * 1000; // Add 0-1s jitter
+    const jitter = Math.random() * 1000;
     console.log(`[smugmug-metadata] Rate limited, waiting ${waitTime + jitter}ms`);
     await new Promise(r => setTimeout(r, waitTime + jitter));
   }
@@ -65,8 +58,8 @@ export interface SmugMugImage {
   OriginalWidth?: number;
   OriginalHeight?: number;
   CameraModel?: string;
-  Uri?: string;
-  ArchivedUri?: string;
+  string;
+  Uri ArchivedUri?: string;
   KeywordArray?: string[];
   UploadedDate?: string;
 }
@@ -82,13 +75,16 @@ export async function crawlAlbumMetadata(
   page = 1,
   pageSize = 50
 ): Promise<{ images: SmugMugImage[]; nextPage: number | null; processed: number }> {
-  const url = `https://api.smugmug.com/api/v2/album/${albumKey}!images?n=${pageSize}&start=${(page - 1) * pageSize + 1}`;
-  const auth = createOAuthHeader(url);
+  const url = `https://api.smugmug.com/api/v2/album/${albumKey}!images`;
+  const params = { n: pageSize.toString(), start: ((page - 1) * pageSize + 1).toString() };
   
   console.log(`[smugmug-metadata] Fetching page ${page} of album ${albumKey}`);
   
-  const response = await fetch(url, {
-    headers: { 'Authorization': auth, 'Accept': 'application/json' }
+  const request = { url, method: 'GET', data: params };
+  const auth = oauth.toHeader(oauth.authorize(request, token));
+  
+  const response = await fetch(url + '?' + querystring.stringify(params), {
+    headers: { ...auth, 'Accept': 'application/json' }
   });
   
   await waitForRateLimit(response);
@@ -111,7 +107,6 @@ export async function storeImageMetadata(images: SmugMugImage[], env: Env): Prom
   let stored = 0;
   
   for (const img of images) {
-    // Generate slug from filename
     const baseName = img.FileName?.replace(/\.[^.]+$/, '') || 'photo';
     const slug = baseName.toLowerCase().replace(/[^a-z0-9]+/g, '-') + '-' + img.ImageKey?.slice(0, 6);
     
@@ -150,12 +145,12 @@ export async function handleSmugMugMetadataCrawl(
     const { albumKey, photoKey, page = 1 } = body;
     
     if (photoKey) {
-      // Single photo metadata
       const url = `https://api.smugmug.com/api/v2/image/${photoKey}`;
-      const auth = createOAuthHeader(url);
+      const request = { url, method: 'GET' };
+      const auth = oauth.toHeader(oauth.authorize(request, token));
       
       const response = await fetch(url, {
-        headers: { 'Authorization': auth, 'Accept': 'application/json' }
+        headers: { ...auth, 'Accept': 'application/json' }
       });
       
       await waitForRateLimit(response);
@@ -176,7 +171,6 @@ export async function handleSmugMugMetadataCrawl(
     }
     
     if (albumKey) {
-      // Album metadata with paging
       const { images, nextPage, processed } = await crawlAlbumMetadata(albumKey, env, page);
       
       if (images.length > 0) {

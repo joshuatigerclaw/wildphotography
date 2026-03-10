@@ -16,6 +16,15 @@ export interface Photo {
   slug: string;
   title: string;
   description?: string | null;
+  description_long?: string | null;
+  keywords?: string | null;
+  width?: number | null;
+  height?: number | null;
+  camera_model?: string | null;
+  lat?: number | null;
+  lon?: number | null;
+  views_count?: number | null;
+  dateTaken?: string | null;
   thumbUrl: string | null;
   smallUrl: string | null;
   mediumUrl: string | null;
@@ -89,7 +98,7 @@ export async function getGalleryBySlug(slug: string): Promise<Gallery | null> {
 }
 
 /**
- * Get photos for a gallery
+ * Get photos for a gallery - only ready_for_public_render photos with valid derivatives
  */
 export async function getPhotosByGallery(
   gallerySlug: string, 
@@ -100,18 +109,20 @@ export async function getPhotosByGallery(
     SELECT COUNT(*) as count
     FROM gallery_photos gp
     JOIN galleries g ON gp.gallery_id = g.id
-    WHERE g.slug = $1
+    JOIN photos p ON gp.photo_id = p.id
+    WHERE g.slug = $1 AND p.is_active = true AND p.ready_for_public_render = true
   `, [gallerySlug]);
   
   const total = Number(countResult[0]?.count || 0);
   
   const result = await sql(`
-    SELECT p.id, p.slug, p.title, p.description, 
+    SELECT p.id, p.slug, p.title, p.description, p.description_long, p.keywords,
+           p.width, p.height, p.camera_model, p.lat, p.lon, p.views_count,
            p.thumb_url, p.small_url, p.medium_url, p.large_url, p.location
     FROM photos p
     JOIN gallery_photos gp ON p.id = gp.photo_id
     JOIN galleries g ON gp.gallery_id = g.id
-    WHERE g.slug = $1 AND p.is_active = true
+    WHERE g.slug = $1 AND p.is_active = true AND p.ready_for_public_render = true
     ORDER BY gp.sort_order, p.date_uploaded DESC
     LIMIT $2 OFFSET $3
   `, [gallerySlug, limit + 1, offset]);
@@ -122,6 +133,14 @@ export async function getPhotosByGallery(
     slug: row.slug,
     title: row.title || '',
     description: row.description,
+    description_long: row.description_long,
+    keywords: row.keywords,
+    width: row.width,
+    height: row.height,
+    camera_model: row.camera_model,
+    lat: row.lat,
+    lon: row.lon,
+    views_count: row.views_count,
     thumbUrl: row.thumb_url,
     smallUrl: row.small_url,
     mediumUrl: row.medium_url,
@@ -133,17 +152,16 @@ export async function getPhotosByGallery(
 }
 
 /**
- * Get photo by slug
+ * Get photo by slug - with full metadata
  */
-export async function getPhotoBySlug(slug: string): Promise<any | null> {
+export async function getPhotoBySlug(slug: string): Promise<Photo | null> {
   const result = await sql(`
-    SELECT p.*, 
-           array_agg(k.name) as keywords
+    SELECT p.id, p.slug, p.title, p.description, p.description_long, p.keywords,
+           p.width, p.height, p.camera_model, p.lat, p.lon, p.views_count,
+           p.date_taken, p.thumb_url, p.small_url, p.medium_url, p.large_url, p.location
     FROM photos p
-    LEFT JOIN photo_keywords pk ON p.id = pk.photo_id
-    LEFT JOIN keywords k ON pk.keyword_id = k.id
-    WHERE p.slug = $1 AND p.is_active = true
-    GROUP BY p.id
+    WHERE p.slug = $1 AND p.is_active = true AND p.ready_for_public_render = true
+    LIMIT 1
   `, [slug]);
   
   if (result.length === 0) return null;
@@ -152,33 +170,69 @@ export async function getPhotoBySlug(slug: string): Promise<any | null> {
   return {
     id: String(row.id),
     slug: row.slug,
-    title: row.title,
+    title: row.title || '',
     description: row.description,
-    locationName: row.location,
-    cameraModel: row.camera_model,
-    lens: row.lens,
+    description_long: row.description_long,
+    keywords: row.keywords,
     width: row.width,
     height: row.height,
-    orientation: row.orientation,
+    camera_model: row.camera_model,
+    lat: row.lat,
+    lon: row.lon,
+    views_count: row.views_count,
     dateTaken: row.date_taken,
     thumbUrl: row.thumb_url,
     smallUrl: row.small_url,
     mediumUrl: row.medium_url,
     largeUrl: row.large_url,
-    keywords: row.keywords || [],
+    locationName: row.location,
   };
 }
 
 /**
- * Get all photos (for homepage)
+ * Record a photo visit
+ */
+export async function recordPhotoVisit(
+  photoId: number, 
+  slug: string, 
+  referrer?: string, 
+  userAgent?: string
+): Promise<void> {
+  try {
+    // Insert visit record
+    await sql`
+      INSERT INTO photo_visits (photo_id, slug, referrer, user_agent, visited_at)
+      VALUES (${photoId}, ${slug}, ${referrer || null}, ${userAgent || null}, NOW())
+    `;
+    
+    // Update aggregate count on photo
+    await sql`
+      UPDATE photos SET views_count = COALESCE(views_count, 0) + 1
+      WHERE id = ${photoId}
+    `;
+  } catch (error) {
+    console.error('[db] Visit record error:', error);
+  }
+}
+
+/**
+ * Get all photos for homepage - only ready_for_public_render photos with valid derivatives
  */
 export async function getAllPhotos(limit = 20): Promise<Photo[]> {
   const result = await sql(`
-    SELECT id, slug, title, description, 
+    SELECT id, slug, title, description, description_long, keywords,
+           width, height, camera_model, lat, lon, views_count,
            thumb_url, small_url, medium_url, large_url, location
     FROM photos
-    WHERE is_active = true
-    ORDER BY popularity DESC, date_uploaded DESC
+    WHERE is_active = true 
+      AND ready_for_public_render = true
+      AND (
+        thumb_url IS NOT NULL 
+        OR small_url IS NOT NULL 
+        OR medium_url IS NOT NULL
+        OR large_url IS NOT NULL
+      )
+    ORDER BY date_uploaded DESC
     LIMIT $1
   `, [limit]);
   
@@ -187,6 +241,14 @@ export async function getAllPhotos(limit = 20): Promise<Photo[]> {
     slug: row.slug,
     title: row.title || '',
     description: row.description,
+    description_long: row.description_long,
+    keywords: row.keywords,
+    width: row.width,
+    height: row.height,
+    camera_model: row.camera_model,
+    lat: row.lat,
+    lon: row.lon,
+    views_count: row.views_count,
     thumbUrl: row.thumb_url,
     smallUrl: row.small_url,
     mediumUrl: row.medium_url,
@@ -195,4 +257,54 @@ export async function getAllPhotos(limit = 20): Promise<Photo[]> {
   }));
 }
 
-export default { getGalleries, getGalleryBySlug, getPhotosByGallery, getPhotoBySlug, getAllPhotos };
+/**
+ * Get random photos for homepage variety
+ */
+export async function getRandomPhotos(limit = 12): Promise<Photo[]> {
+  const result = await sql(`
+    SELECT id, slug, title, description, description_long, keywords,
+           width, height, camera_model, lat, lon, views_count,
+           thumb_url, small_url, medium_url, large_url, location
+    FROM photos
+    WHERE is_active = true 
+      AND ready_for_public_render = true
+      AND (
+        thumb_url IS NOT NULL 
+        OR small_url IS NOT NULL 
+        OR medium_url IS NOT NULL
+        OR large_url IS NOT NULL
+      )
+    ORDER BY RANDOM()
+    LIMIT $1
+  `, [limit]);
+  
+  return (result as any[]).map(row => ({
+    id: String(row.id),
+    slug: row.slug,
+    title: row.title || '',
+    description: row.description,
+    description_long: row.description_long,
+    keywords: row.keywords,
+    width: row.width,
+    height: row.height,
+    camera_model: row.camera_model,
+    lat: row.lat,
+    lon: row.lon,
+    views_count: row.views_count,
+    thumbUrl: row.thumb_url,
+    smallUrl: row.small_url,
+    mediumUrl: row.medium_url,
+    largeUrl: row.large_url,
+    locationName: row.location,
+  }));
+}
+
+export default { 
+  getGalleries, 
+  getGalleryBySlug, 
+  getPhotosByGallery, 
+  getPhotoBySlug, 
+  getAllPhotos,
+  getRandomPhotos,
+  recordPhotoVisit 
+};

@@ -8,15 +8,16 @@
 import { S3Client, PutObjectCommand, HeadObjectCommand } from '@aws-sdk/client-s3';
 import { neon } from '@neondatabase/serverless';
 import crypto from 'crypto';
+import OAuth from 'oauth-1.0a';
 import type { Env } from '../types';
 
 const R2_ENDPOINT = 'https://3ec62f93675c404fe4a9a4949e38e5e5.r2.cloudflarestorage.com';
 const R2_BUCKET = 'wildphoto-storage';
 
-const SMUGMUG_API_KEY = '6hJGBgm49JsxZhWnBm3vMFcKnH5tbSd9';
-const SMUGMUG_API_SECRET = 'MMD4PRS7x52DSW44jjQHNv9FfqN22RwJf8p8XHWFnjcSkkMwGxHGmcw4DwTcHChs';
-const ACCESS_TOKEN = '244ntqLqM8gZ38MKrbM67QPdgsws2T7x';
-const ACCESS_SECRET = '3BdZpBsttNX5rsw94H6Q38CxB4t4NS9pfJDdzJ5GXXxp5F6MN4bcBdjHcfrB67rZ';
+const SMUGMUG_API_KEY = 'mD9BzwdJchnMQQfGBNHDvmrWGSVQF6DM';
+const SMUGMUG_API_SECRET = 'cTDWwNqHDMFnPmR7HkxRVZhVkb7jb2S4R2wzqPrfSQjH9LrTLxzX9Jv5SpLk8vjg';
+const ACCESS_TOKEN = 'nrgfM49dPGnPCxGp6fKFmFXWvv3nJ7dG';
+const ACCESS_SECRET = 'RvvscsGWBKFXNS9k2Phf9r38RJ2fMrnbn7WRDbWqLLnTLcvjRcPVXn9Bqpx24jR8';
 
 // Rate limit state
 let rateLimitRemaining = 100;
@@ -32,25 +33,15 @@ const r2 = new S3Client({
   },
 });
 
-function createOAuthHeader(url: string): string {
-  const nonce = crypto.randomBytes(8).toString('hex');
-  const timestamp = Math.floor(Date.now() / 1000).toString();
-  
-  const params = [
-    `oauth_consumer_key=${SMUGMUG_API_KEY}`,
-    `oauth_token=${ACCESS_TOKEN}`,
-    `oauth_nonce=${nonce}`,
-    `oauth_timestamp=${timestamp}`,
-    `oauth_signature_method=HMAC-SHA1`,
-    `oauth_version=1.0`
-  ].sort().join('&');
-  
-  const base = `GET&${encodeURIComponent(url)}&${encodeURIComponent(params)}`;
-  const key = `${SMUGMUG_API_SECRET}&${ACCESS_SECRET}`;
-  const signature = crypto.createHmac('sha1', key).update(base).digest('base64');
-  
-  return `OAuth oauth_consumer_key="${SMUGMUG_API_KEY}", oauth_token="${ACCESS_TOKEN}", oauth_nonce="${nonce}", oauth_signature_method="HMAC-SHA1", oauth_timestamp="${timestamp}", oauth_version="1.0", oauth_signature="${signature}"`;
-}
+const oauth = new OAuth({
+  consumer: { key: SMUGMUG_API_KEY, secret: SMUGMUG_API_SECRET },
+  signature_method: 'HMAC-SHA1',
+  hash_function(base, key) {
+    return crypto.createHmac('sha1', key).update(base).digest('base64');
+  }
+});
+
+const token = { key: ACCESS_TOKEN, secret: ACCESS_SECRET };
 
 async function waitForRateLimit(response: Response): Promise<void> {
   const remaining = response.headers.get('X-RateLimit-Remaining');
@@ -87,12 +78,10 @@ export async function downloadOriginal(
 ): Promise<{ success: boolean; originalStored?: boolean; error?: string }> {
   console.log(`[smugmug-download] Processing ${slug} (${smugmugKey})`);
   
-  // Idempotency check - skip if already downloaded
   const exists = await checkOriginalExists(slug);
   if (exists) {
     console.log(`[smugmug-download] Original already exists for ${slug}`);
     
-    // Update Neon anyway
     const sql = neon(env.NEON_DATABASE_URL || 'postgresql://neondb_owner:npg_BvF2JsQ8drba@ep-calm-fire-ad0dfnqd-pooler.c-2.us-east-1.aws.neon.tech/wildphotography?sslmode=require');
     await sql`
       UPDATE photos SET original_stored = true, updated_at = now()
@@ -103,12 +92,12 @@ export async function downloadOriginal(
   }
   
   try {
-    // Get image URI from SmugMug
     const metaUrl = `https://api.smugmug.com/api/v2/image/${smugmugKey}`;
-    const auth = createOAuthHeader(metaUrl);
+    const request = { url: metaUrl, method: 'GET' };
+    const auth = oauth.toHeader(oauth.authorize(request, token));
     
     const metaResp = await fetch(metaUrl, {
-      headers: { 'Authorization': auth, 'Accept': 'application/json' }
+      headers: { ...auth, 'Accept': 'application/json' }
     });
     
     await waitForRateLimit(metaResp);
@@ -124,7 +113,6 @@ export async function downloadOriginal(
       return { success: false, error: 'No image URI found' };
     }
     
-    // Download original
     console.log(`[smugmug-download] Downloading from ${imageUri}`);
     const imgResp = await fetch(imageUri);
     
@@ -137,7 +125,6 @@ export async function downloadOriginal(
     
     console.log(`[smugmug-download] Downloaded ${original.length} bytes`);
     
-    // Upload to R2 (private)
     const key = `originals/${slug}.jpg`;
     await r2.send(new PutObjectCommand({
       Bucket: R2_BUCKET,
@@ -148,7 +135,6 @@ export async function downloadOriginal(
     
     console.log(`[smugmug-download] Uploaded to R2: ${key}`);
     
-    // Update Neon
     const sql = neon(env.NEON_DATABASE_URL || 'postgresql://neondb_owner:npg_BvF2JsQ8drba@ep-calm-fire-ad0dfnqd-pooler.c-2.us-east-1.aws.neon.tech/wildphotography?sslmode=require');
     await sql`
       UPDATE photos SET 

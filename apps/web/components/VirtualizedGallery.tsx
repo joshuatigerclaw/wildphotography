@@ -16,7 +16,7 @@ export interface Photo {
   mediumUrl?: string | null;
   largeUrl?: string | null;
   locationName?: string | null;
-  keywords?: string[];
+  keywords?: string[] | string | null;
 }
 
 export interface GalleryEngine {
@@ -102,9 +102,9 @@ function PhotoTile({
           {photo.locationName && (
             <p className="text-white/70 text-xs truncate">{photo.locationName}</p>
           )}
-          {photo.keywords && photo.keywords.length > 0 && (
+          {photo.keywords && (Array.isArray(photo.keywords) ? photo.keywords : photo.keywords.split(',')).length > 0 && (
             <div className="flex flex-wrap gap-1 mt-1">
-              {photo.keywords.slice(0, 3).map((keyword) => (
+              {(Array.isArray(photo.keywords) ? photo.keywords : photo.keywords.split(',')).slice(0, 3).map((keyword) => (
                 <span 
                   key={keyword} 
                   className="text-[10px] px-1.5 py-0.5 bg-white/20 text-white rounded"

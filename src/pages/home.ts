@@ -1,28 +1,28 @@
 /**
  * Homepage renderer
  * 
- * Uses strict derivative selection:
- * - Gets derivative keys from Neon DB
- * - Uses getHomepageCardImage() for consistent selection
- * - Shows readable titles, not raw filenames
+ * Features:
+ * - Random photo selection for featured sections
+ * - Only shows ready_for_public_render = true photos
+ * - Proper derivative selection (thumb -> small -> medium)
+ * - Clean display titles, not raw filenames
  */
 
 import { layout, MEDIA_BASE } from './base';
-import { getRecentPhotos, getGalleries } from '../lib/db';
+import { getRecentPhotos, getRandomPhotos, getGalleries } from '../lib/db';
 import { getHomepageCardImage, getDisplayTitle, renderPlaceholder } from '../lib/images';
 import type { Env } from '../types';
 
 export async function renderHome(env: Env, url: URL): Promise<Response> {
-  // Fetch photos with derivative keys from DB
-  const photos = await getRecentPhotos(6);
+  // Get photos - use both recent and random for variety
+  const recentPhotos = await getRecentPhotos(6);
+  const randomPhotos = await getRandomPhotos(8);
   const galleries = await getGalleries();
   
-  // Featured photos section using strict derivative selection
+  // Featured photos section - recent additions
   let featuredContent = '';
-  
-  if (photos.length > 0) {
-    const photoCards = photos.map(photo => {
-      // Use strict derivative selection
+  if (recentPhotos.length > 0) {
+    const photoCards = recentPhotos.map(photo => {
       const imgResult = getHomepageCardImage(photo);
       
       let imageHtml: string;
@@ -35,41 +35,73 @@ export async function renderHome(env: Env, url: URL): Promise<Response> {
         cardClass += ' placeholder';
       }
       
-      // Use clean display title, not raw filename
       const displayTitle = getDisplayTitle(photo);
       
       return `
-        <div class="${cardClass}">
+        <a href="/photo/${photo.slug}" class="${cardClass}">
           ${imageHtml}
           <div class="caption">
             <h3>${displayTitle}</h3>
           </div>
-        </div>
+        </a>
       `;
     }).join('');
     
     featuredContent = `
       <section class="featured">
-        <h2>Featured Photos</h2>
+        <h2>Recent Photos</h2>
         <div class="gallery">
           ${photoCards}
         </div>
       </section>
     `;
-  } else {
-    featuredContent = `
-      <section class="featured">
-        <p>No photos available yet.</p>
+  }
+  
+  // Discover section - random photos
+  let discoverContent = '';
+  if (randomPhotos.length > 0) {
+    const photoCards = randomPhotos.map(photo => {
+      const imgResult = getHomepageCardImage(photo);
+      
+      let imageHtml: string;
+      let cardClass = 'photo-card';
+      
+      if (imgResult.type === 'url') {
+        imageHtml = `<img src="${imgResult.url}" alt="${getDisplayTitle(photo)}" loading="lazy">`;
+      } else {
+        imageHtml = renderPlaceholder('No thumbnail');
+        cardClass += ' placeholder';
+      }
+      
+      const displayTitle = getDisplayTitle(photo);
+      
+      return `
+        <a href="/photo/${photo.slug}" class="${cardClass}">
+          ${imageHtml}
+          <div class="caption">
+            <h3>${displayTitle}</h3>
+          </div>
+        </a>
+      `;
+    }).join('');
+    
+    discoverContent = `
+      <section class="discover">
+        <h2>Discover</h2>
+        <p class="section-desc">Random selections from our collection</p>
+        <div class="gallery">
+          ${photoCards}
+        </div>
       </section>
     `;
   }
   
   // Galleries section
   const galleryCards = galleries.map(g => `
-    <div class="gallery-card">
+    <a href="/gallery/${g.slug}" class="gallery-card">
       <h3>${g.name}</h3>
       <p>${g.description || 'View gallery'}</p>
-    </div>
+    </a>
   `).join('');
   
   const content = `
@@ -80,8 +112,10 @@ export async function renderHome(env: Env, url: URL): Promise<Response> {
     
     ${featuredContent}
     
+    ${discoverContent}
+    
     <section class="galleries">
-      <h2>Galleries</h2>
+      <h2>Featured Galleries</h2>
       <div class="gallery">
         ${galleryCards}
       </div>

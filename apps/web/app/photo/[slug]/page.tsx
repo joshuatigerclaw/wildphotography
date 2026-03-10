@@ -45,7 +45,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     twitter: {
       card: 'summary_large_image',
       title: photo.title,
-      description: photo.description,
+      description: photo.description || undefined,
       images: ogImage ? [ogImage] : [],
     },
   };
@@ -64,8 +64,8 @@ export default async function PhotoPage({ params }: { params: Promise<{ slug: st
     title: photo.title,
     description: photo.description || undefined,
     imageUrl: photo.mediumUrl || photo.smallUrl || '',
-    dateTaken: photo.dateTaken,
-    location: photo.location || undefined,
+    dateTaken: photo.dateTaken ? new Date(photo.dateTaken) : undefined,
+    location: photo.locationName || undefined,
     width: photo.width || undefined,
     height: photo.height || undefined,
   });

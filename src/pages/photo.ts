@@ -1,14 +1,17 @@
 /**
  * Photo detail page renderer
  * 
- * Uses strict derivative selection:
- * - Gets derivative keys from Neon DB
- * - Uses getPhotoPageMainImage() for main display
- * - Shows readable title, not raw filename
+ * Features:
+ * - Large main image display
+ * - Prominent title and description
+ * - Keyword chips (clickable to search)
+ * - Location map (conditional on GPS data)
+ * - Visit tracking
+ * - Download purchase button
  */
 
 import { layout } from './base';
-import { getPhotoBySlug } from '../lib/db';
+import { getPhotoBySlug, recordPhotoVisit } from '../lib/db';
 import { getPhotoPageMainImage, getDisplayTitle, renderPlaceholder, keyToUrl } from '../lib/images';
 import type { Env } from '../types';
 
@@ -26,12 +29,17 @@ export async function renderPhoto(slug: string, env: Env, url: URL): Promise<Res
     return layout('Not Found - Wildphotography', content);
   }
   
-  // Main image using strict derivative selection (large → preview → medium → small → thumb)
+  // Record visit
+  const referrer = url.searchParams.get('ref') || undefined;
+  const userAgent = url.headers.get('user-agent') || undefined;
+  recordPhotoVisit(photo.id, photo.slug, referrer, userAgent).catch(console.error);
+  
+  // Main image using strict derivative selection
   const imgResult = getPhotoPageMainImage(photo);
   
   let mainImageHtml: string;
   if (imgResult.type === 'url') {
-    mainImageHtml = `<img src="${imgResult.url}" alt="${getDisplayTitle(photo)}" style="width:100%;max-width:1200px;height:auto;border-radius:8px;">`;
+    mainImageHtml = `<img src="${imgResult.url}" alt="${getDisplayTitle(photo)}" class="main-photo">`;
   } else {
     mainImageHtml = renderPlaceholder('No image available');
   }
@@ -39,20 +47,74 @@ export async function renderPhoto(slug: string, env: Env, url: URL): Promise<Res
   // Use clean display title
   const displayTitle = getDisplayTitle(photo);
   
-  // Build download links (if user is authenticated - for now, show placeholder)
-  // Note: Downloads must remain private (403 for unauthorized)
+  // Description
+  const descriptionHtml = photo.description_long || photo.description || '';
+  
+  // Keywords as clickable chips
+  let keywordsHtml = '';
+  if (photo.keywords) {
+    const keywords = photo.keywords.split(',').map(k => k.trim()).filter(Boolean);
+    if (keywords.length > 0) {
+      keywordsHtml = `
+        <div class="keywords">
+          <span class="keywords-label">Keywords:</span>
+          ${keywords.map(k => `<a href="/search?q=${encodeURIComponent(k)}" class="keyword-chip">${k}</a>`).join('')}
+        </div>
+      `;
+    }
+  }
+  
+  // Location map (conditional on GPS)
+  let mapHtml = '';
+  if (photo.lat && photo.lon && photo.lat !== 0 && photo.lon !== 0) {
+    mapHtml = `
+      <div class="location-section">
+        <h3>Location</h3>
+        <div class="map-container">
+          <img src="https://maps.googleapis.com/maps/api/staticmap?center=${photo.lat},${photo.lon}&zoom=10&size=600x300&markers=${photo.lat},${photo.lon}&key=AIzaSyDlPfxC2naf0Ifc_tH4HTLQoKJZ60fi0fo" 
+               alt="Location map" 
+               class="location-map"
+               onerror="this.parentElement.style.display='none'">
+        </div>
+        <p class="location-name">${photo.locationName || 'Costa Rica'}</p>
+      </div>
+    `;
+  }
+  
+  // Metadata section
+  const metadataItems = [];
+  if (photo.width && photo.height) {
+    metadataItems.push(`<li><strong>Dimensions:</strong> ${photo.width} × ${photo.height}</li>`);
+  }
+  if (photo.camera_model) {
+    metadataItems.push(`<li><strong>Camera:</strong> ${photo.camera_model}</li>`);
+  }
+  if (photo.locationName) {
+    metadataItems.push(`<li><strong>Location:</strong> ${photo.locationName}</li>`);
+  }
+  if (photo.views_count) {
+    metadataItems.push(`<li><strong>Views:</strong> ${photo.views_count}</li>`);
+  }
+  
+  const metadataHtml = metadataItems.length > 0 ? `
+    <div class="metadata">
+      <ul>
+        ${metadataItems.join('')}
+      </ul>
+    </div>
+  ` : '';
+  
+  // Download button
   const downloadSection = `
     <div class="downloads">
-      <h3>Downloads</h3>
-      <p>High-resolution digital download available.</p>
       <button 
         id="buy-button"
-        onclick="buyDownload('${photo.slug}', '${displayTitle}')"
-        style="background:#0070ba;color:white;padding:12px 24px;border:none;border-radius:4px;font-size:16px;cursor:pointer;"
+        onclick="buyDownload('${photo.slug}', '${displayTitle.replace(/'/g, "\\'")}')"
+        class="buy-button"
       >
-        Buy Download - $29.00
+        Buy High-Res Download — $29.00
       </button>
-      <div id="checkout-status" style="margin-top:1rem;"></div>
+      <div id="checkout-status"></div>
       <script>
         async function buyDownload(slug, title) {
           const btn = document.getElementById('buy-button');
@@ -74,43 +136,39 @@ export async function renderPhoto(slug: string, env: Env, url: URL): Promise<Res
             } else {
               status.textContent = 'Error: ' + (data.error || 'Unknown error');
               btn.disabled = false;
-              btn.textContent = 'Buy Download - $29.00';
+              btn.textContent = 'Buy High-Res Download — $29.00';
             }
           } catch (e) {
             status.textContent = 'Error: ' + e.message;
             btn.disabled = false;
-            btn.textContent = 'Buy Download - $29.00';
+            btn.textContent = 'Buy High-Res Download — $29.00';
           }
         }
       </script>
     </div>
   `;
   
-  // Metadata
-  const metadata = [];
-  if (photo.locationName) {
-    metadata.push(`<li><strong>Location:</strong> ${photo.locationName}</li>`);
-  }
-  if (photo.description) {
-    metadata.push(`<li><strong>Description:</strong> ${photo.description}</li>`);
-  }
-  
   const content = `
-    <a href="/gallery/surfing-costa-rica" class="back-link">← Back to Gallery</a>
+    <a href="/" class="back-link">← Back to Galleries</a>
     
-    <div class="photo">
-      <h2>${displayTitle}</h2>
+    <article class="photo-detail">
+      <header class="photo-header">
+        <h1>${displayTitle}</h1>
+        ${descriptionHtml ? `<p class="photo-description">${descriptionHtml}</p>` : ''}
+      </header>
       
-      ${mainImageHtml}
+      <div class="photo-image">
+        ${mainImageHtml}
+      </div>
       
-      ${metadata.length > 0 ? `
-        <ul style="list-style:none;padding:0;margin:1rem 0">
-          ${metadata.join('')}
-        </ul>
-      ` : ''}
+      ${keywordsHtml}
+      
+      ${metadataHtml}
+      
+      ${mapHtml}
       
       ${downloadSection}
-    </div>
+    </article>
   `;
   
   return layout(`${displayTitle} - Wildphotography`, content);
