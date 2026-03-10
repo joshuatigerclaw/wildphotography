@@ -9,7 +9,18 @@ import { neon } from '@neondatabase/serverless';
 const DATABASE_URL = process.env.DATABASE_URL || 
   'postgresql://neondb_owner:npg_BvF2JsQ8drba@ep-calm-fire-ad0dfnqd-pooler.c-2.us-east-1.aws.neon.tech/wildphotography?sslmode=require';
 
+const R2_PUBLIC = 'https://pub-7d412c6efb5943b5bc587e695e22001e.r2.dev';
+
 const sql = neon(DATABASE_URL);
+
+/**
+ * Prepend R2 public URL to relative path
+ */
+function withR2Base(url: string | null | undefined): string | null {
+  if (!url) return null;
+  if (url.startsWith('http')) return url;
+  return R2_PUBLIC + '/' + url;
+}
 
 export interface Photo {
   id: string;
@@ -32,11 +43,46 @@ export interface Photo {
   views_count?: number | null;
   date_taken?: string | null;
   date_uploaded?: string | null;
+  // Full URLs with R2 base
   thumbUrl: string | null;
   smallUrl: string | null;
   mediumUrl: string | null;
   largeUrl: string | null;
   locationName?: string | null;
+}
+
+/**
+ * Map DB row to Photo with R2 URLs
+ */
+function mapPhoto(row: any): Photo {
+  return {
+    id: String(row.id),
+    slug: row.slug,
+    title: row.title || '',
+    description: row.description,
+    description_long: row.description_long,
+    keywords: row.keywords,
+    width: row.width,
+    height: row.height,
+    camera_make: row.camera_make,
+    camera_model: row.camera_model,
+    lens: row.lens,
+    iso: row.iso,
+    aperture: row.aperture,
+    shutter_speed: row.shutter_speed,
+    focal_length_mm: row.focal_length_mm,
+    lat: row.lat,
+    lon: row.lon,
+    views_count: row.views_count,
+    date_taken: row.date_taken,
+    date_uploaded: row.date_uploaded,
+    // Prepend R2 base to all URLs
+    thumbUrl: withR2Base(row.thumb_url),
+    smallUrl: withR2Base(row.small_url),
+    mediumUrl: withR2Base(row.medium_url),
+    largeUrl: withR2Base(row.large_url),
+    locationName: row.location,
+  };
 }
 
 export interface Gallery {
@@ -55,7 +101,7 @@ export async function getGalleries(): Promise<Gallery[]> {
   const result = await sql(`
     SELECT 
       g.id, g.slug, g.name, g.description,
-      p.thumb_url as "coverPhotoUrl",
+      p.thumb_url as "coverPhotoUrlRaw",
       COUNT(gp.photo_id) as "photoCount"
     FROM galleries g
     LEFT JOIN gallery_photos gp ON g.id = gp.gallery_id
@@ -70,7 +116,7 @@ export async function getGalleries(): Promise<Gallery[]> {
     slug: row.slug,
     name: row.name,
     description: row.description,
-    coverPhotoUrl: row.coverPhotoUrl,
+    coverPhotoUrl: withR2Base(row.coverPhotoUrlRaw),
     photoCount: Number(row.photoCount),
   }));
 }
@@ -82,7 +128,7 @@ export async function getGalleryBySlug(slug: string): Promise<Gallery | null> {
   const result = await sql(`
     SELECT 
       g.id, g.slug, g.name, g.description,
-      p.thumb_url as "coverPhotoUrl",
+      p.thumb_url as "coverPhotoUrlRaw",
       COUNT(gp.photo_id) as "photoCount"
     FROM galleries g
     LEFT JOIN gallery_photos gp ON g.id = gp.gallery_id
@@ -99,13 +145,13 @@ export async function getGalleryBySlug(slug: string): Promise<Gallery | null> {
     slug: row.slug,
     name: row.name,
     description: row.description,
-    coverPhotoUrl: row.coverPhotoUrl,
+    coverPhotoUrl: withR2Base(row.coverPhotoUrlRaw),
     photoCount: Number(row.photoCount),
   };
 }
 
 /**
- * Get photos for a gallery - only ready_for_public_render photos with valid derivatives
+ * Get photos for a gallery
  */
 export async function getPhotosByGallery(
   gallerySlug: string, 
@@ -137,39 +183,13 @@ export async function getPhotosByGallery(
   `, [gallerySlug, limit + 1, offset]);
   
   const hasMore = result.length > limit;
-  const photos = (result as any[]).slice(0, limit).map(row => ({
-    id: String(row.id),
-    slug: row.slug,
-    title: row.title || '',
-    description: row.description,
-    description_long: row.description_long,
-    keywords: row.keywords,
-    width: row.width,
-    height: row.height,
-    camera_make: row.camera_make,
-    camera_model: row.camera_model,
-    lens: row.lens,
-    iso: row.iso,
-    aperture: row.aperture,
-    shutter_speed: row.shutter_speed,
-    focal_length_mm: row.focal_length_mm,
-    lat: row.lat,
-    lon: row.lon,
-    views_count: row.views_count,
-    date_taken: row.date_taken,
-    date_uploaded: row.date_uploaded,
-    thumbUrl: row.thumb_url,
-    smallUrl: row.small_url,
-    mediumUrl: row.medium_url,
-    largeUrl: row.large_url,
-    locationName: row.location,
-  }));
+  const photos = (result as any[]).slice(0, limit).map(mapPhoto);
   
   return { photos, total, hasMore };
 }
 
 /**
- * Get photo by slug - with full metadata
+ * Get photo by slug
  */
 export async function getPhotoBySlug(slug: string): Promise<Photo | null> {
   const result = await sql(`
@@ -185,34 +205,7 @@ export async function getPhotoBySlug(slug: string): Promise<Photo | null> {
   
   if (result.length === 0) return null;
   
-  const row = result[0] as any;
-  return {
-    id: String(row.id),
-    slug: row.slug,
-    title: row.title || '',
-    description: row.description,
-    description_long: row.description_long,
-    keywords: row.keywords,
-    width: row.width,
-    height: row.height,
-    camera_make: row.camera_make,
-    camera_model: row.camera_model,
-    lens: row.lens,
-    iso: row.iso,
-    aperture: row.aperture,
-    shutter_speed: row.shutter_speed,
-    focal_length_mm: row.focal_length_mm,
-    lat: row.lat,
-    lon: row.lon,
-    views_count: row.views_count,
-    date_taken: row.date_taken,
-    date_uploaded: row.date_uploaded,
-    thumbUrl: row.thumb_url,
-    smallUrl: row.small_url,
-    mediumUrl: row.medium_url,
-    largeUrl: row.large_url,
-    locationName: row.location,
-  };
+  return mapPhoto(result[0]);
 }
 
 /**
@@ -225,13 +218,11 @@ export async function recordPhotoVisit(
   userAgent?: string
 ): Promise<void> {
   try {
-    // Insert visit record
     await sql`
       INSERT INTO photo_visits (photo_id, slug, referrer, user_agent, visited_at)
       VALUES (${photoId}, ${slug}, ${referrer || null}, ${userAgent || null}, NOW())
     `;
     
-    // Update aggregate count on photo
     await sql`
       UPDATE photos SET views_count = COALESCE(views_count, 0) + 1
       WHERE id = ${photoId}
@@ -242,164 +233,71 @@ export async function recordPhotoVisit(
 }
 
 /**
- * Get all photos for homepage - only ready_for_public_render photos with valid derivatives
+ * Get all photos
  */
 export async function getAllPhotos(limit = 20): Promise<Photo[]> {
   const result = await sql(`
-    SELECT id, slug, title, description, description_long, keywords,
-           width, height, camera_make, camera_model, lens,
-           iso, aperture, shutter_speed, focal_length_mm,
-           lat, lon, views_count, date_taken, date_uploaded,
-           thumb_url, small_url, medium_url, large_url, location
-    FROM photos
-    WHERE is_active = true 
-      AND ready_for_public_render = true
-      AND (
-        thumb_url IS NOT NULL 
-        OR small_url IS NOT NULL 
-        OR medium_url IS NOT NULL
-        OR large_url IS NOT NULL
-      )
-    ORDER BY date_uploaded DESC
+    SELECT p.id, p.slug, p.title, p.description, p.description_long, p.keywords,
+           p.width, p.height, p.camera_make, p.camera_model, p.lens,
+           p.iso, p.aperture, p.shutter_speed, p.focal_length_mm,
+           p.lat, p.lon, p.views_count, p.date_taken, p.date_uploaded,
+           p.thumb_url, p.small_url, p.medium_url, p.large_url, p.location
+    FROM photos p
+    WHERE p.is_active = true 
+      AND p.ready_for_public_render = true
+      AND (p.thumb_url IS NOT NULL OR p.small_url IS NOT NULL OR p.medium_url IS NOT NULL OR p.large_url IS NOT NULL)
+    ORDER BY p.date_uploaded DESC
     LIMIT $1
   `, [limit]);
   
-  return (result as any[]).map(row => ({
-    id: String(row.id),
-    slug: row.slug,
-    title: row.title || '',
-    description: row.description,
-    description_long: row.description_long,
-    keywords: row.keywords,
-    width: row.width,
-    height: row.height,
-    camera_make: row.camera_make,
-    camera_model: row.camera_model,
-    lens: row.lens,
-    iso: row.iso,
-    aperture: row.aperture,
-    shutter_speed: row.shutter_speed,
-    focal_length_mm: row.focal_length_mm,
-    lat: row.lat,
-    lon: row.lon,
-    views_count: row.views_count,
-    date_taken: row.date_taken,
-    date_uploaded: row.date_uploaded,
-    thumbUrl: row.thumb_url,
-    smallUrl: row.small_url,
-    mediumUrl: row.medium_url,
-    largeUrl: row.large_url,
-    locationName: row.location,
-  }));
+  return (result as any[]).map(mapPhoto);
 }
 
 /**
- * Get random photos for homepage variety
+ * Get random photos
  */
 export async function getRandomPhotos(limit = 12): Promise<Photo[]> {
   const result = await sql(`
-    SELECT id, slug, title, description, description_long, keywords,
-           width, height, camera_make, camera_model, lens,
-           iso, aperture, shutter_speed, focal_length_mm,
-           lat, lon, views_count, date_taken, date_uploaded,
-           thumb_url, small_url, medium_url, large_url, location
-    FROM photos
-    WHERE is_active = true 
-      AND ready_for_public_render = true
-      AND (
-        thumb_url IS NOT NULL 
-        OR small_url IS NOT NULL 
-        OR medium_url IS NOT NULL
-        OR large_url IS NOT NULL
-      )
+    SELECT p.id, p.slug, p.title, p.description, p.description_long, p.keywords,
+           p.width, p.height, p.camera_make, p.camera_model, p.lens,
+           p.iso, p.aperture, p.shutter_speed, p.focal_length_mm,
+           p.lat, p.lon, p.views_count, p.date_taken, p.date_uploaded,
+           p.thumb_url, p.small_url, p.medium_url, p.large_url, p.location
+    FROM photos p
+    WHERE p.is_active = true 
+      AND p.ready_for_public_render = true
+      AND (p.thumb_url IS NOT NULL OR p.small_url IS NOT NULL OR p.medium_url IS NOT NULL OR p.large_url IS NOT NULL)
     ORDER BY RANDOM()
     LIMIT $1
   `, [limit]);
   
-  return (result as any[]).map(row => ({
-    id: String(row.id),
-    slug: row.slug,
-    title: row.title || '',
-    description: row.description,
-    description_long: row.description_long,
-    keywords: row.keywords,
-    width: row.width,
-    height: row.height,
-    camera_make: row.camera_make,
-    camera_model: row.camera_model,
-    lens: row.lens,
-    iso: row.iso,
-    aperture: row.aperture,
-    shutter_speed: row.shutter_speed,
-    focal_length_mm: row.focal_length_mm,
-    lat: row.lat,
-    lon: row.lon,
-    views_count: row.views_count,
-    date_taken: row.date_taken,
-    date_uploaded: row.date_uploaded,
-    thumbUrl: row.thumb_url,
-    smallUrl: row.small_url,
-    mediumUrl: row.medium_url,
-    largeUrl: row.large_url,
-    locationName: row.location,
-  }));
+  return (result as any[]).map(mapPhoto);
 }
 
 /**
- * Get popular/most viewed photos
+ * Get popular photos
  */
 export async function getPopularPhotos(limit = 12): Promise<Photo[]> {
   const result = await sql(`
-    SELECT id, slug, title, description, description_long, keywords,
-           width, height, camera_make, camera_model, lens,
-           iso, aperture, shutter_speed, focal_length_mm,
-           lat, lon, views_count, date_taken, date_uploaded,
-           thumb_url, small_url, medium_url, large_url, location
-    FROM photos
-    WHERE is_active = true 
-      AND ready_for_public_render = true
-      AND views_count IS NOT NULL AND views_count > 0
-      AND (
-        thumb_url IS NOT NULL 
-        OR small_url IS NOT NULL 
-        OR medium_url IS NOT NULL
-        OR large_url IS NOT NULL
-      )
-    ORDER BY views_count DESC
+    SELECT p.id, p.slug, p.title, p.description, p.description_long, p.keywords,
+           p.width, p.height, p.camera_make, p.camera_model, p.lens,
+           p.iso, p.aperture, p.shutter_speed, p.focal_length_mm,
+           p.lat, p.lon, p.views_count, p.date_taken, p.date_uploaded,
+           p.thumb_url, p.small_url, p.medium_url, p.large_url, p.location
+    FROM photos p
+    WHERE p.is_active = true 
+      AND p.ready_for_public_render = true
+      AND p.views_count IS NOT NULL AND p.views_count > 0
+      AND (p.thumb_url IS NOT NULL OR p.small_url IS NOT NULL OR p.medium_url IS NOT NULL OR p.large_url IS NOT NULL)
+    ORDER BY p.views_count DESC
     LIMIT $1
   `, [limit]);
   
-  return (result as any[]).map(row => ({
-    id: String(row.id),
-    slug: row.slug,
-    title: row.title || '',
-    description: row.description,
-    description_long: row.description_long,
-    keywords: row.keywords,
-    width: row.width,
-    height: row.height,
-    camera_make: row.camera_make,
-    camera_model: row.camera_model,
-    lens: row.lens,
-    iso: row.iso,
-    aperture: row.aperture,
-    shutter_speed: row.shutter_speed,
-    focal_length_mm: row.focal_length_mm,
-    lat: row.lat,
-    lon: row.lon,
-    views_count: row.views_count,
-    date_taken: row.date_taken,
-    date_uploaded: row.date_uploaded,
-    thumbUrl: row.thumb_url,
-    smallUrl: row.small_url,
-    mediumUrl: row.medium_url,
-    largeUrl: row.large_url,
-    locationName: row.location,
-  }));
+  return (result as any[]).map(mapPhoto);
 }
 
 /**
- * Get related photos based on keywords and gallery
+ * Get related photos
  */
 export async function getRelatedPhotos(
   photoSlug: string, 
@@ -407,7 +305,6 @@ export async function getRelatedPhotos(
   keywords?: string,
   limit = 8
 ): Promise<Photo[]> {
-  // Get the photo's gallery if not provided
   let galleryId = gallerySlug;
   
   if (!galleryId) {
@@ -425,7 +322,6 @@ export async function getRelatedPhotos(
     }
   }
   
-  // Build query - prioritize same gallery, then shared keywords
   let query = `
     SELECT DISTINCT p.id, p.slug, p.title, p.description, p.description_long, p.keywords,
            p.width, p.height, p.camera_make, p.camera_model, p.lens,
@@ -452,12 +348,7 @@ export async function getRelatedPhotos(
   }
   
   query += `
-    AND (
-      p.thumb_url IS NOT NULL 
-      OR p.small_url IS NOT NULL 
-      OR p.medium_url IS NOT NULL
-      OR p.large_url IS NOT NULL
-    )
+    AND (p.thumb_url IS NOT NULL OR p.small_url IS NOT NULL OR p.medium_url IS NOT NULL OR p.large_url IS NOT NULL)
     ORDER BY p.views_count DESC NULLS LAST, p.date_uploaded DESC
     LIMIT $${params.length + 1}
   `;
@@ -465,37 +356,38 @@ export async function getRelatedPhotos(
   
   const result = await sql(query, params);
   
-  return (result as any[]).map(row => ({
-    id: String(row.id),
-    slug: row.slug,
-    title: row.title || '',
-    description: row.description,
-    description_long: row.description_long,
-    keywords: row.keywords,
-    width: row.width,
-    height: row.height,
-    camera_make: row.camera_make,
-    camera_model: row.camera_model,
-    lens: row.lens,
-    iso: row.iso,
-    aperture: row.aperture,
-    shutter_speed: row.shutter_speed,
-    focal_length_mm: row.focal_length_mm,
-    lat: row.lat,
-    lon: row.lon,
-    views_count: row.views_count,
-    date_taken: row.date_taken,
-    date_uploaded: row.date_uploaded,
-    thumbUrl: row.thumb_url,
-    smallUrl: row.small_url,
-    mediumUrl: row.medium_url,
-    largeUrl: row.large_url,
-    locationName: row.location,
-  }));
+  return (result as any[]).map(mapPhoto);
 }
 
 /**
- * Search photos with filters
+ * Get photos from same gallery
+ */
+export async function getPhotosFromGallery(
+  gallerySlug: string,
+  excludePhotoSlug?: string,
+  limit = 8
+): Promise<Photo[]> {
+  const result = await sql(`
+    SELECT p.id, p.slug, p.title, p.description, p.description_long, p.keywords,
+           p.width, p.height, p.camera_make, p.camera_model, p.lens,
+           p.iso, p.aperture, p.shutter_speed, p.focal_length_mm,
+           p.lat, p.lon, p.views_count, p.date_taken, p.date_uploaded,
+           p.thumb_url, p.small_url, p.medium_url, p.large_url, p.location
+    FROM photos p
+    JOIN gallery_photos gp ON p.id = gp.photo_id
+    JOIN galleries g ON gp.gallery_id = g.id
+    WHERE g.slug = $1 AND p.is_active = true AND p.ready_for_public_render = true
+      ${excludePhotoSlug ? `AND p.slug != $2` : ''}
+      AND (p.thumb_url IS NOT NULL OR p.small_url IS NOT NULL OR p.medium_url IS NOT NULL OR p.large_url IS NOT NULL)
+    ORDER BY gp.sort_order, p.date_uploaded DESC
+    LIMIT $${excludePhotoSlug ? 3 : 2}
+  `, excludePhotoSlug ? [gallerySlug, excludePhotoSlug] : [gallerySlug, limit]);
+  
+  return (result as any[]).map(mapPhoto);
+}
+
+/**
+ * Search photos
  */
 export async function searchPhotos(
   query: string, 
@@ -548,93 +440,9 @@ export async function searchPhotos(
   `, [...params, limit + 1, offset]);
   
   const hasMore = result.length > limit;
-  const photos = (result as any[]).slice(0, limit).map(row => ({
-    id: String(row.id),
-    slug: row.slug,
-    title: row.title || '',
-    description: row.description,
-    description_long: row.description_long,
-    keywords: row.keywords,
-    width: row.width,
-    height: row.height,
-    camera_make: row.camera_make,
-    camera_model: row.camera_model,
-    lens: row.lens,
-    iso: row.iso,
-    aperture: row.aperture,
-    shutter_speed: row.shutter_speed,
-    focal_length_mm: row.focal_length_mm,
-    lat: row.lat,
-    lon: row.lon,
-    views_count: row.views_count,
-    date_taken: row.date_taken,
-    date_uploaded: row.date_uploaded,
-    thumbUrl: row.thumb_url,
-    smallUrl: row.small_url,
-    mediumUrl: row.medium_url,
-    largeUrl: row.large_url,
-    locationName: row.location,
-  }));
+  const photos = (result as any[]).slice(0, limit).map(mapPhoto);
   
   return { photos, total, hasMore };
-}
-
-/**
- * Get photos from the same gallery
- */
-export async function getPhotosFromGallery(
-  gallerySlug: string,
-  excludePhotoSlug?: string,
-  limit = 8
-): Promise<Photo[]> {
-  const result = await sql(`
-    SELECT p.id, p.slug, p.title, p.description, p.description_long, p.keywords,
-           p.width, p.height, p.camera_make, p.camera_model, p.lens,
-           p.iso, p.aperture, p.shutter_speed, p.focal_length_mm,
-           p.lat, p.lon, p.views_count, p.date_taken, p.date_uploaded,
-           p.thumb_url, p.small_url, p.medium_url, p.large_url, p.location
-    FROM photos p
-    JOIN gallery_photos gp ON p.id = gp.photo_id
-    JOIN galleries g ON gp.gallery_id = g.id
-    WHERE g.slug = $1 AND p.is_active = true AND p.ready_for_public_render = true
-      ${excludePhotoSlug ? `AND p.slug != $2` : ''}
-      AND (
-        p.thumb_url IS NOT NULL 
-        OR p.small_url IS NOT NULL 
-        OR p.medium_url IS NOT NULL
-        OR p.large_url IS NOT NULL
-      )
-    ORDER BY gp.sort_order, p.date_uploaded DESC
-    LIMIT $${excludePhotoSlug ? 3 : 2}
-  `, excludePhotoSlug ? [gallerySlug, excludePhotoSlug] : [gallerySlug, limit]);
-  
-  return (result as any[]).map(row => ({
-    id: String(row.id),
-    slug: row.slug,
-    title: row.title || '',
-    description: row.description,
-    description_long: row.description_long,
-    keywords: row.keywords,
-    width: row.width,
-    height: row.height,
-    camera_make: row.camera_make,
-    camera_model: row.camera_model,
-    lens: row.lens,
-    iso: row.iso,
-    aperture: row.aperture,
-    shutter_speed: row.shutter_speed,
-    focal_length_mm: row.focal_length_mm,
-    lat: row.lat,
-    lon: row.lon,
-    views_count: row.views_count,
-    date_taken: row.date_taken,
-    date_uploaded: row.date_uploaded,
-    thumbUrl: row.thumb_url,
-    smallUrl: row.small_url,
-    mediumUrl: row.medium_url,
-    largeUrl: row.large_url,
-    locationName: row.location,
-  }));
 }
 
 export default { 
