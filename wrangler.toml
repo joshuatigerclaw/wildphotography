@@ -58,3 +58,10 @@ max_wait_ms = 5000
 
 [observability]
 enabled = true
+
+[[queues.producers]]
+binding = "DERIVATIVE_GENERATION"
+queue = "derivative-generation"
+
+[[queues.consumers]]
+queue = "derivative-generation"
