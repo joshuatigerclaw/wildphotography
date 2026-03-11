@@ -21,6 +21,71 @@ const NEON_DB = process.env.DATABASE_URL || 'postgresql://neondb_owner:npg_BvF2J
 const sql = neon(NEON_DB);
 
 /**
+ * Convert directory name to gallery name (title case)
+ * surfing-costa-rica → Surfing Costa Rica
+ */
+function dirToGalleryName(dirName) {
+  return dirName
+    .replace(/-/g, ' ')
+    .replace(/\b\w/g, c => c.toUpperCase());
+}
+
+/**
+ * Convert directory name to slug
+ * Surfing Costa Rica → surfing-costa-rica
+ */
+function dirToSlug(dirName) {
+  return dirName
+    .toLowerCase()
+    .replace(/\s+/g, '-')
+    .replace(/[^a-z0-9-]/g, '');
+}
+
+/**
+ * Get or create gallery from directory name
+ * Returns gallery ID
+ */
+async function getOrCreateGallery(folderPath) {
+  // Get the immediate directory name
+  const dirName = path.basename(folderPath);
+  
+  // Transform to name and slug
+  const galleryName = dirToGalleryName(dirName);
+  const slug = dirToSlug(dirName);
+  
+  // Check if exists
+  const existing = await sql`
+    SELECT id FROM galleries WHERE slug = ${slug}
+  `;
+  
+  if (existing.length > 0) {
+    console.log(`  📁 Using existing gallery: ${galleryName} (ID: ${existing[0].id})`);
+    return existing[0].id;
+  }
+  
+  // Create new gallery
+  const result = await sql`
+    INSERT INTO galleries (name, slug, description, is_active, date_created, date_modified)
+    VALUES (${galleryName}, ${slug}, ${galleryName} photography from Costa Rica., true, NOW(), NOW())
+    RETURNING id
+  `;
+  
+  console.log(`  🆕 Created gallery: ${galleryName} (ID: ${result[0].id})`);
+  return result[0].id;
+}
+
+/**
+ * Assign photo to gallery
+ */
+async function assignToGallery(photoId, galleryId, sortOrder) {
+  await sql`
+    INSERT INTO gallery_photos (gallery_id, photo_id, sort_order, date_added)
+    VALUES (${galleryId}, ${photoId}, ${sortOrder}, NOW())
+    ON CONFLICT DO NOTHING
+  `;
+}
+
+/**
  * Extract EXIF metadata using exiftool CLI
  */
 function extractExif(filePath) {
@@ -204,6 +269,11 @@ async function importFolder(folderPath, gallerySlug) {
   console.log(`Folder: ${folderPath}`);
   console.log(`Gallery: ${gallerySlug}\n`);
   
+  // Auto-create gallery from folder name
+  console.log('=== Creating/Assigning Gallery ===');
+  const galleryId = await getOrCreateGallery(folderPath);
+  console.log('');
+  
   // Get all image files (exclude hidden/Mac files)
   const files = fs.readdirSync(folderPath)
     .filter(f => /\.(jpe?g)$/i.test(f) && !f.startsWith('._'))
@@ -213,12 +283,19 @@ async function importFolder(folderPath, gallerySlug) {
   
   let processed = 0;
   let errors = 0;
+  let sortOrder = 0;
   
   for (const file of files) {
     try {
       const result = await processImage(file, gallerySlug);
-      if (result) processed++;
-      else errors++;
+      if (result) {
+        processed++;
+        // Assign to gallery
+        await assignToGallery(result.photoId, galleryId, sortOrder);
+        sortOrder++;
+      } else {
+        errors++;
+      }
     } catch (e) {
       console.error(`  ❌ Error: ${e.message}`);
       errors++;
