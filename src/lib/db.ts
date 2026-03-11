@@ -49,20 +49,23 @@ function mapPhoto(row: any): PhotoDerivatives {
  * Fetch all galleries
  */
 export async function getGalleries(): Promise<Gallery[]> {
-  const knownGalleries = [
-    'surfing-costa-rica',
-    'rivers', 
-    'volcan-poas',
-    'turtles'
-  ];
+  // Fetch all active galleries from database
+  const rows = await queryNeon<any>(`
+    SELECT DISTINCT g.id, g.slug, g.name, g.description, g.cover_photo_id
+    FROM galleries g
+    JOIN gallery_photos gp ON g.id = gp.gallery_id
+    JOIN photos p ON gp.photo_id = p.id
+    WHERE g.is_active = true AND p.ready_for_public_render = true
+    ORDER BY g.name
+  `);
   
-  const galleries: Gallery[] = [];
-  for (const slug of knownGalleries) {
-    const data = await getGalleryBySlug(slug);
-    if (data) galleries.push(data);
-  }
-  
-  return galleries;
+  return rows.map(r => ({
+    id: r.id,
+    slug: r.slug,
+    name: r.name,
+    description: r.description,
+    coverPhotoId: r.cover_photo_id,
+  }));
 }
 
 /**
