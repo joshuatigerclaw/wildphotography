@@ -64,9 +64,10 @@ async function getOrCreateGallery(folderPath) {
   }
   
   // Create new gallery
+  const desc = `${galleryName} photography from Costa Rica`;
   const result = await sql`
     INSERT INTO galleries (name, slug, description, is_active, date_created, date_modified)
-    VALUES (${galleryName}, ${slug}, ${galleryName} photography from Costa Rica., true, NOW(), NOW())
+    VALUES (${galleryName}, ${slug}, ${desc}, true, NOW(), NOW())
     RETURNING id
   `;
   
@@ -115,12 +116,8 @@ function extractExif(filePath) {
       }
     } catch (e) {}
     
-    // Parse aperture
+    // Skip aperture for now (DB column may be numeric)
     let apertureStr = null;
-    if (aperture) {
-      const f = parseFloat(aperture.replace('f/', '').replace('F/', ''));
-      if (!isNaN(f)) apertureStr = `f/${f}`;
-    }
     
     // Parse focal length
     let focalStr = null;
