@@ -1,0 +1,67 @@
+{
+  "programs": {
+    "getyourguide": {
+      "name": "GetYourGuide",
+      "partner_id": "6ZV7KMH",
+      "widget": {
+        "type": "inline",
+        "auto": true,
+        "data": {
+          "data-gyg-widget": "auto",
+          "data-gyg-partner-id": "6ZV7KMH",
+          "data-gyg-cmp": "wildphoto"
+        }
+      },
+      "pretty_link_prefix": "/go/gyg",
+      "notes": "Use for birding tours, wildlife tours, nature walks"
+    },
+    "viator": {
+      "name": "Viator",
+      "partner_id": "P00094502",
+      "widget": {
+        "type": "inline",
+        "data": {
+          "data-vi-partner-id": "P00094502",
+          "data-vi-widget-ref": "W-dd7eb900-642d-4691-8ef0-9cf6df2b114b"
+        },
+        "script": "https://www.viator.com/orion/partner/widget.js",
+        "async": true
+      },
+      "pretty_link_prefix": "/go/viator",
+      "notes": "Use for lodges, hotels, resorts, transportation"
+    },
+    "tripadvisor": {
+      "name": "TripAdvisor",
+      "affiliate_id": "76116cy63y5LNMNRNTOUSLNRQRVRRU",
+      "widget": {
+        "type": "text_link",
+        "data": {
+          "href": "https://www.kqzyfj.com/76116cy63y5LNMNRNTOUSLNRQRVRRU",
+          "target": "_top",
+          "text": "Over 300,000 tours and activities worldwide: Book on Tripadvisor with trusted reviews"
+        },
+        "pixel": {
+          "src": "https://www.awltovhc.com/31111iw-ousDFEFJFLGMKDFJIJNJJM",
+          "width": 1,
+          "height": 1,
+          "border": 0
+        }
+      },
+      "pretty_link_prefix": "/go/tripadvisor",
+      "notes": "Use for general activity CTA, broad reach"
+    }
+  },
+  "widget_rules": {
+    "birding_tours": "getyourguide",
+    "wildlife_tours": "getyourguide",
+    "nature_walks": "getyourguide",
+    "photography_tours": "getyourguide",
+    " lodges": "viator",
+    "hotels": "viator",
+    "resorts": "viator",
+    "transportation": "viator",
+    "general_activity": "tripadvisor",
+    "broad_cta": "tripadvisor"
+  },
+  "saved_at": "2026-03-24T16:46:00-06:00"
+}
