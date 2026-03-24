@@ -42,3 +42,5 @@ coverage/
 *.tsbuildinfo
 storage/derivatives/
 .wrangler/
+scripts/vision_enrich.py
+scripts/vision_enrichment.py
