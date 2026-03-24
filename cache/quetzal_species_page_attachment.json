@@ -1,0 +1,21 @@
+{
+  "timestamp": "2026-03-18T03:14:57.752Z",
+  "species_page_url": "https://wildphotography.com/species/resplendent-quetzal",
+  "hero_image": {
+    "slug": "resplendent-quetzal-cl0a0992",
+    "thumbnail": "https://pub-7d412c6efb5943b5bc587e695e22001e.r2.dev/derivatives/smalls/CL0A0992.jpg",
+    "full": "https://pub-7d412c6efb5943b5bc587e695e22001e.r2.dev/derivatives/larges/CL0A0992.jpg"
+  },
+  "gallery_images": [
+    {
+      "slug": "resplendent-quetzal-cl0a0992",
+      "url": "https://pub-7d412c6efb5943b5bc587e695e22001e.r2.dev/derivatives/smalls/CL0A0992.jpg"
+    },
+    {
+      "slug": "resplendent-quetzal-cl0a1052",
+      "url": "https://pub-7d412c6efb5943b5bc587e695e22001e.r2.dev/derivatives/smalls/CL0A1052.jpg"
+    }
+  ],
+  "total_gallery_photos": 2,
+  "status": "complete"
+}

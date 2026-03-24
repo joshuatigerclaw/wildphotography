@@ -1,0 +1,20 @@
+# Wildphotography Derivative Restoration - Environment Variables
+
+# Required: R2 Secret Key (get from wrangler)
+# Run: wrangler secret put R2_SECRET_KEY
+# Or get from Cloudflare Dashboard > R2 > Manage API Tokens
+export R2_SECRET_KEY="your-r2-secret-access-key-here"
+
+# Optional: Override database connection (has built-in default)
+export DATABASE_URL="postgresql://neondb_owner:npg_BvF2JsQ8drba@ep-calm-fire-ad0dfnqd-pooler.c-2.us-east-1.aws.neon.tech/wildphotography?sslmode=require"
+
+# Get R2_SECRET_KEY from Cloudflare:
+# Option 1: From wrangler.toml project
+#   cd wildphotography && npx wrangler secret list
+#
+# Option 2: Create new API token
+#   Go to Cloudflare Dashboard > Profile > API Tokens
+#   Create Custom Token with R2 permissions (Object Read, Write)
+#
+# Option 3: From existing wrangler deployment
+#   npx wrangler secret get R2_SECRET_KEY

@@ -1,0 +1,19 @@
+{
+  "workflow": "wild_derivative_flag_correction",
+  "completed_at": "2026-03-24T17:12:00Z",
+  "source": "wildphotography/inventory/derivative_reality_audit.latest.json",
+  "filter": "derivatives_exist = false",
+  "items_processed": 12316,
+  "items_updated": 12315,
+  "items_failed": 1,
+  "flags_cleared": {
+    "derivatives_complete": 12315,
+    "ready_for_public_render": 12315,
+    "search_ready": 12315
+  },
+  "db_state_after": {
+    "total_photos": 20721,
+    "derivatives_complete_true": 8405,
+    "derivatives_complete_false": 12316
+  }
+}

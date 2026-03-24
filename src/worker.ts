@@ -33,6 +33,12 @@ import { renderGalleries } from './pages/galleries';
 import { renderSearch } from './pages/search';
 import { renderGallery } from './pages/gallery';
 import { renderPhoto } from './pages/photo';
+import { renderArticle } from './pages/article';
+import { renderSpecies } from './pages/species';
+import { renderSpeciesIndex } from './pages/species-index';
+import { renderRegion } from './pages/region';
+import { renderArticleIndex } from './pages/article-index';
+import { renderRegionIndex } from './pages/region-index';
 import { render404, render403 } from './pages/errors';
 
 const MEDIA_BASE = 'https://wildphotography-media.josh-ec6.workers.dev';
@@ -74,6 +80,116 @@ export default {
           photo
         });
       }
+      
+      // API: paginated photos for infinite scroll
+      if (path === 'api/photos') {
+        const url = new URL(request.url);
+        const offset = parseInt(url.searchParams.get('offset') || '0', 10);
+        
+        const { getPhotosBatch } = await import('./lib/db');
+        const photos = await getPhotosBatch(offset);
+        
+        const hasMore = photos.length > 36;
+        const displayPhotos = photos.slice(0, 36);
+        
+        const response = Response.json({
+          photos: displayPhotos.map((p: any) => ({
+            slug: p.slug,
+            title: p.title || '',
+            small_url: p.small_url,
+            gallery_slug: p.gallery_slug,
+            gallery_name: p.gallery_name,
+          })),
+          hasMore,
+          offset,
+        });
+        
+        response.headers.set('Cache-Control', 'public, max-age=300, s-maxage=3600');
+        return response;
+      }
+
+      // API: paginated galleries for infinite scroll
+      if (path === 'api/galleries') {
+        const url = new URL(request.url);
+        const offset = parseInt(url.searchParams.get('offset') || '0', 10);
+        const limit = 24;
+        
+        const { queryNeon } = await import('./lib/db');
+        const rows = await queryNeon(`
+          SELECT g.id, g.slug, g.name, g.description,
+            p.small_url, p.medium_url
+          FROM galleries g
+          LEFT JOIN LATERAL (
+            SELECT p.small_url, p.medium_url
+            FROM gallery_photos gp
+            JOIN photos p ON gp.photo_id = p.id
+            WHERE gp.gallery_id = g.id 
+              AND p.is_active = true 
+              AND p.ready_for_public_render = true
+              AND p.small_url IS NOT NULL
+            LIMIT 1
+          ) p ON true
+          WHERE g.is_active = true
+          ORDER BY g.name
+          LIMIT ${limit + 1}
+          OFFSET ${offset}
+        `);
+        
+        const hasMore = rows.length > limit;
+        const galleries = rows.slice(0, limit);
+        
+        return Response.json({
+          galleries: galleries.map((g: any) => ({
+            slug: g.slug,
+            name: g.name,
+            description: g.description,
+            small_url: g.small_url,
+            medium_url: g.medium_url,
+          })),
+          hasMore,
+          offset,
+        });
+      }
+
+      // API: paginated gallery photos for infinite scroll
+      if (path === 'api/gallery-photos') {
+        const url = new URL(request.url);
+        const slug = url.searchParams.get('slug');
+        const offset = parseInt(url.searchParams.get('offset') || '0', 10);
+        const limit = parseInt(url.searchParams.get('limit') || '20', 10);
+        
+        if (!slug) {
+          return Response.json({ error: 'Missing slug parameter' }, { status: 400 });
+        }
+        
+        const { getPhotosByGallery, getGalleryPhotoCount } = await import('./lib/db');
+        const photos = await getPhotosByGallery(slug, limit + 1, offset);
+        const totalCount = await getGalleryPhotoCount(slug);
+        
+        const hasMore = photos.length > limit;
+        const displayPhotos = photos.slice(0, limit);
+        
+        const response = Response.json({
+          photos: displayPhotos.map((p: any) => ({
+            id: p.id,
+            slug: p.slug,
+            title: p.title || '',
+            width: p.width,
+            height: p.height,
+            thumb_url: p.thumb_r2_key ? `https://pub-7d412c6efb5943b5bc587e695e22001e.r2.dev/derivatives/${p.thumb_r2_key}` : null,
+            small_url: p.small_r2_key ? `https://pub-7d412c6efb5943b5bc587e695e22001e.r2.dev/derivatives/${p.small_r2_key}` : null,
+            medium_url: p.medium_r2_key ? `https://pub-7d412c6efb5943b5bc587e695e22001e.r2.dev/derivatives/${p.medium_r2_key}` : null,
+            large_url: p.large_r2_key ? `https://pub-7d412c6efb5943b5bc587e695e22001e.r2.dev/derivatives/${p.large_r2_key}` : null,
+          })),
+          hasMore,
+          offset: offset + displayPhotos.length,
+          total: totalCount,
+        });
+        
+        response.headers.set('Cache-Control', 'public, max-age=300, s-maxage=3600');
+        return response;
+      }
+
       if (path === 'api/v1/debug/photos') {
         const { getRecentPhotos } = await import('./lib/db');
         const photos = await getRecentPhotos(20);
@@ -374,6 +490,100 @@ export default {
       };
 
       // Exact route match
+      // Sitemap index
+      if (path === 'sitemap.xml') {
+        let xml = '<?xml version="1.0" encoding="UTF-8"?>\n';
+        xml += '<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
+        xml += '  <sitemap><loc>https://wildphotography.com/sitemaps/pages.xml</loc></sitemap>\n';
+        xml += '  <sitemap><loc>https://wildphotography.com/sitemaps/galleries.xml</loc></sitemap>\n';
+        xml += '  <sitemap><loc>https://wildphotography.com/sitemaps/photos.xml</loc></sitemap>\n';
+        xml += '</sitemapindex>';
+        
+        const response = new Response(xml, { headers: { 'Content-Type': 'application/xml' } });
+        response.headers.set('Cache-Control', 'public, max-age=3600, s-maxage=86400');
+        return response;
+      }
+
+      // Sitemap: pages
+      if (path === 'sitemaps/pages.xml') {
+        const pages = [
+          { loc: '', priority: '1.0', changefreq: 'daily' },
+          { loc: 'galleries', priority: '0.9', changefreq: 'weekly' },
+        ];
+        
+        let xml = '<?xml version="1.0" encoding="UTF-8"?>\n';
+        xml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
+        
+        for (const p of pages) {
+          xml += `  <url><loc>https://wildphotography.com/${p.loc}</loc><changefreq>${p.changefreq}</changefreq><priority>${p.priority}</priority></url>\n`;
+        }
+        
+        xml += '</urlset>';
+        
+        const response = new Response(xml, { headers: { 'Content-Type': 'application/xml' } });
+        response.headers.set('Cache-Control', 'public, max-age=3600, s-maxage=86400');
+        return response;
+      }
+
+      // Sitemap: galleries
+      if (path === 'sitemaps/galleries.xml') {
+        const { getGalleries } = await import('./lib/db');
+        const galleries = await getGalleries();
+        
+        let xml = '<?xml version="1.0" encoding="UTF-8"?>\n';
+        xml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
+        
+        for (const g of galleries) {
+          xml += `  <url><loc>https://wildphotography.com/gallery/${g.slug}</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>\n`;
+        }
+        
+        xml += '</urlset>';
+        
+        const response = new Response(xml, { headers: { 'Content-Type': 'application/xml' } });
+        response.headers.set('Cache-Control', 'public, max-age=3600, s-maxage=86400');
+        return response;
+      }
+
+      // Sitemap: photos with image metadata
+      if (path === 'sitemaps/photos.xml') {
+        const { getPublicPhotosForSitemap } = await import('./lib/db');
+        const photos = await getPublicPhotosForSitemap(5000);
+        
+        let xml = '<?xml version="1.0" encoding="UTF-8"?>\n';
+        // Use Google's image namespace for Google Images compatibility
+        xml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n';
+        
+        for (const p of photos) {
+          // Clean title for image caption
+          let title = p.title || p.gallery_name || 'Costa Rica Photography';
+          title = title.replace(/</g, '&lt;').replace(/>/g, '&gt;');
+          
+          // Use large_url for image indexing
+          const imgUrl = p.large_url || p.medium_url || p.small_url || '';
+          
+          if (imgUrl) {
+            xml += `  <url><loc>https://wildphotography.com/photo/${p.slug}</loc><lastmod>${p.date_uploaded || '2026-01-01'}</lastmod><changefreq>monthly</changefreq><priority>0.6</priority>`;
+            xml += `\n    <image:image><image:loc>${imgUrl}</image:loc><image:title>${title}</image:title></image:image>`;
+            xml += '\n  </url>\n';
+          }
+        }
+        
+        xml += '</urlset>';
+        
+        const response = new Response(xml, { headers: { 'Content-Type': 'application/xml' } });
+        response.headers.set('Cache-Control', 'public, max-age=3600, s-maxage=86400');
+        return response;
+      }
+      
+      if (path === 'robots.txt') {
+        const robots = `User-agent: *
+Allow: /
+Sitemap: https://wildphotography.com/sitemap.xml
+Disallow: /api/
+`;
+        return new Response(robots, { headers: { 'Content-Type': 'text/plain' } });
+      }
+
       if (routes[path]) {
         return routes[path](env, url);
       }
@@ -388,6 +598,49 @@ export default {
         if (path.startsWith('photo/')) {
           const slug = path.replace('photo/', '').replace(/\/$/, '');
           return await renderPhoto(slug, env, url);
+        }
+
+        if (path === 'article') {
+          return await renderArticleIndex(env, url);
+        }
+
+        if (path.startsWith('article/')) {
+          const slug = path.replace('article/', '').replace(/\/$/, '');
+          return await renderArticle(slug, env, url);
+        }
+
+        if (path.startsWith('species/')) {
+          const speciesSlug = path.replace('species/', '').replace(/\/$/, '');
+          return await renderSpecies(speciesSlug, env, url);
+        }
+
+        if (path === 'species') {
+          return await renderSpeciesIndex(env, url);
+        }
+
+        if (path === 'region') {
+          return await renderRegionIndex(env, url);
+        }
+
+        if (path.startsWith('region/')) {
+          const regionSlug = path.replace('region/', '').replace(/\/$/, '');
+          return await renderRegion(regionSlug, env, url);
+        }
+
+        // API: region data
+        if (path === 'api/regions') {
+          const { getRegionApi } = await import('./pages/region');
+          return await getRegionApi('all', env);
+        }
+        if (path.startsWith('api/region/')) {
+          const regionSlug = path.replace('api/region/', '').replace(/\/$/, '');
+          const { getRegionApi } = await import('./pages/region');
+          return await getRegionApi(regionSlug, env);
+        }
+        if (path.startsWith('api/location/')) {
+          const locationSlug = path.replace('api/location/', '').replace(/\/$/, '');
+          const { getLocationApi } = await import('./pages/region');
+          return await getLocationApi(locationSlug, env);
         }
       } catch (e) {
         console.error('[worker] Dynamic route error:', e);

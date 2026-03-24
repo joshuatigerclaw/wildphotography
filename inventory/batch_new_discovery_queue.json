@@ -1,0 +1,28 @@
+[
+  {
+    "id": "ext_Best-of-Costa-Rica_d74b0f9ed0bce6f2",
+    "type": "photo",
+    "source_path": "/Volumes/ADATA SC740/Smugmug Backup/Galleries/Costa-Rica-Gallery/Best-of-Costa-Rica/._CL0A0992.jpg",
+    "gallery_folder": "Costa-Rica-Gallery/Best-of-Costa-Rica",
+    "filename": "._CL0A0992.jpg",
+    "content_hash": "d74b0f9ed0bce6f2d64e6c33005f395674e302a7817ca50a18ce5a6bf4de2123",
+    "size": 4096,
+    "approved": true,
+    "priority": 50,
+    "attempt_count": 0,
+    "status": "pending"
+  },
+  {
+    "id": "ext_Best-of-Costa-Rica_7c7574823e9059f4",
+    "type": "photo",
+    "source_path": "/Volumes/ADATA SC740/Smugmug Backup/Galleries/Costa-Rica-Gallery/Best-of-Costa-Rica/._CL0A1100.jpg",
+    "gallery_folder": "Costa-Rica-Gallery/Best-of-Costa-Rica",
+    "filename": "._CL0A1100.jpg",
+    "content_hash": "7c7574823e9059f400e5b63601ed9480865bf1eaaf95c166e95480a26871f6a4",
+    "size": 4096,
+    "approved": true,
+    "priority": 50,
+    "attempt_count": 0,
+    "status": "pending"
+  }
+]

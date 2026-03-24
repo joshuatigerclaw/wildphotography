@@ -1,0 +1,661 @@
+{
+  "batch_id": "repair_20260322_104058",
+  "jobs_processed": 25,
+  "repairs_completed": 125,
+  "failures": 0,
+  "items_requiring_approval": 25,
+  "approval_items": [
+    {
+      "type": "derivative_regeneration",
+      "reason": "Original exists but derivatives missing for photo 1961",
+      "original_path": "originals/1961/CL0A3113.jpg"
+    },
+    {
+      "type": "derivative_regeneration",
+      "reason": "Original exists but derivatives missing for photo 1962",
+      "original_path": "originals/1962/CL0A3135.jpg"
+    },
+    {
+      "type": "derivative_regeneration",
+      "reason": "Original exists but derivatives missing for photo 1964",
+      "original_path": "originals/1964/CL0A3138.jpg"
+    },
+    {
+      "type": "derivative_regeneration",
+      "reason": "Original exists but derivatives missing for photo 1965",
+      "original_path": "originals/1965/CL0A3156.jpg"
+    },
+    {
+      "type": "derivative_regeneration",
+      "reason": "Original exists but derivatives missing for photo 1967",
+      "original_path": "originals/1967/CL0A3195.jpg"
+    },
+    {
+      "type": "derivative_regeneration",
+      "reason": "Original exists but derivatives missing for photo 1968",
+      "original_path": "originals/1968/CL0A3257.jpg"
+    },
+    {
+      "type": "derivative_regeneration",
+      "reason": "Original exists but derivatives missing for photo 1970",
+      "original_path": "originals/1970/CL0A3260.jpg"
+    },
+    {
+      "type": "derivative_regeneration",
+      "reason": "Original exists but derivatives missing for photo 1971",
+      "original_path": "originals/1971/CL0A3274.jpg"
+    },
+    {
+      "type": "derivative_regeneration",
+      "reason": "Original exists but derivatives missing for photo 1974",
+      "original_path": "originals/1974/CL0A3337.jpg"
+    },
+    {
+      "type": "derivative_regeneration",
+      "reason": "Original exists but derivatives missing for photo 1977",
+      "original_path": "originals/1977/CL0A3366.jpg"
+    },
+    {
+      "type": "derivative_regeneration",
+      "reason": "Original exists but derivatives missing for photo 1980",
+      "original_path": "originals/1980/CL0A3378.jpg"
+    },
+    {
+      "type": "derivative_regeneration",
+      "reason": "Original exists but derivatives missing for photo 1981",
+      "original_path": "originals/1981/CL0A3383.jpg"
+    },
+    {
+      "type": "derivative_regeneration",
+      "reason": "Original exists but derivatives missing for photo 1984",
+      "original_path": "originals/1984/CL0A3403.jpg"
+    },
+    {
+      "type": "derivative_regeneration",
+      "reason": "Original exists but derivatives missing for photo 1986",
+      "original_path": "originals/1986/CL0A3415.jpg"
+    },
+    {
+      "type": "derivative_regeneration",
+      "reason": "Original exists but derivatives missing for photo 1989",
+      "original_path": "originals/1989/CL0A3443.JPG"
+    },
+    {
+      "type": "derivative_regeneration",
+      "reason": "Original exists but derivatives missing for photo 1992",
+      "original_path": "originals/1992/CL0A3484.jpg"
+    },
+    {
+      "type": "derivative_regeneration",
+      "reason": "Original exists but derivatives missing for photo 1993",
+      "original_path": "originals/1993/CL0A3487.jpg"
+    },
+    {
+      "type": "derivative_regeneration",
+      "reason": "Original exists but derivatives missing for photo 1995",
+      "original_path": "originals/1995/CL0A3496.jpg"
+    },
+    {
+      "type": "derivative_regeneration",
+      "reason": "Original exists but derivatives missing for photo 1996",
+      "original_path": "originals/1996/CL0A3512.jpg"
+    },
+    {
+      "type": "derivative_regeneration",
+      "reason": "Original exists but derivatives missing for photo 2002",
+      "original_path": "originals/2002/CL0A3616.jpg"
+    },
+    {
+      "type": "derivative_regeneration",
+      "reason": "Original exists but derivatives missing for photo 2003",
+      "original_path": "originals/2003/CL0A3637.jpg"
+    },
+    {
+      "type": "derivative_regeneration",
+      "reason": "Original exists but derivatives missing for photo 2005",
+      "original_path": "originals/2005/CL0A3674.jpg"
+    },
+    {
+      "type": "derivative_regeneration",
+      "reason": "Original exists but derivatives missing for photo 2006",
+      "original_path": "originals/2006/CL0A3678.jpg"
+    },
+    {
+      "type": "derivative_regeneration",
+      "reason": "Original exists but derivatives missing for photo 2009",
+      "original_path": "originals/2009/CL0A3737.jpg"
+    },
+    {
+      "type": "derivative_regeneration",
+      "reason": "Original exists but derivatives missing for photo 1959",
+      "original_path": "originals/1959/CL0A3079.jpg"
+    }
+  ],
+  "results": [
+    {
+      "queue_id": 13657,
+      "photo_id": 1961,
+      "slug": "2018-03-28-09-41-20-beaches-1111",
+      "repairs": [
+        "original_r2: exists (1 files)",
+        "derivatives_r2: missing (0 files)",
+        "db_r2_mismatch: missing keys ['r2_original_key']",
+        "auto_repaired_db_keys: ['r2_original_key']",
+        "derivatives_missing: needs regeneration"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "derivative_regeneration",
+          "reason": "Original exists but derivatives missing for photo 1961",
+          "original_path": "originals/1961/CL0A3113.jpg"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 13658,
+      "photo_id": 1962,
+      "slug": "dji-0319-1324",
+      "repairs": [
+        "original_r2: exists (1 files)",
+        "derivatives_r2: missing (0 files)",
+        "db_r2_mismatch: missing keys ['r2_original_key']",
+        "auto_repaired_db_keys: ['r2_original_key']",
+        "derivatives_missing: needs regeneration"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "derivative_regeneration",
+          "reason": "Original exists but derivatives missing for photo 1962",
+          "original_path": "originals/1962/CL0A3135.jpg"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 13659,
+      "photo_id": 1964,
+      "slug": "2018-03-29-18-22-12-beaches-1112",
+      "repairs": [
+        "original_r2: exists (1 files)",
+        "derivatives_r2: missing (0 files)",
+        "db_r2_mismatch: missing keys ['r2_original_key']",
+        "auto_repaired_db_keys: ['r2_original_key']",
+        "derivatives_missing: needs regeneration"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "derivative_regeneration",
+          "reason": "Original exists but derivatives missing for photo 1964",
+          "original_path": "originals/1964/CL0A3138.jpg"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 13660,
+      "photo_id": 1965,
+      "slug": "dji-0323-1325",
+      "repairs": [
+        "original_r2: exists (1 files)",
+        "derivatives_r2: missing (0 files)",
+        "db_r2_mismatch: missing keys ['r2_original_key']",
+        "auto_repaired_db_keys: ['r2_original_key']",
+        "derivatives_missing: needs regeneration"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "derivative_regeneration",
+          "reason": "Original exists but derivatives missing for photo 1965",
+          "original_path": "originals/1965/CL0A3156.jpg"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 13661,
+      "photo_id": 1967,
+      "slug": "2018-06-23-12-27-31-beaches-1113",
+      "repairs": [
+        "original_r2: exists (1 files)",
+        "derivatives_r2: missing (0 files)",
+        "db_r2_mismatch: missing keys ['r2_original_key']",
+        "auto_repaired_db_keys: ['r2_original_key']",
+        "derivatives_missing: needs regeneration"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "derivative_regeneration",
+          "reason": "Original exists but derivatives missing for photo 1967",
+          "original_path": "originals/1967/CL0A3195.jpg"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 13662,
+      "photo_id": 1968,
+      "slug": "dji-0324-1326",
+      "repairs": [
+        "original_r2: exists (1 files)",
+        "derivatives_r2: missing (0 files)",
+        "db_r2_mismatch: missing keys ['r2_original_key']",
+        "auto_repaired_db_keys: ['r2_original_key']",
+        "derivatives_missing: needs regeneration"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "derivative_regeneration",
+          "reason": "Original exists but derivatives missing for photo 1968",
+          "original_path": "originals/1968/CL0A3257.jpg"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 13663,
+      "photo_id": 1970,
+      "slug": "2018-08-03-12-49-23-beaches-1114",
+      "repairs": [
+        "original_r2: exists (1 files)",
+        "derivatives_r2: missing (0 files)",
+        "db_r2_mismatch: missing keys ['r2_original_key']",
+        "auto_repaired_db_keys: ['r2_original_key']",
+        "derivatives_missing: needs regeneration"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "derivative_regeneration",
+          "reason": "Original exists but derivatives missing for photo 1970",
+          "original_path": "originals/1970/CL0A3260.jpg"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 13664,
+      "photo_id": 1971,
+      "slug": "dji-0326-1327",
+      "repairs": [
+        "original_r2: exists (1 files)",
+        "derivatives_r2: missing (0 files)",
+        "db_r2_mismatch: missing keys ['r2_original_key']",
+        "auto_repaired_db_keys: ['r2_original_key']",
+        "derivatives_missing: needs regeneration"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "derivative_regeneration",
+          "reason": "Original exists but derivatives missing for photo 1971",
+          "original_path": "originals/1971/CL0A3274.jpg"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 13665,
+      "photo_id": 1974,
+      "slug": "dji-0328-1328",
+      "repairs": [
+        "original_r2: exists (1 files)",
+        "derivatives_r2: missing (0 files)",
+        "db_r2_mismatch: missing keys ['r2_original_key']",
+        "auto_repaired_db_keys: ['r2_original_key']",
+        "derivatives_missing: needs regeneration"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "derivative_regeneration",
+          "reason": "Original exists but derivatives missing for photo 1974",
+          "original_path": "originals/1974/CL0A3337.jpg"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 13666,
+      "photo_id": 1977,
+      "slug": "dji-0329-2-1329",
+      "repairs": [
+        "original_r2: exists (1 files)",
+        "derivatives_r2: missing (0 files)",
+        "db_r2_mismatch: missing keys ['r2_original_key']",
+        "auto_repaired_db_keys: ['r2_original_key']",
+        "derivatives_missing: needs regeneration"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "derivative_regeneration",
+          "reason": "Original exists but derivatives missing for photo 1977",
+          "original_path": "originals/1977/CL0A3366.jpg"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 13667,
+      "photo_id": 1980,
+      "slug": "2018-12-29-16-40-38-beaches-1118",
+      "repairs": [
+        "original_r2: exists (1 files)",
+        "derivatives_r2: missing (0 files)",
+        "db_r2_mismatch: missing keys ['r2_original_key']",
+        "auto_repaired_db_keys: ['r2_original_key']",
+        "derivatives_missing: needs regeneration"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "derivative_regeneration",
+          "reason": "Original exists but derivatives missing for photo 1980",
+          "original_path": "originals/1980/CL0A3378.jpg"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 13668,
+      "photo_id": 1981,
+      "slug": "dji-0333-1330",
+      "repairs": [
+        "original_r2: exists (1 files)",
+        "derivatives_r2: missing (0 files)",
+        "db_r2_mismatch: missing keys ['r2_original_key']",
+        "auto_repaired_db_keys: ['r2_original_key']",
+        "derivatives_missing: needs regeneration"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "derivative_regeneration",
+          "reason": "Original exists but derivatives missing for photo 1981",
+          "original_path": "originals/1981/CL0A3383.jpg"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 13669,
+      "photo_id": 1984,
+      "slug": "dji-0337-1331",
+      "repairs": [
+        "original_r2: exists (1 files)",
+        "derivatives_r2: missing (0 files)",
+        "db_r2_mismatch: missing keys ['r2_original_key']",
+        "auto_repaired_db_keys: ['r2_original_key']",
+        "derivatives_missing: needs regeneration"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "derivative_regeneration",
+          "reason": "Original exists but derivatives missing for photo 1984",
+          "original_path": "originals/1984/CL0A3403.jpg"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 13670,
+      "photo_id": 1986,
+      "slug": "2019-04-14-14-50-28-beaches-1120",
+      "repairs": [
+        "original_r2: exists (1 files)",
+        "derivatives_r2: missing (0 files)",
+        "db_r2_mismatch: missing keys ['r2_original_key']",
+        "auto_repaired_db_keys: ['r2_original_key']",
+        "derivatives_missing: needs regeneration"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "derivative_regeneration",
+          "reason": "Original exists but derivatives missing for photo 1986",
+          "original_path": "originals/1986/CL0A3415.jpg"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 13671,
+      "photo_id": 1989,
+      "slug": "2019-04-14-15-09-23-beaches-1121",
+      "repairs": [
+        "original_r2: exists (1 files)",
+        "derivatives_r2: missing (0 files)",
+        "db_r2_mismatch: missing keys ['r2_original_key']",
+        "auto_repaired_db_keys: ['r2_original_key']",
+        "derivatives_missing: needs regeneration"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "derivative_regeneration",
+          "reason": "Original exists but derivatives missing for photo 1989",
+          "original_path": "originals/1989/CL0A3443.JPG"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 13672,
+      "photo_id": 1992,
+      "slug": "2019-04-16-10-32-59-beaches-1122",
+      "repairs": [
+        "original_r2: exists (1 files)",
+        "derivatives_r2: missing (0 files)",
+        "db_r2_mismatch: missing keys ['r2_original_key']",
+        "auto_repaired_db_keys: ['r2_original_key']",
+        "derivatives_missing: needs regeneration"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "derivative_regeneration",
+          "reason": "Original exists but derivatives missing for photo 1992",
+          "original_path": "originals/1992/CL0A3484.jpg"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 13673,
+      "photo_id": 1993,
+      "slug": "dji-0345-1334",
+      "repairs": [
+        "original_r2: exists (1 files)",
+        "derivatives_r2: missing (0 files)",
+        "db_r2_mismatch: missing keys ['r2_original_key']",
+        "auto_repaired_db_keys: ['r2_original_key']",
+        "derivatives_missing: needs regeneration"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "derivative_regeneration",
+          "reason": "Original exists but derivatives missing for photo 1993",
+          "original_path": "originals/1993/CL0A3487.jpg"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 13674,
+      "photo_id": 1995,
+      "slug": "2019-04-16-10-33-03-beaches-1123",
+      "repairs": [
+        "original_r2: exists (1 files)",
+        "derivatives_r2: missing (0 files)",
+        "db_r2_mismatch: missing keys ['r2_original_key']",
+        "auto_repaired_db_keys: ['r2_original_key']",
+        "derivatives_missing: needs regeneration"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "derivative_regeneration",
+          "reason": "Original exists but derivatives missing for photo 1995",
+          "original_path": "originals/1995/CL0A3496.jpg"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 13675,
+      "photo_id": 1996,
+      "slug": "dji-0351-1335",
+      "repairs": [
+        "original_r2: exists (1 files)",
+        "derivatives_r2: missing (0 files)",
+        "db_r2_mismatch: missing keys ['r2_original_key']",
+        "auto_repaired_db_keys: ['r2_original_key']",
+        "derivatives_missing: needs regeneration"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "derivative_regeneration",
+          "reason": "Original exists but derivatives missing for photo 1996",
+          "original_path": "originals/1996/CL0A3512.jpg"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 13676,
+      "photo_id": 2002,
+      "slug": "2019-11-27-13-04-19-beaches-1126",
+      "repairs": [
+        "original_r2: exists (1 files)",
+        "derivatives_r2: missing (0 files)",
+        "db_r2_mismatch: missing keys ['r2_original_key']",
+        "auto_repaired_db_keys: ['r2_original_key']",
+        "derivatives_missing: needs regeneration"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "derivative_regeneration",
+          "reason": "Original exists but derivatives missing for photo 2002",
+          "original_path": "originals/2002/CL0A3616.jpg"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 13677,
+      "photo_id": 2003,
+      "slug": "dji-0356-1337",
+      "repairs": [
+        "original_r2: exists (1 files)",
+        "derivatives_r2: missing (0 files)",
+        "db_r2_mismatch: missing keys ['r2_original_key']",
+        "auto_repaired_db_keys: ['r2_original_key']",
+        "derivatives_missing: needs regeneration"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "derivative_regeneration",
+          "reason": "Original exists but derivatives missing for photo 2003",
+          "original_path": "originals/2003/CL0A3637.jpg"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 13678,
+      "photo_id": 2005,
+      "slug": "2019-12-26-13-02-42-beaches-1127",
+      "repairs": [
+        "original_r2: exists (1 files)",
+        "derivatives_r2: missing (0 files)",
+        "db_r2_mismatch: missing keys ['r2_original_key']",
+        "auto_repaired_db_keys: ['r2_original_key']",
+        "derivatives_missing: needs regeneration"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "derivative_regeneration",
+          "reason": "Original exists but derivatives missing for photo 2005",
+          "original_path": "originals/2005/CL0A3674.jpg"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 13679,
+      "photo_id": 2006,
+      "slug": "dji-0358-1338",
+      "repairs": [
+        "original_r2: exists (1 files)",
+        "derivatives_r2: missing (0 files)",
+        "db_r2_mismatch: missing keys ['r2_original_key']",
+        "auto_repaired_db_keys: ['r2_original_key']",
+        "derivatives_missing: needs regeneration"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "derivative_regeneration",
+          "reason": "Original exists but derivatives missing for photo 2006",
+          "original_path": "originals/2006/CL0A3678.jpg"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 13680,
+      "photo_id": 2009,
+      "slug": "dji-0361-1339",
+      "repairs": [
+        "original_r2: exists (1 files)",
+        "derivatives_r2: missing (0 files)",
+        "db_r2_mismatch: missing keys ['r2_original_key']",
+        "auto_repaired_db_keys: ['r2_original_key']",
+        "derivatives_missing: needs regeneration"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "derivative_regeneration",
+          "reason": "Original exists but derivatives missing for photo 2009",
+          "original_path": "originals/2009/CL0A3737.jpg"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 13656,
+      "photo_id": 1959,
+      "slug": "dji-0315-1323",
+      "repairs": [
+        "original_r2: exists (1 files)",
+        "derivatives_r2: missing (0 files)",
+        "db_r2_mismatch: missing keys ['r2_original_key']",
+        "auto_repaired_db_keys: ['r2_original_key']",
+        "derivatives_missing: needs regeneration"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "derivative_regeneration",
+          "reason": "Original exists but derivatives missing for photo 1959",
+          "original_path": "originals/1959/CL0A3079.jpg"
+        }
+      ],
+      "status": "completed"
+    }
+  ]
+}

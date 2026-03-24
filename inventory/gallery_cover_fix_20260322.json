@@ -1,0 +1,31 @@
+{
+  "galleries_checked": 3,
+  "covers_assigned": [],
+  "failures": [
+    {
+      "gallery_id": 17,
+      "gallery_name": "Bajos Del Toro Costa Rica",
+      "gallery_slug": "bajos-del-toro-costa-rica",
+      "reason": "No photos exist in this gallery (0 total). Cannot assign a cover.",
+      "photos_in_gallery": 0,
+      "eligible_photos": 0
+    },
+    {
+      "gallery_id": 8,
+      "gallery_name": "Rainforests",
+      "gallery_slug": "rainforests",
+      "reason": "2 photos exist but none are eligible (ready_for_public_render=false, derivatives_complete=false). Photos: id=34 (cloud-forest-mist), id=35 (rainforest-waterfall).",
+      "photos_in_gallery": 2,
+      "eligible_photos": 0
+    },
+    {
+      "gallery_id": 101,
+      "gallery_name": "Test Gallery",
+      "gallery_slug": "test-gallery",
+      "reason": "1 photo exists (id=14774, test-photo-validation) but not eligible (ready_for_public_render=false, derivatives_complete=false). Cannot assign as cover.",
+      "photos_in_gallery": 1,
+      "eligible_photos": 0
+    }
+  ],
+  "summary": "All 3 galleries lack eligible photos for cover assignment. 18,217 eligible photos exist in the database but none belong to these galleries. Recommend: (1) Mark legacy photos in rainforests/test-gallery as eligible if derivatives exist in R2, or (2) Queue gallery 17 (Bajos Del Toro) for manual review since it has no photos at all."
+}

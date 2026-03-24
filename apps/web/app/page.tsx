@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { getGalleries, getAllPhotos, getRandomPhotos, getPopularPhotos } from '@/lib/db';
+import { getGalleries, getAllPhotos, getRandomPhotos, getPopularPhotos, getAllArticles } from '@/lib/db';
 import VirtualizedGallery from '@/components/VirtualizedGallery';
 
 export const dynamic = 'force-dynamic';
@@ -31,10 +31,14 @@ export const metadata: Metadata = {
 };
 
 export default async function Home() {
-  const galleries = await getGalleries();
-  const recentPhotos = await getAllPhotos(8);
-  const randomPhotos = await getRandomPhotos(12);
-  const popularPhotos = await getPopularPhotos(8);
+  const [galleries, recentPhotos, randomPhotos, popularPhotos, articles] = await Promise.all([
+    getGalleries(),
+    getAllPhotos(8),
+    getRandomPhotos(12),
+    getPopularPhotos(8),
+    getAllArticles(),
+  ]);
+  const featuredArticles = articles.slice(0, 3);
 
   return (
     <div className="container mx-auto px-4 py-8">
@@ -94,7 +98,7 @@ export default async function Home() {
               href="/search" 
               className="text-blue-600 hover:underline font-medium"
             >
-              View all →
+              View all &rarr;
             </Link>
           </div>
           <VirtualizedGallery 
@@ -119,7 +123,7 @@ export default async function Home() {
               href="/search" 
               className="text-blue-600 hover:underline font-medium"
             >
-              Explore more →
+              Explore more &rarr;
             </Link>
           </div>
           <VirtualizedGallery 
@@ -136,16 +140,16 @@ export default async function Home() {
       <section className="py-10">
         <div className="flex justify-between items-center mb-6">
           <h2 className="text-3xl font-bold">📁 Featured Galleries</h2>
-          <Link 
-            href="/galleries" 
+          <Link
+            href="/galleries"
             className="text-blue-600 hover:underline font-medium"
           >
-            View all →
+            View all &rarr;
           </Link>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {galleries.map((gallery) => (
-            <Link 
+            <Link
               key={gallery.id}
               href={`/gallery/${gallery.slug}`}
               className="group block"
@@ -179,6 +183,61 @@ export default async function Home() {
           ))}
         </div>
       </section>
+
+      {/* Featured Articles */}
+      {featuredArticles.length > 0 && (
+        <section className="py-10 bg-gradient-to-b from-gray-50 to-white rounded-2xl px-4 -mx-4">
+          <div className="flex justify-between items-center mb-6">
+            <div>
+              <h2 className="text-3xl font-bold">📝 Featured Articles</h2>
+              <p className="text-gray-500 mt-1">Photography guides, species profiles & travel tips</p>
+            </div>
+            <Link
+              href="/article"
+              className="text-blue-600 hover:underline font-medium"
+            >
+              View all &rarr;
+            </Link>
+          </div>
+          <div className="grid md:grid-cols-3 gap-6">
+            {featuredArticles.map(article => (
+              <Link
+                key={article.id}
+                href={`/article/${article.slug}`}
+                className="group block bg-white rounded-xl border border-gray-200 overflow-hidden hover:shadow-lg hover:border-blue-200 transition-all duration-300"
+              >
+                <div className="aspect-[16/9] bg-gray-100 overflow-hidden">
+                  {article.smallUrl || article.mediumUrl ? (
+                    <img
+                      src={article.smallUrl || article.mediumUrl!}
+                      alt={article.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      loading="lazy"
+                    />
+                  ) : (
+                    <div className="w-full h-full bg-gradient-to-br from-blue-50 to-green-50 flex items-center justify-center">
+                      <span className="text-3xl">📷</span>
+                    </div>
+                  )}
+                </div>
+                <div className="p-4">
+                  <p className="text-xs font-semibold text-blue-600 uppercase tracking-wide mb-1">
+                    {article.articleType?.replace('_', ' ')}
+                  </p>
+                  <h3 className="font-bold text-gray-900 group-hover:text-blue-600 transition-colors leading-snug mb-2">
+                    {article.title}
+                  </h3>
+                  {article.excerpt && (
+                    <p className="text-gray-500 text-sm line-clamp-2">
+                      {article.excerpt}
+                    </p>
+                  )}
+                </div>
+              </Link>
+            ))}
+          </div>
+        </section>
+      )}
 
       {/* About Section */}
       <section className="py-10 text-center">

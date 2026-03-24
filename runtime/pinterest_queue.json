@@ -1,0 +1,28 @@
+{
+  "meta": {
+    "description": "WildPhotography Pinterest pin queue",
+    "version": "1.0",
+    "account": "NaturalCostaRica",
+    "daily_target": 20,
+    "post_window": "08:00–17:00 America/Costa_Rica",
+    "interval_minutes": "20–40",
+    "last_updated": "2026-03-24T10:18:45Z"
+  },
+  "boards": [
+    "Costa Rica Beaches",
+    "Costa Rica Wildlife",
+    "Costa Rica Photography",
+    "Arenal Volcano Costa Rica",
+    "Manuel Antonio Costa Rica",
+    "Monteverde Costa Rica",
+    "Guanacaste Costa Rica",
+    "Tortuguero Costa Rica",
+    "Osa Peninsula Costa Rica",
+    "Best Beaches in Costa Rica",
+    "Costa Rica Travel Guide",
+    "Wildlife in Costa Rica",
+    "Tropical Destinations",
+    "Costa Rica Travel"
+  ],
+  "queue": []
+}

@@ -1,0 +1,68 @@
+[
+  {
+    "filename": "2020-10-10 07.46.37.jpg",
+    "folder": "Birds",
+    "species": "Resplendent Quetzal",
+    "scientific": "Pharomachrus mocinno",
+    "family": "Trogonidae",
+    "confidence": 0.95,
+    "is_quetzal": true,
+    "hash": "b00f275da2f5d8fbe0cefe8f3358e0f6a08369fd8d44970612f41e1d9d63a19b",
+    "fullPath": "/Volumes/ADATA SC740/Smugmug Backup/Galleries/Costa-Rica-Gallery/Birds/2020-10-10 07.46.37.jpg"
+  },
+  {
+    "filename": "2020-10-10 07.46.40.jpg",
+    "folder": "Birds",
+    "species": "Resplendent Quetzal",
+    "scientific": "Pharomachrus mocinno",
+    "family": "Trogonidae",
+    "confidence": 0.95,
+    "is_quetzal": true,
+    "hash": "55870186eb14431656ecbd938b0c50733a5452187e6ae8aa8007f6e506d37740",
+    "fullPath": "/Volumes/ADATA SC740/Smugmug Backup/Galleries/Costa-Rica-Gallery/Birds/2020-10-10 07.46.40.jpg"
+  },
+  {
+    "filename": "20250421_074316.jpg",
+    "folder": "Birds",
+    "species": "Resplendent Quetzal",
+    "scientific": "Pharomachrus mocinno",
+    "family": "Trogonidae",
+    "confidence": 0.75,
+    "is_quetzal": true,
+    "hash": "992236fb0c445a4a3257dead760d831310179550ddf2602db7216adeb11bd0b8",
+    "fullPath": "/Volumes/ADATA SC740/Smugmug Backup/Galleries/Costa-Rica-Gallery/Birds/20250421_074316.jpg"
+  },
+  {
+    "filename": "CL0A0992.JPG",
+    "folder": "Birds",
+    "species": "Resplendent Quetzal",
+    "scientific": "Pharomachrus mocinno",
+    "family": "Trogonidae",
+    "confidence": 0.95,
+    "is_quetzal": true,
+    "hash": "ef9f96be8a159ae2e0101cfe04c6a247cd184dcc435ec7208d54e84d79296fb1",
+    "fullPath": "/Volumes/ADATA SC740/Smugmug Backup/Galleries/Costa-Rica-Gallery/Birds/CL0A0992.JPG"
+  },
+  {
+    "filename": "CL0A1100.JPG",
+    "folder": "Birds",
+    "species": "Resplendent Quetzal",
+    "scientific": "Pharomachrus mocinno",
+    "family": "Trogonidae",
+    "confidence": 0.95,
+    "is_quetzal": true,
+    "hash": "01c217571b8c1c242ebabe07e4f1ffa00cb7b5b85dc3ac90cb6bb34b026a4dc6",
+    "fullPath": "/Volumes/ADATA SC740/Smugmug Backup/Galleries/Costa-Rica-Gallery/Birds/CL0A1100.JPG"
+  },
+  {
+    "filename": "CL0A1162.jpg",
+    "folder": "Birds",
+    "species": "Resplendent Quetzal",
+    "scientific": "Pharomachrus mocinno",
+    "family": "Trogonidae",
+    "confidence": 0.95,
+    "is_quetzal": true,
+    "hash": "96f258ddad2db6b0c2bab7ddb40d8adabc2d93035fabd9af7932329a6d46205d",
+    "fullPath": "/Volumes/ADATA SC740/Smugmug Backup/Galleries/Costa-Rica-Gallery/Birds/CL0A1162.jpg"
+  }
+]

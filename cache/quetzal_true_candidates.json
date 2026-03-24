@@ -1,0 +1,582 @@
+[
+  {
+    "file": "IMG_6540-001.JPG",
+    "folder": "Birds",
+    "response": "There is no bird visible in the image.\n\nAnswer: NO, confidence 1."
+  },
+  {
+    "file": "IMG_8458.JPG",
+    "folder": "Birds",
+    "response": "NO, confidence 0.0"
+  },
+  {
+    "file": "IMG_7190.jpg",
+    "folder": "Birds",
+    "response": "NO, 1.0"
+  },
+  {
+    "file": "IMG_7447.JPG",
+    "folder": "Birds",
+    "response": "NO, 0.0"
+  },
+  {
+    "file": "IMG_7451.JPG",
+    "folder": "Birds",
+    "response": "NO, 1."
+  },
+  {
+    "file": "IMG_1418.JPG",
+    "folder": "Birds",
+    "response": "NO, confidence 0."
+  },
+  {
+    "file": "IMG_2326.JPG",
+    "folder": "Birds",
+    "response": "There is no bird visible in the image.\n\nAnswer: NO, confidence 1."
+  },
+  {
+    "file": "AR_IMG_1724.JPG",
+    "folder": "Birds",
+    "response": "NO, confidence 0.0"
+  },
+  {
+    "file": "IMG_5474.jpg",
+    "folder": "Birds",
+    "response": "NO, confidence 1."
+  },
+  {
+    "file": "IMG_6704.jpg",
+    "folder": "Birds",
+    "response": "NO, 0"
+  },
+  {
+    "file": "IMG_7818.jpg",
+    "folder": "Birds",
+    "response": "NO, confidence 0.0"
+  },
+  {
+    "file": "IMG_4340.jpg",
+    "folder": "Birds",
+    "response": "NO. Confidence: 1"
+  },
+  {
+    "file": "IMG_0712.JPG",
+    "folder": "Birds",
+    "response": "NO. Confidence 0.0"
+  },
+  {
+    "file": "IMG_0495.jpg",
+    "folder": "Birds",
+    "response": "NO, confidence 1."
+  },
+  {
+    "file": "IMG_1015.jpg",
+    "folder": "Birds",
+    "response": "NO, 0"
+  },
+  {
+    "file": "IMG_1025.jpg",
+    "folder": "Birds",
+    "response": "Based on the provided image, it is impossible to determine if it is a Resplendent Quetzal. The image is a solid gray color.\n\nAnswer: NO, confidence 0."
+  },
+  {
+    "file": "CL0A1521.jpg",
+    "folder": "Birds",
+    "response": "NO, confidence 0.0"
+  },
+  {
+    "file": "CL0A1659.JPG",
+    "folder": "Birds",
+    "response": "NO, 0.0"
+  },
+  {
+    "file": "CL0A1660.JPG",
+    "folder": "Birds",
+    "response": "NO, confidence 1.0"
+  },
+  {
+    "file": "CL0A2887.JPG",
+    "folder": "Birds",
+    "response": "NO. Confidence: 1."
+  },
+  {
+    "file": "CL0A0992.JPG",
+    "response": "YES"
+  },
+  {
+    "file": "CL0A1052.JPG",
+    "response": "NO"
+  },
+  {
+    "file": "CL0A1100.JPG",
+    "response": "YES"
+  },
+  {
+    "file": "IMG_8899.jpg",
+    "response": "NO."
+  },
+  {
+    "file": "IMG_8901.jpg",
+    "response": "NO"
+  },
+  {
+    "file": "IMG_5851.jpg",
+    "response": "NO"
+  },
+  {
+    "file": "IMG_6000.jpg",
+    "response": "NO"
+  },
+  {
+    "file": "IMG_5948.JPG",
+    "response": "NO"
+  },
+  {
+    "file": "IMG_8978.jpg",
+    "response": "NO"
+  },
+  {
+    "file": "IMG_9204.jpg",
+    "response": "NO."
+  },
+  {
+    "file": "IMG_0003-001.jpg",
+    "response": "NO"
+  },
+  {
+    "file": "IMG_1236.JPG",
+    "response": "NO."
+  },
+  {
+    "file": "IMG_4270.JPG",
+    "response": "NO"
+  },
+  {
+    "file": "IMG_0237.JPG",
+    "response": "NO."
+  },
+  {
+    "file": "IMG_4276.jpg",
+    "response": "NO"
+  },
+  {
+    "file": "IMG_4279.jpg",
+    "response": "NO"
+  },
+  {
+    "file": "IMG_4295.jpg",
+    "response": "NO"
+  },
+  {
+    "file": "IMG_3080.jpg",
+    "response": "NO"
+  },
+  {
+    "file": "IMG_4465.jpg",
+    "response": "NO"
+  },
+  {
+    "file": "IMG_4623.jpg",
+    "response": "NO"
+  },
+  {
+    "file": "IMG_4549.jpg",
+    "response": "NO"
+  },
+  {
+    "file": "IMG_4441.jpg",
+    "response": "NO"
+  },
+  {
+    "file": "IMG_4716.jpg",
+    "response": "NO"
+  },
+  {
+    "file": "IMG_4747.jpg",
+    "response": "NO"
+  },
+  {
+    "file": "IMG_4808.jpg",
+    "response": "NO"
+  },
+  {
+    "file": "IMG_4980.jpg",
+    "response": "NO"
+  },
+  {
+    "file": "IMG_5021.jpg",
+    "response": "NO"
+  },
+  {
+    "file": "IMG_5146.jpg",
+    "response": "NO"
+  },
+  {
+    "file": "IMG_5165.jpg",
+    "response": "NO"
+  },
+  {
+    "file": "IMG_5103.jpg",
+    "response": "YES"
+  },
+  {
+    "file": "IMG_3370.jpg",
+    "response": "NO"
+  },
+  {
+    "file": "IMG_8851.jpg",
+    "response": "NO"
+  },
+  {
+    "file": "IMG_9122-2.jpg",
+    "response": "NO"
+  },
+  {
+    "file": "IMG_1544.jpg",
+    "response": "NO"
+  },
+  {
+    "file": "IMG_1538.jpg",
+    "response": "NO"
+  },
+  {
+    "file": "IMG_1737.jpg",
+    "response": "YES"
+  },
+  {
+    "file": "IMG_1529.jpg",
+    "response": "NO"
+  },
+  {
+    "file": "IMG_1579.jpg",
+    "response": "NO"
+  },
+  {
+    "file": "IMG_1600.jpg",
+    "response": "NO"
+  },
+  {
+    "file": "IMG_1644.jpg",
+    "response": "NO"
+  },
+  {
+    "file": "IMG_1880.jpg",
+    "response": "NO"
+  },
+  {
+    "file": "IMG_1698.jpg",
+    "response": "NO"
+  },
+  {
+    "file": "IMG_3595.jpg",
+    "response": "NO."
+  },
+  {
+    "file": "IMG_3615.jpg",
+    "response": "NO"
+  },
+  {
+    "file": "tambor_IMG_1069_19.jpg",
+    "response": "NO"
+  },
+  {
+    "file": "IMG_4698.jpg",
+    "response": "NO"
+  },
+  {
+    "file": "IMG_4715.jpg",
+    "response": "NO."
+  },
+  {
+    "file": "IMG_8365.jpg",
+    "response": "NO"
+  },
+  {
+    "file": "IMG_8373.jpg",
+    "response": "NO"
+  },
+  {
+    "file": "IMG_8486.jpg",
+    "response": "NO."
+  },
+  {
+    "file": "DJI_0173.jpg",
+    "response": "NO."
+  },
+  {
+    "file": "DJI_0236.jpg",
+    "response": "NO."
+  },
+  {
+    "file": "IMG_8488.jpg",
+    "response": "NO"
+  },
+  {
+    "file": "IMG_8493.jpg",
+    "response": "NO"
+  },
+  {
+    "file": "DJI_0272.jpg",
+    "response": "NO"
+  },
+  {
+    "file": "DJI_0338.jpg",
+    "response": "NO"
+  },
+  {
+    "file": "DJI_0809-2.jpg",
+    "response": "NO"
+  },
+  {
+    "file": "IMG_8511.jpg",
+    "response": "NO"
+  },
+  {
+    "file": "DJI_0860.jpg",
+    "response": "NO"
+  },
+  {
+    "file": "DJI_0876-2.jpg",
+    "response": "NO"
+  },
+  {
+    "file": "DJI_0146.JPG",
+    "response": "NO"
+  },
+  {
+    "file": "DJI_0159.JPG",
+    "response": "NO"
+  },
+  {
+    "file": "DJI_0310.JPG",
+    "response": "NO."
+  },
+  {
+    "file": "IMG_4318.jpg",
+    "response": "NO"
+  },
+  {
+    "file": "IMG_4321.jpg",
+    "response": "NO"
+  },
+  {
+    "file": "DJI_0940.jpg",
+    "response": "NO"
+  },
+  {
+    "file": "DJI_0614-2.jpg",
+    "response": "NO"
+  },
+  {
+    "file": "PC312563.jpg",
+    "response": "NO"
+  },
+  {
+    "file": "DJI_0629-2.jpg",
+    "response": "NO"
+  },
+  {
+    "file": "PC312587.jpg",
+    "response": "NO."
+  },
+  {
+    "file": "DJI_0936.JPG",
+    "response": "NO"
+  },
+  {
+    "file": "DJI_0032.JPG",
+    "response": "NO"
+  },
+  {
+    "file": "DJI_0093.jpg",
+    "response": "NO"
+  },
+  {
+    "file": "DJI_0099.jpg",
+    "response": "NO"
+  },
+  {
+    "file": "DJI_0117-2.jpg",
+    "response": "NO"
+  },
+  {
+    "file": "DJI_0123.jpg",
+    "response": "NO"
+  },
+  {
+    "file": "DJI_0143-2.jpg",
+    "response": "NO."
+  },
+  {
+    "file": "DJI_0175-2.jpg",
+    "response": "NO"
+  },
+  {
+    "file": "HYPERLAPSE_0259.jpg",
+    "response": "NO"
+  },
+  {
+    "file": "DJI_0190.jpg",
+    "response": "NO"
+  },
+  {
+    "file": "DJI_0194-3.jpg",
+    "response": "NO."
+  },
+  {
+    "file": "DJI_0201.jpg",
+    "response": "NO"
+  },
+  {
+    "file": "DJI_0203.jpg",
+    "response": "NO."
+  },
+  {
+    "file": "IMG_9543.jpg",
+    "response": "NO."
+  },
+  {
+    "file": "IMG_9545.jpg",
+    "response": "NO"
+  },
+  {
+    "file": "DJI_0324.jpg",
+    "response": "NO"
+  },
+  {
+    "file": "DJI_0329-2.jpg",
+    "response": "NO."
+  },
+  {
+    "file": "IMG_0372.jpg",
+    "response": "NO"
+  },
+  {
+    "file": "20070520_2268.jpg",
+    "response": "NO"
+  },
+  {
+    "file": "2016-01-13 14.52.05.jpg",
+    "response": "NO"
+  },
+  {
+    "file": "CL0A5672.jpg",
+    "response": "NO"
+  },
+  {
+    "file": "CL0A6165.jpg",
+    "response": "NO"
+  },
+  {
+    "file": "CL0A6200.jpg",
+    "response": "NO"
+  },
+  {
+    "file": "2021-05-01 10.35.11.jpg",
+    "response": "NO"
+  },
+  {
+    "file": "CL0A7321.JPG",
+    "response": "NO"
+  },
+  {
+    "file": "CL0A7711.JPG",
+    "response": "NO"
+  },
+  {
+    "file": "CL0A7923.JPG",
+    "response": "NO"
+  },
+  {
+    "file": "CL0A8319.JPG",
+    "response": "NO"
+  },
+  {
+    "file": "CL0A8323.JPG",
+    "response": "NO."
+  },
+  {
+    "file": "2023-04-12 11.15.55.jpg",
+    "response": "NO."
+  },
+  {
+    "file": "IMG_3963.jpg",
+    "response": "NO"
+  },
+  {
+    "file": "IMG_4122.jpg",
+    "response": "NO"
+  },
+  {
+    "file": "IMG_5146.jpg",
+    "response": "NO"
+  },
+  {
+    "file": "IMG_0177.JPG",
+    "response": "NO"
+  },
+  {
+    "file": "IMG_5265.jpg",
+    "response": "NO"
+  },
+  {
+    "file": "IMG_4934.jpg",
+    "response": "NO"
+  },
+  {
+    "file": "IMG_5303.jpg",
+    "response": "NO."
+  },
+  {
+    "file": "IMG_5281.jpg",
+    "response": "NO"
+  },
+  {
+    "file": "IMG_5417.jpg",
+    "response": "NO"
+  },
+  {
+    "file": "IMG_5024.jpg",
+    "response": "NO"
+  },
+  {
+    "file": "IMG_5443.jpg",
+    "response": "NO"
+  },
+  {
+    "file": "IMG_5454.jpg",
+    "response": "NO"
+  },
+  {
+    "file": "IMG_5699.jpg",
+    "response": "NO."
+  },
+  {
+    "file": "IMG_5459.jpg",
+    "response": "NO"
+  },
+  {
+    "file": "IMG_7192.JPG",
+    "response": "NO."
+  },
+  {
+    "file": "IMG_7401.JPG",
+    "response": "NO"
+  },
+  {
+    "file": "IMG_7661.JPG",
+    "response": "NO"
+  },
+  {
+    "file": "IMG_7971.JPG",
+    "response": "NO"
+  },
+  {
+    "file": "IMG_2335.jpg",
+    "response": "NO"
+  },
+  {
+    "file": "IMG_2319.jpg",
+    "response": "NO"
+  }
+]

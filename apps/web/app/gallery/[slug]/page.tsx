@@ -36,7 +36,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
         {
           url: ogImage,
           width: 1200,
-          height: 1200,
+          height: 630,
           alt: gallery.name,
         }
       ] : [],
@@ -62,29 +62,61 @@ export default async function GalleryPage({ params }: { params: Promise<{ slug: 
   const { photos, total } = await getPhotosByGallery(slug, 50, 0);
 
   return (
-    <div className="container mx-auto px-4 py-8">
-      <nav className="text-sm mb-6">
-        <Link href="/" className="text-blue-600 hover:underline">Home</Link>
-        <span className="mx-2">/</span>
-        <Link href="/galleries" className="text-blue-600 hover:underline">Galleries</Link>
-        <span className="mx-2">/</span>
-        <span className="text-gray-600">{gallery.name}</span>
+    <div className="container mx-auto px-4 py-6">
+      {/* Breadcrumb */}
+      <nav className="text-sm mb-4" aria-label="Breadcrumb">
+        <ol className="flex items-center gap-2">
+          <li>
+            <Link href="/" className="text-blue-600 hover:underline">Home</Link>
+          </li>
+          <li className="text-gray-400">/</li>
+          <li>
+            <Link href="/galleries" className="text-blue-600 hover:underline">Galleries</Link>
+          </li>
+          <li className="text-gray-400">/</li>
+          <li className="text-gray-600" aria-current="page">{gallery.name}</li>
+        </ol>
       </nav>
       
+      {/* Gallery Header - Premium Editorial Style */}
       <header className="mb-8">
-        <h1 className="text-4xl font-bold mb-2">{gallery.name}</h1>
+        <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
+          {gallery.name}
+        </h1>
+        
         {gallery.description && (
-          <p className="text-gray-600 text-lg">{gallery.description}</p>
+          <p className="text-gray-600 text-lg leading-relaxed max-w-2xl">
+            {gallery.description}
+          </p>
         )}
-        <p className="text-sm text-gray-500 mt-2">
-          {total > 0 ? `${total} photos` : 'No photos'}
-        </p>
+        
+        <div className="flex items-center gap-4 mt-4 text-sm text-gray-500">
+          <span className="font-medium">
+            {total > 0 ? `${total} photo${total !== 1 ? 's' : ''}` : 'No photos'}
+          </span>
+          {gallery.photoCount > 0 && (
+            <>
+              <span>•</span>
+              <span>Costa Rica</span>
+            </>
+          )}
+        </div>
       </header>
       
-      <VirtualizedGallery 
-        photos={photos} 
-        columns={4}
-      />
+      {/* Photo Grid */}
+      {total > 0 ? (
+        <VirtualizedGallery 
+          photos={photos} 
+          columns={4}
+        />
+      ) : (
+        <div className="text-center py-16 text-gray-500">
+          <p>No photos in this gallery yet.</p>
+          <Link href="/galleries" className="text-blue-600 hover:underline mt-2 inline-block">
+            Browse other galleries &rarr;
+          </Link>
+        </div>
+      )}
     </div>
   );
 }

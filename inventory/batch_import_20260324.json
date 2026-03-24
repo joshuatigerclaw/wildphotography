@@ -1,0 +1,37 @@
+{
+  "batch_id": "batch_import_20260324",
+  "run_at": "2026-03-24T00:58:00Z",
+  "completed_at": "2026-03-24T01:35:00Z",
+  "folder": "Costa-Rica-Gallery/Beaches",
+  "source_root": "/Volumes/ADATA SC740/Smugmug Backup/Galleries/Costa-Rica-Gallery",
+  "gallery_folder": "Beaches",
+  "gallery_id": 18,
+  "gallery_slug": "beaches",
+  "total_files_in_folder": 424,
+  "folders_processed": 1,
+  "photos_processed": 424,
+  "photos_skipped_already_exists": 383,
+  "photos_new": 41,
+  "filename_collisions_renamed": 0,
+  "duplicates_skipped": 0,
+  "originals_uploaded": 424,
+  "derivatives_generated": 2120,
+  "errors": 0,
+  "failed_files": [],
+  "ready_for_public_render": 424,
+  "search_ready": 424,
+  "new_db_ids": {
+    "start": 21975,
+    "end": 22398
+  },
+  "r2_urls_validated": true,
+  "sample_photo_url": "https://pub-7d412c6efb5943b5bc587e695e22001e.r2.dev/derivatives/thumbs/1423-thumb.jpg",
+  "notes": [
+    "All 424 Beaches folder files fully imported across 5 sub-batches",
+    "Previous session had 383 files already in DB with slugs present",
+    "41 new unique photos added from Beaches folder",
+    "All derivatives complete, all records render-ready and search-ready",
+    "R2 public URLs validated (HTTP 200)",
+    "working_import_queue.json updated: 82 prior-pending items now marked completed"
+  ]
+}

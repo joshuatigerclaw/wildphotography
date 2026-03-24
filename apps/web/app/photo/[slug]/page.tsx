@@ -1,7 +1,8 @@
 import { notFound } from 'next/navigation';
 import { Metadata } from 'next';
-import { getPhotoBySlug, getGalleries, getRelatedPhotos, getPhotosFromGallery } from '@/lib/db';
+import { getPhotoBySlug, getGalleries, getRelatedPhotos, getPhotosFromGallery, getGalleryForPhoto } from '@/lib/db';
 import { generatePhotoJsonLd, canonicalUrl } from '@/lib/seo';
+import { getDisplayTitle } from '@/lib/titles';
 import PhotoPageClient from './PhotoPageClient';
 
 export const dynamic = 'force-dynamic';
@@ -16,19 +17,31 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     return { title: 'Photo Not Found' };
   }
   
+  const displayTitle = getDisplayTitle(photo.title);
+  const gallery = await getGalleryForPhoto(slug);
+  
   const canonical = canonicalUrl(`/photo/${photo.slug}`);
   const ogImage = photo.mediumUrl || photo.smallUrl || photo.thumbUrl;
   
+  // Build description
+  let description = photo.description || '';
+  if (!description && photo.locationName) {
+    description = `${displayTitle || 'Photo'} from ${photo.locationName}, Costa Rica`;
+  }
+  if (!description && gallery) {
+    description = `${displayTitle || 'Photo'} in ${gallery.name} gallery`;
+  }
+  
   return {
-    title: `${photo.title} | Wildphotography`,
-    description: photo.description || `Beautiful ${photo.title} photograph from Costa Rica`,
+    title: `${displayTitle || 'Photo'} | Wildphotography`,
+    description: description || `Beautiful nature photography from Costa Rica`,
     metadataBase: new URL(SITE_URL),
     alternates: {
       canonical: canonical,
     },
     openGraph: {
-      title: photo.title,
-      description: photo.description || `Beautiful ${photo.title} photograph from Costa Rica`,
+      title: displayTitle || 'Photo',
+      description: description || `Beautiful nature photography from Costa Rica`,
       url: canonical,
       siteName: 'Wildphotography',
       images: ogImage ? [
@@ -36,7 +49,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
           url: ogImage,
           width: photo.width || 1200,
           height: photo.height || 800,
-          alt: photo.title,
+          alt: displayTitle || 'Photo',
         }
       ] : [],
       locale: 'en_US',
@@ -44,8 +57,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     },
     twitter: {
       card: 'summary_large_image',
-      title: photo.title,
-      description: photo.description || undefined,
+      title: displayTitle || 'Photo',
+      description: description || undefined,
       images: ogImage ? [ogImage] : [],
     },
   };
@@ -59,6 +72,9 @@ export default async function PhotoPage({ params }: { params: Promise<{ slug: st
     notFound();
   }
 
+  // Get gallery for this photo
+  const gallery = await getGalleryForPhoto(slug);
+
   // Get related photos (by keywords)
   let relatedPhotos: any[] = [];
   try {
@@ -69,23 +85,18 @@ export default async function PhotoPage({ params }: { params: Promise<{ slug: st
 
   // Get photos from same gallery
   let galleryPhotos: any[] = [];
-  try {
-    // Find which gallery this photo belongs to
-    const galleries = await getGalleries();
-    for (const gallery of galleries) {
-      const photos = await getPhotosFromGallery(gallery.slug, slug, 8);
-      if (photos.length > 0) {
-        galleryPhotos = photos;
-        break;
-      }
+  if (gallery) {
+    try {
+      galleryPhotos = await getPhotosFromGallery(gallery.slug, slug, 8);
+    } catch (e) {
+      console.error('Error fetching gallery photos:', e);
     }
-  } catch (e) {
-    console.error('Error fetching gallery photos:', e);
   }
 
   // Generate JSON-LD
+  const displayTitle = getDisplayTitle(photo.title);
   const jsonLd = generatePhotoJsonLd({
-    title: photo.title,
+    title: displayTitle,
     description: photo.description || undefined,
     imageUrl: photo.mediumUrl || photo.smallUrl || '',
     dateTaken: photo.date_taken ? new Date(photo.date_taken) : undefined,
@@ -104,6 +115,7 @@ export default async function PhotoPage({ params }: { params: Promise<{ slug: st
         photo={photo} 
         relatedPhotos={relatedPhotos}
         galleryPhotos={galleryPhotos}
+        gallery={gallery}
       />
     </>
   );

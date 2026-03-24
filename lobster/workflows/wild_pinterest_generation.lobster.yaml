@@ -1,0 +1,325 @@
+name: wild_pinterest_generation
+description: >
+  Generate and schedule daily Pinterest pins for WildPhotography using validated
+  render-ready photo inventory and published SEO pages. Produces keyword-rich
+  pin copy, assigns boards, schedules within the 8am-5pm posting window, and
+  triggers posting via the pinterest_poster. Supports 3 pin styles: overlay,
+  minimal, and collage. Generates 3-5 pin variations per page for maximum reach.
+
+inputs:
+  daily_pin_target: 20
+  min_daily_pins: 10
+  max_daily_pins: 30
+  post_window_start: "08:00"
+  post_window_end: "17:00"
+  post_interval_min_minutes: 20
+  post_interval_max_minutes: 40
+  pins_per_page_min: 3
+  pins_per_page_max: 5
+  canonical_base: "https://wildphotography.com"
+  pinterest_account: "NaturalCostaRica"
+
+steps:
+  - name: load_pin_queue
+    description: Load pending pins from the Pinterest queue, skipping already posted or scheduled entries
+    tool: file_read
+    args:
+      path: runtime/pinterest_queue.json
+      parse: json
+
+  - name: load_published_pages
+    description: Fetch all published, SEO-ready pages eligible for pinning — articles first, then location, species, then galleries
+    tool: db_query
+    args:
+      sql: |
+        SELECT
+          p.slug,
+          p.page_type,
+          p.title,
+          p.primary_keyword,
+          p.canonical_url,
+          p.hero_image_url,
+          p.region_slug,
+          p.location_slug,
+          p.species_slug,
+          p.pinterest_pinned_count,
+          p.last_pinned_at
+        FROM (
+          SELECT
+            slug,
+            'article'  AS page_type,
+            title,
+            primary_keyword,
+            CONCAT('{{ inputs.canonical_base }}', '/articles/', slug) AS canonical_url,
+            hero_image_url,
+            NULL AS region_slug,
+            NULL AS location_slug,
+            NULL AS species_slug,
+            COALESCE(pinterest_pinned_count, 0) AS pinterest_pinned_count,
+            last_pinned_at,
+            1 AS sort_priority
+          FROM articles
+          WHERE status = 'published'
+            AND hero_image_url IS NOT NULL
+
+          UNION ALL
+
+          SELECT
+            slug,
+            'location' AS page_type,
+            name AS title,
+            primary_keyword,
+            CONCAT('{{ inputs.canonical_base }}', '/location/', slug) AS canonical_url,
+            hero_image_url,
+            region_slug,
+            slug AS location_slug,
+            NULL AS species_slug,
+            COALESCE(pinterest_pinned_count, 0) AS pinterest_pinned_count,
+            last_pinned_at,
+            2 AS sort_priority
+          FROM location_pages
+          WHERE published = true
+            AND hero_image_url IS NOT NULL
+
+          UNION ALL
+
+          SELECT
+            slug,
+            'species'  AS page_type,
+            name AS title,
+            primary_keyword,
+            CONCAT('{{ inputs.canonical_base }}', '/species/', slug) AS canonical_url,
+            hero_image_url,
+            NULL AS region_slug,
+            NULL AS location_slug,
+            slug AS species_slug,
+            COALESCE(pinterest_pinned_count, 0) AS pinterest_pinned_count,
+            last_pinned_at,
+            3 AS sort_priority
+          FROM species_pages
+          WHERE published = true
+            AND hero_image_url IS NOT NULL
+
+          UNION ALL
+
+          SELECT
+            g.slug,
+            'gallery'  AS page_type,
+            g.title,
+            g.primary_keyword,
+            CONCAT('{{ inputs.canonical_base }}', '/gallery/', g.slug) AS canonical_url,
+            p.thumb_url AS hero_image_url,
+            NULL AS region_slug,
+            NULL AS location_slug,
+            NULL AS species_slug,
+            COALESCE(g.pinterest_pinned_count, 0) AS pinterest_pinned_count,
+            g.last_pinned_at,
+            4 AS sort_priority
+          FROM galleries g
+          JOIN photos p ON p.id = g.cover_photo_id
+          WHERE g.ready_for_public_render = true
+            AND p.ready_for_public_render = true
+            AND p.thumb_url IS NOT NULL
+        ) AS p
+        ORDER BY sort_priority ASC, pinterest_pinned_count ASC, last_pinned_at ASC NULLS FIRST
+        LIMIT 50
+
+  - name: load_render_ready_photos
+    description: Fetch render-ready photos for use as pin images — high quality, confirmed public URLs
+    tool: db_query
+    args:
+      sql: |
+        SELECT
+          p.id,
+          p.slug,
+          p.thumb_url,
+          p.medium_url,
+          p.large_url,
+          p.title,
+          p.caption,
+          p.species_slug,
+          p.location_slug,
+          p.region_slug,
+          p.gallery_slug,
+          p.quality_score,
+          p.tags
+        FROM photos p
+        WHERE p.ready_for_public_render = true
+          AND p.search_ready = true
+          AND p.status != 'archived'
+          AND p.medium_url IS NOT NULL
+          AND p.metadata_complete = true
+        ORDER BY p.quality_score DESC NULLS LAST
+        LIMIT 500
+
+  - name: filter_today_queue
+    description: Filter queue for pins not yet posted or scheduled today, up to daily_pin_target
+    tool: list_filter
+    args:
+      items: "{{ steps.load_pin_queue.data.queue }}"
+      filter: "item.status == 'pending'"
+      limit: "{{ inputs.daily_pin_target }}"
+
+  - name: select_pages_for_today
+    description: >
+      If the queue has fewer than min_daily_pins pending, supplement with
+      published pages not yet pinned today from load_published_pages
+    tool: pin_page_selector
+    args:
+      queued_items: "{{ steps.filter_today_queue.results }}"
+      candidate_pages: "{{ steps.load_published_pages.rows }}"
+      min_count: "{{ inputs.min_daily_pins }}"
+      max_count: "{{ inputs.daily_pin_target }}"
+      pins_per_page_min: "{{ inputs.pins_per_page_min }}"
+      pins_per_page_max: "{{ inputs.pins_per_page_max }}"
+      page_priority:
+        - article
+        - location
+        - species
+        - gallery
+
+  - name: validate_pin_images
+    description: HEAD-check each candidate image URL; reject broken URLs before pin generation
+    tool: url_head_check
+    args:
+      items: "{{ steps.select_pages_for_today.selected_items }}"
+      url_field: hero_image_url
+      fallback_photos: "{{ steps.load_render_ready_photos.rows }}"
+      require_status: 200
+
+  - name: generate_pins
+    description: >
+      For each valid page, generate 3-5 pin variations using the
+      wild_pinterest_generator prompt. Each variation must use a different
+      image and title. Assigns board, style, and copy per board rules.
+    tool: agent_run
+    args:
+      agent: wild_pinterest_agent
+      prompt_file: prompts/wild_pinterest_generator.md
+      board_rules_file: prompts/wild_pinterest_board_rules.md
+      items: "{{ steps.validate_pin_images.valid_items }}"
+      context:
+        photo_inventory: "{{ steps.load_render_ready_photos.rows }}"
+        canonical_base: "{{ inputs.canonical_base }}"
+        pins_per_page_min: "{{ inputs.pins_per_page_min }}"
+        pins_per_page_max: "{{ inputs.pins_per_page_max }}"
+        pin_styles:
+          - overlay
+          - minimal
+          - collage
+      output_schema:
+        - page_slug
+        - page_type
+        - destination_url
+        - pins:
+            - pin_title
+            - pin_description
+            - board_name
+            - image_style
+            - image_url
+            - image_alt
+            - primary_keyword
+            - quality_gate_passed
+            - quality_gate_reason
+
+  - name: split_pass_fail
+    description: Separate pins that passed quality gate from those that failed
+    tool: list_split
+    args:
+      items: "{{ steps.generate_pins.results | flatmap('pins') }}"
+      condition: "item.quality_gate_passed == true"
+      pass_key: approved
+      fail_key: rejected
+
+  - name: deduplicate_pins
+    description: >
+      Remove any pins with identical titles or identical image URLs to prevent
+      same-day duplicates. Cross-reference against today's already-posted pins.
+    tool: pin_deduplicator
+    args:
+      items: "{{ steps.split_pass_fail.approved }}"
+      dedup_fields:
+        - pin_title
+        - image_url
+      max_total: "{{ inputs.max_daily_pins }}"
+
+  - name: build_schedule
+    description: >
+      Spread approved pins evenly across the posting window (8am-5pm local time).
+      Space pins 20-40 minutes apart. Never bulk-dump. Return each pin with a
+      scheduled_at timestamp.
+    tool: pin_scheduler
+    args:
+      items: "{{ steps.deduplicate_pins.items }}"
+      window_start: "{{ inputs.post_window_start }}"
+      window_end: "{{ inputs.post_window_end }}"
+      interval_min_minutes: "{{ inputs.post_interval_min_minutes }}"
+      interval_max_minutes: "{{ inputs.post_interval_max_minutes }}"
+      timezone: "America/Costa_Rica"
+
+  - name: save_scheduled_pins
+    description: Write the full schedule to the Pinterest queue runtime file
+    tool: file_json_patch
+    args:
+      path: runtime/pinterest_queue.json
+      patches:
+        - operation: append
+          key: queue
+          values: "{{ steps.build_schedule.scheduled_pins }}"
+
+  - name: post_pins
+    description: >
+      Dispatch the pinterest_poster to publish each scheduled pin at its
+      scheduled_at time via Pinterest API using stored session credentials.
+      Returns post_id for each successfully published pin.
+    tool: tool_dispatch
+    args:
+      tool: pinterest_poster
+      items: "{{ steps.build_schedule.scheduled_pins }}"
+      credentials_path: "{{ env.HOME }}/.openclaw/workspace/pinterest_state.json"
+      on_failure: log_and_continue
+
+  - name: update_page_pin_counts
+    description: Increment pinterest_pinned_count and set last_pinned_at for all successfully posted pages
+    tool: db_update_batch
+    args:
+      table_map:
+        article: articles
+        location: location_pages
+        species: species_pages
+        gallery: galleries
+      key_field: slug
+      items: "{{ steps.post_pins.success_items }}"
+      set:
+        pinterest_pinned_count: "pinterest_pinned_count + 1"
+        last_pinned_at: "{{ now() }}"
+
+  - name: update_queue_statuses
+    description: Mark posted pins as posted and failed pins as failed in the queue file
+    tool: file_json_patch
+    args:
+      path: runtime/pinterest_queue.json
+      patches:
+        - match_key: pin_title
+          match_values: "{{ steps.post_pins.success_items | map('pin_title') }}"
+          set: { status: posted, posted_at: "{{ now() }}" }
+        - match_key: pin_title
+          match_values: "{{ steps.post_pins.failed_items | map('pin_title') }}"
+          set: { status: failed }
+
+  - name: summary
+    description: Emit a concise run summary with exact counts
+    tool: result_emit
+    args:
+      fields:
+        pages_selected: "{{ steps.select_pages_for_today.selected_count }}"
+        pins_generated: "{{ steps.generate_pins.count }}"
+        pins_approved: "{{ steps.split_pass_fail.approved_count }}"
+        pins_rejected: "{{ steps.split_pass_fail.rejected_count }}"
+        pins_deduplicated: "{{ steps.deduplicate_pins.removed_count }}"
+        pins_scheduled: "{{ steps.build_schedule.scheduled_count }}"
+        pins_posted: "{{ steps.post_pins.success_count }}"
+        pins_failed: "{{ steps.post_pins.failed_count }}"
+        boards_used: "{{ steps.build_schedule.scheduled_pins | map('board_name') | unique }}"
+        schedule_window: "{{ inputs.post_window_start }} – {{ inputs.post_window_end }}"
+        rejected_reasons: "{{ steps.split_pass_fail.rejected | map('quality_gate_reason') }}"

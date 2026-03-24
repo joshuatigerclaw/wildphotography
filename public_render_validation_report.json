@@ -1,0 +1,12 @@
+{
+  "total_sampled": 200,
+  "http_200_count": 200,
+  "http_non_200_count": 0,
+  "error_count": 0,
+  "domain_breakdown": {
+    "r2_dev": 200
+  },
+  "non_200_urls": [],
+  "error_urls": [],
+  "sample_time": "2026-03-24T15:10:20.710175Z"
+}

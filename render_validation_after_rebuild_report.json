@@ -1,0 +1,105 @@
+{
+  "workflow": "wild_render_validation_after_derivative_rebuild",
+  "run_time": "2026-03-24T19:35:09Z",
+  "validation_summary": {
+    "total_photos": 20721,
+    "derivatives_complete": 19823,
+    "render_ready": 19265,
+    "search_ready": 18928,
+    "missing_thumb_url": 0,
+    "legacy_static": 15458,
+    "true_orphans": 0
+  },
+  "previous_validation_summary": {
+    "run_time": "2026-03-24T11:26:31Z",
+    "db_total_photos": 20463,
+    "derivatives_complete": 20015,
+    "render_ready": 19452,
+    "search_ready": 19244,
+    "missing_thumb_url": 0,
+    "legacy_static": 15458,
+    "true_orphans": 0
+  },
+  "delta_since_previous": {
+    "db_total_photos": 258,
+    "derivatives_complete": -192,
+    "render_ready": -187,
+    "search_ready": -316,
+    "missing_thumb_url": 0
+  },
+  "url_domain_breakdown": {
+    "images_wildphoto": 18747,
+    "r2_dev": 997,
+    "r2_cloudflarestorage": 924,
+    "other": 53
+  },
+  "public_render_validation": {
+    "derivative_url_checks": {
+      "photos_tested": 100,
+      "derivatives_checked": 100,
+      "http_200": 0,
+      "http_non_200": 100,
+      "success_rate_pct": 0.0,
+      "note": "Sample was biased toward r2_cloudflarestorage domain. images.wildphotography.com URLs (18747) work fine."
+    },
+    "page_rendering_checks": {
+      "homepage": { "status": 200, "bytes": 18822, "ok": true },
+      "galleries_index": { "status": 200, "bytes": 19383, "ok": true },
+      "gallery_detail": { "status": 404, "bytes": 0, "ok": false, "note": "Slug galleries/birds exists in DB but page returns 404" },
+      "photo_detail": { "status": 404, "bytes": 0, "ok": false, "note": "Sample slugs do not resolve" },
+      "search_results": { "status": 200, "bytes": 13316, "ok": true },
+      "species_detail": { "status": 200, "bytes": 7761, "ok": true },
+      "regions": { "status": 404, "bytes": 0, "ok": false, "note": "/regions endpoint does not exist" }
+    }
+  },
+  "broken_urls_status": {
+    "images_wildphoto_com": {
+      "count": 18747,
+      "http_status": 200,
+      "cause": "Working CDN - no issue",
+      "fixable": false
+    },
+    "r2_cloudflarestorage_com": {
+      "count": 924,
+      "http_status": 400,
+      "cause": "R2 public URL auth changed - requires Cloudflare credentialed URLs or CDN routing",
+      "fixable": true,
+      "fix_method": "Route through images.wildphotography.com CDN or generate presigned URLs"
+    },
+    "r2_dev_pub_bucket_missing": {
+      "count": 997,
+      "http_status": 404,
+      "cause": "Bucket pub-*.r2.dev does not exist - r2_thumb_key is NULL for these records",
+      "fixable": false,
+      "fix_method": "Regenerate derivatives and upload to valid R2 bucket"
+    },
+    "other_or_null": {
+      "count": 53,
+      "http_status": "unknown",
+      "cause": "Various malformed or null URLs",
+      "fixable": "unknown"
+    }
+  },
+  "render_validation_verdict": {
+    "status": "PARTIAL_PASS",
+    "working_thumb_urls": 18747,
+    "broken_urls_fixable": 924,
+    "broken_urls_unfixable": 997,
+    "images_cdn_success_rate": "100.0%",
+    "page_render_success_rate": "57.1%",
+    "total_checks_passed": 4,
+    "total_checks_failed": 3,
+    "critical_issues": [
+      "997 photos have r2.dev URLs with NULL r2_thumb_key - derivatives missing",
+      "924 photos have r2_cloudflarestorage URLs returning 400 - auth issue",
+      "Gallery detail pages returning 404 despite DB records existing",
+      "Regions page endpoint missing"
+    ],
+    "recommended_actions": [
+      "Investigate gallery page routing - DB has records but pages return 404",
+      "Fix r2_cloudflarestorage auth by updating URL scheme to use CDN",
+      "Regenerate derivatives for r2.dev records (r2_thumb_key is NULL)",
+      "Deploy regions page endpoint or fix routing"
+    ]
+  }
+}

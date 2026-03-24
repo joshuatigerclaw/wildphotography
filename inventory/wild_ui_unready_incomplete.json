@@ -1,0 +1,8 @@
+{
+  "workflow": "wild_manual_review_resolve_ui",
+  "timestamp": "2026-03-20T15:34:11.110260+00:00",
+  "action": "unready_incomplete_render_records",
+  "records_updated": 255,
+  "records_still_broken": 0,
+  "description": "Set ready_for_public_render=false and derivatives_complete=false for records missing derivative URL fields"
+}

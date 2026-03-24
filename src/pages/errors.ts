@@ -13,7 +13,7 @@ export function render404(): Response {
     </div>
   `);
   
-  return new Response(html, { status: 404, headers: { 'Content-Type': 'text/html' } });
+  return new Response(html, { status: 404, headers: { 'Content-Type': 'text/html; charset=utf-8' } });
 }
 
 export function render403(): Response {
@@ -24,5 +24,5 @@ export function render403(): Response {
     </div>
   `);
   
-  return new Response(html, { status: 403, headers: { 'Content-Type': 'text/html' } });
+  return new Response(html, { status: 403, headers: { 'Content-Type': 'text/html; charset=utf-8' } });
 }

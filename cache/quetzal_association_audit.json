@@ -1,0 +1,86 @@
+[
+  {
+    "id": 17,
+    "slug": "quetzal",
+    "title": "Resplendent Quetzal",
+    "species_common_name": null,
+    "species_scientific_name": null,
+    "keywords": null,
+    "description": "The legendary Resplendent Quetzal in Costa Rica's cloud forests.",
+    "small_url": "https://pub-7d412c6efb5943b5bc587e695e22001e.r2.dev/derivatives/small/quetzal-small.jpg",
+    "thumb_url": "https://pub-7d412c6efb5943b5bc587e695e22001e.r2.dev/derivatives/thumbs/quetzal-thumb.jpg",
+    "search_ready": false
+  },
+  {
+    "id": 14899,
+    "slug": "quetzal-CL0A0992",
+    "title": "Resplendent Quetzal - CL0A0992.JPG",
+    "species_common_name": "Resplendent Quetzal",
+    "species_scientific_name": "Pharomachrus mocinno",
+    "keywords": "Resplendent Quetzal, Costa Rica",
+    "description": null,
+    "small_url": "https://pub-7d412c6efb5943b5bc587e695e22001e.r2.dev/derivatives/small/quetzal-small.jpg",
+    "thumb_url": "https://pub-7d412c6efb5943b5bc587e695e22001e.r2.dev/derivatives/small/quetzal-small.jpg",
+    "search_ready": true
+  },
+  {
+    "id": 14900,
+    "slug": "quetzal-CL0A1052",
+    "title": "Resplendent Quetzal - CL0A1052.JPG",
+    "species_common_name": "Resplendent Quetzal",
+    "species_scientific_name": "Pharomachrus mocinno",
+    "keywords": "Resplendent Quetzal, Costa Rica",
+    "description": null,
+    "small_url": "https://pub-7d412c6efb5943b5bc587e695e22001e.r2.dev/derivatives/small/quetzal-small.jpg",
+    "thumb_url": "https://pub-7d412c6efb5943b5bc587e695e22001e.r2.dev/derivatives/small/quetzal-small.jpg",
+    "search_ready": true
+  },
+  {
+    "id": 14901,
+    "slug": "quetzal-CL0A1056",
+    "title": "Resplendent Quetzal - CL0A1056.jpg",
+    "species_common_name": "Resplendent Quetzal",
+    "species_scientific_name": "Pharomachrus mocinno",
+    "keywords": "Resplendent Quetzal, Costa Rica",
+    "description": null,
+    "small_url": "https://pub-7d412c6efb5943b5bc587e695e22001e.r2.dev/derivatives/small/quetzal-small.jpg",
+    "thumb_url": "https://pub-7d412c6efb5943b5bc587e695e22001e.r2.dev/derivatives/small/quetzal-small.jpg",
+    "search_ready": true
+  },
+  {
+    "id": 14902,
+    "slug": "quetzal-CL0A1100",
+    "title": "Resplendent Quetzal - CL0A1100.JPG",
+    "species_common_name": "Resplendent Quetzal",
+    "species_scientific_name": "Pharomachrus mocinno",
+    "keywords": "Resplendent Quetzal, Costa Rica",
+    "description": null,
+    "small_url": "https://pub-7d412c6efb5943b5bc587e695e22001e.r2.dev/derivatives/small/quetzal-small.jpg",
+    "thumb_url": "https://pub-7d412c6efb5943b5bc587e695e22001e.r2.dev/derivatives/small/quetzal-small.jpg",
+    "search_ready": true
+  },
+  {
+    "id": 14903,
+    "slug": "quetzal-CL0A1421",
+    "title": "Resplendent Quetzal - CL0A1421.jpg",
+    "species_common_name": "Resplendent Quetzal",
+    "species_scientific_name": "Pharomachrus mocinno",
+    "keywords": "Resplendent Quetzal, Costa Rica",
+    "description": null,
+    "small_url": "https://pub-7d412c6efb5943b5bc587e695e22001e.r2.dev/derivatives/small/quetzal-small.jpg",
+    "thumb_url": "https://pub-7d412c6efb5943b5bc587e695e22001e.r2.dev/derivatives/small/quetzal-small.jpg",
+    "search_ready": true
+  },
+  {
+    "id": 14904,
+    "slug": "quetzal-CL0A1563",
+    "title": "Resplendent Quetzal - CL0A1563.jpg",
+    "species_common_name": "Resplendent Quetzal",
+    "species_scientific_name": "Pharomachrus mocinno",
+    "keywords": "Resplendent Quetzal, Costa Rica",
+    "description": null,
+    "small_url": "https://pub-7d412c6efb5943b5bc587e695e22001e.r2.dev/derivatives/small/quetzal-small.jpg",
+    "thumb_url": "https://pub-7d412c6efb5943b5bc587e695e22001e.r2.dev/derivatives/small/quetzal-small.jpg",
+    "search_ready": true
+  }
+]

@@ -1,0 +1,208 @@
+name: wild_article_generation
+description: >
+  Generate high-quality SEO articles for WildPhotography using validated
+  render-ready photo inventory, real internal links, affiliate blocks, FAQ
+  sections, and JSON-LD schema. Outputs draft JSON records ready for CMS
+  insertion into the `content_articles` table.
+
+inputs:
+  batch_size: 10
+  min_photo_count: 6
+  affiliate_partner_id: "6ZV7KMH"
+  affiliate_cmp: "wildphotography"
+  author_name: "Joshua ten Brink"
+  publisher_name: "WildPhotography"
+  canonical_base: "https://wildphotography.com"
+
+steps:
+  - id: load_article_queue
+    name: load_article_queue
+    description: Load pending articles from the priority queue, skipping any already drafted or published
+    tool: file_read
+    args:
+      path: runtime/article_queue.json
+      parse: json
+
+  - id: filter_pending
+    name: filter_pending
+    description: Keep only articles with status=pending, up to batch_size
+    tool: list_filter
+    args:
+      items: "{{ steps.load_article_queue.data.queue }}"
+      filter: "item.status == 'pending'"
+      limit: "{{ inputs.batch_size }}"
+
+  - id: load_render_ready_photos
+    name: load_render_ready_photos
+    description: Fetch render-ready photo inventory from Neon — only photos confirmed public-safe
+    tool: db_query
+    args:
+      sql: |
+        SELECT
+          p.id,
+          p.slug,
+          p.title,
+          p.thumb_url,
+          p.medium_url,
+          p.caption,
+          p.species_slug,
+          p.location_slug,
+          p.region_slug,
+          p.gallery_slug,
+          p.tags
+        FROM photos p
+        WHERE p.ready_for_public_render = true
+          AND p.search_ready = true
+          AND p.status != 'archived'
+          AND p.thumb_url IS NOT NULL
+          AND p.metadata_complete = true
+        ORDER BY p.quality_score DESC NULLS LAST
+
+  - id: load_internal_link_targets
+    name: load_internal_link_targets
+    description: Load all valid public pages available for internal linking
+    tool: db_query
+    args:
+      sql: |
+        SELECT slug, page_type, title, region_slug, location_slug, species_slug
+        FROM (
+          SELECT slug, 'gallery'   AS page_type, title, NULL AS region_slug, NULL AS location_slug, NULL AS species_slug FROM galleries   WHERE is_active = true
+          UNION ALL
+          SELECT slug, 'species'   AS page_type, name  AS title, NULL, NULL, slug FROM species_pages  WHERE published = true
+          UNION ALL
+          SELECT slug, 'location'  AS page_type, name  AS title, region_slug, slug, NULL FROM location_pages WHERE published = true
+          UNION ALL
+          SELECT slug, 'region'    AS page_type, name  AS title, slug, NULL, NULL FROM region_pages   WHERE published = true
+          UNION ALL
+          SELECT slug, 'article'   AS page_type, title, NULL, NULL, NULL FROM content_articles WHERE status = 'published'
+        ) AS pages
+
+  - id: generate_articles
+    name: generate_articles
+    description: >
+      For each pending queue item, generate a complete SEO article using
+      the wild_article_generator prompt. Uses render-ready photo inventory
+      and valid internal link targets as context. Rejects thin or duplicative
+      output per quality gate rules.
+    tool: agent_run
+    args:
+      agent: wild_article_generator
+      prompt_file: prompts/wild_article_generator.md
+      template_file: prompts/wild_article_templates.md
+      link_rules_file: prompts/wild_internal_linking_rules.md
+      items: "{{ steps.filter_pending.results }}"
+      context:
+        photos: "{{ steps.load_render_ready_photos.rows }}"
+        link_targets: "{{ steps.load_internal_link_targets.rows }}"
+        affiliate_partner_id: "{{ inputs.affiliate_partner_id }}"
+        affiliate_cmp: "{{ inputs.affiliate_cmp }}"
+        author_name: "{{ inputs.author_name }}"
+        publisher_name: "{{ inputs.publisher_name }}"
+        canonical_base: "{{ inputs.canonical_base }}"
+        min_photo_count: "{{ inputs.min_photo_count }}"
+      output_schema:
+        - slug
+        - title
+        - meta_title
+        - meta_description
+        - h1
+        - excerpt
+        - primary_keyword
+        - secondary_keywords
+        - region
+        - location_name
+        - article_type
+        - intro_html
+        - body_html
+        - faq_html
+        - affiliate_block_html
+        - internal_links
+        - photo_ids
+        - gallery_slugs
+        - species_slugs
+        - location_slugs
+        - region_slugs
+        - schema_json
+        - quality_gate_passed
+        - quality_gate_reason
+
+  - id: split_pass_fail
+    name: split_pass_fail
+    description: Separate articles that passed quality gate from those that failed
+    tool: list_split
+    args:
+      items: "{{ steps.generate_articles.results }}"
+      condition: "item.quality_gate_passed == true"
+      pass_key: approved
+      fail_key: rejected
+
+  - id: insert_approved_articles
+    name: insert_approved_articles
+    description: Insert approved articles as drafts into the content_articles table
+    tool: db_upsert
+    args:
+      table: content_articles
+      conflict_key: slug
+      rows: "{{ steps.split_pass_fail.approved }}"
+      set:
+        status: draft
+        generated_at: "{{ now() }}"
+
+  - id: write_approved_outputs
+    name: write_approved_outputs
+    description: Write each approved article as a JSON file under runtime/article_outputs/
+    tool: file_write_batch
+    args:
+      items: "{{ steps.split_pass_fail.approved }}"
+      output_dir: runtime/article_outputs
+      filename_key: slug
+      extension: json
+
+  - id: update_queue_statuses
+    name: update_queue_statuses
+    description: Mark approved items as drafted and rejected items as failed in the queue file
+    tool: file_json_patch
+    args:
+      path: runtime/article_queue.json
+      patches:
+        - match_key: slug
+          match_values: "{{ steps.split_pass_fail.approved | map('slug') }}"
+          set: { status: drafted }
+        - match_key: slug
+          match_values: "{{ steps.split_pass_fail.rejected | map('slug') }}"
+          set: { status: failed }
+
+  - id: validate_internal_links
+    name: validate_internal_links
+    description: Validate that all internal_links in approved articles resolve to real public pages
+    tool: internal_link_validate
+    args:
+      articles: "{{ steps.split_pass_fail.approved }}"
+      valid_slugs: "{{ steps.load_internal_link_targets.rows | map('slug') }}"
+
+  - id: validate_schema
+    name: validate_schema
+    description: Validate JSON-LD schema on each approved article
+    tool: schema_validate
+    args:
+      items: "{{ steps.split_pass_fail.approved }}"
+      schema_type: Article
+
+  - id: summary
+    name: summary
+    description: Emit a concise run summary with exact counts
+    tool: result_emit
+    args:
+      fields:
+        queue_items_loaded: "{{ steps.filter_pending.count }}"
+        articles_generated: "{{ steps.generate_articles.count }}"
+        articles_approved: "{{ steps.split_pass_fail.approved_count }}"
+        articles_rejected: "{{ steps.split_pass_fail.rejected_count }}"
+        articles_inserted_to_db: "{{ steps.insert_approved_articles.upserted_count }}"
+        internal_links_valid: "{{ steps.validate_internal_links.valid_count }}"
+        internal_links_broken: "{{ steps.validate_internal_links.broken_count }}"
+        schema_valid: "{{ steps.validate_schema.valid_count }}"
+        schema_invalid: "{{ steps.validate_schema.invalid_count }}"
+        output_files_written: "{{ steps.write_approved_outputs.written_count }}"
+        rejected_slugs: "{{ steps.split_pass_fail.rejected | map('slug') }}"
+        rejected_reasons: "{{ steps.split_pass_fail.rejected | map('quality_gate_reason') }}"

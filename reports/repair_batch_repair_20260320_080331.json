@@ -1,0 +1,623 @@
+{
+  "batch_id": "repair_20260320_080331",
+  "jobs_processed": 25,
+  "repairs_completed": 109,
+  "failures": 0,
+  "items_requiring_approval": 23,
+  "approval_items": [
+    {
+      "type": "derivative_regeneration",
+      "reason": "Original exists but derivatives missing for photo 10979",
+      "original_path": "originals/10979/pano00002.jpg"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 19841",
+      "slug": "dji-0949-tambor-nicoya-peninsula-costa-rica-1503"
+    },
+    {
+      "type": "derivative_regeneration",
+      "reason": "Original exists but derivatives missing for photo 8572",
+      "original_path": "originals/8572/pano00025.jpg"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 11522",
+      "slug": "dji-0250-puenta-de-la-amistad-tempisque-8140"
+    },
+    {
+      "type": "derivative_regeneration",
+      "reason": "Original exists but derivatives missing for photo 3407",
+      "original_path": "originals/3407/pano00005.jpg"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 17072",
+      "slug": "dji-0276-las-catalinas-guanacaste-1051"
+    },
+    {
+      "type": "derivative_regeneration",
+      "reason": "Original exists but derivatives missing for photo 6658",
+      "original_path": "originals/6658/CL0A7240.JPG"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 12397",
+      "slug": "dji-0958-rio-savagre-costa-rica-9015"
+    },
+    {
+      "type": "derivative_regeneration",
+      "reason": "Original exists but derivatives missing for photo 6310",
+      "original_path": "originals/6310/DJI_0495.JPG"
+    },
+    {
+      "type": "derivative_regeneration",
+      "reason": "Original exists but derivatives missing for photo 10043",
+      "original_path": "originals/10043/IMG_4959.jpg"
+    },
+    {
+      "type": "derivative_regeneration",
+      "reason": "Original exists but derivatives missing for photo 7307",
+      "original_path": "originals/7307/DJI_0373.jpg"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 13065",
+      "slug": "2020-06-07-17-58-30-sunrise-sunset-9683"
+    },
+    {
+      "type": "derivative_regeneration",
+      "reason": "Original exists but derivatives missing for photo 6663",
+      "original_path": "originals/6663/2021-03-25_11.39.45.jpg"
+    },
+    {
+      "type": "derivative_regeneration",
+      "reason": "Original exists but derivatives missing for photo 3527",
+      "original_path": "originals/3527/DJI_0273.jpg"
+    },
+    {
+      "type": "derivative_regeneration",
+      "reason": "Original exists but derivatives missing for photo 7215",
+      "original_path": "originals/7215/DJI_0051.JPG"
+    },
+    {
+      "type": "derivative_regeneration",
+      "reason": "Original exists but derivatives missing for photo 6212",
+      "original_path": "originals/6212/DJI_0349.JPG"
+    },
+    {
+      "type": "derivative_regeneration",
+      "reason": "Original exists but derivatives missing for photo 4834",
+      "original_path": "originals/4834/DJI_0100.JPG"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 14706",
+      "slug": "img-4417-wildlife-11324"
+    },
+    {
+      "type": "derivative_regeneration",
+      "reason": "Original exists but derivatives missing for photo 5575",
+      "original_path": "originals/5575/DJI_0272.JPG"
+    },
+    {
+      "type": "derivative_regeneration",
+      "reason": "Original exists but derivatives missing for photo 8625",
+      "original_path": "originals/8625/2022-02-18_18.02.04.jpg"
+    },
+    {
+      "type": "derivative_regeneration",
+      "reason": "Original exists but derivatives missing for photo 6316",
+      "original_path": "originals/6316/DJI_0504.JPG"
+    },
+    {
+      "type": "derivative_regeneration",
+      "reason": "Original exists but derivatives missing for photo 4530",
+      "original_path": "originals/4530/2018-11-23_08.25.59.jpg"
+    },
+    {
+      "type": "derivative_regeneration",
+      "reason": "Original exists but derivatives missing for photo 7172",
+      "original_path": "originals/7172/CL0A6110.jpg"
+    }
+  ],
+  "results": [
+    {
+      "queue_id": 20,
+      "photo_id": 10979,
+      "slug": "dji-0861-peninsula-de-osa-7597",
+      "repairs": [
+        "original_r2: exists (1 files)",
+        "derivatives_r2: missing (0 files)",
+        "derivatives_missing: needs regeneration"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "derivative_regeneration",
+          "reason": "Original exists but derivatives missing for photo 10979",
+          "original_path": "originals/10979/pano00002.jpg"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 21,
+      "photo_id": 3322,
+      "slug": "cl0a7235-2129",
+      "repairs": [
+        "original_r2: exists (1 files)",
+        "derivatives_r2: exists (4 files)",
+        "db_r2_mismatch: missing keys ['r2_web_large_key', 'r2_web_small_key', 'r2_thumb_key', 'r2_original_key']",
+        "auto_repaired_db_keys: ['r2_original_key', 'r2_thumb_key', 'r2_web_small_key', 'r2_web_large_key']"
+      ],
+      "errors": [],
+      "approval_required": [],
+      "status": "completed"
+    },
+    {
+      "queue_id": 22,
+      "photo_id": 19841,
+      "slug": "dji-0949-tambor-nicoya-peninsula-costa-rica-1503",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 19841",
+          "slug": "dji-0949-tambor-nicoya-peninsula-costa-rica-1503"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 23,
+      "photo_id": 8572,
+      "slug": "dji-0109-jaco-beach-5190",
+      "repairs": [
+        "original_r2: exists (1 files)",
+        "derivatives_r2: missing (0 files)",
+        "db_r2_mismatch: missing keys ['r2_original_key']",
+        "auto_repaired_db_keys: ['r2_original_key']",
+        "derivatives_missing: needs regeneration"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "derivative_regeneration",
+          "reason": "Original exists but derivatives missing for photo 8572",
+          "original_path": "originals/8572/pano00025.jpg"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 24,
+      "photo_id": 11522,
+      "slug": "dji-0250-puenta-de-la-amistad-tempisque-8140",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 11522",
+          "slug": "dji-0250-puenta-de-la-amistad-tempisque-8140"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 25,
+      "photo_id": 3407,
+      "slug": "cl0a7797-2158",
+      "repairs": [
+        "original_r2: exists (1 files)",
+        "derivatives_r2: missing (0 files)",
+        "db_r2_mismatch: missing keys ['r2_original_key']",
+        "auto_repaired_db_keys: ['r2_original_key']",
+        "derivatives_missing: needs regeneration"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "derivative_regeneration",
+          "reason": "Original exists but derivatives missing for photo 3407",
+          "original_path": "originals/3407/pano00005.jpg"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 26,
+      "photo_id": 17072,
+      "slug": "dji-0276-las-catalinas-guanacaste-1051",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 17072",
+          "slug": "dji-0276-las-catalinas-guanacaste-1051"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 27,
+      "photo_id": 6658,
+      "slug": "pc306014-costa-rica-3276",
+      "repairs": [
+        "original_r2: exists (1 files)",
+        "derivatives_r2: missing (0 files)",
+        "db_r2_mismatch: missing keys ['r2_original_key']",
+        "auto_repaired_db_keys: ['r2_original_key']",
+        "derivatives_missing: needs regeneration"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "derivative_regeneration",
+          "reason": "Original exists but derivatives missing for photo 6658",
+          "original_path": "originals/6658/CL0A7240.JPG"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 28,
+      "photo_id": 12397,
+      "slug": "dji-0958-rio-savagre-costa-rica-9015",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 12397",
+          "slug": "dji-0958-rio-savagre-costa-rica-9015"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 29,
+      "photo_id": 6310,
+      "slug": "dji-0660-conchal-guanacaste-2928",
+      "repairs": [
+        "original_r2: exists (1 files)",
+        "derivatives_r2: missing (0 files)",
+        "db_r2_mismatch: missing keys ['r2_original_key']",
+        "auto_repaired_db_keys: ['r2_original_key']",
+        "derivatives_missing: needs regeneration"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "derivative_regeneration",
+          "reason": "Original exists but derivatives missing for photo 6310",
+          "original_path": "originals/6310/DJI_0495.JPG"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 30,
+      "photo_id": 10043,
+      "slug": "img-9574-monkeys-6661",
+      "repairs": [
+        "original_r2: exists (1 files)",
+        "derivatives_r2: missing (0 files)",
+        "db_r2_mismatch: missing keys ['r2_original_key']",
+        "auto_repaired_db_keys: ['r2_original_key']",
+        "derivatives_missing: needs regeneration"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "derivative_regeneration",
+          "reason": "Original exists but derivatives missing for photo 10043",
+          "original_path": "originals/10043/IMG_4959.jpg"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 31,
+      "photo_id": 7307,
+      "slug": "img-1238-flowers-plants-trees-3925",
+      "repairs": [
+        "original_r2: exists (1 files)",
+        "derivatives_r2: missing (0 files)",
+        "db_r2_mismatch: missing keys ['r2_original_key']",
+        "auto_repaired_db_keys: ['r2_original_key']",
+        "derivatives_missing: needs regeneration"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "derivative_regeneration",
+          "reason": "Original exists but derivatives missing for photo 7307",
+          "original_path": "originals/7307/DJI_0373.jpg"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 32,
+      "photo_id": 13065,
+      "slug": "2020-06-07-17-58-30-sunrise-sunset-9683",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 13065",
+          "slug": "2020-06-07-17-58-30-sunrise-sunset-9683"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 33,
+      "photo_id": 6663,
+      "slug": "pc306038-costa-rica-3281",
+      "repairs": [
+        "original_r2: exists (1 files)",
+        "derivatives_r2: missing (0 files)",
+        "db_r2_mismatch: missing keys ['r2_original_key']",
+        "auto_repaired_db_keys: ['r2_original_key']",
+        "derivatives_missing: needs regeneration"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "derivative_regeneration",
+          "reason": "Original exists but derivatives missing for photo 6663",
+          "original_path": "originals/6663/2021-03-25_11.39.45.jpg"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 34,
+      "photo_id": 3527,
+      "slug": "cl0a8503-2205",
+      "repairs": [
+        "original_r2: exists (1 files)",
+        "derivatives_r2: missing (0 files)",
+        "db_r2_mismatch: missing keys ['r2_original_key']",
+        "auto_repaired_db_keys: ['r2_original_key']",
+        "derivatives_missing: needs regeneration"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "derivative_regeneration",
+          "reason": "Original exists but derivatives missing for photo 3527",
+          "original_path": "originals/3527/DJI_0273.jpg"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 35,
+      "photo_id": 6004,
+      "slug": "cl0a6938-birds-macaws-lapas-2622",
+      "repairs": [
+        "original_r2: exists (1 files)",
+        "derivatives_r2: exists (4 files)",
+        "db_r2_mismatch: missing keys ['r2_web_large_key', 'r2_web_small_key', 'r2_thumb_key', 'r2_original_key']",
+        "auto_repaired_db_keys: ['r2_original_key', 'r2_thumb_key', 'r2_web_small_key', 'r2_web_large_key']"
+      ],
+      "errors": [],
+      "approval_required": [],
+      "status": "completed"
+    },
+    {
+      "queue_id": 36,
+      "photo_id": 7215,
+      "slug": "2021-03-28-16-37-36-flowers-plants-trees-3833",
+      "repairs": [
+        "original_r2: exists (1 files)",
+        "derivatives_r2: missing (0 files)",
+        "db_r2_mismatch: missing keys ['r2_original_key']",
+        "auto_repaired_db_keys: ['r2_original_key']",
+        "derivatives_missing: needs regeneration"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "derivative_regeneration",
+          "reason": "Original exists but derivatives missing for photo 7215",
+          "original_path": "originals/7215/DJI_0051.JPG"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 37,
+      "photo_id": 6212,
+      "slug": "img-0406-butterflies-2830",
+      "repairs": [
+        "original_r2: exists (1 files)",
+        "derivatives_r2: missing (0 files)",
+        "db_r2_mismatch: missing keys ['r2_original_key']",
+        "auto_repaired_db_keys: ['r2_original_key']",
+        "derivatives_missing: needs regeneration"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "derivative_regeneration",
+          "reason": "Original exists but derivatives missing for photo 6212",
+          "original_path": "originals/6212/DJI_0349.JPG"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 38,
+      "photo_id": 4834,
+      "slug": "img-0133-10105",
+      "repairs": [
+        "original_r2: exists (1 files)",
+        "derivatives_r2: missing (0 files)",
+        "db_r2_mismatch: missing keys ['r2_original_key']",
+        "auto_repaired_db_keys: ['r2_original_key']",
+        "derivatives_missing: needs regeneration"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "derivative_regeneration",
+          "reason": "Original exists but derivatives missing for photo 4834",
+          "original_path": "originals/4834/DJI_0100.JPG"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 39,
+      "photo_id": 14706,
+      "slug": "img-4417-wildlife-11324",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 14706",
+          "slug": "img-4417-wildlife-11324"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 40,
+      "photo_id": 5575,
+      "slug": "dji-0661-002-11288",
+      "repairs": [
+        "original_r2: exists (1 files)",
+        "derivatives_r2: missing (0 files)",
+        "db_r2_mismatch: missing keys ['r2_original_key']",
+        "auto_repaired_db_keys: ['r2_original_key']",
+        "derivatives_missing: needs regeneration"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "derivative_regeneration",
+          "reason": "Original exists but derivatives missing for photo 5575",
+          "original_path": "originals/5575/DJI_0272.JPG"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 41,
+      "photo_id": 8625,
+      "slug": "dji-0187-jaco-beach-5243",
+      "repairs": [
+        "original_r2: exists (1 files)",
+        "derivatives_r2: missing (0 files)",
+        "db_r2_mismatch: missing keys ['r2_original_key']",
+        "auto_repaired_db_keys: ['r2_original_key']",
+        "derivatives_missing: needs regeneration"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "derivative_regeneration",
+          "reason": "Original exists but derivatives missing for photo 8625",
+          "original_path": "originals/8625/2022-02-18_18.02.04.jpg"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 42,
+      "photo_id": 6316,
+      "slug": "dji-0676-conchal-guanacaste-2934",
+      "repairs": [
+        "original_r2: exists (1 files)",
+        "derivatives_r2: missing (0 files)",
+        "db_r2_mismatch: missing keys ['r2_original_key']",
+        "auto_repaired_db_keys: ['r2_original_key']",
+        "derivatives_missing: needs regeneration"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "derivative_regeneration",
+          "reason": "Original exists but derivatives missing for photo 6316",
+          "original_path": "originals/6316/DJI_0504.JPG"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 43,
+      "photo_id": 4530,
+      "slug": "cl0a2264-birds-1932",
+      "repairs": [
+        "original_r2: exists (1 files)",
+        "derivatives_r2: missing (0 files)",
+        "db_r2_mismatch: missing keys ['r2_original_key']",
+        "auto_repaired_db_keys: ['r2_original_key']",
+        "derivatives_missing: needs regeneration"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "derivative_regeneration",
+          "reason": "Original exists but derivatives missing for photo 4530",
+          "original_path": "originals/4530/2018-11-23_08.25.59.jpg"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 19,
+      "photo_id": 7172,
+      "slug": "2020-10-11-12-33-20-flowers-plants-trees-3790",
+      "repairs": [
+        "original_r2: exists (1 files)",
+        "derivatives_r2: missing (0 files)",
+        "db_r2_mismatch: missing keys ['r2_original_key']",
+        "auto_repaired_db_keys: ['r2_original_key']",
+        "derivatives_missing: needs regeneration"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "derivative_regeneration",
+          "reason": "Original exists but derivatives missing for photo 7172",
+          "original_path": "originals/7172/CL0A6110.jpg"
+        }
+      ],
+      "status": "completed"
+    }
+  ]
+}

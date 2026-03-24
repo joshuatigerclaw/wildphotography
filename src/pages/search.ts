@@ -86,5 +86,8 @@ export async function renderSearch(env: Env, url: URL): Promise<Response> {
     ${resultsContent}
   `;
   
-  return layout(`Search${query ? ' - ' + query : ''} - Wildphotography`, content);
+  return layout(`Search${query ? ' - ' + query : ''} - Wildphotography`, content, '', '', {
+    noindex: true,
+    description: `Search results for ${query || 'photos'} on Wildphotography - Costa Rica nature photography`
+  });
 }

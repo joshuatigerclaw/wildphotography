@@ -1,0 +1,48 @@
+{
+  "queue_name": "new_uploads_import",
+  "items": [
+    {
+      "id": "ext_NewUploads_4a8ad7dd6c4913ec",
+      "type": "photo",
+      "source_path": "/Volumes/ADATA SC740/Smugmug Backup/Galleries/New-Uploads/DJI_0709.jpg",
+      "gallery_folder": "New-Uploads",
+      "filename": "DJI_0709.jpg",
+      "content_hash": "4a8ad7dd6c4913ec33ea506f6c61c1ec094023ed15a38783f21fc2cb815a8b35",
+      "size": 40788863,
+      "approved": true,
+      "priority": 60,
+      "attempt_count": 0,
+      "status": "completed",
+      "photo_id": 19955
+    },
+    {
+      "id": "ext_NewUploads_58295201421a4ced",
+      "type": "photo",
+      "source_path": "/Volumes/ADATA SC740/Smugmug Backup/Galleries/New-Uploads/DJI_0710.jpg",
+      "gallery_folder": "New-Uploads",
+      "filename": "DJI_0710.jpg",
+      "content_hash": "58295201421a4ced1a146e9f626ce4da43c8ab188f383ec84939be656e8057f4",
+      "size": 40608639,
+      "approved": true,
+      "priority": 60,
+      "attempt_count": 0,
+      "status": "completed",
+      "photo_id": 19956
+    },
+    {
+      "id": "ext_NewUploads_524e7592e41335dd",
+      "type": "photo",
+      "source_path": "/Volumes/ADATA SC740/Smugmug Backup/Galleries/New-Uploads/DJI_0712.jpg",
+      "gallery_folder": "New-Uploads",
+      "filename": "DJI_0712.jpg",
+      "content_hash": "524e7592e41335dda13aa20042fbae315d599d8150ec058fa70908aad819a8dd",
+      "size": 14783355,
+      "approved": true,
+      "priority": 60,
+      "attempt_count": 0,
+      "status": "completed",
+      "photo_id": 19957
+    }
+  ],
+  "created_at": "2026-03-19T09:32:07.940257Z"
+}

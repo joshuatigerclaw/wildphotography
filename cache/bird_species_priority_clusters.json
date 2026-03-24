@@ -1,0 +1,67 @@
+{
+  "timestamp": "2026-03-18T03:28:49.315Z",
+  "phase": "2_bird_cluster_promotion",
+  "species_clusters": [
+    {
+      "species": "Scarlet Macaw",
+      "scientific": "Ara macao",
+      "images": 4,
+      "slugs": [
+        "scarlet-macaw-dji0726",
+        "scarlet-macaw-dji0727",
+        "scarlet-macaw-img6713",
+        "scarlet-macaw-img0495"
+      ],
+      "status": "complete"
+    },
+    {
+      "species": "Rufous-tailed Hummingbird",
+      "scientific": "Amazilia tzacatl",
+      "images": 5,
+      "slugs": [
+        "rufous-tailed-hummingbird-cl0a3484",
+        "rufous-tailed-hummingbird-cl0a3515",
+        "rufous-tailed-hummingbird-cl0a7130",
+        "rufous-tailed-hummingbird-cl0a7135",
+        "rufous-tailed-hummingbird-cl0a7136"
+      ],
+      "status": "complete"
+    },
+    {
+      "species": "Tricolored Heron",
+      "scientific": "Egretta tricolor",
+      "images": 5,
+      "slugs": [
+        "tricolored-heron-cl0a8973",
+        "tricolored-heron-cl0a8981",
+        "tricolored-heron-cl0a9024",
+        "tricolored-heron-cl0a9013",
+        "tricolored-heron-cl0a9089"
+      ],
+      "status": "complete"
+    },
+    {
+      "species": "White-throated Magpie-Jay",
+      "scientific": "Calocitta formosa",
+      "images": 3,
+      "slugs": [
+        "white-throated-magpie-jay-cl0a1330",
+        "white-throated-magpie-jay-cl0a4339",
+        "white-throated-magpie-jay-img8458"
+      ],
+      "status": "complete"
+    },
+    {
+      "species": "Resplendent Quetzal",
+      "scientific": "Pharomachrus mocinno",
+      "images": 2,
+      "slugs": [
+        "resplendent-quetzal-cl0a0992",
+        "resplendent-quetzal-cl0a1052"
+      ],
+      "status": "complete"
+    }
+  ],
+  "total_species": 5,
+  "total_images": 19
+}

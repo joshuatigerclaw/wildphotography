@@ -1,0 +1,659 @@
+{
+  "batch_id": "repair_20260322_103942",
+  "jobs_processed": 25,
+  "repairs_completed": 123,
+  "failures": 0,
+  "items_requiring_approval": 25,
+  "approval_items": [
+    {
+      "type": "derivative_regeneration",
+      "reason": "Original exists but derivatives missing for photo 1914",
+      "original_path": "originals/1914/CL0A1569.jpg"
+    },
+    {
+      "type": "derivative_regeneration",
+      "reason": "Original exists but derivatives missing for photo 1916",
+      "original_path": "originals/1916/CL0A1660.JPG"
+    },
+    {
+      "type": "derivative_regeneration",
+      "reason": "Original exists but derivatives missing for photo 1917",
+      "original_path": "originals/1917/CL0A1709.jpg"
+    },
+    {
+      "type": "derivative_regeneration",
+      "reason": "Original exists but derivatives missing for photo 1919",
+      "original_path": "originals/1919/CL0A1782.jpg"
+    },
+    {
+      "type": "derivative_regeneration",
+      "reason": "Original exists but derivatives missing for photo 1920",
+      "original_path": "originals/1920/CL0A1800.jpg"
+    },
+    {
+      "type": "derivative_regeneration",
+      "reason": "Original exists but derivatives missing for photo 1922",
+      "original_path": "originals/1922/CL0A1835.jpg"
+    },
+    {
+      "type": "derivative_regeneration",
+      "reason": "Original exists but derivatives missing for photo 1924",
+      "original_path": "originals/1924/CL0A2049.jpg"
+    },
+    {
+      "type": "derivative_regeneration",
+      "reason": "Original exists but derivatives missing for photo 1926",
+      "original_path": "originals/1926/CL0A2116.jpg"
+    },
+    {
+      "type": "derivative_regeneration",
+      "reason": "Original exists but derivatives missing for photo 1927",
+      "original_path": "originals/1927/CL0A2139.jpg"
+    },
+    {
+      "type": "derivative_regeneration",
+      "reason": "Original exists but derivatives missing for photo 1929",
+      "original_path": "originals/1929/CL0A2168.jpg"
+    },
+    {
+      "type": "derivative_regeneration",
+      "reason": "Original exists but derivatives missing for photo 1930",
+      "original_path": "originals/1930/CL0A2196.jpg"
+    },
+    {
+      "type": "derivative_regeneration",
+      "reason": "Original exists but derivatives missing for photo 1932",
+      "original_path": "originals/1932/CL0A2264.jpg"
+    },
+    {
+      "type": "derivative_regeneration",
+      "reason": "Original exists but derivatives missing for photo 1935",
+      "original_path": "originals/1935/CL0A2651.jpg"
+    },
+    {
+      "type": "derivative_regeneration",
+      "reason": "Original exists but derivatives missing for photo 1936",
+      "original_path": "originals/1936/CL0A2656.jpg"
+    },
+    {
+      "type": "derivative_regeneration",
+      "reason": "Original exists but derivatives missing for photo 1938",
+      "original_path": "originals/1938/CL0A2693.jpg"
+    },
+    {
+      "type": "derivative_regeneration",
+      "reason": "Original exists but derivatives missing for photo 1939",
+      "original_path": "originals/1939/CL0A2719.jpg"
+    },
+    {
+      "type": "derivative_regeneration",
+      "reason": "Original exists but derivatives missing for photo 1943",
+      "original_path": "originals/1943/CL0A2779.JPG"
+    },
+    {
+      "type": "derivative_regeneration",
+      "reason": "Original exists but derivatives missing for photo 1946",
+      "original_path": "originals/1946/CL0A2850.JPG"
+    },
+    {
+      "type": "derivative_regeneration",
+      "reason": "Original exists but derivatives missing for photo 1950",
+      "original_path": "originals/1950/CL0A2904.jpg"
+    },
+    {
+      "type": "derivative_regeneration",
+      "reason": "Original exists but derivatives missing for photo 1952",
+      "original_path": "originals/1952/CL0A3004.JPG"
+    },
+    {
+      "type": "derivative_regeneration",
+      "reason": "Original exists but derivatives missing for photo 1953",
+      "original_path": "originals/1953/CL0A3009.JPG"
+    },
+    {
+      "type": "derivative_regeneration",
+      "reason": "Original exists but derivatives missing for photo 1955",
+      "original_path": "originals/1955/CL0A3023.JPG"
+    },
+    {
+      "type": "derivative_regeneration",
+      "reason": "Original exists but derivatives missing for photo 1956",
+      "original_path": "originals/1956/CL0A3037.JPG"
+    },
+    {
+      "type": "derivative_regeneration",
+      "reason": "Original exists but derivatives missing for photo 1958",
+      "original_path": "originals/1958/CL0A3075.jpg"
+    },
+    {
+      "type": "derivative_regeneration",
+      "reason": "Original exists but derivatives missing for photo 1855",
+      "original_path": "originals/1855/P4106795.JPG"
+    }
+  ],
+  "results": [
+    {
+      "queue_id": 13632,
+      "photo_id": 1914,
+      "slug": "dji-0222-1309",
+      "repairs": [
+        "original_r2: exists (1 files)",
+        "derivatives_r2: missing (0 files)",
+        "derivatives_missing: needs regeneration"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "derivative_regeneration",
+          "reason": "Original exists but derivatives missing for photo 1914",
+          "original_path": "originals/1914/CL0A1569.jpg"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 13633,
+      "photo_id": 1916,
+      "slug": "img-1013-arenal-volcano-1094",
+      "repairs": [
+        "original_r2: exists (1 files)",
+        "derivatives_r2: missing (0 files)",
+        "db_r2_mismatch: missing keys ['r2_original_key']",
+        "auto_repaired_db_keys: ['r2_original_key']",
+        "derivatives_missing: needs regeneration"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "derivative_regeneration",
+          "reason": "Original exists but derivatives missing for photo 1916",
+          "original_path": "originals/1916/CL0A1660.JPG"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 13634,
+      "photo_id": 1917,
+      "slug": "dji-0236-1310",
+      "repairs": [
+        "original_r2: exists (1 files)",
+        "derivatives_r2: missing (0 files)",
+        "db_r2_mismatch: missing keys ['r2_original_key']",
+        "auto_repaired_db_keys: ['r2_original_key']",
+        "derivatives_missing: needs regeneration"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "derivative_regeneration",
+          "reason": "Original exists but derivatives missing for photo 1917",
+          "original_path": "originals/1917/CL0A1709.jpg"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 13635,
+      "photo_id": 1919,
+      "slug": "img-5854-arenal-volcano-1095",
+      "repairs": [
+        "original_r2: exists (1 files)",
+        "derivatives_r2: missing (0 files)",
+        "db_r2_mismatch: missing keys ['r2_original_key']",
+        "auto_repaired_db_keys: ['r2_original_key']",
+        "derivatives_missing: needs regeneration"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "derivative_regeneration",
+          "reason": "Original exists but derivatives missing for photo 1919",
+          "original_path": "originals/1919/CL0A1782.jpg"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 13636,
+      "photo_id": 1920,
+      "slug": "dji-0242-1311",
+      "repairs": [
+        "original_r2: exists (1 files)",
+        "derivatives_r2: missing (0 files)",
+        "db_r2_mismatch: missing keys ['r2_original_key']",
+        "auto_repaired_db_keys: ['r2_original_key']",
+        "derivatives_missing: needs regeneration"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "derivative_regeneration",
+          "reason": "Original exists but derivatives missing for photo 1920",
+          "original_path": "originals/1920/CL0A1800.jpg"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 13637,
+      "photo_id": 1922,
+      "slug": "img-5900-arenal-volcano-1096",
+      "repairs": [
+        "original_r2: exists (1 files)",
+        "derivatives_r2: missing (0 files)",
+        "db_r2_mismatch: missing keys ['r2_original_key']",
+        "auto_repaired_db_keys: ['r2_original_key']",
+        "derivatives_missing: needs regeneration"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "derivative_regeneration",
+          "reason": "Original exists but derivatives missing for photo 1922",
+          "original_path": "originals/1922/CL0A1835.jpg"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 13638,
+      "photo_id": 1924,
+      "slug": "img-9618-arenal-volcano-1097",
+      "repairs": [
+        "original_r2: exists (1 files)",
+        "derivatives_r2: missing (0 files)",
+        "db_r2_mismatch: missing keys ['r2_original_key']",
+        "auto_repaired_db_keys: ['r2_original_key']",
+        "derivatives_missing: needs regeneration"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "derivative_regeneration",
+          "reason": "Original exists but derivatives missing for photo 1924",
+          "original_path": "originals/1924/CL0A2049.jpg"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 13639,
+      "photo_id": 1926,
+      "slug": "img-9622-arenal-volcano-1098",
+      "repairs": [
+        "original_r2: exists (1 files)",
+        "derivatives_r2: missing (0 files)",
+        "db_r2_mismatch: missing keys ['r2_original_key']",
+        "auto_repaired_db_keys: ['r2_original_key']",
+        "derivatives_missing: needs regeneration"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "derivative_regeneration",
+          "reason": "Original exists but derivatives missing for photo 1926",
+          "original_path": "originals/1926/CL0A2116.jpg"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 13640,
+      "photo_id": 1927,
+      "slug": "dji-0262-2-1313",
+      "repairs": [
+        "original_r2: exists (1 files)",
+        "derivatives_r2: missing (0 files)",
+        "db_r2_mismatch: missing keys ['r2_original_key']",
+        "auto_repaired_db_keys: ['r2_original_key']",
+        "derivatives_missing: needs regeneration"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "derivative_regeneration",
+          "reason": "Original exists but derivatives missing for photo 1927",
+          "original_path": "originals/1927/CL0A2139.jpg"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 13641,
+      "photo_id": 1929,
+      "slug": "img-9624-arenal-volcano-1099",
+      "repairs": [
+        "original_r2: exists (1 files)",
+        "derivatives_r2: missing (0 files)",
+        "db_r2_mismatch: missing keys ['r2_original_key']",
+        "auto_repaired_db_keys: ['r2_original_key']",
+        "derivatives_missing: needs regeneration"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "derivative_regeneration",
+          "reason": "Original exists but derivatives missing for photo 1929",
+          "original_path": "originals/1929/CL0A2168.jpg"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 13642,
+      "photo_id": 1930,
+      "slug": "dji-0274-1314",
+      "repairs": [
+        "original_r2: exists (1 files)",
+        "derivatives_r2: missing (0 files)",
+        "db_r2_mismatch: missing keys ['r2_original_key']",
+        "auto_repaired_db_keys: ['r2_original_key']",
+        "derivatives_missing: needs regeneration"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "derivative_regeneration",
+          "reason": "Original exists but derivatives missing for photo 1930",
+          "original_path": "originals/1930/CL0A2196.jpg"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 13643,
+      "photo_id": 1932,
+      "slug": "img-9625-arenal-volcano-1100",
+      "repairs": [
+        "original_r2: exists (1 files)",
+        "derivatives_r2: missing (0 files)",
+        "db_r2_mismatch: missing keys ['r2_original_key']",
+        "auto_repaired_db_keys: ['r2_original_key']",
+        "derivatives_missing: needs regeneration"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "derivative_regeneration",
+          "reason": "Original exists but derivatives missing for photo 1932",
+          "original_path": "originals/1932/CL0A2264.jpg"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 13644,
+      "photo_id": 1935,
+      "slug": "img-9627-arenal-volcano-1101",
+      "repairs": [
+        "original_r2: exists (1 files)",
+        "derivatives_r2: missing (0 files)",
+        "db_r2_mismatch: missing keys ['r2_original_key']",
+        "auto_repaired_db_keys: ['r2_original_key']",
+        "derivatives_missing: needs regeneration"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "derivative_regeneration",
+          "reason": "Original exists but derivatives missing for photo 1935",
+          "original_path": "originals/1935/CL0A2651.jpg"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 13645,
+      "photo_id": 1936,
+      "slug": "dji-0276-1316",
+      "repairs": [
+        "original_r2: exists (1 files)",
+        "derivatives_r2: missing (0 files)",
+        "db_r2_mismatch: missing keys ['r2_original_key']",
+        "auto_repaired_db_keys: ['r2_original_key']",
+        "derivatives_missing: needs regeneration"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "derivative_regeneration",
+          "reason": "Original exists but derivatives missing for photo 1936",
+          "original_path": "originals/1936/CL0A2656.jpg"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 13646,
+      "photo_id": 1938,
+      "slug": "img-9850-arenal-volcano-1102",
+      "repairs": [
+        "original_r2: exists (1 files)",
+        "derivatives_r2: missing (0 files)",
+        "db_r2_mismatch: missing keys ['r2_original_key']",
+        "auto_repaired_db_keys: ['r2_original_key']",
+        "derivatives_missing: needs regeneration"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "derivative_regeneration",
+          "reason": "Original exists but derivatives missing for photo 1938",
+          "original_path": "originals/1938/CL0A2693.jpg"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 13647,
+      "photo_id": 1939,
+      "slug": "img-9990-arenal-volcano-1103",
+      "repairs": [
+        "original_r2: exists (1 files)",
+        "derivatives_r2: missing (0 files)",
+        "db_r2_mismatch: missing keys ['r2_original_key']",
+        "auto_repaired_db_keys: ['r2_original_key']",
+        "derivatives_missing: needs regeneration"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "derivative_regeneration",
+          "reason": "Original exists but derivatives missing for photo 1939",
+          "original_path": "originals/1939/CL0A2719.jpg"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 13648,
+      "photo_id": 1943,
+      "slug": "dji-0299-1318",
+      "repairs": [
+        "original_r2: exists (1 files)",
+        "derivatives_r2: missing (0 files)",
+        "db_r2_mismatch: missing keys ['r2_original_key']",
+        "auto_repaired_db_keys: ['r2_original_key']",
+        "derivatives_missing: needs regeneration"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "derivative_regeneration",
+          "reason": "Original exists but derivatives missing for photo 1943",
+          "original_path": "originals/1943/CL0A2779.JPG"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 13649,
+      "photo_id": 1946,
+      "slug": "dji-0302-1319",
+      "repairs": [
+        "original_r2: exists (1 files)",
+        "derivatives_r2: missing (0 files)",
+        "db_r2_mismatch: missing keys ['r2_original_key']",
+        "auto_repaired_db_keys: ['r2_original_key']",
+        "derivatives_missing: needs regeneration"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "derivative_regeneration",
+          "reason": "Original exists but derivatives missing for photo 1946",
+          "original_path": "originals/1946/CL0A2850.JPG"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 13650,
+      "photo_id": 1950,
+      "slug": "2016-12-29-12-25-35-beaches-1107",
+      "repairs": [
+        "original_r2: exists (1 files)",
+        "derivatives_r2: missing (0 files)",
+        "db_r2_mismatch: missing keys ['r2_original_key']",
+        "auto_repaired_db_keys: ['r2_original_key']",
+        "derivatives_missing: needs regeneration"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "derivative_regeneration",
+          "reason": "Original exists but derivatives missing for photo 1950",
+          "original_path": "originals/1950/CL0A2904.jpg"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 13651,
+      "photo_id": 1952,
+      "slug": "dji-0305-1321",
+      "repairs": [
+        "original_r2: exists (1 files)",
+        "derivatives_r2: missing (0 files)",
+        "db_r2_mismatch: missing keys ['r2_original_key']",
+        "auto_repaired_db_keys: ['r2_original_key']",
+        "derivatives_missing: needs regeneration"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "derivative_regeneration",
+          "reason": "Original exists but derivatives missing for photo 1952",
+          "original_path": "originals/1952/CL0A3004.JPG"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 13652,
+      "photo_id": 1953,
+      "slug": "2018-03-28-08-12-11-beaches-1108",
+      "repairs": [
+        "original_r2: exists (1 files)",
+        "derivatives_r2: missing (0 files)",
+        "db_r2_mismatch: missing keys ['r2_original_key']",
+        "auto_repaired_db_keys: ['r2_original_key']",
+        "derivatives_missing: needs regeneration"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "derivative_regeneration",
+          "reason": "Original exists but derivatives missing for photo 1953",
+          "original_path": "originals/1953/CL0A3009.JPG"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 13653,
+      "photo_id": 1955,
+      "slug": "2018-03-28-09-05-11-beaches-1109",
+      "repairs": [
+        "original_r2: exists (1 files)",
+        "derivatives_r2: missing (0 files)",
+        "db_r2_mismatch: missing keys ['r2_original_key']",
+        "auto_repaired_db_keys: ['r2_original_key']",
+        "derivatives_missing: needs regeneration"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "derivative_regeneration",
+          "reason": "Original exists but derivatives missing for photo 1955",
+          "original_path": "originals/1955/CL0A3023.JPG"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 13654,
+      "photo_id": 1956,
+      "slug": "dji-0310-1322",
+      "repairs": [
+        "original_r2: exists (1 files)",
+        "derivatives_r2: missing (0 files)",
+        "db_r2_mismatch: missing keys ['r2_original_key']",
+        "auto_repaired_db_keys: ['r2_original_key']",
+        "derivatives_missing: needs regeneration"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "derivative_regeneration",
+          "reason": "Original exists but derivatives missing for photo 1956",
+          "original_path": "originals/1956/CL0A3037.JPG"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 13655,
+      "photo_id": 1958,
+      "slug": "2018-03-28-09-08-29-beaches-1110",
+      "repairs": [
+        "original_r2: exists (1 files)",
+        "derivatives_r2: missing (0 files)",
+        "db_r2_mismatch: missing keys ['r2_original_key']",
+        "auto_repaired_db_keys: ['r2_original_key']",
+        "derivatives_missing: needs regeneration"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "derivative_regeneration",
+          "reason": "Original exists but derivatives missing for photo 1958",
+          "original_path": "originals/1958/CL0A3075.jpg"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 13608,
+      "photo_id": 1855,
+      "slug": "dji-0146-1290",
+      "repairs": [
+        "original_r2: exists (1 files)",
+        "derivatives_r2: missing (0 files)",
+        "db_r2_mismatch: missing keys ['r2_original_key']",
+        "auto_repaired_db_keys: ['r2_original_key']",
+        "derivatives_missing: needs regeneration"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "derivative_regeneration",
+          "reason": "Original exists but derivatives missing for photo 1855",
+          "original_path": "originals/1855/P4106795.JPG"
+        }
+      ],
+      "status": "completed"
+    }
+  ]
+}

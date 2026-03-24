@@ -1,0 +1,412 @@
+[
+  {
+    "filename": "2020-10-10 07.46.35.jpg",
+    "species_name": "Plain Chachalaca",
+    "scientific_name": "Ortalis vetula",
+    "family": "Cracidae",
+    "confidence": 0.95,
+    "reasoning": "The bird has a long neck, small head, and long tail. The overall coloration is brownish-gray. The location is Costa Rica, which is within the range of the Plain Chachalaca. These features are consistent with the Plain Chachalaca."
+  },
+  {
+    "filename": "2020-10-10 07.46.37.jpg",
+    "species_name": "Plain Chachalaca",
+    "scientific_name": "Ortalis vetula",
+    "family": "Cracidae",
+    "confidence": 0.95,
+    "reasoning": "The bird has a long tail, brown body, and grey head, which are characteristic of the Plain Chachalaca. The location in Costa Rica also supports this identification."
+  },
+  {
+    "filename": "2020-10-10 07.46.40.jpg",
+    "species_name": "Gray-headed Chachalaca",
+    "scientific_name": "Ortalis cinereiceps",
+    "family": "Cracidae",
+    "confidence": 0.95,
+    "reasoning": "The bird has a gray head, brown body, and long tail, which are characteristic features of the Gray-headed Chachalaca. The location in Costa Rica also supports this identification, as this species is found in that region."
+  },
+  {
+    "filename": "20240919_150625.jpg",
+    "species_name": "Crested Caracara",
+    "scientific_name": "Caracara cheriway",
+    "family": "Falconidae",
+    "confidence": 0.95,
+    "reasoning": "The bird has a distinctive black crest, orange face, and barred neck, which are characteristic of the Crested Caracara. The yellow legs are also a good indicator."
+  },
+  {
+    "filename": "20250326_172615.jpg",
+    "species_name": "White-throated Magpie-Jay",
+    "scientific_name": "Calocitta formosa",
+    "family": "Corvidae",
+    "confidence": 0.95,
+    "reasoning": "The bird has a dark brown head and upper body, with a white throat and underparts. The long tail and overall shape are consistent with a White-throated Magpie-Jay, a species found in Costa Rica."
+  },
+  {
+    "filename": "20250413_144326.jpg",
+    "species_name": "Gilded Flicker",
+    "scientific_name": "Colaptes chrysoides",
+    "family": "Picidae",
+    "confidence": 0.95,
+    "reasoning": "The bird in the image has a long, slightly curved bill, a brown head, and a spotted back. These features are consistent with the Gilded Flicker, a woodpecker species found in the southwestern United States and Mexico. The location of the image is also consistent with the Gilded Flicker's range."
+  },
+  {
+    "filename": "20250415_085324.jpg",
+    "species_name": "Whimbrel",
+    "scientific_name": "Numenius phaeopus",
+    "family": "Scolopacidae",
+    "confidence": 0.95,
+    "reasoning": "The bird has a long, decurved bill, mottled brown plumage, and is standing in shallow water. These characteristics are consistent with a Whimbrel."
+  },
+  {
+    "filename": "20250419_122142.jpg",
+    "species_name": "Brown Pelican",
+    "scientific_name": "Pelecanus occidentalis",
+    "family": "Pelecanidae",
+    "confidence": 0.95,
+    "reasoning": "The bird in the image has a large bill and gular pouch, which are characteristic features of pelicans. The overall shape and size of the bird, along with the location (coastal area), suggest it is a Brown Pelican."
+  },
+  {
+    "filename": "20250421_074316.jpg",
+    "species_name": "Northern Cardinal",
+    "scientific_name": "Cardinalis cardinalis",
+    "family": "Cardinalidae",
+    "confidence": 0.95,
+    "reasoning": "The bird is bright red with a crest, which is a key characteristic of the male Northern Cardinal."
+  },
+  {
+    "filename": "AR_IMG_1724.JPG",
+    "species_name": "Tiger Heron",
+    "scientific_name": "Tigrisoma",
+    "family": "Ardeidae",
+    "confidence": 0.95,
+    "reasoning": "The bird in the image has a long, pointed bill, a striped neck and body, and a crest on its head. These features are characteristic of tiger herons, a group of heron species found in Central and South America. The specific species is difficult to determine from the image alone, but the overall appearance is consistent with a tiger heron."
+  },
+  {
+    "filename": "AR_IMG_1733.JPG",
+    "species_name": "Bare-throated Tiger Heron",
+    "scientific_name": "Tigrisoma mexicanum",
+    "family": "Ardeidae",
+    "confidence": 0.95,
+    "reasoning": "The bird in the image has a long, pointed bill, a striped neck and breast, and a generally brownish coloration. These features are consistent with the Bare-throated Tiger Heron (Tigrisoma mexicanum). The yellow throat is also a key identifier."
+  },
+  {
+    "filename": "CL0A0009.jpg",
+    "species_name": "Long-billed Curlew",
+    "scientific_name": "Numenius americanus",
+    "family": "Scolopacidae",
+    "confidence": 0.95,
+    "reasoning": "The bird in the image has a long, downcurved bill, mottled brown plumage, and is standing in shallow water. These characteristics are consistent with a Long-billed Curlew."
+  },
+  {
+    "filename": "CL0A0044.jpg",
+    "species_name": "Long-billed Curlew",
+    "scientific_name": "Numenius americanus",
+    "family": "Scolopacidae",
+    "confidence": 0.95,
+    "reasoning": "The bird in the image has a long, decurved bill, mottled brown plumage, and long legs, all characteristics of a Long-billed Curlew. The size and shape of the bill are particularly distinctive."
+  },
+  {
+    "filename": "CL0A0094.jpg",
+    "species_name": "Laughing Gull",
+    "scientific_name": "Leucophaeus atricilla",
+    "family": "Laridae",
+    "confidence": 0.95,
+    "reasoning": "The bird in the image has a dark gray back and wings, a black head (though it appears mottled, which can be seen in non-breeding plumage), and a dark bill. These features are consistent with a Laughing Gull, particularly in its non-breeding or transitional plumage. The white leading edge on the wing is also a characteristic feature."
+  },
+  {
+    "filename": "CL0A0130.JPG",
+    "species_name": "Montezuma Oropendola",
+    "scientific_name": "Psarocolius montezuma",
+    "family": "Icteridae",
+    "confidence": 0.95,
+    "reasoning": "The birds in the image have a distinctive appearance with a dark head and chest, a chestnut-colored body, and a bright yellow tail. They also have a pale bill with an orange patch. These features are characteristic of the Montezuma Oropendola, a species of bird found in Central America. The birds are also seen in a palm tree, which is a common habitat for this species."
+  },
+  {
+    "filename": "CL0A0142.jpg",
+    "species_name": "Scarlet Macaw",
+    "scientific_name": "Ara macao",
+    "family": "Psittacidae",
+    "confidence": 0.95,
+    "reasoning": "The birds in the image have the characteristic bright red plumage, long tail feathers, and bare facial skin of Scarlet Macaws. The yellow and blue wing feathers are also visible, further supporting this identification."
+  },
+  {
+    "filename": "CL0A0147.jpg",
+    "species_name": "Black-crowned Night-Heron",
+    "scientific_name": "Nycticorax nycticorax",
+    "family": "Ardeidae",
+    "confidence": 0.95,
+    "reasoning": "The bird in the image has a stocky build, broad wings, and a short neck, which are characteristic of herons. The dark back and wings, combined with the lighter underparts, suggest a Black-crowned Night-Heron. The posture and wing shape in flight also align with this species."
+  },
+  {
+    "filename": "CL0A0160.jpg",
+    "species_name": "Tricolored Heron",
+    "scientific_name": "Egretta tricolor",
+    "family": "Ardeidae",
+    "confidence": 0.95,
+    "reasoning": "The bird in the image has a blue-gray body, a white belly, a long yellow bill, and yellow legs. These characteristics are consistent with the Tricolored Heron (Egretta tricolor)."
+  },
+  {
+    "filename": "CL0A0212.jpg",
+    "species_name": "Tricolored Heron",
+    "scientific_name": "Egretta tricolor",
+    "family": "Ardeidae",
+    "confidence": 0.95,
+    "reasoning": "The bird in the image has a long, slender neck, a white belly, and bluish-gray wings and head. These features are characteristic of the Tricolored Heron (Egretta tricolor). The bird is standing in shallow water, which is a typical habitat for this species. The posture with wings spread is also consistent with behavior of herons."
+  },
+  {
+    "filename": "CL0A0213.jpg",
+    "species_name": "Tooth-billed Hummingbird",
+    "scientific_name": "Androdon aequatorialis",
+    "family": "Trochilidae",
+    "confidence": 0.95,
+    "reasoning": "The bird in the image has a distinctive feature: a serrated or \"toothed\" bill. This is a key characteristic of the Tooth-billed Hummingbird (Androdon aequatorialis). The overall coloration, size, and shape of the bird also align with this species."
+  },
+  {
+    "filename": "CL0A0281.jpg",
+    "species_name": "Green Violetear",
+    "scientific_name": "Colibri thalassinus",
+    "family": "Trochilidae",
+    "confidence": 0.95,
+    "reasoning": "The bird in the image is a hummingbird with a straight, black bill. It has iridescent green plumage on its body and a dark, violet-blue patch on the ear coverts. The tail is dark and slightly forked. These features are consistent with the Green Violetear (Colibri thalassinus)."
+  },
+  {
+    "filename": "CL0A0307.jpg",
+    "species_name": "Tooth-billed Hummingbird",
+    "scientific_name": "Androdon aequatorialis",
+    "family": "Trochilidae",
+    "confidence": 0.95,
+    "reasoning": "The bird in the image has a distinctive upturned bill with serrations, which is characteristic of the Tooth-billed Hummingbird (Androdon aequatorialis). The overall coloration and body shape also match this species."
+  },
+  {
+    "filename": "CL0A0537.jpg",
+    "species_name": "Tricolored Heron",
+    "scientific_name": "Egretta tricolor",
+    "family": "Ardeidae",
+    "confidence": 0.95,
+    "reasoning": "The bird has a long, slender yellow bill, a long neck, and long yellow legs. The body is mostly gray-blue, with a white stripe down the front of the neck. These features are consistent with a Tricolored Heron."
+  },
+  {
+    "filename": "CL0A0540.jpg",
+    "species_name": "Sanderling",
+    "scientific_name": "Calidris alba",
+    "family": "Scolopacidae",
+    "confidence": 0.95,
+    "reasoning": "The birds in the image are small shorebirds with a pale plumage and a straight, black bill. They are foraging on a sandy beach, which is typical habitat for Sanderlings. The plumage pattern, size, and behavior are consistent with Sanderlings."
+  },
+  {
+    "filename": "CL0A0543.jpg",
+    "species_name": "Sanderling",
+    "scientific_name": "Calidris alba",
+    "family": "Scolopacidae",
+    "confidence": 0.95,
+    "reasoning": "The birds in the image are small shorebirds with a pale gray back and white underparts. They have a straight, black bill and black legs. These characteristics are consistent with Sanderlings, which are commonly found on sandy beaches foraging for invertebrates."
+  },
+  {
+    "filename": "CL0A0559.jpg",
+    "species_name": "Sanderling",
+    "scientific_name": "Calidris alba",
+    "family": "Scolopacidae",
+    "confidence": 0.95
+  },
+  {
+    "filename": "CL0A0764.JPG",
+    "species_name": "Brown Booby",
+    "scientific_name": "Sula leucogaster",
+    "family": "Sulidae",
+    "confidence": 0.95
+  },
+  {
+    "filename": "CL0A0767.JPG",
+    "species_name": "Brown Booby",
+    "scientific_name": "Sula leucogaster",
+    "family": "Sulidae",
+    "confidence": 0.95
+  },
+  {
+    "filename": "CL0A0848.jpg",
+    "species_name": "Violet Sabrewing",
+    "scientific_name": "Campylopterus hemileucurus",
+    "family": "Trochilidae",
+    "confidence": 0.95
+  },
+  {
+    "filename": "CL0A0976.jpg",
+    "species_name": "Long-billed Curlew",
+    "scientific_name": "Numenius americanus",
+    "family": "Scolopacidae",
+    "confidence": 0.95
+  },
+  {
+    "filename": "CL0A0991.jpg",
+    "species_name": "Amazon Kingfisher",
+    "scientific_name": "Chloroceryle amazona",
+    "family": "Alcedinidae",
+    "confidence": 0.95
+  },
+  {
+    "filename": "CL0A0992.JPG",
+    "species_name": "Resplendent Quetzal",
+    "scientific_name": "Pharomachrus mocinno",
+    "family": "Trogonidae",
+    "confidence": 0.95
+  },
+  {
+    "filename": "CL0A1001.jpg",
+    "species_name": "Green-crowned Brilliant",
+    "scientific_name": "Heliodoxa jacula",
+    "family": "Trochilidae",
+    "confidence": 0.95
+  },
+  {
+    "filename": "CL0A1031.jpg",
+    "species_name": "Tricolored Heron",
+    "scientific_name": "Egretta tricolor",
+    "family": "Ardeidae",
+    "confidence": 0.95
+  },
+  {
+    "filename": "CL0A1052.JPG",
+    "species_name": "Resplendent Quetzal",
+    "scientific_name": "Pharomachrus mocinno",
+    "family": "Trogonidae",
+    "confidence": 0.95
+  },
+  {
+    "filename": "CL0A1056.jpg",
+    "species_name": "Resplendent Quetzal",
+    "scientific_name": "Pharomachrus mocinno",
+    "family": "Trogonidae",
+    "confidence": 0.95
+  },
+  {
+    "filename": "CL0A1079.jpg",
+    "species_name": "Tricolored Heron",
+    "scientific_name": "Egretta tricolor",
+    "family": "Ardeidae",
+    "confidence": 0.95
+  },
+  {
+    "filename": "CL0A1100.JPG",
+    "species_name": "Resplendent Quetzal",
+    "scientific_name": "Pharomachrus mocinno",
+    "family": "Trogonidae",
+    "confidence": 0.95
+  },
+  {
+    "filename": "CL0A1105.jpg",
+    "species_name": "Tricolored Heron",
+    "scientific_name": "Egretta tricolor",
+    "family": "Ardeidae",
+    "confidence": 0.95
+  },
+  {
+    "filename": "CL0A1109.jpg",
+    "species_name": "Tricolored Heron",
+    "scientific_name": "Egretta tricolor",
+    "family": "Ardeidae",
+    "confidence": 0.95
+  },
+  {
+    "filename": "CL0A1162.jpg",
+    "species_name": "Snowy Egret",
+    "scientific_name": "Egretta thula",
+    "family": "Ardeidae",
+    "confidence": 0.95
+  },
+  {
+    "filename": "CL0A1164.jpg",
+    "species_name": "Snowy Egret",
+    "scientific_name": "Egretta thula",
+    "family": "Ardeidae",
+    "confidence": 0.95
+  },
+  {
+    "filename": "CL0A1206.jpg",
+    "species_name": "Whimbrel",
+    "scientific_name": "Numenius phaeopus",
+    "family": "Scolopacidae",
+    "confidence": 0.95
+  },
+  {
+    "filename": "CL0A1330.jpg",
+    "species_name": "White-throated Magpie-Jay",
+    "scientific_name": "Calocitta formosa",
+    "family": "Corvidae",
+    "confidence": 0.95
+  },
+  {
+    "filename": "CL0A1353.jpg",
+    "species_name": "Rufous-tailed Hummingbird",
+    "scientific_name": "Amazilia tzacatl",
+    "family": "Trochilidae",
+    "confidence": 0.95
+  },
+  {
+    "filename": "CL0A1356.jpg",
+    "species_name": "Rufous-tailed Hummingbird",
+    "scientific_name": "Amazilia tzacatl",
+    "family": "Trochilidae",
+    "confidence": 0.95
+  },
+  {
+    "filename": "CL0A1359.jpg",
+    "species_name": "Rufous-tailed Hummingbird",
+    "scientific_name": "Amazilia tzacatl",
+    "family": "Trochilidae",
+    "confidence": 0.95
+  },
+  {
+    "filename": "CL0A1360.jpg",
+    "species_name": "Rufous-tailed Hummingbird",
+    "scientific_name": "Amazilia tzacatl",
+    "family": "Trochilidae",
+    "confidence": 0.95
+  },
+  {
+    "filename": "CL0A1421.jpg",
+    "species_name": "Resplendent Quetzal",
+    "scientific_name": "Pharomachrus mocinno",
+    "family": "Trogonidae",
+    "confidence": 0.95
+  },
+  {
+    "filename": "CL0A1521.jpg",
+    "species_name": "Rufous-tailed Hummingbird",
+    "scientific_name": "Amazilia tzacatl",
+    "family": "Trochilidae",
+    "confidence": 0.95
+  },
+  {
+    "filename": "CL0A1563.jpg",
+    "species_name": "Resplendent Quetzal",
+    "scientific_name": "Pharomachrus mocinno",
+    "family": "Trogonidae",
+    "confidence": 0.95
+  },
+  {
+    "filename": "CL0A1566.jpg",
+    "species_name": "Anhinga",
+    "scientific_name": "Anhinga anhinga",
+    "family": "Anhingidae",
+    "confidence": 0.95
+  },
+  {
+    "filename": "CL0A1567.jpg",
+    "species_name": "Neotropic Cormorant",
+    "scientific_name": "Nannopterum brasilianum",
+    "family": "Phalacrocoracidae",
+    "confidence": 0.95
+  },
+  {
+    "filename": "CL0A1569.jpg",
+    "species_name": "Neotropic Cormorant",
+    "scientific_name": "Nannopterum brasilianum",
+    "family": "Phalacrocoracidae",
+    "confidence": 0.95
+  },
+  {
+    "filename": "CL0A1659.JPG",
+    "species_name": "Gray Hawk",
+    "scientific_name": "Buteo plagiatus",
+    "family": "Accipitridae",
+    "confidence": 0.95
+  }
+]

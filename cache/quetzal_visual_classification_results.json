@@ -1,0 +1,810 @@
+[
+  {
+    "filename": "2020-10-10 07.46.35.jpg",
+    "folder": "Birds",
+    "error": "no parse"
+  },
+  {
+    "filename": "2020-10-10 07.46.37.jpg",
+    "folder": "Birds",
+    "species": "Resplendent Quetzal",
+    "scientific": "Pharomachrus mocinno",
+    "family": "Trogonidae",
+    "confidence": 0.95,
+    "is_quetzal": true
+  },
+  {
+    "filename": "2020-10-10 07.46.40.jpg",
+    "folder": "Birds",
+    "species": "Resplendent Quetzal",
+    "scientific": "Pharomachrus mocinno",
+    "family": "Trogonidae",
+    "confidence": 0.95,
+    "is_quetzal": true
+  },
+  {
+    "filename": "20240919_150625.jpg",
+    "folder": "Birds",
+    "species": "unknown",
+    "scientific": "unknown",
+    "family": "unknown",
+    "confidence": 0.1,
+    "is_quetzal": false
+  },
+  {
+    "filename": "20250326_172615.jpg",
+    "folder": "Birds",
+    "error": "no parse"
+  },
+  {
+    "filename": "20250413_144326.jpg",
+    "folder": "Birds",
+    "species": "No bird detected",
+    "scientific": "N/A",
+    "family": "N/A",
+    "confidence": 0.95,
+    "is_quetzal": false
+  },
+  {
+    "filename": "20250415_085324.jpg",
+    "folder": "Birds",
+    "species": "N/A",
+    "scientific": "N/A",
+    "family": "N/A",
+    "confidence": 0,
+    "is_quetzal": false
+  },
+  {
+    "filename": "20250419_122142.jpg",
+    "folder": "Birds",
+    "species": "Magnificent Frigatebird",
+    "scientific": "Fregata magnificens",
+    "family": "Fregatidae",
+    "confidence": 0.95,
+    "is_quetzal": false
+  },
+  {
+    "filename": "20250421_074316.jpg",
+    "folder": "Birds",
+    "species": "Resplendent Quetzal",
+    "scientific": "Pharomachrus mocinno",
+    "family": "Trogonidae",
+    "confidence": 0.75,
+    "is_quetzal": true
+  },
+  {
+    "filename": "AR_IMG_1724.JPG",
+    "folder": "Birds",
+    "error": "no parse"
+  },
+  {
+    "filename": "AR_IMG_1733.JPG",
+    "folder": "Birds",
+    "species": "Spotted Wood Quail",
+    "scientific": "Odontophorus guttatus",
+    "family": "Odontophoridae",
+    "confidence": 0.95,
+    "is_quetzal": false
+  },
+  {
+    "filename": "CL0A0009.jpg",
+    "folder": "Birds",
+    "species": "Unknown",
+    "scientific": "Unknown",
+    "family": "Unknown",
+    "confidence": 0.1,
+    "is_quetzal": false
+  },
+  {
+    "filename": "CL0A0044.jpg",
+    "folder": "Birds",
+    "error": "no parse"
+  },
+  {
+    "filename": "CL0A0094.jpg",
+    "folder": "Birds",
+    "species": "unknown",
+    "scientific": "unknown",
+    "family": "unknown",
+    "confidence": 0,
+    "is_quetzal": false
+  },
+  {
+    "filename": "CL0A0130.JPG",
+    "folder": "Birds",
+    "species": "unknown",
+    "scientific": "unknown",
+    "family": "unknown",
+    "confidence": 0,
+    "is_quetzal": false
+  },
+  {
+    "filename": "CL0A0142.jpg",
+    "folder": "Birds",
+    "species": "Scarlet Macaw",
+    "scientific": "Ara macao",
+    "family": "Psittacidae",
+    "confidence": 0.95,
+    "is_quetzal": false
+  },
+  {
+    "filename": "CL0A0147.jpg",
+    "folder": "Birds",
+    "species": "Black Hawk-Eagle",
+    "scientific": "Spizaetus tyrannus",
+    "family": "Accipitridae",
+    "confidence": 0.95,
+    "is_quetzal": false
+  },
+  {
+    "filename": "CL0A0160.jpg",
+    "folder": "Birds",
+    "error": "no parse"
+  },
+  {
+    "filename": "CL0A0212.jpg",
+    "folder": "Birds",
+    "species": "unknown",
+    "scientific": "unknown",
+    "family": "unknown",
+    "confidence": 0,
+    "is_quetzal": false
+  },
+  {
+    "filename": "CL0A0213.jpg",
+    "folder": "Birds",
+    "species": "Green-crowned Brilliant",
+    "scientific": "Heliodoxa jacula",
+    "family": "Trochilidae",
+    "confidence": 0.95,
+    "is_quetzal": false
+  },
+  {
+    "filename": "CL0A0281.jpg",
+    "folder": "Birds",
+    "species": "Green-crowned Brilliant",
+    "scientific": "Heliodoxa jacula",
+    "family": "Trochilidae",
+    "confidence": 0.95,
+    "is_quetzal": false
+  },
+  {
+    "filename": "CL0A0307.jpg",
+    "folder": "Birds",
+    "species": "Violet Sabrewing",
+    "scientific": "Campylopterus hemileucurus",
+    "family": "Trochilidae",
+    "confidence": 0.95,
+    "is_quetzal": false
+  },
+  {
+    "filename": "CL0A0537.jpg",
+    "folder": "Birds",
+    "species": "unknown",
+    "scientific": "unknown",
+    "family": "unknown",
+    "confidence": 0.1,
+    "is_quetzal": false
+  },
+  {
+    "filename": "CL0A0540.jpg",
+    "folder": "Birds",
+    "error": "no parse"
+  },
+  {
+    "filename": "CL0A0543.jpg",
+    "folder": "Birds",
+    "species": "unknown",
+    "scientific": "unknown",
+    "family": "unknown",
+    "confidence": 0,
+    "is_quetzal": false
+  },
+  {
+    "filename": "CL0A0559.jpg",
+    "folder": "Birds",
+    "species": "Unknown",
+    "scientific": "Unknown",
+    "family": "Unknown",
+    "confidence": 0,
+    "is_quetzal": false
+  },
+  {
+    "filename": "CL0A0764.JPG",
+    "folder": "Birds",
+    "species": "Unknown",
+    "scientific": "Unknown",
+    "family": "Unknown",
+    "confidence": 0.1,
+    "is_quetzal": false
+  },
+  {
+    "filename": "CL0A0767.JPG",
+    "folder": "Birds",
+    "species": "N/A",
+    "scientific": "N/A",
+    "family": "N/A",
+    "confidence": 0,
+    "is_quetzal": false
+  },
+  {
+    "filename": "CL0A0848.jpg",
+    "folder": "Birds",
+    "species": "Green-crowned Brilliant",
+    "scientific": "Heliodoxa jacula",
+    "family": "Trochilidae",
+    "confidence": 0.95,
+    "is_quetzal": false
+  },
+  {
+    "filename": "CL0A0976.jpg",
+    "folder": "Birds",
+    "error": "no parse"
+  },
+  {
+    "filename": "CL0A0991.jpg",
+    "folder": "Birds",
+    "species": "unknown",
+    "scientific": "unknown",
+    "family": "unknown",
+    "confidence": 0.1,
+    "is_quetzal": false
+  },
+  {
+    "filename": "CL0A0992.JPG",
+    "folder": "Birds",
+    "species": "Resplendent Quetzal",
+    "scientific": "Pharomachrus mocinno",
+    "family": "Trogonidae",
+    "confidence": 0.95,
+    "is_quetzal": true
+  },
+  {
+    "filename": "CL0A1001.jpg",
+    "folder": "Birds",
+    "error": "no parse"
+  },
+  {
+    "filename": "CL0A1031.jpg",
+    "folder": "Birds",
+    "error": "no parse"
+  },
+  {
+    "filename": "CL0A1052.JPG",
+    "folder": "Birds",
+    "error": "no parse"
+  },
+  {
+    "filename": "CL0A1056.jpg",
+    "folder": "Birds",
+    "species": "unknown",
+    "scientific": "unknown",
+    "family": "unknown",
+    "confidence": 0,
+    "is_quetzal": false
+  },
+  {
+    "filename": "CL0A1079.jpg",
+    "folder": "Birds",
+    "species": "Unidentifiable",
+    "scientific": "Unidentifiable",
+    "family": "Unidentifiable",
+    "confidence": 0.1,
+    "is_quetzal": false
+  },
+  {
+    "filename": "CL0A1100.JPG",
+    "folder": "Birds",
+    "species": "Resplendent Quetzal",
+    "scientific": "Pharomachrus mocinno",
+    "family": "Trogonidae",
+    "confidence": 0.95,
+    "is_quetzal": true
+  },
+  {
+    "filename": "CL0A1105.jpg",
+    "folder": "Birds",
+    "species": "Tricolored Heron",
+    "scientific": "Egretta tricolor",
+    "family": "Ardeidae",
+    "confidence": 0.95,
+    "is_quetzal": false
+  },
+  {
+    "filename": "CL0A1109.jpg",
+    "folder": "Birds",
+    "species": "Unknown",
+    "scientific": "Unknown",
+    "family": "Unknown",
+    "confidence": 0,
+    "is_quetzal": false
+  },
+  {
+    "filename": "CL0A1162.jpg",
+    "folder": "Birds",
+    "species": "Resplendent Quetzal",
+    "scientific": "Pharomachrus mocinno",
+    "family": "Trogonidae",
+    "confidence": 0.95,
+    "is_quetzal": true
+  },
+  {
+    "filename": "CL0A1164.jpg",
+    "folder": "Birds",
+    "species": "Unknown",
+    "scientific": "Unknown",
+    "family": "Unknown",
+    "confidence": 0.1,
+    "is_quetzal": false
+  },
+  {
+    "filename": "CL0A1206.jpg",
+    "folder": "Birds",
+    "species": "Unknown",
+    "scientific": "Unknown",
+    "family": "Unknown",
+    "confidence": 0.1,
+    "is_quetzal": false
+  },
+  {
+    "filename": "CL0A1330.jpg",
+    "folder": "Birds",
+    "species": "unknown",
+    "scientific": "unknown",
+    "family": "unknown",
+    "confidence": 0,
+    "is_quetzal": false
+  },
+  {
+    "filename": "CL0A1353.jpg",
+    "folder": "Birds",
+    "species": "N/A",
+    "scientific": "N/A",
+    "family": "N/A",
+    "confidence": 0,
+    "is_quetzal": false
+  },
+  {
+    "filename": "CL0A1356.jpg",
+    "folder": "Birds",
+    "species": "unknown",
+    "scientific": "unknown",
+    "family": "unknown",
+    "confidence": 0,
+    "is_quetzal": false
+  },
+  {
+    "filename": "CL0A1359.jpg",
+    "folder": "Birds",
+    "species": "unknown",
+    "scientific": "unknown",
+    "family": "unknown",
+    "confidence": 0,
+    "is_quetzal": false
+  },
+  {
+    "filename": "CL0A1360.jpg",
+    "folder": "Birds",
+    "error": "no parse"
+  },
+  {
+    "filename": "CL0A1421.jpg",
+    "folder": "Birds",
+    "species": "unknown",
+    "scientific": "unknown",
+    "family": "unknown",
+    "confidence": 0.1,
+    "is_quetzal": false
+  },
+  {
+    "filename": "CL0A1521.jpg",
+    "folder": "Birds",
+    "species": "Unidentifiable",
+    "scientific": "Unidentifiable",
+    "family": "Unidentifiable",
+    "confidence": 0.1,
+    "is_quetzal": false
+  },
+  {
+    "filename": "2021-05-21 15.20.19.jpg",
+    "folder": "Birds-Macaws-Lapas",
+    "species": "Passerini's Tanager",
+    "scientific": "Ramphocelus passerinii",
+    "family": "Thraupidae",
+    "confidence": 0.85,
+    "is_quetzal": false
+  },
+  {
+    "filename": "2022-01-05 16.55.17.jpg",
+    "folder": "Birds-Macaws-Lapas",
+    "error": "no parse"
+  },
+  {
+    "filename": "2022-01-05 17.09.12.jpg",
+    "folder": "Birds-Macaws-Lapas",
+    "error": "no parse"
+  },
+  {
+    "filename": "20250410_085134.jpg",
+    "folder": "Birds-Macaws-Lapas",
+    "species": "Scarlet Macaw",
+    "scientific": "Ara macao",
+    "family": "Psittacidae",
+    "confidence": 0.95,
+    "is_quetzal": false
+  },
+  {
+    "filename": "20250413_061051.jpg",
+    "folder": "Birds-Macaws-Lapas",
+    "species": "unknown",
+    "scientific": "unknown",
+    "family": "unknown",
+    "confidence": 0,
+    "is_quetzal": false
+  },
+  {
+    "filename": "20250413_061505.jpg",
+    "folder": "Birds-Macaws-Lapas",
+    "error": "no parse"
+  },
+  {
+    "filename": "20250413_061508.jpg",
+    "folder": "Birds-Macaws-Lapas",
+    "species": "Fiery-billed Aracari",
+    "scientific": "Pteroglossus frantzii",
+    "family": "Ramphastidae",
+    "confidence": 0.95,
+    "is_quetzal": false
+  },
+  {
+    "filename": "20250417_165818.jpg",
+    "folder": "Birds-Macaws-Lapas",
+    "species": "unknown",
+    "scientific": "unknown",
+    "family": "unknown",
+    "confidence": 0,
+    "is_quetzal": false
+  },
+  {
+    "filename": "AR_IMG_1605.jpg",
+    "folder": "Birds-Macaws-Lapas",
+    "species": "Unknown",
+    "scientific": "Unknown",
+    "family": "Unknown",
+    "confidence": 0.1,
+    "is_quetzal": false
+  },
+  {
+    "filename": "CL0A0868.jpg",
+    "folder": "Birds-Macaws-Lapas",
+    "species": "unknown",
+    "scientific": "unknown",
+    "family": "unknown",
+    "confidence": 0,
+    "is_quetzal": false
+  },
+  {
+    "filename": "CL0A0885.jpg",
+    "folder": "Birds-Macaws-Lapas",
+    "species": "unknown",
+    "scientific": "unknown",
+    "family": "unknown",
+    "confidence": 0,
+    "is_quetzal": false
+  },
+  {
+    "filename": "CL0A0906.jpg",
+    "folder": "Birds-Macaws-Lapas",
+    "species": "unknown",
+    "scientific": "unknown",
+    "family": "unknown",
+    "confidence": 0,
+    "is_quetzal": false
+  },
+  {
+    "filename": "CL0A0917.jpg",
+    "folder": "Birds-Macaws-Lapas",
+    "species": "Scarlet Macaw",
+    "scientific": "Ara macao",
+    "family": "Psittacidae",
+    "confidence": 0.99,
+    "is_quetzal": false
+  },
+  {
+    "filename": "CL0A1050.jpg",
+    "folder": "Birds-Macaws-Lapas",
+    "species": "Unknown",
+    "scientific": "Unknown",
+    "family": "Unknown",
+    "confidence": 0,
+    "is_quetzal": false
+  },
+  {
+    "filename": "CL0A1053.jpg",
+    "folder": "Birds-Macaws-Lapas",
+    "species": "Scarlet Macaw",
+    "scientific": "Ara macao",
+    "family": "Psittacidae",
+    "confidence": 0.95,
+    "is_quetzal": false
+  },
+  {
+    "filename": "CL0A1054.jpg",
+    "folder": "Birds-Macaws-Lapas",
+    "species": "Scarlet Macaw",
+    "scientific": "Ara macao",
+    "family": "Psittacidae",
+    "confidence": 0.95,
+    "is_quetzal": false
+  },
+  {
+    "filename": "CL0A1057.jpg",
+    "folder": "Birds-Macaws-Lapas",
+    "species": "No bird detected",
+    "scientific": "N/A",
+    "family": "N/A",
+    "confidence": 0.95,
+    "is_quetzal": false
+  },
+  {
+    "filename": "CL0A1356.jpg",
+    "folder": "Birds-Macaws-Lapas",
+    "error": "no parse"
+  },
+  {
+    "filename": "CL0A1398.jpg",
+    "folder": "Birds-Macaws-Lapas",
+    "species": "Scarlet Macaw",
+    "scientific": "Ara macao",
+    "family": "Psittacidae",
+    "confidence": 0.95,
+    "is_quetzal": false
+  },
+  {
+    "filename": "CL0A1516.jpg",
+    "folder": "Birds-Macaws-Lapas",
+    "species": "unknown",
+    "scientific": "unknown",
+    "family": "unknown",
+    "confidence": 0.1,
+    "is_quetzal": false
+  },
+  {
+    "filename": "CL0A1770.jpg",
+    "folder": "Birds-Macaws-Lapas",
+    "species": "Unknown",
+    "scientific": "Unknown",
+    "family": "Unknown",
+    "confidence": 0,
+    "is_quetzal": false
+  },
+  {
+    "filename": "CL0A1779.jpg",
+    "folder": "Birds-Macaws-Lapas",
+    "species": "Scarlet Macaw",
+    "scientific": "Ara macao",
+    "family": "Psittacidae",
+    "confidence": 0.95,
+    "is_quetzal": false
+  },
+  {
+    "filename": "CL0A2590.jpg",
+    "folder": "Birds-Macaws-Lapas",
+    "species": "unknown",
+    "scientific": "unknown",
+    "family": "unknown",
+    "confidence": 0.1,
+    "is_quetzal": false
+  },
+  {
+    "filename": "CL0A2728.jpg",
+    "folder": "Birds-Macaws-Lapas",
+    "error": "no parse"
+  },
+  {
+    "filename": "CL0A2761.jpg",
+    "folder": "Birds-Macaws-Lapas",
+    "species": "Scarlet Macaw",
+    "scientific": "Ara macao",
+    "family": "Psittacidae",
+    "confidence": 0.95,
+    "is_quetzal": false
+  },
+  {
+    "filename": "CL0A2848.jpg",
+    "folder": "Birds-Macaws-Lapas",
+    "species": "unknown",
+    "scientific": "unknown",
+    "family": "unknown",
+    "confidence": 0.1,
+    "is_quetzal": false
+  },
+  {
+    "filename": "CL0A2887.jpg",
+    "folder": "Birds-Macaws-Lapas",
+    "species": "unknown",
+    "scientific": "unknown",
+    "family": "unknown",
+    "confidence": 0,
+    "is_quetzal": false
+  },
+  {
+    "filename": "CL0A2906.jpg",
+    "folder": "Birds-Macaws-Lapas",
+    "species": "N/A",
+    "scientific": "N/A",
+    "family": "N/A",
+    "confidence": 0,
+    "is_quetzal": false
+  },
+  {
+    "filename": "CL0A2911.jpg",
+    "folder": "Birds-Macaws-Lapas",
+    "species": "N/A",
+    "scientific": "N/A",
+    "family": "N/A",
+    "confidence": 0,
+    "is_quetzal": false
+  },
+  {
+    "filename": "CL0A2933.jpg",
+    "folder": "Birds-Macaws-Lapas",
+    "species": "Unidentifiable",
+    "scientific": "N/A",
+    "family": "N/A",
+    "confidence": 0.1,
+    "is_quetzal": false
+  },
+  {
+    "filename": "CL0A2934.jpg",
+    "folder": "Birds-Macaws-Lapas",
+    "error": "no parse"
+  },
+  {
+    "filename": "CL0A2956.jpg",
+    "folder": "Birds-Macaws-Lapas",
+    "species": "Unknown",
+    "scientific": "Unknown",
+    "family": "Unknown",
+    "confidence": 0.1,
+    "is_quetzal": false
+  },
+  {
+    "filename": "CL0A2959.jpg",
+    "folder": "Birds-Macaws-Lapas",
+    "species": "Unidentifiable",
+    "scientific": "Unidentifiable",
+    "family": "Unidentifiable",
+    "confidence": 0.1,
+    "is_quetzal": false
+  },
+  {
+    "filename": "CL0A3005.jpg",
+    "folder": "Birds-Macaws-Lapas",
+    "species": "unknown",
+    "scientific": "unknown",
+    "family": "unknown",
+    "confidence": 0,
+    "is_quetzal": false
+  },
+  {
+    "filename": "CL0A3104.jpg",
+    "folder": "Birds-Macaws-Lapas",
+    "error": "no parse"
+  },
+  {
+    "filename": "CL0A3135.jpg",
+    "folder": "Birds-Macaws-Lapas",
+    "species": "Scarlet Macaw",
+    "scientific": "Ara macao",
+    "family": "Psittacidae",
+    "confidence": 0.85,
+    "is_quetzal": false
+  },
+  {
+    "filename": "CL0A3315.JPG",
+    "folder": "Birds-Macaws-Lapas",
+    "error": "no parse"
+  },
+  {
+    "filename": "CL0A3347.jpg",
+    "folder": "Birds-Macaws-Lapas",
+    "error": "no parse"
+  },
+  {
+    "filename": "CL0A3476.jpg",
+    "folder": "Birds-Macaws-Lapas",
+    "error": "no parse"
+  },
+  {
+    "filename": "CL0A3493.JPG",
+    "folder": "Birds-Macaws-Lapas",
+    "error": "no parse"
+  },
+  {
+    "filename": "CL0A3577.jpg",
+    "folder": "Birds-Macaws-Lapas",
+    "species": "unknown",
+    "scientific": "unknown",
+    "family": "unknown",
+    "confidence": 0,
+    "is_quetzal": false
+  },
+  {
+    "filename": "CL0A3589.jpg",
+    "folder": "Birds-Macaws-Lapas",
+    "species": "unknown",
+    "scientific": "unknown",
+    "family": "unknown",
+    "confidence": 0,
+    "is_quetzal": false
+  },
+  {
+    "filename": "CL0A3725.jpg",
+    "folder": "Birds-Macaws-Lapas",
+    "species": "unknown",
+    "scientific": "unknown",
+    "family": "unknown",
+    "confidence": 0,
+    "is_quetzal": false
+  },
+  {
+    "filename": "CL0A3777.jpg",
+    "folder": "Birds-Macaws-Lapas",
+    "species": "Scarlet Macaw",
+    "scientific": "Ara macao",
+    "family": "Psittacidae",
+    "confidence": 0.95,
+    "is_quetzal": false
+  },
+  {
+    "filename": "CL0A3801.jpg",
+    "folder": "Birds-Macaws-Lapas",
+    "error": "no parse"
+  },
+  {
+    "filename": "CL0A3890.jpg",
+    "folder": "Birds-Macaws-Lapas",
+    "species": "No bird detected",
+    "scientific": "N/A",
+    "family": "N/A",
+    "confidence": 0,
+    "is_quetzal": false
+  },
+  {
+    "filename": "CL0A4039.jpg",
+    "folder": "Birds-Macaws-Lapas",
+    "species": "No bird detected",
+    "scientific": "N/A",
+    "family": "N/A",
+    "confidence": 0.95,
+    "is_quetzal": false
+  },
+  {
+    "filename": "CL0A4042.jpg",
+    "folder": "Birds-Macaws-Lapas",
+    "species": "Scarlet Macaw",
+    "scientific": "Ara macao",
+    "family": "Psittacidae",
+    "confidence": 0.95,
+    "is_quetzal": false
+  },
+  {
+    "filename": "CL0A4045.jpg",
+    "folder": "Birds-Macaws-Lapas",
+    "species": "Unknown",
+    "scientific": "Unknown",
+    "family": "Unknown",
+    "confidence": 0,
+    "is_quetzal": false
+  },
+  {
+    "filename": "CL0A4049.jpg",
+    "folder": "Birds-Macaws-Lapas",
+    "species": "Unknown",
+    "scientific": "Unknown",
+    "family": "Unknown",
+    "confidence": 0,
+    "is_quetzal": false
+  }
+]

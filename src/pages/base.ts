@@ -1,5 +1,5 @@
 /**
- * Base page renderer with enhanced styling
+ * Base page renderer with enhanced styling and SEO
  */
 
 export const MEDIA_BASE = 'https://pub-7d412c6efb5943b5bc587e695e22001e.r2.dev';
@@ -8,281 +8,221 @@ export function renderPage(title: string, content: string): Response {
   return layout(title, content);
 }
 
-export function layout(title: string, content: string): Response {
+/**
+ * Extended layout with SEO support
+ */
+export function layout(
+  title: string, 
+  content: string, 
+  extraHead: string = '', 
+  customCss: string = '',
+  options: {
+    canonical?: string;
+    description?: string;
+    ogImage?: string;
+    ogType?: string;
+    noindex?: boolean;
+    jsonLd?: string;
+  } = {}
+): Response {
+  const {
+    canonical = '',
+    description = 'Professional wildlife and nature photography from Costa Rica by Joshua ten Brink',
+    ogImage = '',
+    ogType = 'website',
+    noindex = false,
+    jsonLd = ''
+  } = options;
+
+  // Build SEO tags
+  let seoTags = '';
+  if (canonical) seoTags += `<link rel="canonical" href="${canonical}">\n`;
+  if (description) seoTags += `<meta name="description" content="${description.replace(/"/g, '&quot;')}">\n`;
+  if (noindex) seoTags += `<meta name="robots" content="noindex, follow">\n`;
+  if (ogImage) seoTags += `<meta property="og:image" content="${ogImage}">\n`;
+  seoTags += `<meta property="og:title" content="${title.replace(/"/g, '&quot;')}">\n`;
+  seoTags += `<meta property="og:description" content="${description.replace(/"/g, '&quot;')}">\n`;
+  seoTags += `<meta property="og:type" content="${ogType}">\n`;
+  seoTags += `<meta property="og:url" content="${canonical || 'https://wildphotography.com'}">\n`;
+  seoTags += `<meta property="og:site_name" content="WildPhotography">\n`;
+  seoTags += `<meta name="twitter:card" content="summary_large_image">\n`;
+
+  const jsonLdTag = jsonLd ? `<script type="application/ld+json">${jsonLd}</script>` : '';
+
   const html = `<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>${title}</title>
-<meta name="description" content="Wildphotography - Professional wildlife and nature photography from Costa Rica">
+${seoTags}
+${extraHead}
 <style>
 * { box-sizing: border-box; margin: 0; padding: 0; }
-body { 
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; 
-  line-height: 1.6; 
-  color: #333;
-  background: #fafafa;
-}
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; line-height: 1.6; color: #333; background: #fafafa; }
 a { color: #0066cc; text-decoration: none; }
 a:hover { text-decoration: underline; }
 
 /* Header */
-header { 
-  background: #1a1a1a; 
-  color: white; 
-  padding: 1.5rem 2rem;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
-header h1 { 
-  margin: 0; 
-  font-size: 1.5rem; 
-  font-weight: 600;
-}
+header { background: #1a1a1a; color: white; padding: 1rem 2rem; position: sticky; top: 0; z-index: 100; }
+header h1 { margin: 0; font-size: 1.4rem; font-weight: 600; }
 header a { color: white; }
-nav { margin-top: 0.75rem }
-nav a { 
-  color: #aaa; 
-  margin: 0 1rem; 
-  font-size: 0.95rem;
-  transition: color 0.2s;
-}
-nav a:hover { color: white; }
+header a:hover { color: #4db8ff; }
+.header-container { max-width: 1400px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
+.logo { display: flex; align-items: center; gap: 0.5rem; }
+
+/* Navigation */
+.nav-main { display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; }
+.nav-main a { color: #e0e0e0; font-size: 0.95rem; padding: 0.4rem 0; border-bottom: 2px solid transparent; transition: all 0.2s; }
+.nav-main a:hover { color: #4db8ff; border-bottom-color: #4db8ff; }
+.nav-main a.active { color: #4db8ff; border-bottom-color: #4db8ff; }
+.search-form { display: flex; align-items: center; }
+.search-form input { padding: 0.5rem 0.8rem; border-radius: 4px; border: 1px solid #444; background: #333; color: white; font-size: 0.85rem; width: 180px; }
+.search-form input:focus { outline: none; border-color: #4db8ff; }
 
 /* Main */
-main { 
-  max-width: 1400px; 
-  margin: 0 auto; 
-  padding: 2rem 1rem;
-}
-
-/* Hero */
-.hero { 
-  text-align: center; 
-  padding: 4rem 2rem; 
-  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
-  color: white;
-  margin: -2rem -1rem 3rem;
-  border-radius: 0 0 24px 24px;
-}
-.hero h1 { font-size: 3rem; margin-bottom: 0.5rem; font-weight: 700; }
-.hero p { font-size: 1.25rem; color: #aaa; }
-
-/* Sections */
-section { margin-bottom: 4rem; }
-section h2 { 
-  font-size: 1.75rem; 
-  margin-bottom: 1rem; 
-  padding-bottom: 0.5rem;
-  border-bottom: 2px solid #eee;
-}
-.section-desc { color: #666; margin-bottom: 1.5rem; }
-
-/* Gallery Grid */
-.gallery { 
-  display: grid; 
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
-  gap: 1.5rem; 
-}
-
-/* Photo Cards */
-.photo-card { 
-  border: none; 
-  border-radius: 12px; 
-  overflow: hidden; 
-  transition: transform 0.3s, box-shadow 0.3s; 
-  background: white;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-}
-.photo-card:hover { 
-  transform: translateY(-6px); 
-  box-shadow: 0 12px 32px rgba(0,0,0,0.15);
-  text-decoration: none;
-}
-.photo-card img { 
-  width: 100%; 
-  height: 280px; 
-  object-fit: cover; 
-  display: block;
-}
-.photo-card .caption { 
-  padding: 1.25rem; 
-}
-.photo-card h3 { 
-  font-size: 1rem; 
-  font-weight: 500;
-  color: #222;
-  margin: 0;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-/* Gallery Cards */
-.gallery-card { 
-  border: 1px solid #e0e0e0; 
-  border-radius: 12px; 
-  padding: 1.5rem; 
-  transition: all 0.3s;
-  background: white;
-}
-.gallery-card:hover { 
-  border-color: #0066cc;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
-  text-decoration: none;
-}
-.gallery-card h3 { font-size: 1.25rem; margin-bottom: 0.5rem; }
-.gallery-card p { color: #666; margin: 0; }
-
-/* Back Link */
-.back-link { 
-  display: inline-block; 
-  padding: 0.75rem 0; 
-  color: #666; 
-  margin-bottom: 1rem;
-}
-.back-link:hover { color: #0066cc; }
-
-/* Photo Detail */
-.photo-detail { max-width: 900px; margin: 0 auto; }
-.photo-header { margin-bottom: 2rem; text-align: center; }
-.photo-header h1 { font-size: 2rem; margin-bottom: 0.5rem; }
-.photo-description { 
-  color: #666; 
-  font-size: 1.1rem; 
-  max-width: 600px; 
-  margin: 0 auto;
-}
-
-.photo-image { 
-  margin-bottom: 2rem; 
-  border-radius: 12px; 
-  overflow: hidden;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.12);
-}
-.main-photo { 
-  width: 100%; 
-  height: auto; 
-  display: block;
-}
-
-/* Keywords */
-.keywords { 
-  margin: 1.5rem 0; 
-  padding: 1rem;
-  background: #f5f5f5;
-  border-radius: 8px;
-}
-.keywords-label { 
-  font-weight: 600; 
-  margin-right: 0.5rem;
-  color: #666;
-}
-.keyword-chip {
-  display: inline-block;
-  padding: 0.25rem 0.75rem;
-  margin: 0.25rem;
-  background: white;
-  border: 1px solid #ddd;
-  border-radius: 20px;
-  font-size: 0.85rem;
-  color: #333;
-  transition: all 0.2s;
-}
-.keyword-chip:hover {
-  background: #0066cc;
-  border-color: #0066cc;
-  color: white;
-  text-decoration: none;
-}
-
-/* Metadata */
-.metadata { 
-  margin: 1.5rem 0; 
-  padding: 1rem;
-  background: #f9f9f9;
-  border-radius: 8px;
-}
-.metadata ul { list-style: none; }
-.metadata li { padding: 0.25rem 0; color: #555; }
-.metadata strong { color: #333; }
-
-/* Location Map */
-.location-section { margin: 2rem 0; }
-.location-section h3 { margin-bottom: 1rem; }
-.map-container { 
-  border-radius: 12px; 
-  overflow: hidden;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
-}
-.location-map { width: 100%; height: auto; display: block; }
-.location-name { 
-  margin-top: 0.75rem; 
-  color: #666; 
-  font-size: 0.95rem;
-}
-
-/* Downloads */
-.downloads { 
-  margin-top: 2rem; 
-  padding: 2rem;
-  background: linear-gradient(135deg, #f5f5f5 0%, #eee 100%);
-  border-radius: 12px;
-  text-align: center;
-}
-.buy-button {
-  background: linear-gradient(135deg, #0070ba 0%, #005a8c 100%);
-  color: white;
-  padding: 1rem 2.5rem;
-  border: none;
-  border-radius: 8px;
-  font-size: 1.1rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.2s;
-  box-shadow: 0 4px 12px rgba(0,112,186,0.3);
-}
-.buy-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0,112,186,0.4);
-}
-.buy-button:disabled {
-  opacity: 0.7;
-  cursor: not-allowed;
-  transform: none;
-}
-#checkout-status { margin-top: 1rem; color: #666; }
+main { max-width: 1400px; margin: 0 auto; padding: 2rem; min-height: 60vh; }
 
 /* Footer */
-footer { 
-  background: #1a1a1a; 
-  color: #666; 
-  padding: 3rem; 
-  text-align: center; 
-  margin-top: 4rem;
+footer { background: #1a1a1a; color: #999; padding: 3rem 2rem; margin-top: 4rem; }
+.footer-container { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; }
+.footer-section h3 { color: white; font-size: 1rem; margin-bottom: 1rem; }
+.footer-section a { color: #999; display: block; padding: 0.3rem 0; font-size: 0.9rem; }
+.footer-section a:hover { color: #4db8ff; }
+.footer-bottom { max-width: 1400px; margin: 2rem auto 0; padding-top: 2rem; border-top: 1px solid #333; text-align: center; font-size: 0.85rem; }
+.disclaimer { background: #252525; padding: 1rem; border-radius: 6px; margin-top: 1rem; font-size: 0.8rem; line-height: 1.5; }
+
+/* Hero */
+.hero { text-align: center; padding: 3rem 1rem; background: linear-gradient(135deg, #1a365d 0%, #2c5282 100%); color: white; border-radius: 12px; margin-bottom: 3rem; }
+.hero h1 { font-size: 2.5rem; margin-bottom: 1rem; }
+.hero p { font-size: 1.2rem; opacity: 0.9; }
+
+/* Sections */
+.section-title { font-size: 1.8rem; color: #1a365d; margin-bottom: 1.5rem; padding-bottom: 0.5rem; border-bottom: 2px solid #e2e8f0; }
+
+/* Cards */
+.card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; }
+.card { background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.2s, box-shadow 0.2s; }
+.card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,0.15); }
+.card img { width: 100%; height: 180px; object-fit: cover; }
+.card-content { padding: 1rem; }
+.card-type { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: #2c7a7b; font-weight: 600; margin-bottom: 0.4rem; }
+.card-title { font-size: 1.1rem; color: #1a365d; margin-bottom: 0.5rem; }
+.card-desc { font-size: 0.9rem; color: #666; }
+.card-link { display: inline-block; margin-top: 0.8rem; color: #2c7a7b; font-weight: 500; }
+
+/* Photo Grid */
+.photo-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem; }
+.photo-card { display: block; position: relative; overflow: hidden; border-radius: 8px; }
+.photo-card img { width: 100%; height: 220px; object-fit: cover; transition: transform 0.3s; }
+.photo-card:hover img { transform: scale(1.05); }
+.photo-meta { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0,0,0,0.8)); color: white; padding: 2rem 1rem 1rem; font-size: 0.9rem; }
+
+/* Photo Detail Page */
+.photo-detail { max-width: 1100px; margin: 0 auto; padding: 1.5rem 1rem; }
+.photo-header { margin-bottom: 1.5rem; }
+.photo-header h1 { font-size: 2rem; color: #1a365d; margin-bottom: 0.5rem; }
+.photo-description { font-size: 1.05rem; color: #444; line-height: 1.7; margin-bottom: 1rem; }
+.photo-image { width: 100%; margin-bottom: 1.5rem; text-align: center; }
+.photo-image img.main-photo { max-width: 100%; height: auto; display: inline-block; border-radius: 8px; }
+
+/* Keywords */
+.keywords { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; margin-bottom: 1.5rem; padding: 0.75rem; background: #f7fafc; border-radius: 8px; }
+.keywords-label { font-weight: 600; color: #4a5568; margin-right: 0.25rem; white-space: nowrap; }
+.keyword-chip { display: inline-block; padding: 0.25rem 0.75rem; background: #e2e8f0; color: #2d3748; border-radius: 999px; font-size: 0.85rem; text-decoration: none; transition: background 0.2s; }
+.keyword-chip:hover { background: #cbd5e0; }
+
+/* Metadata */
+.metadata { background: #f7fafc; padding: 1rem; border-radius: 8px; margin-bottom: 1.5rem; }
+.metadata ul { list-style: none; padding: 0; margin: 0; }
+.metadata li { padding: 0.3rem 0; font-size: 0.9rem; color: #4a5568; }
+.metadata strong { color: #2d3748; }
+
+/* Location */
+.location-section { margin-bottom: 1.5rem; }
+.location-section h3 { font-size: 1.2rem; color: #1a365d; margin-bottom: 0.5rem; }
+.map-container { border-radius: 8px; overflow: hidden; margin-bottom: 0.5rem; }
+.location-map { width: 100%; height: auto; display: block; }
+.location-name { font-size: 0.9rem; color: #718096; }
+
+/* Downloads */
+.downloads { margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid #e2e8f0; }
+.buy-button { background: #2c7a7b; color: white; border: none; padding: 0.85rem 2rem; border-radius: 8px; font-size: 1rem; cursor: pointer; transition: background 0.2s; }
+.buy-button:hover { background: #234e52; }
+.buy-button:disabled { background: #a0aec0; cursor: not-allowed; }
+#checkout-status { margin-top: 0.5rem; font-size: 0.9rem; color: #4a5568; }
+.back-link { display: inline-block; margin-bottom: 1.5rem; color: #2c7a7b; text-decoration: none; font-size: 0.9rem; }
+.back-link:hover { text-decoration: underline; }
+
+@media (max-width: 768px) {
+  .nav-main { gap: 1rem; }
+  .nav-main a { font-size: 0.85rem; }
+  .search-form input { width: 140px; }
+  .photo-detail { padding: 1rem 0.75rem; }
+  .photo-header h1 { font-size: 1.4rem; }
+  .photo-description { font-size: 0.95rem; }
+  .keywords { padding: 0.5rem; gap: 0.35rem; }
+  .keywords-label { font-size: 0.8rem; }
+  .keyword-chip { font-size: 0.78rem; padding: 0.2rem 0.6rem; }
+  .photo-image img.main-photo { width: 100%; border-radius: 4px; }
+  .metadata { padding: 0.75rem; }
 }
 </style>
+${jsonLdTag}
 </head>
 <body>
 <header>
-<div style="max-width:1400px;margin:0 auto">
-<h1><a href="/">Wildphotography</a></h1>
-<nav>
-<a href="/">Home</a>
-<a href="/galleries">Galleries</a>
-<a href="/search">Search</a>
-</nav>
+<div class="header-container">
+  <h1 class="logo"><a href="/">WildPhotography</a></h1>
+  <nav class="nav-main">
+    <form action="/search" method="get" class="search-form">
+      <input type="text" name="q" placeholder="Search photos, species..." aria-label="Search">
+    </form>
+    <a href="/">Home</a>
+    <a href="/species">Species</a>
+    <a href="/region">Regions</a>
+    <a href="/article">Articles</a>
+    <a href="/galleries">Galleries</a>
+  </nav>
 </div>
 </header>
 <main>
 ${content}
 </main>
 <footer>
-<p>&copy; 2026 Joshua ten Brink / Wildphotography</p>
+<div class="footer-container">
+  <div class="footer-section">
+    <h3>Explore</h3>
+    <a href="/species">Bird Species</a>
+    <a href="/region">Birding Regions</a>
+    <a href="/article">Articles & Guides</a>
+    <a href="/galleries">Photo Galleries</a>
+    <a href="/search">Search Photos</a>
+  </div>
+  <div class="footer-section">
+    <h3>Popular</h3>
+    <a href="/species/scarlet-macaw">Scarlet Macaw</a>
+    <a href="/species/resplendent-quetzal">Resplendent Quetzal</a>
+    <a href="/species/keel-billed-toucan">Keel-billed Toucan</a>
+    <a href="/region/monteverde">Monteverde</a>
+    <a href="/region/corcovado">Corcovado</a>
+  </div>
+  <div class="footer-section">
+    <h3>About</h3>
+    <a href="/">Home</a>
+    <a href="/article/about">About Joshua</a>
+    <a href="/article/contact">Contact</a>
+  </div>
+</div>
+<div class="footer-bottom">
+  <p>&copy; 2026 Joshua ten Brink / WildPhotography. Professional wildlife & nature photography from Costa Rica.</p>
+  <div class="disclaimer">
+    <strong>Affiliate Disclosure:</strong> This site includes affiliate links to tours, travel services, and related products. 
+    If you book or purchase through these links, WildPhotography.com may earn a commission at no additional cost to you.
+  </div>
+</div>
 </footer>
+<script async defer src="https://widget.getyourguide.com/v2/widget.js"></script>
 </body>
 </html>`;
   return new Response(html, { headers: { 'Content-Type': 'text/html; charset=utf-8' } });

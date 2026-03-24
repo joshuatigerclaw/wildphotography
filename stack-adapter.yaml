@@ -1,0 +1,99 @@
+# WildPhotography Stack Adapter Configuration
+# Version: 1.1
+# Loaded: 2026-03-17
+
+project:
+  name: "WildPhotography.com"
+  adapter_purpose: "Concrete stack bindings for repository paths, data contracts, import pipeline compatibility, media derivative specs, Neon tables, R2 key patterns, live route structure, and Typesense mappings."
+
+frontend:
+  framework: "autodetect"
+  routing_style: "autodetect"
+  path_bindings:
+    homepage_route: "/"
+    species_index_route: "/species"
+    species_detail_route_pattern: "/species/{species_slug}"
+    region_detail_route_pattern: "/region/{region_slug}"
+    article_detail_route_pattern: "/article/{article_slug}"
+    galleries_index_route: "/gallery"
+    gallery_detail_route_pattern: "/gallery/{gallery_slug}"
+    photo_detail_route_pattern: "/photo/{photo_slug}"
+    search_route: "/search"
+
+database:
+  provider: "Neon Postgres"
+  schema: "public"
+  tables:
+    - photos
+    - galleries
+    - species_pages
+    - region_pages
+    - articles
+
+object_storage:
+  provider: "Cloudflare R2"
+  derivatives: 5 (thumb, small, medium, large, search)
+
+search:
+  provider: "Typesense"
+  collections: photos, species_pages, region_pages, articles
+
+seo:
+  canonical_routes:
+    - /species
+    - /species/{slug}
+    - /region/{slug}
+    - /article/{slug}
+    - /gallery/{slug}
+    - /photo/{slug}
+
+navigation:
+  sections:
+    - Species (/species)
+    - Regions (/region)
+    - Articles (/article)
+    - Galleries (/gallery)
+    - Search (/search)
+
+validation:
+  required_http_status: 200
+  route_checks: homepage, species_index, species, region, article, gallery, photo, search
+
+runtime_bindings:
+  local_import_continuation: enabled
+  prior_slug_collision_repair: enabled
+  typesense_bulk_indexing: enabled
+  production_validation: enabled
+
+safety:
+  never_autonomous:
+    - schema migrations
+    - domain/canonical host changes
+    - affiliate ID changes
+    - bulk destructive deletes
+environment:
+  # Canonical public URLs — never hardcode these in scripts
+  WP_SITE_BASE: "https://wildphotography.com"
+  MEDIA_BASE: "https://media.wildphotography.com"
+  # Typesense
+  TS_COLLECTION: "photos"
+  # Agent batch sizes
+  REPAIR_BATCH_SIZE: "250"
+  SEO_BATCH_SIZE: "300"
+  UI_AUDIT_BATCH_SIZE: "100"
+  CLUSTER_BUILD_LIMIT: "25"
+  # Note: if temporarily using R2 public endpoint, set only here:
+  # MEDIA_BASE: "https://pub-7d412c6efb5943b5bc587e695e22001e.r2.dev"
+agent_pack_v2:
+  version: "2.0"
+  loaded: "2026-03-24"
+  execution_order:
+    - wild_truth_validator
+    - wild_url_normalizer
+    - wild_derivative_repair_agent
+    - wild_seo_enricher_v2
+    - wild_typesense_reconcile_agent
+    - wild_gallery_optimizer_v2
+    - wild_ui_optimizer
+    - wild_cluster_page_builder
+    - wild_supervisor_v2

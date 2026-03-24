@@ -1,0 +1,80 @@
+[
+  {
+    "id": "ext_Costa-_caa78cf488541810",
+    "type": "photo",
+    "source_path": "/Volumes/ADATA SC740/Smugmug Backup/Galleries/Costa-Rica-Gallery/Costa-Rica-Videos/._DJI_0671-001.jpg",
+    "gallery_folder": "Costa-Rica-Gallery/Costa-Rica-Videos",
+    "filename": "._DJI_0671-001.jpg",
+    "content_hash": "caa78cf488541810448bd8fb871fe378d647fef33abef9b4a60672a3840b8726",
+    "size": 4096,
+    "approved": true,
+    "priority": 50,
+    "attempt_count": 0,
+    "status": "pending"
+  },
+  {
+    "id": "ext_Costa-_8780a365b5669a58",
+    "type": "photo",
+    "source_path": "/Volumes/ADATA SC740/Smugmug Backup/Galleries/Costa-Rica-Gallery/Costa-Rica-Videos/DJI_0671-001.jpg",
+    "gallery_folder": "Costa-Rica-Gallery/Costa-Rica-Videos",
+    "filename": "DJI_0671-001.jpg",
+    "content_hash": "8780a365b5669a58d64878a2390b37d80fcf958f40b1182798f200291f6569f0",
+    "size": 7258741,
+    "approved": true,
+    "priority": 50,
+    "attempt_count": 0,
+    "status": "pending"
+  },
+  {
+    "id": "ext_Playa-_4127553c6f6cb9c1",
+    "type": "photo",
+    "source_path": "/Volumes/ADATA SC740/Smugmug Backup/Galleries/Costa-Rica-Gallery/Playa-Hermosa-Jaco-Garabito/2022-09-11 10.01.16.jpg",
+    "gallery_folder": "Costa-Rica-Gallery/Playa-Hermosa-Jaco-Garabito",
+    "filename": "2022-09-11 10.01.16.jpg",
+    "content_hash": "4127553c6f6cb9c1de8fa0182d498c683e1bd67981ba408ba8707400635f7e11",
+    "size": 6912935,
+    "approved": true,
+    "priority": 50,
+    "attempt_count": 0,
+    "status": "pending"
+  },
+  {
+    "id": "ext_Playa-_ec97cd31a0873409",
+    "type": "photo",
+    "source_path": "/Volumes/ADATA SC740/Smugmug Backup/Galleries/Costa-Rica-Gallery/Playa-Hermosa-Jaco-Garabito/CL0A8284.jpg",
+    "gallery_folder": "Costa-Rica-Gallery/Playa-Hermosa-Jaco-Garabito",
+    "filename": "CL0A8284.jpg",
+    "content_hash": "ec97cd31a087340966434cc6342ba5b593f9340b09a6a92e1f694a7ac670b85f",
+    "size": 1535605,
+    "approved": true,
+    "priority": 50,
+    "attempt_count": 0,
+    "status": "pending"
+  },
+  {
+    "id": "ext_Playa-_99fd2b0fe516c849",
+    "type": "photo",
+    "source_path": "/Volumes/ADATA SC740/Smugmug Backup/Galleries/Costa-Rica-Gallery/Playa-Hermosa-Jaco-Garabito/CL0A8285.jpg",
+    "gallery_folder": "Costa-Rica-Gallery/Playa-Hermosa-Jaco-Garabito",
+    "filename": "CL0A8285.jpg",
+    "content_hash": "99fd2b0fe516c84992fa56788b47c622d90b7a1db36cb06eb9eeba79e8c2a9cc",
+    "size": 1450663,
+    "approved": true,
+    "priority": 50,
+    "attempt_count": 0,
+    "status": "pending"
+  },
+  {
+    "id": "ext_Playa-_bf4bf6a181360f6d",
+    "type": "photo",
+    "source_path": "/Volumes/ADATA SC740/Smugmug Backup/Galleries/Costa-Rica-Gallery/Playa-Hermosa-Jaco-Garabito/CL0A8291.jpg",
+    "gallery_folder": "Costa-Rica-Gallery/Playa-Hermosa-Jaco-Garabito",
+    "filename": "CL0A8291.jpg",
+    "content_hash": "bf4bf6a181360f6d54464719c6b767c41cfc64a7dda8377359008628b9dc3699",
+    "size": 1064304,
+    "approved": true,
+    "priority": 50,
+    "attempt_count": 0,
+    "status": "pending"
+  }
+]

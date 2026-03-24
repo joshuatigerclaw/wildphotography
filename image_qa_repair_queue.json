@@ -1,0 +1,62 @@
+{
+  "queue_date": "2026-03-22T07:12:00-06:00",
+  "workflow": "Image QA Repair",
+  "applied_fixes": [
+    {
+      "type": "needs_review_clear",
+      "description": "Clear needs_review flag from fully-ready photos",
+      "count": 18079,
+      "status": "APPLIED",
+      "result": "18,079 photos had needs_review=true despite being ready_for_public_render=true and search_ready=true. All flags cleared."
+    }
+  ],
+  "pending_queue": [
+    {
+      "type": "broken_r2_url_repair",
+      "description": "300 broken r2.cloudflarestorage thumb URLs",
+      "count": 300,
+      "fix": "Update thumb_url from broken r2.cloudflarestorage.com path to working images.wildphotography.com path",
+      "example": "https://3ec62f93675c404fe4a9a4949e38e5e5.r2.cloudflarestorage.com/wildphoto-storage/photos/10254/thumb.webp -> https://images.wildphotography.com/derivatives/thumbs/10254-thumb.jpg",
+      "risk": "medium",
+      "requires_approval": true,
+      "verification": "Spot-checked 3 URLs - all return HTTP 400 on r2.cloudflarestorage.com but HTTP 200 on images.wildphotography.com"
+    },
+    {
+      "type": "gallery_cover_assignment",
+      "description": "Assign cover to Rainforests gallery",
+      "gallery_id": 8,
+      "gallery_name": "Rainforests",
+      "current_state": "no cover assigned",
+      "candidate_photos": [34, 35],
+      "issue": "Both candidate photos (Cloud Forest Mist, Rainforest Waterfall) are ready_for_public_render=false",
+      "suggested_action": "Rebuild derivatives for photo 34 (Cloud Forest Mist) and assign as cover once ready",
+      "risk": "medium",
+      "requires_approval": true
+    },
+    {
+      "type": "derivative_rebuild_required",
+      "description": "702 photos with thumb_url but derivatives_complete=false",
+      "count": 702,
+      "breakdown": {
+        "thumbs_dir_path": 672,
+        "smalls_only": 28,
+        "other_format": 1,
+        "uploads_only": 1
+      },
+      "action_needed": "Queue for derivative rebuild workflow",
+      "risk": "low",
+      "auto_approvable": false
+    },
+    {
+      "type": "duplicate_hero_resolution",
+      "description": "Photo 10318 used as cover for 2 galleries",
+      "photo_id": 10318,
+      "title": "DJI 0500 2 (Nauyaca Waterfalls)",
+      "thumb_url": "https://images.wildphotography.com/derivatives/thumb/dji-0500-2-nauyaca-waterfalls-6936-thumb.jpg",
+      "galleries": ["nauyaca-waterfalls", "waterfalls-in-costa-rica"],
+      "suggested_resolution": "Keep photo 10318 as nauyaca-waterfalls cover; assign a different waterfall hero for waterfalls-in-costa-rica",
+      "risk": "low",
+      "requires_approval": true
+    }
+  ]
+}

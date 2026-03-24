@@ -1,0 +1,21 @@
+{
+  "queue_name": "manual_review_required",
+  "reason": "unrecoverable_orphan",
+  "created_at": "2026-03-22T16:05:00.000000+00:00",
+  "workflow": "wild_legacy_orphan_review",
+  "items": [
+    {"id": "photo_16", "type": "photo", "db_id": 16, "slug": "scarlet-macaw", "title": "Scarlet Macaw", "reason": "unrecoverable_orphan", "no_source_path": true, "no_r2_key": true, "no_original_source_path": true, "no_r2_derivatives": true, "classification": "placeholder_species_page"},
+    {"id": "photo_17", "type": "photo", "db_id": 17, "slug": "quetzal", "title": "Resplendent Quetzal", "reason": "unrecoverable_orphan", "no_source_path": true, "no_r2_key": true, "no_original_source_path": true, "no_r2_derivatives": true, "classification": "placeholder_species_page"},
+    {"id": "photo_18", "type": "photo", "db_id": 18, "slug": "keel-billed-toucan", "title": "Keel-billed Toucan", "reason": "unrecoverable_orphan", "no_source_path": true, "no_r2_key": true, "no_original_source_path": true, "no_r2_derivatives": true, "classification": "placeholder_species_page"},
+    {"id": "photo_20", "type": "photo", "db_id": 20, "slug": "capuchin-monkey", "title": "Capuchin Monkey", "reason": "unrecoverable_orphan", "no_source_path": true, "no_r2_key": true, "no_original_source_path": true, "no_r2_derivatives": true, "classification": "placeholder_species_page"},
+    {"id": "photo_758", "type": "photo", "db_id": 758, "slug": "2020-10-10-05-01-02-758", "title": "Costa Rica Photography", "reason": "unrecoverable_orphan", "no_source_path": true, "no_r2_key": true, "no_original_source_path": true, "no_r2_derivatives": true, "classification": "orphan_no_assets"}
+  ],
+  "summary": {
+    "total_unrecoverable": 179,
+    "total_orphan_candidates": 500,
+    "total_potentially_recoverable": 252,
+    "total_recovered": 69,
+    "batch_classified": 500,
+    "notes": "179 truly orphan records with no source files, no R2 keys, and no R2 derivatives. These appear to be placeholder entries created without actual photo assets. Full list of IDs stored in wild_legacy_orphan_review.result.json. 252 records have original_source_path on disk (potentially recoverable via re-import). 69 records have R2 derivatives (recoverable with thumb_url fix)."
+  }
+}

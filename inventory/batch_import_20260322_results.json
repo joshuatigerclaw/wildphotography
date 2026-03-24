@@ -1,0 +1,18 @@
+{
+  "processed": 98,
+  "duplicates_skipped": 2,
+  "filename_collisions_renamed": 0,
+  "originals_uploaded": 98,
+  "derivatives_generated": 490,
+  "ready_for_public_render": 98,
+  "failed": 0,
+  "failed_paths": [],
+  "repaired_prior_collision_records": 0,
+  "url_issue": "R2 public URLs may need domain mapping fix",
+  "sample_photo_id_range": "21006-21103",
+  "notes": {
+    "action": "url_domain_mapping_needed",
+    "issue": "R2 direct URLs fail with 400, need custom domain or path correction",
+    "suggestion": "Check TOOLS.md for correct public base URL format"
+  }
+}

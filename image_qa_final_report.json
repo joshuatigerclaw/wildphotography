@@ -1,0 +1,67 @@
+{
+  "workflow": "wild_image_qa",
+  "timestamp": "2026-03-24T02:44:28Z",
+  "scope": {
+    "batch_limit": 500,
+    "photos_audited": 500,
+    "galleries_audited": 98
+  },
+  "full_database_summary": {
+    "total_ready_photos": 19474,
+    "thumb_url_domains": {
+      "images.wildphotography.com": 17620,
+      "r2.dev (presigned - expired)": 1126,
+      "cloudflarestorage.com": 540,
+      "pub.wildphotography.com": 177,
+      "pages.dev": 11
+    },
+    "r2_key_coverage": {
+      "has_r2_thumb_key": 7589,
+      "missing_r2_thumb_key": 11885
+    },
+    "missing_original_r2_key": 1106,
+    "duplicate_original_r2_keys": 2238,
+    "galleries_without_cover": 0
+  },
+  "issues_found_in_batch": {
+    "broken_thumbnails": 378,
+    "broken_large_url": 80,
+    "broken_preview_url": 77,
+    "broken_medium_url": 75,
+    "broken_thumb_url": 73,
+    "broken_small_url": 73,
+    "missing_derivatives": 0,
+    "galleries_missing_cover": 0,
+    "duplicate_r2_keys_in_batch": 20
+  },
+  "root_cause_analysis": {
+    "broken_thumbnails": "r2.dev URLs are expired presigned R2 URLs. The R2 bucket is configured for private access, so presigned URLs expire.",
+    "missing_r2_keys": "The r2_thumb_key field was not populated when derivatives were generated for many records. Need to extract from thumb_url or regenerate."
+  },
+  "recommended_actions": [
+    {
+      "priority": "CRITICAL",
+      "action": "Rebuild derivatives for 1126 photos with r2.dev URLs",
+      "photos_affected": 1126,
+      "reason": "Presigned URLs have expired, images not accessible publicly"
+    },
+    {
+      "priority": "HIGH",
+      "action": "Populate missing r2_thumb_key from thumb_url where possible",
+      "photos_affected": 11885,
+      "reason": "Cannot regenerate derivatives without R2 keys"
+    },
+    {
+      "priority": "MEDIUM",
+      "action": "Resolve 2238 duplicate original R2 keys",
+      "reason": "Same R2 object indexed under multiple photo records"
+    },
+    {
+      "priority": "LOW",
+      "action": "Galleries already have covers - no action needed",
+      "galleries_affected": 0
+    }
+  ],
+  "safe_fixes_available": 0,
+  "manual_review_required": 0
+}

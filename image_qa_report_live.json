@@ -1,0 +1,308 @@
+{
+  "photos_audited": 500,
+  "galleries_audited": 98,
+  "broken_thumb_count": 1732,
+  "missing_derivatives_count": 1,
+  "gallery_cover_issues": [],
+  "duplicate_r2_keys_count": 20,
+  "missing_metadata_count": 258,
+  "total_issues": 1753,
+  "broken_samples": [
+    {
+      "id": 22765,
+      "slug": "dji0279",
+      "field": "thumb_url",
+      "status": 400
+    },
+    {
+      "id": 22765,
+      "slug": "dji0279",
+      "field": "small_url",
+      "status": 400
+    },
+    {
+      "id": 22765,
+      "slug": "dji0279",
+      "field": "medium_url",
+      "status": 400
+    },
+    {
+      "id": 22765,
+      "slug": "dji0279",
+      "field": "large_url",
+      "status": 400
+    },
+    {
+      "id": 22765,
+      "slug": "dji0279",
+      "field": "preview_url",
+      "status": 400
+    },
+    {
+      "id": 22764,
+      "slug": "dji0275-1",
+      "field": "thumb_url",
+      "status": 400
+    },
+    {
+      "id": 22764,
+      "slug": "dji0275-1",
+      "field": "small_url",
+      "status": 400
+    },
+    {
+      "id": 22764,
+      "slug": "dji0275-1",
+      "field": "medium_url",
+      "status": 400
+    },
+    {
+      "id": 22764,
+      "slug": "dji0275-1",
+      "field": "large_url",
+      "status": 400
+    },
+    {
+      "id": 22764,
+      "slug": "dji0275-1",
+      "field": "preview_url",
+      "status": 400
+    },
+    {
+      "id": 22763,
+      "slug": "dji0274-1",
+      "field": "thumb_url",
+      "status": 400
+    },
+    {
+      "id": 22763,
+      "slug": "dji0274-1",
+      "field": "small_url",
+      "status": 400
+    },
+    {
+      "id": 22763,
+      "slug": "dji0274-1",
+      "field": "medium_url",
+      "status": 400
+    },
+    {
+      "id": 22763,
+      "slug": "dji0274-1",
+      "field": "large_url",
+      "status": 400
+    },
+    {
+      "id": 22763,
+      "slug": "dji0274-1",
+      "field": "preview_url",
+      "status": 400
+    },
+    {
+      "id": 22762,
+      "slug": "dji0272",
+      "field": "thumb_url",
+      "status": 400
+    },
+    {
+      "id": 22762,
+      "slug": "dji0272",
+      "field": "small_url",
+      "status": 400
+    },
+    {
+      "id": 22762,
+      "slug": "dji0272",
+      "field": "medium_url",
+      "status": 400
+    },
+    {
+      "id": 22762,
+      "slug": "dji0272",
+      "field": "large_url",
+      "status": 400
+    },
+    {
+      "id": 22762,
+      "slug": "dji0272",
+      "field": "preview_url",
+      "status": 400
+    }
+  ],
+  "missing_derivs_samples": [
+    {
+      "id": 22545,
+      "slug": "dji_0002",
+      "missing": [
+        "small_url",
+        "medium_url",
+        "large_url"
+      ]
+    }
+  ],
+  "duplicate_r2_keys": [
+    {
+      "key": "originals/1878/CL0A0160.jpg",
+      "count": 2
+    },
+    {
+      "key": "originals/2514/IMG_9287-2.jpg",
+      "count": 2
+    },
+    {
+      "key": "originals/7a964e7c0e49fbc85285d8e5cd05244de1b326ec78c99e8bc23d25dedb7dde34.jpg",
+      "count": 2
+    },
+    {
+      "key": "originals/2160/CL0A7822.jpg",
+      "count": 2
+    },
+    {
+      "key": "originals/1508/P1012082.jpg",
+      "count": 2
+    },
+    {
+      "key": "originals/2291/CL0A9262.jpg",
+      "count": 2
+    },
+    {
+      "key": "originals/1232/CL0A5830.jpg",
+      "count": 2
+    },
+    {
+      "key": "originals/11060/CL0A8714.jpg",
+      "count": 2
+    },
+    {
+      "key": "originals/a5d692d04c6f648d329f9edc1821e7e07e4a841ab3700bc1449b4002d63b12b0.jpg",
+      "count": 2
+    },
+    {
+      "key": "originals/c4a34d255be240af194568eec932f98be26b6299f03152f71c8d131a74f191d0.jpg",
+      "count": 2
+    },
+    {
+      "key": "originals/11031/IMG_4922.JPG",
+      "count": 2
+    },
+    {
+      "key": "originals/d8896a7ce89bbc7cbe403126ac89ce6df37a9a438f4ae47699c23665c0c75a8c.jpg",
+      "count": 2
+    },
+    {
+      "key": "originals/1950/CL0A2904.jpg",
+      "count": 2
+    },
+    {
+      "key": "originals/1092/IMG_0917.JPG",
+      "count": 2
+    },
+    {
+      "key": "originals/jaco-beach/fca0016d5f302ce081f21caeef64f224bce25570.jpg",
+      "count": 2
+    },
+    {
+      "key": "originals/1221/CL0A2507.jpg",
+      "count": 2
+    },
+    {
+      "key": "originals/b2ae0e36d60ce9f1d33935f71bbd4bd9895fa49d4ae91f258c8c35a53de6b2b0.jpg",
+      "count": 2
+    },
+    {
+      "key": "originals/1337/DJI_0356.jpg",
+      "count": 2
+    },
+    {
+      "key": "originals/5d52c6c46c4d4ca3ac307580bbae70612eaa3a920390c4f4685587bbb43f9e6e.jpg",
+      "count": 2
+    },
+    {
+      "key": "originals/1922/CL0A1835.jpg",
+      "count": 2
+    }
+  ],
+  "meta_issue_samples": [
+    {
+      "id": 22765,
+      "slug": "dji0279"
+    },
+    {
+      "id": 22764,
+      "slug": "dji0275-1"
+    },
+    {
+      "id": 22763,
+      "slug": "dji0274-1"
+    },
+    {
+      "id": 22762,
+      "slug": "dji0272"
+    },
+    {
+      "id": 22761,
+      "slug": "dji0267"
+    },
+    {
+      "id": 22760,
+      "slug": "dji0266"
+    },
+    {
+      "id": 22759,
+      "slug": "dji0262"
+    },
+    {
+      "id": 22758,
+      "slug": "dji0261"
+    },
+    {
+      "id": 22757,
+      "slug": "dji0260"
+    },
+    {
+      "id": 22756,
+      "slug": "dji0256"
+    },
+    {
+      "id": 22755,
+      "slug": "dji0255"
+    },
+    {
+      "id": 22754,
+      "slug": "dji0251"
+    },
+    {
+      "id": 22753,
+      "slug": "dji0247"
+    },
+    {
+      "id": 22752,
+      "slug": "dji0246"
+    },
+    {
+      "id": 22751,
+      "slug": "dji0245"
+    },
+    {
+      "id": 22750,
+      "slug": "dji0244"
+    },
+    {
+      "id": 22749,
+      "slug": "dji0242-1"
+    },
+    {
+      "id": 22748,
+      "slug": "dji0238"
+    },
+    {
+      "id": 22747,
+      "slug": "dji0236-1"
+    },
+    {
+      "id": 22746,
+      "slug": "dji0234"
+    }
+  ],
+  "timestamp": "2026-03-24T21:22:40.833210+00:00"
+}

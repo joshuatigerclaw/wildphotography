@@ -1,0 +1,73 @@
+{
+  "report_date": "2026-03-22T07:12:00-06:00",
+  "system": "WildPhotography",
+  "workflow": "Image QA",
+  "totals": {
+    "total_photos": 18919,
+    "has_thumb_url": 18919,
+    "missing_thumb_url": 0,
+    "derivatives_complete": 18217,
+    "ready_for_public_render": 18303,
+    "search_ready": 18303
+  },
+  "issues_found": {
+    "galleries_missing_cover": 1,
+    "duplicate_hero_images": 1,
+    "broken_r2_thumb_urls": 300,
+    "incomplete_derivatives_with_thumb": 702,
+    "needs_review_over_flagged": 18079,
+    "needs_review_not_ready": 280,
+    "gallery_covers_flagged_needs_review": 94
+  },
+  "safe_fixes": {
+    "needs_review_clear_candidates": 18079,
+    "r2_url_repair_candidates": 300,
+    "incomplete_derivative_rebuild_candidates": 702
+  },
+  "replacements_proposed": {
+    "rainforests_gallery_cover": {
+      "gallery_id": 8,
+      "gallery_name": "Rainforests",
+      "gallery_slug": "rainforests",
+      "issue": "no cover assigned and no ready_for_public_render photos exist in gallery",
+      "suggested_action": "assign photo 34 (Cloud Forest Mist) once it becomes ready, or find a ready rainforest photo in another gallery",
+      "candidate_ids": [34, 35]
+    },
+    "duplicate_hero_photo_10318": {
+      "photo_id": 10318,
+      "title": "DJI 0500 2",
+      "slug": "dji-0500-2-nauyaca-waterfalls-6936",
+      "thumb_url": "https://images.wildphotography.com/derivatives/thumb/dji-0500-2-nauyaca-waterfalls-6936-thumb.jpg",
+      "used_by_galleries": ["nauyaca-waterfalls", "waterfalls-in-costa-rica"],
+      "suggested_action": "keep for nauyaca-waterfalls, select different hero for waterfalls-in-costa-rica"
+    }
+  },
+  "manual_review_required": {
+    "count": 280,
+    "description": "photos with needs_review=true that are not ready_for_public_render",
+    "reason": "These photos are flagged for review but have incomplete derivatives or other issues preventing them from being ready"
+  },
+  "url_domain_breakdown": {
+    "images_wildphoto": 18019,
+    "pub_wildphoto": 382,
+    "r2_cf_storage": 300,
+    "other": 218
+  },
+  "broken_url_analysis": {
+    "r2_cloudflarestorage_com": {
+      "count": 300,
+      "pattern": "wildphoto-storage/photos/{id}/thumb.webp",
+      "status": "HTTP 400 Bad Request - broken path format",
+      "has_valid_alternative": true,
+      "alternative_pattern": "images.wildphotography.com/derivatives/thumbs/{id}-thumb.jpg"
+    },
+    "cloudflare_pages_dev": {
+      "count": 11,
+      "status": "likely valid but non-canonical domain"
+    },
+    "r2_dev_unresolved": {
+      "count": 207,
+      "status": "returning HTTP 200 with image content but non-canonical"
+    }
+  }
+}

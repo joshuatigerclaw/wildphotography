@@ -1,0 +1,48 @@
+{
+  "workflow": "wild_image_qa",
+  "run_time": "2026-03-24T21:24:56.586408+00:00",
+  "batch_limit": 500,
+  "photos_audited": 500,
+  "galleries_audited": 98,
+  "broken_derivative_urls": 1732,
+  "photos_with_4plus_broken_derivs": 332,
+  "photos_with_some_broken_derivs": 3,
+  "total_photos_with_any_broken_derivs": 335,
+  "url_domain_breakdown": {
+    "images.wildphotography.com (working)": 17675,
+    "r2.cloudflarestorage.com (broken)": 1056,
+    "r2.dev (broken/placeholder)": 878,
+    "other": 11
+  },
+  "missing_derivatives_count": 1,
+  "gallery_cover_issues": 0,
+  "duplicate_r2_keys_count": 20,
+  "missing_metadata_count": 258,
+  "total_issues_in_batch": 1753,
+  "safe_replacements_applied": 0,
+  "manual_review_queued": 0,
+  "dispatch": [
+    {
+      "workflow": "wild_derivative_rebuild_batch",
+      "trigger": "r2_cloudflarestorage_broken_urls",
+      "photos_affected": 1934,
+      "priority": "CRITICAL",
+      "action": "Rebuild derivatives for photos using broken R2 direct URLs; migrate to working CloudFront format or fix R2 bucket public access"
+    },
+    {
+      "workflow": "wild_r2_key_backfill",
+      "trigger": "r2_dev_placeholder_urls",
+      "photos_affected": 878,
+      "priority": "CRITICAL",
+      "action": "878 photos use r2.dev placeholder URLs - these need complete derivative rebuild"
+    },
+    {
+      "workflow": "wild_metadata_enrichment_batch",
+      "trigger": "missing_title_keywords_location",
+      "photos_affected": 258,
+      "priority": "MEDIUM",
+      "action": "Enrich metadata for photos missing title/keywords/location_name"
+    }
+  ],
+  "status": "CRITICAL_ACTION_REQUIRED"
+}

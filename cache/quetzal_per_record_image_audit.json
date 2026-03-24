@@ -1,0 +1,38 @@
+[
+  {
+    "id": 17,
+    "slug": "quetzal",
+    "title": "Resplendent Quetzal",
+    "content_hash": null,
+    "r2_original_key": null,
+    "r2_thumb_key": null,
+    "r2_web_small_key": null,
+    "thumb_url": "https://pub-7d412c6efb5943b5bc587e695e22001e.r2.dev/derivatives/smalls/2100-small.jpg",
+    "small_url": "https://pub-7d412c6efb5943b5bc587e695e22001e.r2.dev/derivatives/smalls/2100-small.jpg",
+    "medium_url": "https://pub-7d412c6efb5943b5bc587e695e22001e.r2.dev/derivatives/smalls/2100-small.jpg"
+  },
+  {
+    "id": 14899,
+    "slug": "quetzal-CL0A0992",
+    "title": "Resplendent Quetzal - CL0A0992.JPG",
+    "content_hash": "ef9f96be8a159ae2e0101cfe04c6a247cd184dcc435ec7208d54e84d79296fb1",
+    "r2_original_key": null,
+    "r2_thumb_key": null,
+    "r2_web_small_key": null,
+    "thumb_url": "https://pub-7d412c6efb5943b5bc587e695e22001e.r2.dev/derivatives/smalls/2100-small.jpg",
+    "small_url": "https://pub-7d412c6efb5943b5bc587e695e22001e.r2.dev/derivatives/smalls/2100-small.jpg",
+    "medium_url": "https://pub-7d412c6efb5943b5bc587e695e22001e.r2.dev/derivatives/smalls/2100-small.jpg"
+  },
+  {
+    "id": 14902,
+    "slug": "quetzal-CL0A1100",
+    "title": "Resplendent Quetzal - CL0A1100.JPG",
+    "content_hash": "01c217571b8c1c242ebabe07e4f1ffa00cb7b5b85dc3ac90cb6bb34b026a4dc6",
+    "r2_original_key": null,
+    "r2_thumb_key": null,
+    "r2_web_small_key": null,
+    "thumb_url": "https://pub-7d412c6efb5943b5bc587e695e22001e.r2.dev/derivatives/smalls/2100-small.jpg",
+    "small_url": "https://pub-7d412c6efb5943b5bc587e695e22001e.r2.dev/derivatives/smalls/2100-small.jpg",
+    "medium_url": "https://pub-7d412c6efb5943b5bc587e695e22001e.r2.dev/derivatives/smalls/2100-small.jpg"
+  }
+]
