@@ -16,6 +16,7 @@ out/
 .env.development.local
 .env.test.local
 .env.production.local
+.env.secrets
 
 # Debug
 npm-debug.log*
@@ -28,19 +29,14 @@ yarn-error.log*
 *.swp
 *.swo
 
-# OS
+# Mac
 .DS_Store
-Thumbs.db
 
-# Logs
-*.log
-
-# Testing
-coverage/
-
-# Misc
-*.tsbuildinfo
-storage/derivatives/
+# Storage & derivatives (too large to track)
+storage/
+derivatives/
 .wrangler/
+
+# Scripts with API keys - local only
 scripts/vision_enrich.py
 scripts/vision_enrichment.py
