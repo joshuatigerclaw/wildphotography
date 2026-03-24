@@ -145,7 +145,7 @@ async function renderFullArticle(article: any, env: Env): Promise<Response> {
     <div class="site-header-inner">
       <a href="/" class="site-logo">Wildphotography</a>
       <nav class="site-nav">
-        <a href="/gallery">Galleries</a>
+        <a href="/galleries">Galleries</a>
         <a href="/species">Species</a>
         <a href="/region">Regions</a>
         <a href="/search">Search</a>
