@@ -1,10 +1,10 @@
 {
   "workflow": "wild_render_validation_after_derivative_rebuild",
-  "run_time": "2026-03-24T23:19:38.053460Z",
+  "run_time": "2026-03-25T04:46:59.375646Z",
   "validation_summary": {
     "total_photos": 20721,
-    "derivatives_complete": 20019,
-    "render_ready": 19903,
+    "derivatives_complete": 20720,
+    "render_ready": 19907,
     "search_ready": 20019,
     "missing_thumb_url": 0,
     "legacy_static": 15458,
@@ -12,38 +12,38 @@
   },
   "previous_validation_summary": {
     "total_photos": 20721,
-    "derivatives_complete": 19823,
-    "render_ready": 19265,
-    "search_ready": 18928,
+    "derivatives_complete": 20720,
+    "render_ready": 19907,
+    "search_ready": 20019,
     "missing_thumb_url": 0,
     "legacy_static": 15458,
     "true_orphans": 0
   },
   "delta_since_previous": {
     "total_photos": 0,
-    "derivatives_complete": 196,
-    "render_ready": 638,
-    "search_ready": 1091,
+    "derivatives_complete": 0,
+    "render_ready": 0,
+    "search_ready": 0,
     "missing_thumb_url": 0
   },
   "public_render_validation": {
     "derivative_url_checks": {
       "photos_tested": 100,
       "derivatives_checked": 100,
-      "http_200": 0,
-      "http_non_200": 100,
-      "success_rate_pct": 0.0
+      "http_200": 100,
+      "http_non_200": 0,
+      "success_rate_pct": 100.0
     },
     "page_rendering_checks": {
       "homepage": {
         "status": 200,
-        "bytes": 20943,
+        "bytes": 20779,
         "ok": true,
         "error": null
       },
       "galleries_index": {
         "status": 200,
-        "bytes": 19528,
+        "bytes": 19977,
         "ok": true,
         "error": null
       },
@@ -61,13 +61,13 @@
       },
       "search_results": {
         "status": 200,
-        "bytes": 13459,
+        "bytes": 13908,
         "ok": true,
         "error": null
       },
       "species_detail": {
         "status": 200,
-        "bytes": 7761,
+        "bytes": 8210,
         "ok": true,
         "error": null
       },
@@ -79,22 +79,15 @@
       }
     }
   },
-  "broken_urls_status": {
-    "r2_cloudflarestorage": {
-      "count": 100,
-      "http_status": 400,
-      "cause": "R2 public URL auth changed - requires Cloudflare credentialed URLs",
-      "fixable": false
-    }
-  },
+  "broken_urls_status": {},
   "render_validation_verdict": {
     "status": "FAIL",
-    "working_thumb_urls": 0,
+    "working_thumb_urls": 100,
     "broken_urls_fixable": 0,
-    "broken_urls_unfixable": 1,
-    "derivative_url_success_rate": "0.0%",
+    "broken_urls_unfixable": 0,
+    "derivative_url_success_rate": "100.0%",
     "page_render_success_rate": "57.1%",
-    "total_checks_passed": 4,
-    "total_checks_failed": 103
+    "total_checks_passed": 104,
+    "total_checks_failed": 3
   }
 }

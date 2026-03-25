@@ -1,0 +1,23 @@
+{
+  "batch_id": "batch_import_20260325_01",
+  "run_at": "2026-03-25T05:39:00Z",
+  "folder": "Costa-Rica-Gallery/Jaco-Beach",
+  "source_root": "/Volumes/ADATA SC740/Smugmug Backup/Galleries/Costa-Rica-Gallery",
+  "gallery_id": 48,
+  "gallery_slug": "jaco-beach",
+  "photos_processed": 0,
+  "duplicates_skipped": 100,
+  "filename_collisions_renamed": 0,
+  "originals_uploaded": 0,
+  "derivatives_generated": 0,
+  "errors": 0,
+  "failed_files": [],
+  "ready_for_public_render": 0,
+  "search_ready": 0,
+  "classification": "stale_queue_cleanup",
+  "actionable_new_count": 0,
+  "notes": [
+    "All 100 items in Jaco-Beach queue were duplicates - folder already imported in prior batch",
+    "working_import_queue.json needs rebuilding from unmapped folders"
+  ]
+}

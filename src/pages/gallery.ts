@@ -126,8 +126,12 @@ export async function renderGallery(slug: string, env: Env, url: URL): Promise<R
         imageHtml = renderPlaceholder('No thumbnail');
       }
       
-      // Add aspect ratio hint based on index for visual variety
-      const aspectClass = index % 3 === 0 ? 'tall' : index % 2 === 0 ? 'wide' : 'square';
+      // Calculate aspect class from actual image dimensions
+      const w = photo.width || 400;
+      const h = photo.height || 300;
+      let aspectClass = 'square';
+      if (h > w * 1.4) aspectClass = 'tall';
+      else if (w > h * 1.4) aspectClass = 'wide';
       
       return `
         <a href="/photo/${photo.slug}" class="${cardClass} ${aspectClass}" data-index="${index}" data-slug="${photo.slug}">
@@ -365,33 +369,23 @@ export async function renderGallery(slug: string, env: Env, url: URL): Promise<R
       }
       
       .masonry-grid {
-        column-count: 2;
-        column-gap: 1rem;
-        padding: 0 1rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        gap: 0.75rem;
+        padding: 0 0.5rem;
         max-width: 1800px;
         margin: 0 auto;
       }
       
       @media (min-width: 640px) {
-        .masonry-grid { column-count: 3; }
+        .masonry-grid { grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); }
       }
       
       @media (min-width: 1024px) {
-        .masonry-grid { column-count: 4; }
-      }
-      
-      @media (min-width: 1400px) {
-        .masonry-grid { column-count: 5; }
-      }
-      
-      @media (min-width: 1800px) {
-        .masonry-grid { column-count: 6; }
+        .masonry-grid { grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
       }
       
       .masonry-item {
-        break-inside: avoid;
-        margin-bottom: 1rem;
-        display: block;
         position: relative;
         overflow: hidden;
         border-radius: 8px;
@@ -404,12 +398,37 @@ export async function renderGallery(slug: string, env: Env, url: URL): Promise<R
         box-shadow: 0 12px 40px rgba(0,0,0,0.2);
       }
       
-      .masonry-item.tall { grid-row: span 2; }
-      .masonry-item.wide { grid-column: span 2; }
+      /* Square items: natural height */
+      .masonry-item.square .masonry-img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+      }
+      
+      /* Tall items (portrait): span 2 rows */
+      .masonry-item.tall {
+        grid-row: span 2;
+      }
+      .masonry-item.tall .masonry-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      
+      /* Wide items (panorama): span 2 columns */
+      .masonry-item.wide {
+        grid-column: span 2;
+      }
+      .masonry-item.wide .masonry-img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+      }
       
       .masonry-img {
         width: 100%;
-        height: auto;
+        height: 220px;
+        object-fit: cover;
         display: block;
         transition: transform 0.4s ease;
         /* Fix image orientation - let browser handle EXIF */

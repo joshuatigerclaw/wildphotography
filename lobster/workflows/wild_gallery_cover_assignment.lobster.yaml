@@ -1,0 +1,59 @@
+name: wild_gallery_cover_assignment
+description: >
+  Assign and repair cover photos for WildPhotography galleries.
+  Scans for galleries with missing or invalid covers, finds eligible
+  photo candidates, assigns the best candidate per gallery, and queues
+  any without candidates for manual review. 200 galleries per run.
+  Uses the proven gallery_cover_assignment.py script.
+
+inputs:
+  batch_limit: 200
+
+steps:
+  - id: run_script
+    name: run_script
+    description: >
+      Run the gallery_cover_assignment.py Python script against Neon DB.
+      The script handles all logic: finding galleries needing covers,
+      loading candidates, scoring, assigning, and queuing manual review.
+      We capture stdout and parse the === SUMMARY === block.
+    tool: agent_run
+    args:
+      agent: gallery_cover_script_runner
+      prompt: |
+        Execute the following shell command and return the COMPLETE stdout output:
+        ```
+        cd /Users/joshuatenbrink/.openclaw/workspace/wildphotography && python3 scripts/gallery_cover_assignment.py 2>&1
+        ```
+
+        After the command completes, parse the stdout and return:
+        1. The full stdout text
+        2. These integer fields extracted from the "=== SUMMARY ===" block:
+           - galleries_scanned
+           - covers_assigned
+           - covers_repaired
+           - manual_review_required
+        3. Any "Sample assignments" lines (up to 5), each as {gallery_id, original_status, photo_id, photo_slug, score}
+
+        Return all of this as a structured JSON response:
+        {
+          "raw_output": "...",
+          "galleries_scanned": int,
+          "covers_assigned": int,
+          "covers_repaired": int,
+          "manual_review_required": int,
+          "sample_assignments": [{gallery_id, original_status, photo_id, photo_slug, score}, ...]
+        }
+
+  - id: summary
+    name: summary
+    description: Emit a concise run summary with exact counts
+    tool: result_emit
+    args:
+      fields:
+        galleries_scanned: "{{ steps.run_script.galleries_scanned }}"
+        covers_assigned: "{{ steps.run_script.covers_assigned }}"
+        covers_repaired: "{{ steps.run_script.covers_repaired }}"
+        manual_review_required: "{{ steps.run_script.manual_review_required }}"
+        sample_assignments: "{{ steps.run_script.sample_assignments }}"
+        raw_output: "{{ steps.run_script.raw_output }}"

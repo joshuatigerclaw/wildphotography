@@ -1,0 +1,364 @@
+Total phantom_complete_flag records: 11889
+
+Batch 1/119 — IDs 9313–1143 (100 records) | confirmed=8 (db updated 8) | missing=92 (db updated 92)
+  Cumulative: confirmed=8, missing=92, errors=0
+
+Batch 2/119 — IDs 1955–9195 (100 records) | confirmed=10 (db updated 10) | missing=90 (db updated 90)
+  Cumulative: confirmed=18, missing=182, errors=0
+
+Batch 3/119 — IDs 6728–10007 (100 records) | confirmed=4 (db updated 4) | missing=96 (db updated 96)
+  Cumulative: confirmed=22, missing=278, errors=0
+
+Batch 4/119 — IDs 7064–8880 (100 records) | confirmed=13 (db updated 13) | missing=87 (db updated 87)
+  Cumulative: confirmed=35, missing=365, errors=0
+
+Batch 5/119 — IDs 8901–12500 (100 records) | confirmed=6 (db updated 6) | missing=94 (db updated 94)
+  Cumulative: confirmed=41, missing=459, errors=0
+
+Batch 6/119 — IDs 4120–12768 (100 records) | confirmed=6 (db updated 6) | missing=94 (db updated 94)
+  Cumulative: confirmed=47, missing=553, errors=0
+
+Batch 7/119 — IDs 9033–12297 (100 records) | confirmed=16 (db updated 16) | missing=84 (db updated 84)
+  Cumulative: confirmed=63, missing=637, errors=0
+
+Batch 8/119 — IDs 1910–1436 (100 records) | confirmed=7 (db updated 7) | missing=93 (db updated 93)
+  Cumulative: confirmed=70, missing=730, errors=0
+
+Batch 9/119 — IDs 13409–7607 (100 records) | confirmed=10 (db updated 10) | missing=90 (db updated 90)
+  Cumulative: confirmed=80, missing=820, errors=0
+
+Batch 10/119 — IDs 2100–5939 (100 records) | confirmed=9 (db updated 9) | missing=91 (db updated 91)
+  Cumulative: confirmed=89, missing=911, errors=0
+
+Batch 11/119 — IDs 5949–2969 (100 records) | confirmed=6 (db updated 6) | missing=94 (db updated 94)
+  Cumulative: confirmed=95, missing=1005, errors=0
+
+Batch 12/119 — IDs 11031–7143 (100 records) | confirmed=14 (db updated 14) | missing=86 (db updated 86)
+  Cumulative: confirmed=109, missing=1091, errors=0
+
+Batch 13/119 — IDs 7157–8468 (100 records) | confirmed=13 (db updated 13) | missing=87 (db updated 87)
+  Cumulative: confirmed=122, missing=1178, errors=0
+
+Batch 14/119 — IDs 2996–10668 (100 records) | confirmed=7 (db updated 7) | missing=93 (db updated 93)
+  Cumulative: confirmed=129, missing=1271, errors=0
+
+Batch 15/119 — IDs 6242–14743 (100 records) | confirmed=2 (db updated 2) | missing=98 (db updated 98)
+  Cumulative: confirmed=131, missing=1369, errors=0
+
+Batch 16/119 — IDs 1870–939 (100 records) | confirmed=12 (db updated 12) | missing=88 (db updated 88)
+  Cumulative: confirmed=143, missing=1457, errors=0
+
+Batch 17/119 — IDs 8829–7274 (100 records) | confirmed=9 (db updated 9) | missing=91 (db updated 91)
+  Cumulative: confirmed=152, missing=1548, errors=0
+
+Batch 18/119 — IDs 7323–19189 (100 records) | confirmed=1 (db updated 1) | missing=99 (db updated 99)
+  Cumulative: confirmed=153, missing=1647, errors=0
+
+Batch 19/119 — IDs 8029–19657 (100 records) | confirmed=8 (db updated 8) | missing=92 (db updated 92)
+  Cumulative: confirmed=161, missing=1739, errors=0
+
+Batch 20/119 — IDs 915–18342 (100 records) | confirmed=2 (db updated 2) | missing=98 (db updated 98)
+  Cumulative: confirmed=163, missing=1837, errors=0
+
+Batch 21/119 — IDs 1544–897 (100 records) | confirmed=10 (db updated 10) | missing=90 (db updated 90)
+  Cumulative: confirmed=173, missing=1927, errors=0
+
+Batch 22/119 — IDs 1001–1210 (100 records) | confirmed=10 (db updated 10) | missing=90 (db updated 90)
+  Cumulative: confirmed=183, missing=2017, errors=0
+
+Batch 23/119 — IDs 991–173 (100 records) | confirmed=8 (db updated 8) | missing=92 (db updated 92)
+  Cumulative: confirmed=191, missing=2109, errors=0
+
+Batch 24/119 — IDs 3519–187 (100 records) | confirmed=12 (db updated 12) | missing=88 (db updated 88)
+  Cumulative: confirmed=203, missing=2197, errors=0
+
+Batch 25/119 — IDs 6676–10362 (100 records) | confirmed=5 (db updated 5) | missing=95 (db updated 95)
+  Cumulative: confirmed=208, missing=2292, errors=0
+
+Batch 26/119 — IDs 5395–11690 (100 records) | confirmed=9 (db updated 9) | missing=91 (db updated 91)
+  Cumulative: confirmed=217, missing=2383, errors=0
+
+Batch 27/119 — IDs 8957–19885 (100 records) | confirmed=8 (db updated 8) | missing=92 (db updated 92)
+  Cumulative: confirmed=225, missing=2475, errors=0
+
+Batch 28/119 — IDs 4953–17100 (100 records) | confirmed=7 (db updated 7) | missing=93 (db updated 93)
+  Cumulative: confirmed=232, missing=2568, errors=0
+
+Batch 29/119 — IDs 18713–19933 (100 records) | confirmed=2 (db updated 2) | missing=98 (db updated 98)
+  Cumulative: confirmed=234, missing=2666, errors=0
+
+Batch 30/119 — IDs 5880–123 (100 records) | confirmed=5 (db updated 5) | missing=95 (db updated 95)
+  Cumulative: confirmed=239, missing=2761, errors=0
+
+Batch 31/119 — IDs 195–14772 (100 records) | confirmed=3 (db updated 3) | missing=97 (db updated 97)
+  Cumulative: confirmed=242, missing=2858, errors=0
+
+Batch 32/119 — IDs 18843–7609 (100 records) | confirmed=8 (db updated 8) | missing=92 (db updated 92)
+  Cumulative: confirmed=250, missing=2950, errors=0
+
+Batch 33/119 — IDs 7462–8105 (100 records) | confirmed=10 (db updated 10) | missing=90 (db updated 90)
+  Cumulative: confirmed=260, missing=3040, errors=0
+
+Batch 34/119 — IDs 14321–1122 (100 records) | confirmed=5 (db updated 5) | missing=95 (db updated 95)
+  Cumulative: confirmed=265, missing=3135, errors=0
+
+Batch 35/119 — IDs 1130–1149 (100 records) | confirmed=30 (db updated 30) | missing=70 (db updated 70)
+  Cumulative: confirmed=295, missing=3205, errors=0
+
+Batch 36/119 — IDs 9841–1259 (100 records) | confirmed=23 (db updated 23) | missing=77 (db updated 77)
+  Cumulative: confirmed=318, missing=3282, errors=0
+
+Batch 37/119 — IDs 787–13777 (100 records) | confirmed=8 (db updated 8) | missing=92 (db updated 92)
+  Cumulative: confirmed=326, missing=3374, errors=0
+
+Batch 38/119 — IDs 13793–9005 (100 records) | confirmed=2 (db updated 2) | missing=98 (db updated 98)
+  Cumulative: confirmed=328, missing=3472, errors=0
+
+Batch 39/119 — IDs 8154–4713 (100 records) | confirmed=2 (db updated 2) | missing=98 (db updated 98)
+  Cumulative: confirmed=330, missing=3570, errors=0
+
+Batch 40/119 — IDs 4835–8232 (100 records) | confirmed=7 (db updated 7) | missing=93 (db updated 93)
+  Cumulative: confirmed=337, missing=3663, errors=0
+
+Batch 41/119 — IDs 12515–9903 (100 records) | confirmed=2 (db updated 2) | missing=98 (db updated 98)
+  Cumulative: confirmed=339, missing=3761, errors=0
+
+Batch 42/119 — IDs 9543–8573 (100 records) | confirmed=4 (db updated 4) | missing=96 (db updated 96)
+  Cumulative: confirmed=343, missing=3857, errors=0
+
+Batch 43/119 — IDs 9883–10715 (100 records) | confirmed=20 (db updated 20) | missing=80 (db updated 80)
+  Cumulative: confirmed=363, missing=3937, errors=0
+
+Batch 44/119 — IDs 12113–10072 (100 records) | confirmed=11 (db updated 11) | missing=89 (db updated 89)
+  Cumulative: confirmed=374, missing=4026, errors=0
+
+Batch 45/119 — IDs 10073–7340 (100 records) | confirmed=8 (db updated 8) | missing=92 (db updated 92)
+  Cumulative: confirmed=382, missing=4118, errors=0
+
+Batch 46/119 — IDs 10163–6410 (100 records) | confirmed=10 (db updated 10) | missing=90 (db updated 90)
+  Cumulative: confirmed=392, missing=4208, errors=0
+
+Batch 47/119 — IDs 4312–12640 (100 records) | confirmed=7 (db updated 7) | missing=93 (db updated 93)
+  Cumulative: confirmed=399, missing=4301, errors=0
+
+Batch 48/119 — IDs 4028–8907 (100 records) | confirmed=5 (db updated 5) | missing=95 (db updated 95)
+  Cumulative: confirmed=404, missing=4396, errors=0
+
+Batch 49/119 — IDs 6542–6348 (100 records) | confirmed=5 (db updated 5) | missing=95 (db updated 95)
+  Cumulative: confirmed=409, missing=4491, errors=0
+
+Batch 50/119 — IDs 6359–9465 (100 records) | confirmed=5 (db updated 5) | missing=95 (db updated 95)
+  Cumulative: confirmed=414, missing=4586, errors=0
+
+Batch 51/119 — IDs 19287–12206 (100 records) | confirmed=7 (db updated 7) | missing=93 (db updated 93)
+  Cumulative: confirmed=421, missing=4679, errors=0
+
+Batch 52/119 — IDs 6970–1882 (100 records) | confirmed=10 (db updated 10) | missing=90 (db updated 90)
+  Cumulative: confirmed=431, missing=4769, errors=0
+
+Batch 53/119 — IDs 12286–2158 (100 records) | confirmed=2 (db updated 2) | missing=98 (db updated 98)
+  Cumulative: confirmed=433, missing=4867, errors=0
+
+Batch 54/119 — IDs 10438–2409 (100 records) | confirmed=16 (db updated 16) | missing=84 (db updated 84)
+  Cumulative: confirmed=449, missing=4951, errors=0
+
+Batch 55/119 — IDs 11316–19630 (100 records) | confirmed=10 (db updated 10) | missing=90 (db updated 90)
+  Cumulative: confirmed=459, missing=5041, errors=0
+
+Batch 56/119 — IDs 8310–9553 (100 records) | confirmed=4 (db updated 4) | missing=96 (db updated 96)
+  Cumulative: confirmed=463, missing=5137, errors=0
+
+Batch 57/119 — IDs 10176–8267 (100 records) | confirmed=10 (db updated 10) | missing=90 (db updated 90)
+  Cumulative: confirmed=473, missing=5227, errors=0
+
+Batch 58/119 — IDs 10121–19778 (100 records) | confirmed=5 (db updated 5) | missing=95 (db updated 95)
+  Cumulative: confirmed=478, missing=5322, errors=0
+
+Batch 59/119 — IDs 8983–4544 (100 records) | confirmed=5 (db updated 5) | missing=95 (db updated 95)
+  Cumulative: confirmed=483, missing=5417, errors=0
+
+Batch 60/119 — IDs 4820–2918 (100 records) | confirmed=9 (db updated 9) | missing=91 (db updated 91)
+  Cumulative: confirmed=492, missing=5508, errors=0
+
+Batch 61/119 — IDs 2924–4002 (100 records) | confirmed=5 (db updated 5) | missing=95 (db updated 95)
+  Cumulative: confirmed=497, missing=5603, errors=0
+
+Batch 62/119 — IDs 5469–5310 (100 records) | confirmed=13 (db updated 13) | missing=87 (db updated 87)
+  Cumulative: confirmed=510, missing=5690, errors=0
+
+Batch 63/119 — IDs 8554–1674 (100 records) | confirmed=7 (db updated 7) | missing=93 (db updated 93)
+  Cumulative: confirmed=517, missing=5783, errors=0
+
+Batch 64/119 — IDs 9104–2143 (100 records) | confirmed=6 (db updated 6) | missing=94 (db updated 94)
+  Cumulative: confirmed=523, missing=5877, errors=0
+
+Batch 65/119 — IDs 11283–14129 (100 records) | confirmed=11 (db updated 11) | missing=89 (db updated 89)
+  Cumulative: confirmed=534, missing=5966, errors=0
+
+Batch 66/119 — IDs 12627–8217 (100 records) | confirmed=4 (db updated 4) | missing=96 (db updated 96)
+  Cumulative: confirmed=538, missing=6062, errors=0
+
+Batch 67/119 — IDs 8191–3413 (100 records) | confirmed=4 (db updated 4) | missing=96 (db updated 96)
+  Cumulative: confirmed=542, missing=6158, errors=0
+
+Batch 68/119 — IDs 12039–7126 (100 records) | confirmed=10 (db updated 10) | missing=90 (db updated 90)
+  Cumulative: confirmed=552, missing=6248, errors=0
+
+Batch 69/119 — IDs 14378–4059 (100 records) | confirmed=5 (db updated 5) | missing=95 (db updated 95)
+  Cumulative: confirmed=557, missing=6343, errors=0
+
+Batch 70/119 — IDs 4063–8732 (100 records) | confirmed=5 (db updated 5) | missing=95 (db updated 95)
+  Cumulative: confirmed=562, missing=6438, errors=0
+
+Batch 71/119 — IDs 9955–19387 (100 records) | confirmed=5 (db updated 5) | missing=95 (db updated 95)
+  Cumulative: confirmed=567, missing=6533, errors=0
+
+Batch 72/119 — IDs 2095–16809 (100 records) | confirmed=6 (db updated 6) | missing=94 (db updated 94)
+  Cumulative: confirmed=573, missing=6627, errors=0
+
+Batch 73/119 — IDs 13062–13035 (100 records) | confirmed=1 (db updated 1) | missing=99 (db updated 99)
+  Cumulative: confirmed=574, missing=6726, errors=0
+
+Batch 74/119 — IDs 4767–19140 (100 records) | confirmed=4 (db updated 4) | missing=96 (db updated 96)
+  Cumulative: confirmed=578, missing=6822, errors=0
+
+Batch 75/119 — IDs 14397–7647 (100 records) | confirmed=4 (db updated 4) | missing=96 (db updated 96)
+  Cumulative: confirmed=582, missing=6918, errors=0
+
+Batch 76/119 — IDs 7479–6699 (100 records) | confirmed=6 (db updated 6) | missing=94 (db updated 94)
+  Cumulative: confirmed=588, missing=7012, errors=0
+
+Batch 77/119 — IDs 8792–16850 (100 records) | confirmed=4 (db updated 4) | missing=96 (db updated 96)
+  Cumulative: confirmed=592, missing=7108, errors=0
+
+Batch 78/119 — IDs 16853–18542 (100 records) | confirmed=3 (db updated 3) | missing=97 (db updated 97)
+  Cumulative: confirmed=595, missing=7205, errors=0
+
+Batch 79/119 — IDs 18544–7252 (100 records) | confirmed=1 (db updated 1) | missing=99 (db updated 99)
+  Cumulative: confirmed=596, missing=7304, errors=0
+
+Batch 80/119 — IDs 7253–984 (100 records) | confirmed=6 (db updated 6) | missing=94 (db updated 94)
+  Cumulative: confirmed=602, missing=7398, errors=0
+
+Batch 81/119 — IDs 902–8384 (100 records) | confirmed=5 (db updated 5) | missing=95 (db updated 95)
+  Cumulative: confirmed=607, missing=7493, errors=0
+
+Batch 82/119 — IDs 6900–1289 (100 records) | confirmed=5 (db updated 5) | missing=95 (db updated 95)
+  Cumulative: confirmed=612, missing=7588, errors=0
+
+Batch 83/119 — IDs 1043–6723 (100 records) | confirmed=6 (db updated 6) | missing=94 (db updated 94)
+  Cumulative: confirmed=618, missing=7682, errors=0
+
+Batch 84/119 — IDs 10558–4086 (100 records) | confirmed=3 (db updated 3) | missing=97 (db updated 97)
+  Cumulative: confirmed=621, missing=7779, errors=0
+
+Batch 85/119 — IDs 4093–8325 (100 records) | confirmed=10 (db updated 10) | missing=90 (db updated 90)
+  Cumulative: confirmed=631, missing=7869, errors=0
+
+Batch 86/119 — IDs 8334–19412 (100 records) | confirmed=7 (db updated 7) | missing=93 (db updated 93)
+  Cumulative: confirmed=638, missing=7962, errors=0
+
+Batch 87/119 — IDs 19413–9026 (100 records) | confirmed=4 (db updated 4) | missing=96 (db updated 96)
+  Cumulative: confirmed=642, missing=8058, errors=0
+
+Batch 88/119 — IDs 9326–8847 (100 records) | confirmed=7 (db updated 7) | missing=93 (db updated 93)
+  Cumulative: confirmed=649, missing=8151, errors=0
+
+Batch 89/119 — IDs 13711–16928 (100 records) | confirmed=3 (db updated 3) | missing=97 (db updated 97)
+  Cumulative: confirmed=652, missing=8248, errors=0
+
+Batch 90/119 — IDs 16977–5384 (100 records) | confirmed=3 (db updated 3) | missing=97 (db updated 97)
+  Cumulative: confirmed=655, missing=8345, errors=0
+
+Batch 91/119 — IDs 13037–19854 (100 records) | confirmed=3 (db updated 3) | missing=97 (db updated 97)
+  Cumulative: confirmed=658, missing=8442, errors=0
+
+Batch 92/119 — IDs 11937–4827 (100 records) | confirmed=9 (db updated 9) | missing=91 (db updated 91)
+  Cumulative: confirmed=667, missing=8533, errors=0
+
+Batch 93/119 — IDs 11277–16865 (100 records) | confirmed=5 (db updated 5) | missing=95 (db updated 95)
+  Cumulative: confirmed=672, missing=8628, errors=0
+
+Batch 94/119 — IDs 16866–13205 (100 records) | confirmed=7 (db updated 7) | missing=93 (db updated 93)
+  Cumulative: confirmed=679, missing=8721, errors=0
+
+Batch 95/119 — IDs 10444–2852 (100 records) | confirmed=7 (db updated 7) | missing=93 (db updated 93)
+  Cumulative: confirmed=686, missing=8814, errors=0
+
+Batch 96/119 — IDs 2854–8008 (100 records) | confirmed=6 (db updated 6) | missing=94 (db updated 94)
+  Cumulative: confirmed=692, missing=8908, errors=0
+
+Batch 97/119 — IDs 1755–4624 (100 records) | confirmed=6 (db updated 6) | missing=94 (db updated 94)
+  Cumulative: confirmed=698, missing=9002, errors=0
+
+Batch 98/119 — IDs 5250–19076 (100 records) | confirmed=5 (db updated 5) | missing=95 (db updated 95)
+  Cumulative: confirmed=703, missing=9097, errors=0
+
+Batch 99/119 — IDs 1318–8597 (100 records) | confirmed=6 (db updated 6) | missing=94 (db updated 94)
+  Cumulative: confirmed=709, missing=9191, errors=0
+
+Batch 100/119 — IDs 7882–19169 (100 records) | confirmed=5 (db updated 5) | missing=95 (db updated 95)
+  Cumulative: confirmed=714, missing=9286, errors=0
+
+Batch 101/119 — IDs 19192–7455 (100 records) | confirmed=6 (db updated 6) | missing=94 (db updated 94)
+  Cumulative: confirmed=720, missing=9380, errors=0
+
+Batch 102/119 — IDs 19006–14739 (100 records) | confirmed=1 (db updated 1) | missing=99 (db updated 99)
+  Cumulative: confirmed=721, missing=9479, errors=0
+
+Batch 103/119 — IDs 8582–3361 (100 records) | confirmed=8 (db updated 8) | missing=92 (db updated 92)
+  Cumulative: confirmed=729, missing=9571, errors=0
+
+Batch 104/119 — IDs 2639–13268 (100 records) | confirmed=8 (db updated 8) | missing=92 (db updated 92)
+  Cumulative: confirmed=737, missing=9663, errors=0
+
+Batch 105/119 — IDs 12901–67 (100 records) | confirmed=7 (db updated 7) | missing=93 (db updated 93)
+  Cumulative: confirmed=744, missing=9756, errors=0
+
+Batch 106/119 — IDs 69–9468 (100 records) | confirmed=4 (db updated 4) | missing=96 (db updated 96)
+  Cumulative: confirmed=748, missing=9852, errors=0
+
+Batch 107/119 — IDs 14453–1438 (100 records) | confirmed=8 (db updated 8) | missing=92 (db updated 92)
+  Cumulative: confirmed=756, missing=9944, errors=0
+
+Batch 108/119 — IDs 1460–9451 (100 records) | confirmed=8 (db updated 8) | missing=92 (db updated 92)
+  Cumulative: confirmed=764, missing=10036, errors=0
+
+Batch 109/119 — IDs 10155–10759 (100 records) | confirmed=7 (db updated 7) | missing=93 (db updated 93)
+  Cumulative: confirmed=771, missing=10129, errors=0
+
+Batch 110/119 — IDs 5934–11779 (100 records) | confirmed=14 (db updated 14) | missing=86 (db updated 86)
+  Cumulative: confirmed=785, missing=10215, errors=0
+
+Batch 111/119 — IDs 2843–10489 (100 records) | confirmed=8 (db updated 8) | missing=92 (db updated 92)
+  Cumulative: confirmed=793, missing=10307, errors=0
+
+Batch 112/119 — IDs 2701–9581 (100 records) | confirmed=9 (db updated 9) | missing=91 (db updated 91)
+  Cumulative: confirmed=802, missing=10398, errors=0
+
+Batch 113/119 — IDs 1967–2982 (100 records) | confirmed=14 (db updated 14) | missing=86 (db updated 86)
+  Cumulative: confirmed=816, missing=10484, errors=0
+
+Batch 114/119 — IDs 3039–8169 (100 records) | confirmed=8 (db updated 8) | missing=92 (db updated 92)
+  Cumulative: confirmed=824, missing=10576, errors=0
+
+Batch 115/119 — IDs 19841–11200 (100 records) | confirmed=13 (db updated 13) | missing=87 (db updated 87)
+  Cumulative: confirmed=837, missing=10663, errors=0
+
+Batch 116/119 — IDs 1946–7167 (100 records) | confirmed=11 (db updated 11) | missing=89 (db updated 89)
+  Cumulative: confirmed=848, missing=10752, errors=0
+
+Batch 117/119 — IDs 6608–12843 (100 records) | confirmed=7 (db updated 7) | missing=93 (db updated 93)
+  Cumulative: confirmed=855, missing=10845, errors=0
+
+Batch 118/119 — IDs 12773–7756 (100 records) | confirmed=7 (db updated 7) | missing=93 (db updated 93)
+  Cumulative: confirmed=862, missing=10938, errors=0
+
+Batch 119/119 — IDs 895–935 (89 records) | confirmed=7 (db updated 7) | missing=82 (db updated 82)
+  Cumulative: confirmed=869, missing=11020, errors=0
+
+✅ Done! Report saved to /Users/joshuatenbrink/.openclaw/workspace/wildphotography/inventory/repair_batch_20260322.json
+   Processed: 11889
+   Confirmed fixed (phantom→real): 869
+   Missing flagged (phantom→broken): 11020
+   Errors: 0
