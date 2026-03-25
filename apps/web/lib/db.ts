@@ -252,12 +252,13 @@ export async function getPhotosByGallery(
            p.width, p.height, p.camera_make, p.camera_model, p.lens,
            p.iso, p.aperture, p.shutter_speed, p.focal_length_mm,
            p.lat, p.lon, p.views_count, p.date_taken, p.date_uploaded,
-           p.thumb_url, p.small_url, p.medium_url, p.large_url, p.location
+           p.thumb_url, p.small_url, p.medium_url, p.large_url, p.location,
+           p.region, p.country, p.species_common_name, p.species_scientific_name
     FROM photos p
     JOIN gallery_photos gp ON p.id = gp.photo_id
     JOIN galleries g ON gp.gallery_id = g.id
     WHERE g.slug = $1 AND p.is_active = true AND p.ready_for_public_render = true
-    ORDER BY gp.sort_order, p.date_uploaded DESC
+    ORDER BY gp.sort_order ASC NULLS LAST, p.date_uploaded DESC
     LIMIT $2 OFFSET $3
   `, [gallerySlug, limit + 1, offset]);
   
@@ -452,14 +453,15 @@ export async function getPhotosFromGallery(
            p.width, p.height, p.camera_make, p.camera_model, p.lens,
            p.iso, p.aperture, p.shutter_speed, p.focal_length_mm,
            p.lat, p.lon, p.views_count, p.date_taken, p.date_uploaded,
-           p.thumb_url, p.small_url, p.medium_url, p.large_url, p.location
+           p.thumb_url, p.small_url, p.medium_url, p.large_url, p.location,
+           p.region, p.country, p.species_common_name, p.species_scientific_name
     FROM photos p
     JOIN gallery_photos gp ON p.id = gp.photo_id
     JOIN galleries g ON gp.gallery_id = g.id
     WHERE g.slug = $1 AND p.is_active = true AND p.ready_for_public_render = true
       ${excludePhotoSlug ? `AND p.slug != $2` : ''}
       AND (p.thumb_url IS NOT NULL OR p.small_url IS NOT NULL OR p.medium_url IS NOT NULL OR p.large_url IS NOT NULL)
-    ORDER BY gp.sort_order, p.date_uploaded DESC
+    ORDER BY gp.sort_order ASC NULLS LAST, p.date_uploaded DESC
     LIMIT $${excludePhotoSlug ? 3 : 2}
   `, excludePhotoSlug ? [gallerySlug, excludePhotoSlug] : [gallerySlug, limit]);
   

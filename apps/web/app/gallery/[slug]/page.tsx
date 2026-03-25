@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { getGalleryBySlug, getPhotosByGallery } from '@/lib/db';
 import { canonicalUrl } from '@/lib/seo';
-import VirtualizedGallery from '@/components/VirtualizedGallery';
+import GalleryClient from './GalleryClient';
 
 export const dynamic = 'force-dynamic';
 
@@ -12,34 +12,27 @@ const SITE_URL = 'https://wildphotography.com';
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const gallery = await getGalleryBySlug(slug);
-  
+
   if (!gallery) {
     return { title: 'Gallery Not Found' };
   }
-  
+
   const canonical = canonicalUrl(`/gallery/${gallery.slug}`);
   const ogImage = gallery.coverPhotoUrl;
-  
+
   return {
     title: `${gallery.name} | Wildphotography`,
     description: gallery.description || `${gallery.name} - ${gallery.photoCount} beautiful nature photography images from Costa Rica`,
     metadataBase: new URL(SITE_URL),
-    alternates: {
-      canonical: canonical,
-    },
+    alternates: { canonical },
     openGraph: {
       title: `${gallery.name} | Wildphotography`,
       description: gallery.description || `${gallery.name} - ${gallery.photoCount} photos from Costa Rica`,
       url: canonical,
       siteName: 'Wildphotography',
-      images: ogImage ? [
-        {
-          url: ogImage,
-          width: 1200,
-          height: 630,
-          alt: gallery.name,
-        }
-      ] : [],
+      images: ogImage
+        ? [{ url: ogImage, width: 1200, height: 630, alt: gallery.name }]
+        : [],
       type: 'website',
     },
     twitter: {
@@ -54,12 +47,12 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 export default async function GalleryPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const gallery = await getGalleryBySlug(slug);
-  
+
   if (!gallery) {
     notFound();
   }
 
-  const { photos, total } = await getPhotosByGallery(slug, 50, 0);
+  const { photos, total } = await getPhotosByGallery(slug, 100, 0);
 
   return (
     <div className="container mx-auto px-4 py-6">
@@ -77,19 +70,19 @@ export default async function GalleryPage({ params }: { params: Promise<{ slug: 
           <li className="text-gray-600" aria-current="page">{gallery.name}</li>
         </ol>
       </nav>
-      
-      {/* Gallery Header - Premium Editorial Style */}
+
+      {/* Gallery header */}
       <header className="mb-8">
         <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
           {gallery.name}
         </h1>
-        
+
         {gallery.description && (
           <p className="text-gray-600 text-lg leading-relaxed max-w-2xl">
             {gallery.description}
           </p>
         )}
-        
+
         <div className="flex items-center gap-4 mt-4 text-sm text-gray-500">
           <span className="font-medium">
             {total > 0 ? `${total} photo${total !== 1 ? 's' : ''}` : 'No photos'}
@@ -102,12 +95,13 @@ export default async function GalleryPage({ params }: { params: Promise<{ slug: 
           )}
         </div>
       </header>
-      
-      {/* Photo Grid */}
+
+      {/* Photo grid + lightbox */}
       {total > 0 ? (
-        <VirtualizedGallery 
-          photos={photos} 
-          columns={4}
+        <GalleryClient
+          photos={photos}
+          gallerySlug={gallery.slug}
+          galleryName={gallery.name}
         />
       ) : (
         <div className="text-center py-16 text-gray-500">

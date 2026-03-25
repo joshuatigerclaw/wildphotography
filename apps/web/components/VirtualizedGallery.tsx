@@ -62,7 +62,6 @@ function PhotoTile({
       className="relative overflow-hidden rounded-lg bg-gray-100 break-inside-avoid"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
-      onClick={onClick}
     >
       {/* Skeleton placeholder */}
       {!loaded && !error && (
@@ -117,15 +116,24 @@ function PhotoTile({
         </div>
       </div>
 
-      {/* Mobile-safe tap behavior */}
-      <Link
-        href={`/photo/${photo.slug}`}
-        className="absolute inset-0 focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
-        aria-label={`View ${photo.title}`}
-        tabIndex={0}
-      >
-        <span className="sr-only">{photo.title}</span>
-      </Link>
+      {/* Tap/click target — uses button for lightbox or Link for direct navigation */}
+      {onClick ? (
+        <button
+          type="button"
+          className="absolute inset-0 focus:ring-2 focus:ring-blue-500 rounded-lg cursor-pointer"
+          aria-label={`Open ${photo.title} in viewer`}
+          onClick={onClick}
+        />
+      ) : (
+        <Link
+          href={`/photo/${photo.slug}`}
+          className="absolute inset-0 focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
+          aria-label={`View ${photo.title}`}
+          tabIndex={0}
+        >
+          <span className="sr-only">{photo.title}</span>
+        </Link>
+      )}
     </div>
   );
 }
