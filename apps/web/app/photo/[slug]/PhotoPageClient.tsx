@@ -2,7 +2,6 @@
 
 import { useState, useEffect, useMemo } from 'react';
 import Link from 'next/link';
-import { useSearchParams } from 'next/navigation';
 import { PhotoLightbox, PhotoSlide } from '@/components/PhotoLightbox';
 import LocationMap from '@/components/LocationMap';
 import VirtualizedGallery from '@/components/VirtualizedGallery';
@@ -77,23 +76,97 @@ interface PhotoPageClientProps {
   photo: PhotoData;
   relatedPhotos?: RelatedPhoto[];
   galleryPhotos?: RelatedPhoto[];
+  /** The photo's primary gallery — used for metadata, breadcrumb, discovery links */
   gallery?: GalleryContext | null;
+  /** Sequence within the sourceGallery */
   sequence?: GallerySequence | null;
+  /**
+   * The gallery the user navigated from (fromGallery context).
+   * Used for the nav bar, prev/next links, and the return-to-gallery action.
+   * Falls back to `gallery` when absent or same.
+   */
+  sourceGallery?: GalleryContext | null;
+  /**
+   * All galleries this photo belongs to (deterministic order).
+   * Used for multi-gallery "Also appears in" discovery without breaking active context.
+   */
+  allGalleries?: GalleryContext[];
 }
 
 // ============================================================
 // Helper Components
 // ============================================================
 
-/** Previous / Next navigation bar */
-function GalleryNavBar({
+/**
+ * Context banner — shown when a valid gallery sequence exists.
+ * "Viewing image 7 of 24 from Carara National Park"
+ */
+function ContextBanner({
   sequence,
   gallery,
+  photoSlug,
 }: {
   sequence: GallerySequence;
   gallery: GalleryContext;
+  photoSlug: string;
+}) {
+  if (!sequence.total || !sequence.position) return null;
+
+  // Return URL reopens the same image in the modal
+  const returnUrl = `/gallery/${gallery.slug}?photo=${photoSlug}`;
+
+  return (
+    <div className="flex items-center justify-between gap-4 px-4 py-2 bg-gray-50 border border-gray-100 rounded-lg mb-4 text-sm">
+      <span className="text-gray-500">
+        Viewing image{' '}
+        <span className="font-semibold text-gray-700">{sequence.position}</span>
+        {' '}of{' '}
+        <span className="font-semibold text-gray-700">{sequence.total}</span>
+        {' '}from{' '}
+        <Link
+          href={returnUrl}
+          className="font-semibold text-blue-600 hover:text-blue-800 hover:underline transition-colors"
+        >
+          {gallery.name}
+        </Link>
+      </span>
+      <Link
+        href={returnUrl}
+        className="shrink-0 text-xs text-gray-500 hover:text-blue-600 transition-colors whitespace-nowrap"
+      >
+        ← Back to gallery
+      </Link>
+    </div>
+  );
+}
+
+/**
+ * Previous / Next navigation bar.
+ * When sourceGallery context is present, prev/next links carry ?fromGallery=
+ * so the next photo page also knows its originating gallery.
+ * The centre "back" link returns to the gallery with the modal reopened.
+ */
+function GalleryNavBar({
+  sequence,
+  gallery,
+  photoSlug,
+}: {
+  sequence: GallerySequence;
+  gallery: GalleryContext;
+  photoSlug: string;
 }) {
   const { previousPhoto, nextPhoto, position, total } = sequence;
+
+  // Build prev/next URLs that carry fromGallery context forward
+  const prevHref = previousPhoto
+    ? `/photo/${previousPhoto.slug}?fromGallery=${gallery.slug}`
+    : null;
+  const nextHref = nextPhoto
+    ? `/photo/${nextPhoto.slug}?fromGallery=${gallery.slug}`
+    : null;
+
+  // Back to gallery reopens the current image in the modal
+  const backHref = `/gallery/${gallery.slug}?photo=${photoSlug}`;
 
   return (
     <nav
@@ -101,9 +174,9 @@ function GalleryNavBar({
       aria-label="Gallery navigation"
     >
       {/* Previous */}
-      {previousPhoto ? (
+      {prevHref ? (
         <Link
-          href={`/photo/${previousPhoto.slug}`}
+          href={prevHref}
           className="flex items-center gap-2 text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors group"
           aria-label="Previous photo"
         >
@@ -117,10 +190,10 @@ function GalleryNavBar({
         </span>
       )}
 
-      {/* Centre: position + back to gallery */}
+      {/* Centre: gallery name + position + back */}
       <div className="flex flex-col items-center gap-1 text-center">
         <Link
-          href={`/gallery/${gallery.slug}`}
+          href={backHref}
           className="text-xs font-semibold uppercase tracking-wider text-blue-600 hover:text-blue-800 transition-colors"
         >
           {gallery.name}
@@ -133,9 +206,9 @@ function GalleryNavBar({
       </div>
 
       {/* Next */}
-      {nextPhoto ? (
+      {nextHref ? (
         <Link
-          href={`/photo/${nextPhoto.slug}`}
+          href={nextHref}
           className="flex items-center gap-2 text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors group"
           aria-label="Next photo"
         >
@@ -152,7 +225,7 @@ function GalleryNavBar({
   );
 }
 
-/** Compact metadata block */
+/** Compact metadata block — always uses the photo's primary gallery */
 function MetadataBlock({ photo, gallery }: { photo: PhotoData; gallery?: GalleryContext | null }) {
   const rows: { label: string; value: string; href?: string }[] = [];
 
@@ -196,7 +269,7 @@ function MetadataBlock({ photo, gallery }: { photo: PhotoData; gallery?: Gallery
   );
 }
 
-/** Internal discovery links */
+/** Internal discovery links — always uses the photo's primary gallery */
 function DiscoveryLinks({ photo, gallery }: { photo: PhotoData; gallery?: GalleryContext | null }) {
   const links: { label: string; href: string }[] = [];
 
@@ -234,7 +307,7 @@ function DiscoveryLinks({ photo, gallery }: { photo: PhotoData; gallery?: Galler
         >
           {label}
         </Link>
-))}
+      ))}
     </div>
   );
 }
@@ -245,7 +318,6 @@ function CompactCTA({ photo }: { photo: PhotoData }) {
   const region = photo.region;
   const hasSpecies = !!photo.species_common_name;
 
-  // Determine CTA relevance
   if (!location && !region && !hasSpecies) return null;
 
   let ctaText = 'Explore more of Costa Rica';
@@ -294,6 +366,8 @@ export default function PhotoPageClient({
   galleryPhotos = [],
   gallery,
   sequence,
+  sourceGallery,
+  allGalleries = [],
 }: PhotoPageClientProps) {
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [lightboxIndex, setLightboxIndex] = useState(0);
@@ -301,15 +375,13 @@ export default function PhotoPageClient({
   const [error, setError] = useState<string | null>(null);
   const [showExif, setShowExif] = useState(false);
 
-  const searchParams = useSearchParams();
-
   const displayTitle = useMemo(() => {
     const title = getDisplayTitle(photo.title);
     const isUgly = !title || looksLikeFilename(title);
     return { title, isUgly };
   }, [photo.title]);
 
-  // Record visit on mount
+  // ── Record visit on mount ──────────────────────────────────
   useEffect(() => {
     fetch('/api/visit', {
       method: 'POST',
@@ -318,7 +390,23 @@ export default function PhotoPageClient({
     }).catch(console.error);
   }, [photo.id, photo.slug]);
 
-  // Lightbox slides
+  // ── Derived context ────────────────────────────────────────
+  // navGallery: the gallery used for prev/next, back link, and context banner.
+  // Falls back through sourceGallery → gallery.
+  const navGallery = sourceGallery || gallery;
+
+  // Sequence is valid only when the photo was found in navGallery (position > 0)
+  const validSequence = sequence && sequence.total > 0 && sequence.position > 0
+    ? sequence
+    : null;
+
+  // Return-to-gallery URL reopens the modal on this photo
+  const returnToGalleryUrl = navGallery
+    ? `/gallery/${navGallery.slug}?photo=${photo.slug}`
+    : '/galleries';
+  const returnToGalleryLabel = navGallery ? navGallery.name : 'Gallery';
+
+  // ── Lightbox slides ────────────────────────────────────────
   const slides: PhotoSlide[] = [
     {
       id: photo.id,
@@ -328,6 +416,7 @@ export default function PhotoPageClient({
     },
   ].filter(s => s.src);
 
+  // ── Purchase ───────────────────────────────────────────────
   const handlePurchase = async () => {
     setPurchasing(true);
     setError(null);
@@ -364,14 +453,11 @@ export default function PhotoPageClient({
     photo.date_taken && { label: 'Taken', value: new Date(photo.date_taken).toLocaleDateString() },
   ].filter(Boolean);
 
-  const backLink = gallery ? `/gallery/${gallery.slug}` : '/galleries';
-  const backLabel = gallery ? gallery.name : 'Gallery';
-
   return (
     <>
       <div className="container mx-auto px-4 py-6 max-w-6xl">
 
-        {/* Breadcrumb */}
+        {/* Breadcrumb — uses primary gallery */}
         <nav className="text-sm mb-4" aria-label="Breadcrumb">
           <ol className="flex items-center gap-2 flex-wrap">
             <li><Link href="/" className="text-blue-600 hover:underline">Home</Link></li>
@@ -394,20 +480,51 @@ export default function PhotoPageClient({
           </ol>
         </nav>
 
-        {/* Back to gallery link */}
+        {/* Back to gallery — uses navGallery, returns to modal view */}
         <div className="mb-4">
           <Link
-            href={backLink}
+            href={returnToGalleryUrl}
             className="inline-flex items-center gap-2 text-sm text-gray-500 hover:text-gray-800 transition-colors"
           >
             <span>←</span>
-            <span>Back to {backLabel}</span>
+            <span>Back to {returnToGalleryLabel}</span>
           </Link>
         </div>
 
+        {/* Context banner: "Viewing image X of Y from {gallery}" */}
+        {validSequence && navGallery && (
+          <ContextBanner
+            sequence={validSequence}
+            gallery={navGallery}
+            photoSlug={photo.slug}
+          />
+        )}
+
+        {/* Cross-gallery discovery — compact, near active context, explicit switch */}
+        {allGalleries.length > 1 && navGallery && (
+          <div className="flex items-center gap-2 flex-wrap mb-4 text-xs">
+            <span className="text-gray-400 shrink-0">Also in:</span>
+            {allGalleries
+              .filter(g => g.id !== navGallery!.id)
+              .map(g => (
+                <Link
+                  key={g.id}
+                  href={`/photo/${photo.slug}?fromGallery=${g.slug}`}
+                  className="text-blue-600 hover:text-blue-800 border border-blue-100 hover:border-blue-300 rounded-full px-2.5 py-0.5 bg-blue-50 hover:bg-blue-100 transition-colors whitespace-nowrap"
+                >
+                  {g.name}
+                </Link>
+              ))}
+          </div>
+        )}
+
         {/* Gallery prev / next navigation bar */}
-        {sequence && gallery && (
-          <GalleryNavBar sequence={sequence} gallery={gallery} />
+        {validSequence && navGallery && (
+          <GalleryNavBar
+            sequence={validSequence}
+            gallery={navGallery}
+            photoSlug={photo.slug}
+          />
         )}
 
         {/* Main image */}
@@ -461,7 +578,7 @@ export default function PhotoPageClient({
           {/* Left column — main content */}
           <div className="lg:col-span-2 space-y-6">
 
-            {/* Metadata block */}
+            {/* Metadata block — always shows primary gallery */}
             <MetadataBlock photo={photo} gallery={gallery} />
 
             {/* Discovery links */}
@@ -605,21 +722,21 @@ export default function PhotoPageClient({
               <p className="text-xs text-gray-400 mt-3 text-center">Secure payment via PayPal</p>
             </div>
 
-            {/* Bottom nav repeat on mobile — shown only on small screens via sidebar */}
-            {sequence && gallery && (
-              <div className="hidden lg:block bg-white rounded-xl p-4 shadow-sm border border-gray-100">
+            {/* Sidebar gallery navigation — context-aware prev/next + return */}
+            {validSequence && navGallery && (
+              <div className="hidden lg:blockbg-white rounded-xl p-4 shadow-sm border border-gray-100">
                 <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3">
                   Gallery Navigation
                 </p>
                 <div className="flex flex-col gap-2 text-sm">
-                  {sequence.previousPhoto ? (
+                  {validSequence.previousPhoto ? (
                     <Link
-                      href={`/photo/${sequence.previousPhoto.slug}`}
+                      href={`/photo/${validSequence.previousPhoto.slug}?fromGallery=${navGallery.slug}`}
                       className="flex items-center gap-2 text-gray-600 hover:text-blue-600 transition-colors"
                     >
                       <span>←</span>
                       <span className="truncate">
-                        {sequence.previousPhoto.title || 'Previous photo'}
+                        {validSequence.previousPhoto.title || 'Previous photo'}
                       </span>
                     </Link>
                   ) : (
@@ -628,18 +745,18 @@ export default function PhotoPageClient({
                     </span>
                   )}
                   <Link
-                    href={`/gallery/${gallery.slug}`}
+                    href={`/gallery/${navGallery.slug}?photo=${photo.slug}`}
                     className="text-center text-blue-600 hover:underline py-1"
                   >
-                    Back to {gallery.name}
+                    Back to {navGallery.name}
                   </Link>
-                  {sequence.nextPhoto ? (
+                  {validSequence.nextPhoto ? (
                     <Link
-                      href={`/photo/${sequence.nextPhoto.slug}`}
-                      className="flex items-center gap-2 justify-end text-gray-600 hover:text-blue-600transition-colors"
+                      href={`/photo/${validSequence.nextPhoto.slug}?fromGallery=${navGallery.slug}`}
+                      className="flex items-center gap-2 justify-end text-gray-600 hover:text-blue-600 transition-colors"
                     >
                       <span className="truncate">
-                        {sequence.nextPhoto.title || 'Next photo'}
+                        {validSequence.nextPhoto.title || 'Next photo'}
                       </span>
                       <span>→</span>
                     </Link>
@@ -650,7 +767,7 @@ export default function PhotoPageClient({
                   )}
                 </div>
                 <p className="text-xs text-gray-400 text-center mt-3">
-                  Image {sequence.position} of {sequence.total}
+                  Image {validSequence.position} of {validSequence.total}
                 </p>
               </div>
             )}

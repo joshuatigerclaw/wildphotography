@@ -13,6 +13,26 @@ const R2_PUBLIC = 'https://pub-7d412c6efb5943b5bc587e695e22001e.r2.dev';
 
 const sql = neon(DATABASE_URL);
 
+// ============================================================
+// CANONICAL GALLERY SEQUENCE ORDER
+// ============================================================
+// This is the single source of truth for gallery photo ordering.
+// Every function that sequences photos within a gallery MUST use
+// this exact ORDER BY clause — never a local override.
+//
+// Priority:
+//   1. gallery_photos.sort_order   (explicit curated order)
+//   2. photos.date_uploaded ASC    (chronological, oldest first)
+//   3. photos.id ASC               (stable tiebreaker)
+//
+// Rationale for ASC on date_uploaded:
+//   - Chronological order is predictable and consistent
+//   - Matches the sequence users expect when browsing a gallery
+//   - Used by: getPhotosByGallery, getPhotosFromGallery,
+//              getGallerySequenceForPhoto
+// ============================================================
+const GALLERY_PHOTO_ORDER = 'gp.sort_order ASC NULLS LAST, p.date_uploaded ASC NULLS LAST, p.id ASC';
+
 /**
  * Prepend R2 public URL to relative path
  */
@@ -213,6 +233,7 @@ export async function getGalleryForPhoto(photoSlug: string): Promise<Gallery | n
     JOIN gallery_photos gp ON g.id = gp.gallery_id
     JOIN photos p ON gp.photo_id = p.id
     WHERE p.slug = $1 AND g.is_active = true
+    ORDER BY gp.sort_order ASC NULLS LAST, g.id ASC
     LIMIT 1
   `, [photoSlug]);
   
@@ -227,6 +248,31 @@ export async function getGalleryForPhoto(photoSlug: string): Promise<Gallery | n
     coverPhotoUrl: null,
     photoCount: 0,
   };
+}
+
+/**
+ * Get ALL galleries a photo belongs to, in deterministic order.
+ * Used for multi-gallery discovery and "Also appears in" UI.
+ * Fallback priority: lowest sort_order → lowest gallery id.
+ */
+export async function getGalleriesForPhoto(photoSlug: string): Promise<Gallery[]> {
+  const result = await sql(`
+    SELECT g.id, g.slug, g.name, g.description
+    FROM galleries g
+    JOIN gallery_photos gp ON g.id = gp.gallery_id
+    JOIN photos p ON gp.photo_id = p.id
+    WHERE p.slug = $1 AND g.is_active = true
+    ORDER BY gp.sort_order ASC NULLS LAST, g.id ASC
+  `, [photoSlug]);
+
+  return (result as any[]).map(row => ({
+    id: String(row.id),
+    slug: row.slug,
+    name: row.name,
+    description: row.description,
+    coverPhotoUrl: null,
+    photoCount: 0,
+  }));
 }
 
 /**
@@ -258,7 +304,7 @@ export async function getPhotosByGallery(
     JOIN gallery_photos gp ON p.id = gp.photo_id
     JOIN galleries g ON gp.gallery_id = g.id
     WHERE g.slug = $1 AND p.is_active = true AND p.ready_for_public_render = true
-    ORDER BY gp.sort_order ASC NULLS LAST, p.date_uploaded DESC
+    ORDER BY ${GALLERY_PHOTO_ORDER}
     LIMIT $2 OFFSET $3
   `, [gallerySlug, limit + 1, offset]);
   
@@ -461,7 +507,7 @@ export async function getPhotosFromGallery(
     WHERE g.slug = $1 AND p.is_active = true AND p.ready_for_public_render = true
       ${excludePhotoSlug ? `AND p.slug != $2` : ''}
       AND (p.thumb_url IS NOT NULL OR p.small_url IS NOT NULL OR p.medium_url IS NOT NULL OR p.large_url IS NOT NULL)
-    ORDER BY gp.sort_order ASC NULLS LAST, p.date_uploaded DESC
+    ORDER BY ${GALLERY_PHOTO_ORDER}
     LIMIT $${excludePhotoSlug ? 3 : 2}
   `, excludePhotoSlug ? [gallerySlug, excludePhotoSlug] : [gallerySlug, limit]);
   
@@ -999,7 +1045,7 @@ export async function getGallerySequenceForPhoto(
       AND p.is_active = true
       AND p.ready_for_public_render = true
       AND (p.thumb_url IS NOT NULL OR p.small_url IS NOT NULL OR p.medium_url IS NOT NULL)
-    ORDER BY gp.sort_order ASC NULLS LAST, p.date_uploaded ASC, p.id ASC
+    ORDER BY ${GALLERY_PHOTO_ORDER}
   `, [galleryId]);
 
   const rows = sequence as any[];
@@ -1034,6 +1080,7 @@ export default {
   getGalleries,
   getGalleryBySlug,
   getGalleryForPhoto,
+  getGalleriesForPhoto,
   getPhotosByGallery,
   getPhotoBySlug,
   getAllPhotos,
