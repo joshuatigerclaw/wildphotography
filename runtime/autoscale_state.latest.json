@@ -1,8 +1,9 @@
 {
-  "backlog_r2": 11243,
-  "backlog_smugmug": 252,
-  "queue_depth": 0,
+  "backlog_r2": 400,
+  "backlog_smugmug": 2,
+  "queue_depth": 4,
   "recent_failures": 0,
-  "target_workers": 8,
-  "calculated_at": "2026-03-24T17:26:00Z"
+  "target_workers": 2,
+  "calculated_at": "2026-03-25T02:40:00Z",
+  "workflow": "wild_derivative_autoscale_controller"
 }

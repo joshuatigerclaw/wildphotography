@@ -1,0 +1,104 @@
+{
+  "workflow": "wild_public_render_validation_after_asset_update",
+  "timestamp": "2026-03-25T01:17:00Z",
+  "summary": {
+    "total_checks": 8,
+    "passed": 8,
+    "failed": 0
+  },
+  "checks": [
+    {
+      "id": "validate_homepage_cards",
+      "name": "Homepage",
+      "url": "https://wildphotography.com/",
+      "status": "PASS",
+      "details": {
+        "featured_species_thumbnails": "visible",
+        "explore_photos_grid": "visible",
+        "broken_images": "none"
+      }
+    },
+    {
+      "id": "validate_gallery_index",
+      "name": "Gallery Index",
+      "url": "https://wildphotography.com/galleries",
+      "status": "PASS",
+      "details": {
+        "gallery_covers": "visible",
+        "broken_covers": "none"
+      }
+    },
+    {
+      "id": "validate_gallery_detail",
+      "name": "Gallery Detail (Macaws)",
+      "url": "https://wildphotography.com/gallery/birds-macaws-lapas",
+      "status": "PASS",
+      "details": {
+        "photo_thumbnails": "visible",
+        "no_thumbnail_placeholders": "none",
+        "broken_images": "none"
+      }
+    },
+    {
+      "id": "validate_photo_detail",
+      "name": "Photo Detail (Toucan)",
+      "url": "https://wildphotography.com/photo/img_3663",
+      "status": "PASS",
+      "details": {
+        "main_photo": "visible",
+        "broken_main": "none"
+      }
+    },
+    {
+      "id": "validate_search_results",
+      "name": "Search Results (toucan)",
+      "url": "https://wildphotography.com/search?q=toucan",
+      "status": "PASS",
+      "details": {
+        "result_thumbnails": "visible",
+        "broken_result_thumbs": "none"
+      }
+    },
+    {
+      "id": "validate_species_detail",
+      "name": "Species Detail (Quetzal)",
+      "url": "https://wildphotography.com/species/resplendent-quetzal",
+      "status": "PASS",
+      "details": {
+        "species_photos": "visible"
+      }
+    },
+    {
+      "id": "validate_region_detail",
+      "name": "Region Detail (Guanacaste)",
+      "url": "https://wildphotography.com/region/guanacaste",
+      "status": "PASS",
+      "details": {
+        "region_hero": "visible",
+        "encoding_issue": "none"
+      }
+    },
+    {
+      "id": "validate_region_listing",
+      "name": "Region Listing",
+      "url": "https://wildphotography.com/region",
+      "status": "PASS",
+      "details": {
+        "region_cards": "visible"
+      }
+    }
+  ],
+  "outputs": {
+    "homepage_pass": true,
+    "gallery_index_pass": true,
+    "gallery_detail_pass": true,
+    "photo_detail_pass": true,
+    "search_results_pass": true,
+    "species_detail_pass": true,
+    "region_detail_pass": true,
+    "region_listing_pass": true,
+    "total_pass_count": 8,
+    "total_fail_count": 0,
+    "failed_pages": []
+  }
+}
