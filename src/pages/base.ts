@@ -169,6 +169,18 @@ footer { background: #1a1a1a; color: #999; padding: 3rem 2rem; margin-top: 4rem;
 }
 </style>
 ${jsonLdTag}
+
+<!-- GetYourGuide Analytics -->
+<script async defer src="https://widget.getyourguide.com/dist/pa.umd.production.min.js" data-gyg-partner-id="6ZV7KMH"></script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EPPFTRYF92"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-EPPFTRYF92');
+</script>
 </head>
 <body>
 <header>

@@ -39,6 +39,9 @@ import { renderSpeciesIndex } from './pages/species-index';
 import { renderRegion } from './pages/region';
 import { renderArticleIndex } from './pages/article-index';
 import { renderRegionIndex } from './pages/region-index';
+import { renderGYGRedirect } from './pages/affiliate-gyg';
+import { renderViatorRedirect } from './pages/affiliate-viator';
+import { renderTripadvisorRedirect } from './pages/affiliate-tripadvisor';
 import { render404, render403 } from './pages/errors';
 
 const MEDIA_BASE = 'https://wildphotography-media.josh-ec6.workers.dev';
@@ -627,7 +630,24 @@ Disallow: /api/
           return await renderRegion(regionSlug, env, url);
         }
 
-        // API: region data
+        // Affiliate redirect: /go/gyg/:slug
+        if (path.startsWith('go/gyg/')) {
+          const slug = path.replace('go/gyg/', '').replace(/\/$/, '');
+          return await renderGYGRedirect(slug, env);
+        }
+
+        // Affiliate redirect: /go/viator/:slug
+        if (path.startsWith('go/viator/')) {
+          const slug = path.replace('go/viator/', '').replace(/\/$/, '');
+          return await renderViatorRedirect(slug, env);
+        }
+
+        // Affiliate redirect: /go/tripadvisor
+        if (path === 'go/tripadvisor') {
+          return renderTripadvisorRedirect();
+        }
+
+      // API: region data
         if (path === 'api/regions') {
           const { getRegionApi } = await import('./pages/region');
           return await getRegionApi('all', env);

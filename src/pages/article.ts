@@ -138,6 +138,18 @@ async function renderFullArticle(article: any, env: Env): Promise<Response> {
       h1 { font-size: 1.75rem; }
     }
   </style>
+
+<!-- GetYourGuide Analytics -->
+<script async defer src="https://widget.getyourguide.com/dist/pa.umd.production.min.js" data-gyg-partner-id="6ZV7KMH"></script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EPPFTRYF92"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-EPPFTRYF92');
+</script>
 </head>
 <body>
   <!-- Full site header -->
@@ -145,6 +157,7 @@ async function renderFullArticle(article: any, env: Env): Promise<Response> {
     <div class="site-header-inner">
       <a href="/" class="site-logo">Wildphotography</a>
       <nav class="site-nav">
+        <a href="/article">Articles</a>
         <a href="/galleries">Galleries</a>
         <a href="/species">Species</a>
         <a href="/region">Regions</a>
@@ -211,6 +224,18 @@ export async function renderArticle(slug: string, env: Env, url: URL): Promise<R
     .gallery-link { display: inline-block; margin: 0.5rem; padding: 0.5rem 1rem; background: #e2e8f0; border-radius: 4px; text-decoration: none; color: #333; }
     .gallery-link:hover { background: #cbd5e0; }
   </style>
+
+<!-- GetYourGuide Analytics -->
+<script async defer src="https://widget.getyourguide.com/dist/pa.umd.production.min.js" data-gyg-partner-id="6ZV7KMH"></script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EPPFTRYF92"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-EPPFTRYF92');
+</script>
 </head>
 <body>
   <div class="container">

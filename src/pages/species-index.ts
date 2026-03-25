@@ -84,6 +84,18 @@ export async function renderSpeciesIndex(env: Env, url: URL): Promise<Response> 
       h1 { font-size: 1.8rem; }
     }
   </style>
+
+<!-- GetYourGuide Analytics -->
+<script async defer src="https://widget.getyourguide.com/dist/pa.umd.production.min.js" data-gyg-partner-id="6ZV7KMH"></script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EPPFTRYF92"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-EPPFTRYF92');
+</script>
 </head>
 <body>
   <div class="container">

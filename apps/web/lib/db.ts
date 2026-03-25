@@ -87,6 +87,17 @@ export interface Photo {
   mediumUrl: string | null;
   largeUrl: string | null;
   locationName?: string | null;
+  region?: string | null;
+  country?: string | null;
+  species_common_name?: string | null;
+  species_scientific_name?: string | null;
+}
+
+export interface GallerySequence {
+  previousPhoto: { id: string; slug: string; thumbUrl: string | null; title: string | null } | null;
+  nextPhoto: { id: string; slug: string; thumbUrl: string | null; title: string | null } | null;
+  position: number;
+  total: number;
 }
 
 /**
@@ -120,6 +131,10 @@ function mapPhoto(row: any): Photo {
     mediumUrl: withR2Base(row.medium_url),
     largeUrl: withR2Base(row.large_url),
     locationName: row.location,
+    region: row.region || null,
+    country: row.country || null,
+    species_common_name: row.species_common_name || null,
+    species_scientific_name: row.species_scientific_name || null,
   };
 }
 
@@ -261,7 +276,8 @@ export async function getPhotoBySlug(slug: string): Promise<Photo | null> {
            p.width, p.height, p.camera_make, p.camera_model, p.lens,
            p.iso, p.aperture, p.shutter_speed, p.focal_length_mm,
            p.lat, p.lon, p.views_count, p.date_taken, p.date_uploaded,
-           p.thumb_url, p.small_url, p.medium_url, p.large_url, p.location
+           p.thumb_url, p.small_url, p.medium_url, p.large_url, p.location,
+           p.region, p.country, p.species_common_name, p.species_scientific_name
     FROM photos p
     WHERE p.slug = $1 AND p.is_active = true AND p.ready_for_public_render = true
     LIMIT 1
@@ -961,6 +977,57 @@ export async function getRelatedArticles(currentSlug: string, articleType?: stri
   return (result as any[]).map(mapArticle);
 }
 
+/**
+ * Get previous / next photos in the same gallery sequence for a given photo.
+ * Navigation stays strictly within the same gallery.
+ * Order priority: gallery_photos.sort_order → photos.date_uploaded → photos.id
+ */
+export async function getGallerySequenceForPhoto(
+  photoSlug: string,
+  galleryId: string
+): Promise<GallerySequence> {
+  // Fetch full ordered sequence for this gallery (only active, public-ready photos)
+  const sequence = await sql(`
+    SELECT p.id, p.slug, p.title,
+           p.thumb_url, p.small_url,
+           gp.sort_order
+    FROM photos p
+    JOIN gallery_photos gp ON p.id = gp.photo_id
+    WHERE gp.gallery_id = $1
+      AND p.is_active = true
+      AND p.ready_for_public_render = true
+      AND (p.thumb_url IS NOT NULL OR p.small_url IS NOT NULL OR p.medium_url IS NOT NULL)
+    ORDER BY gp.sort_order ASC NULLS LAST, p.date_uploaded ASC, p.id ASC
+  `, [galleryId]);
+
+  const rows = sequence as any[];
+  const total = rows.length;
+
+  // Find current photo position (0-indexed)
+  const currentIndex = rows.findIndex(r => r.slug === photoSlug);
+
+  if (currentIndex === -1) {
+    return { previousPhoto: null, nextPhoto: null, position: 0, total };
+  }
+
+  const mapSeqPhoto = (row: any) => ({
+    id: String(row.id),
+    slug: row.slug,
+    title: row.title || null,
+    thumbUrl: withR2Base(row.thumb_url) || withR2Base(row.small_url),
+  });
+
+  const previousPhoto = currentIndex > 0 ? mapSeqPhoto(rows[currentIndex - 1]) : null;
+  const nextPhoto = currentIndex < total - 1 ? mapSeqPhoto(rows[currentIndex + 1]) : null;
+
+  return {
+    previousPhoto,
+    nextPhoto,
+    position: currentIndex + 1, // 1-indexed for display
+    total,
+  };
+}
+
 export default {
   getGalleries,
   getGalleryBySlug,
@@ -972,6 +1039,7 @@ export default {
   getPopularPhotos,
   getRelatedPhotos,
   getPhotosFromGallery,
+  getGallerySequenceForPhoto,
   searchPhotos,
   recordPhotoVisit,
   getAllSpecies,

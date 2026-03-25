@@ -8,6 +8,10 @@ import LocationMap from '@/components/LocationMap';
 import VirtualizedGallery from '@/components/VirtualizedGallery';
 import { getDisplayTitle, looksLikeFilename } from '@/lib/titles';
 
+// ============================================================
+// Types
+// ============================================================
+
 interface PhotoData {
   id: string;
   slug: string;
@@ -16,8 +20,10 @@ interface PhotoData {
   description_long?: string | null;
   keywords?: string | null;
   locationName?: string | null;
-  country?: string | null;
   region?: string | null;
+  country?: string | null;
+  species_common_name?: string | null;
+  species_scientific_name?: string | null;
   width?: number | null;
   height?: number | null;
   camera_make?: string | null;
@@ -48,8 +54,23 @@ interface RelatedPhoto {
 }
 
 interface GalleryContext {
+  id: string;
   slug: string;
   name: string;
+}
+
+interface SequencePhoto {
+  id: string;
+  slug: string;
+  title: string | null;
+  thumbUrl: string | null;
+}
+
+interface GallerySequence {
+  previousPhoto: SequencePhoto | null;
+  nextPhoto: SequencePhoto | null;
+  position: number;
+  total: number;
 }
 
 interface PhotoPageClientProps {
@@ -57,31 +78,237 @@ interface PhotoPageClientProps {
   relatedPhotos?: RelatedPhoto[];
   galleryPhotos?: RelatedPhoto[];
   gallery?: GalleryContext | null;
+  sequence?: GallerySequence | null;
 }
 
-export default function PhotoPageClient({ 
-  photo, 
-  relatedPhotos = [], 
+// ============================================================
+// Helper Components
+// ============================================================
+
+/** Previous / Next navigation bar */
+function GalleryNavBar({
+  sequence,
+  gallery,
+}: {
+  sequence: GallerySequence;
+  gallery: GalleryContext;
+}) {
+  const { previousPhoto, nextPhoto, position, total } = sequence;
+
+  return (
+    <nav
+      className="flex items-center justify-between gap-3 py-3 border-y border-gray-100 mb-6"
+      aria-label="Gallery navigation"
+    >
+      {/* Previous */}
+      {previousPhoto ? (
+        <Link
+          href={`/photo/${previousPhoto.slug}`}
+          className="flex items-center gap-2 text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors group"
+          aria-label="Previous photo"
+        >
+          <span className="text-lg leading-none group-hover:-translate-x-0.5 transition-transform">←</span>
+          <span className="hidden sm:inline">Previous</span>
+        </Link>
+      ) : (
+        <span className="flex items-center gap-2 text-sm font-medium text-gray-300 cursor-not-allowed select-none">
+          <span className="text-lg leading-none">←</span>
+          <span className="hidden sm:inline">Previous</span>
+        </span>
+      )}
+
+      {/* Centre: position + back to gallery */}
+      <div className="flex flex-col items-center gap-1 text-center">
+        <Link
+          href={`/gallery/${gallery.slug}`}
+          className="text-xs font-semibold uppercase tracking-wider text-blue-600 hover:text-blue-800 transition-colors"
+        >
+          {gallery.name}
+        </Link>
+        {total > 0 && (
+          <span className="text-xs text-gray-400">
+            Image {position} of {total}
+          </span>
+        )}
+      </div>
+
+      {/* Next */}
+      {nextPhoto ? (
+        <Link
+          href={`/photo/${nextPhoto.slug}`}
+          className="flex items-center gap-2 text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors group"
+          aria-label="Next photo"
+        >
+          <span className="hidden sm:inline">Next</span>
+          <span className="text-lg leading-none group-hover:translate-x-0.5 transition-transform">→</span>
+        </Link>
+      ) : (
+        <span className="flex items-center gap-2 text-sm font-medium text-gray-300 cursor-not-allowed select-none">
+          <span className="hidden sm:inline">Next</span>
+          <span className="text-lg leading-none">→</span>
+        </span>
+      )}
+    </nav>
+  );
+}
+
+/** Compact metadata block */
+function MetadataBlock({ photo, gallery }: { photo: PhotoData; gallery?: GalleryContext | null }) {
+  const rows: { label: string; value: string; href?: string }[] = [];
+
+  if (gallery) {
+    rows.push({ label: 'Gallery', value: gallery.name, href: `/gallery/${gallery.slug}` });
+  }
+  if (photo.locationName) {
+    rows.push({ label: 'Location', value: photo.locationName });
+  }
+  if (photo.region) {
+    rows.push({ label: 'Region', value: photo.region });
+  }
+  if (photo.species_common_name) {
+    rows.push({ label: 'Species', value: photo.species_common_name });
+  }
+  if (photo.species_scientific_name) {
+    rows.push({ label: 'Scientific Name', value: photo.species_scientific_name });
+  }
+
+  if (rows.length === 0) return null;
+
+  return (
+    <div className="rounded-xl border border-gray-100 bg-white p-4 shadow-sm">
+      <dl className="divide-y divide-gray-50">
+        {rows.map(({ label, value, href }) => (
+          <div key={label} className="flex justify-between gap-4 py-2 text-sm first:pt-0 last:pb-0">
+            <dt className="text-gray-400 shrink-0">{label}</dt>
+            <dd className="text-gray-800 font-medium text-right">
+              {href ? (
+                <Link href={href} className="text-blue-600 hover:underline">
+                  {value}
+                </Link>
+              ) : (
+                value
+              )}
+            </dd>
+          </div>
+        ))}
+      </dl>
+    </div>
+  );
+}
+
+/** Internal discovery links */
+function DiscoveryLinks({ photo, gallery }: { photo: PhotoData; gallery?: GalleryContext | null }) {
+  const links: { label: string; href: string }[] = [];
+
+  if (gallery) {
+    links.push({ label: `View full gallery`, href: `/gallery/${gallery.slug}` });
+  }
+  if (photo.locationName) {
+    links.push({
+      label: `More from ${photo.locationName}`,
+      href: `/search?q=${encodeURIComponent(photo.locationName)}`,
+    });
+  }
+  if (photo.species_common_name) {
+    links.push({
+      label: `More photos of ${photo.species_common_name}`,
+      href: `/species/${encodeURIComponent(photo.species_common_name.toLowerCase().replace(/\s+/g, '-'))}`,
+    });
+  }
+  if (photo.region) {
+    links.push({
+      label: `Explore ${photo.region}`,
+      href: `/region/${encodeURIComponent(photo.region.toLowerCase().replace(/\s+/g, '-'))}`,
+    });
+  }
+
+  if (links.length === 0) return null;
+
+  return (
+    <div className="flex flex-wrap gap-2">
+      {links.map(({ label, href }) => (
+        <Link
+          key={href}
+          href={href}
+          className="inline-flex items-center gap-1 text-sm text-gray-600 hover:text-blue-600 border border-gray-200 hover:border-blue-300 rounded-full px-3 py-1.5 transition-colors bg-white"
+        >
+          {label}
+        </Link>
+))}
+    </div>
+  );
+}
+
+/** Compact CTA — shown only when travel intent is clear */
+function CompactCTA({ photo }: { photo: PhotoData }) {
+  const location = photo.locationName;
+  const region = photo.region;
+  const hasSpecies = !!photo.species_common_name;
+
+  // Determine CTA relevance
+  if (!location && !region && !hasSpecies) return null;
+
+  let ctaText = 'Explore more of Costa Rica';
+  let ctaSubtext = 'Discover tours, wildlife, and nature experiences';
+  let searchQuery = 'Costa Rica nature tours';
+
+  if (location) {
+    ctaText = `Explore tours near ${location}`;
+    ctaSubtext = `Find guided experiences close to ${location}`;
+    searchQuery = `${location} Costa Rica tours`;
+  } else if (hasSpecies) {
+    ctaText = 'See wildlife experiences nearby';
+    ctaSubtext = 'Guided nature and birdwatching tours in Costa Rica';
+    searchQuery = 'Costa Rica wildlife tours';
+  } else if (region) {
+    ctaText = `Explore more from ${region}`;
+    ctaSubtext = `Tours and experiences in the ${region} region`;
+    searchQuery = `${region} Costa Rica tours`;
+  }
+
+  const gyg = `https://www.getyourguide.com/s/?q=${encodeURIComponent(searchQuery)}&partner_id=WILD`;
+
+  return (
+    <div className="rounded-xl border border-blue-100 bg-blue-50 p-4">
+      <p className="text-sm font-semibold text-blue-900 mb-0.5">{ctaText}</p>
+      <p className="text-xs text-blue-700 mb-3">{ctaSubtext}</p>
+      <a
+        href={gyg}
+        target="_blank"
+        rel="noopener sponsored"
+        className="inline-block text-xs font-semibold text-white bg-blue-600 hover:bg-blue-700 rounded-lg px-4 py-2 transition-colors"
+      >
+        Browse experiences
+      </a>
+    </div>
+  );
+}
+
+// ============================================================
+// Main Component
+// ============================================================
+
+export default function PhotoPageClient({
+  photo,
+  relatedPhotos = [],
   galleryPhotos = [],
-  gallery 
+  gallery,
+  sequence,
 }: PhotoPageClientProps) {
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [lightboxIndex, setLightboxIndex] = useState(0);
   const [purchasing, setPurchasing] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [showExif, setShowExif] = useState(false);
-  
+
   const searchParams = useSearchParams();
-  const fromGallery = searchParams.get('from');
-  
-  // Get display title with proper fallback logic
+
   const displayTitle = useMemo(() => {
     const title = getDisplayTitle(photo.title);
-    // If title looks like a filename, we'll show contextual info instead
     const isUgly = !title || looksLikeFilename(title);
     return { title, isUgly };
   }, [photo.title]);
-  
+
   // Record visit on mount
   useEffect(() => {
     fetch('/api/visit', {
@@ -91,7 +318,7 @@ export default function PhotoPageClient({
     }).catch(console.error);
   }, [photo.id, photo.slug]);
 
-  // Build slides for lightbox
+  // Lightbox slides
   const slides: PhotoSlide[] = [
     {
       id: photo.id,
@@ -101,32 +328,18 @@ export default function PhotoPageClient({
     },
   ].filter(s => s.src);
 
-  const openLightbox = (index: number = 0) => {
-    setLightboxIndex(index);
-    setLightboxOpen(true);
-  };
-
   const handlePurchase = async () => {
     setPurchasing(true);
     setError(null);
-    
     try {
       const response = await fetch('/api/paypal/checkout', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ photoId: parseInt(photo.id) }),
       });
-      
       const data = await response.json();
-      
-      if (data.error) {
-        setError(data.error);
-        return;
-      }
-      
-      if (data.approvalUrl) {
-        window.location.href = data.approvalUrl;
-      }
+      if (data.error) { setError(data.error); return; }
+      if (data.approvalUrl) window.location.href = data.approvalUrl;
     } catch (e: any) {
       setError(e.message);
     } finally {
@@ -134,15 +347,12 @@ export default function PhotoPageClient({
     }
   };
 
-  // Parse keywords into array
-  const keywordsArray = photo.keywords 
+  const keywordsArray = photo.keywords
     ? photo.keywords.split(',').map(k => k.trim()).filter(Boolean)
     : [];
 
-  // Has valid coordinates for map
   const hasLocation = photo.lat && photo.lon && photo.lat !== 0 && photo.lon !== 0;
 
-  // Format technical details
   const exifDetails = [
     photo.width && photo.height && { label: 'Dimensions', value: `${photo.width} × ${photo.height}` },
     photo.camera_make && { label: 'Camera', value: [photo.camera_make, photo.camera_model].filter(Boolean).join(' ') },
@@ -154,22 +364,19 @@ export default function PhotoPageClient({
     photo.date_taken && { label: 'Taken', value: new Date(photo.date_taken).toLocaleDateString() },
   ].filter(Boolean);
 
-  // Back link - prefer gallery context or fall back
   const backLink = gallery ? `/gallery/${gallery.slug}` : '/galleries';
+  const backLabel = gallery ? gallery.name : 'Gallery';
 
   return (
     <>
-      <div className="container mx-auto px-4 py-6">
+      <div className="container mx-auto px-4 py-6 max-w-6xl">
+
         {/* Breadcrumb */}
         <nav className="text-sm mb-4" aria-label="Breadcrumb">
           <ol className="flex items-center gap-2 flex-wrap">
-            <li>
-              <Link href="/" className="text-blue-600 hover:underline">Home</Link>
-            </li>
+            <li><Link href="/" className="text-blue-600 hover:underline">Home</Link></li>
             <li className="text-gray-400">/</li>
-            <li>
-              <Link href="/galleries" className="text-blue-600 hover:underline">Galleries</Link>
-            </li>
+            <li><Link href="/galleries" className="text-blue-600 hover:underline">Galleries</Link></li>
             {gallery && (
               <>
                 <li className="text-gray-400">/</li>
@@ -187,22 +394,27 @@ export default function PhotoPageClient({
           </ol>
         </nav>
 
-        {/* Back to Gallery Button */}
+        {/* Back to gallery link */}
         <div className="mb-4">
-          <Link 
+          <Link
             href={backLink}
-            className="inline-flex items-center gap-2 text-sm text-gray-600 hover:text-blue-600 transition-colors"
+            className="inline-flex items-center gap-2 text-sm text-gray-500 hover:text-gray-800 transition-colors"
           >
             <span>←</span>
-            <span>Back to {gallery?.name || 'Gallery'}</span>
+            <span>Back to {backLabel}</span>
           </Link>
         </div>
 
-        {/* Main Photo */}
+        {/* Gallery prev / next navigation bar */}
+        {sequence && gallery && (
+          <GalleryNavBar sequence={sequence} gallery={gallery} />
+        )}
+
+        {/* Main image */}
         <div className="mb-8">
-          <div 
+          <div
             className="cursor-zoom-in rounded-xl overflow-hidden shadow-2xl"
-            onClick={() => openLightbox(0)}
+            onClick={() => { setLightboxIndex(0); setLightboxOpen(true); }}
           >
             {photo.mediumUrl && (
               <img
@@ -213,74 +425,61 @@ export default function PhotoPageClient({
                 loading="eager"
               />
             )}
-            <p className="text-center text-sm text-gray-500 mt-3">
-              Click to view fullscreen
-            </p>
           </div>
+          <p className="text-center text-xs text-gray-400 mt-2">Click to view fullscreen</p>
+        </div>
+
+        {/* Title */}
+        <div className="mb-6">
+          {displayTitle.isUgly ? (
+            <div>
+              {photo.locationName && (
+                <h1 className="text-2xl font-bold text-gray-900">{photo.locationName}</h1>
+              )}
+              {!photo.locationName && photo.species_common_name && (
+                <h1 className="text-2xl font-bold text-gray-900">{photo.species_common_name}</h1>
+              )}
+              {!photo.locationName && !photo.species_common_name && gallery && (
+                <h1 className="text-2xl font-bold text-gray-900">From {gallery.name}</h1>
+              )}
+            </div>
+          ) : (
+            <h1 className="text-3xl md:text-4xl font-bold text-gray-900">
+              {displayTitle.title}
+            </h1>
+          )}
+
+          {(photo.description_long || photo.description) && (
+            <p className="mt-3 text-gray-600 text-lg leading-relaxed max-w-2xl">
+              {photo.description_long || photo.description}
+            </p>
+          )}
         </div>
 
         <div className="grid lg:grid-cols-3 gap-8">
-          {/* Left Column - Photo Info */}
+
+          {/* Left column — main content */}
           <div className="lg:col-span-2 space-y-6">
-            {/* Title & Description - Premium Editorial Style */}
-            <div className="border-b pb-6">
-              {/* Gallery badge */}
-              {gallery && (
-                <Link 
-                  href={`/gallery/${gallery.slug}`}
-                  className="inline-block text-xs font-semibold uppercase tracking-wider text-blue-600 hover:text-blue-800 mb-2"
-                >
-                  {gallery.name}
-                </Link>
-              )}
-              
-              {/* Title */}
-              {displayTitle.isUgly ? (
-                // Show contextual label instead of ugly filename
-                <div>
-                  {photo.locationName && (
-                    <p className="text-xl font-medium text-gray-700">
-                      📍 {photo.locationName}
-                    </p>
-                  )}
-                  {!photo.locationName && gallery && (
-                    <p className="text-xl font-medium text-gray-700">
-                      From {gallery.name}
-                    </p>
-                  )}
-                </div>
-              ) : (
-                <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
-                  {displayTitle.title}
-                </h1>
-              )}
-              
-              {/* Description */}
-              {(photo.description_long || photo.description) && (
-                <p className="text-gray-700 text-lg leading-relaxed">
-                  {photo.description_long || photo.description}
-                </p>
-              )}
-              
-              {/* Location line if no main title */}
-              {displayTitle.isUgly && photo.locationName && (
-                <p className="text-gray-600 mt-2">
-                  Location: {photo.locationName}
-                  {photo.country && `, ${photo.country}`}
-                </p>
-              )}
-            </div>
+
+            {/* Metadata block */}
+            <MetadataBlock photo={photo} gallery={gallery} />
+
+            {/* Discovery links */}
+            <DiscoveryLinks photo={photo} gallery={gallery} />
+
+            {/* Compact CTA */}
+            <CompactCTA photo={photo} />
 
             {/* Keywords */}
             {keywordsArray.length > 0 && (
               <div>
-                <h2 className="text-xs font-semibold text-gray-500 mb-3 uppercase tracking-wider">Keywords</h2>
+                <h2 className="text-xs font-semibold text-gray-400 mb-3 uppercase tracking-wider">Keywords</h2>
                 <div className="flex flex-wrap gap-2">
-                  {keywordsArray.map((keyword) => (
+                  {keywordsArray.map(keyword => (
                     <Link
                       key={keyword}
                       href={`/search?q=${encodeURIComponent(keyword)}`}
-                      className="px-3 py-1.5 bg-white border border-gray-200 text-gray-700 rounded-full text-sm font-medium hover:bg-blue-600 hover:text-white hover:border-blue-600 transition-all duration-200"
+                      className="px-3 py-1.5 bg-white border border-gray-200 text-gray-600 rounded-full text-sm hover:bg-blue-600 hover:text-white hover:border-blue-600 transition-all"
                     >
                       {keyword}
                     </Link>
@@ -289,22 +488,22 @@ export default function PhotoPageClient({
               </div>
             )}
 
-            {/* Location Map */}
+            {/* Location map */}
             {hasLocation && (
               <div>
-                <h2 className="text-xs font-semibold text-gray-500 mb-3 uppercase tracking-wider">Location</h2>
-                <LocationMap 
-                  lat={photo.lat!} 
-                  lon={photo.lon!} 
+                <h2 className="text-xs font-semibold text-gray-400 mb-3 uppercase tracking-wider">Location</h2>
+                <LocationMap
+                  lat={photo.lat!}
+                  lon={photo.lon!}
                   locationName={photo.locationName || 'Costa Rica'}
                 />
               </div>
             )}
 
-            {/* More From This Gallery */}
+            {/* More from this gallery */}
             {galleryPhotos.length > 0 && (
               <div>
-                <h2 className="text-xs font-semibold text-gray-500 mb-3 uppercase tracking-wider">
+                <h2 className="text-xs font-semibold text-gray-400 mb-3 uppercase tracking-wider">
                   More from {gallery?.name || 'this gallery'}
                 </h2>
                 <VirtualizedGallery
@@ -315,13 +514,23 @@ export default function PhotoPageClient({
                   }))}
                   columns={4}
                 />
+                {gallery && (
+                  <div className="mt-3">
+                    <Link
+                      href={`/gallery/${gallery.slug}`}
+                      className="text-sm text-blue-600 hover:underline"
+                    >
+                      View all photos in {gallery.name} &rarr;
+                    </Link>
+                  </div>
+                )}
               </div>
             )}
 
-            {/* Related Photos */}
+            {/* Related photos */}
             {relatedPhotos.length > 0 && (
               <div>
-                <h2 className="text-xs font-semibold text-gray-500 mb-3 uppercase tracking-wider">Related Photos</h2>
+                <h2 className="text-xs font-semibold text-gray-400 mb-3 uppercase tracking-wider">Related Photos</h2>
                 <VirtualizedGallery
                   photos={relatedPhotos.map(p => ({
                     ...p,
@@ -334,18 +543,19 @@ export default function PhotoPageClient({
             )}
           </div>
 
-          {/* Right Column - Sidebar */}
+          {/* Right column — sidebar */}
           <div className="space-y-5">
-            {/* Technical Details Card */}
+
+            {/* Technical details */}
             <div className="bg-white rounded-xl p-5 shadow-sm border border-gray-100">
-              <button 
+              <button
                 onClick={() => setShowExif(!showExif)}
                 className="w-full flex justify-between items-center mb-3"
               >
                 <h3 className="text-base font-semibold">Technical Details</h3>
                 <span className="text-gray-400">{showExif ? '−' : '+'}</span>
               </button>
-              
+
               {showExif && (
                 <div className="space-y-2 text-sm">
                   {exifDetails.map((detail: any, i) => (
@@ -359,8 +569,8 @@ export default function PhotoPageClient({
                   )}
                 </div>
               )}
-              
-              {photo.views_count !== null && photo.views_count !== undefined && (
+
+              {photo.views_count != null && (
                 <div className="mt-3 pt-3 border-t border-gray-100">
                   <p className="text-sm text-gray-500">
                     <span className="font-medium">{photo.views_count}</span> views
@@ -369,24 +579,22 @@ export default function PhotoPageClient({
               )}
             </div>
 
-            {/* Purchase Card */}
+            {/* Purchase */}
             <div className="bg-gray-900 rounded-xl p-5 text-white shadow-lg">
               <h3 className="text-lg font-semibold mb-3">Purchase</h3>
-              
+
               {error && (
-                <div className="mb-3 p-2 bg-red-500/20 text-red-200 rounded-lg text-sm">
-                  {error}
-                </div>
+                <div className="mb-3 p-2 bg-red-500/20 text-red-200 rounded-lg text-sm">{error}</div>
               )}
-              
+
               <div className="space-y-2">
-                <button 
+                <button
                   className="w-full px-4 py-3 bg-gray-700 text-gray-400 font-medium rounded-lg cursor-not-allowed text-sm"
                   disabled
                 >
                   Print (Coming Soon)
                 </button>
-                <button 
+                <button
                   onClick={handlePurchase}
                   disabled={purchasing}
                   className="w-full px-4 py-3 bg-green-600 text-white font-medium rounded-lg hover:bg-green-700 transition-colors disabled:opacity-50 text-sm"
@@ -394,10 +602,58 @@ export default function PhotoPageClient({
                   {purchasing ? 'Processing...' : 'Download High-Res — $29'}
                 </button>
               </div>
-              <p className="text-xs text-gray-400 mt-3 text-center">
-                Secure payment via PayPal
-              </p>
+              <p className="text-xs text-gray-400 mt-3 text-center">Secure payment via PayPal</p>
             </div>
+
+            {/* Bottom nav repeat on mobile — shown only on small screens via sidebar */}
+            {sequence && gallery && (
+              <div className="hidden lg:block bg-white rounded-xl p-4 shadow-sm border border-gray-100">
+                <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3">
+                  Gallery Navigation
+                </p>
+                <div className="flex flex-col gap-2 text-sm">
+                  {sequence.previousPhoto ? (
+                    <Link
+                      href={`/photo/${sequence.previousPhoto.slug}`}
+                      className="flex items-center gap-2 text-gray-600 hover:text-blue-600 transition-colors"
+                    >
+                      <span>←</span>
+                      <span className="truncate">
+                        {sequence.previousPhoto.title || 'Previous photo'}
+                      </span>
+                    </Link>
+                  ) : (
+                    <span className="text-gray-300 flex items-center gap-2">
+                      <span>←</span><span>First image</span>
+                    </span>
+                  )}
+                  <Link
+                    href={`/gallery/${gallery.slug}`}
+                    className="text-center text-blue-600 hover:underline py-1"
+                  >
+                    Back to {gallery.name}
+                  </Link>
+                  {sequence.nextPhoto ? (
+                    <Link
+                      href={`/photo/${sequence.nextPhoto.slug}`}
+                      className="flex items-center gap-2 justify-end text-gray-600 hover:text-blue-600transition-colors"
+                    >
+                      <span className="truncate">
+                        {sequence.nextPhoto.title || 'Next photo'}
+                      </span>
+                      <span>→</span>
+                    </Link>
+                  ) : (
+                    <span className="text-gray-300 flex items-center gap-2 justify-end">
+                      <span>Last image</span><span>→</span>
+                    </span>
+                  )}
+                </div>
+                <p className="text-xs text-gray-400 text-center mt-3">
+                  Image {sequence.position} of {sequence.total}
+                </p>
+              </div>
+            )}
           </div>
         </div>
       </div>

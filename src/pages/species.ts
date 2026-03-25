@@ -173,6 +173,18 @@ export async function renderSpeciesIndex(env: Env, url: URL): Promise<Response> 
     .species-card h2 { font-size: 1.2rem; color: #1a365d; margin: 0 0 0.5rem; }
     .species-card a { color: #2c7a7b; text-decoration: none; }
   </style>
+
+<!-- GetYourGuide Analytics -->
+<script async defer src="https://widget.getyourguide.com/dist/pa.umd.production.min.js" data-gyg-partner-id="6ZV7KMH"></script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EPPFTRYF92"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-EPPFTRYF92');
+</script>
 </head>
 <body>
   <div class="container">
@@ -269,6 +281,18 @@ export async function renderSpecies(slug: string, env: Env, url: URL): Promise<R
     .breadcrumb { color: #666; margin-bottom: 1rem; }
     .breadcrumb a { color: #666; text-decoration: none; }
   </style>
+
+<!-- GetYourGuide Analytics -->
+<script async defer src="https://widget.getyourguide.com/dist/pa.umd.production.min.js" data-gyg-partner-id="6ZV7KMH"></script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EPPFTRYF92"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-EPPFTRYF92');
+</script>
 </head>
 <body>
   <div class="container">
