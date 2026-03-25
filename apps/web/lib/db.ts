@@ -165,6 +165,10 @@ export interface Gallery {
   description?: string | null;
   coverPhotoUrl?: string | null;
   photoCount: number;
+  /** DB column: galleries.gallery_type (species | location | region | theme) */
+  galleryType?: string;
+  /** DB column: galleries.has_affiliate_content */
+  hasAffiliateContent?: boolean;
 }
 
 /**
@@ -254,25 +258,60 @@ export async function getGalleryForPhoto(photoSlug: string): Promise<Gallery | n
  * Get ALL galleries a photo belongs to, in deterministic order.
  * Used for multi-gallery discovery and "Also appears in" UI.
  * Fallback priority: lowest sort_order → lowest gallery id.
+ *
+ * Enriched query: includes gallery_type, has_affiliate_content, and photo_count
+ * for promotion scoring (Project 19). Falls back to a simpler query if the
+ * DB columns have not yet been migrated.
  */
 export async function getGalleriesForPhoto(photoSlug: string): Promise<Gallery[]> {
-  const result = await sql(`
-    SELECT g.id, g.slug, g.name, g.description
-    FROM galleries g
-    JOIN gallery_photos gp ON g.id = gp.gallery_id
-    JOIN photos p ON gp.photo_id = p.id
-    WHERE p.slug = $1 AND g.is_active = true
-    ORDER BY gp.sort_order ASC NULLS LAST, g.id ASC
-  `, [photoSlug]);
+  // Enriched query — requires gallery_type and has_affiliate_content columns
+  try {
+    const result = await sql(`
+      SELECT g.id, g.slug, g.name, g.description,
+             COALESCE(g.gallery_type, 'theme') AS gallery_type,
+             COALESCE(g.has_affiliate_content, false) AS has_affiliate_content,
+             (SELECT COUNT(*)::int FROM gallery_photos gp2 WHERE gp2.gallery_id = g.id) AS photo_count
+      FROM galleries g
+      JOIN gallery_photos gp ON g.id = gp.gallery_id
+      JOIN photos p ON gp.photo_id = p.id
+      WHERE p.slug = $1 AND g.is_active = true
+      ORDER BY gp.sort_order ASC NULLS LAST, g.id ASC
+    `, [photoSlug]);
 
-  return (result as any[]).map(row => ({
-    id: String(row.id),
-    slug: row.slug,
-    name: row.name,
-    description: row.description,
-    coverPhotoUrl: null,
-    photoCount: 0,
-  }));
+    return (result as any[]).map(row => ({
+      id: String(row.id),
+      slug: row.slug,
+      name: row.name,
+      description: row.description,
+      coverPhotoUrl: null,
+      photoCount: Number(row.photo_count ?? 0),
+      galleryType: String(row.gallery_type || 'theme'),
+      hasAffiliateContent: !!row.has_affiliate_content,
+    }));
+  } catch {
+    // Pre-migration fallback: DB columns don't exist yet.
+    // Returns galleries without promotion metadata; ranking engine will
+    // degrade gracefully (all galleries default to type='theme', photoCount=0).
+    const result = await sql(`
+      SELECT g.id, g.slug, g.name, g.description
+      FROM galleries g
+      JOIN gallery_photos gp ON g.id = gp.gallery_id
+      JOIN photos p ON gp.photo_id = p.id
+      WHERE p.slug = $1 AND g.is_active = true
+      ORDER BY gp.sort_order ASC NULLS LAST, g.id ASC
+    `, [photoSlug]);
+
+    return (result as any[]).map(row => ({
+      id: String(row.id),
+      slug: row.slug,
+      name: row.name,
+      description: row.description,
+      coverPhotoUrl: null,
+      photoCount: 0,
+      galleryType: 'theme',
+      hasAffiliateContent: false,
+    }));
+  }
 }
 
 /**

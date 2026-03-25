@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect, useMemo } from 'react';
+import { rankAlternateGalleries } from '@/lib/gallery-ranking';
 import Link from 'next/link';
 import { PhotoLightbox, PhotoSlide } from '@/components/PhotoLightbox';
 import LocationMap from '@/components/LocationMap';
@@ -56,6 +57,12 @@ interface GalleryContext {
   id: string;
   slug: string;
   name: string;
+  /** From galleries.gallery_type (species | location | region | theme) */
+  galleryType?: string | null;
+  /** Total photos in this gallery */
+  photoCount?: number | null;
+  /** From galleries.has_affiliate_content */
+  hasAffiliateContent?: boolean | null;
 }
 
 interface SequencePhoto {
@@ -381,6 +388,7 @@ export default function PhotoPageClient({
     return { title, isUgly };
   }, [photo.title]);
 
+
   // ── Record visit on mount ──────────────────────────────────
   useEffect(() => {
     fetch('/api/visit', {
@@ -405,6 +413,28 @@ export default function PhotoPageClient({
     ? `/gallery/${navGallery.slug}?photo=${photo.slug}`
     : '/galleries';
   const returnToGalleryLabel = navGallery ? navGallery.name : 'Gallery';
+
+  // ── Promoted alternate galleries (Project 19: editorial promotion logic) ──
+  // Ranks alternate galleries by relevance, intent, monetization, content
+  // quality, diversity, and redundancy. Returns top 2 that score ≥ 6.
+  // Falls back to showing top 2 by position when metadata is absent.
+  const promotedGalleries = useMemo(() => {
+    if (!navGallery || allGalleries.length <= 1) return [];
+    const alternates = allGalleries.filter(g => g.id !== navGallery.id);
+    if (alternates.length === 0) return [];
+    // Detect whether promotion metadata is available from the DB.
+    // If not, bypass the score threshold so position-order applies.
+    const hasMetadata = allGalleries.some(
+      g =>
+        (g.galleryType && g.galleryType !== 'theme') ||
+        (g.photoCount != null && g.photoCount > 0) ||
+        g.hasAffiliateContent,
+    );
+    return rankAlternateGalleries(alternates, navGallery, {
+      maxResults: 2,
+      minScore: hasMetadata ? 6 : 0,
+    });
+  }, [allGalleries, navGallery]);
 
   // ── Lightbox slides ────────────────────────────────────────
   const slides: PhotoSlide[] = [
@@ -500,21 +530,19 @@ export default function PhotoPageClient({
           />
         )}
 
-        {/* Cross-gallery discovery — compact, near active context, explicit switch */}
-        {allGalleries.length > 1 && navGallery && (
+        {/* Cross-gallery discovery — editorially ranked, top 2 only (Project 19) */}
+        {promotedGalleries.length > 0 && (
           <div className="flex items-center gap-2 flex-wrap mb-4 text-xs">
             <span className="text-gray-400 shrink-0">Also in:</span>
-            {allGalleries
-              .filter(g => g.id !== navGallery!.id)
-              .map(g => (
-                <Link
-                  key={g.id}
-                  href={`/photo/${photo.slug}?fromGallery=${g.slug}`}
-                  className="text-blue-600 hover:text-blue-800 border border-blue-100 hover:border-blue-300 rounded-full px-2.5 py-0.5 bg-blue-50 hover:bg-blue-100 transition-colors whitespace-nowrap"
-                >
-                  {g.name}
-                </Link>
-              ))}
+            {promotedGalleries.map(g => (
+              <Link
+                key={g.id}
+                href={`/photo/${photo.slug}?fromGallery=${g.slug}`}
+                className="text-blue-600 hover:text-blue-800 border border-blue-100 hover:border-blue-300 rounded-full px-2.5 py-0.5 bg-blue-50 hover:bg-blue-100 transition-colors whitespace-nowrap"
+              >
+                {g.name}
+              </Link>
+            ))}
           </div>
         )}
 
