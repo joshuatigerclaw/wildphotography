@@ -13,6 +13,7 @@
 import { layout } from './base';
 import { getPhotoBySlug, recordPhotoVisit } from '../lib/db';
 import { getPhotoPageMainImage, getDisplayTitle, renderPlaceholder, keyToUrl } from '../lib/images';
+import { renderGYGWidget, GYG_PARTNER_ID } from '../lib/monetization';
 import type { Env } from '../types';
 
 export async function renderPhoto(slug: string, env: Env, url: URL): Promise<Response> {
@@ -51,6 +52,10 @@ export async function renderPhoto(slug: string, env: Env, url: URL): Promise<Res
   
   // Description
   const descriptionHtml = photo.description_long || photo.description || '';
+
+  // GetYourGuide affiliate block — between image and description
+  const locationLabel = photo.locationName || photo.region || 'Costa Rica';
+  const gygAffiliateHtml = renderGYGWidget(locationLabel);
   
   // Keywords as clickable chips
   let keywordsHtml = '';
@@ -160,12 +165,15 @@ export async function renderPhoto(slug: string, env: Env, url: URL): Promise<Res
     <article class="photo-detail">
       <header class="photo-header">
         <h1>${displayTitle}</h1>
-        ${descriptionHtml ? `<p class="photo-description">${descriptionHtml}</p>` : ''}
       </header>
       
       <div class="photo-image">
         ${mainImageHtml}
       </div>
+      
+      ${gygAffiliateHtml}
+      
+      ${descriptionHtml ? `<p class="photo-description">${descriptionHtml}</p>` : ''}
       
       ${keywordsHtml}
       
