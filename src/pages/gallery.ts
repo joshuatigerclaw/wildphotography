@@ -12,7 +12,6 @@ import { layout } from './base';
 import { getGalleryBySlug, getPhotosByGallery, getGalleryPhotoCount, getGalleryById, getRelatedGalleries, getSpeciesForGallery } from '../lib/db';
 import { getGalleryTileImage, getDisplayTitle, renderPlaceholder } from '../lib/images';
 import { renderGYGWidget, GYG_PARTNER_ID } from '../lib/monetization';
-import { getViatorRecommendations, renderViatorBlock, viatorCss } from '../lib/viator';
 import type { Env } from '../types';
 
 // Destination hub mapping for affiliate matching
@@ -160,77 +159,25 @@ export async function renderGallery(slug: string, env: Env, url: URL): Promise<R
   
   // Resolve destination from gallery name/slug for affiliate matching
   const galleryNameLower = (galleryName || '').toLowerCase();
-  let matchedDestination = 'costa-rica';
   let matchedHub: any = null;
   
   for (const [hubSlug, hubData] of Object.entries(DESTINATION_HUBS)) {
     if (galleryNameLower.includes(hubSlug) || 
         (hubData as any).aliases?.some((a: string) => galleryNameLower.includes(a))) {
-      matchedDestination = hubSlug;
       matchedHub = (hubData as any);
       break;
     }
   }
   
-  // Build affiliate blocks
+  // Build affiliate blocks — GetYourGuide only
   let affiliateBlocks = '';
   if (matchedHub) {
-    // GetYourGuide Tours widget
     affiliateBlocks += renderGYGWidget(matchedHub.name);
-    
-    // Products block (Amazon)
-    affiliateBlocks += `
-      <div class="affiliate-section products-section">
-        <h3>Gear for Exploring ${matchedHub.name}</h3>
-        <div class="affiliate-cards">
-          ${matchedHub.products.map((product: string, i: number) => `
-            <div class="affiliate-card">
-              <h4>${product.charAt(0).toUpperCase() + product.slice(1)}</h4>
-              <a href="https://www.amazon.com/s?k=${encodeURIComponent(product)}&tag=wildphotography-20" target="_blank" rel="nofollow" class="cta-btn">View on Amazon</a>
-            </div>
-          `).join('')}
-        </div>
-      </div>
-    `;
-    
-    // Hotels block  
-    affiliateBlocks += `
-      <div class="affiliate-section hotels-section">
-        <h3>Where to Stay Near ${matchedHub.name}</h3>
-        <div class="affiliate-cards">
-          ${matchedHub.hotels.map((hotel: string, i: number) => `
-            <div class="affiliate-card">
-              <h4>${hotel.charAt(0).toUpperCase() + hotel.slice(1)}</h4>
-              <a href="/hotels?destination=${matchedDestination}&type=${hotel.replace(/ /g, '-')}" class="cta-btn">Check Availability</a>
-            </div>
-          `).join('')}
-        </div>
-      </div>
-    `;
   } else {
-    // Generic fallback for non-matched galleries
     affiliateBlocks = renderGYGWidget('Costa Rica');
   }
   
-  // Get Viator recommendations
-  let viatorBlock = '';
-  try {
-    const viatorResults = await getViatorRecommendations({
-      pageType: "gallery",
-      galleryTitle: galleryName,
-      gallerySlug: slug,
-      locationName: galleryDescription || "",
-      region: "",
-      country: "Costa Rica",
-      destinationHub: matchedDestination,
-      speciesCommonName: "",
-      animalGroup: "",
-      photoDescription: "",
-    });
-    viatorBlock = renderViatorBlock(viatorResults);
-  } catch (e) {
-    console.error('Viator error:', e);
-  }
+  // Viator and Amazon/Hotels blocks removed — GetYourGuide only
   
   const content = `
     <a href="/" class="back-link">← Back to Galleries</a>
@@ -245,7 +192,6 @@ export async function renderGallery(slug: string, env: Env, url: URL): Promise<R
     ${speciesLinksHtml}
 
     ${affiliateBlocks}
-    ${viatorBlock}
     
     ${photoContent}
     
@@ -623,56 +569,6 @@ export async function renderGallery(slug: string, env: Env, url: URL): Promise<R
         color: #1a1a1a;
         text-align: center;
       }
-      .affiliate-section {
-        margin: 2rem auto;
-        padding: 1.5rem;
-        max-width: 1100px;
-        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-        border-radius: 12px;
-      }
-      .affiliate-section h3 {
-        font-size: 1.4rem;
-        margin-bottom: 1rem;
-        color: #1a1a1a;
-        text-align: center;
-      }
-      .affiliate-cards {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 1rem;
-      }
-      .affiliate-card {
-        background: white;
-        padding: 1rem;
-        border-radius: 8px;
-        text-align: center;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-      }
-      .affiliate-card h4 {
-        font-size: 0.95rem;
-        margin-bottom: 0.5rem;
-        color: #333;
-      }
-      .affiliate-card .rating {
-        color: #f39c12;
-        font-size: 0.85rem;
-        margin-bottom: 0.5rem;
-      }
-      .affiliate-card .cta-btn {
-        display: inline-block;
-        background: #0066cc;
-        color: white;
-        padding: 0.5rem 1rem;
-        border-radius: 6px;
-        text-decoration: none;
-        font-size: 0.85rem;
-        transition: background 0.2s;
-      }
-      .affiliate-card .cta-btn:hover {
-        background: #0052a3;
-      }
-      
-      ${viatorCss}
     </style>
   `;
   
