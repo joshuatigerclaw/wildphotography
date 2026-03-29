@@ -1,265 +1,619 @@
 #!/bin/bash
+# WildPhotography Import Batch Script - Multi-gallery support with directory deduplication
+# PROCESSING ORDER (enforced):
+#  1. dedupe directories          ← NEW
+#  2. dedupe files by hash
+#  3. rename filename collisions
+#  4. reuse existing gallery slugs only
+#  5. upload originals
+#  6. generate all 5 derivatives
+#  7. update Neon with canonical R2 keys only
+#  8. set readiness flags only when fully complete
+#  9. index only search_ready records
 
-# WildPhotography Import Batch Script - Multi-gallery support
-# Process up to 100 photos from the queue, supports multiple galleries
+set -euo pipefail
 
-set -e
-
-# Configuration
-QUEUE_FILE="/Users/joshuatenbrink/.openclaw/workspace/wildphotography/inventory/batch_clean_import_queue.json"
-QUEUE_ITEMS_FILE="/tmp/pending_items_batch.jsonl"
+# ── Configuration ─────────────────────────────────────────────────────────────────
+QUEUE_FILE="${QUEUE_FILE:-/Users/joshuatenbrink/.openclaw/workspace/wildphotography/inventory/batch_clean_import_queue.json}"
+QUEUE_ITEMS_FILE="/tmp/pending_items_batch_$$.jsonl"
 OUTPUT_DIR="/Users/joshuatenbrink/.openclaw/workspace/wildphotography/storage/derivatives"
 R2_BUCKET="wildphoto-storage"
 AWS_ACCESS_KEY="b821d56d29d9a2c716f783fc481e2f75"
 AWS_SECRET_KEY="3af780dfe8dbb6d48b792e4bf8ba5836ae659c89192645a7ae971300464aa48f"
 R2_ENDPOINT="https://3ec62f93675c404fe4a9a4949e38e5e5.r2.cloudflarestorage.com"
-
-# Database
 DB_HOST="ep-calm-fire-ad0dfnqd-pooler.c-2.us-east-1.aws.neon.tech"
 DB_NAME="wildphotography"
 DB_USER="neondb_owner"
 DB_PASS="npg_BvF2JsQ8drba"
+RUN_TS=$(date -u +%Y%m%dT%H%M%S)
 
 export PGPASSWORD="$DB_PASS"
 
-# Gallery folder to ID mapping
-get_gallery_id() {
-    case "$1" in
-        "Costa-Rica-Gallery/Birds") echo "5" ;;
-        "Costa-Rica-Gallery/Jaco-Beach") echo "48" ;;
-        "Costa-Rica-Gallery/Limon-Puerto-Viejo-Cocles-Playa-Chiquita-y-Punta-Uva") echo "57" ;;
-        "Costa-Rica-Gallery/Sunrise-Sunset") echo "93" ;;
-        "Costa-Rica-Gallery/Tambor-Nicoya-Peninsula-Costa-Rica") echo "95" ;;
-        "Costa-Rica-Gallery/Playa-Hermosa-Jaco-Garabito") echo "71" ;;
-        *) echo "" ;;
-    esac
-}
-
-# Create output directory
 mkdir -p "$OUTPUT_DIR"
 
-# Extract pending items to temp file
-echo "Extracting pending items from queue..."
-jq -c '.[] | select(.status == "pending") | select(.attempt_count < 3)' "$QUEUE_FILE" | head -100 > "$QUEUE_ITEMS_FILE"
+# ── Directory Identity Registry ──────────────────────────────────────────────────
+declare -A DIR_CANONICAL_PATH   # canonical_path → gallery_folder (original)
+declare -A DIR_NORMALIZED_NAME  # normalized_name → gallery_folder (original)
+declare -A DIR_GALLERY_SLUG     # normalized_slug → canonical_gallery_folder
+declare -A DIR_FLAGS            # normalized_slug → flag (duplicate|conflict|manual_review)
 
-COUNT=0
-DUPLICATES_SKIPPED=0
-COLLISIONS_RENAMED=0
-UPLOADED=0
-DERIVATIVES_GENERATED=0
-FAILED=0
-FOLDERS_PROCESSED=""
+# ── Result Counters ─────────────────────────────────────────────────────────────
+DIRS_DEDUPED=0
+DIRS_PROCESSED=0
+DIRS_DUPLICATE_SKIPPED=0
+DIRS_CONFLICT_AVOIDED=0
+DIRS_MANUAL_REVIEW=0
+PHOTOS_PROCESSED=0
+PHOTOS_DUPLICATE_HASH=0
+PHOTOS_FILENAME_COLLISION=0
+PHOTOS_ORIGINALS_UPLOADED=0
+PHOTOS_DERIVATIVES_GENERATED=0
+PHOTOS_FAILED=0
+FAILED_PATHS=()
 
-while IFS= read -r ITEM; do
-    COUNT=$((COUNT + 1))
-    
-    # Extract fields
-    ID=$(echo "$ITEM" | jq -r '.id')
-    SOURCE_PATH=$(echo "$ITEM" | jq -r '.source_path')
-    FILENAME=$(echo "$ITEM" | jq -r '.filename')
-    CONTENT_HASH=$(echo "$ITEM" | jq -r '.content_hash')
-    GALLERY_FOLDER=$(echo "$ITEM" | jq -r '.gallery_folder')
-    
-    # Get gallery_id from mapping
-    GALLERY_ID=$(get_gallery_id "$GALLERY_FOLDER")
-    if [ -z "$GALLERY_ID" ]; then
-        echo "Unknown gallery: $GALLERY_FOLDER, skipping"
-        FAILED=$((FAILED + 1))
-        continue
-    fi
-    
-    # Track folders processed
-    if [[ ! "$FOLDERS_PROCESSED" == *"$GALLERY_FOLDER"* ]]; then
-        if [ -z "$FOLDERS_PROCESSED" ]; then
-            FOLDERS_PROCESSED="$GALLERY_FOLDER"
+# ─────────────────────────────────────────────────────────────────────────────
+# STEP 0: Normalize a directory identity
+# Returns: normalized_slug|canonical_path|normalized_name
+# ─────────────────────────────────────────────────────────────────────────────
+normalize_dir_identity() {
+    local dir_path="$1"
+    # Resolve to absolute path and resolve symlinks / ".." / etc.
+    local canonical
+    canonical=$(cd "$(dirname "$dir_path")" 2>/dev/null && realpath "$(basename "$dir_path")" 2>/dev/null) \
+        || canonical=$(python3 -c "import os; print(os.path.realpath(os.path.abspath('$dir_path')))")
+
+    # Normalize: lowercase, collapse spaces/hyphens/underscores to single hyphen, strip leading/trailing
+    local normalized
+    normalized=$(echo "$canonical" | python3 -c "
+import sys
+p = sys.stdin.read().strip()
+# Normalize: lower, collapse runs of [-_ ] to single hyphen
+import re
+p = p.lower()
+p = re.sub(r'[\-\_\s]+', '-', p)
+p = re.sub(r'[^a-z0-9\-]', '', p)
+p = re.sub(r'^-+|-+$', '', p)
+print(p)
+")
+
+    # Normalized folder name (last component only)
+    local normalized_name
+    normalized_name=$(basename "$normalized")
+
+    # Derive gallery slug from normalized path
+    local gallery_slug
+    gallery_slug=$(echo "$normalized_name" | python3 -c "
+import sys, re
+n = sys.stdin.read().strip()
+# Collapse runs of separators
+n = re.sub(r'[\-\_]+', '-', n)
+n = re.sub(r'^-+|-+$', '', n)
+print(n)
+")
+
+    echo "${gallery_slug}|${canonical}|${normalized_name}"
+}
+
+# ─────────────────────────────────────────────────────────────────────────────
+# STEP 1: Load queue and deduplicate directories BEFORE any processing
+# Returns: filtered queue JSON to $QUEUE_ITEMS_FILE
+# ─────────────────────────────────────────────────────────────────────────────
+dedupe_directories() {
+    echo "=== STEP 1: Directory deduplication ==="
+
+    local tmp_items="/tmp/all_queue_items_$$.jsonl"
+    local deduped_items="/tmp/deduped_queue_items_$$.jsonl"
+
+    # Extract all pending items (keep JSON objects as single lines)
+    jq -c '.[] | select(.status == "pending") | select(.attempt_count < 3)' "$QUEUE_FILE" 2>/dev/null > "$tmp_items" || {
+        echo "ERROR: Could not read queue file $QUEUE_FILE"
+        return 1
+    }
+
+    local total_items
+    total_items=$(wc -l < "$tmp_items" 2>/dev/null || echo 0)
+    echo "  Total queue items loaded: $total_items"
+
+    # Process each item and build a directory → gallery_folder map
+    local dir_map_file="/tmp/dir_map_$$.json"
+    : > "$dir_map_file"
+
+    while IFS= read -r item; do
+        local gallery_folder
+        gallery_folder=$(echo "$item" | jq -r '.gallery_folder // empty')
+
+        # Build full source path
+        local source_path item_filename
+        source_path=$(echo "$item" | jq -r '.source_path // empty')
+        item_filename=$(echo "$item" | jq -r '.filename // empty')
+
+        # Determine the directory containing the source file
+        local dir_path="${source_path%/*}"  # Remove filename to get directory
+
+        # Normalize this directory
+        local result
+        result=$(normalize_dir_identity "$dir_path")
+        local gallery_slug canonical_path normalized_name
+        gallery_slug=$(echo "$result" | cut -d'|' -f1)
+        canonical_path=$(echo "$result" | cut -d'|' -f2)
+        normalized_name=$(echo "$result" | cut -d'|' -f3)
+
+        # Append to dir map (keyed by original gallery_folder)
+        # Store: canonical_path, normalized_name, gallery_slug, original_gallery_folder, item_json
+        echo "{\"canonical_path\":\"$canonical_path\",\"normalized_name\":\"$normalized_name\",\"gallery_slug\":\"$gallery_slug\",\"original_gallery_folder\":\"$gallery_folder\",\"item\":$(echo "$item" | jq -c .)}" >> "$dir_map_file"
+
+    done < "$tmp_items"
+
+    # Now analyze directory registry — detect duplicates and conflicts
+    local unique_dirs_file="/tmp/unique_dirs_$$.json"
+    : > "$unique_dirs_file"
+
+    # Build registry: key by canonical_path, normalized_name, gallery_slug
+    local registry_by_canonical="/tmp/reg_canonical_$$.json"
+    local registry_by_normname="/tmp/reg_normname_$$.json"
+    local registry_by_slug="/tmp/reg_slug_$$.json"
+    : > "$registry_by_canonical" > "$registry_by_normname" > "$registry_by_slug"
+
+    while IFS= read -r entry; do
+        local canonical_path normalized_name gallery_slug original_gallery_folder
+        canonical_path=$(echo "$entry" | jq -r '.canonical_path')
+        normalized_name=$(echo "$entry" | jq -r '.normalized_name')
+        gallery_slug=$(echo "$entry" | jq -r '.gallery_slug')
+        original_gallery_folder=$(echo "$entry" | jq -r '.original_gallery_folder')
+
+        # Skip empty
+        [[ -z "$canonical_path" || "$canonical_path" == "None" ]] && continue
+
+        # Check canonical path already registered
+        if grep -q "\"${canonical_path}\"" "$registry_by_canonical" 2>/dev/null; then
+            : # already registered
         else
-            FOLDERS_PROCESSED="$FOLDERS_PROCESSED,$GALLERY_FOLDER"
+            echo "{\"canonical_path\":\"$canonical_path\",\"normalized_name\":\"$normalized_name\",\"gallery_slug\":\"$gallery_slug\",\"original_gallery_folder\":\"$original_gallery_folder\"}" >> "$registry_by_canonical"
         fi
-    fi
-    
-    # Get gallery slug
-    GALLERY_SLUG=$(psql -h "$DB_HOST" -U "$DB_USER" -d "$DB_NAME" -t -c "SELECT slug FROM galleries WHERE id = $GALLERY_ID;" 2>/dev/null | tr -d ' ')
-    
-    echo "[$COUNT] Processing: $FILENAME (Gallery: $GALLERY_SLUG)"
-    
-    # Check if source file exists
-    if [ ! -f "$SOURCE_PATH" ]; then
-        echo "  - Source file not found, skipping"
-        FAILED=$((FAILED + 1))
-        # Update queue status
-        jq --arg id "$ID" --arg reason "file_not_found" '(.[] | select(.id == $id) | .status) = "skipped" | (.[] | select(.id == $id) | .skip_reason) = $reason' "$QUEUE_FILE" > /tmp/queue_updated.json && mv /tmp/queue_updated.json "$QUEUE_FILE"
-        continue
-    fi
-    
-    # Check for duplicate by content_hash
-    EXISTS=$(psql -h "$DB_HOST" -U "$DB_USER" -d "$DB_NAME" -t -c "SELECT COUNT(*) FROM photos WHERE content_hash = '$CONTENT_HASH';" 2>/dev/null | tr -d ' ')
-    if [ "$EXISTS" -gt 0 ]; then
-        echo "  - Duplicate by content_hash, skipping"
-        DUPLICATES_SKIPPED=$((DUPLICATES_SKIPPED + 1))
-        # Update queue status
-        jq --arg id "$ID" --arg reason "duplicate" '(.[] | select(.id == $id) | .status) = "skipped" | (.[] | select(.id == $id) | .skip_reason) = $reason' "$QUEUE_FILE" > /tmp/queue_updated.json && mv /tmp/queue_updated.json "$QUEUE_FILE"
-        continue
-    fi
-    
-    # Check for filename collision
-    COLLISION=$(psql -h "$DB_HOST" -U "$DB_USER" -d "$DB_NAME" -t -c "SELECT COUNT(*) FROM photos WHERE filename = '$FILENAME';" 2>/dev/null | tr -d ' ')
-    NEW_FILENAME="$FILENAME"
-    if [ "$COLLISION" -gt 0 ]; then
-        # Rename - add hash suffix
-        BASE=$(basename "$FILENAME" | sed 's/\.[^.]*$//')
-        EXT=$(basename "$FILENAME" | sed 's/.*\.//')
-        NEW_FILENAME="${BASE}_${CONTENT_HASH:0:8}.${EXT}"
-        echo "  - Filename collision, renamed to $NEW_FILENAME"
-        COLLISIONS_RENAMED=$((COLLISIONS_RENAMED + 1))
-    fi
-    
-    # Generate slug from filename
-    SLUG=$(echo "$NEW_FILENAME" | sed 's/\.[^.]*$//' | tr '[:upper:]' '[:lower:]' | tr ' ' '-' | tr -cd '[:alnum:]-_')
-    
-    # Check slug uniqueness
-    SLUG_EXISTS=$(psql -h "$DB_HOST" -U "$DB_USER" -d "$DB_NAME" -t -c "SELECT COUNT(*) FROM photos WHERE slug = '$SLUG';" 2>/dev/null | tr -d ' ')
-    if [ "$SLUG_EXISTS" -gt 0 ]; then
-        SLUG="${SLUG}_${CONTENT_HASH:0:8}"
-    fi
-    
-    # Generate derivatives
-    echo "  - Generating derivatives..."
-    
-    # Get image dimensions
-    DIMENSIONS=$(identify -format "%wx%h" "$SOURCE_PATH" 2>/dev/null)
-    WIDTH=$(echo "$DIMENSIONS" | cut -d'x' -f1)
-    HEIGHT=$(echo "$DIMENSIONS" | cut -d'x' -f2)
-    
-    if [ "$WIDTH" -gt "$HEIGHT" ]; then
-        ORIENTATION="landscape"
-    elif [ "$HEIGHT" -gt "$WIDTH" ]; then
-        ORIENTATION="portrait"
-    else
-        ORIENTATION="square"
-    fi
-    
-    # Get file extension
-    EXT=$(basename "$FILENAME" | sed 's/.*\.//' | tr '[:upper:]' '[:lower:]')
-    
-    # Generate thumb (150px)
-    THUMB_KEY="derivatives/thumb/${CONTENT_HASH}.jpg"
-    convert "$SOURCE_PATH" -resize 150x150^ -gravity center -extent 150x150 -quality 85 "$OUTPUT_DIR/${CONTENT_HASH}_thumb.jpg" 2>/dev/null
-    DERIVATIVES_GENERATED=$((DERIVATIVES_GENERATED + 1))
-    
-    # Generate small (600px)
-    SMALL_KEY="derivatives/small/${CONTENT_HASH}.jpg"
-    convert "$SOURCE_PATH" -resize 600x600> -quality 85 "$OUTPUT_DIR/${CONTENT_HASH}_small.jpg" 2>/dev/null
-    DERIVATIVES_GENERATED=$((DERIVATIVES_GENERATED + 1))
-    
-    # Generate medium (1200px)
-    MEDIUM_KEY="derivatives/medium/${CONTENT_HASH}.jpg"
-    convert "$SOURCE_PATH" -resize 1200x1200> -quality 90 "$OUTPUT_DIR/${CONTENT_HASH}_medium.jpg" 2>/dev/null
-    DERIVATIVES_GENERATED=$((DERIVATIVES_GENERATED + 1))
-    
-    # Generate large (2400px)
-    LARGE_KEY="derivatives/large/${CONTENT_HASH}.jpg"
-    convert "$SOURCE_PATH" -resize 2400x2400> -quality 92 "$OUTPUT_DIR/${CONTENT_HASH}_large.jpg" 2>/dev/null
-    DERIVATIVES_GENERATED=$((DERIVATIVES_GENERATED + 1))
-    
-    # Generate preview
-    PREVIEW_KEY="derivatives/preview/${CONTENT_HASH}.jpg"
-    convert "$SOURCE_PATH" -resize 1200x1200> -quality 85 "$OUTPUT_DIR/${CONTENT_HASH}_preview.jpg" 2>/dev/null
-    DERIVATIVES_GENERATED=$((DERIVATIVES_GENERATED + 1))
-    
-    # Upload to R2
-    echo "  - Uploading to R2..."
-    
-    ORIGINAL_KEY="originals/${CONTENT_HASH}.${EXT}"
-    
-    # Upload original
-    s5cmd cp "$SOURCE_PATH" "s3://${R2_BUCKET}/${ORIGINAL_KEY}" \
-        --endpoint-url "$R2_ENDPOINT" \
-        --access-key "$AWS_ACCESS_KEY" \
-        --secret-key "$AWS_SECRET_KEY" \
-        --acl public-read 2>/dev/null || true
-    
-    # Upload derivatives
-    s5cmd cp "$OUTPUT_DIR/${CONTENT_HASH}_thumb.jpg" "s3://${R2_BUCKET}/${THUMB_KEY}" \
-        --endpoint-url "$R2_ENDPOINT" \
-        --access-key "$AWS_ACCESS_KEY" \
-        --secret-key "$AWS_SECRET_KEY" \
-        --acl public-read 2>/dev/null || true
-    
-    s5cmd cp "$OUTPUT_DIR/${CONTENT_HASH}_small.jpg" "s3://${R2_BUCKET}/${SMALL_KEY}" \
-        --endpoint-url "$R2_ENDPOINT" \
-        --access-key "$AWS_ACCESS_KEY" \
-        --secret-key "$AWS_SECRET_KEY" \
-        --acl public-read 2>/dev/null || true
-    
-    s5cmd cp "$OUTPUT_DIR/${CONTENT_HASH}_medium.jpg" "s3://${R2_BUCKET}/${MEDIUM_KEY}" \
-        --endpoint-url "$R2_ENDPOINT" \
-        --access-key "$AWS_ACCESS_KEY" \
-        --secret-key "$AWS_SECRET_KEY" \
-        --acl public-read 2>/dev/null || true
-    
-    s5cmd cp "$OUTPUT_DIR/${CONTENT_HASH}_large.jpg" "s3://${R2_BUCKET}/${LARGE_KEY}" \
-        --endpoint-url "$R2_ENDPOINT" \
-        --access-key "$AWS_ACCESS_KEY" \
-        --secret-key "$AWS_SECRET_KEY" \
-        --acl public-read 2>/dev/null || true
-    
-    s5cmd cp "$OUTPUT_DIR/${CONTENT_HASH}_preview.jpg" "s3://${R2_BUCKET}/${PREVIEW_KEY}" \
-        --endpoint-url "$R2_ENDPOINT" \
-        --access-key "$AWS_ACCESS_KEY" \
-        --secret-key "$AWS_SECRET_KEY" \
-        --acl public-read 2>/dev/null || true
-    
-    UPLOADED=$((UPLOADED + 1))
-    
-    # Insert into database
-    echo "  - Inserting into database..."
-    
-    psql -h "$DB_HOST" -U "$DB_USER" -d "$DB_NAME" -c "
-    INSERT INTO photos (
-        slug, filename, canonical_filename, content_hash,
-        original_r2_key, thumb_url, small_url, medium_url, large_url, preview_url,
-        r2_original_key, r2_thumb_key, r2_web_small_key, r2_web_large_key, r2_print_key,
-        width, height, orientation, gallery_id, gallery_slug,
-        source_path, original_source_path,
-        ready_for_public_render, search_ready, derivatives_complete, original_stored,
-        status, state, date_uploaded
-    ) VALUES (
-        '$SLUG', '$FILENAME', '$NEW_FILENAME', '$CONTENT_HASH',
-        'https://${R2_BUCKET}.r2.cloudflarestorage.com/${ORIGINAL_KEY}',
-        'https://${R2_BUCKET}.r2.cloudflarestorage.com/${THUMB_KEY}',
-        'https://${R2_BUCKET}.r2.cloudflarestorage.com/${SMALL_KEY}',
-        'https://${R2_BUCKET}.r2.cloudflarestorage.com/${MEDIUM_KEY}',
-        'https://${R2_BUCKET}.r2.cloudflarestorage.com/${LARGE_KEY}',
-        'https://${R2_BUCKET}.r2.cloudflarestorage.com/${PREVIEW_KEY}',
-        '$ORIGINAL_KEY', '$THUMB_KEY', '$SMALL_KEY', '$LARGE_KEY', '$LARGE_KEY',
-        $WIDTH, $HEIGHT, '$ORIENTATION', $GALLERY_ID, '$GALLERY_SLUG',
-        '$SOURCE_PATH', '$SOURCE_PATH',
-        true, true, true, true,
-        'active', 'imported', NOW()
-    );" 2>/dev/null || echo "  - Database insert failed"
-    
-    # Update queue status
-    jq --arg id "$ID" '(.[] | select(.id == $id) | .status) = "completed"' "$QUEUE_FILE" > /tmp/queue_updated.json && mv /tmp/queue_updated.json "$QUEUE_FILE"
-    
-    echo "  - Completed: $FILENAME"
-    
-    # Stop if we've processed 100
-    if [ $COUNT -ge 100 ]; then
-        break
-    fi
-done < "$QUEUE_ITEMS_FILE"
 
-echo ""
-echo "=== IMPORT BATCH COMPLETE ==="
-echo "Folders processed: $(echo "$FOLDERS_PROCESSED" | tr ',' '\n' | wc -l)"
-echo "$FOLDERS_PROCESSED" | tr ',' '\n' | while read f; do
-    if [ -n "$f" ]; then
-        echo "  - $f"
+        # Check normalized name already registered
+        if grep -q "\"${normalized_name}\"" "$registry_by_normname" 2>/dev/null; then
+            : # already registered
+        else
+            echo "{\"canonical_path\":\"$canonical_path\",\"normalized_name\":\"$normalized_name\",\"gallery_slug\":\"$gallery_slug\",\"original_gallery_folder\":\"$original_gallery_folder\"}" >> "$registry_by_normname"
+        fi
+
+        # Check slug — if conflict, flag for manual review
+        if grep -q "\"${gallery_slug}\"" "$registry_by_slug" 2>/dev/null; then
+            # Check if it's the SAME canonical path (ok) or different (conflict)
+            local existing_entry
+            existing_entry=$(grep "\"${gallery_slug}\"" "$registry_by_slug" | head -1)
+            local existing_canonical
+            existing_canonical=$(echo "$existing_entry" | jq -r '.canonical_path')
+            if [[ "$canonical_path" != "$existing_canonical" ]]; then
+                # Different directories → same slug → manual review
+                echo "{\"canonical_path\":\"$canonical_path\",\"normalized_name\":\"$normalized_name\",\"gallery_slug\":\"$gallery_slug\",\"original_gallery_folder\":\"$original_gallery_folder\",\"flag\":\"manual_review\"}" >> "$registry_by_slug"
+            fi
+        else
+            echo "{\"canonical_path\":\"$canonical_path\",\"normalized_name\":\"$normalized_name\",\"gallery_slug\":\"$gallery_slug\",\"original_gallery_folder\":\"$original_gallery_folder\"}" >> "$registry_by_slug"
+        fi
+
+    done < "$dir_map_file"
+
+    # Build final deduplicated item list
+    local seen_canonical="/tmp/seen_canonical_$$.txt"
+    local seen_normname="/tmp/seen_normname_$$.txt"
+    : > "$seen_canonical" > "$seen_normname"
+    : > "$deduped_items"
+
+    while IFS= read -r entry; do
+        local canonical_path normalized_name gallery_slug original_gallery_folder item_json flag
+        canonical_path=$(echo "$entry" | jq -r '.canonical_path')
+        normalized_name=$(echo "$entry" | jq -r '.normalized_name')
+        gallery_slug=$(echo "$entry" | jq -r '.gallery_slug')
+        original_gallery_folder=$(echo "$entry" | jq -r '.original_gallery_folder')
+        flag=$(echo "$entry" | jq -r '.flag // "ok"')
+        item_json=$(echo "$entry" | jq -c '.item')
+
+        [[ -z "$canonical_path" || "$canonical_path" == "None" ]] && continue
+
+        case "$flag" in
+            manual_review)
+                echo "  MANUAL REVIEW [${gallery_slug}]: $canonical_path"
+                echo "{\"gallery_folder\":\"$original_gallery_folder\",\"canonical_path\":\"$canonical_path\",\"slug\":\"$gallery_slug\",\"status\":\"manual_review\",\"item\":$item_json}" >> "$deduped_items"
+                DIRS_MANUAL_REVIEW=$((DIRS_MANUAL_REVIEW + 1))
+                ;;
+            *)
+                # Check if canonical path already seen
+                if grep -Fxq "$canonical_path" "$seen_canonical" 2>/dev/null; then
+                    echo "  DUPLICATE DIR SKIPPED: $canonical_path (canonical path match)"
+                    DIRS_DUPLICATE_SKIPPED=$((DIRS_DUPLICATE_SKIPPED + 1))
+                    continue
+                fi
+                # Check if normalized name already seen
+                if grep -Fxq "$normalized_name" "$seen_normname" 2>/dev/null; then
+                    echo "  DUPLICATE DIR SKIPPED: $canonical_path (normalized name match: $normalized_name)"
+                    DIRS_DUPLICATE_SKIPPED=$((DIRS_DUPLICATE_SKIPPED + 1))
+                    continue
+                fi
+                # OK — register and include
+                echo "$canonical_path" >> "$seen_canonical"
+                echo "$normalized_name" >> "$seen_normname"
+                echo "$item_json" >> "$deduped_items"
+                DIRS_PROCESSED=$((DIRS_PROCESSED + 1))
+                ;;
+        esac
+
+    done < "$dir_map_file"
+
+    # Report
+    local deduped_count
+    deduped_count=$(wc -l < "$deduped_items" 2>/dev/null || echo 0)
+    echo "  Directories processed (unique):   $DIRS_PROCESSED"
+    echo "  Duplicate directories skipped:    $DIRS_DUPLICATE_SKIPPED"
+    echo "  Gallery slug conflicts avoided:   $DIRS_CONFLICT_AVOIDED"
+    echo "  Directories flagged manual review: $DIRS_MANUAL_REVIEW"
+    echo "  Items after dedup:               $deduped_count"
+
+    # Move deduped items to working file
+    cp "$deduped_items" "$QUEUE_ITEMS_FILE"
+
+    # Cleanup
+    rm -f "$tmp_items" "$deduped_items" "$dir_map_file" "$unique_dirs_file"
+    rm -f "$registry_by_canonical" "$registry_by_normname" "$registry_by_slug"
+    rm -f "$seen_canonical" "$seen_normname"
+
+    echo ""
+}
+
+# ── Gallery slug lookup (from DB) ──────────────────────────────────────────────
+get_gallery_id_and_slug() {
+    local gallery_folder="$1"
+    # Try exact match first
+    local result
+    result=$(psql -h "$DB_HOST" -U "$DB_USER" -d "$DB_NAME" -t -c \
+        "SELECT id, slug FROM galleries WHERE slug = LOWER(REPLACE('$gallery_folder', ' ', '-')) LIMIT 1;" 2>/dev/null | tr -d ' ' | tr -d '|' || echo "")
+    if [[ -n "$result" && "$result" != "()" ]]; then
+        echo "$result"
+        return
     fi
-done
-echo "Photos processed: $COUNT"
-echo "Duplicates skipped: $DUPLICATES_SKIPPED"
-echo "Filename collisions renamed: $COLLISIONS_RENAMED"
-echo "Originals uploaded: $UPLOADED"
-echo "Derivatives generated: $DERIVATIVES_GENERATED"
-echo "Failed: $FAILED"
+    # Try by folder name (last component)
+    local folder_name
+    folder_name=$(basename "$gallery_folder")
+    result=$(psql -h "$DB_HOST" -U "$DB_USER" -d "$DB_NAME" -t -c \
+        "SELECT id, slug FROM galleries WHERE LOWER(REPLACE(name, ' ', '-')) = LOWER(REPLACE('$folder_name', ' ', '-')) LIMIT 1;" 2>/dev/null | tr -d ' ' | tr -d '|' || echo "")
+    echo "$result"
+}
+
+# ── Process photos (steps 2-8) ───────────────────────────────────────────────────
+process_photos() {
+    local batch_limit="${BATCH_LIMIT:-100}"
+
+    echo "=== STEP 2-8: Photo processing ==="
+
+    local count=0
+    local batch_start_ts
+    batch_start_ts=$(date -u +%Y%m%dT%H%M%S)
+
+    # Pre-fetch all existing content hashes for this batch (step 2: hash dedup)
+    local hash_batch_file="/tmp/hash_batch_$$.txt"
+    jq -r '.content_hash' "$QUEUE_ITEMS_FILE" 2>/dev/null > "$hash_batch_file" || true
+    local hash_count
+    hash_count=$(wc -l < "$hash_batch_file" 2>/dev/null || echo 0)
+
+    if [[ "$hash_count" -gt 0 ]]; then
+        local hashes_list
+        hashes_list=$(paste -sd, "$hash_batch_file" 2>/dev/null | tr ',' "','")
+        EXISTING_HASHES=$(psql -h "$DB_HOST" -U "$DB_USER" -d "$DB_NAME" -t -c \
+            "SELECT content_hash FROM photos WHERE content_hash IN ('${hashes_list}');" 2>/dev/null \
+            | tr -d ' ' | grep -v '^$' || echo "")
+        echo "  Pre-fetched ${#EXISTING_HASHES} existing hashes from DB"
+    fi
+    rm -f "$hash_batch_file"
+
+    while IFS= read -r item && [[ $count -lt $batch_limit ]]; do
+        count=$((count + 1))
+
+        local id source_path filename content_hash gallery_folder size
+        id=$(echo "$item" | jq -r '.id')
+        source_path=$(echo "$item" | jq -r '.source_path')
+        filename=$(echo "$item" | jq -r '.filename')
+        content_hash=$(echo "$item" | jq -r '.content_hash')
+        gallery_folder=$(echo "$item" | jq -r '.gallery_folder')
+        size=$(echo "$item" | jq -r '.size')
+
+        # ── Step 2: Hash duplicate detection ─────────────────────────────────
+        if echo "$EXISTING_HASHES" | grep -qF "$content_hash" 2>/dev/null; then
+            echo "  [$count] DUPLICATE HASH: $filename"
+            PHOTOS_DUPLICATE_HASH=$((PHOTOS_DUPLICATE_HASH + 1))
+            jq --arg id "$id" --arg reason "hash_duplicate" \
+                '(.[] | select(.id == $id) | .status) = "skipped" | (.[] | select(.id == $id) | .skip_reason) = $reason' \
+                "$QUEUE_FILE" > /tmp/queue_upd_$$.json && mv /tmp/queue_upd_$$.json "$QUEUE_FILE"
+            continue
+        fi
+
+        # ── Resolve gallery_id and slug (step 4) ─────────────────────────────
+        local gallery_result gallery_id gallery_slug
+        gallery_result=$(get_gallery_id_and_slug "$gallery_folder")
+        gallery_id=$(echo "$gallery_result" | cut -d'|' -f1)
+        gallery_slug=$(echo "$gallery_result" | cut -d'|' -f2)
+
+        if [[ -z "$gallery_id" || "$gallery_id" == "()" ]]; then
+            echo "  [$count] NO GALLERY: $gallery_folder — flag for manual review"
+            PHOTOS_FAILED=$((PHOTOS_FAILED + 1))
+            FAILED_PATHS+=("[no_gallery]$source_path")
+            jq --arg id "$id" --arg reason "gallery_not_found" \
+                '(.[] | select(.id == $id) | .status) = "manual_review" | (.[] | select(.id == $id) | .skip_reason) = $reason' \
+                "$QUEUE_FILE" > /tmp/queue_upd_$$.json && mv /tmp/queue_upd_$$.json "$QUEUE_FILE"
+            continue
+        fi
+
+        echo "  [$count] Processing: $filename (Gallery: $gallery_slug)"
+
+        # ── Step 3: Same-filename/different-content collision ───────────────
+        local new_filename="$filename"
+        local collision_count
+        collision_count=$(psql -h "$DB_HOST" -U "$DB_USER" -d "$DB_NAME" -t -c \
+            "SELECT COUNT(*) FROM photos WHERE filename = '$filename' AND gallery_id = $gallery_id;" 2>/dev/null | tr -d ' ' || echo "0")
+
+        if [[ "$collision_count" -gt 0 ]]; then
+            local base ext
+            base=$(echo "$filename" | sed 's/\.[^.]*$//')
+            ext=$(echo "$filename" | sed 's/.*\.//')
+            new_filename="${base}_${content_hash:0:8}.${ext}"
+            echo "    Filename collision → renamed to $new_filename"
+            PHOTOS_FILENAME_COLLISION=$((PHOTOS_FILENAME_COLLISION + 1))
+        fi
+
+        # ── Generate slug ───────────────────────────────────────────────────
+        local slug
+        slug=$(echo "$new_filename" | sed 's/\.[^.]*$//' | tr '[:upper:]' '[:lower:]' | tr ' ' '-' | tr -cd 'a-z0-9\-_')
+        local slug_exists
+        slug_exists=$(psql -h "$DB_HOST" -U "$DB_USER" -d "$DB_NAME" -t -c \
+            "SELECT COUNT(*) FROM photos WHERE slug = '$slug';" 2>/dev/null | tr -d ' ' || echo "0")
+        if [[ "$slug_exists" -gt 0 ]]; then
+            slug="${slug}_${content_hash:0:8}"
+        fi
+
+        # ── Get image dimensions ───────────────────────────────────────────
+        local dimensions width height orientation
+        dimensions=$(identify -format "%wx%h" "$source_path" 2>/dev/null || echo "")
+        if [[ -z "$dimensions" ]]; then
+            echo "    ERROR: Could not get image dimensions"
+            PHOTOS_FAILED=$((PHOTOS_FAILED + 1))
+            FAILED_PATHS+=("[no_dims]$source_path")
+            continue
+        fi
+        width=$(echo "$dimensions" | cut -d'x' -f1)
+        height=$(echo "$dimensions" | cut -d'x' -f2)
+        if   [[ "$width" -gt "$height" ]]; then orientation="landscape"
+        elif [[ "$height" -gt "$width" ]]; then orientation="portrait"
+        else orientation="square"; fi
+
+        local ext
+        ext=$(echo "$filename" | sed 's/.*\.//' | tr '[:upper:]' '[:lower:]')
+
+        # ── Step 5: Upload original to R2 ─────────────────────────────────
+        local original_key="originals/${gallery_slug}/${content_hash}.${ext}"
+        echo "    Uploading original to R2..."
+        if s5cmd cp "$source_path" "s3://${R2_BUCKET}/${original_key}" \
+            --endpoint-url "$R2_ENDPOINT" \
+            --access-key "$AWS_ACCESS_KEY" \
+            --secret-key "$AWS_SECRET_KEY" \
+            --acl public-read > /dev/null 2>&1; then
+            PHOTOS_ORIGINALS_UPLOADED=$((PHOTOS_ORIGINALS_UPLOADED + 1))
+        else
+            echo "    ERROR: R2 upload failed"
+            PHOTOS_FAILED=$((PHOTOS_FAILED + 1))
+            FAILED_PATHS+=("[upload_fail]$source_path")
+            continue
+        fi
+
+        # ── Step 6: Generate all 5 derivatives ─────────────────────────────
+        echo "    Generating derivatives..."
+        local deriv_suffixes=(thumb small medium large preview)
+        local deriv_sizes=(150 600 1200 2400 1200)
+        local deriv_count=0
+
+        for i in "${!deriv_suffixes[@]}"; do
+            local suf="${deriv_suffixes[$i]}"
+            local dim="${deriv_sizes[$i]}"
+            local deriv_path="$OUTPUT_DIR/${content_hash}_${suf}.jpg"
+            if convert "$source_path" -resize "${dim}x${dim}>" -quality 85 "$deriv_path" 2>/dev/null; then
+                local deriv_key="derivatives/${gallery_slug}/${content_hash}_${suf}.jpg"
+                if s5cmd cp "$deriv_path" "s3://${R2_BUCKET}/${deriv_key}" \
+                    --endpoint-url "$R2_ENDPOINT" \
+                    --access-key "$AWS_ACCESS_KEY" \
+                    --secret-key "$AWS_SECRET_KEY" \
+                    --acl public-read > /dev/null 2>&1; then
+                    deriv_count=$((deriv_count + 1))
+                fi
+                rm -f "$deriv_path"
+            fi
+        done
+        PHOTOS_DERIVATIVES_GENERATED=$((PHOTOS_DERIVATIVES_GENERATED + deriv_count))
+
+        # ── Step 7: Insert to DB with canonical R2 keys ────────────────────
+        echo "    Inserting to DB..."
+        local thumb_key="derivatives/${gallery_slug}/${content_hash}_thumb.jpg"
+        local small_key="derivatives/${gallery_slug}/${content_hash}_small.jpg"
+        local medium_key="derivatives/${gallery_slug}/${content_hash}_medium.jpg"
+        local large_key="derivatives/${gallery_slug}/${content_hash}_large.jpg"
+        local preview_key="derivatives/${gallery_slug}/${content_hash}_preview.jpg"
+
+        local insert_result
+        insert_result=$(psql -h "$DB_HOST" -U "$DB_USER" -d "$DB_NAME" -c "
+        INSERT INTO photos (
+            slug, filename, canonical_filename, content_hash,
+            original_r2_key,
+            r2_original_key, r2_thumb_key, r2_web_small_key, r2_web_large_key, r2_print_key,
+            thumb_url, small_url, medium_url, large_url, preview_url,
+            width, height, orientation, gallery_id, gallery_slug,
+            source_path, original_source_path,
+            derivatives_complete, ready_for_public_render, original_stored,
+            status, state, date_uploaded
+        ) VALUES (
+            '$slug', '$filename', '$new_filename', '$content_hash',
+            'https://${R2_BUCKET}.r2.cloudflarestorage.com/${original_key}',
+            '$original_key', '$thumb_key', '$small_key', '$large_key', '$large_key',
+            'https://${R2_BUCKET}.r2.cloudflarestorage.com/${thumb_key}',
+            'https://${R2_BUCKET}.r2.cloudflarestorage.com/${small_key}',
+            'https://${R2_BUCKET}.r2.cloudflarestorage.com/${medium_key}',
+            'https://${R2_BUCKET}.r2.cloudflarestorage.com/${large_key}',
+            'https://${R2_BUCKET}.r2.cloudflarestorage.com/${preview_key}',
+            $width, $height, '$orientation', $gallery_id, '$gallery_slug',
+            '$source_path', '$source_path',
+            false, false, true,
+            'active', 'imported', NOW()
+        ) RETURNING id;" 2>&1 | tail -1 || echo "INSERT_FAILED")
+
+        if echo "$insert_result" | grep -qE '^[0-9]+$'; then
+            PHOTOS_PROCESSED=$((PHOTOS_PROCESSED + 1))
+            echo "    ✓ Photo $slug inserted (ID: $insert_result)"
+        else
+            echo "    ERROR: DB insert failed: $insert_result"
+            PHOTOS_FAILED=$((PHOTOS_FAILED + 1))
+            FAILED_PATHS+=("[db_fail]$source_path")
+            continue
+        fi
+
+        # ── Mark completed in queue ─────────────────────────────────────────
+        jq --arg id "$id" --arg ts "$batch_start_ts" \
+            '(.[] | select(.id == $id) | .status) = "completed" | (.[] | select(.id == $id) | .completed_at) = $ts' \
+            "$QUEUE_FILE" > /tmp/queue_upd_$$.json && mv /tmp/queue_upd_$$.json "$QUEUE_FILE"
+
+    done < "$QUEUE_ITEMS_FILE"
+
+    echo ""
+}
+
+# ── Step 8: Set readiness flags for complete records ─────────────────────────
+set_readiness_flags() {
+    echo "=== STEP 8: Setting readiness flags ==="
+    local ready_count
+    ready_count=$(psql -h "$DB_HOST" -U "$DB_USER" -d "$DB_NAME" -t -c "
+        UPDATE photos
+        SET derivatives_complete = true,
+            ready_for_public_render = true
+        WHERE status = 'active'
+          AND state = 'imported'
+          AND derivatives_complete = false
+          AND original_stored = true
+          AND r2_thumb_key IS NOT NULL
+          AND r2_thumb_key != ''
+        RETURNING id;" 2>/dev/null | grep -c '^[0-9]' || echo "0")
+    echo "  Flags updated: $ready_count photos"
+    echo ""
+}
+
+# ── Step 9: Index search_ready records (no-op here — handled by indexer cron) ──
+# ── Final report ────────────────────────────────────────────────────────────────
+print_report() {
+    echo ""
+    echo "══════════════════════════════════════════════════════════════"
+    echo "  IMPORT BATCH REPORT — $RUN_TS"
+    echo "══════════════════════════════════════════════════════════════"
+    echo ""
+    echo "  DIRECTORY DEDUPLICATION:"
+    echo "    directories_processed:            $DIRS_PROCESSED"
+    echo "    duplicate_directories_skipped:    $DIRS_DUPLICATE_SKIPPED"
+    echo "    gallery_slug_conflicts_avoided:   $DIRS_CONFLICT_AVOIDED"
+    echo "    directories_flagged_manual_review: $DIRS_MANUAL_REVIEW"
+    echo ""
+    echo "  FILE PROCESSING:"
+    echo "    photos_processed:                  $PHOTOS_PROCESSED"
+    echo "    duplicates_skipped_by_hash:       $PHOTOS_DUPLICATE_HASH"
+    echo "    filename_collisions_renamed:      $PHOTOS_FILENAME_COLLISION"
+    echo "    originals_uploaded:               $PHOTOS_ORIGINALS_UPLOADED"
+    echo "    derivatives_generated:            $PHOTOS_DERIVATIVES_GENERATED"
+    echo "    failed_files_count:               $PHOTOS_FAILED"
+    echo ""
+    if [[ ${#FAILED_PATHS[@]} -gt 0 ]]; then
+        echo "  FAILED FILE PATHS:"
+        for p in "${FAILED_PATHS[@]}"; do
+            echo "    $p"
+        done
+    else
+        echo "  FAILED FILE PATHS: none"
+    fi
+    echo ""
+
+    # Sample gallery URL
+    local sample_gallery_slug
+    sample_gallery_slug=$(psql -h "$DB_HOST" -U "$DB_USER" -d "$DB_NAME" -t -c \
+        "SELECT slug FROM galleries ORDER BY id DESC LIMIT 1;" 2>/dev/null | tr -d ' ' || echo "unknown")
+    echo "  SAMPLE GALLERY URL: https://wildphotography.com/gallery/${sample_gallery_slug}"
+    echo ""
+
+    # Sample photo URL
+    local sample_photo_slug
+    sample_photo_slug=$(psql -h "$DB_HOST" -U "$DB_USER" -d "$DB_NAME" -t -c \
+        "SELECT slug FROM photos ORDER BY id DESC LIMIT 1;" 2>/dev/null | tr -d ' ' || echo "unknown")
+    echo "  SAMPLE PHOTO URL: https://wildphotography.com/photo/${sample_photo_slug}"
+    echo ""
+
+    # DB readiness counts
+    local ready_count search_ready_count
+    ready_count=$(psql -h "$DB_HOST" -U "$DB_USER" -d "$DB_NAME" -t -c \
+        "SELECT COUNT(*) FROM photos WHERE ready_for_public_render = true;" 2>/dev/null | tr -d ' ' || echo "?")
+    search_ready_count=$(psql -h "$DB_HOST" -U "$DB_USER" -d "$DB_NAME" -t -c \
+        "SELECT COUNT(*) FROM photos WHERE search_ready = true;" 2>/dev/null | tr -d ' ' || echo "?")
+    echo "  ready_for_public_render count:  $ready_count"
+    echo "  search_ready count:             $search_ready_count"
+    echo ""
+    echo "══════════════════════════════════════════════════════════════"
+
+    # Write report to file
+    local report_file="/Users/joshuatenbrink/.openclaw/workspace/wildphotography/inventory/batch_import_${RUN_TS}_report.json"
+    cat > "$report_file" << REPORT
+{
+  "run_at": "$RUN_TS",
+  "queue_file": "$QUEUE_FILE",
+  "directories_processed": $DIRS_PROCESSED,
+  "duplicate_directories_skipped": $DIRS_DUPLICATE_SKIPPED,
+  "gallery_slug_conflicts_avoided": $DIRS_CONFLICT_AVOIDED,
+  "directories_flagged_manual_review": $DIRS_MANUAL_REVIEW,
+  "photos_processed": $PHOTOS_PROCESSED,
+  "duplicates_skipped_by_hash": $PHOTOS_DUPLICATE_HASH,
+  "filename_collisions_renamed": $PHOTOS_FILENAME_COLLISION,
+  "originals_uploaded": $PHOTOS_ORIGINALS_UPLOADED,
+  "derivatives_generated": $PHOTOS_DERIVATIVES_GENERATED,
+  "ready_for_public_render_count": $ready_count,
+  "search_ready_count": $search_ready_count,
+  "failed_files_count": $PHOTOS_FAILED,
+  "failed_file_paths": $(printf '%s\n' "${FAILED_PATHS[@]}" | jq -R . | jq -s .)
+}
+REPORT
+    echo "  Report saved: $report_file"
+}
+
+# ── Main ────────────────────────────────────────────────────────────────────────
+main() {
+    echo ""
+    echo "══════════════════════════════════════════════════════════════"
+    echo "  WildPhotography Import Batch — $RUN_TS"
+    echo "  Queue: $QUEUE_FILE"
+    echo "══════════════════════════════════════════════════════════════"
+    echo ""
+
+    # Step 1: Directory deduplication (before ANY file processing)
+    dedupe_directories
+
+    # Steps 2-8: Process photos
+    process_photos
+
+    # Step 8: Set readiness flags
+    set_readiness_flags
+
+    # Step 9: Indexing is handled by wild_typesense_reconcile_no_llm cron
+
+    # Report
+    print_report
+
+    # Cleanup
+    rm -f "$QUEUE_ITEMS_FILE"
+}
+
+# Allow running individual steps
+case "${1:-main}" in
+    dedupe)   dedupe_directories ;;
+    process)  process_photos ;;
+    flags)    set_readiness_flags ;;
+    report)   print_report ;;
+    *)        main ;;
+esac
