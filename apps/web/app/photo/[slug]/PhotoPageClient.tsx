@@ -7,10 +7,26 @@ import { PhotoLightbox, PhotoSlide } from '@/components/PhotoLightbox';
 import LocationMap from '@/components/LocationMap';
 import VirtualizedGallery from '@/components/VirtualizedGallery';
 import { getDisplayTitle, looksLikeFilename } from '@/lib/titles';
+import PhotoViatorBlock from '@/components/PhotoViatorBlock';
 
 // ============================================================
 // Types
 // ============================================================
+
+interface PhotoSEOData {
+  seo_title?:       string | null;
+  meta_description?: string | null;
+  keyword_clusters?: {
+    primary_kw?:       string[];
+    species_kw?:        string[];
+    location_kw?:      string[];
+    travel_intent_kw?: string[];
+    photography_kw?:    string[];
+    longtail_kw?:       string[];
+  };
+  affiliate_blurb?: string | null;
+  viator_dest?:     string | null;
+}
 
 interface PhotoData {
   id: string;
@@ -41,6 +57,8 @@ interface PhotoData {
   smallUrl?: string | null;
   mediumUrl?: string | null;
   largeUrl?: string | null;
+  /** JSONB metadata from DB — contains seo_title, meta_description, keyword_clusters, affiliate_blurb */
+  metadata?: PhotoSEOData | null;
 }
 
 interface RelatedPhoto {
@@ -51,6 +69,9 @@ interface RelatedPhoto {
   smallUrl?: string | null;
   mediumUrl?: string | null;
   keywords?: string | null;
+  locationName?: string | null;
+  galleryName?: string | null;
+  gallerySlug?: string | null;
 }
 
 interface GalleryContext {
@@ -83,6 +104,12 @@ interface PhotoPageClientProps {
   photo: PhotoData;
   relatedPhotos?: RelatedPhoto[];
   galleryPhotos?: RelatedPhoto[];
+  /** Photos from page_links: same species */
+  speciesPhotos?: RelatedPhoto[];
+  /** Photos from page_links: same location */
+  locationPhotos?: RelatedPhoto[];
+  /** Photos from other galleries containing this photo */
+  alternateGalleryPhotos?: RelatedPhoto[];
   /** The photo's primary gallery — used for metadata, breadcrumb, discovery links */
   gallery?: GalleryContext | null;
   /** Sequence within the sourceGallery */
@@ -276,24 +303,30 @@ function MetadataBlock({ photo, gallery }: { photo: PhotoData; gallery?: Gallery
   );
 }
 
-/** Internal discovery links — always uses the photo's primary gallery */
-function DiscoveryLinks({ photo, gallery }: { photo: PhotoData; gallery?: GalleryContext | null }) {
+/** Internal discovery links — enriched with SEO keyword clusters */
+function DiscoveryLinks({ photo, gallery, clusters }: { photo: PhotoData; gallery?: GalleryContext | null; clusters?: PhotoSEOData['keyword_clusters'] }) {
   const links: { label: string; href: string }[] = [];
 
   if (gallery) {
     links.push({ label: `View full gallery`, href: `/gallery/${gallery.slug}` });
   }
-  if (photo.locationName) {
-    links.push({
-      label: `More from ${photo.locationName}`,
-      href: `/search?q=${encodeURIComponent(photo.locationName)}`,
-    });
+  if (photo.species_common_name && clusters?.species_kw?.length) {
+    const primarySpecies = clusters.species_kw[0];
+    if (primarySpecies) {
+      links.push({
+        label: `More ${primarySpecies} photos`,
+        href: `/species/${encodeURIComponent(primarySpecies.replace(/\s+/g, '-'))}`,
+      });
+    }
   }
-  if (photo.species_common_name) {
-    links.push({
-      label: `More photos of ${photo.species_common_name}`,
-      href: `/species/${encodeURIComponent(photo.species_common_name.toLowerCase().replace(/\s+/g, '-'))}`,
-    });
+  if (photo.locationName && clusters?.location_kw?.length) {
+    const primaryLoc = clusters.location_kw[0];
+    if (primaryLoc) {
+      links.push({
+        label: `Explore ${photo.locationName}`,
+        href: `/location/${encodeURIComponent(primaryLoc.replace(/\s+/g, '-'))}`,
+      });
+    }
   }
   if (photo.region) {
     links.push({
@@ -371,6 +404,9 @@ export default function PhotoPageClient({
   photo,
   relatedPhotos = [],
   galleryPhotos = [],
+  speciesPhotos = [],
+  locationPhotos = [],
+  alternateGalleryPhotos = [],
   gallery,
   sequence,
   sourceGallery,
@@ -555,7 +591,22 @@ export default function PhotoPageClient({
           />
         )}
 
-        {/* Main image */}
+        {/* Title — full width, above everything */}
+        <div className="mb-4">
+          {(() => {
+            const seoTitle = photo.metadata?.seo_title;
+            const h1Text = seoTitle || (displayTitle.isUgly
+              ? (photo.locationName || photo.species_common_name || (gallery ? `From ${gallery.name}` : 'Photo'))
+              : displayTitle.title);
+            return (
+              <h1 className={`font-bold text-gray-900 ${seoTitle || !displayTitle.isUgly ? 'text-3xl md:text-4xl' : 'text-2xl md:text-3xl'}`}>
+                {h1Text}
+              </h1>
+            );
+          })()}
+        </div>
+
+        {/* Main image — full width hero, below title */}
         <div className="mb-8">
           <div
             className="cursor-zoom-in rounded-xl overflow-hidden shadow-2xl"
@@ -574,29 +625,22 @@ export default function PhotoPageClient({
           <p className="text-center text-xs text-gray-400 mt-2">Click to view fullscreen</p>
         </div>
 
-        {/* Title */}
-        <div className="mb-6">
-          {displayTitle.isUgly ? (
-            <div>
-              {photo.locationName && (
-                <h1 className="text-2xl font-bold text-gray-900">{photo.locationName}</h1>
-              )}
-              {!photo.locationName && photo.species_common_name && (
-                <h1 className="text-2xl font-bold text-gray-900">{photo.species_common_name}</h1>
-              )}
-              {!photo.locationName && !photo.species_common_name && gallery && (
-                <h1 className="text-2xl font-bold text-gray-900">From {gallery.name}</h1>
-              )}
-            </div>
-          ) : (
-            <h1 className="text-3xl md:text-4xl font-bold text-gray-900">
-              {displayTitle.title}
-            </h1>
-          )}
+        {/* Viator affiliate block — between image and description */}
+        <div className="mb-8">
+          <PhotoViatorBlock
+            blurb={photo.metadata?.affiliate_blurb}
+            location={photo.locationName}
+            region={photo.region}
+            species={photo.species_common_name}
+            viatorDest={photo.metadata?.viator_dest}
+          />
+        </div>
 
-          {(photo.description_long || photo.description) && (
-            <p className="mt-3 text-gray-600 text-lg leading-relaxed max-w-2xl">
-              {photo.description_long || photo.description}
+        {/* Description — below image and Viator, above the two-column grid */}
+        <div className="mb-8">
+          {(photo.metadata?.meta_description || photo.description_long || photo.description) && (
+            <p className="text-gray-600 text-base leading-relaxed max-w-3xl">
+              {photo.metadata?.meta_description || photo.description_long || photo.description}
             </p>
           )}
         </div>
@@ -606,32 +650,36 @@ export default function PhotoPageClient({
           {/* Left column — main content */}
           <div className="lg:col-span-2 space-y-6">
 
-            {/* Metadata block — always shows primary gallery */}
+            {/* Keyword chips — use SEO clusters when available */}
+            {(() => {
+              const clusters = photo.metadata?.keyword_clusters;
+              const primaryKws = clusters?.primary_kw?.length
+                ? clusters.primary_kw.slice(0, 14)
+                : keywordsArray.slice(0, 14);
+              if (primaryKws.length === 0) return null;
+              return (
+                <div>
+                  <h2 className="text-xs font-semibold text-gray-400 mb-3 uppercase tracking-wider">Keywords</h2>
+                  <div className="flex flex-wrap gap-2">
+                    {primaryKws.map(keyword => (
+                      <Link
+                        key={keyword}
+                        href={`/search?q=${encodeURIComponent(keyword)}`}
+                        className="px-3 py-1.5 bg-white border border-gray-200 text-gray-600 rounded-full text-sm hover:bg-blue-600 hover:text-white hover:border-blue-600 transition-all"
+                      >
+                        {keyword}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              );
+            })()}
+
+            {/* Location / metadata row */}
             <MetadataBlock photo={photo} gallery={gallery} />
 
             {/* Discovery links */}
-            <DiscoveryLinks photo={photo} gallery={gallery} />
-
-            {/* Compact CTA */}
-            <CompactCTA photo={photo} />
-
-            {/* Keywords */}
-            {keywordsArray.length > 0 && (
-              <div>
-                <h2 className="text-xs font-semibold text-gray-400 mb-3 uppercase tracking-wider">Keywords</h2>
-                <div className="flex flex-wrap gap-2">
-                  {keywordsArray.map(keyword => (
-                    <Link
-                      key={keyword}
-                      href={`/search?q=${encodeURIComponent(keyword)}`}
-                      className="px-3 py-1.5 bg-white border border-gray-200 text-gray-600 rounded-full text-sm hover:bg-blue-600 hover:text-white hover:border-blue-600 transition-all"
-                    >
-                      {keyword}
-                    </Link>
-                  ))}
-                </div>
-              </div>
-            )}
+            <DiscoveryLinks photo={photo} gallery={gallery} clusters={photo.metadata?.keyword_clusters} />
 
             {/* Location map */}
             {hasLocation && (
@@ -684,6 +732,78 @@ export default function PhotoPageClient({
                   }))}
                   columns={4}
                 />
+              </div>
+            )}
+
+            {/* More of this species (page_links) */}
+            {speciesPhotos.length > 0 && (
+              <div>
+                <h2 className="text-xs font-semibold text-gray-400 mb-3 uppercase tracking-wider">
+                  More of {photo.species_common_name || 'this species'}
+                </h2>
+                <VirtualizedGallery
+                  photos={speciesPhotos.map(p => ({
+                    ...p,
+                    title: p.title || 'Photo',
+                    thumbUrl: p.smallUrl || p.thumbUrl,
+                  }))}
+                  columns={4}
+                />
+                {photo.species_common_name && (
+                  <div className="mt-3">
+                    <Link
+                      href={`/species/${encodeURIComponent(photo.species_common_name.toLowerCase().replace(/\s+/g, '-'))}`}
+                      className="text-sm text-blue-600 hover:underline"
+                    >
+                      View full {photo.species_common_name} species page &rarr;
+                    </Link>
+                  </div>
+                )}
+              </div>
+            )}
+
+            {/* Seen in this location (page_links) */}
+            {locationPhotos.length > 0 && (
+              <div>
+                <h2 className="text-xs font-semibold text-gray-400 mb-3 uppercase tracking-wider">
+                  Seen in {photo.locationName || 'this location'}
+                </h2>
+                <VirtualizedGallery
+                  photos={locationPhotos.map(p => ({
+                    ...p,
+                    title: p.title || 'Photo',
+                    thumbUrl: p.smallUrl || p.thumbUrl,
+                  }))}
+                  columns={4}
+                />
+              </div>
+            )}
+
+            {/* Also appears in (other galleries via gallery_photos) */}
+            {alternateGalleryPhotos.length > 0 && (
+              <div>
+                <h2 className="text-xs font-semibold text-gray-400 mb-3 uppercase tracking-wider">Also appears in</h2>
+                <VirtualizedGallery
+                  photos={alternateGalleryPhotos.map(p => ({
+                    ...p,
+                    title: p.title || 'Photo',
+                    thumbUrl: p.smallUrl || p.thumbUrl,
+                  }))}
+                  columns={4}
+                />
+                {allGalleries.length > 1 && (
+                  <div className="mt-3 flex flex-wrap gap-2">
+                    {allGalleries.filter(g => g.id !== gallery?.id).map(g => (
+                      <Link
+                        key={g.id}
+                        href={`/gallery/${g.slug}`}
+                        className="text-xs text-blue-600 hover:underline"
+                      >
+                        {g.name} gallery &rarr;
+                      </Link>
+                    ))}
+                  </div>
+                )}
               </div>
             )}
           </div>
