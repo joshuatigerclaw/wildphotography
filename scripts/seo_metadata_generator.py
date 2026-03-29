@@ -359,7 +359,7 @@ def process_batch(photo_ids, dry_run=False):
         SELECT
             p.id, p.slug, p.title, p.filename, p.description, p.description_long,
             p.keywords, p.location_name, p.region, p.country,
-            p.species_common_name, p.gallery_name, p.gallery_slug,
+            p.species_common_name, g.name as gallery_name, p.gallery_slug,
             p.seo_title, p.meta_description, p.og_title, p.og_description, p.og_image_url,
             p.medium_url, p.large_url, p.preview_url, p.small_url, p.thumb_url,
             p.ready_for_public_render, p.search_ready,
