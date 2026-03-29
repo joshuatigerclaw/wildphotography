@@ -50,17 +50,39 @@ export async function renderPhoto(slug: string, env: Env, url: URL): Promise<Res
   // Use clean display title
   const displayTitle = getDisplayTitle(photo);
   
-  // Description
+  // ── E: Description ───────────────────────────────────────────────────────────
   const descriptionHtml = photo.description_long || photo.description || '';
 
-  // GetYourGuide affiliate block — between image and description
-  const locationLabel = photo.locationName || photo.region || 'Costa Rica';
-  const gygAffiliateHtml = renderGYGWidget(locationLabel);
-  
-  // Keywords as clickable chips
+  // ── F: Location + Key Metadata ─────────────────────────────────────────────
+  // Build polished location hierarchy: LocationName, Region, Country
+  const locationParts = [
+    photo.locationName,
+    photo.region,
+    photo.country || 'Costa Rica',
+  ].filter(Boolean);
+
+  const locationHierarchyHtml = locationParts.length > 0
+    ? `<p class="photo-location-hierarchy">${locationParts.join(', ')}</p>`
+    : '';
+
+  // Key compact metadata (not location — that's above)
+  const compactMetaItems: string[] = [];
+  if (photo.width && photo.height) {
+    compactMetaItems.push(`<span class="meta-item"><strong>Dimensions:</strong> ${photo.width} × ${photo.height}</span>`);
+  }
+  if (photo.camera_model) {
+    compactMetaItems.push(`<span class="meta-item"><strong>Camera:</strong> ${photo.camera_model}</span>`);
+  }
+  if (photo.views_count) {
+    compactMetaItems.push(`<span class="meta-item"><strong>Views:</strong> ${photo.views_count.toLocaleString()}</span>`);
+  }
+  const compactMetadataHtml = compactMetaItems.length > 0
+    ? `<div class="compact-meta">${compactMetaItems.join(' · ')}</div>`
+    : '';
+
+  // ── G: Keywords ─────────────────────────────────────────────────────────────
   let keywordsHtml = '';
   if (photo.keywords) {
-    // Support both comma-separated and space-separated keyword strings
     const raw = photo.keywords.trim();
     const keywords = raw.includes(',')
       ? raw.split(',').map((k) => k.trim()).filter(Boolean)
@@ -68,52 +90,30 @@ export async function renderPhoto(slug: string, env: Env, url: URL): Promise<Res
     if (keywords.length > 0) {
       keywordsHtml = `
         <div class="keywords">
-          <span class="keywords-label">Keywords:</span>
           ${keywords.map(k => `<a href="/search?q=${encodeURIComponent(k)}" class="keyword-chip">${k}</a>`).join(' ')}
         </div>
       `;
     }
   }
-  
-  // Location map (conditional on GPS)
+
+  // ── H: Map ──────────────────────────────────────────────────────────────────
   let mapHtml = '';
   if (photo.lat && photo.lon && photo.lat !== 0 && photo.lon !== 0) {
     mapHtml = `
       <div class="location-section">
-        <h3>Location</h3>
         <div class="map-container">
-          <img src="https://maps.googleapis.com/maps/api/staticmap?center=${photo.lat},${photo.lon}&zoom=10&size=600x300&markers=${photo.lat},${photo.lon}&key=AIzaSyDlPfxC2naf0Ifc_tH4HTLQoKJZ60fi0fo" 
-               alt="Location map" 
+          <img src="https://maps.googleapis.com/maps/api/staticmap?center=${photo.lat},${photo.lon}&zoom=10&size=600x300&markers=${photo.lat},${photo.lon}&key=AIzaSyDlPfxC2naf0Ifc_tH4HTLQoKJZ60fi0fo"
+               alt="Photo location map"
                class="location-map"
                onerror="this.parentElement.style.display='none'">
         </div>
-        <p class="location-name">${photo.locationName || 'Costa Rica'}</p>
       </div>
     `;
   }
-  
-  // Metadata section
-  const metadataItems = [];
-  if (photo.width && photo.height) {
-    metadataItems.push(`<li><strong>Dimensions:</strong> ${photo.width} × ${photo.height}</li>`);
-  }
-  if (photo.camera_model) {
-    metadataItems.push(`<li><strong>Camera:</strong> ${photo.camera_model}</li>`);
-  }
-  if (photo.locationName) {
-    metadataItems.push(`<li><strong>Location:</strong> ${photo.locationName}</li>`);
-  }
-  if (photo.views_count) {
-    metadataItems.push(`<li><strong>Views:</strong> ${photo.views_count}</li>`);
-  }
-  
-  const metadataHtml = metadataItems.length > 0 ? `
-    <div class="metadata">
-      <ul>
-        ${metadataItems.join('')}
-      </ul>
-    </div>
-  ` : '';
+
+  // ── D: Affiliate block (above description, between image and description) ───
+  const locationLabel = photo.locationName || photo.region || 'Costa Rica';
+  const gygAffiliateHtml = renderGYGWidget(locationLabel);
   
   // Download button
   const downloadSection = `
@@ -159,6 +159,39 @@ export async function renderPhoto(slug: string, env: Env, url: URL): Promise<Res
     </div>
   `;
   
+  // ── J: Discovery modules ──────────────────────────────────────────────────
+  let discoveryHtml = '';
+  const photoId = photo.id;
+  const galleryId = photo.gallery_id;
+  const gallerySlug = photo.gallery_slug || '';
+
+  if (galleryId) {
+    discoveryHtml += `
+      <section class="discovery-section">
+        <h2 class="discovery-heading">More from this gallery</h2>
+        <div class="related-photos-grid" id="gallery-related-photos"></div>
+      </section>
+    `;
+  }
+
+  if (photo.animal_group || photo.species_common_name) {
+    discoveryHtml += `
+      <section class="discovery-section">
+        <h2 class="discovery-heading">Related species</h2>
+        <div class="related-species-grid" id="related-species-grid"></div>
+      </section>
+    `;
+  }
+
+  if (photo.locationName) {
+    discoveryHtml += `
+      <section class="discovery-section">
+        <h2 class="discovery-heading">More from ${photo.locationName}</h2>
+        <div class="related-location-grid" id="related-location-grid"></div>
+      </section>
+    `;
+  }
+
   const content = `
     <a href="/" class="back-link">← Back to Galleries</a>
     
@@ -173,15 +206,18 @@ export async function renderPhoto(slug: string, env: Env, url: URL): Promise<Res
       
       ${gygAffiliateHtml}
       
-      ${descriptionHtml ? `<p class="photo-description">${descriptionHtml}</p>` : ''}
+      ${descriptionHtml ? `<div class="photo-description-block"><p class="photo-description">${descriptionHtml}</p></div>` : ''}
+      
+      ${locationHierarchyHtml}
+      ${compactMetadataHtml}
       
       ${keywordsHtml}
-      
-      ${metadataHtml}
       
       ${mapHtml}
       
       ${downloadSection}
+      
+      ${discoveryHtml}
     </article>
   `;
   

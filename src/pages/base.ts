@@ -121,16 +121,69 @@ footer { background: #1a1a1a; color: #999; padding: 3rem 2rem; margin-top: 4rem;
 /* Photo Detail Page */
 .photo-detail { max-width: 1100px; margin: 0 auto; padding: 1.5rem 1rem; }
 .photo-header { margin-bottom: 1.5rem; }
-.photo-header h1 { font-size: 2rem; color: #1a365d; margin-bottom: 0.5rem; }
-.photo-description { font-size: 1.05rem; color: #444; line-height: 1.7; margin-bottom: 1rem; }
-.photo-image { width: 100%; margin-bottom: 1.5rem; text-align: center; }
-.photo-image img.main-photo { max-width: 100%; height: auto; display: inline-block; border-radius: 8px; }
+.photo-header h1 { font-size: 2rem; color: #1a365d; margin-bottom: 0; }
+.photo-image { width: 100%; margin-bottom: 2rem; text-align: center; }
+.photo-image img.main-photo { max-width: 100%; height: auto; display: inline-block; border-radius: 12px; box-shadow: 0 4px 24px rgba(0,0,0,0.12); }
 
-/* Keywords */
-.keywords { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; margin-bottom: 1.5rem; padding: 0.75rem; background: #f7fafc; border-radius: 8px; }
-.keywords-label { font-weight: 600; color: #4a5568; margin-right: 0.25rem; white-space: nowrap; }
-.keyword-chip { display: inline-block; padding: 0.25rem 0.75rem; background: #e2e8f0; color: #2d3748; border-radius: 999px; font-size: 0.85rem; text-decoration: none; transition: background 0.2s; }
-.keyword-chip:hover { background: #cbd5e0; }
+/* E: Description block — below image and affiliate, above location */
+.photo-description-block { margin-bottom: 1.5rem; }
+.photo-description { font-size: 1.05rem; color: #3d4852; line-height: 1.75; max-width: 680px; }
+
+/* F: Location hierarchy — prominent, above metadata */
+.photo-location-hierarchy {
+  font-size: 0.95rem;
+  color: #4a5568;
+  margin-bottom: 0.75rem;
+  padding: 0.6rem 1rem;
+  background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+  border-left: 3px solid #2c7a7b;
+  border-radius: 0 6px 6px 0;
+}
+.photo-location-hierarchy strong { color: #2d3748; }
+
+/* F: Compact metadata — inline, visually lighter than description */
+.compact-meta {
+  font-size: 0.85rem;
+  color: #718096;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+}
+.compact-meta .meta-item strong { color: #4a5568; }
+
+/* Keywords — below metadata, above map */
+.keywords {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+.keywords-label {
+  font-weight: 600;
+  color: #4a5568;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-right: 0.25rem;
+  white-space: nowrap;
+}
+.keyword-chip {
+  display: inline-block;
+  padding: 0.2rem 0.65rem;
+  background: #e2e8f0;
+  color: #2d3748;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  text-decoration: none;
+  transition: background 0.2s;
+  border: 1px solid transparent;
+}
+.keyword-chip:hover {
+  background: #cbd5e0;
+  border-color: #a0aec0;
+}
 
 /* Metadata */
 .metadata { background: #f7fafc; padding: 1rem; border-radius: 8px; margin-bottom: 1.5rem; }
@@ -138,12 +191,27 @@ footer { background: #1a1a1a; color: #999; padding: 3rem 2rem; margin-top: 4rem;
 .metadata li { padding: 0.3rem 0; font-size: 0.9rem; color: #4a5568; }
 .metadata strong { color: #2d3748; }
 
-/* Location */
-.location-section { margin-bottom: 1.5rem; }
-.location-section h3 { font-size: 1.2rem; color: #1a365d; margin-bottom: 0.5rem; }
-.map-container { border-radius: 8px; overflow: hidden; margin-bottom: 0.5rem; }
+/* Location / Map */
+.location-section { margin-bottom: 2rem; }
+.map-container { border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
 .location-map { width: 100%; height: auto; display: block; }
-.location-name { font-size: 0.9rem; color: #718096; }
+
+/* Discovery modules */
+.discovery-section { margin-top: 2.5rem; padding-top: 2rem; border-top: 2px solid #e2e8f0; }
+.discovery-heading {
+  font-size: 1.25rem;
+  color: #1a365d;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+.related-photos-grid,
+.related-species-grid,
+.related-location-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
 
 /* Downloads */
 .downloads { margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid #e2e8f0; }
@@ -159,13 +227,20 @@ footer { background: #1a1a1a; color: #999; padding: 3rem 2rem; margin-top: 4rem;
   .nav-main a { font-size: 0.85rem; }
   .search-form input { width: 140px; }
   .photo-detail { padding: 1rem 0.75rem; }
-  .photo-header h1 { font-size: 1.4rem; }
+  .photo-header h1 { font-size: 1.5rem; }
   .photo-description { font-size: 0.95rem; }
-  .keywords { padding: 0.5rem; gap: 0.35rem; }
-  .keywords-label { font-size: 0.8rem; }
-  .keyword-chip { font-size: 0.78rem; padding: 0.2rem 0.6rem; }
-  .photo-image img.main-photo { width: 100%; border-radius: 4px; }
-  .metadata { padding: 0.75rem; }
+  .photo-location-hierarchy { font-size: 0.85rem; padding: 0.5rem 0.75rem; }
+  .compact-meta { font-size: 0.8rem; }
+  .keywords { gap: 0.3rem; }
+  .keywords-label { font-size: 0.75rem; }
+  .keyword-chip { font-size: 0.75rem; padding: 0.15rem 0.5rem; }
+  .photo-image img.main-photo { width: 100%; border-radius: 6px; }
+  .related-photos-grid,
+  .related-species-grid,
+  .related-location-grid {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 0.75rem;
+  }
 }
 </style>
 ${jsonLdTag}
