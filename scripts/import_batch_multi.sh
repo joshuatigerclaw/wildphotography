@@ -54,6 +54,8 @@ PHOTOS_DERIVATIVES_GENERATED=0
 PHOTOS_FAILED=0
 SPELLING_CORRECTIONS=0
 SPELLING_EXAMPLES=()
+SEO_GENERATED=0
+SEO_SKIPPED_HIGH_QUALITY=0
 NORMALIZED_LOCATIONS=0
 NORMALIZED_SPECIES=0
 NORMALIZED_KEYWORDS=0
@@ -563,6 +565,41 @@ except: pass
     echo ""
 }
 
+# ── Step 9: Generate SEO metadata for newly imported photos ────────────────────
+run_seo_generator() {
+    echo "=== STEP 9: Generating SEO metadata ==="
+
+    # Collect IDs of photos just imported (status=active, state=imported, SEO=null)
+    local seo_pending_ids
+    seo_pending_ids=$(psql -h "$DB_HOST" -U "$DB_USER" -d "$DB_NAME" -t -c "
+        SELECT id FROM photos
+        WHERE status = 'active'
+          AND state = 'imported'
+          AND derivatives_complete = true
+          AND ready_for_public_render = true
+          AND (seo_title IS NULL OR seo_title = '')
+        LIMIT 200;
+    " 2>/dev/null | tr -d ' ' | grep -v '^$' || echo "")
+
+    if [[ -z "$seo_pending_ids" ]]; then
+        echo "  No photos need SEO generation"
+        return
+    fi
+
+    local id_count
+    id_count=$(echo "$seo_pending_ids" | grep -c '^' || echo 0)
+    echo "  Generating SEO metadata for $id_count photos..."
+
+    # Call Python SEO generator
+    local seo_output
+    seo_output=$(python3 "${SCRIPT_DIR}/seo_metadata_generator.py" "$seo_pending_ids" 2>&1) || {
+        echo "  SEO generator error: $seo_output"
+        return
+    }
+
+    echo "$seo_output" | head -20
+}
+
 # ── Step 8: Set readiness flags for complete records ─────────────────────────
 set_readiness_flags() {
     echo "=== STEP 8: Setting readiness flags ==="
@@ -705,6 +742,9 @@ main() {
 
     # Steps 2-8: Process photos
     process_photos
+
+    # Step 9: Generate SEO metadata (before marking search_ready)
+    run_seo_generator
 
     # Step 8: Set readiness flags
     set_readiness_flags
