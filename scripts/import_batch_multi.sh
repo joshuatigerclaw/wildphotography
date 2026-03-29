@@ -14,6 +14,7 @@
 set -euo pipefail
 
 # ── Configuration ─────────────────────────────────────────────────────────────────
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 QUEUE_FILE="${QUEUE_FILE:-/Users/joshuatenbrink/.openclaw/workspace/wildphotography/inventory/batch_clean_import_queue.json}"
 QUEUE_ITEMS_FILE="/tmp/pending_items_batch_$$.jsonl"
 OUTPUT_DIR="/Users/joshuatenbrink/.openclaw/workspace/wildphotography/storage/derivatives"
@@ -45,10 +46,18 @@ DIRS_CONFLICT_AVOIDED=0
 DIRS_MANUAL_REVIEW=0
 PHOTOS_PROCESSED=0
 PHOTOS_DUPLICATE_HASH=0
+PHOTOS_PERCEPTUAL_DUPLICATE=0
+PHOTOS_VARIANT_FLAGGED=0
 PHOTOS_FILENAME_COLLISION=0
 PHOTOS_ORIGINALS_UPLOADED=0
 PHOTOS_DERIVATIVES_GENERATED=0
 PHOTOS_FAILED=0
+SPELLING_CORRECTIONS=0
+SPELLING_EXAMPLES=()
+NORMALIZED_LOCATIONS=0
+NORMALIZED_SPECIES=0
+NORMALIZED_KEYWORDS=0
+AMBIGUOUS_VARIANTS=0
 FAILED_PATHS=()
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -290,12 +299,84 @@ process_photos() {
     local batch_start_ts
     batch_start_ts=$(date -u +%Y%m%dT%H%M%S)
 
-    # Pre-fetch all existing content hashes for this batch (step 2: hash dedup)
+    # ── Step 2: Multi-layer duplicate detection + spelling normalization ──
+    echo "  Running multi-layer dedup and spelling normalization..."
+    local dedup_queue_file="/tmp/dedup_queue_$$.json"
+    cp "$QUEUE_ITEMS_FILE" "$dedup_queue_file" 2>/dev/null || cp /dev/null "$dedup_queue_file"
+
+    local dedup_output="/tmp/dedup_results_$$.json"
+    python3 "${SCRIPT_DIR}/import_dedup_normalize.py" "$dedup_queue_file" > "$dedup_output" 2>&1 || true
+
+    # Load decisions into associative array (bash workaround)
+    # Read skip decisions: action=skip_duplicate → increment skip counters
+    local skipped_exact=0 skipped_perceptual=0 flagged_variant=0
+    local spelling_corrections=0 spelling_examples=()
+
+    if [[ -f "$dedup_output" ]]; then
+        local report_section
+        report_section=$(python3 -c "
+import json, sys
+try:
+    with open('$dedup_output') as f:
+        d = json.load(f)
+    r = d.get('report', {})
+    print('exact_hash', r.get('exact_hash_duplicates_skipped', 0))
+    print('perceptual', r.get('perceptual_duplicates_skipped', 0))
+    print('variants', r.get('likely_variants_flagged', 0))
+    print('spelling', r.get('spelling_corrections_applied', 0))
+    examples = r.get('spelling_corrections_examples', [])
+    for ex in examples[:5]:
+        print('SPELLING:', ex)
+    # Write decisions to file
+    with open('/tmp/dedup_decisions.json', 'w') as f2:
+        json.dump(d.get('decisions', {}), f2)
+except Exception as e:
+    print('ERROR:', e, file=sys.stderr)
+    print('no_decisions')
+" 2>/dev/null)
+
+        while IFS= read -r line; do
+            case "$line" in
+                exact_hash*) skipped_exact=$(echo "$line" | awk '{print $2}') ;;
+                perceptual*) skipped_perceptual=$(echo "$line" | awk '{print $2}') ;;
+                variants*) flagged_variant=$(echo "$line" | awk '{print $2}') ;;
+                spelling*) spelling_corrections=$(echo "$line" | awk '{print $2}') ;;
+                SPELLING:*) spelling_examples+=("${line#SPELLING: }") ;;
+            esac
+        done <<< "$report_section"
+
+        PHOTOS_DUPLICATE_HASH=$((skipped_exact + skipped_perceptual))
+        PHOTOS_VARIANT_FLAGGED=${flagged_variant:-0}
+        SPELLING_CORRECTIONS=${spelling_corrections:-0}
+        echo "  Multi-layer dedup: ${skipped_exact} exact hash, ${skipped_perceptual} perceptual, ${flagged_variant:-0} variants"
+        echo "  Spelling normalization: ${spelling_corrections:-0} corrections applied"
+        for ex in "${spelling_examples[@]:-}"; do
+            echo "    - $ex"
+        done
+    fi
+
+    # Load skip decisions into a lookup file for the photo loop
+    local skip_file="/tmp/dedup_skip_ids_$$.txt"
+    : > "$skip_file"
+    if [[ -f "/tmp/dedup_decisions.json" ]]; then
+        python3 -c "
+import json
+try:
+    with open('/tmp/dedup_decisions.json') as f:
+        d = json.load(f)
+    for item_id, dec in d.items():
+        action = dec.get('action', '')
+        if 'skip' in action or 'variant' in action:
+            print(item_id, dec.get('reason', ''), dec.get('canonical_id', ''), sep='|')
+except: pass
+" > "$skip_file" 2>/dev/null || true
+    fi
+
+    # Also pre-fetch exact hash set for fast lookup in loop
     local hash_batch_file="/tmp/hash_batch_$$.txt"
     jq -r '.content_hash' "$QUEUE_ITEMS_FILE" 2>/dev/null > "$hash_batch_file" || true
     local hash_count
     hash_count=$(wc -l < "$hash_batch_file" 2>/dev/null || echo 0)
-
     if [[ "$hash_count" -gt 0 ]]; then
         local hashes_list
         hashes_list=$(paste -sd, "$hash_batch_file" 2>/dev/null | tr ',' "','")
@@ -304,7 +385,7 @@ process_photos() {
             | tr -d ' ' | grep -v '^$' || echo "")
         echo "  Pre-fetched ${#EXISTING_HASHES} existing hashes from DB"
     fi
-    rm -f "$hash_batch_file"
+    rm -f "$hash_batch_file" "$dedup_queue_file"
 
     while IFS= read -r item && [[ $count -lt $batch_limit ]]; do
         count=$((count + 1))
@@ -510,18 +591,37 @@ print_report() {
     echo "══════════════════════════════════════════════════════════════"
     echo ""
     echo "  DIRECTORY DEDUPLICATION:"
-    echo "    directories_processed:            $DIRS_PROCESSED"
-    echo "    duplicate_directories_skipped:    $DIRS_DUPLICATE_SKIPPED"
-    echo "    gallery_slug_conflicts_avoided:   $DIRS_CONFLICT_AVOIDED"
-    echo "    directories_flagged_manual_review: $DIRS_MANUAL_REVIEW"
+    echo "    directories_processed:             $DIRS_PROCESSED"
+    echo "    duplicate_directories_skipped:     $DIRS_DUPLICATE_SKIPPED"
+    echo "    gallery_slug_conflicts_avoided:    $DIRS_CONFLICT_AVOIDED"
+    echo "    directories_flagged_manual_review:  $DIRS_MANUAL_REVIEW"
+    echo ""
+    echo "  DUPLICATE DETECTION:"
+    echo "    exact_hash_duplicates_skipped:    $PHOTOS_DUPLICATE_HASH"
+    echo "    perceptual_duplicates_skipped:    $PHOTOS_PERCEPTUAL_DUPLICATE"
+    echo "    likely_variants_flagged:           $PHOTOS_VARIANT_FLAGGED"
+    echo "    canonical_records_reused:          $PHOTOS_ORIGINALS_UPLOADED"
+    echo ""
+    echo "  SPELLING / NORMALIZATION:"
+    echo "    spelling_corrections_applied:      ${SPELLING_CORRECTIONS:-0}"
+    echo "    normalized_locations_count:        ${NORMALIZED_LOCATIONS:-0}"
+    echo "    normalized_species_count:         ${NORMALIZED_SPECIES:-0}"
+    echo "    normalized_keywords_count:          ${NORMALIZED_KEYWORDS:-0}"
+    echo "    ambiguous_text_variants_flagged:   ${AMBIGUOUS_VARIANTS:-0}"
+    if [[ \${#SPELLING_EXAMPLES[@]} -gt 0 ]]; then
+        echo "    Sample corrections:"
+        for ex in "\${SPELLING_EXAMPLES[@]}"; do
+            echo "      - $ex"
+        done
+    fi
     echo ""
     echo "  FILE PROCESSING:"
-    echo "    photos_processed:                  $PHOTOS_PROCESSED"
+    echo "    photos_processed:                   $PHOTOS_PROCESSED"
     echo "    duplicates_skipped_by_hash:       $PHOTOS_DUPLICATE_HASH"
-    echo "    filename_collisions_renamed:      $PHOTOS_FILENAME_COLLISION"
-    echo "    originals_uploaded:               $PHOTOS_ORIGINALS_UPLOADED"
-    echo "    derivatives_generated:            $PHOTOS_DERIVATIVES_GENERATED"
-    echo "    failed_files_count:               $PHOTOS_FAILED"
+    echo "    filename_collisions_renamed:       $PHOTOS_FILENAME_COLLISION"
+    echo "    originals_uploaded:                $PHOTOS_ORIGINALS_UPLOADED"
+    echo "    derivatives_generated:             $PHOTOS_DERIVATIVES_GENERATED"
+    echo "    failed_files_count:                $PHOTOS_FAILED"
     echo ""
     if [[ ${#FAILED_PATHS[@]} -gt 0 ]]; then
         echo "  FAILED FILE PATHS:"
@@ -568,6 +668,15 @@ print_report() {
   "duplicate_directories_skipped": $DIRS_DUPLICATE_SKIPPED,
   "gallery_slug_conflicts_avoided": $DIRS_CONFLICT_AVOIDED,
   "directories_flagged_manual_review": $DIRS_MANUAL_REVIEW,
+  "exact_hash_duplicates_skipped": $PHOTOS_DUPLICATE_HASH,
+  "perceptual_duplicates_skipped": $PHOTOS_PERCEPTUAL_DUPLICATE,
+  "likely_variants_flagged": $PHOTOS_VARIANT_FLAGGED,
+  "canonical_records_reused": $PHOTOS_ORIGINALS_UPLOADED,
+  "spelling_corrections_applied": ${SPELLING_CORRECTIONS:-0},
+  "normalized_locations_count": ${NORMALIZED_LOCATIONS:-0},
+  "normalized_species_count": ${NORMALIZED_SPECIES:-0},
+  "normalized_keywords_count": ${NORMALIZED_KEYWORDS:-0},
+  "ambiguous_text_variants_flagged": ${AMBIGUOUS_VARIANTS:-0},
   "photos_processed": $PHOTOS_PROCESSED,
   "duplicates_skipped_by_hash": $PHOTOS_DUPLICATE_HASH,
   "filename_collisions_renamed": $PHOTOS_FILENAME_COLLISION,
