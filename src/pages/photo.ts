@@ -48,7 +48,10 @@ export async function renderPhoto(slug: string, env: Env, url: URL): Promise<Res
   }
   
   // Use clean display title
-  const displayTitle = getDisplayTitle(photo);
+  // Prefer DB seo_title; fall back to displayTitle generator
+  const displayTitle = photo.seo_title
+    ? { title: photo.seo_title, isUgly: false }
+    : getDisplayTitle(photo);
   
   // ── E: Description ───────────────────────────────────────────────────────────
   const descriptionHtml = photo.description_long || photo.description || '';
