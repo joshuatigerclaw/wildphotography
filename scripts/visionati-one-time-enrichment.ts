@@ -109,14 +109,14 @@ async function getCandidates(client: Client): Promise<CandidateRow[]> {
         p.source_path,
         p.slug,
         COALESCE(
-          -- Prefer hash-based paths (confirmed accessible on Cloudflare R2)
-          CASE WHEN p.thumb_url ~ '/derivatives/[0-9]+/[^/]+$' THEN p.thumb_url END,
-          CASE WHEN p.medium_url ~ '/derivatives/[0-9]+/[^/]+$' THEN p.medium_url END,
-          CASE WHEN p.small_url ~ '/derivatives/[0-9]+/[^/]+$' THEN p.small_url END,
-          -- Fallback: web-served paths
+          -- Accessible: /derivatives/ paths that are NOT the dead subdirectories
+          CASE WHEN p.thumb_url ~ '/derivatives/' AND p.thumb_url !~ '/thumbs/' AND p.thumb_url !~ '/previews/' AND p.thumb_url !~ '/mediums/' AND p.thumb_url !~ '/smalls/' THEN p.thumb_url END,
+          CASE WHEN p.medium_url ~ '/derivatives/' AND p.medium_url !~ '/thumbs/' AND p.medium_url !~ '/previews/' AND p.medium_url !~ '/mediums/' AND p.medium_url !~ '/smalls/' THEN p.medium_url END,
+          CASE WHEN p.small_url ~ '/derivatives/' AND p.small_url !~ '/thumbs/' AND p.small_url !~ '/previews/' AND p.small_url !~ '/mediums/' AND p.small_url !~ '/smalls/' THEN p.small_url END,
+          -- /web/ paths (known accessible)
           CASE WHEN p.thumb_url ~ '/web/' THEN p.thumb_url END,
           CASE WHEN p.medium_url ~ '/web/' THEN p.medium_url END,
-          -- Last resort: preview_url (may be stale /previews/ path)
+          -- preview_url as last resort
           p.preview_url
         ) AS preview_url,
         ROW_NUMBER() OVER (

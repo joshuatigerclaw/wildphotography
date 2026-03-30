@@ -1,12 +1,12 @@
 {
-  "ran_at": "2026-03-29T23:04:25.028271+00:00",
+  "ran_at": "2026-03-30T00:37:55.609401+00:00",
   "metrics": {
     "total_photos": 23077,
     "derivatives_complete": 23077,
     "ready_for_public_render": 23077,
-    "search_ready": 23077,
+    "search_ready": 1162,
     "typesense_sync_count": 22022,
-    "stale_drift": 1055,
+    "stale_drift": 0,
     "repair_backlog": 0,
     "validation_queue": 0,
     "true_orphans": 0,
@@ -21,12 +21,10 @@
   },
   "results": {
     "wild_typesense_reconcile": {
-      "triggered": true,
+      "triggered": false,
       "metric": "stale_drift",
-      "value": 1055,
-      "threshold": 25,
-      "ok": false,
-      "error": "[plugins] plugins.allow is empty; discovered non-bundled plugins may auto-load: lossless-claw (/Users/joshuatenbrink/.openclaw/extensions/lossless-claw/index.ts). Set plugins.allow to explicit trusted ids.\nerror: unknown command 'lobster'\n"
+      "value": 0,
+      "threshold": 25
     },
     "wild_repair_incomplete_legacy": {
       "triggered": false,
@@ -59,20 +57,10 @@
       "metric": "autoscale_target_workers",
       "value": 0,
       "threshold": 0
-    },
-    "wild_typesense_reconcile_no_llm": {
-      "triggered": true,
-      "script": true,
-      "metric": "stale_drift",
-      "value": 1055,
-      "ok": true,
-      "error": ""
     }
   },
   "triggered": [
-    "wild_typesense_reconcile",
-    "wild_gallery_cover_assignment",
-    "wild_typesense_reconcile_no_llm"
+    "wild_gallery_cover_assignment"
   ],
   "status": "ok",
   "dry_run": false
