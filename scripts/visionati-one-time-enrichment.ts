@@ -71,7 +71,7 @@ type FailedItem = {
 // ── Config ─────────────────────────────────────────────────────────────────
 
 const LIMIT_PER_CATEGORY =
-  Number(process.env["VISIONATI_RUN_LIMIT_PER_CATEGORY"] ?? "15");
+  Number(process.env["VISIONATI_RUN_LIMIT_PER_CATEGORY"] ?? "150");
 const MAX_RETRIES = Number(process.env["VISIONATI_MAX_RETRIES"] ?? "1");
 const DESCRIPTION_VERSION =
   process.env["VISIONATI_DESCRIPTION_VERSION"] ??
@@ -108,7 +108,17 @@ async function getCandidates(client: Client): Promise<CandidateRow[]> {
         p.date_taken::text AS capture_date,
         p.source_path,
         p.slug,
-        COALESCE(p.thumb_url, p.medium_url, p.small_url, p.preview_url) AS preview_url,
+        COALESCE(
+          -- Prefer hash-based paths (confirmed accessible on Cloudflare R2)
+          CASE WHEN p.thumb_url ~ '/derivatives/[0-9]+/[^/]+$' THEN p.thumb_url END,
+          CASE WHEN p.medium_url ~ '/derivatives/[0-9]+/[^/]+$' THEN p.medium_url END,
+          CASE WHEN p.small_url ~ '/derivatives/[0-9]+/[^/]+$' THEN p.small_url END,
+          -- Fallback: web-served paths
+          CASE WHEN p.thumb_url ~ '/web/' THEN p.thumb_url END,
+          CASE WHEN p.medium_url ~ '/web/' THEN p.medium_url END,
+          -- Last resort: preview_url (may be stale /previews/ path)
+          p.preview_url
+        ) AS preview_url,
         ROW_NUMBER() OVER (
           PARTITION BY COALESCE(g.slug, 'uncategorized')
           ORDER BY p.id ASC
