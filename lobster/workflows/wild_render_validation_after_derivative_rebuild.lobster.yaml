@@ -1,0 +1,69 @@
+name: wild_render_validation_after_derivative_rebuild
+description: >
+  HTTP 200 validation of public render URLs after a derivative rebuild.
+  Checks that recently rebuilt photos have accessible derivative URLs (thumb/small/medium/large)
+  and that key site pages (homepage, galleries, search, gallery detail, photo detail) render without broken images.
+  Parses the JSON summary from render-validation.js and emits structured results.
+
+inputs: {}
+
+steps:
+  - id: run_validation
+    name: run_validation
+    description: >
+      Execute the render-validation.js script against the WildPhotography site.
+      Captures stdout, parses the JSON block at the end, and extracts derivative URL
+      and page rendering results.
+    tool: agent_run
+    args:
+      agent: render_validation_runner
+      prompt: |
+        Execute the following shell command and return the COMPLETE stdout output:
+        ```
+        cd /Users/joshuatenbrink/.openclaw/workspace/wildphotography && node scripts/render-validation.js 2>&1
+        ```
+
+        After the command completes:
+        1. Return the full stdout text
+        2. Parse the JSON block at the end (after "--- JSON OUTPUT ---") and extract:
+           - derivativeUrls.passed
+           - derivativeUrls.failed
+           - pageRendering.passed
+           - pageRendering.failed
+           - totalPassed
+           - totalFailed
+           - allOk
+           - failures (if any, up to 5 photo failures with photoId, slug, failedSizes)
+        3. Extract the "=== SUMMARY ===" lines and any failure details from the console output
+
+        Return as structured JSON:
+        {
+          "raw_output": "...",
+          "derivativeUrls_passed": int,
+          "derivativeUrls_failed": int,
+          "pageRendering_passed": int,
+          "pageRendering_failed": int,
+          "totalPassed": int,
+          "totalFailed": int,
+          "allOk": bool,
+          "photo_failures": [{photoId, slug, failedSizes: [{size, url, status, error}]}, ...],
+          "page_failures": [{name, url, status, error}, ...]
+        }
+
+  - id: summary
+    name: summary
+    description: Emit a concise run summary with exact counts and any failures detected
+    tool: result_emit
+    args:
+      fields:
+        timestamp: "{{ steps.run_validation.timestamp }}"
+        derivativeUrls_passed: "{{ steps.run_validation.derivativeUrls_passed }}"
+        derivativeUrls_failed: "{{ steps.run_validation.derivativeUrls_failed }}"
+        pageRendering_passed: "{{ steps.run_validation.pageRendering_passed }}"
+        pageRendering_failed: "{{ steps.run_validation.pageRendering_failed }}"
+        totalPassed: "{{ steps.run_validation.totalPassed }}"
+        totalFailed: "{{ steps.run_validation.totalFailed }}"
+        allOk: "{{ steps.run_validation.allOk }}"
+        photo_failures: "{{ steps.run_validation.photo_failures }}"
+        page_failures: "{{ steps.run_validation.page_failures }}"
+        raw_output: "{{ steps.run_validation.raw_output }}"

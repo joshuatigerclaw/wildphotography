@@ -197,15 +197,13 @@ export default function GalleryLightboxModal({
     current?.species_common_name && { label: 'Species', value: current.species_common_name },
   ].filter(Boolean) as { label: string; value: string; href?: string }[];
 
-  const hasTravel = !!(current?.locationName || current?.region || current?.species_common_name);
-
   const ctaText = current?.locationName
     ? `Explore tours near ${current.locationName}`
     : current?.species_common_name
     ? 'See wildlife experiences nearby'
     : current?.region
     ? `Explore tours in ${current.region}`
-    : null;
+    : 'Explore Costa Rica nature tours';
 
   const ctaQuery = encodeURIComponent(
     (current?.locationName || current?.region || 'Costa Rica') + ' tours'
@@ -217,7 +215,7 @@ export default function GalleryLightboxModal({
 
   return (
     <div
-      className="fixed inset-0 z-50 flex flex-col bg-black/95"
+      className="fixed inset-0 z-50 flex flex-col bg-black/95 overflow-hidden"
       role="dialog"
       aria-modal="true"
       aria-label="Gallery photo viewer"
@@ -237,6 +235,54 @@ export default function GalleryLightboxModal({
         >
           <IconClose />
         </button>
+      </div>
+
+      {/* ── Description panel — stays at top, above the image ── */}
+      <div className="shrink-0 border-b border-white/10 px-4 pb-3 pt-1 max-w-3xl mx-auto w-full">
+
+        {/* Title */}
+        {showTitle && (
+          <p className="text-white font-semibold text-sm sm:text-base mb-1.5 truncate">
+            {current.title}
+          </p>
+        )}
+
+        {/* Metadata row */}
+        {metaItems.length > 0 && (
+          <dl className="flex flex-wrap gap-x-5 gap-y-1 text-sm mb-2">
+            {metaItems.map(({ label, value, href }) => (
+              <div key={label} className="flex items-baseline gap-1.5">
+                <dt className="text-white/40 text-xs uppercase tracking-wider shrink-0">{label}</dt>
+                <dd className="text-white/80 font-medium truncate">
+                  {href ? (
+                    <a
+                      href={href}
+                      className="hover:text-white hover:underline transition-colors"
+                      onClick={e => e.stopPropagation()}
+                    >
+                      {value}
+                    </a>
+                  ) : (
+                    value
+                  )}
+</dd>
+              </div>
+            ))}
+          </dl>
+        )}
+
+        {/* Affiliate CTA — always shown */}
+        {ctaText && (
+          <a
+            href={`https://www.getyourguide.com/s/?q=${ctaQuery}&partner_id=WILD`}
+            target="_blank"
+            rel="noopener sponsored"
+            className="text-xs text-white/45 hover:text-white/75 border border-white/15 rounded-full px-3 py-1 transition-colors inline-block"
+            onClick={e => e.stopPropagation()}
+          >
+            {ctaText}
+          </a>
+        )}
       </div>
 
       {/* ── Image area ── */}
@@ -291,41 +337,8 @@ export default function GalleryLightboxModal({
         </button>
       </div>
 
-      {/* ── Bottom panel: title, metadata, actions ── */}
-      <div className="shrink-0 border-t border-white/10 px-4 pb-5 pt-3 max-w-3xl mx-auto w-full">
-
-        {/* Title */}
-        {showTitle && (
-          <p className="text-white font-semibold text-sm sm:text-base mb-2 truncate">
-            {current.title}
-          </p>
-        )}
-
-        {/* Metadata row */}
-        {metaItems.length > 0 && (
-          <dl className="flex flex-wrap gap-x-5 gap-y-1 text-sm mb-3">
-            {metaItems.map(({ label, value, href }) => (
-              <div key={label} className="flex items-baseline gap-1.5">
-                <dt className="text-white/40 text-xs uppercase tracking-wider shrink-0">{label}</dt>
-                <dd className="text-white/80 font-medium truncate">
-                  {href ? (
-                    <a
-                      href={href}
-                      className="hover:text-white hover:underline transition-colors"
-                      onClick={e => e.stopPropagation()}
-                    >
-                      {value}
-                    </a>
-                  ) : (
-                    value
-                  )}
-                </dd>
-              </div>
-            ))}
-          </dl>
-        )}
-
-        {/* Actions */}
+      {/* ── Bottom action bar: view details + copy link ── */}
+      <div className="shrink-0 border-t border-white/10 px-4 py-3 max-w-3xl mx-auto w-full">
         <div className="flex flex-wrap items-center gap-4">
           {/* View full photo page */}
           <Link
@@ -346,19 +359,6 @@ export default function GalleryLightboxModal({
             <IconLink />
             {copied ? 'Copied!' : 'Copy link'}
           </button>
-
-          {/* Compact contextual CTA — suppressed when no travel context */}
-          {hasTravel && ctaText && (
-            <a
-              href={`https://www.getyourguide.com/s/?q=${ctaQuery}&partner_id=WILD`}
-              target="_blank"
-              rel="noopener sponsored"
-              className="text-xs text-white/45 hover:text-white/75 border border-white/15 rounded-full px-3 py-1 transition-colors"
-              onClick={e => e.stopPropagation()}
-            >
-              {ctaText}
-            </a>
-          )}
         </div>
       </div>
     </div>

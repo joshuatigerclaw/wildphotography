@@ -1,29 +1,29 @@
 {
   "workflow": "wild_render_validation_after_derivative_rebuild",
-  "run_time": "2026-03-25T04:46:59.375646Z",
+  "run_time": "2026-03-27T12:09:45.930741Z",
   "validation_summary": {
-    "total_photos": 20721,
-    "derivatives_complete": 20720,
-    "render_ready": 19907,
-    "search_ready": 20019,
+    "total_photos": 21045,
+    "derivatives_complete": 21045,
+    "render_ready": 21035,
+    "search_ready": 21039,
     "missing_thumb_url": 0,
     "legacy_static": 15458,
     "true_orphans": 0
   },
   "previous_validation_summary": {
-    "total_photos": 20721,
-    "derivatives_complete": 20720,
-    "render_ready": 19907,
-    "search_ready": 20019,
+    "total_photos": 20951,
+    "derivatives_complete": 20951,
+    "render_ready": 20750,
+    "search_ready": 20951,
     "missing_thumb_url": 0,
     "legacy_static": 15458,
     "true_orphans": 0
   },
   "delta_since_previous": {
-    "total_photos": 0,
-    "derivatives_complete": 0,
-    "render_ready": 0,
-    "search_ready": 0,
+    "total_photos": 94,
+    "derivatives_complete": 94,
+    "render_ready": 285,
+    "search_ready": 88,
     "missing_thumb_url": 0
   },
   "public_render_validation": {
@@ -37,13 +37,13 @@
     "page_rendering_checks": {
       "homepage": {
         "status": 200,
-        "bytes": 20779,
+        "bytes": 21738,
         "ok": true,
         "error": null
       },
       "galleries_index": {
         "status": 200,
-        "bytes": 19977,
+        "bytes": 20111,
         "ok": true,
         "error": null
       },
@@ -67,7 +67,7 @@
       },
       "species_detail": {
         "status": 200,
-        "bytes": 8210,
+        "bytes": 9653,
         "ok": true,
         "error": null
       },

@@ -1,7 +1,8 @@
 import Link from 'next/link';
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { getArticleBySlug, getRelatedArticles } from '@/lib/db';
+import { getArticleBySlug, getRelatedArticles, getLocationIdBySlug, getAffiliateBlocksForEntity } from '@/lib/db';
+import AffiliateBlock from '@/components/AffiliateBlock';
 
 export const dynamic = 'force-dynamic';
 
@@ -55,6 +56,26 @@ export default async function ArticlePage({ params }: Props) {
 
   const canonical = `${SITE_URL}/article/${article.slug}`;
   const ogImage = article.smallUrl || article.mediumUrl || '';
+
+  // Parse location_links from metadata to find affiliate blocks
+  let affiliateBlocks: Awaited<ReturnType<typeof getAffiliateBlocksForEntity>> = [];
+  try {
+    const meta = typeof article.metadata === 'string' ? JSON.parse(article.metadata) : article.metadata;
+    if (meta?.location_links && Array.isArray(meta.location_links) && meta.location_links.length > 0) {
+      for (const locLink of meta.location_links) {
+        const locId = await getLocationIdBySlug(locLink.slug);
+        if (locId) {
+          const blocks = await getAffiliateBlocksForEntity('location', locId);
+          if (blocks.length > 0) {
+            affiliateBlocks = blocks;
+            break; // use first matched location
+          }
+        }
+      }
+    }
+  } catch {
+    // no-op: affiliate blocks are optional
+  }
 
   return (
     <article className="container mx-auto px-4 py-6 max-w-4xl">
@@ -114,6 +135,26 @@ export default async function ArticlePage({ params }: Props) {
         />
       ) : (
         <p className="text-gray-500 italic">Article content coming soon.</p>
+      )}
+
+      {/* Book a Tour — Affiliate Blocks */}
+      {affiliateBlocks.length > 0 && (
+        <section className="mt-12">
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">Book a Tour</h2>
+          <div className="grid sm:grid-cols-2 gap-4">
+            {affiliateBlocks.map(block => (
+              <AffiliateBlock
+                key={block.id}
+                entityType={block.entityType as any}
+                entityId={block.entityId}
+                provider={block.provider as any}
+                title={block.title || 'Book Tours'}
+                destinationKey={block.destinationKey || undefined}
+                shortcode={block.shortcode || undefined}
+              />
+            ))}
+          </div>
+        </section>
       )}
 
       {/* Related articles */}

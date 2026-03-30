@@ -1,0 +1,79 @@
+{
+  "ran_at": "2026-03-29T23:04:25.028271+00:00",
+  "metrics": {
+    "total_photos": 23077,
+    "derivatives_complete": 23077,
+    "ready_for_public_render": 23077,
+    "search_ready": 23077,
+    "typesense_sync_count": 22022,
+    "stale_drift": 1055,
+    "repair_backlog": 0,
+    "validation_queue": 0,
+    "true_orphans": 0,
+    "galleries_missing_cover": 3,
+    "total_galleries": 132,
+    "manual_review_count": 0,
+    "photo_import_pending_queue": 0,
+    "derivative_rebuild_queue_queue": 0,
+    "manual_review_queue": 28,
+    "autoscale_backlog_r2": 0,
+    "autoscale_target_workers": 0
+  },
+  "results": {
+    "wild_typesense_reconcile": {
+      "triggered": true,
+      "metric": "stale_drift",
+      "value": 1055,
+      "threshold": 25,
+      "ok": false,
+      "error": "[plugins] plugins.allow is empty; discovered non-bundled plugins may auto-load: lossless-claw (/Users/joshuatenbrink/.openclaw/extensions/lossless-claw/index.ts). Set plugins.allow to explicit trusted ids.\nerror: unknown command 'lobster'\n"
+    },
+    "wild_repair_incomplete_legacy": {
+      "triggered": false,
+      "metric": "repair_backlog",
+      "value": 0,
+      "threshold": 100
+    },
+    "wild_production_validation_v2": {
+      "triggered": false,
+      "metric": "validation_queue",
+      "value": 0,
+      "threshold": 0
+    },
+    "wild_gallery_cover_assignment": {
+      "triggered": true,
+      "metric": "galleries_missing_cover",
+      "value": 3,
+      "threshold": 0,
+      "ok": false,
+      "error": "[plugins] plugins.allow is empty; discovered non-bundled plugins may auto-load: lossless-claw (/Users/joshuatenbrink/.openclaw/extensions/lossless-claw/index.ts). Set plugins.allow to explicit trusted ids.\nerror: unknown command 'lobster'\n"
+    },
+    "wild_import_batch": {
+      "triggered": false,
+      "metric": "import_queue",
+      "value": 0,
+      "threshold": 0
+    },
+    "wild_derivative_autoscale_launcher": {
+      "triggered": false,
+      "metric": "autoscale_target_workers",
+      "value": 0,
+      "threshold": 0
+    },
+    "wild_typesense_reconcile_no_llm": {
+      "triggered": true,
+      "script": true,
+      "metric": "stale_drift",
+      "value": 1055,
+      "ok": true,
+      "error": ""
+    }
+  },
+  "triggered": [
+    "wild_typesense_reconcile",
+    "wild_gallery_cover_assignment",
+    "wild_typesense_reconcile_no_llm"
+  ],
+  "status": "ok",
+  "dry_run": false
+}

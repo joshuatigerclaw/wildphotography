@@ -1,0 +1,58 @@
+WildPhotography Image QA Run — 2026-03-28
+
+=== SCOPE ===
+Photos audited: 500 (all ready_for_public_render, ordered by id desc)
+Galleries audited: 104 (all active)
+
+=== ISSUES FOUND ===
+Total: 2,453 issues across photos and galleries
+
+1. Broken derivative URLs (r2.dev expired): 117 photo-field pairs
+   - 301 photos affected across thumb/small/medium/large (all 4 fields together)
+   - 372 photos affected for preview_url
+   - These use the old r2.dev subdomain which no longer resolves
+   - All other derivative fields (thumb/small/medium/large) for these photos appear to still use r2.dev, making them completely broken
+   - Priority: CRITICAL — these photos cannot render properly
+
+2. Duplicate R2 original keys: 2,332 unique keys shared by 2+ photos
+   - These are import collisions where the same original R2 key was assigned to multiple photo records
+   - Not visually broken but create data integrity issues
+   - Priority: MEDIUM
+
+3. Gallery cover photo issues: 4 galleries
+   - Alajuela (costa-rica-gallery-alajuela)
+   - Arenal-Volcano (costa-rica-gallery-arenal-volcano)
+   - Bajos-del-Toro-Costa-Rica (costa-rica-gallery-bajos-del-toro-costa-rica)
+   - Argentina (south-america-argentina)
+   - These galleries have no photos assigned to their gallery_slug — they are empty placeholder galleries
+   - Priority: LOW (structural placeholder issue)
+
+=== SAFE FIXES APPLIED ===
+3 gallery cover assignments applied:
+  - asia-china → photo 23112
+  - asia-china-shanghai → photo 23118
+  - europe-france → photo 23145
+
+=== MANUAL REVIEW REQUIRED ===
+4 empty galleries (no photos in gallery_slug, no cover candidates):
+  - Gallery 114: Alajuela
+  - Gallery 115: Arenal-Volcano
+  - Gallery 116: Bajos-del-Toro-Costa-Rica
+  - Gallery 117: Argentina
+
+=== ACTIONABLE NEXT STEPS ===
+1. CRITICAL: Dispatch wild_derivative_rebuild_batch for the 301 photos with broken r2.dev derivatives (thumb/small/medium/large). The dispatch yaml already identified this as CRITICAL with 1126 photos total affected across the full dataset.
+
+2. MEDIUM: Investigate wild_duplicate_r2_resolution for the 2,332 duplicate R2 keys to understand which photos are "real" and which are collision artifacts.
+
+3. LOW: 4 empty galleries — either populate with photos or remove as placeholder entries.
+
+=== METRICS ===
+Photos audited: 500
+Galleries audited: 104
+Issues found: 2,453
+Safe fixes applied: 3
+Manual review required: 4 items
+Broken derivative photo-field pairs: 117
+Duplicate R2 keys: 2,332
+Gallery cover fixes applied this run: 3

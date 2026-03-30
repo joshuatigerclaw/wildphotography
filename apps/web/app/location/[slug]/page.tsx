@@ -1,8 +1,9 @@
 import Link from 'next/link';
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { getLocationBySlug, getLocationsByRegion, getPhotosByLocation } from '@/lib/db';
+import { getLocationBySlug, getLocationsByRegion, getPhotosByLocation, getAffiliateBlocksForEntity } from '@/lib/db';
 import VirtualizedGallery from '@/components/VirtualizedGallery';
+import AffiliateBlock from '@/components/AffiliateBlock';
 
 export const dynamic = 'force-dynamic';
 
@@ -45,6 +46,9 @@ export default async function LocationDetailPage({ params }: { params: Promise<{
 
   const meta = location.metadata;
   const nearbyLocs = regionLocations.filter(l => l.slug !== slug).slice(0, 6);
+
+  // Fetch affiliate blocks for this location
+  const affiliateBlocks = await getAffiliateBlocksForEntity('location', Number(location.id));
 
   return (
     <div className="container mx-auto px-4 py-6">
@@ -199,6 +203,26 @@ export default async function LocationDetailPage({ params }: { params: Promise<{
                 <h4 className="text-sm font-semibold text-gray-900 group-hover:text-blue-600 truncate">{loc.name}</h4>
                 <p className="text-xs text-gray-500 mt-1 line-clamp-2">{loc.description || ''}</p>
               </Link>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {/* Book a Tour — Affiliate Blocks */}
+      {affiliateBlocks.length > 0 && (
+        <section className="mb-8">
+          <h2 className="text-xl font-bold text-gray-900 mb-4">Book a Tour</h2>
+          <div className="grid sm:grid-cols-2 gap-4">
+            {affiliateBlocks.map(block => (
+              <AffiliateBlock
+                key={block.id}
+                entityType={block.entityType as any}
+                entityId={block.entityId}
+                provider={block.provider as any}
+                title={block.title || 'Book Tours'}
+                destinationKey={block.destinationKey || undefined}
+                shortcode={block.shortcode || undefined}
+              />
             ))}
           </div>
         </section>

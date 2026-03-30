@@ -1,7 +1,7 @@
 {
-  "run_at": "2026-03-25T00:50:00.000000",
+  "run_at": "2026-03-29T12:56:00.000000",
   "loaded_count": 0,
   "archived_count": 0,
   "records": [],
-  "note": "No unrecoverable orphans found — all true orphans already resolved or none exist. Total photos: 20721, legacy_static: 15459, local_pipeline: 3664, null_origin: 1598."
+  "note": "No unrecoverable orphans found — all true orphans already resolved or none exist. Total photos: ~20721, legacy_static: 15459, needs_review: 684, excluded_from_processing: 7."
 }

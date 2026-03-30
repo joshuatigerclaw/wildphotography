@@ -32,6 +32,15 @@ GALLERY_MAP = {
     "Costa-Rica-Gallery/Sunrise-Sunset": (93, "sunrise-sunset"),
     "Costa-Rica-Gallery/Tambor-Nicoya-Peninsula-Costa-Rica": (95, "tambor-nicoya-peninsula-costa-rica"),
     "Costa-Rica-Gallery/Beaches": (110, "costa-rica-gallery-beaches"),
+    "Costa-Rica-Gallery/Costa-Rica": (25, "costa-rica"),
+    "Costa-Rica-Gallery/Best-of-Costa-Rica": (19, "best-of-costa-rica"),
+    "Costa-Rica-Gallery/Wildlife": (6, "wildlife"),
+    "Costa-Rica-Gallery/Arenal-Volcano": (16, "arenal-volcano"),
+    "Costa-Rica-Gallery/Waterfalls-in-Costa-Rica": (100, "waterfalls-in-costa-rica"),
+    "Costa-Rica-Gallery/Birds-Macaws-Lapas": (20, "birds-macaws-lapas"),
+    "Costa-Rica-Gallery/Montezuma-Costa-Rica": (60, "montezuma-costa-rica"),
+    "Costa-Rica-Gallery/Flowers-plants-trees": (35, "flowers-plants-trees"),
+    "Costa-Rica-Gallery/Santa-Teresa-Malpais": (91, "santa-teresa-malpais"),
 }
 
 # Derivative sizes
@@ -207,8 +216,9 @@ def process_batch():
         source_path = item['source_path']
         gallery_folder = item.get('gallery_folder', '')
         
-        # Look up gallery ID and slug from mapping
-        gallery_id, gallery_slug = GALLERY_MAP.get(gallery_folder, (5, 'unknown'))
+        # Use per-item gallery_id and gallery_slug (set by build script)
+        gallery_id = item.get('gallery_id', GALLERY_MAP.get(gallery_folder, (5, 'unknown'))[0])
+        gallery_slug = item.get('gallery_slug', GALLERY_MAP.get(gallery_folder, (5, 'unknown'))[1])
         
         # Derive filename from source_path if not present
         filename = item.get('filename') or os.path.basename(source_path)

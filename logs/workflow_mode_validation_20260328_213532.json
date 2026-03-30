@@ -1,0 +1,337 @@
+{
+  "scanned": 65,
+  "compliant": 54,
+  "violations": 11,
+  "missing_meta": 0,
+  "wrong_mode": 0,
+  "compliant_list": [
+    {
+      "workflow": "wild_affiliate_injector",
+      "mode": "strong_model",
+      "reason": "offer matching and placement reasoning"
+    },
+    {
+      "workflow": "wild_daily_growth_loop",
+      "mode": "strong_model",
+      "reason": "semantic growth loop orchestration"
+    },
+    {
+      "workflow": "wild_derivative_autoscale_controller",
+      "mode": "no_llm",
+      "reason": "backlog math and dispatch logic are deterministic"
+    },
+    {
+      "workflow": "wild_derivative_autoscale_dashboard",
+      "mode": "no_llm",
+      "reason": "deterministic dashboard metrics read from DB"
+    },
+    {
+      "workflow": "wild_derivative_autoscale_launcher",
+      "mode": "no_llm",
+      "reason": "backlog math and dispatch logic are deterministic"
+    },
+    {
+      "workflow": "wild_derivative_rebuild_dashboard",
+      "mode": "no_llm",
+      "reason": "deterministic rebuild dashboard metrics"
+    },
+    {
+      "workflow": "wild_duplicate_detector",
+      "mode": "no_llm",
+      "reason": "duplicate detection logic is deterministic"
+    },
+    {
+      "workflow": "wild_gallery_mapping_preflight",
+      "mode": "no_llm",
+      "reason": "gallery mapping preflight is deterministic"
+    },
+    {
+      "workflow": "wild_google_incoming_import",
+      "mode": "no_llm",
+      "reason": "import, upload, derivative generation, and DB updates are deterministic"
+    },
+    {
+      "workflow": "wild_google_incoming_postrun_validate",
+      "mode": "no_llm",
+      "reason": "conditional Typesense sync and sample validation are deterministic"
+    },
+    {
+      "workflow": "wild_google_incoming_supervisor",
+      "mode": "no_llm",
+      "reason": "orchestrates deterministic import pipeline only"
+    },
+    {
+      "workflow": "wild_growth_supervisor_strong",
+      "mode": "strong_model",
+      "reason": "semantic SEO and content generation"
+    },
+    {
+      "workflow": "wild_gsc_pull_performance",
+      "mode": "no_llm",
+      "reason": "API ingestion and DB storage are deterministic"
+    },
+    {
+      "workflow": "wild_gsc_sitemap_manager",
+      "mode": "no_llm",
+      "reason": "sitemap listing/submission are deterministic API actions"
+    },
+    {
+      "workflow": "wild_gsc_url_inspection_sample",
+      "mode": "no_llm",
+      "reason": "inspection API calls and result storage are deterministic"
+    },
+    {
+      "workflow": "wild_import_queue_cleanup",
+      "mode": "no_llm",
+      "reason": "queue cleanup, duplicate detection, and file classification are deterministic"
+    },
+    {
+      "workflow": "wild_import_run_summary",
+      "mode": "small_model",
+      "reason": "concise operational summary from structured import report"
+    },
+    {
+      "workflow": "wild_internal_linking",
+      "mode": "strong_model",
+      "reason": "semantic internal linking strategy"
+    },
+    {
+      "workflow": "wild_manifest_scan",
+      "mode": "no_llm",
+      "reason": "filesystem manifest scan is deterministic"
+    },
+    {
+      "workflow": "wild_ops_daily_digest",
+      "mode": "small_model",
+      "reason": "concise aggregate ops summary from structured JSON"
+    },
+    {
+      "workflow": "wild_ops_reporting_supervisor_small",
+      "mode": "small_model",
+      "reason": "human-readable summaries of deterministic workflows"
+    },
+    {
+      "workflow": "wild_ops_supervisor_no_llm",
+      "mode": "no_llm",
+      "reason": "pure operational orchestration of deterministic workflows"
+    },
+    {
+      "workflow": "wild_public_render_validation",
+      "mode": "no_llm",
+      "reason": "HTTP checks and image validation are deterministic"
+    },
+    {
+      "workflow": "wild_public_validation",
+      "mode": "no_llm",
+      "reason": "HTTP checks and validation are deterministic"
+    },
+    {
+      "workflow": "wild_r2_presence_audit",
+      "mode": "no_llm",
+      "reason": "R2 presence audit is deterministic API check"
+    },
+    {
+      "workflow": "wild_rebuild_dispatcher",
+      "mode": "no_llm",
+      "reason": "DB filtering and queue writes are deterministic"
+    },
+    {
+      "workflow": "wild_rebuild_from_r2_originals",
+      "mode": "no_llm",
+      "reason": "rebuild from R2 originals is deterministic"
+    },
+    {
+      "workflow": "wild_repair_incomplete_legacy_core",
+      "mode": "no_llm",
+      "reason": "legacy repair logic is deterministic"
+    },
+    {
+      "workflow": "wild_search_index_drift_check",
+      "mode": "no_llm",
+      "reason": "search index drift check is deterministic"
+    },
+    {
+      "workflow": "wild_seo_article_dispatch",
+      "mode": "strong_model",
+      "reason": "article creation requires semantic generation"
+    },
+    {
+      "workflow": "wild_seo_internal_link_builder",
+      "mode": "strong_model",
+      "reason": "semantic internal link building"
+    },
+    {
+      "workflow": "wild_seo_linking_dispatch",
+      "mode": "strong_model",
+      "reason": "semantic internal-link recommendation"
+    },
+    {
+      "workflow": "wild_seo_opportunity_scoring",
+      "mode": "strong_model",
+      "reason": "combines GSC and Serpstat signals into prioritized SEO actions"
+    },
+    {
+      "workflow": "wild_seo_page_builder",
+      "mode": "strong_model",
+      "reason": "semantic SEO page building"
+    },
+    {
+      "workflow": "wild_seo_queue_seed",
+      "mode": "strong_model",
+      "reason": "semantic SEO queue seeding from signals"
+    },
+    {
+      "workflow": "wild_seo_relationship_builder",
+      "mode": "strong_model",
+      "reason": "semantic relationship building between content"
+    },
+    {
+      "workflow": "wild_seo_report_daily",
+      "mode": "small_model",
+      "reason": "structured SEO report from daily metrics"
+    },
+    {
+      "workflow": "wild_seo_rewrite_dispatch",
+      "mode": "strong_model",
+      "reason": "writes metadata and copy improvements"
+    },
+    {
+      "workflow": "wild_seo_supervisor",
+      "mode": "strong_model",
+      "reason": "semantic SEO orchestration"
+    },
+    {
+      "workflow": "wild_seo_supervisor_serpstat_gsc",
+      "mode": "strong_model",
+      "reason": "semantic SEO orchestration with GSC and Serpstat"
+    },
+    {
+      "workflow": "wild_serpstat_backlink_refresh",
+      "mode": "no_llm",
+      "reason": "API ingestion and DB storage are deterministic"
+    },
+    {
+      "workflow": "wild_serpstat_backlink_refresh_raw",
+      "mode": "no_llm",
+      "reason": "API ingestion and DB storage are deterministic"
+    },
+    {
+      "workflow": "wild_serpstat_keyword_expand",
+      "mode": "no_llm",
+      "reason": "API ingestion and DB storage are deterministic"
+    },
+    {
+      "workflow": "wild_serpstat_keyword_ingest_raw",
+      "mode": "no_llm",
+      "reason": "API ingestion and DB storage are deterministic"
+    },
+    {
+      "workflow": "wild_serpstat_rank_refresh",
+      "mode": "no_llm",
+      "reason": "API ingestion and DB storage are deterministic"
+    },
+    {
+      "workflow": "wild_serpstat_rank_refresh_raw",
+      "mode": "no_llm",
+      "reason": "API ingestion and DB storage are deterministic"
+    },
+    {
+      "workflow": "wild_serpstat_url_gap_ingest_raw",
+      "mode": "no_llm",
+      "reason": "API ingestion and DB storage are deterministic"
+    },
+    {
+      "workflow": "wild_serpstat_url_gap_scan",
+      "mode": "no_llm",
+      "reason": "API ingestion and DB storage are deterministic"
+    },
+    {
+      "workflow": "wild_slug_collision_audit",
+      "mode": "no_llm",
+      "reason": "slug collision audit is deterministic SQL"
+    },
+    {
+      "workflow": "wild_slug_collision_repair",
+      "mode": "no_llm",
+      "reason": "slug collision repair is deterministic SQL"
+    },
+    {
+      "workflow": "wild_test_env",
+      "mode": "no_llm",
+      "reason": "environment test - deterministic"
+    },
+    {
+      "workflow": "wild_typesense_reconcile",
+      "mode": "no_llm",
+      "reason": "deterministic DB vs Typesense diff and sync"
+    },
+    {
+      "workflow": "wild_typesense_sync",
+      "mode": "no_llm",
+      "reason": "deterministic indexing and API sync"
+    },
+    {
+      "workflow": "wild_workflow_mode_validator",
+      "mode": "no_llm",
+      "reason": "deterministic config validation"
+    }
+  ],
+  "violation_list": [
+    {
+      "workflow": "wild_cluster_expansion",
+      "file": "/Users/joshuatenbrink/.openclaw/wild_cluster_expansion.lobster.yaml",
+      "issue": "no_llm workflow contains model step(s): ['prompt:', 'prompt:', 'prompt:', 'prompt:', 'prompt:', 'prompt:']"
+    },
+    {
+      "workflow": "wild_failure_reason_formatter",
+      "file": "/Users/joshuatenbrink/.openclaw/wild_failure_reason_formatter.lobster.yaml",
+      "issue": "no_llm workflow contains model step(s): ['tool: model', 'prompt:']"
+    },
+    {
+      "workflow": "wild_google_incoming_metadata_extract",
+      "file": "/Users/joshuatenbrink/.openclaw/wild_google_incoming_metadata_extract.lobster.yaml",
+      "issue": "YAML parse error: while scanning a simple key\n  in \"<unicode string>\", line 27, column 1:\n    import json, os\n    ^\ncould not find expected ':'\n  in \"<unicode string>\", line 28, column 1:\n    p='${staged_path}'\n    ^"
+    },
+    {
+      "workflow": "wild_google_incoming_scan",
+      "file": "/Users/joshuatenbrink/.openclaw/wild_google_incoming_scan.lobster.yaml",
+      "issue": "YAML parse error: while scanning a simple key\n  in \"<unicode string>\", line 43, column 1:\n    import json, os\n    ^\ncould not find expected ':'\n  in \"<unicode string>\", line 44, column 1:\n    p='${new_files_path}'\n    ^"
+    },
+    {
+      "workflow": "wild_google_incoming_select_batch",
+      "file": "/Users/joshuatenbrink/.openclaw/wild_google_incoming_select_batch.lobster.yaml",
+      "issue": "YAML parse error: while scanning a simple key\n  in \"<unicode string>\", line 32, column 1:\n    import json, os\n    ^\ncould not find expected ':'\n  in \"<unicode string>\", line 33, column 1:\n    p='${selected_batch_path}'\n    ^"
+    },
+    {
+      "workflow": "wild_google_incoming_stage_and_move",
+      "file": "/Users/joshuatenbrink/.openclaw/wild_google_incoming_stage_and_move.lobster.yaml",
+      "issue": "YAML parse error: while scanning a simple key\n  in \"<unicode string>\", line 42, column 1:\n    import json, os\n    ^\ncould not find expected ':'\n  in \"<unicode string>\", line 43, column 1:\n    def load(p): return json.load(op ... \n    ^"
+    },
+    {
+      "workflow": "wild_gsc_daily_summary",
+      "file": "/Users/joshuatenbrink/.openclaw/wild_gsc_daily_summary.lobster.yaml",
+      "issue": "no_llm workflow contains model step(s): ['tool: model', 'prompt:']"
+    },
+    {
+      "workflow": "wild_repair_reconcile",
+      "file": "/Users/joshuatenbrink/.openclaw/wild_repair_reconcile.lobster.yaml",
+      "issue": "no_llm workflow contains model step(s): ['prompt:', 'prompt:']"
+    },
+    {
+      "workflow": "wild_serpstat_daily_summary",
+      "file": "/Users/joshuatenbrink/.openclaw/wild_serpstat_daily_summary.lobster.yaml",
+      "issue": "no_llm workflow contains model step(s): ['tool: model', 'prompt:']"
+    },
+    {
+      "workflow": "wild_typesense_reconcile_no_llm",
+      "file": "/Users/joshuatenbrink/.openclaw/wild_typesense_reconcile_no_llm.lobster.yaml",
+      "issue": "YAML parse error: while scanning a simple key\n  in \"<unicode string>\", line 28, column 1:\n    import glob, json, pathlib\n    ^\ncould not find expected ':'\n  in \"<unicode string>\", line 30, column 1:\n    logs_dir = '${logs_dir}'\n    ^"
+    },
+    {
+      "workflow": "wild_typesense_reconcile_summary",
+      "file": "/Users/joshuatenbrink/.openclaw/wild_typesense_reconcile_summary.lobster.yaml",
+      "issue": "YAML parse error: while scanning a simple key\n  in \"<unicode string>\", line 21, column 1:\n    import glob, json, pathlib, sys\n    ^\ncould not find expected ':'\n  in \"<unicode string>\", line 23, column 1:\n    logs_dir = '${logs_dir}'\n    ^"
+    }
+  ],
+  "timestamp": "20260328_213532"
+}

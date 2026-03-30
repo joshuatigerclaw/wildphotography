@@ -1,0 +1,83 @@
+{
+  "workflow": "wild_image_qa",
+  "run_time": "2026-03-26T01:48:00+00:00",
+  "batch_limit": null,
+  "scope": {
+    "total_photos": 20874,
+    "ready_for_public_render": 20653,
+    "search_ready": 20576,
+    "active_galleries": 97,
+    "galleries_missing_cover": 0
+  },
+  "derivative_health": {
+    "broken_thumb_url": 82,
+    "broken_small_medium_large_url": 237,
+    "broken_preview_url": 401,
+    "null_preview_url": 149,
+    "inconsistent_derivatives": 155
+  },
+  "root_cause_analysis": {
+    "r2_dev_urls": "62 photos use pub-*.r2.dev expired presigned URLs (401 unauthorized)",
+    "cf_storage_400_errors": "175 photos use wildphoto-storage.*.r2.cloudflarestorage.com returning 400 (bucket access misconfigured or path changed)",
+    "thumb_working_alternative": "155 photos with broken small/medium/large have working thumbs at images.wildphotography.com/derivatives/"
+  },
+  "affected_photo_breakdown": {
+    "full_derivative_loss": 82,
+    "partial_derivative_loss": 155,
+    "preview_only_missing": 149
+  },
+  "safe_fixes_available": 0,
+  "manual_review_required": 0,
+  "safe_actions": [
+    {
+      "action": "rebuild_derivatives_for_82",
+      "photos_affected": 82,
+      "reason": "these have r2_thumb_key populated but all derivatives broken (r2.dev expired or cf storage 400)",
+      "prerequisite": "R2 bucket must be fixed or files re-uploaded with correct public paths"
+    },
+    {
+      "action": "rebuild_small_medium_large_for_155",
+      "photos_affected": 155,
+      "reason": "thumbs work but small/medium/large/preview at cloudflarestorage.com return 400",
+      "prerequisite": "R2 bucket access must be fixed first"
+    },
+    {
+      "action": "cannot_rebuild_149_previews",
+      "photos_affected": 149,
+      "reason": "preview_url is NULL and r2_thumb_key is empty - cannot regenerate without original source"
+    }
+  ],
+  "quality_summary": {
+    "gallery_covers": "PASS - 0 galleries missing cover photo",
+    "thumb_urls": "MARGINAL - 82 broken, 155 partial loss",
+    "search_ready": "GOOD - 20576 of 20653 ready photos (99.6%)",
+    "metadata_complete": "GOOD - 20576 search_ready indicates metadata is complete"
+  },
+  "vs_previous_run": {
+    "report_date": "2026-03-24",
+    "changes": {
+      "total_ready": "20653 vs 19474 (+1199 photos)",
+      "r2_dev_broken_thumbs": "62 vs 878 (-816 - large improvement)",
+      "cf_storage_broken_thumbs": "20 vs 540 (-520 - large improvement)",
+      "clean_ready": "20263 vs ~17620 (+2650)"
+    },
+    "interpretation": "Significant improvement since Mar 24 - many r2.dev placeholder URLs have been replaced with working images.wildphotography.com URLs. Remaining 82 broken-thumb photos are a smaller critical set needing targeted rebuild."
+  },
+  "status": "ACTIONABLE",
+  "dispatch_recommended": [
+    {
+      "workflow": "wild_derivative_rebuild_batch",
+      "trigger": "remaining_broken_derivatives",
+      "photos_affected": 82,
+      "priority": "CRITICAL",
+      "action": "Full derivative rebuild for 82 photos with all derivatives broken. Requires R2 bucket fix or re-upload."
+    },
+    {
+      "workflow": "wild_derivative_rebuild_batch",
+      "trigger": "partial_derivative_loss",
+      "photos_affected": 155,
+      "priority": "HIGH",
+      "action": "Rebuild small/medium/large/preview for 155 photos. Thumb works, other sizes broken at cloudflarestorage.com."
+    }
+  ]
+}

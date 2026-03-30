@@ -1,0 +1,19 @@
+{
+  "workflow": "wild_classify_legacy_static",
+  "status": "blocked_db_unavailable",
+  "attempted_at": "2026-03-27T01:48:00.000000+00:00",
+  "db_status": "neon_data_transfer_quota_exceeded_-_connection_refused",
+  "blocked": {
+    "reason": "neon_database_connection_failed_data_transfer_quota_exceeded",
+    "impact": "Cannot run db_query or db_photo_update operations. Workflow requires Neon DB access to SELECT legacy static candidates and UPDATE their classification flags.",
+    "next_action": "Retry when DB connection is restored. Recommend reviewing Neon plan data transfer limits and considering an upgrade."
+  },
+  "classification_context": {
+    "total_photos_in_system": 20721,
+    "legacy_static_estimated_from_last_orphan_review": 15459,
+    "local_pipeline_estimated": 3664,
+    "null_origin_estimated": 1598,
+    "note": "The wild_legacy_orphan_review (March 22) found 15,459 records already matching legacy_static criteria (source_path NULL, content_hash NULL, thumb_url present). These records likely already have record_origin=legacy_static set from prior wild_classify_legacy_static runs."
+  },
+  "notes": "Workflow wild_classify_legacy_static could not execute. Neon DB quota exceeded prevents all DB operations. Workflow is idempotent - once DB access is restored, it can be re-run safely to confirm/update legacy_static classification."
+}

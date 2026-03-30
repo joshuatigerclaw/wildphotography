@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation';
 import { Metadata } from 'next';
+import { neon } from '@neondatabase/serverless';
 import {
   getPhotoBySlug,
   getRelatedPhotos,
@@ -15,7 +16,18 @@ import PhotoPageClient from './PhotoPageClient';
 
 export const dynamic = 'force-dynamic';
 
+const DATABASE_URL = process.env.DATABASE_URL ||
+  'postgresql://neondb_owner:npg_BvF2JsQ8drba@ep-calm-fire-ad0dfnqd-pooler.c-2.us-east-1.aws.neon.tech/wildphotography?sslmode=require';
+
+const R2_PUBLIC = 'https://pub-7d412c6efb5943b5bc587e695e22001e.r2.dev';
 const SITE_URL = 'https://wildphotography.com';
+const sql = neon(DATABASE_URL);
+
+function withR2(url: string | null): string | null {
+  if (!url) return null;
+  if (url.startsWith('http')) return url;
+  return R2_PUBLIC + '/' + url;
+}
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
@@ -28,11 +40,14 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const displayTitle = getDisplayTitle(photo.title);
   const gallery = await getGalleryForPhoto(slug);
 
-  // Canonical always points to the clean /photo/{slug} URL — query params are UX-only
   const canonical = canonicalUrl(`/photo/${photo.slug}`);
   const ogImage = photo.mediumUrl || photo.smallUrl || photo.thumbUrl;
 
-  let description = photo.description || '';
+  // Use SEO metadata from DB when available
+  const seoTitle = photo.metadata?.seo_title;
+  const seoDescription = photo.metadata?.meta_description;
+
+  let description = seoDescription || photo.description || '';
   if (!description && photo.locationName) {
     description = `${displayTitle || 'Photo'} from ${photo.locationName}, Costa Rica`;
   }
@@ -40,13 +55,15 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     description = `${displayTitle || 'Photo'} in ${gallery.name} gallery`;
   }
 
+  const pageTitle = seoTitle || displayTitle || 'Photo';
+
   return {
-    title: `${displayTitle || 'Photo'} | Wildphotography`,
+    title: `${pageTitle} | Wildphotography`,
     description: description || `Beautiful nature photography from Costa Rica`,
     metadataBase: new URL(SITE_URL),
     alternates: { canonical },
     openGraph: {
-      title:displayTitle || 'Photo',
+      title: seoTitle || displayTitle || 'Photo',
       description: description || `Beautiful nature photography from Costa Rica`,
       url: canonical,
       siteName: 'Wildphotography',
@@ -58,7 +75,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     },
     twitter: {
       card: 'summary_large_image',
-      title: displayTitle || 'Photo',
+      title: seoTitle || displayTitle || 'Photo',
       description: description || undefined,
       images: ogImage ? [ogImage] : [],
     },
@@ -81,8 +98,7 @@ export default async function PhotoPage({
     notFound();
   }
 
-  // ── All galleries this photo belongs to (deterministic order) ─────────
-  // Fetched once; used for both fallback selection and "Also appears in" UI.
+  // ── All galleries this photo belongs to ───────────────────────────────
   let allGalleries: any[] = [];
   try {
     allGalleries = await getGalleriesForPhoto(slug);
@@ -90,44 +106,34 @@ export default async function PhotoPage({
     console.error('Error fetching galleries for photo:', e);
   }
 
-  // ── Primary gallery (first in deterministic order) ────────────────────
-  // Used for metadata, breadcrumb, discovery links, and "More from" section.
-  // Deterministic fallback rule: lowest sort_order → lowest gallery id.
+  // ── Primary gallery ─────────────────────────────────────────────────
   const primaryGallery = allGalleries[0] ?? null;
 
-  // ── Source gallery (the gallery the user navigated from) ──────────────
-  // If fromGallery is provided and valid, use it; otherwise fall back to
-  // primaryGallery so the context line / nav always has something to show.
+  // ── Source gallery ──────────────────────────────────────────────────
   let sourceGallery = primaryGallery;
-
   if (fromGallerySlug) {
     if (fromGallerySlug === primaryGallery?.slug) {
-      // Already have it — no extra fetch needed
       sourceGallery = primaryGallery;
     } else {
-      // Try to find it in allGalleries first (avoids an extra DB query)
       const found = allGalleries.find(g => g.slug === fromGallerySlug);
       if (found) {
         sourceGallery = found;
       } else {
-        // Not in the photo's gallery list — could be a stale/invalid param.
-        // Try fetching anyway in case getGalleriesForPhoto missed something.
         try {
           const fromGalleryData = await getGalleryBySlug(fromGallerySlug);
           if (fromGalleryData) sourceGallery = fromGalleryData;
         } catch {
-          // Fall back to primaryGallery silently
+          // Fall back silently
         }
       }
     }
   }
 
-  // ── Gallery sequence — derived from sourceGallery ─────────────────────
+  // ── Gallery sequence ────────────────────────────────────────────────
   let sequence = null;
   if (sourceGallery) {
     try {
       sequence = await getGallerySequenceForPhoto(slug, sourceGallery.id);
-      // If photo not found in sourceGallery, fall back to primaryGallery sequence
       if (sequence.total === 0 && primaryGallery && sourceGallery.id !== primaryGallery.id) {
         sequence = await getGallerySequenceForPhoto(slug, primaryGallery.id);
         sourceGallery = primaryGallery;
@@ -137,7 +143,7 @@ export default async function PhotoPage({
     }
   }
 
-  // ── Related photos by keywords ────────────────────────────────────────
+  // ── Related photos (keyword-based, existing logic) ─────────────────
   let relatedPhotos: any[] = [];
   try {
     relatedPhotos = await getRelatedPhotos(slug, undefined, photo.keywords || '', 8);
@@ -145,7 +151,7 @@ export default async function PhotoPage({
     console.error('Error fetching related photos:', e);
   }
 
-  // ── More photos from primary gallery ─────────────────────────────────
+  // ── More photos from primary gallery ────────────────────────────────
   let galleryPhotos: any[] = [];
   if (primaryGallery) {
     try {
@@ -155,11 +161,114 @@ export default async function PhotoPage({
     }
   }
 
-  // ── JSON-LD structured data ───────────────────────────────────────────
+  // ── PAGE LINKS: More from same species (via page_links) ─────────────
+  let speciesPhotos: any[] = [];
+  try {
+    const speciesResult = await sql`
+      SELECT DISTINCT p.id, p.slug, p.title, p.thumb_url, p.small_url,
+             p.species_common_name, p.location
+      FROM photos p
+      JOIN page_links pl ON pl.target_type = 'photo' AND pl.target_id = p.id
+      WHERE pl.source_type = 'species'
+        AND pl.source_id IN (
+          SELECT target_id FROM page_links
+          WHERE source_type = 'photo' AND source_id = ${parseInt(photo.id)}
+            AND target_type = 'species'
+        )
+        AND p.id != ${parseInt(photo.id)}
+        AND p.is_active = true AND p.ready_for_public_render = true
+      ORDER BY p.popularity DESC NULLS LAST
+      LIMIT 12
+    `;
+    speciesPhotos = (speciesResult as any[]).map((row: any) => ({
+      id: String(row.id),
+      slug: row.slug,
+      title: row.title || '',
+      thumbUrl: withR2(row.thumb_url),
+      smallUrl: withR2(row.small_url),
+      species_common_name: row.species_common_name,
+      locationName: row.location,
+    }));
+  } catch (e) {
+    console.error('Error fetching species photos:', e);
+  }
+
+  // ── PAGE LINKS: More from same location (via page_links) ───────────
+  let locationPhotos: any[] = [];
+  try {
+    const locationResult = await sql`
+      SELECT DISTINCT p.id, p.slug, p.title, p.thumb_url, p.small_url,
+             p.species_common_name, p.location
+      FROM photos p
+      JOIN page_links pl ON pl.target_type = 'photo' AND pl.target_id = p.id
+      WHERE pl.source_type = 'location'
+        AND pl.source_id IN (
+          SELECT target_id FROM page_links
+          WHERE source_type = 'photo' AND source_id = ${parseInt(photo.id)}
+            AND target_type = 'location'
+        )
+        AND p.id != ${parseInt(photo.id)}
+        AND p.is_active = true AND p.ready_for_public_render = true
+      ORDER BY p.popularity DESC NULLS LAST
+      LIMIT 12
+    `;
+    locationPhotos = (locationResult as any[]).map((row: any) => ({
+      id: String(row.id),
+      slug: row.slug,
+      title: row.title || '',
+      thumbUrl: withR2(row.thumb_url),
+      smallUrl: withR2(row.small_url),
+      species_common_name: row.species_common_name,
+      locationName: row.location,
+    }));
+  } catch (e) {
+    console.error('Error fetching location photos:', e);
+  }
+
+  // ── Also appears in (other galleries containing this photo) ─────────
+  let alternateGalleryPhotos: any[] = [];
+  try {
+    if (allGalleries.length > 1) {
+      const otherGalleries = allGalleries.filter(g => g.id !== primaryGallery?.id);
+      const galleryIds = otherGalleries.map(g => parseInt(g.id));
+      if (galleryIds.length > 0) {
+        const altResult = await sql`
+          SELECT DISTINCT p.id, p.slug, p.title, p.thumb_url, p.small_url,
+                 p.species_common_name, p.location,
+                 g.id as gallery_id, g.name as gallery_name, g.slug as gallery_slug
+          FROM photos p
+          JOIN gallery_photos gp ON gp.photo_id = p.id
+          JOIN galleries g ON g.id = gp.gallery_id
+          WHERE gp.gallery_id = ANY(${galleryIds})
+            AND p.id != ${parseInt(photo.id)}
+            AND p.is_active = true AND p.ready_for_public_render = true
+          ORDER BY p.popularity DESC NULLS LAST
+          LIMIT 12
+        `;
+        alternateGalleryPhotos = (altResult as any[]).map((row: any) => ({
+          id: String(row.id),
+          slug: row.slug,
+          title: row.title || '',
+          thumbUrl: withR2(row.thumb_url),
+          smallUrl: withR2(row.small_url),
+          species_common_name: row.species_common_name,
+          locationName: row.location,
+          galleryName: row.gallery_name,
+          gallerySlug: row.gallery_slug,
+        }));
+      }
+    }
+  } catch (e) {
+    console.error('Error fetching alternate gallery photos:', e);
+  }
+
+  // ── JSON-LD structured data — use SEO metadata when available ─────────
   const displayTitle = getDisplayTitle(photo.title);
+  const seoTitle = photo.metadata?.seo_title;
+  const seoDescription = photo.metadata?.meta_description;
   const jsonLd = generatePhotoJsonLd({
-    title: displayTitle,
-    description: photo.description || undefined,
+    title: seoTitle || displayTitle || 'Photo',
+    description: seoDescription || photo.description || undefined,
     imageUrl: photo.mediumUrl || photo.smallUrl || '',
     dateTaken: photo.date_taken ? new Date(photo.date_taken) : undefined,
     location: photo.locationName || undefined,
@@ -181,6 +290,9 @@ export default async function PhotoPage({
         sequence={sequence}
         sourceGallery={sourceGallery}
         allGalleries={allGalleries}
+        speciesPhotos={speciesPhotos}
+        locationPhotos={locationPhotos}
+        alternateGalleryPhotos={alternateGalleryPhotos}
       />
     </>
   );

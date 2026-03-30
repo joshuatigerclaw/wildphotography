@@ -1,0 +1,13 @@
+{
+  "run_at": "2026-03-29T12:59:10.028500+00:00",
+  "eligible_db_count": 22086,
+  "typesense_count_before": 22305,
+  "stale_removed": 1049,
+  "missing_added": 830,
+  "upsert_errors": 0,
+  "typesense_count_after": 22086,
+  "final_drift": 0,
+  "status": "success",
+  "error": null,
+  "duration_seconds": 6.8
+}

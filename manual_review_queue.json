@@ -1,0 +1,15 @@
+[
+  {
+    "id": 14774,
+    "slug": "test-photo-validation",
+    "title": "Test Photo",
+    "gallery_id": 101,
+    "thumb_url": "https://images.wildphotography.com/derivatives/abc123def456789_thumb.jpg",
+    "content_hash": "abc123def456789",
+    "original_r2_key": null,
+    "source_path": null,
+    "record_origin": "local_pipeline",
+    "reason": "original_not_found_in_r2",
+    "queued_at": "2026-03-28T00:38:27.517468+00:00"
+  }
+]

@@ -1,0 +1,284 @@
+{
+  "run_at": "2026-03-29T09:17:43.683245+00:00",
+  "total_photos": 22506,
+  "render_ready_total": 21806,
+  "photos_with_issues": 400,
+  "all_clear": false,
+  "checks": {
+    "missing_thumb_url": {
+      "count": 0,
+      "sample": []
+    },
+    "missing_slug": {
+      "count": 0,
+      "sample": []
+    },
+    "missing_title": {
+      "count": 0,
+      "sample": []
+    },
+    "missing_gallery_slug": {
+      "count": 3435,
+      "sample": [
+        {
+          "id": 242,
+          "slug": "hermosa-beach-1",
+          "title": "Hermosa Beach Sunset",
+          "status": "archived"
+        },
+        {
+          "id": 243,
+          "slug": "hermosa-beach-2",
+          "title": "Playa Hermosa Waves",
+          "status": "archived"
+        },
+        {
+          "id": 14901,
+          "slug": "quetzal-CL0A1056",
+          "title": "Resplendent Quetzal - CL0A1056.jpg",
+          "status": "draft"
+        },
+        {
+          "id": 14903,
+          "slug": "quetzal-CL0A1421",
+          "title": "Resplendent Quetzal - CL0A1421.jpg",
+          "status": "draft"
+        },
+        {
+          "id": 14904,
+          "slug": "quetzal-CL0A1563",
+          "title": "Resplendent Quetzal - CL0A1563.jpg",
+          "status": "draft"
+        },
+        {
+          "id": 14905,
+          "slug": "resplendent-quetzal",
+          "title": "Resplendent Quetzal",
+          "status": "archived"
+        },
+        {
+          "id": 14906,
+          "slug": "resplendent-quetzal-1",
+          "title": "Resplendent Quetzal - Male",
+          "status": "archived"
+        },
+        {
+          "id": 14907,
+          "slug": "resplendent-quetzal-2",
+          "title": "Resplendent Quetzal - Female",
+          "status": "archived"
+        },
+        {
+          "id": 16797,
+          "slug": "cl0a7444-the-ocean-1000",
+          "title": "CL0A7444",
+          "status": "draft"
+        },
+        {
+          "id": 16798,
+          "slug": "cl0a7591-the-ocean-1001",
+          "title": "CL0A7591",
+          "status": "draft"
+        },
+        {
+          "id": 16800,
+          "slug": "cl0a7592-the-ocean-1002",
+          "title": "CL0A7592",
+          "status": "draft"
+        },
+        {
+          "id": 16807,
+          "slug": "DJI_0790-3",
+          "title": "Dji 0750 Lakes 1000",
+          "status": "draft"
+        },
+        {
+          "id": 16809,
+          "slug": "dji-0751-2-lakes-1001",
+          "title": "Dji 0751 2 Lakes 1001",
+          "status": "draft"
+        },
+        {
+          "id": 16811,
+          "slug": "dji-0780-lakes-1002",
+          "title": "Dji 0780 Lakes 1002",
+          "status": "draft"
+        },
+        {
+          "id": 16813,
+          "slug": "dji-0796-lakes-1003",
+          "title": "Dji 0796 Lakes 1003",
+          "status": "draft"
+        },
+        {
+          "id": 16815,
+          "slug": "dji-0808-lakes-1004",
+          "title": "Dji 0808 Lakes 1004",
+          "status": "draft"
+        },
+        {
+          "id": 16817,
+          "slug": "dji-0819-2-lakes-1005",
+          "title": "Dji 0819 2 Lakes 1005",
+          "status": "draft"
+        },
+        {
+          "id": 16819,
+          "slug": "dji-0834-lakes-1006",
+          "title": "Dji 0834 Lakes 1006",
+          "status": "draft"
+        },
+        {
+          "id": 16824,
+          "slug": "cl0a0710-golfo-de-nicoya-1000",
+          "title": "Cl0A0710 Golfo De Nicoya 1000",
+          "status": "draft"
+        },
+        {
+          "id": 16825,
+          "slug": "cl0a0774-golfo-de-nicoya-1001",
+          "title": "Cl0A0774 Golfo De Nicoya 1001",
+          "status": "draft"
+        }
+      ]
+    },
+    "search_not_ready": {
+      "count": 200,
+      "sample": [
+        {
+          "id": 19,
+          "slug": "three-toed-sloth",
+          "title": "Three-toed Sloth",
+          "status": "archived"
+        },
+        {
+          "id": 821,
+          "slug": "dji-0883-821",
+          "title": "Arenal-Volcano - Dji-0883-821",
+          "status": "active"
+        },
+        {
+          "id": 15088,
+          "slug": "img_7099",
+          "title": "Brown Booby - Costa Rica Bird Photography",
+          "status": "active"
+        },
+        {
+          "id": 15089,
+          "slug": "img_8120",
+          "title": "Yellow-headed Caracara - Costa Rica Bird Photography",
+          "status": "active"
+        },
+        {
+          "id": 15092,
+          "slug": "img_8126",
+          "title": "Swainson - Costa Rica Bird Photography",
+          "status": "active"
+        },
+        {
+          "id": 15184,
+          "slug": "img_4308",
+          "title": "Bird Photo 15184",
+          "status": "active"
+        },
+        {
+          "id": 15228,
+          "slug": "cl0a0307",
+          "title": "Cl0a0307 - Central Valley",
+          "status": "active"
+        },
+        {
+          "id": 15231,
+          "slug": "cl0a0540",
+          "title": "Cl0a0540 - Central Valley",
+          "status": "active"
+        },
+        {
+          "id": 15238,
+          "slug": "cl0a0991",
+          "title": "Cl0a0991 - Central Valley",
+          "status": "active"
+        },
+        {
+          "id": 15338,
+          "slug": "cl0a1356",
+          "title": "Photography - Central Valley",
+          "status": "active"
+        },
+        {
+          "id": 15341,
+          "slug": "cl0a2116",
+          "title": "Costa Rica Bird Photography \u2014 Birds of Costa Rica",
+          "status": "active"
+        },
+        {
+          "id": 15344,
+          "slug": "cl0a3515",
+          "title": "Cl0a3515 - Central Valley",
+          "status": "active"
+        },
+        {
+          "id": 15345,
+          "slug": "cl0a3569",
+          "title": "Photography - Central Valley",
+          "status": "active"
+        },
+        {
+          "id": 15347,
+          "slug": "cl0a3605",
+          "title": "Photography - Central Valley",
+          "status": "active"
+        },
+        {
+          "id": 15349,
+          "slug": "cl0a3616",
+          "title": "Photography - Central Valley",
+          "status": "active"
+        },
+        {
+          "id": 15351,
+          "slug": "cl0a3665",
+          "title": "Photography - Central Valley",
+          "status": "active"
+        },
+        {
+          "id": 15352,
+          "slug": "cl0a3674",
+          "title": "Photography - Central Valley",
+          "status": "active"
+        },
+        {
+          "id": 15353,
+          "slug": "cl0a3678",
+          "title": "Photography - Central Valley",
+          "status": "active"
+        },
+        {
+          "id": 15354,
+          "slug": "cl0a3684",
+          "title": "Photography - Central Valley",
+          "status": "active"
+        },
+        {
+          "id": 15356,
+          "slug": "cl0a3737",
+          "title": "Photography - Central Valley",
+          "status": "active"
+        }
+      ]
+    },
+    "derivatives_incomplete": {
+      "count": 0,
+      "sample": []
+    },
+    "missing_description": {
+      "count": 0,
+      "sample": []
+    },
+    "missing_keywords": {
+      "count": 0,
+      "sample": []
+    }
+  },
+  "status": "success"
+}

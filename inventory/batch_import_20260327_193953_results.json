@@ -1,0 +1,37 @@
+{
+  "batch_type": "local_import",
+  "run_at": "BATCH_TIMESTAMP",
+  "folders_processed": 5,
+  "folder_list": [
+    "Costa-Rica-Gallery/Punta-Leona",
+    "Costa-Rica-Gallery/Isla-Tortuga",
+    "Costa-Rica-Gallery/Santa-Teresa-Malpais",
+    "Costa-Rica-Gallery/Golfo-de-Nicoya",
+    "Costa-Rica-Gallery/Peninsula-de-Osa"
+  ],
+  "photos_processed": 20,
+  "duplicates_skipped": 80,
+  "filename_collisions_renamed": 0,
+  "originals_uploaded": 20,
+  "derivatives_generated": 100,
+  "errors": 0,
+  "failed_files": [],
+  "ready_for_public_render_count": 20,
+  "search_ready": 20,
+  "new_db_ids": [23272, 23273, 23274, 23275, 23276, 23277, 23278, 23279, 23280, 23281, 23282, 23283, 23284, 23285, 23286, 23287, 23288, 23289, 23290, 23291],
+  "per_gallery_breakdown": {
+    "Punta-Leona": {"total_on_disk": 273, "new": 0, "duplicates": 20, "status": "fully_imported"},
+    "Isla-Tortuga": {"total_on_disk": 339, "new": 0, "duplicates": 20, "status": "fully_imported"},
+    "Santa-Teresa-Malpais": {"total_on_disk": 205, "new": 0, "duplicates": 20, "status": "fully_imported"},
+    "Golfo-de-Nicoya": {"total_on_disk": 136, "new": 0, "duplicates": 20, "status": "fully_imported"},
+    "Peninsula-de-Osa": {"total_on_disk": 125, "new": 20, "duplicates": 0, "status": "new_import"}
+  },
+  "notes": [
+    "Gallery IDs verified against galleries table before batch build",
+    "All 5 folders targeted for 5th import batch",
+    "Punta-Leona, Isla-Tortuga, Santa-Teresa-Malpais, Golfo-de-Nicoya fully imported - all items were duplicates",
+    "Peninsula-de-Osa: 20 new photos imported (IDs 23272-23291)",
+    "All 20 Peninsula-de-osa photos have derivatives_complete=true, ready_for_public_render=true",
+    "search_ready=true set at import time (metadata enrichment pending)"
+  ]
+}

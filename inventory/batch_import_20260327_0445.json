@@ -1,0 +1,26 @@
+{
+  "batch_type": "local_import",
+  "created_at": "2026-03-27T04:45:00.000Z",
+  "last_run": "2026-03-27T04:57:00.000Z",
+  "batch_folders": [
+    "Costa-Rica-Gallery/Birds",
+    "Costa-Rica-Gallery/Birds-Macaws-Lapas",
+    "Costa-Rica-Gallery/Montezuma-Costa-Rica",
+    "Costa-Rica-Gallery/Flowers-plants-trees",
+    "Costa-Rica-Gallery/Playas-del-Coco"
+  ],
+  "folders_processed": 5,
+  "photos_imported_this_batch": 10,
+  "duplicates_skipped": 90,
+  "filename_collisions_renamed": 0,
+  "originals_uploaded": 10,
+  "derivatives_generated": 50,
+  "ready_for_public_render_count": 10,
+  "search_ready_count": 10,
+  "failed_files": [],
+  "import_errors": 0,
+  "db_ids": [22986, 22987, 22988, 22989, 22990, 22991, 22992, 22993, 22994, 22995],
+  "galleries_updated": ["playas-del-coco"],
+  "status": "completed",
+  "next_action": "build_next_batch_from_Birds_or_Birds-Macaws-Lapas_deeper_scan"
+}

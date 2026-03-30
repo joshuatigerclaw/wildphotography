@@ -1,0 +1,209 @@
+{
+  "batch_id": "repair_20260328_153520",
+  "jobs_processed": 8,
+  "repairs_completed": 30,
+  "failures": 0,
+  "items_requiring_approval": 8,
+  "approval_items": [
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 15699",
+      "slug": "2022-02-18-163424"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 15700",
+      "slug": "2022-02-19-082802"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 15707",
+      "slug": "2023-04-12-111011"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 15677",
+      "slug": "2021-03-26-072224"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 20973",
+      "slug": "dji0361"
+    },
+    {
+      "type": "derivative_regeneration",
+      "reason": "Original exists but derivatives missing for photo 6819",
+      "original_path": "originals/6819/DJI_0259.JPG"
+    },
+    {
+      "type": "derivative_regeneration",
+      "reason": "Original exists but derivatives missing for photo 3512",
+      "original_path": "originals/3512/DJI_0067.jpg"
+    },
+    {
+      "type": "derivative_regeneration",
+      "reason": "Original exists but derivatives missing for photo 7131",
+      "original_path": "originals/7131/DJI_0965.jpg"
+    }
+  ],
+  "results": [
+    {
+      "queue_id": 15735,
+      "photo_id": 15699,
+      "slug": "2022-02-18-163424",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: exists (5 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 15699",
+          "slug": "2022-02-18-163424"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 15736,
+      "photo_id": 15700,
+      "slug": "2022-02-19-082802",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: exists (5 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 15700",
+          "slug": "2022-02-19-082802"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 15737,
+      "photo_id": 15707,
+      "slug": "2023-04-12-111011",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: exists (9 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 15707",
+          "slug": "2023-04-12-111011"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 15738,
+      "photo_id": 15677,
+      "slug": "2021-03-26-072224",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: exists (9 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 15677",
+          "slug": "2021-03-26-072224"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 15739,
+      "photo_id": 20973,
+      "slug": "dji0361",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 20973",
+          "slug": "dji0361"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 15740,
+      "photo_id": 6819,
+      "slug": "img-2383-crocodiles-3437",
+      "repairs": [
+        "original_r2: exists (1 files)",
+        "derivatives_r2: missing (0 files)",
+        "db_r2_mismatch: missing keys ['r2_original_key']",
+        "auto_repaired_db_keys: ['r2_original_key']",
+        "derivatives_missing: needs regeneration"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "derivative_regeneration",
+          "reason": "Original exists but derivatives missing for photo 6819",
+          "original_path": "originals/6819/DJI_0259.JPG"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 15748,
+      "photo_id": 3512,
+      "slug": "2020-06-07-17-57-31-best-of-costa-rica-1548",
+      "repairs": [
+        "original_r2: exists (1 files)",
+        "derivatives_r2: missing (0 files)",
+        "db_r2_mismatch: missing keys ['r2_original_key']",
+        "auto_repaired_db_keys: ['r2_original_key']",
+        "derivatives_missing: needs regeneration"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "derivative_regeneration",
+          "reason": "Original exists but derivatives missing for photo 3512",
+          "original_path": "originals/3512/DJI_0067.jpg"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 15749,
+      "photo_id": 7131,
+      "slug": "img-9674-2-flora-fauna-3749",
+      "repairs": [
+        "original_r2: exists (1 files)",
+        "derivatives_r2: missing (0 files)",
+        "db_r2_mismatch: missing keys ['r2_original_key']",
+        "auto_repaired_db_keys: ['r2_original_key']",
+        "derivatives_missing: needs regeneration"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "derivative_regeneration",
+          "reason": "Original exists but derivatives missing for photo 7131",
+          "original_path": "originals/7131/DJI_0965.jpg"
+        }
+      ],
+      "status": "completed"
+    }
+  ]
+}

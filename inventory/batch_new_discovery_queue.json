@@ -10,7 +10,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped_invalid",
+    "cleanup_note": "macOS AppleDouble metadata file"
   },
   {
     "id": "ext_Best-of-Costa-Rica_7c7574823e9059f4",
@@ -23,6 +24,7 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped_invalid",
+    "cleanup_note": "macOS AppleDouble metadata file"
   }
 ]

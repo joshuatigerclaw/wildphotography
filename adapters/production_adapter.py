@@ -464,13 +464,19 @@ class TypesenseAdapter:
             'keywords': cleaned.get('keywords', []) or [],
             'gallery': str(cleaned.get('gallery_name', cleaned.get('gallery_slug', '')) or ''),
             'gallery_slug': str(cleaned.get('gallery_slug', '') or ''),
-            'location': str(cleaned.get('location_name', cleaned.get('location', '') or '')),
+            'location_name': str(cleaned.get('location_name', cleaned.get('location', '') or '')),
             'thumb_url': str(cleaned.get('thumb_url', '') or ''),
             'small_url': str(cleaned.get('small_url', '') or ''),
             'medium_url': str(cleaned.get('medium_url', '') or ''),
             'large_url': str(cleaned.get('large_url', '') or ''),
             'taken_timestamp': int(cleaned.get('date_taken', 0)) if cleaned.get('date_taken') else 0,
             'taken_year': int(str(cleaned.get('date_taken', ''))[:4]) if cleaned.get('date_taken') and len(str(cleaned.get('date_taken'))) >= 4 else 0,
+            'species_common_name': str(cleaned.get('species_common_name', '') or ''),
+            'species_scientific_name': str(cleaned.get('species_scientific_name', '') or ''),
+            'country': str(cleaned.get('country', '') or ''),
+            'region': str(cleaned.get('region', '') or ''),
+            'category': str(cleaned.get('category', '') or ''),
+            'animal_group': str(cleaned.get('animal_group', '') or ''),
         }
         
         try:

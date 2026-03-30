@@ -1,0 +1,47 @@
+{
+  "batch_id": "batch_import_20260325_02",
+  "run_at": "2026-03-25T14:54:00Z",
+  "folders_processed": 5,
+  "folder_list": [
+    "Costa-Rica-Gallery/Costa-Rica",
+    "Costa-Rica-Gallery/Best-of-Costa-Rica",
+    "Costa-Rica-Gallery/Wildlife",
+    "Costa-Rica-Gallery/Arenal-Volcano",
+    "Costa-Rica-Gallery/Waterfalls-in-Costa-Rica"
+  ],
+  "source_root": "/Volumes/ADATA SC740/Smugmug Backup/Galleries/Costa-Rica-Gallery",
+  "gallery_id_slug_map": {
+    "Costa-Rica-Gallery/Costa-Rica": [25, "costa-rica"],
+    "Costa-Rica-Gallery/Best-of-Costa-Rica": [19, "best-of-costa-rica"],
+    "Costa-Rica-Gallery/Wildlife": [6, "wildlife"],
+    "Costa-Rica-Gallery/Arenal-Volcano": [16, "arenal-volcano"],
+    "Costa-Rica-Gallery/Waterfalls-in-Costa-Rica": [100, "waterfalls-in-costa-rica"]
+  },
+  "photos_processed": 44,
+  "duplicates_skipped": 56,
+  "filename_collisions_renamed": 0,
+  "originals_uploaded": 44,
+  "derivatives_generated": 220,
+  "errors": 0,
+  "failed_files": [],
+  "ready_for_public_render": 44,
+  "search_ready": 0,
+  "new_db_ids": [22818, 22819, 22820, 22821, 22822, 22823, 22824, 22825, 22826, 22827, 22828, 22829, 22830, 22831, 22832, 22833, 22834, 22835, 22836, 22837, 22838, 22839, 22840, 22841, 22842, 22843, 22844, 22845, 22846, 22847, 22848, 22849, 22850, 22851, 22852, 22853, 22854, 22855, 22856, 22857, 22858, 22859, 22860, 22861],
+  "per_gallery_breakdown": {
+    "Costa-Rica-Gallery/Costa-Rica": {"new": 17, "duplicates": 3},
+    "Costa-Rica-Gallery/Best-of-Costa-Rica": {"new": 0, "duplicates": 20},
+    "Costa-Rica-Gallery/Wildlife": {"new": 0, "duplicates": 20},
+    "Costa-Rica-Gallery/Arenal-Volcano": {"new": 7, "duplicates": 13},
+    "Costa-Rica-Gallery/Waterfalls-in-Costa-Rica": {"new": 20, "duplicates": 0}
+  },
+  "notes": [
+    "GALLERY_MAP extended with 5 new Costa-Rica-Gallery subfolder entries",
+    "Costa-Rica folder: 17 new inserts (gallery_id=25), 3 duplicates already in DB",
+    "Best-of-Costa-Rica: all 20 were duplicates (already imported)",
+    "Wildlife: all 20 were duplicates (already imported)",
+    "Arenal-Volcano: 7 new inserts (gallery_id=16), 13 duplicates",
+    "Waterfalls-in-Costa-Rica: 20 new inserts (gallery_id=100), 0 duplicates",
+    "All 44 photos have derivatives_complete=true and ready_for_public_render=true",
+    "search_ready remains false pending metadata enrichment"
+  ]
+}

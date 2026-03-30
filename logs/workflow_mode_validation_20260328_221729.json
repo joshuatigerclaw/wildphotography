@@ -1,0 +1,401 @@
+{
+  "scanned": 65,
+  "compliant": 65,
+  "violations": 0,
+  "missing_meta": 0,
+  "wrong_mode": 0,
+  "compliant_list": [
+    {
+      "workflow": "wild_affiliate_injector",
+      "mode": "strong_model",
+      "reason": "offer matching and placement reasoning",
+      "note": ""
+    },
+    {
+      "workflow": "wild_cluster_expansion",
+      "mode": "strong_model",
+      "reason": "cluster expansion uses multi-step agent prompts for page building",
+      "note": ""
+    },
+    {
+      "workflow": "wild_daily_growth_loop",
+      "mode": "strong_model",
+      "reason": "semantic growth loop orchestration",
+      "note": ""
+    },
+    {
+      "workflow": "wild_derivative_autoscale_controller",
+      "mode": "no_llm",
+      "reason": "backlog math and dispatch logic are deterministic",
+      "note": ""
+    },
+    {
+      "workflow": "wild_derivative_autoscale_dashboard",
+      "mode": "no_llm",
+      "reason": "deterministic dashboard metrics read from DB",
+      "note": ""
+    },
+    {
+      "workflow": "wild_derivative_autoscale_launcher",
+      "mode": "no_llm",
+      "reason": "backlog math and dispatch logic are deterministic",
+      "note": ""
+    },
+    {
+      "workflow": "wild_derivative_rebuild_dashboard",
+      "mode": "no_llm",
+      "reason": "deterministic rebuild dashboard metrics",
+      "note": ""
+    },
+    {
+      "workflow": "wild_duplicate_detector",
+      "mode": "no_llm",
+      "reason": "duplicate detection logic is deterministic",
+      "note": ""
+    },
+    {
+      "workflow": "wild_failure_reason_formatter",
+      "mode": "small_model",
+      "reason": "short operational summary from structured error JSON",
+      "note": ""
+    },
+    {
+      "workflow": "wild_gallery_mapping_preflight",
+      "mode": "no_llm",
+      "reason": "gallery mapping preflight is deterministic",
+      "note": ""
+    },
+    {
+      "workflow": "wild_google_incoming_import",
+      "mode": "no_llm",
+      "reason": "import, upload, derivative generation, and DB updates are deterministic",
+      "note": ""
+    },
+    {
+      "workflow": "wild_google_incoming_metadata_extract",
+      "mode": "no_llm",
+      "reason": "",
+      "note": " (yaml-parse-warning: while scanning a simple key\n  in \"<unicode string>\", line 27...)"
+    },
+    {
+      "workflow": "wild_google_incoming_postrun_validate",
+      "mode": "no_llm",
+      "reason": "conditional Typesense sync and sample validation are deterministic",
+      "note": ""
+    },
+    {
+      "workflow": "wild_google_incoming_scan",
+      "mode": "no_llm",
+      "reason": "",
+      "note": " (yaml-parse-warning: while scanning a simple key\n  in \"<unicode string>\", line 43...)"
+    },
+    {
+      "workflow": "wild_google_incoming_select_batch",
+      "mode": "no_llm",
+      "reason": "",
+      "note": " (yaml-parse-warning: while scanning a simple key\n  in \"<unicode string>\", line 32...)"
+    },
+    {
+      "workflow": "wild_google_incoming_stage_and_move",
+      "mode": "no_llm",
+      "reason": "",
+      "note": " (yaml-parse-warning: while scanning a simple key\n  in \"<unicode string>\", line 42...)"
+    },
+    {
+      "workflow": "wild_google_incoming_supervisor",
+      "mode": "no_llm",
+      "reason": "orchestrates deterministic import pipeline only",
+      "note": ""
+    },
+    {
+      "workflow": "wild_growth_supervisor_strong",
+      "mode": "strong_model",
+      "reason": "semantic SEO and content generation",
+      "note": ""
+    },
+    {
+      "workflow": "wild_gsc_daily_summary",
+      "mode": "small_model",
+      "reason": "short human-readable summary from structured GSC metrics",
+      "note": ""
+    },
+    {
+      "workflow": "wild_gsc_pull_performance",
+      "mode": "no_llm",
+      "reason": "API ingestion and DB storage are deterministic",
+      "note": ""
+    },
+    {
+      "workflow": "wild_gsc_sitemap_manager",
+      "mode": "no_llm",
+      "reason": "sitemap listing/submission are deterministic API actions",
+      "note": ""
+    },
+    {
+      "workflow": "wild_gsc_url_inspection_sample",
+      "mode": "no_llm",
+      "reason": "inspection API calls and result storage are deterministic",
+      "note": ""
+    },
+    {
+      "workflow": "wild_import_queue_cleanup",
+      "mode": "no_llm",
+      "reason": "queue cleanup, duplicate detection, and file classification are deterministic",
+      "note": ""
+    },
+    {
+      "workflow": "wild_import_run_summary",
+      "mode": "small_model",
+      "reason": "concise operational summary from structured import report",
+      "note": ""
+    },
+    {
+      "workflow": "wild_internal_linking",
+      "mode": "strong_model",
+      "reason": "semantic internal linking strategy",
+      "note": ""
+    },
+    {
+      "workflow": "wild_manifest_scan",
+      "mode": "no_llm",
+      "reason": "filesystem manifest scan is deterministic",
+      "note": ""
+    },
+    {
+      "workflow": "wild_ops_daily_digest",
+      "mode": "small_model",
+      "reason": "concise aggregate ops summary from structured JSON",
+      "note": ""
+    },
+    {
+      "workflow": "wild_ops_reporting_supervisor_small",
+      "mode": "small_model",
+      "reason": "human-readable summaries of deterministic workflows",
+      "note": ""
+    },
+    {
+      "workflow": "wild_ops_supervisor_no_llm",
+      "mode": "no_llm",
+      "reason": "pure operational orchestration of deterministic workflows",
+      "note": ""
+    },
+    {
+      "workflow": "wild_public_render_validation",
+      "mode": "no_llm",
+      "reason": "HTTP checks and image validation are deterministic",
+      "note": ""
+    },
+    {
+      "workflow": "wild_public_validation",
+      "mode": "no_llm",
+      "reason": "HTTP checks and validation are deterministic",
+      "note": ""
+    },
+    {
+      "workflow": "wild_r2_presence_audit",
+      "mode": "no_llm",
+      "reason": "R2 presence audit is deterministic API check",
+      "note": ""
+    },
+    {
+      "workflow": "wild_rebuild_dispatcher",
+      "mode": "no_llm",
+      "reason": "DB filtering and queue writes are deterministic",
+      "note": ""
+    },
+    {
+      "workflow": "wild_rebuild_from_r2_originals",
+      "mode": "no_llm",
+      "reason": "rebuild from R2 originals is deterministic",
+      "note": ""
+    },
+    {
+      "workflow": "wild_repair_incomplete_legacy_core",
+      "mode": "no_llm",
+      "reason": "legacy repair logic is deterministic",
+      "note": ""
+    },
+    {
+      "workflow": "wild_repair_reconcile",
+      "mode": "strong_model",
+      "reason": "media integrity audit and repair require agent reasoning",
+      "note": ""
+    },
+    {
+      "workflow": "wild_search_index_drift_check",
+      "mode": "no_llm",
+      "reason": "search index drift check is deterministic",
+      "note": ""
+    },
+    {
+      "workflow": "wild_seo_article_dispatch",
+      "mode": "strong_model",
+      "reason": "article creation requires semantic generation",
+      "note": ""
+    },
+    {
+      "workflow": "wild_seo_internal_link_builder",
+      "mode": "strong_model",
+      "reason": "semantic internal link building",
+      "note": ""
+    },
+    {
+      "workflow": "wild_seo_linking_dispatch",
+      "mode": "strong_model",
+      "reason": "semantic internal-link recommendation",
+      "note": ""
+    },
+    {
+      "workflow": "wild_seo_opportunity_scoring",
+      "mode": "strong_model",
+      "reason": "combines GSC and Serpstat signals into prioritized SEO actions",
+      "note": ""
+    },
+    {
+      "workflow": "wild_seo_page_builder",
+      "mode": "strong_model",
+      "reason": "semantic SEO page building",
+      "note": ""
+    },
+    {
+      "workflow": "wild_seo_queue_seed",
+      "mode": "strong_model",
+      "reason": "semantic SEO queue seeding from signals",
+      "note": ""
+    },
+    {
+      "workflow": "wild_seo_relationship_builder",
+      "mode": "strong_model",
+      "reason": "semantic relationship building between content",
+      "note": ""
+    },
+    {
+      "workflow": "wild_seo_report_daily",
+      "mode": "small_model",
+      "reason": "structured SEO report from daily metrics",
+      "note": ""
+    },
+    {
+      "workflow": "wild_seo_rewrite_dispatch",
+      "mode": "strong_model",
+      "reason": "writes metadata and copy improvements",
+      "note": ""
+    },
+    {
+      "workflow": "wild_seo_supervisor",
+      "mode": "strong_model",
+      "reason": "semantic SEO orchestration",
+      "note": ""
+    },
+    {
+      "workflow": "wild_seo_supervisor_serpstat_gsc",
+      "mode": "strong_model",
+      "reason": "semantic SEO orchestration with GSC and Serpstat",
+      "note": ""
+    },
+    {
+      "workflow": "wild_serpstat_backlink_refresh",
+      "mode": "no_llm",
+      "reason": "API ingestion and DB storage are deterministic",
+      "note": ""
+    },
+    {
+      "workflow": "wild_serpstat_backlink_refresh_raw",
+      "mode": "no_llm",
+      "reason": "API ingestion and DB storage are deterministic",
+      "note": ""
+    },
+    {
+      "workflow": "wild_serpstat_daily_summary",
+      "mode": "small_model",
+      "reason": "short human-readable summary from structured Serpstat metrics",
+      "note": ""
+    },
+    {
+      "workflow": "wild_serpstat_keyword_expand",
+      "mode": "no_llm",
+      "reason": "API ingestion and DB storage are deterministic",
+      "note": ""
+    },
+    {
+      "workflow": "wild_serpstat_keyword_ingest_raw",
+      "mode": "no_llm",
+      "reason": "API ingestion and DB storage are deterministic",
+      "note": ""
+    },
+    {
+      "workflow": "wild_serpstat_rank_refresh",
+      "mode": "no_llm",
+      "reason": "API ingestion and DB storage are deterministic",
+      "note": ""
+    },
+    {
+      "workflow": "wild_serpstat_rank_refresh_raw",
+      "mode": "no_llm",
+      "reason": "API ingestion and DB storage are deterministic",
+      "note": ""
+    },
+    {
+      "workflow": "wild_serpstat_url_gap_ingest_raw",
+      "mode": "no_llm",
+      "reason": "API ingestion and DB storage are deterministic",
+      "note": ""
+    },
+    {
+      "workflow": "wild_serpstat_url_gap_scan",
+      "mode": "no_llm",
+      "reason": "API ingestion and DB storage are deterministic",
+      "note": ""
+    },
+    {
+      "workflow": "wild_slug_collision_audit",
+      "mode": "no_llm",
+      "reason": "slug collision audit is deterministic SQL",
+      "note": ""
+    },
+    {
+      "workflow": "wild_slug_collision_repair",
+      "mode": "no_llm",
+      "reason": "slug collision repair is deterministic SQL",
+      "note": ""
+    },
+    {
+      "workflow": "wild_test_env",
+      "mode": "no_llm",
+      "reason": "environment test - deterministic",
+      "note": ""
+    },
+    {
+      "workflow": "wild_typesense_reconcile",
+      "mode": "no_llm",
+      "reason": "deterministic DB vs Typesense diff and sync",
+      "note": ""
+    },
+    {
+      "workflow": "wild_typesense_reconcile_no_llm",
+      "mode": "no_llm",
+      "reason": "",
+      "note": " (yaml-parse-warning: while scanning a simple key\n  in \"<unicode string>\", line 28...)"
+    },
+    {
+      "workflow": "wild_typesense_reconcile_summary",
+      "mode": "small_model",
+      "reason": "",
+      "note": " (yaml-parse-warning: while scanning a simple key\n  in \"<unicode string>\", line 21...)"
+    },
+    {
+      "workflow": "wild_typesense_sync",
+      "mode": "no_llm",
+      "reason": "deterministic indexing and API sync",
+      "note": ""
+    },
+    {
+      "workflow": "wild_workflow_mode_validator",
+      "mode": "no_llm",
+      "reason": "deterministic config validation",
+      "note": ""
+    }
+  ],
+  "violation_list": [],
+  "timestamp": "20260328_221729"
+}

@@ -111,6 +111,8 @@ export interface Photo {
   country?: string | null;
   species_common_name?: string | null;
   species_scientific_name?: string | null;
+  /** JSONB — contains seo_title, meta_description, keyword_clusters, affiliate_blurb */
+  metadata?: Record<string, any> | null;
 }
 
 export interface GallerySequence {
@@ -155,6 +157,7 @@ function mapPhoto(row: any): Photo {
     country: row.country || null,
     species_common_name: row.species_common_name || null,
     species_scientific_name: row.species_scientific_name || null,
+    metadata: row.metadata || null,
   };
 }
 
@@ -363,7 +366,8 @@ export async function getPhotoBySlug(slug: string): Promise<Photo | null> {
            p.iso, p.aperture, p.shutter_speed, p.focal_length_mm,
            p.lat, p.lon, p.views_count, p.date_taken, p.date_uploaded,
            p.thumb_url, p.small_url, p.medium_url, p.large_url, p.location,
-           p.region, p.country, p.species_common_name, p.species_scientific_name
+           p.region, p.country, p.species_common_name, p.species_scientific_name,
+           p.metadata
     FROM photos p
     WHERE p.slug = $1 AND p.is_active = true AND p.ready_for_public_render = true
     LIMIT 1
@@ -978,9 +982,18 @@ export interface Article {
   smallUrl: string | null;
   mediumUrl: string | null;
   largeUrl: string | null;
+  metadata: Record<string, any> | null;
 }
 
 function mapArticle(row: any): Article {
+  let parsedMeta: Record<string, any> | null = null;
+  if (row.metadata) {
+    try {
+      parsedMeta = typeof row.metadata === 'string' ? JSON.parse(row.metadata) : row.metadata;
+    } catch {
+      parsedMeta = null;
+    }
+  }
   return {
     id: String(row.id),
     title: row.title || '',
@@ -999,6 +1012,7 @@ function mapArticle(row: any): Article {
     smallUrl: withR2Base(row.small_url),
     mediumUrl: withR2Base(row.medium_url),
     largeUrl: withR2Base(row.large_url),
+    metadata: parsedMeta,
   };
 }
 
@@ -1010,7 +1024,8 @@ export async function getAllArticles(): Promise<Article[]> {
     SELECT ca.id, ca.title, ca.slug, ca.article_type, ca.excerpt, ca.content,
            ca.status, ca.author, ca.featured_photo_id,
            ca.created_at, ca.updated_at, ca.published_at,
-           p.slug as photo_slug, p.thumb_url, p.small_url, p.medium_url, p.large_url
+           p.slug as photo_slug, p.thumb_url, p.small_url, p.medium_url, p.large_url,
+           ca.metadata
     FROM content_articles ca
     LEFT JOIN photos p ON p.id = ca.featured_photo_id
     WHERE ca.status = 'published'
@@ -1027,7 +1042,8 @@ export async function getArticleBySlug(slug: string): Promise<Article | null> {
     SELECT ca.id, ca.title, ca.slug, ca.article_type, ca.excerpt, ca.content,
            ca.status, ca.author, ca.featured_photo_id,
            ca.created_at, ca.updated_at, ca.published_at,
-           p.slug as photo_slug, p.thumb_url, p.small_url, p.medium_url, p.large_url
+           p.slug as photo_slug, p.thumb_url, p.small_url, p.medium_url, p.large_url,
+           ca.metadata
     FROM content_articles ca
     LEFT JOIN photos p ON p.id = ca.featured_photo_id
     WHERE ca.slug = $1 AND ca.status = 'published'
@@ -1045,7 +1061,8 @@ export async function getRelatedArticles(currentSlug: string, articleType?: stri
     SELECT ca.id, ca.title, ca.slug, ca.article_type, ca.excerpt, ca.content,
            ca.status, ca.author, ca.featured_photo_id,
            ca.created_at, ca.updated_at, ca.published_at,
-           p.slug as photo_slug, p.thumb_url, p.small_url, p.medium_url, p.large_url
+           p.slug as photo_slug, p.thumb_url, p.small_url, p.medium_url, p.large_url,
+           ca.metadata
     FROM content_articles ca
     LEFT JOIN photos p ON p.id = ca.featured_photo_id
     WHERE ca.status = 'published' AND ca.slug != $1
@@ -1115,6 +1132,64 @@ export async function getGallerySequenceForPhoto(
   };
 }
 
+// ============================================================
+// AFFILIATE BLOCKS
+// ============================================================
+export interface AffiliateBlock {
+  id: number;
+  entityType: string;
+  entityId: number;
+  provider: string;
+  title: string | null;
+  shortcode: string | null;
+  destinationKey: string | null;
+  priority: number;
+  isActive: boolean;
+  createdAt: Date;
+  updatedAt: Date;
+}
+
+/**
+ * Get location ID by slug
+ */
+export async function getLocationIdBySlug(slug: string): Promise<number | null> {
+  const result = await sql(`
+    SELECT id FROM locations WHERE slug = $1 LIMIT 1
+  `, [slug]);
+  if (result.length === 0) return null;
+  return result[0].id;
+}
+
+/**
+ * Get active affiliate blocks for an entity, ordered by priority desc
+ */
+export async function getAffiliateBlocksForEntity(
+  entityType: string,
+  entityId: number
+): Promise<AffiliateBlock[]> {
+  const result = await sql(`
+    SELECT id, entity_type, entity_id, provider, title, shortcode,
+           destination_key, priority, is_active, created_at, updated_at
+    FROM affiliate_blocks
+    WHERE entity_type = $1 AND entity_id = $2 AND is_active = true
+    ORDER BY priority DESC, provider
+  `, [entityType, entityId]);
+
+  return (result as any[]).map((row: any): AffiliateBlock => ({
+    id: row.id,
+    entityType: row.entity_type,
+    entityId: row.entity_id,
+    provider: row.provider,
+    title: row.title,
+    shortcode: row.shortcode,
+    destinationKey: row.destination_key,
+    priority: row.priority,
+    isActive: row.is_active,
+    createdAt: row.created_at,
+    updatedAt: row.updated_at,
+  }));
+}
+
 export default {
   getGalleries,
   getGalleryBySlug,
@@ -1142,4 +1217,6 @@ export default {
   getAllArticles,
   getArticleBySlug,
   getRelatedArticles,
+  getLocationIdBySlug,
+  getAffiliateBlocksForEntity,
 };

@@ -1,0 +1,64 @@
+[2026-03-29T12:58:00Z] === WildPhotography Dispatch Run 2026-03-29T12:58:00.415017+00:00 ===
+[2026-03-29T12:58:07Z] METRICS: {"total_photos": 22796, "derivatives_complete": 22506, "ready_for_public_render": 22612, "search_ready": 22376, "typesense_sync_count": 22022, "stale_drift": 354, "repair_backlog": 290, "validation_queue": 177, "true_orphans": 0, "galleries_missing_cover": 3, "total_galleries": 129, "manual_review_count": 0, "photo_import_pending_queue": 0, "derivative_rebuild_queue_queue": 0, "manual_review_queue": 28, "autoscale_backlog_r2": 91, "autoscale_target_workers": 1}
+[2026-03-29T12:58:07Z] TRIGGER: wild_typesense_reconcile (metric=stale_drift=354 > 25)
+[2026-03-29T12:58:07Z] TRIGGER: wild_repair_incomplete_legacy (metric=repair_backlog=290 > 100)
+[2026-03-29T12:58:07Z] TRIGGER: wild_production_validation_v2 (metric=validation_queue=177 > 0)
+[2026-03-29T12:58:07Z] TRIGGER: wild_gallery_cover_assignment (metric=galleries_missing_cover=3 > 0)
+[2026-03-29T12:58:07Z] SKIP: wild_import_batch (metric=import_queue=0 <= 0)
+[2026-03-29T12:58:07Z] TRIGGER: wild_derivative_autoscale_launcher (metric=autoscale_target_workers=1 > 0)
+[2026-03-29T12:58:07Z] TRIGGER (script): wild_typesense_reconcile_no_llm
+[2026-03-29T12:58:07Z] TRIGGER (script): wild_rebuild_dispatcher
+[2026-03-29T12:58:07Z] Dispatched: ['wild_typesense_reconcile', 'wild_repair_incomplete_legacy', 'wild_production_validation_v2', 'wild_gallery_cover_assignment', 'wild_derivative_autoscale_launcher', 'wild_typesense_reconcile_no_llm', 'wild_rebuild_dispatcher']
+[2026-03-29T12:58:07Z] Heartbeat → /Users/joshuatenbrink/.openclaw/workspace/wildphotography/runtime/dispatch_heartbeat.json
+[2026-03-29T12:58:07Z] === DONE ===
+
+[2026-03-29T16:27:44Z] === WildPhotography Dispatch Run 2026-03-29T16:27:44.897492+00:00 ===
+[2026-03-29T16:27:51Z] METRICS: {"total_photos": 22796, "derivatives_complete": 22796, "ready_for_public_render": 22612, "search_ready": 22761, "typesense_sync_count": 22022, "stale_drift": 739, "repair_backlog": 0, "validation_queue": 177, "true_orphans": 0, "galleries_missing_cover": 3, "total_galleries": 129, "manual_review_count": 0, "photo_import_pending_queue": 0, "derivative_rebuild_queue_queue": 0, "manual_review_queue": 28, "autoscale_backlog_r2": 91, "autoscale_target_workers": 1}
+[2026-03-29T16:27:51Z] TRIGGER: wild_typesense_reconcile (metric=stale_drift=739 > 25)
+[2026-03-29T16:27:54Z]   → FAIL: [plugins] [lcm] Plugin loaded (enabled=true, db=/Users/joshuatenbrink/.openclaw/lcm.db, threshold=0.75)
+[plugins] [lcm] Compaction summarization model: minimax-portal/MiniMax-M2.7 (default)
+
+[2026-03-29T16:27:54Z] SKIP: wild_repair_incomplete_legacy (metric=repair_backlog=0 <= 100)
+[2026-03-29T16:27:54Z] TRIGGER: wild_production_validation_v2 (metric=validation_queue=177 > 0)
+[2026-03-29T16:27:54Z]   → FAIL: Workflow not found: /Users/joshuatenbrink/.openclaw/workspace/lobster/wild_production_validation_v2.lobster.yaml
+[2026-03-29T16:27:54Z] TRIGGER: wild_gallery_cover_assignment (metric=galleries_missing_cover=3 > 0)
+[2026-03-29T16:27:55Z]   → FAIL: [plugins] [lcm] Plugin loaded (enabled=true, db=/Users/joshuatenbrink/.openclaw/lcm.db, threshold=0.75)
+[plugins] [lcm] Compaction summarization model: minimax-portal/MiniMax-M2.7 (default)
+
+[2026-03-29T16:27:55Z] SKIP: wild_import_batch (metric=import_queue=0 <= 0)
+[2026-03-29T16:27:55Z] TRIGGER: wild_derivative_autoscale_launcher (metric=autoscale_target_workers=1 > 0)
+[2026-03-29T16:27:57Z]   → FAIL: [plugins] [lcm] Plugin loaded (enabled=true, db=/Users/joshuatenbrink/.openclaw/lcm.db, threshold=0.75)
+[plugins] [lcm] Compaction summarization model: minimax-portal/MiniMax-M2.7 (default)
+
+[2026-03-29T16:27:57Z] TRIGGER (script): wild_typesense_reconcile_no_llm
+[2026-03-29T16:27:59Z]   → OK: ==============================================================
+  WildPhotography — Zero-LLM Typesense Reconcile
+  2026-03-29T16:27:57.304192+00:00
+=====================================================
+[2026-03-29T16:27:59Z] Dispatched: ['wild_typesense_reconcile', 'wild_production_validation_v2', 'wild_gallery_cover_assignment', 'wild_derivative_autoscale_launcher', 'wild_typesense_reconcile_no_llm']
+[2026-03-29T16:27:59Z] Heartbeat → /Users/joshuatenbrink/.openclaw/workspace/wildphotography/runtime/dispatch_heartbeat.json
+[2026-03-29T16:27:59Z] === DONE ===
+
+[2026-03-29T23:04:25Z] === WildPhotography Dispatch Run 2026-03-29T23:04:25.028271+00:00 ===
+[2026-03-29T23:04:31Z] METRICS: {"total_photos": 23077, "derivatives_complete": 23077, "ready_for_public_render": 23077, "search_ready": 23077, "typesense_sync_count": 22022, "stale_drift": 1055, "repair_backlog": 0, "validation_queue": 0, "true_orphans": 0, "galleries_missing_cover": 3, "total_galleries": 132, "manual_review_count": 0, "photo_import_pending_queue": 0, "derivative_rebuild_queue_queue": 0, "manual_review_queue": 28, "autoscale_backlog_r2": 0, "autoscale_target_workers": 0}
+[2026-03-29T23:04:31Z] TRIGGER: wild_typesense_reconcile (metric=stale_drift=1055 > 25)
+[2026-03-29T23:04:34Z]   → FAIL: [plugins] [lcm] Plugin loaded (enabled=true, db=/Users/joshuatenbrink/.openclaw/lcm.db, threshold=0.75)
+[plugins] [lcm] Compaction summarization model: minimax-portal/MiniMax-M2.7 (default)
+
+[2026-03-29T23:04:34Z] SKIP: wild_repair_incomplete_legacy (metric=repair_backlog=0 <= 100)
+[2026-03-29T23:04:34Z] SKIP: wild_production_validation_v2 (metric=validation_queue=0 <= 0)
+[2026-03-29T23:04:34Z] TRIGGER: wild_gallery_cover_assignment (metric=galleries_missing_cover=3 > 0)
+[2026-03-29T23:04:35Z]   → FAIL: [plugins] [lcm] Plugin loaded (enabled=true, db=/Users/joshuatenbrink/.openclaw/lcm.db, threshold=0.75)
+[plugins] [lcm] Compaction summarization model: minimax-portal/MiniMax-M2.7 (default)
+
+[2026-03-29T23:04:35Z] SKIP: wild_import_batch (metric=import_queue=0 <= 0)
+[2026-03-29T23:04:35Z] SKIP: wild_derivative_autoscale_launcher (metric=autoscale_target_workers=0 <= 0)
+[2026-03-29T23:04:35Z] TRIGGER (script): wild_typesense_reconcile_no_llm
+[2026-03-29T23:04:40Z]   → OK: ==============================================================
+  WildPhotography — Zero-LLM Typesense Reconcile
+  2026-03-29T23:04:35.789549+00:00
+=====================================================
+[2026-03-29T23:04:40Z] Dispatched: ['wild_typesense_reconcile', 'wild_gallery_cover_assignment', 'wild_typesense_reconcile_no_llm']
+[2026-03-29T23:04:40Z] Heartbeat → /Users/joshuatenbrink/.openclaw/workspace/wildphotography/runtime/dispatch_heartbeat.json
+[2026-03-29T23:04:40Z] === DONE ===
+

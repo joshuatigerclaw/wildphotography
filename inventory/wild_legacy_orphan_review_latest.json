@@ -1,0 +1,37 @@
+{
+  "workflow": "wild_legacy_orphan_review",
+  "status": "run_attempted_db_unavailable",
+  "attempted_at": "2026-03-26T20:28:00.000000+00:00",
+  "db_status": "neon_data_transfer_quota_exceeded_-_connection_refused",
+  "last_successful_run": {
+    "completed_at": "2026-03-22T16:05:00.000000+00:00",
+    "result_file": "wildphotography/inventory/wild_legacy_orphan_review.result.json"
+  },
+  "last_successful_results": {
+    "orphan_candidates_loaded": 500,
+    "attempted_recovery_count": 500,
+    "recovered_count": 69,
+    "unrecoverable_count": 179,
+    "potentially_recoverable_count": 252,
+    "manual_review_queued_count": 179
+  },
+  "full_pool_totals": {
+    "total_orphan_candidates": 11021,
+    "truly_orphan": 182,
+    "has_both_r2_and_osp": 7153,
+    "r2_key_only": 3274,
+    "osp_only": 412
+  },
+  "blocked": {
+    "reason": "neon_database_connection_failed_data_transfer_quota_exceeded",
+    "impact": "Cannot run live DB queries or execute repair operations until quota is reset or plan is upgraded",
+    "next_action": "Retry when DB connection is restored. Recommend reviewing Neon plan data transfer limits."
+  },
+  "classification_summary": {
+    "recovered_69": "have R2 derivatives - thumb_url needs updating from dead images.wildphotography.com CDN to R2 paths",
+    "potentially_recoverable_252": "have original_source_path on /Volumes/ADATA SC740/ Smugmug Backup - need re-import workflow",
+    "unrecoverable_179": "no source_path, no original_r2_key, no R2 derivatives - placeholder/reference entries (species names) created without actual photo assets"
+  },
+  "unrecoverable_ids_from_last_run": [16,17,18,20,21,22,24,25,26,27,28,29,30,31,32,33,34,35,40,41,42,43,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,136,137,138,139,140,141,142,143,144,145,146,147,148,149,150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237,238,239,242,243,758,759,760,761,762,763,764,765,766,767,768,769,770,771,772,773,774,775,776,777,778,779,780,781,782,783,784,785,786,787,788,789,790,791,792,793,794],
+  "notes": "DB connection failed with 'data transfer quota exceeded'. Workflow cannot run until Neon plan data transfer quota is restored or upgraded. Last successful run (March 22) classified the first 500 orphan candidates from the pool of 11,021. 179 truly orphan placeholder records identified and queued to manual_review_required."
+}
