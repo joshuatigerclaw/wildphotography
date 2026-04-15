@@ -534,17 +534,25 @@ export default {
       // Sitemap: galleries
       if (path === 'sitemaps/galleries.xml') {
         const { getGalleries } = await import('./lib/db');
-        const galleries = await getGalleries();
-        
+        // Guard: if getGalleries hangs > 12s, return 503 so Cloudflare doesn't soft-timeout
+        const galleries = await Promise.race([
+          getGalleries(),
+          new Promise<null>((_, reject) => setTimeout(() => reject(new Error('galleries_timeout')), 12000)),
+        ]).catch(() => null);
+
+        if (!galleries) {
+          return new Response('Service temporarily unavailable', { status: 503 });
+        }
+
         let xml = '<?xml version="1.0" encoding="UTF-8"?>\n';
         xml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
-        
+
         for (const g of galleries) {
           xml += `  <url><loc>https://wildphotography.com/gallery/${g.slug}</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>\n`;
         }
-        
+
         xml += '</urlset>';
-        
+
         const response = new Response(xml, { headers: { 'Content-Type': 'application/xml' } });
         response.headers.set('Cache-Control', 'public, max-age=3600, s-maxage=86400');
         return response;

@@ -11,15 +11,24 @@ import { neon } from '@neondatabase/serverless';
 const NEON_CONNECTION = 'postgresql://neondb_owner:npg_BvF2JsQ8drba@ep-calm-fire-ad0dfnqd-pooler.c-2.us-east-1.aws.neon.tech/wildphotography?sslmode=require';
 
 /**
- * Execute SQL query via Neon serverless
+ * Execute SQL query via Neon serverless with timeout.
+ * Cloudflare Workers can hang indefinitely if Neon is slow/unreachable.
+ * Uses Promise.race to enforce a hard timeout.
  */
-export async function queryNeon<T>(sql: string): Promise<T[]> {
+export async function queryNeon<T>(sql: string, timeoutMs = 10000): Promise<T[]> {
+  const timeout = new Promise<[]>((_, reject) =>
+    setTimeout(() => reject(new Error(`[db] Query timed out after ${timeoutMs}ms`)), timeoutMs)
+  );
   try {
     const sqlFn = neon(NEON_CONNECTION);
-    const rows = await sqlFn(sql);
-    return rows as T[];
-  } catch (error) {
-    console.error('[db] Query error:', error);
+    const result = await Promise.race([sqlFn(sql), timeout]);
+    return (result as T[]) ?? [];
+  } catch (error: any) {
+    if (error.message?.includes('timed out')) {
+      console.error('[db] Query timeout:', sql.slice(0, 80));
+    } else {
+      console.error('[db] Query error:', error?.message || error);
+    }
     return [];
   }
 }
@@ -46,23 +55,32 @@ function mapPhoto(row: any): PhotoDerivatives {
 }
 
 /**
- * Fetch all galleries
+ * Fetch all active galleries with cover photo and photo count.
+ * Uses a CTE for efficient photo_count calculation (avoids correlated subquery).
  */
 export async function getGalleries(): Promise<Gallery[]> {
-  // Fetch unique galleries with cover - use DISTINCT ON to prevent duplicates
   const rows = await queryNeon<any>(`
-    SELECT DISTINCT ON (g.slug) 
+    WITH gallery_stats AS (
+      SELECT gp.gallery_id, COUNT(gp.photo_id) as photo_count
+      FROM gallery_photos gp
+      JOIN photos p ON gp.photo_id = p.id
+      WHERE p.is_active = true AND p.ready_for_public_render = true
+      GROUP BY gp.gallery_id
+    )
+    SELECT
       g.id, g.slug, g.name, g.description, g.cover_photo_id,
       p.thumb_url, p.small_url, p.medium_url, p.large_url,
-      (SELECT COUNT(*) FROM gallery_photos gp2 JOIN photos p2 ON gp2.photo_id = p2.id 
-       WHERE gp2.gallery_id = g.id AND p2.is_active = true AND p2.ready_for_public_render = true) as photo_count
+      COALESCE(gs.photo_count, 0) as photo_count
     FROM galleries g
     LEFT JOIN gallery_photos gp ON g.id = gp.gallery_id
-    LEFT JOIN photos p ON gp.photo_id = p.id AND p.is_active = true AND p.ready_for_public_render = true
+      AND gp.photo_id = g.cover_photo_id
+    LEFT JOIN photos p ON gp.photo_id = p.id
+      AND p.is_active = true AND p.ready_for_public_render = true
+    LEFT JOIN gallery_stats gs ON g.id = gs.gallery_id
     WHERE g.is_active = true
-    ORDER BY g.slug, p.date_uploaded DESC NULLS LAST
+    ORDER BY g.sort_order NULLS LAST, g.name
   `);
-  
+
   return rows.map(r => ({
     id: r.id,
     slug: r.slug,
