@@ -34,6 +34,7 @@ import { renderSearch } from './pages/search';
 import { renderGallery } from './pages/gallery';
 import { renderPhoto } from './pages/photo';
 import { renderArticle } from './pages/article';
+import { renderLocation } from './pages/location';
 import { renderSpecies } from './pages/species';
 import { renderSpeciesIndex } from './pages/species-index';
 import { renderRegion } from './pages/region';
@@ -43,6 +44,7 @@ import { renderGYGRedirect } from './pages/affiliate-gyg';
 import { renderViatorRedirect } from './pages/affiliate-viator';
 import { renderTripadvisorRedirect } from './pages/affiliate-tripadvisor';
 import { render404, render403 } from './pages/errors';
+import { handleDailyRandomFeed } from './routes/feed-daily-random';
 
 const MEDIA_BASE = 'https://wildphotography-media.josh-ec6.workers.dev';
 
@@ -628,6 +630,15 @@ Disallow: /api/
         if (path.startsWith('region/')) {
           const regionSlug = path.replace('region/', '').replace(/\/$/, '');
           return await renderRegion(regionSlug, env, url);
+        }
+
+        if (path.startsWith('location/')) {
+          const locationSlug = path.replace('location/', '').replace(/\/$/, '');
+          return await renderLocation(locationSlug, env, url);
+        }
+
+        if (url.pathname === '/feed/daily-random.xml') {
+          return handleDailyRandomFeed(request, env);
         }
 
         // Affiliate redirect: /go/gyg/:slug
