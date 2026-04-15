@@ -45,6 +45,7 @@ import { renderViatorRedirect } from './pages/affiliate-viator';
 import { renderTripadvisorRedirect } from './pages/affiliate-tripadvisor';
 import { render404, render403 } from './pages/errors';
 import { handleDailyRandomFeed } from './routes/feed-daily-random';
+import { handleAllFeed } from './routes/feed-all';
 
 const MEDIA_BASE = 'https://wildphotography-media.josh-ec6.workers.dev';
 
@@ -639,6 +640,10 @@ Disallow: /api/
 
         if (url.pathname === '/feed/daily-random.xml') {
           return handleDailyRandomFeed(request, env);
+        }
+
+        if (url.pathname === '/feed/all.xml') {
+          return handleAllFeed(request, env);
         }
 
         // Affiliate redirect: /go/gyg/:slug
