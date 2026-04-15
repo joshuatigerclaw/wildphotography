@@ -533,11 +533,18 @@ export default {
 
       // Sitemap: galleries
       if (path === 'sitemaps/galleries.xml') {
-        const { getGalleries } = await import('./lib/db');
-        // Guard: if getGalleries hangs > 12s, return 503 so Cloudflare doesn't soft-timeout
+        const { queryNeon } = await import('./lib/db');
+
+        // Guard: if query hangs > 10s, return 503 so Cloudflare doesn't soft-timeout
+        // Use direct lightweight query (no JOINs) to avoid Neon hanging in CF Workers env
         const galleries = await Promise.race([
-          getGalleries(),
-          new Promise<null>((_, reject) => setTimeout(() => reject(new Error('galleries_timeout')), 12000)),
+          queryNeon<{ slug: string }>(`
+            SELECT slug FROM galleries
+            WHERE is_active = true
+            AND slug NOT IN ('new-uploads','test-gallery','rainforests','costa-rica-videos','playa-hermosa-jaco-garabito')
+            ORDER BY sort_order NULLS LAST, name
+          `),
+          new Promise<null>((_, reject) => setTimeout(() => reject(new Error('galleries_timeout')), 10000)),
         ]).catch(() => null);
 
         if (!galleries) {
@@ -555,6 +562,7 @@ export default {
 
         const response = new Response(xml, { headers: { 'Content-Type': 'application/xml' } });
         response.headers.set('Cache-Control', 'public, max-age=3600, s-maxage=86400');
+        response.headers.set('X-Sitemap-Type', 'galleries-neon');
         return response;
       }
 
