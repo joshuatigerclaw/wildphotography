@@ -498,13 +498,27 @@ export default {
       // Exact route match
       // Sitemap index
       if (path === 'sitemap.xml') {
+        // Try R2 first, then fallback to inline
+        try {
+          const obj = await env.PHOTO_BUCKET.head('sitemap.xml');
+          if (obj) {
+            const body = await env.PHOTO_BUCKET.get('sitemap.xml');
+            if (body) {
+              const text = await body.text();
+              const response = new Response(text, { headers: { 'Content-Type': 'application/xml' } });
+              response.headers.set('Cache-Control', 'public, max-age=3600, s-maxage=86400');
+              response.headers.set('X-Sitemap-Source', 'r2');
+              return response;
+            }
+          }
+        } catch (e) {}
+        // Fallback inline
         let xml = '<?xml version="1.0" encoding="UTF-8"?>\n';
         xml += '<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
         xml += '  <sitemap><loc>https://wildphotography.com/sitemaps/pages.xml</loc></sitemap>\n';
         xml += '  <sitemap><loc>https://wildphotography.com/sitemaps/galleries.xml</loc></sitemap>\n';
         xml += '  <sitemap><loc>https://wildphotography.com/sitemaps/photos.xml</loc></sitemap>\n';
         xml += '</sitemapindex>';
-        
         const response = new Response(xml, { headers: { 'Content-Type': 'application/xml' } });
         response.headers.set('Cache-Control', 'public, max-age=3600, s-maxage=86400');
         return response;
@@ -512,8 +526,21 @@ export default {
 
       // Sitemap: static pages + index pages
       if (path === 'sitemaps/pages.xml') {
+        try {
+          const obj = await env.PHOTO_BUCKET.head('sitemaps/pages.xml');
+          if (obj) {
+            const body = await env.PHOTO_BUCKET.get('sitemaps/pages.xml');
+            if (body) {
+              const text = await body.text();
+              const response = new Response(text, { headers: { 'Content-Type': 'application/xml' } });
+              response.headers.set('Cache-Control', 'public, max-age=3600, s-maxage=86400');
+              response.headers.set('X-Sitemap-Source', 'r2');
+              return response;
+            }
+          }
+        } catch (e) {}
+        // Fallback: original neon query
         const { queryNeon } = await import('./lib/db');
-
         const staticPages = [
           { loc: '', priority: '1.0', changefreq: 'daily' },
           { loc: 'galleries', priority: '0.9', changefreq: 'weekly' },
@@ -522,8 +549,6 @@ export default {
           { loc: 'article', priority: '0.8', changefreq: 'daily' },
           { loc: 'search', priority: '0.7', changefreq: 'weekly' },
         ];
-
-        // Fetch slugs from all content tables in parallel
         const [articles, locations, speciesList] = await Promise.all([
           queryNeon<{ slug: string; updated_at: string | null }>(
             "SELECT slug, updated_at FROM content_articles WHERE status = 'published' ORDER BY updated_at DESC NULLS LAST LIMIT 500"
@@ -531,30 +556,23 @@ export default {
           queryNeon<{ slug: string }>("SELECT slug FROM locations WHERE is_active = true ORDER BY name LIMIT 200"),
           queryNeon<{ slug: string }>("SELECT slug FROM species WHERE is_active = true ORDER BY name LIMIT 200"),
         ]).catch(() => [[], [], []]);
-
         let xml = '<?xml version="1.0" encoding="UTF-8"?>\n';
         xml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
-
         for (const p of staticPages) {
           const lastmod = p.loc === '' ? new Date().toISOString().split('T')[0] : '';
           xml += `  <url><loc>https://wildphotography.com/${p.loc}</loc><changefreq>${p.changefreq}</changefreq><priority>${p.priority}</priority>${lastmod ? `<lastmod>${lastmod}</lastmod>` : ''}</url>\n`;
         }
-
         for (const a of articles as any[]) {
           const d = a.updated_at ? new Date(a.updated_at).toISOString().split('T')[0] : '';
           xml += `  <url><loc>https://wildphotography.com/article/${a.slug}</loc><changefreq>monthly</changefreq><priority>0.8</priority>${d ? `<lastmod>${d}</lastmod>` : ''}</url>\n`;
         }
-
         for (const l of locations as any[]) {
           xml += `  <url><loc>https://wildphotography.com/location/${l.slug}</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>\n`;
         }
-
         for (const s of speciesList as any[]) {
           xml += `  <url><loc>https://wildphotography.com/species/${s.slug}</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>\n`;
         }
-
         xml += '</urlset>';
-
         const response = new Response(xml, { headers: { 'Content-Type': 'application/xml' } });
         response.headers.set('Cache-Control', 'public, max-age=3600, s-maxage=86400');
         response.headers.set('X-Sitemap-Type', 'pages-neon');
@@ -563,10 +581,21 @@ export default {
 
       // Sitemap: galleries
       if (path === 'sitemaps/galleries.xml') {
+        try {
+          const obj = await env.PHOTO_BUCKET.head('sitemaps/galleries.xml');
+          if (obj) {
+            const body = await env.PHOTO_BUCKET.get('sitemaps/galleries.xml');
+            if (body) {
+              const text = await body.text();
+              const response = new Response(text, { headers: { 'Content-Type': 'application/xml' } });
+              response.headers.set('Cache-Control', 'public, max-age=3600, s-maxage=86400');
+              response.headers.set('X-Sitemap-Source', 'r2');
+              return response;
+            }
+          }
+        } catch (e) {}
+        // Fallback: original neon query
         const { queryNeon } = await import('./lib/db');
-
-        // Guard: if query hangs > 10s, return 503 so Cloudflare doesn't soft-timeout
-        // Use direct lightweight query (no JOINs) to avoid Neon hanging in CF Workers env
         const galleries = await Promise.race([
           queryNeon<{ slug: string }>(`
             SELECT slug FROM galleries
@@ -576,59 +605,65 @@ export default {
           `),
           new Promise<null>((_, reject) => setTimeout(() => reject(new Error('galleries_timeout')), 10000)),
         ]).catch(() => null);
-
         if (!galleries) {
           return new Response('Service temporarily unavailable', { status: 503 });
         }
-
         let xml = '<?xml version="1.0" encoding="UTF-8"?>\n';
         xml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
-
         for (const g of galleries) {
           xml += `  <url><loc>https://wildphotography.com/gallery/${g.slug}</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>\n`;
         }
-
         xml += '</urlset>';
-
         const response = new Response(xml, { headers: { 'Content-Type': 'application/xml' } });
         response.headers.set('Cache-Control', 'public, max-age=3600, s-maxage=86400');
         response.headers.set('X-Sitemap-Type', 'galleries-neon');
         return response;
       }
 
-      // Sitemap: photos with image metadata
-      if (path === 'sitemaps/photos.xml') {
-        const { getPublicPhotosForSitemap } = await import('./lib/db');
-        // Guard: if query hangs > 12s, return 503 instead of hanging/empty-response
-        const photos = await Promise.race([
-          getPublicPhotosForSitemap(5000),
-          new Promise<null>((_, reject) => setTimeout(() => reject(new Error('photos_timeout')), 12000)),
-        ]).catch(() => null);
-
-        if (!photos) {
-          return new Response('Service temporarily unavailable', { status: 503 });
-        }
-
-        let xml = '<?xml version="1.0" encoding="UTF-8"?>\n';
-        xml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n';
-
-        for (const p of photos) {
-          let title = p.title || 'Costa Rica Wildlife Photography';
-          title = title.replace(/</g, '&lt;').replace(/>/g, '&gt;');
-          const imgUrl = p.large_url || p.medium_url || p.small_url || '';
-          if (imgUrl) {
-            xml += `  <url><loc>https://wildphotography.com/photo/${p.slug}</loc><lastmod>${p.date_uploaded || '2026-01-01'}</lastmod><changefreq>monthly</changefreq><priority>0.6</priority>`;
-            xml += `\n    <image:image><image:loc>${imgUrl}</image:loc><image:title>${title}</image:title></image:image>`;
-            xml += '\n  </url>\n';
+      // Sitemap: photos with image metadata (chunked — photos-1 through photos-6)
+      const photosChunkMatch = path.match(/^sitemaps\/photos(?:-(1|2|3|4|5|6))?\.xml$/);
+      if (photosChunkMatch) {
+        const chunk = photosChunkMatch[1] || '1'; // photos.xml defaults to photos-1
+        const r2Key = `sitemaps/photos-${chunk}.xml`;
+        try {
+          const obj = await env.PHOTO_BUCKET.head(r2Key);
+          if (obj) {
+            const body = await env.PHOTO_BUCKET.get(r2Key);
+            if (body) {
+              const text = await body.text();
+              const response = new Response(text, { headers: { 'Content-Type': 'application/xml' } });
+              response.headers.set('Cache-Control', 'public, max-age=3600, s-maxage=86400');
+              response.headers.set('X-Sitemap-Source', 'r2');
+              return response;
+            }
           }
+        } catch (e) {}
+        // Fallback: neon query (only for photos.xml/photos-1)
+        if (chunk === '1') {
+          const { getPublicPhotosForSitemap } = await import('./lib/db');
+          const photos = await Promise.race([
+            getPublicPhotosForSitemap(5000),
+            new Promise<null>((_, reject) => setTimeout(() => reject(new Error('photos_timeout')), 12000)),
+          ]).catch(() => null);
+          if (!photos) return new Response('Service temporarily unavailable', { status: 503 });
+          let xml = '<?xml version="1.0" encoding="UTF-8"?>\n';
+          xml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n';
+          for (const p of photos) {
+            let title = (p.title || 'Costa Rica Wildlife Photography').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+            const imgUrl = p.large_url || p.medium_url || p.small_url || '';
+            if (imgUrl) {
+              xml += `  <url><loc>https://wildphotography.com/photo/${p.slug}</loc><lastmod>${p.date_uploaded || '2026-01-01'}</lastmod><changefreq>monthly</changefreq><priority>0.6</priority>`;
+              xml += `\n    <image:image><image:loc>${imgUrl}</image:loc><image:title>${title}</image:title></image:image>`;
+              xml += '\n  </url>\n';
+            }
+          }
+          xml += '</urlset>';
+          const response = new Response(xml, { headers: { 'Content-Type': 'application/xml' } });
+          response.headers.set('Cache-Control', 'public, max-age=3600, s-maxage=86400');
+          response.headers.set('X-Sitemap-Type', 'photos-neon');
+          return response;
         }
-
-        xml += '</urlset>';
-
-        const response = new Response(xml, { headers: { 'Content-Type': 'application/xml' } });
-        response.headers.set('Cache-Control', 'public, max-age=3600, s-maxage=86400');
-        response.headers.set('X-Sitemap-Type', 'photos-neon');
-        return response;
+        return new Response('Sitemap chunk not found', { status: 404 });
       }
       
       if (path === 'robots.txt') {
