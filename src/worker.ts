@@ -510,24 +510,54 @@ export default {
         return response;
       }
 
-      // Sitemap: pages
+      // Sitemap: static pages + index pages
       if (path === 'sitemaps/pages.xml') {
-        const pages = [
+        const { queryNeon } = await import('./lib/db');
+
+        const staticPages = [
           { loc: '', priority: '1.0', changefreq: 'daily' },
           { loc: 'galleries', priority: '0.9', changefreq: 'weekly' },
+          { loc: 'species', priority: '0.8', changefreq: 'weekly' },
+          { loc: 'region', priority: '0.8', changefreq: 'weekly' },
+          { loc: 'article', priority: '0.8', changefreq: 'daily' },
+          { loc: 'search', priority: '0.7', changefreq: 'weekly' },
         ];
-        
+
+        // Fetch slugs from all content tables in parallel
+        const [articles, locations, speciesList] = await Promise.all([
+          queryNeon<{ slug: string; updated_at: string | null }>(
+            "SELECT slug, updated_at FROM content_articles WHERE status = 'published' ORDER BY updated_at DESC NULLS LAST LIMIT 500"
+          ),
+          queryNeon<{ slug: string }>("SELECT slug FROM locations WHERE is_active = true ORDER BY name LIMIT 200"),
+          queryNeon<{ slug: string }>("SELECT slug FROM species WHERE is_active = true ORDER BY name LIMIT 200"),
+        ]).catch(() => [[], [], []]);
+
         let xml = '<?xml version="1.0" encoding="UTF-8"?>\n';
         xml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
-        
-        for (const p of pages) {
-          xml += `  <url><loc>https://wildphotography.com/${p.loc}</loc><changefreq>${p.changefreq}</changefreq><priority>${p.priority}</priority></url>\n`;
+
+        for (const p of staticPages) {
+          const lastmod = p.loc === '' ? new Date().toISOString().split('T')[0] : '';
+          xml += `  <url><loc>https://wildphotography.com/${p.loc}</loc><changefreq>${p.changefreq}</changefreq><priority>${p.priority}</priority>${lastmod ? `<lastmod>${lastmod}</lastmod>` : ''}</url>\n`;
         }
-        
+
+        for (const a of articles as any[]) {
+          const d = a.updated_at ? new Date(a.updated_at).toISOString().split('T')[0] : '';
+          xml += `  <url><loc>https://wildphotography.com/article/${a.slug}</loc><changefreq>monthly</changefreq><priority>0.8</priority>${d ? `<lastmod>${d}</lastmod>` : ''}</url>\n`;
+        }
+
+        for (const l of locations as any[]) {
+          xml += `  <url><loc>https://wildphotography.com/location/${l.slug}</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>\n`;
+        }
+
+        for (const s of speciesList as any[]) {
+          xml += `  <url><loc>https://wildphotography.com/species/${s.slug}</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>\n`;
+        }
+
         xml += '</urlset>';
-        
+
         const response = new Response(xml, { headers: { 'Content-Type': 'application/xml' } });
         response.headers.set('Cache-Control', 'public, max-age=3600, s-maxage=86400');
+        response.headers.set('X-Sitemap-Type', 'pages-neon');
         return response;
       }
 
@@ -569,31 +599,35 @@ export default {
       // Sitemap: photos with image metadata
       if (path === 'sitemaps/photos.xml') {
         const { getPublicPhotosForSitemap } = await import('./lib/db');
-        const photos = await getPublicPhotosForSitemap(5000);
-        
+        // Guard: if query hangs > 12s, return 503 instead of hanging/empty-response
+        const photos = await Promise.race([
+          getPublicPhotosForSitemap(5000),
+          new Promise<null>((_, reject) => setTimeout(() => reject(new Error('photos_timeout')), 12000)),
+        ]).catch(() => null);
+
+        if (!photos) {
+          return new Response('Service temporarily unavailable', { status: 503 });
+        }
+
         let xml = '<?xml version="1.0" encoding="UTF-8"?>\n';
-        // Use Google's image namespace for Google Images compatibility
         xml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n';
-        
+
         for (const p of photos) {
-          // Clean title for image caption
-          let title = p.title || p.gallery_name || 'Costa Rica Photography';
+          let title = p.title || 'Costa Rica Wildlife Photography';
           title = title.replace(/</g, '&lt;').replace(/>/g, '&gt;');
-          
-          // Use large_url for image indexing
           const imgUrl = p.large_url || p.medium_url || p.small_url || '';
-          
           if (imgUrl) {
             xml += `  <url><loc>https://wildphotography.com/photo/${p.slug}</loc><lastmod>${p.date_uploaded || '2026-01-01'}</lastmod><changefreq>monthly</changefreq><priority>0.6</priority>`;
             xml += `\n    <image:image><image:loc>${imgUrl}</image:loc><image:title>${title}</image:title></image:image>`;
             xml += '\n  </url>\n';
           }
         }
-        
+
         xml += '</urlset>';
-        
+
         const response = new Response(xml, { headers: { 'Content-Type': 'application/xml' } });
         response.headers.set('Cache-Control', 'public, max-age=3600, s-maxage=86400');
+        response.headers.set('X-Sitemap-Type', 'photos-neon');
         return response;
       }
       

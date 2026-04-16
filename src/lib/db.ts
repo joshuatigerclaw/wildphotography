@@ -682,30 +682,28 @@ export async function getGalleryPhotoCount(gallerySlug: string): Promise<number>
 }
 
 /**
- * Get public photos for sitemap with image metadata
- * Returns efficient set of fields for SEO indexing
+ * Get public photos for sitemap with image metadata.
+ * Optimized: no gallery JOINs to avoid row duplication and expensive DISTINCT ON sort.
+ * Only needs photo-level data — gallery_name is dropped (used only for image:title).
  */
 export async function getPublicPhotosForSitemap(limit: number = 5000): Promise<any[]> {
   const rows = await queryNeon<any>(`
-    SELECT DISTINCT ON (p.slug)
+    SELECT
       p.slug,
       p.title,
       p.date_uploaded,
       p.small_url,
       p.medium_url,
       p.large_url,
-      g.name as gallery_name,
       p.location
     FROM photos p
-    LEFT JOIN gallery_photos gp ON p.id = gp.photo_id
-    LEFT JOIN galleries g ON gp.gallery_id = g.id
-    WHERE p.is_active = true 
+    WHERE p.is_active = true
       AND p.ready_for_public_render = true
       AND (p.small_url IS NOT NULL OR p.medium_url IS NOT NULL OR p.large_url IS NOT NULL)
-    ORDER BY p.slug, p.date_uploaded DESC
+    ORDER BY p.date_uploaded DESC NULLS LAST
     LIMIT ${limit}
   `);
-  
+
   return rows.map((r: any) => ({
     slug: r.slug,
     title: r.title,
@@ -713,7 +711,7 @@ export async function getPublicPhotosForSitemap(limit: number = 5000): Promise<a
     small_url: r.small_url,
     medium_url: r.medium_url,
     large_url: r.large_url,
-    gallery_name: r.gallery_name,
+    gallery_name: null,
     location: r.location,
   }));
 }
