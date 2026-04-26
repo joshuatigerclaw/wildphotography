@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation';
 import { Metadata } from 'next';
-import { neon } from '@neondatabase/serverless';
+import { sql } from '@/lib/db';
 import {
   getPhotoBySlug,
   getRelatedPhotos,
@@ -16,14 +16,10 @@ import PhotoPageClient from './PhotoPageClient';
 
 export const dynamic = 'force-dynamic';
 
-const DATABASE_URL = process.env.DATABASE_URL ||
-  'postgresql://neondb_owner:npg_BvF2JsQ8drba@ep-calm-fire-ad0dfnqd-pooler.c-2.us-east-1.aws.neon.tech/wildphotography?sslmode=require';
-
-const R2_PUBLIC = 'https://pub-7d412c6efb5943b5bc587e695e22001e.r2.dev';
+const R2_PUBLIC = 'https://images.wildphotography.com';
 const SITE_URL = 'https://wildphotography.com';
-const sql = neon(DATABASE_URL);
 
-function withR2(url: string | null): string | null {
+function withR2(url: string | null | undefined): string | null {
   if (!url) return null;
   if (url.startsWith('http')) return url;
   return R2_PUBLIC + '/' + url;

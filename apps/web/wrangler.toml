@@ -1,0 +1,19 @@
+name = "wildphotography-new"
+main = ".open-next/worker.js"
+compatibility_date = "2026-03-07"
+compatibility_flags = ["nodejs_compat"]
+workers_dev = false
+
+[vars]
+NEXTJS_ENV = "production"
+
+[Observability]
+enabled = true
+
+[[r2_buckets]]
+binding = "PHOTOS_R2"
+bucket_name = "wildphoto-storage"
+
+[[queues.producers]]
+binding = "DOQueue"
+queue = "do-queue"
