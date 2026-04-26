@@ -137,13 +137,14 @@ export default async function GalleryPage({ params }: { params: Promise<{ slug: 
 
   // Locations covered by this gallery's photos (via photo_locations)
   const locationsResult = await sql`
-    SELECT DISTINCT l.id, l.name, l.slug, l.region,
+    SELECT l.id, l.name, l.slug, l.region,
            COUNT(DISTINCT gp.photo_id) as photo_count
     FROM locations l
     JOIN photo_locations ploc ON ploc.location_id = l.id
     JOIN gallery_photos gp ON gp.photo_id = ploc.photo_id
     JOIN galleries g ON g.id = gp.gallery_id
     WHERE g.slug = ${slug}
+    GROUP BY l.id, l.name, l.slug, l.region
     ORDER BY photo_count DESC, l.name
     LIMIT 6
   `;
