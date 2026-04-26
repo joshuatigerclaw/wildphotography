@@ -25,7 +25,7 @@ export async function GET(
   const galleries = await sql(`
     SELECT g.id, g.name, g.slug, g.description, p.thumb_url as cover
     FROM galleries g
-    LEFT JOIN photos p ON g.cover_photo_id = p.id
+    LEFT JOIN photos p ON g.cover_photo_id::integer = p.id
     WHERE g.slug = $1 AND g.is_active = true
   `, [slug]);
 
