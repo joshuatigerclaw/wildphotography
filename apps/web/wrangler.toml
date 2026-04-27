@@ -6,6 +6,14 @@ workers_dev = false
 
 [vars]
 NEXTJS_ENV = "production"
+PAYPAL_BUSINESS_EMAIL = "cash@pobox.com"
+PAYPAL_PROFILE_LINK = "paypal.me/joshuatenbrink"
+WILDPHOTO_ADMIN_EMAIL = "cash@pobox.com"
+SITE_URL = "https://wildphotography.com"
+NEXT_PUBLIC_SITE_URL = "https://wildphotography.com"
+GOOGLE_SHEET_ID = "1_l6ul1ze4O6JQCke3TH14r8TqxgzuArN09o4wjxS4Z4"
+GOOGLE_SHEET_TAB = "Orders"
+RESEND_FROM_EMAIL = "orders@wildphotography.com"
 
 [Observability]
 enabled = true

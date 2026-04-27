@@ -8,6 +8,7 @@ import LocationMap from '@/components/LocationMap';
 import VirtualizedGallery from '@/components/VirtualizedGallery';
 import { getDisplayTitle, looksLikeFilename } from '@/lib/titles';
 import PhotoViatorBlock from '@/components/PhotoViatorBlock';
+import { BuyButtons } from '@/components/photo/BuyButtons';
 
 // ============================================================
 // Types
@@ -414,8 +415,6 @@ export default function PhotoPageClient({
 }: PhotoPageClientProps) {
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [lightboxIndex, setLightboxIndex] = useState(0);
-  const [purchasing, setPurchasing] = useState(false);
-  const [error, setError] = useState<string | null>(null);
   const [showExif, setShowExif] = useState(false);
 
   const displayTitle = useMemo(() => {
@@ -481,26 +480,6 @@ export default function PhotoPageClient({
       title: displayTitle.title,
     },
   ].filter(s => s.src);
-
-  // ── Purchase ───────────────────────────────────────────────
-  const handlePurchase = async () => {
-    setPurchasing(true);
-    setError(null);
-    try {
-      const response = await fetch('/api/paypal/checkout', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ photoId: parseInt(photo.id) }),
-      });
-      const data = await response.json();
-      if (data.error) { setError(data.error); return; }
-      if (data.approvalUrl) window.location.href = data.approvalUrl;
-    } catch (e: any) {
-      setError(e.message);
-    } finally {
-      setPurchasing(false);
-    }
-  };
 
   const keywordsArray = photo.keywords
     ? photo.keywords.split(',').map(k => k.trim()).filter(Boolean)
@@ -844,31 +823,8 @@ export default function PhotoPageClient({
               )}
             </div>
 
-            {/* Purchase */}
-            <div className="bg-gray-900 rounded-xl p-5 text-white shadow-lg">
-              <h3 className="text-lg font-semibold mb-3">Purchase</h3>
-
-              {error && (
-                <div className="mb-3 p-2 bg-red-500/20 text-red-200 rounded-lg text-sm">{error}</div>
-              )}
-
-              <div className="space-y-2">
-                <button
-                  className="w-full px-4 py-3 bg-gray-700 text-gray-400 font-medium rounded-lg cursor-not-allowed text-sm"
-                  disabled
-                >
-                  Print (Coming Soon)
-                </button>
-                <button
-                  onClick={handlePurchase}
-                  disabled={purchasing}
-                  className="w-full px-4 py-3 bg-green-600 text-white font-medium rounded-lg hover:bg-green-700 transition-colors disabled:opacity-50 text-sm"
-                >
-                  {purchasing ? 'Processing...' : 'Download High-Res — $29'}
-                </button>
-              </div>
-              <p className="text-xs text-gray-400 mt-3 text-center">Secure payment via PayPal</p>
-            </div>
+            {/* Buy Buttons */}
+            <BuyButtons photoSlug={photo.slug} />
 
             {/* Sidebar gallery navigation — context-aware prev/next + return */}
             {validSequence && navGallery && (
