@@ -149,79 +149,81 @@ export default async function SpeciesDetailPage({ params }: { params: Promise<{ 
   const articles = articlesResult as any[];
 
   return (
-    <div className="container mx-auto px-4 py-6">
+    <div className="container" style={{paddingTop:'var(--gutter)',paddingBottom:'calc(var(--gutter) * 2)'}}>
       {/* Breadcrumb */}
-      <nav className="text-sm mb-4" aria-label="Breadcrumb">
-        <ol className="flex items-center gap-2">
-          <li><Link href="/" className="text-blue-600 hover:underline">Home</Link></li>
-          <li className="text-gray-400">/</li>
-          <li><Link href="/species" className="text-blue-600 hover:underline">Species</Link></li>
-          <li className="text-gray-400">/</li>
-          <li className="text-gray-600" aria-current="page">{species.common_name}</li>
+      <nav aria-label="Breadcrumb" style={{marginBottom:'var(--gutter)'}}>
+        <ol style={{display:'flex',alignItems:'center',gap:'10px',listStyle:'none',margin:0,padding:0,fontSize:'13px',fontFamily:'var(--font-mono)',textTransform:'uppercase',letterSpacing:'.1em',color:'var(--ink-dim)'}}>
+          <li><Link href="/" style={{color:'var(--ink-dim)',textDecoration:'none'}}>Home</Link></li>
+          <li>/</li>
+          <li><Link href="/species" style={{color:'var(--ink-dim)',textDecoration:'none'}}>Species</Link></li>
+          <li>/</li>
+          <li style={{color:'var(--ink-muted)'}} aria-current="page">{species.common_name}</li>
         </ol>
       </nav>
 
       {/* Header */}
-      <header className="mb-8">
-        <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">
+      <header style={{marginBottom:'var(--gutter)',paddingBottom:'var(--gutter)',borderBottom:'1px solid var(--rule)'}}>
+        <h1 style={{fontFamily:'var(--font-display)',fontSize:'clamp(2rem,5vw,3rem)',fontWeight:500,color:'var(--ink)',lineHeight:1.1,margin:'0 0 10px 0'}}>
           {species.common_name} in Costa Rica
         </h1>
         {species.scientific_name && (
-          <p className="text-xl text-gray-500 italic mb-3">{species.scientific_name}</p>
+          <p style={{fontFamily:'var(--font-serif)',fontStyle:'italic',fontSize:'1.25rem',color:'var(--ink-muted)',margin:'0 0 14px 0'}}>{species.scientific_name}</p>
         )}
         {species.ai_intro ? (
-          <p className="text-gray-700 text-lg leading-relaxed max-w-3xl">{species.ai_intro}</p>
+          <p style={{color:'var(--ink-muted)',fontSize:'17px',maxWidth:'680px',lineHeight:1.6,margin:0}}>{species.ai_intro}</p>
         ) : (
-          <p className="text-gray-600">{species.photo_count} photographs available</p>
+          <p style={{color:'var(--ink-dim)',fontFamily:'var(--font-mono)',fontSize:'13px',textTransform:'uppercase',letterSpacing:'.1em',margin:0}}>{species.photo_count} photographs available</p>
         )}
       </header>
 
       {/* Quick Facts Panel */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8 p-4 bg-gray-50 rounded-xl">
+      <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fill,minmax(160px,1fr))',gap:'12px',marginBottom:'var(--gutter)',padding:'20px',background:'var(--bg-inset)',borderRadius:'var(--r-md)',border:'1px solid var(--rule)'}}>
         {species.scientific_name && (
           <div>
-            <span className="text-xs font-semibold text-gray-500 uppercase tracking-wide">Scientific Name</span>
-            <p className="text-gray-900 italic">{species.scientific_name}</p>
+            <span style={{display:'block',fontFamily:'var(--font-mono)',fontSize:'10px',fontWeight:500,textTransform:'uppercase',letterSpacing:'.12em',color:'var(--ink-dim)',marginBottom:'4px'}}>Scientific Name</span>
+            <p style={{fontFamily:'var(--font-serif)',fontStyle:'italic',color:'var(--ink)',margin:0,fontSize:'14px'}}>{species.scientific_name}</p>
           </div>
         )}
         {species.animal_group && (
           <div>
-            <span className="text-xs font-semibold text-gray-500 uppercase tracking-wide">Group</span>
-            <p className="text-gray-900">{species.animal_group}</p>
+            <span style={{display:'block',fontFamily:'var(--font-mono)',fontSize:'10px',fontWeight:500,textTransform:'uppercase',letterSpacing:'.12em',color:'var(--ink-dim)',marginBottom:'4px'}}>Group</span>
+            <p style={{color:'var(--ink)',margin:0,fontSize:'14px'}}>{species.animal_group}</p>
           </div>
         )}
         <div>
-          <span className="text-xs font-semibold text-gray-500 uppercase tracking-wide">Photos</span>
-          <p className="text-gray-900">{species.photo_count}</p>
+          <span style={{display:'block',fontFamily:'var(--font-mono)',fontSize:'10px',fontWeight:500,textTransform:'uppercase',letterSpacing:'.12em',color:'var(--ink-dim)',marginBottom:'4px'}}>Photos</span>
+          <p style={{color:'var(--ink)',margin:0,fontSize:'14px'}}>{species.photo_count}</p>
         </div>
         <div>
-          <span className="text-xs font-semibold text-gray-500 uppercase tracking-wide">Best Locations</span>
-          <p className="text-gray-900">{locations.slice(0, 2).map((l: any) => l.name).join(', ') || 'See below'}</p>
+          <span style={{display:'block',fontFamily:'var(--font-mono)',fontSize:'10px',fontWeight:500,textTransform:'uppercase',letterSpacing:'.12em',color:'var(--ink-dim)',marginBottom:'4px'}}>Best Locations</span>
+          <p style={{color:'var(--ink)',margin:0,fontSize:'14px'}}>{locations.slice(0, 2).map((l: any) => l.name).join(', ') || 'See below'}</p>
         </div>
       </div>
 
       {/* Featured Photos */}
       {photos.length > 0 && (
-        <section className="mb-10">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">Featured Photos</h2>
+        <section style={{marginBottom:'var(--gutter)'}}>
+          <h2 style={{fontFamily:'var(--font-mono)',fontSize:'11px',fontWeight:500,textTransform:'uppercase',letterSpacing:'.12em',color:'var(--accent)',margin:'0 0 20px 0'}}>Featured Photos</h2>
           <VirtualizedGallery photos={photos.slice(0, 8)} columns={4} />
         </section>
       )}
 
       {/* Where to See */}
       {locations.length > 0 && (
-        <section className="mb-10">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">Where to See {species.common_name} in Costa Rica</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <section style={{marginBottom:'var(--gutter)'}}>
+          <h2 style={{fontFamily:'var(--font-mono)',fontSize:'11px',fontWeight:500,textTransform:'uppercase',letterSpacing:'.12em',color:'var(--accent)',margin:'0 0 20px 0'}}>Where to See {species.common_name}</h2>
+          <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fill,minmax(220px,1fr))',gap:'12px'}}>
             {locations.slice(0, 6).map((loc: any) => (
               <Link
                 key={loc.id}
                 href={`/location/${loc.slug}`}
-                className="p-4 border rounded-xl hover:border-blue-400 hover:shadow-md transition-all group"
+                style={{display:'block',padding:'18px',border:'1px solid var(--rule)',borderRadius:'var(--r-md)',textDecoration:'none',transition:'border-color var(--t-fast)'}}
+                onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.borderColor = 'var(--accent)'; }}
+                onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.borderColor = 'var(--rule)'; }}
               >
-                <h3 className="font-semibold text-gray-900 group-hover:text-blue-600">{loc.name}</h3>
-                {loc.region && <p className="text-sm text-gray-500 mt-1">{loc.region} region</p>}
-                {loc.ai_intro && <p className="text-sm text-gray-600 mt-2 line-clamp-2">{loc.ai_intro}</p>}
+                <h3 style={{fontFamily:'var(--font-display)',fontSize:'15px',fontWeight:500,color:'var(--ink)',margin:'0 0 4px 0'}}>{loc.name}</h3>
+                {loc.region && <p style={{fontFamily:'var(--font-mono)',fontSize:'10px',textTransform:'uppercase',letterSpacing:'.1em',color:'var(--ink-dim)',margin:'0 0 8px 0'}}>{loc.region} region</p>}
+                {loc.ai_intro && <p style={{fontSize:'13px',color:'var(--ink-muted)',margin:0,lineHeight:1.4,display:'-webkit-box',WebkitLineClamp:2,WebkitBoxOrient:'vertical',overflow:'hidden'}}>{loc.ai_intro}</p>}
               </Link>
             ))}
           </div>
@@ -230,17 +232,19 @@ export default async function SpeciesDetailPage({ params }: { params: Promise<{ 
 
       {/* Galleries */}
       {galleries.length > 0 && (
-        <section className="mb-10">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">Galleries Featuring {species.common_name}</h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+        <section style={{marginBottom:'var(--gutter)'}}>
+          <h2 style={{fontFamily:'var(--font-mono)',fontSize:'11px',fontWeight:500,textTransform:'uppercase',letterSpacing:'.12em',color:'var(--accent)',margin:'0 0 20px 0'}}>Galleries Featuring {species.common_name}</h2>
+          <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fill,minmax(200px,1fr))',gap:'12px'}}>
             {galleries.map((g: any) => (
               <Link
                 key={g.id}
                 href={`/gallery/${g.slug}`}
-                className="p-4 border rounded-xl hover:border-blue-400 transition-all"
+                style={{display:'block',padding:'18px',border:'1px solid var(--rule)',borderRadius:'var(--r-md)',textDecoration:'none',transition:'border-color var(--t-fast)'}}
+                onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.borderColor = 'var(--accent)'; }}
+                onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.borderColor = 'var(--rule)'; }}
               >
-                <h3 className="font-semibold text-gray-900 hover:text-blue-600">{g.name}</h3>
-                {g.description && <p className="text-sm text-gray-500 mt-1 line-clamp-2">{g.description}</p>}
+                <h3 style={{fontFamily:'var(--font-display)',fontSize:'15px',fontWeight:500,color:'var(--ink)',margin:'0 0 4px 0'}}>{g.name}</h3>
+                {g.description && <p style={{fontSize:'13px',color:'var(--ink-dim)',margin:0,lineHeight:1.4,display:'-webkit-box',WebkitLineClamp:2,WebkitBoxOrient:'vertical',overflow:'hidden'}}>{g.description}</p>}
               </Link>
             ))}
           </div>
@@ -249,14 +253,16 @@ export default async function SpeciesDetailPage({ params }: { params: Promise<{ 
 
       {/* Related Species */}
       {relatedSpecies.length > 0 && (
-        <section className="mb-10">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">Related Species</h2>
-          <div className="flex flex-wrap gap-3">
+        <section style={{marginBottom:'var(--gutter)'}}>
+          <h2 style={{fontFamily:'var(--font-mono)',fontSize:'11px',fontWeight:500,textTransform:'uppercase',letterSpacing:'.12em',color:'var(--accent)',margin:'0 0 16px 0'}}>Related Species</h2>
+          <div style={{display:'flex',flexWrap:'wrap',gap:'10px'}}>
             {relatedSpecies.map((rs: any) => (
               <Link
                 key={rs.id}
                 href={`/species/${rs.slug}`}
-                className="px-4 py-2 border rounded-full hover:border-blue-400 hover:bg-blue-50 transition-all text-gray-700 hover:text-blue-700"
+                style={{display:'inline-flex',alignItems:'center',padding:'8px 16px',border:'1px solid var(--rule)',borderRadius:'var(--r-sm)',fontFamily:'var(--font-serif)',fontSize:'14px',color:'var(--ink-muted)',textDecoration:'none',transition:'border-color var(--t-fast), color var(--t-fast)'}}
+                onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.borderColor = 'var(--accent)'; (e.currentTarget as HTMLAnchorElement).style.color = 'var(--accent)'; }}
+                onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.borderColor = 'var(--rule)'; (e.currentTarget as HTMLAnchorElement).style.color = 'var(--ink-muted)'; }}
               >
                 {rs.common_name}
               </Link>
@@ -267,35 +273,37 @@ export default async function SpeciesDetailPage({ params }: { params: Promise<{ 
 
       {/* Travel Guides */}
       {articles.length > 0 && (
-        <section className="mb-10">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">Travel Guides</h2>
-          <div className="space-y-3">
+        <section style={{marginBottom:'var(--gutter)'}}>
+          <h2 style={{fontFamily:'var(--font-mono)',fontSize:'11px',fontWeight:500,textTransform:'uppercase',letterSpacing:'.12em',color:'var(--accent)',margin:'0 0 16px 0'}}>Travel Guides</h2>
+          <div style={{display:'flex',flexDirection:'column',gap:'10px'}}>
             {articles.map((art: any) => (
               <Link
                 key={art.id}
                 href={`/article/${art.slug}`}
-                className="block p-4 border rounded-xl hover:border-blue-400 transition-all"
+                style={{display:'block',padding:'18px',border:'1px solid var(--rule)',borderRadius:'var(--r-md)',textDecoration:'none',transition:'border-color var(--t-fast)'}}
+                onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.borderColor = 'var(--accent)'; }}
+                onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.borderColor = 'var(--rule)'; }}
               >
-                <h3 className="font-semibold text-gray-900 hover:text-blue-600">{art.title}</h3>
-                {art.excerpt && <p className="text-sm text-gray-500 mt-1 line-clamp-2">{art.excerpt}</p>}
+                <h3 style={{fontFamily:'var(--font-display)',fontSize:'16px',fontWeight:500,color:'var(--ink)',margin:'0 0 6px 0'}}>{art.title}</h3>
+                {art.excerpt && <p style={{fontSize:'13px',color:'var(--ink-dim)',margin:0,lineHeight:1.4,display:'-webkit-box',WebkitLineClamp:2,WebkitBoxOrient:'vertical',overflow:'hidden'}}>{art.excerpt}</p>}
               </Link>
             ))}
           </div>
         </section>
       )}
 
-      {/* Tours CTA - affiliate placeholder */}
+      {/* Tours CTA */}
       {locations.length > 0 && (
-        <section className="mb-10 p-6 bg-amber-50 rounded-xl border border-amber-200">
-          <h2 className="text-xl font-bold text-gray-900 mb-2">
+        <section style={{marginBottom:'var(--gutter)',padding:'24px',background:'var(--bg-inset)',borderRadius:'var(--r-md)',border:'1px solid var(--rule)'}}>
+          <h2 style={{fontFamily:'var(--font-display)',fontSize:'1.25rem',fontWeight:500,color:'var(--ink)',margin:'0 0 8px 0'}}>
             Tours to See {species.common_name}
           </h2>
-          <p className="text-gray-600 mb-4">
+          <p style={{fontSize:'14px',color:'var(--ink-muted)',margin:'0 0 16px 0'}}>
             Plan your wildlife photography trip to {locations[0]?.name || 'Costa Rica'} with guided tours.
           </p>
           <Link
             href={`/location/${locations[0]?.slug}`}
-            className="inline-block px-6 py-3 bg-amber-500 text-white rounded-lg font-semibold hover:bg-amber-600 transition-colors"
+            style={{display:'inline-block',fontFamily:'var(--font-mono)',fontSize:'11px',fontWeight:500,textTransform:'uppercase',letterSpacing:'.1em',color:'var(--bg)',background:'var(--accent)',padding:'12px 20px',borderRadius:'var(--r-sm)',textDecoration:'none',transition:'background var(--t-fast)'}}
           >
             Find Tours Near {locations[0]?.name || 'This Area'}
           </Link>
@@ -305,7 +313,7 @@ export default async function SpeciesDetailPage({ params }: { params: Promise<{ 
       {/* All Photos */}
       {photos.length > 8 && (
         <section>
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">All {species.common_name} Photos ({photos.length})</h2>
+          <h2 style={{fontFamily:'var(--font-mono)',fontSize:'11px',fontWeight:500,textTransform:'uppercase',letterSpacing:'.12em',color:'var(--accent)',margin:'0 0 20px 0'}}>All {species.common_name} Photos ({photos.length})</h2>
           <VirtualizedGallery photos={photos} columns={4} />
         </section>
       )}

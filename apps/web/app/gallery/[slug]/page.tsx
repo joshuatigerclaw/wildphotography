@@ -1,21 +1,15 @@
 import Link from 'next/link';
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { neon } from '@neondatabase/serverless';
-import { getGalleryBySlug } from '@/lib/db';
+import { sql, getGalleryBySlug } from '@/lib/db';
 import GalleryClient from './GalleryClient';
 
 export const dynamic = 'force-dynamic';
 
-const DATABASE_URL = process.env.DATABASE_URL ||
-  'postgresql://neondb_owner:npg_BvF2JsQ8drba@ep-calm-fire-ad0dfnqd-pooler.c-2.us-east-1.aws.neon.tech/wildphotography?sslmode=require';
+const R2_PUBLIC = 'https://images.wildphotography.com';
+const SITE_URL = 'https://wildphotography.com';
 
-const R2_PUBLIC = 'https://pub-7d412c6efb5943b5bc587e695e22001e.r2.dev';
-const SITE_URL = 'https://www.wildphotography.com';
-
-const sql = neon(DATABASE_URL);
-
-function withR2(url: string | null): string | null {
+function withR2(url: string | null | undefined): string | null {
   if (!url) return null;
   if (url.startsWith('http')) return url;
   return R2_PUBLIC + '/' + url;
@@ -143,13 +137,14 @@ export default async function GalleryPage({ params }: { params: Promise<{ slug: 
 
   // Locations covered by this gallery's photos (via photo_locations)
   const locationsResult = await sql`
-    SELECT DISTINCT l.id, l.name, l.slug, l.region,
+    SELECT l.id, l.name, l.slug, l.region,
            COUNT(DISTINCT gp.photo_id) as photo_count
     FROM locations l
     JOIN photo_locations ploc ON ploc.location_id = l.id
     JOIN gallery_photos gp ON gp.photo_id = ploc.photo_id
     JOIN galleries g ON g.id = gp.gallery_id
     WHERE g.slug = ${slug}
+    GROUP BY l.id, l.name, l.slug, l.region
     ORDER BY photo_count DESC, l.name
     LIMIT 6
   `;
@@ -186,35 +181,35 @@ export default async function GalleryPage({ params }: { params: Promise<{ slug: 
   const relatedGalleries = relatedResult as any[];
 
   return (
-    <div className="container mx-auto px-4 py-6">
+    <div className="container" style={{paddingTop: 'var(--gutter)', paddingBottom: 'calc(var(--gutter) * 2)'}}>
       {/* Breadcrumb */}
-      <nav className="text-sm mb-4" aria-label="Breadcrumb">
-        <ol className="flex items-center gap-2">
-          <li><Link href="/" className="text-blue-600 hover:underline">Home</Link></li>
-          <li className="text-gray-400">/</li>
-          <li><Link href="/galleries" className="text-blue-600 hover:underline">Galleries</Link></li>
-          <li className="text-gray-400">/</li>
-          <li className="text-gray-600" aria-current="page">{gallery.name}</li>
+      <nav aria-label="Breadcrumb" style={{marginBottom: 'var(--gutter)'}}>
+        <ol style={{display:'flex',alignItems:'center',gap:'10px',listStyle:'none',margin:0,padding:0,fontSize:'13px',fontFamily:'var(--font-mono)',textTransform:'uppercase',letterSpacing:'.1em',color:'var(--ink-dim)'}}>
+          <li><Link href="/" style={{color:'var(--ink-dim)',textDecoration:'none'}}>Home</Link></li>
+          <li>/</li>
+          <li><Link href="/galleries" style={{color:'var(--ink-dim)',textDecoration:'none'}}>Galleries</Link></li>
+          <li>/</li>
+          <li style={{color:'var(--ink-muted)'}} aria-current="page">{gallery.name}</li>
         </ol>
       </nav>
 
       {/* Gallery header */}
-      <header className="mb-8">
-        <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
+      <header style={{marginBottom:'calc(var(--gutter) * 1.5)',paddingBottom:'var(--gutter)',borderBottom:'1px solid var(--rule)'}}>
+        <h1 style={{fontFamily:'var(--font-display)',fontSize:'clamp(2rem,5vw,3.5rem)',fontWeight:500,color:'var(--ink)',lineHeight:1.1,margin:'0 0 16px 0'}}>
           {gallery.name}
         </h1>
         {gallery.description && (
-          <p className="text-gray-600 text-lg leading-relaxed max-w-2xl">
+          <p style={{color:'var(--ink-muted)',fontSize:'18px',maxWidth:'640px',margin:'0 0 16px 0',lineHeight:1.6}}>
             {gallery.description}
           </p>
         )}
-        <div className="flex items-center gap-4 mt-4 text-sm text-gray-500">
-          <span className="font-medium">
-            {total > 0 ? `${total} photo${total !== 1 ? 's' : ''}` : 'No photos'}
+        <div style={{display:'flex',alignItems:'center',gap:'12px',fontSize:'13px',fontFamily:'var(--font-mono)',textTransform:'uppercase',letterSpacing:'.1em',color:'var(--ink-dim)'}}>
+          <span>
+            {total > 0 ? `${total.toLocaleString()} PHOTO${total !== 1 ? 'S' : ''}` : 'No photos'}
           </span>
           {gallery.photoCount > 0 && (
             <>
-              <span>•</span>
+              <span style={{color:'var(--rule)'}}>·</span>
               <span>Costa Rica</span>
             </>
           )}
@@ -223,20 +218,22 @@ export default async function GalleryPage({ params }: { params: Promise<{ slug: 
 
       {/* Species in this gallery */}
       {species.length > 0 && (
-        <section className="mb-10">
-          <h2 className="text-xl font-bold text-gray-900 mb-4">Species in this Gallery</h2>
-          <div className="flex flex-wrap gap-3">
+        <section style={{marginBottom:'var(--gutter)'}}>
+          <h2 style={{fontFamily:'var(--font-mono)',fontSize:'11px',fontWeight:500,textTransform:'uppercase',letterSpacing:'.12em',color:'var(--accent)',margin:'0 0 20px 0'}}>Species in this Gallery</h2>
+          <div style={{display:'flex',flexWrap:'wrap',gap:'10px'}}>
             {species.map((s: any) => (
               <Link
                 key={s.id}
                 href={`/species/${s.slug}`}
-                className="px-4 py-2 border rounded-full hover:border-blue-400 hover:bg-blue-50 transition-all text-gray-700 hover:text-blue-700"
+                style={{display:'inline-flex',alignItems:'center',gap:'8px',padding:'8px 16px',border:'1px solid var(--rule)',borderRadius:'var(--r-sm)',fontFamily:'var(--font-serif)',fontSize:'14px',color:'var(--ink-muted)',textDecoration:'none',transition:'border-color var(--t-fast), color var(--t-fast)'}}
+                onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.borderColor = 'var(--accent)'; (e.currentTarget as HTMLAnchorElement).style.color = 'var(--accent)'; }}
+                onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.borderColor = 'var(--rule)'; (e.currentTarget as HTMLAnchorElement).style.color = 'var(--ink-muted)'; }}
               >
                 {s.common_name}
                 {s.scientific_name && (
-                  <span className="text-gray-400 text-xs ml-1 italic">{s.scientific_name}</span>
+                  <span style={{fontFamily:'var(--font-serif)',fontStyle:'italic',fontSize:'12px',color:'var(--ink-dim)'}}>{s.scientific_name}</span>
                 )}
-                <span className="text-gray-400 text-xs ml-1">({s.photo_in_gallery})</span>
+                <span style={{fontFamily:'var(--font-mono)',fontSize:'10px',color:'var(--ink-dim)'}}>({s.photo_in_gallery})</span>
               </Link>
             ))}
           </div>
@@ -245,24 +242,26 @@ export default async function GalleryPage({ params }: { params: Promise<{ slug: 
 
       {/* Locations covered */}
       {(locations.length > 0 || photoLocations.length > 0) && (
-        <section className="mb-10">
-          <h2 className="text-xl font-bold text-gray-900 mb-4">Locations Covered</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+        <section style={{marginBottom:'var(--gutter)'}}>
+          <h2 style={{fontFamily:'var(--font-mono)',fontSize:'11px',fontWeight:500,textTransform:'uppercase',letterSpacing:'.12em',color:'var(--accent)',margin:'0 0 20px 0'}}>Locations Covered</h2>
+          <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fill,minmax(200px,1fr))',gap:'12px'}}>
             {locations.length > 0
               ? locations.map((loc: any) => (
                   <Link
                     key={loc.id}
                     href={`/location/${loc.slug}`}
-                    className="p-3 border rounded-lg hover:border-blue-400 hover:shadow-sm transition-all"
+                    style={{display:'block',padding:'16px',border:'1px solid var(--rule)',borderRadius:'var(--r-md)',textDecoration:'none',transition:'border-color var(--t-fast)'}}
+                    onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.borderColor = 'var(--accent)'; }}
+                    onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.borderColor = 'var(--rule)'; }}
                   >
-                    <span className="font-medium text-gray-800">{loc.name}</span>
-                    {loc.region && <span className="text-gray-400 text-sm ml-2">({loc.region})</span>}
+                    <span style={{fontFamily:'var(--font-display)',fontSize:'15px',fontWeight:500,color:'var(--ink)'}}>{loc.name}</span>
+                    {loc.region && <span style={{display:'block',fontFamily:'var(--font-mono)',fontSize:'10px',textTransform:'uppercase',letterSpacing:'.1em',color:'var(--ink-dim)',marginTop:'4px'}}>{loc.region}</span>}
                   </Link>
                 ))
               : photoLocations.map((loc: any, i: number) => (
-                  <div key={i} className="p-3 border rounded-lg">
-                    <span className="font-medium text-gray-800">{loc.name}</span>
-                    <span className="text-gray-400 text-sm ml-2">({loc.photo_count})</span>
+                  <div key={i} style={{padding:'16px',border:'1px solid var(--rule)',borderRadius:'var(--r-md)'}}>
+                    <span style={{fontFamily:'var(--font-display)',fontSize:'15px',fontWeight:500,color:'var(--ink)'}}>{loc.name}</span>
+                    <span style={{display:'block',fontFamily:'var(--font-mono)',fontSize:'10px',color:'var(--ink-dim)',marginTop:'4px'}}>{loc.photo_count} photos</span>
                   </div>
                 ))}
           </div>
@@ -271,18 +270,20 @@ export default async function GalleryPage({ params }: { params: Promise<{ slug: 
 
       {/* Related galleries */}
       {relatedGalleries.length > 0 && (
-        <section className="mb-10">
-          <h2 className="text-xl font-bold text-gray-900 mb-4">Related Galleries</h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+        <section style={{marginBottom:'var(--gutter)'}}>
+          <h2 style={{fontFamily:'var(--font-mono)',fontSize:'11px',fontWeight:500,textTransform:'uppercase',letterSpacing:'.12em',color:'var(--accent)',margin:'0 0 20px 0'}}>Related Galleries</h2>
+          <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fill,minmax(220px,1fr))',gap:'12px'}}>
             {relatedGalleries.map((g: any) => (
               <Link
                 key={g.id}
                 href={`/gallery/${g.slug}`}
-                className="p-4 border rounded-xl hover:border-blue-400 transition-all"
+                style={{display:'block',padding:'20px',border:'1px solid var(--rule)',borderRadius:'var(--r-md)',textDecoration:'none',transition:'border-color var(--t-fast)'}}
+                onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.borderColor = 'var(--accent)'; }}
+                onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.borderColor = 'var(--rule)'; }}
               >
-                <h3 className="font-semibold text-gray-900 hover:text-blue-600">{g.name}</h3>
+                <h3 style={{fontFamily:'var(--font-display)',fontSize:'16px',fontWeight:500,color:'var(--ink)',margin:'0 0 6px 0'}}>{g.name}</h3>
                 {g.description && (
-                  <p className="text-sm text-gray-500 mt-1 line-clamp-2">{g.description}</p>
+                  <p style={{fontSize:'13px',color:'var(--ink-dim)',margin:0,lineHeight:1.4,display:'-webkit-box',WebkitLineClamp:2,WebkitBoxOrient:'vertical',overflow:'hidden'}}>{g.description}</p>
                 )}
               </Link>
             ))}
@@ -290,21 +291,21 @@ export default async function GalleryPage({ params }: { params: Promise<{ slug: 
         </section>
       )}
 
-      {/* Affiliate CTA — always shown */}
-      <section className="mb-8 rounded-xl border border-blue-100 bg-blue-50 p-5">
-        <p className="text-sm font-semibold text-blue-900 mb-0.5">
+      {/* Affiliate CTA */}
+      <section style={{marginBottom:'var(--gutter)',padding:'20px 24px',border:'1px solid var(--rule)',borderRadius:'var(--r-md)',background:'var(--bg-raised)'}}>
+        <p style={{fontFamily:'var(--font-display)',fontSize:'16px',fontWeight:500,color:'var(--ink)',margin:'0 0 6px 0'}}>
           {gallery.name
             ? `Explore tours near ${gallery.name}`
             : 'Explore Costa Rica nature tours'}
         </p>
-        <p className="text-xs text-blue-700 mb-3">
+        <p style={{fontSize:'13px',color:'var(--ink-dim)',margin:'0 0 14px 0'}}>
           Find guided wildlife, birdwatching, and photography experiences in Costa Rica.
         </p>
         <a
           href={`https://www.getyourguide.com/s/?q=${encodeURIComponent((gallery.name || 'Costa Rica') + ' nature tours')}&partner_id=WILD`}
           target="_blank"
           rel="noopener sponsored"
-          className="inline-block text-xs font-semibold text-white bg-blue-600 hover:bg-blue-700 rounded-lg px-4 py-2 transition-colors"
+          style={{display:'inline-block',fontFamily:'var(--font-mono)',fontSize:'11px',fontWeight:500,textTransform:'uppercase',letterSpacing:'.1em',color:'var(--bg)',background:'var(--accent)',padding:'10px 18px',borderRadius:'var(--r-sm)',textDecoration:'none',transition:'background var(--t-fast)'}}
         >
           Browse experiences
         </a>
@@ -318,9 +319,9 @@ export default async function GalleryPage({ params }: { params: Promise<{ slug: 
           galleryName={gallery.name}
         />
       ) : (
-        <div className="text-center py-16 text-gray-500">
-          <p>No photos in this gallery yet.</p>
-          <Link href="/galleries" className="text-blue-600 hover:underline mt-2 inline-block">
+        <div style={{textAlign:'center',padding:'80px 0',color:'var(--ink-dim)',fontFamily:'var(--font-serif)'}}>
+          <p style={{margin:'0 0 12px 0'}}>No photos in this gallery yet.</p>
+          <Link href="/galleries" style={{color:'var(--accent)',textDecoration:'none',fontFamily:'var(--font-mono)',fontSize:'13px',textTransform:'uppercase',letterSpacing:'.1em'}}>
             Browse other galleries &rarr;
           </Link>
         </div>

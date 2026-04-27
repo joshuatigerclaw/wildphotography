@@ -8,6 +8,7 @@ import LocationMap from '@/components/LocationMap';
 import VirtualizedGallery from '@/components/VirtualizedGallery';
 import { getDisplayTitle, looksLikeFilename } from '@/lib/titles';
 import PhotoViatorBlock from '@/components/PhotoViatorBlock';
+import { BuyButtons } from '@/components/photo/BuyButtons';
 
 // ============================================================
 // Types
@@ -414,8 +415,6 @@ export default function PhotoPageClient({
 }: PhotoPageClientProps) {
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [lightboxIndex, setLightboxIndex] = useState(0);
-  const [purchasing, setPurchasing] = useState(false);
-  const [error, setError] = useState<string | null>(null);
   const [showExif, setShowExif] = useState(false);
 
   const displayTitle = useMemo(() => {
@@ -482,26 +481,6 @@ export default function PhotoPageClient({
     },
   ].filter(s => s.src);
 
-  // ── Purchase ───────────────────────────────────────────────
-  const handlePurchase = async () => {
-    setPurchasing(true);
-    setError(null);
-    try {
-      const response = await fetch('/api/paypal/checkout', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ photoId: parseInt(photo.id) }),
-      });
-      const data = await response.json();
-      if (data.error) { setError(data.error); return; }
-      if (data.approvalUrl) window.location.href = data.approvalUrl;
-    } catch (e: any) {
-      setError(e.message);
-    } finally {
-      setPurchasing(false);
-    }
-  };
-
   const keywordsArray = photo.keywords
     ? photo.keywords.split(',').map(k => k.trim()).filter(Boolean)
     : [];
@@ -521,36 +500,36 @@ export default function PhotoPageClient({
 
   return (
     <>
-      <div className="container mx-auto px-4 py-6 max-w-6xl">
+      <div className="container" style={{paddingTop:'var(--gutter)',paddingBottom:'calc(var(--gutter) * 2)',maxWidth:'1100px'}}>
 
-        {/* Breadcrumb — uses primary gallery */}
-        <nav className="text-sm mb-4" aria-label="Breadcrumb">
-          <ol className="flex items-center gap-2 flex-wrap">
-            <li><Link href="/" className="text-blue-600 hover:underline">Home</Link></li>
-            <li className="text-gray-400">/</li>
-            <li><Link href="/galleries" className="text-blue-600 hover:underline">Galleries</Link></li>
+        {/* Breadcrumb */}
+        <nav aria-label="Breadcrumb" style={{marginBottom:'var(--gutter)'}}>
+          <ol style={{display:'flex',alignItems:'center',gap:'10px',listStyle:'none',margin:0,padding:0,fontSize:'13px',fontFamily:'var(--font-mono)',textTransform:'uppercase',letterSpacing:'.1em',color:'var(--ink-dim)',flexWrap:'wrap'}}>
+            <li><Link href="/" style={{color:'var(--ink-dim)',textDecoration:'none'}}>Home</Link></li>
+            <li>/</li>
+            <li><Link href="/galleries" style={{color:'var(--ink-dim)',textDecoration:'none'}}>Galleries</Link></li>
             {gallery && (
               <>
-                <li className="text-gray-400">/</li>
+                <li>/</li>
                 <li>
-                  <Link href={`/gallery/${gallery.slug}`} className="text-blue-600 hover:underline">
+                  <Link href={`/gallery/${gallery.slug}`} style={{color:'var(--ink-dim)',textDecoration:'none'}}>
                     {gallery.name}
                   </Link>
                 </li>
               </>
             )}
-            <li className="text-gray-400">/</li>
-            <li className="text-gray-600 truncate max-w-[200px]" aria-current="page">
+            <li>/</li>
+            <li style={{color:'var(--ink-muted)',maxWidth:'200px',overflow:'hidden',textOverflow:'ellipsis',whiteSpace:'nowrap'}} aria-current="page">
               {displayTitle.title || 'Photo'}
             </li>
           </ol>
         </nav>
 
-        {/* Back to gallery — uses navGallery, returns to modal view */}
-        <div className="mb-4">
+        {/* Back to gallery */}
+        <div style={{marginBottom:'var(--gutter)'}}>
           <Link
             href={returnToGalleryUrl}
-            className="inline-flex items-center gap-2 text-sm text-gray-500 hover:text-gray-800 transition-colors"
+            style={{display:'inline-flex',alignItems:'center',gap:'8px',fontFamily:'var(--font-mono)',fontSize:'12px',textTransform:'uppercase',letterSpacing:'.1em',color:'var(--ink-dim)',textDecoration:'none',transition:'color var(--t-fast)'}}
           >
             <span>←</span>
             <span>Back to {returnToGalleryLabel}</span>
@@ -591,15 +570,15 @@ export default function PhotoPageClient({
           />
         )}
 
-        {/* Title — full width, above everything */}
-        <div className="mb-4">
+        {/* Title — full width */}
+        <div style={{marginBottom:'var(--gutter)'}}>
           {(() => {
             const seoTitle = photo.metadata?.seo_title;
             const h1Text = seoTitle || (displayTitle.isUgly
               ? (photo.locationName || photo.species_common_name || (gallery ? `From ${gallery.name}` : 'Photo'))
               : displayTitle.title);
             return (
-              <h1 className={`font-bold text-gray-900 ${seoTitle || !displayTitle.isUgly ? 'text-3xl md:text-4xl' : 'text-2xl md:text-3xl'}`}>
+              <h1 style={{fontFamily:'var(--font-display)',fontWeight:500,color:'var(--ink)',lineHeight:1.1,margin:0,fontSize:'clamp(1.5rem,4vw,2.5rem)'}}>
                 {h1Text}
               </h1>
             );
@@ -639,7 +618,7 @@ export default function PhotoPageClient({
         {/* Description — below image and Viator, above the two-column grid */}
         <div className="mb-8">
           {(photo.metadata?.meta_description || photo.description_long || photo.description) && (
-            <p className="text-gray-600 text-base leading-relaxed max-w-3xl">
+            <p style={{color:'var(--ink-muted)',fontSize:'16px',maxWidth:'640px',lineHeight:1.6,margin:0}}>
               {photo.metadata?.meta_description || photo.description_long || photo.description}
             </p>
           )}
@@ -659,7 +638,7 @@ export default function PhotoPageClient({
               if (primaryKws.length === 0) return null;
               return (
                 <div>
-                  <h2 className="text-xs font-semibold text-gray-400 mb-3 uppercase tracking-wider">Keywords</h2>
+                  <h2 style={{fontFamily:'var(--font-mono)',fontSize:'10px',fontWeight:500,textTransform:'uppercase',letterSpacing:'.12em',color:'var(--accent)',margin:'0 0 12px 0'}}>Keywords</h2>
                   <div className="flex flex-wrap gap-2">
                     {primaryKws.map(keyword => (
                       <Link
@@ -844,31 +823,8 @@ export default function PhotoPageClient({
               )}
             </div>
 
-            {/* Purchase */}
-            <div className="bg-gray-900 rounded-xl p-5 text-white shadow-lg">
-              <h3 className="text-lg font-semibold mb-3">Purchase</h3>
-
-              {error && (
-                <div className="mb-3 p-2 bg-red-500/20 text-red-200 rounded-lg text-sm">{error}</div>
-              )}
-
-              <div className="space-y-2">
-                <button
-                  className="w-full px-4 py-3 bg-gray-700 text-gray-400 font-medium rounded-lg cursor-not-allowed text-sm"
-                  disabled
-                >
-                  Print (Coming Soon)
-                </button>
-                <button
-                  onClick={handlePurchase}
-                  disabled={purchasing}
-                  className="w-full px-4 py-3 bg-green-600 text-white font-medium rounded-lg hover:bg-green-700 transition-colors disabled:opacity-50 text-sm"
-                >
-                  {purchasing ? 'Processing...' : 'Download High-Res — $29'}
-                </button>
-              </div>
-              <p className="text-xs text-gray-400 mt-3 text-center">Secure payment via PayPal</p>
-            </div>
+            {/* Buy Buttons */}
+            <BuyButtons photoSlug={photo.slug} />
 
             {/* Sidebar gallery navigation — context-aware prev/next + return */}
             {validSequence && navGallery && (

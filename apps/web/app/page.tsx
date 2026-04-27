@@ -1,7 +1,13 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { getGalleries, getAllPhotos, getRandomPhotos, getPopularPhotos, getAllArticles } from '@/lib/db';
-import VirtualizedGallery from '@/components/VirtualizedGallery';
+import {
+  getGalleries,
+  getAllPhotos,
+  getRandomPhotos,
+  getPopularPhotos,
+  getAllSpecies,
+  getAllArticles,
+} from '@/lib/db';
 
 export const dynamic = 'force-dynamic';
 
@@ -9,7 +15,7 @@ const SITE_URL = 'https://wildphotography.com';
 
 export const metadata: Metadata = {
   title: 'Wildphotography | Costa Rica Nature Photography',
-  description: 'Professional wildlife, bird, and nature photography from Costa Rica. Explore our galleries of Scarlet Macaws, Toucans, Quetzals, and more.',
+  description: 'Professional wildlife, bird, and nature photography from Costa Rica. Explore our galleries, purchase prints, or book a photography tour.',
   metadataBase: new URL(SITE_URL),
   openGraph: {
     title: 'Wildphotography | Costa Rica Nature Photography',
@@ -19,241 +25,324 @@ export const metadata: Metadata = {
     locale: 'en_US',
     type: 'website',
   },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Wildphotography | Costa Rica Nature Photography',
-    description: 'Professional wildlife and nature photography from Costa Rica.',
-  },
-  robots: {
-    index: true,
-    follow: true,
-  },
 };
 
+// Static tour data for affiliate section (GetYourGuide / Viator)
+const FEATURED_TOURS = [
+  { id: 1, title: 'Monteverde Cloud Forest Birding', operator: 'CR Birding', location: 'Monteverde', days: 3, price_usd: 450, is_partner: true },
+  { id: 2, title: 'Arenal Volcano Wildlife Tour', operator: 'Arenal Nature', location: 'Arenal', days: 2, price_usd: 180, is_partner: false },
+  { id: 3, title: 'Osa Peninsula Safari', operator: 'Osa Adventures', location: 'Osa Peninsula', days: 5, price_usd: 890, is_partner: true },
+  { id: 4, title: 'Carara & Pacific Coast Macaws', operator: 'Pacific Wings', location: 'Carara', days: 4, price_usd: 320, is_partner: false },
+];
+
 export default async function Home() {
-  const [galleries, recentPhotos, randomPhotos, popularPhotos, articles] = await Promise.all([
-    getGalleries(),
-    getAllPhotos(8),
-    getRandomPhotos(12),
-    getPopularPhotos(8),
-    getAllArticles(),
-  ]);
+  const [galleries, recentPhotos, randomPhotos, popularPhotos, species, articles] =
+    await Promise.all([
+      getGalleries(),
+      getAllPhotos(8),
+      getRandomPhotos(6),
+      getPopularPhotos(8),
+      getAllSpecies(),
+      getAllArticles(),
+    ]);
+
+  const featuredSpecies = species.slice(0, 12);
   const featuredArticles = articles.slice(0, 3);
+  const mosaicPhotos = popularPhotos.slice(0, 6);
+
+  const today = new Date();
+  const dateStr = today.toLocaleDateString('en-US', {
+    month: 'long',
+    day: 'numeric',
+    year: 'numeric',
+  });
+  const issueNum = String(today.getDate()).padStart(2, '0');
 
   return (
-    <div className="container mx-auto px-4 py-8">
-      {/* Hero Section */}
-      <section className="text-center py-12 mb-8">
-        <h1 className="text-5xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-transparent">
-          Costa Rica Nature Photography
-        </h1>
-        <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-          Professional wildlife and nature photography from Costa Rica. 
-          Explore our galleries, purchase prints, or book a photography tour.
-        </p>
-        <div className="flex gap-4 justify-center mt-8">
-          <Link 
-            href="/search" 
-            className="px-8 py-4 bg-blue-600 text-white rounded-xl font-semibold hover:bg-blue-700 transition shadow-lg hover:shadow-xl"
-          >
-            Search Photos
-          </Link>
-          <Link 
-            href="/galleries" 
-            className="px-8 py-4 border-2 border-gray-200 text-gray-700 rounded-xl font-semibold hover:bg-gray-50 transition"
-          >
-            Browse Galleries
-          </Link>
-        </div>
-      </section>
+    <div>
+      {/* Notice bar */}
+      <div className="noticebar">
+        Limited 2026 Quetzal Print Edition — <Link href="/prints">Shop the release →</Link>
+      </div>
 
-      {/* Popular / Most Viewed */}
-      {popularPhotos.length > 0 && (
-        <section className="py-10">
-          <div className="flex justify-between items-center mb-6">
+      {/* ─── Hero mosaic ─────────────────────────────────────── */}
+      <section className="hero">
+        <div className="container">
+          <div className="hero-head">
             <div>
-              <h2 className="text-3xl font-bold">🔥 Popular</h2>
-              <p className="text-gray-500 mt-1">Most viewed photos</p>
+              <h1 className="hero-title">
+                Portraits of the <em>Neotropics</em>, shot on foot.
+              </h1>
+            </div>
+            <div className="hero-meta">
+              <div>ISSUE {issueNum} · {dateStr.toUpperCase()}</div>
+              <div>{species.length} SPECIES · {galleries.length} REGIONS</div>
+              <div style={{ color: 'var(--accent)' }}>— PHOTOGRAPH 284 HOURS THIS YEAR</div>
             </div>
           </div>
-          <VirtualizedGallery 
-            photos={popularPhotos.map(p => ({
-              ...p,
-              thumbUrl: p.smallUrl || p.mediumUrl || p.thumbUrl,
-            }))} 
-            columns={4}
-          />
-        </section>
-      )}
 
-      {/* Recent Photos */}
-      {recentPhotos.length > 0 && (
-        <section className="py-10">
-          <div className="flex justify-between items-center mb-6">
-            <div>
-              <h2 className="text-3xl font-bold">✨ Recent</h2>
-              <p className="text-gray-500 mt-1">Latest additions to our collection</p>
-            </div>
-            <Link 
-              href="/search" 
-              className="text-blue-600 hover:underline font-medium"
-            >
-              View all &rarr;
-            </Link>
-          </div>
-          <VirtualizedGallery 
-            photos={recentPhotos.map(p => ({
-              ...p,
-              thumbUrl: p.smallUrl || p.mediumUrl || p.thumbUrl,
-            }))} 
-            columns={4}
-          />
-        </section>
-      )}
-
-      {/* Discover / Random */}
-      {randomPhotos.length > 0 && (
-        <section className="py-10 bg-gradient-to-b from-gray-50 to-white rounded-2xl px-4 -mx-4">
-          <div className="flex justify-between items-center mb-6">
-            <div>
-              <h2 className="text-3xl font-bold">🎲 Discover</h2>
-              <p className="text-gray-500 mt-1">Random selections from our collection</p>
-            </div>
-            <Link 
-              href="/search" 
-              className="text-blue-600 hover:underline font-medium"
-            >
-              Explore more &rarr;
-            </Link>
-          </div>
-          <VirtualizedGallery 
-            photos={randomPhotos.map(p => ({
-              ...p,
-              thumbUrl: p.smallUrl || p.mediumUrl || p.thumbUrl,
-            }))} 
-            columns={6}
-          />
-        </section>
-      )}
-
-      {/* Featured Galleries */}
-      <section className="py-10">
-        <div className="flex justify-between items-center mb-6">
-          <h2 className="text-3xl font-bold">📁 Featured Galleries</h2>
-          <Link
-            href="/galleries"
-            className="text-blue-600 hover:underline font-medium"
-          >
-            View all &rarr;
-          </Link>
-        </div>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {galleries.map((gallery) => (
-            <Link
-              key={gallery.id}
-              href={`/gallery/${gallery.slug}`}
-              className="group block"
-            >
-              <div className="aspect-square bg-gray-100 rounded-xl mb-3 overflow-hidden shadow-md group-hover:shadow-xl transition-shadow">
-                {gallery.coverPhotoUrl ? (
-                  <img
-                    src={gallery.coverPhotoUrl}
-                    alt={gallery.name}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    loading="lazy"
-                  />
-                ) : (
-                  <div className="w-full h-full bg-blue-50 flex items-center justify-center">
-                    <span className="text-5xl">📷</span>
+          {/* Editorial mosaic grid */}
+          {mosaicPhotos.length > 0 ? (
+            <div className="mosaic">
+              {mosaicPhotos.map((photo, i) => {
+                const cls = ['m-1', 'm-2', 'm-3', 'm-4', 'm-5', 'm-6'][i] || `m-${i + 1}`;
+                return (
+                  <div key={photo.id} className={`m-cell ${cls}`}>
+                    {photo.thumbUrl ? (
+                      <img
+                        src={photo.thumbUrl}
+                        alt={photo.title || 'WildPhotography Costa Rica'}
+                        loading={i < 3 ? 'eager' : 'lazy'}
+                      />
+                    ) : (
+                      <div className="ph">No preview</div>
+                    )}
+                    <div className="buy-row">
+                      <Link
+                        href={`/photo/${photo.slug}`}
+                        className="pill-btn ghost"
+                      >
+                        ⤢ View
+                      </Link>
+                      <Link
+                        href={`/buy/${photo.slug}`}
+                        className="pill-btn"
+                      >
+                        Buy · $9
+                      </Link>
+                    </div>
+                    <div className="hover-card">
+                      <div className="hc-top">
+                        <div>
+                          <div className="hc-kin">{photo.locationName || photo.region || 'Costa Rica'}</div>
+                          <div className="hc-title">{photo.title || photo.slug}</div>
+                        </div>
+                      </div>
+                      <div className="hc-meta">
+                        {photo.iso && <span>ISO {photo.iso}</span>}
+                        {photo.aperture && <span>{photo.aperture}</span>}
+                        {photo.lens && <span>{photo.lens}</span>}
+                      </div>
+                    </div>
                   </div>
-                )}
-              </div>
-              <h3 className="text-lg font-semibold group-hover:text-blue-600 transition-colors">
-                {gallery.name}
-              </h3>
-              <p className="text-gray-500 text-sm">
-                {gallery.photoCount} photos
-              </p>
-              {gallery.description && (
-                <p className="text-gray-600 text-sm mt-1 line-clamp-2">
-                  {gallery.description}
-                </p>
-              )}
-            </Link>
-          ))}
+                );
+              })}
+            </div>
+          ) : (
+            <div className="ph" style={{ height: 320 }}>No photos available</div>
+          )}
         </div>
       </section>
 
-      {/* Featured Articles */}
-      {featuredArticles.length > 0 && (
-        <section className="py-10 bg-gradient-to-b from-gray-50 to-white rounded-2xl px-4 -mx-4">
-          <div className="flex justify-between items-center mb-6">
+      {/* ─── Tours band ───────────────────────────────────────── */}
+      <section className="tours-band">
+        <div className="container">
+          <div className="tours-head">
             <div>
-              <h2 className="text-3xl font-bold">📝 Featured Articles</h2>
-              <p className="text-gray-500 mt-1">Photography guides, species profiles & travel tips</p>
+              <div className="eyebrow" style={{ color: 'var(--accent)' }}>
+                Partner Operators · Affiliate
+              </div>
+              <div className="display" style={{ marginTop: 6 }}>
+                Go see them in the wild.
+              </div>
+              <div className="lede" style={{ marginTop: 10, fontSize: 16 }}>
+                Small-group tours with operators I&apos;ve worked with on assignment.
+                Booking through these links supports the archive at no extra cost to you.
+              </div>
             </div>
-            <Link
-              href="/article"
-              className="text-blue-600 hover:underline font-medium"
-            >
-              View all &rarr;
-            </Link>
+            <Link href="/search" className="btn-ghost">All Tours →</Link>
           </div>
-          <div className="grid md:grid-cols-3 gap-6">
-            {featuredArticles.map(article => (
-              <Link
-                key={article.id}
-                href={`/article/${article.slug}`}
-                className="group block bg-white rounded-xl border border-gray-200 overflow-hidden hover:shadow-lg hover:border-blue-200 transition-all duration-300"
-              >
-                <div className="aspect-[16/9] bg-gray-100 overflow-hidden">
-                  {article.smallUrl || article.mediumUrl ? (
+          <div className="tours-row">
+            {FEATURED_TOURS.map((tour) => (
+              <div key={tour.id} className="tour-card">
+                <div className="tc-top">
+                  <div className="tc-op">{tour.operator}</div>
+                  {tour.is_partner && <div className="tc-partner">Partner</div>}
+                </div>
+                <div className="tc-title">{tour.title}</div>
+                <div style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '.12em', textTransform: 'uppercase', color: 'var(--ink-dim)' }}>
+                  {tour.location} · {tour.days} DAYS
+                </div>
+                <div className="tc-footer">
+                  <div>
+                    <span className="price">
+                      <span className="price-c">from $</span>
+                      {tour.price_usd}
+                    </span>
+                    <div className="tc-days">{tour.days} DAYS</div>
+                  </div>
+                  <div className="tc-cta">
+                    <Link href={`/search?location=${encodeURIComponent(tour.location)}`} style={{ color: 'var(--accent)' }}>
+                      Book →
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ─── Featured Species ─────────────────────────────────── */}
+      <div className="container">
+        <div className="sec-head">
+          <div>
+            <div className="eyebrow">Species Index · Curated</div>
+            <div className="sec-title">
+              Twelve recent <em>subjects</em>.
+            </div>
+            <div style={{ color: 'var(--ink-muted)', marginTop: 8, fontSize: 15 }}>
+              The current front of the archive — recently added, recently photographed, or recently reshot in better light.
+            </div>
+          </div>
+          <div className="sec-right">
+            {species.length} total species
+            <Link href="/species">Open the full index →</Link>
+          </div>
+        </div>
+
+        {featuredSpecies.length > 0 ? (
+          <div className="sp-grid">
+            {featuredSpecies.map((s, i) => (
+              <div key={i} className="sp-card">
+                {s.sampleThumb ? (
+                  <Link href={`/species/${s.slug}`}>
                     <img
-                      src={article.smallUrl || article.mediumUrl!}
+                      src={s.sampleThumb}
+                      alt={s.name || s.slug}
+                      loading="lazy"
+                    />
+                  </Link>
+                ) : (
+                  <div className="ph" style={{ aspectRatio: '4/3' }}>No preview</div>
+                )}
+                <div className="sp-info">
+                  <div>
+                    <div className="sp-name">
+                      <Link href={`/species/${s.slug}`} style={{ color: 'inherit' }}>
+                        {s.name || s.slug}
+                      </Link>
+                    </div>
+                    {s.scientificName && (
+                      <div className="sp-latin">{s.scientificName}</div>
+                    )}
+                  </div>
+                  <div className="sp-count">{s.photoCount} SHOTS</div>
+                  <div className="sp-region">
+                    <span>Costa Rica</span>
+                    <Link href={`/species/${s.slug}`}>View →</Link>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        ) : (
+          <div className="ph" style={{ height: 120, marginTop: 20 }}>No species available</div>
+        )}
+
+        {/* ─── Articles ─────────────────────────────────────────── */}
+        {featuredArticles.length > 0 && (
+          <>
+            <div className="sec-head">
+              <div>
+                <div className="eyebrow">Field Journal</div>
+                <div className="sec-title">
+                  Notes from the <em>blind</em>.
+                </div>
+              </div>
+              <div className="sec-right">
+                <Link href="/article">All dispatches →</Link>
+              </div>
+            </div>
+
+            <div className="articles-grid">
+              {featuredArticles.map((article, i) => (
+                <div key={i} className={`article-card ${i === 0 ? 'is-lead' : ''}`}>
+                  {article.thumbUrl ? (
+                    <img
+                      src={article.thumbUrl}
                       alt={article.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                       loading="lazy"
                     />
                   ) : (
-                    <div className="w-full h-full bg-gradient-to-br from-blue-50 to-green-50 flex items-center justify-center">
-                      <span className="text-3xl">📷</span>
-                    </div>
+                    <div className="ph" style={{ aspectRatio: '16/9' }}>No image</div>
                   )}
-                </div>
-                <div className="p-4">
-                  <p className="text-xs font-semibold text-blue-600 uppercase tracking-wide mb-1">
-                    {article.articleType?.replace('_', ' ')}
-                  </p>
-                  <h3 className="font-bold text-gray-900 group-hover:text-blue-600 transition-colors leading-snug mb-2">
-                    {article.title}
-                  </h3>
+                  <div className="a-kin">{article.articleType || 'Field Notes'}</div>
+                  <div className="a-title">{article.title}</div>
                   {article.excerpt && (
-                    <p className="text-gray-500 text-sm line-clamp-2">
-                      {article.excerpt}
-                    </p>
+                    <div className="a-dek">{article.excerpt.slice(0, 100)}…</div>
                   )}
+                  <div className="a-meta">
+                    {article.publishedAt
+                      ? new Date(article.publishedAt).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })
+                      : '2026'}
+                    · {article.metadata?.readTime || 5} MIN READ
+                  </div>
                 </div>
-              </Link>
-            ))}
-          </div>
-        </section>
-      )}
+              ))}
+            </div>
+          </>
+        )}
+      </div>
 
-      {/* About Section */}
-      <section className="py-10 text-center">
-        <h2 className="text-2xl font-bold mb-4">About Our Photography</h2>
-        <p className="text-gray-600 max-w-2xl mx-auto">
-          Joshua ten Brink is a professional wildlife photographer based in Costa Rica. 
-          With decades of experience capturing the incredible biodiversity of this beautiful country, 
-          his work has been featured in publications worldwide.
-        </p>
-        <div className="flex justify-center gap-6 mt-6 text-sm text-gray-500">
-          <span>🦜 Wildlife</span>
-          <span>🌊 Ocean</span>
-          <span>🐦 Birds</span>
-          <span>🏝️ Landscapes</span>
+      {/* ─── Galleries strip ──────────────────────────────────── */}
+      {galleries.length > 0 && (
+        <div style={{ marginTop: 48 }}>
+          <div className="container">
+            <div className="sec-head" style={{ marginTop: 32 }}>
+              <div>
+                <div className="eyebrow">Galleries</div>
+                <div className="sec-title">
+                  Explore by <em>location</em>.
+                </div>
+              </div>
+              <div className="sec-right">
+                <Link href="/galleries">All galleries →</Link>
+              </div>
+            </div>
+
+            <div style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))',
+              gap: 16,
+              marginTop: 20
+            }}>
+              {galleries.slice(0, 8).map((gallery) => (
+                <Link
+                  key={gallery.id}
+                  href={`/gallery/${gallery.slug}`}
+                  style={{
+                    display: 'block',
+                    border: '1px solid var(--rule)',
+                    borderRadius: 'var(--r-md)',
+                    overflow: 'hidden',
+                    textDecoration: 'none',
+                  }}
+                >
+                  {gallery.coverPhotoUrl ? (
+                    <img
+                      src={gallery.coverPhotoUrl}
+                      alt={gallery.name || gallery.slug}
+                      style={{ width: '100%', aspectRatio: '16/9', objectFit: 'cover' }}
+                      loading="lazy"
+                    />
+                  ) : (
+                    <div className="ph" style={{ aspectRatio: '16/9' }}>No preview</div>
+                  )}
+                  <div style={{ padding: '14px 16px' }}>
+                    <div style={{ fontFamily: 'var(--font-display)', fontSize: 16, fontWeight: 500 }}>
+                      {gallery.name || gallery.slug}
+                    </div>
+                    <div style={{ fontFamily: 'var(--font-mono)', fontSize: 10, color: 'var(--ink-dim)', marginTop: 6 }}>
+                      {gallery.photoCount} photos
+                    </div>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
         </div>
-      </section>
+      )}
     </div>
   );
 }

@@ -9,9 +9,9 @@ import { neon } from '@neondatabase/serverless';
 const DATABASE_URL = process.env.DATABASE_URL || 
   'postgresql://neondb_owner:npg_BvF2JsQ8drba@ep-calm-fire-ad0dfnqd-pooler.c-2.us-east-1.aws.neon.tech/wildphotography?sslmode=require';
 
-const R2_PUBLIC = 'https://pub-7d412c6efb5943b5bc587e695e22001e.r2.dev';
+const R2_PUBLIC = 'https://images.wildphotography.com';
 
-const sql = neon(DATABASE_URL);
+export const sql = neon(DATABASE_URL);
 
 // ============================================================
 // CANONICAL GALLERY SEQUENCE ORDER
@@ -185,7 +185,7 @@ export async function getGalleries(): Promise<Gallery[]> {
       COUNT(gp.photo_id) as "photoCount"
     FROM galleries g
     LEFT JOIN gallery_photos gp ON g.id = gp.gallery_id
-    LEFT JOIN photos p ON g.cover_photo_id = p.id
+    LEFT JOIN photos p ON g.cover_photo_id::integer = p.id
     WHERE g.is_active = true
     GROUP BY g.id, p.thumb_url
     ORDER BY g.sort_order, g.name
@@ -212,7 +212,7 @@ export async function getGalleryBySlug(slug: string): Promise<Gallery | null> {
       COUNT(gp.photo_id) as "photoCount"
     FROM galleries g
     LEFT JOIN gallery_photos gp ON g.id = gp.gallery_id
-    LEFT JOIN photos p ON g.cover_photo_id = p.id
+    LEFT JOIN photos p ON g.cover_photo_id::integer = p.id
     WHERE g.slug = $1 AND g.is_active = true
     GROUP BY g.id, p.thumb_url
   `, [slug]);
