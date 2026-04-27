@@ -40,3 +40,8 @@ derivatives/
 # Scripts with API keys - local only
 scripts/vision_enrich.py
 scripts/vision_enrichment.py
+.open-next/
+apps/web/.open-next/
+.next.old/
+.open-next.old/
+worker.zip

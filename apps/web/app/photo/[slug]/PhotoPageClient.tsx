@@ -500,36 +500,36 @@ export default function PhotoPageClient({
 
   return (
     <>
-      <div className="container mx-auto px-4 py-6 max-w-6xl">
+      <div className="container" style={{paddingTop:'var(--gutter)',paddingBottom:'calc(var(--gutter) * 2)',maxWidth:'1100px'}}>
 
-        {/* Breadcrumb — uses primary gallery */}
-        <nav className="text-sm mb-4" aria-label="Breadcrumb">
-          <ol className="flex items-center gap-2 flex-wrap">
-            <li><Link href="/" className="text-blue-600 hover:underline">Home</Link></li>
-            <li className="text-gray-400">/</li>
-            <li><Link href="/galleries" className="text-blue-600 hover:underline">Galleries</Link></li>
+        {/* Breadcrumb */}
+        <nav aria-label="Breadcrumb" style={{marginBottom:'var(--gutter)'}}>
+          <ol style={{display:'flex',alignItems:'center',gap:'10px',listStyle:'none',margin:0,padding:0,fontSize:'13px',fontFamily:'var(--font-mono)',textTransform:'uppercase',letterSpacing:'.1em',color:'var(--ink-dim)',flexWrap:'wrap'}}>
+            <li><Link href="/" style={{color:'var(--ink-dim)',textDecoration:'none'}}>Home</Link></li>
+            <li>/</li>
+            <li><Link href="/galleries" style={{color:'var(--ink-dim)',textDecoration:'none'}}>Galleries</Link></li>
             {gallery && (
               <>
-                <li className="text-gray-400">/</li>
+                <li>/</li>
                 <li>
-                  <Link href={`/gallery/${gallery.slug}`} className="text-blue-600 hover:underline">
+                  <Link href={`/gallery/${gallery.slug}`} style={{color:'var(--ink-dim)',textDecoration:'none'}}>
                     {gallery.name}
                   </Link>
                 </li>
               </>
             )}
-            <li className="text-gray-400">/</li>
-            <li className="text-gray-600 truncate max-w-[200px]" aria-current="page">
+            <li>/</li>
+            <li style={{color:'var(--ink-muted)',maxWidth:'200px',overflow:'hidden',textOverflow:'ellipsis',whiteSpace:'nowrap'}} aria-current="page">
               {displayTitle.title || 'Photo'}
             </li>
           </ol>
         </nav>
 
-        {/* Back to gallery — uses navGallery, returns to modal view */}
-        <div className="mb-4">
+        {/* Back to gallery */}
+        <div style={{marginBottom:'var(--gutter)'}}>
           <Link
             href={returnToGalleryUrl}
-            className="inline-flex items-center gap-2 text-sm text-gray-500 hover:text-gray-800 transition-colors"
+            style={{display:'inline-flex',alignItems:'center',gap:'8px',fontFamily:'var(--font-mono)',fontSize:'12px',textTransform:'uppercase',letterSpacing:'.1em',color:'var(--ink-dim)',textDecoration:'none',transition:'color var(--t-fast)'}}
           >
             <span>←</span>
             <span>Back to {returnToGalleryLabel}</span>
@@ -570,15 +570,15 @@ export default function PhotoPageClient({
           />
         )}
 
-        {/* Title — full width, above everything */}
-        <div className="mb-4">
+        {/* Title — full width */}
+        <div style={{marginBottom:'var(--gutter)'}}>
           {(() => {
             const seoTitle = photo.metadata?.seo_title;
             const h1Text = seoTitle || (displayTitle.isUgly
               ? (photo.locationName || photo.species_common_name || (gallery ? `From ${gallery.name}` : 'Photo'))
               : displayTitle.title);
             return (
-              <h1 className={`font-bold text-gray-900 ${seoTitle || !displayTitle.isUgly ? 'text-3xl md:text-4xl' : 'text-2xl md:text-3xl'}`}>
+              <h1 style={{fontFamily:'var(--font-display)',fontWeight:500,color:'var(--ink)',lineHeight:1.1,margin:0,fontSize:'clamp(1.5rem,4vw,2.5rem)'}}>
                 {h1Text}
               </h1>
             );
@@ -618,7 +618,7 @@ export default function PhotoPageClient({
         {/* Description — below image and Viator, above the two-column grid */}
         <div className="mb-8">
           {(photo.metadata?.meta_description || photo.description_long || photo.description) && (
-            <p className="text-gray-600 text-base leading-relaxed max-w-3xl">
+            <p style={{color:'var(--ink-muted)',fontSize:'16px',maxWidth:'640px',lineHeight:1.6,margin:0}}>
               {photo.metadata?.meta_description || photo.description_long || photo.description}
             </p>
           )}
@@ -638,7 +638,7 @@ export default function PhotoPageClient({
               if (primaryKws.length === 0) return null;
               return (
                 <div>
-                  <h2 className="text-xs font-semibold text-gray-400 mb-3 uppercase tracking-wider">Keywords</h2>
+                  <h2 style={{fontFamily:'var(--font-mono)',fontSize:'10px',fontWeight:500,textTransform:'uppercase',letterSpacing:'.12em',color:'var(--accent)',margin:'0 0 12px 0'}}>Keywords</h2>
                   <div className="flex flex-wrap gap-2">
                     {primaryKws.map(keyword => (
                       <Link

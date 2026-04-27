@@ -29,59 +29,56 @@ export default async function GalleriesPage() {
   const sortedGalleries = [...galleries].sort((a, b) => b.photoCount - a.photoCount);
 
   return (
-    <div className="container mx-auto px-4 py-6">
+    <div className="container" style={{paddingTop:'var(--gutter)',paddingBottom:'calc(var(--gutter) * 2)'}}>
       {/* Breadcrumb */}
-      <nav className="text-sm mb-4" aria-label="Breadcrumb">
-        <ol className="flex items-center gap-2">
-          <li>
-            <Link href="/" className="text-blue-600 hover:underline">Home</Link>
-          </li>
-          <li className="text-gray-400">/</li>
-          <li className="text-gray-600" aria-current="page">Galleries</li>
+      <nav aria-label="Breadcrumb" style={{marginBottom:'var(--gutter)'}}>
+        <ol style={{display:'flex',alignItems:'center',gap:'10px',listStyle:'none',margin:0,padding:0,fontSize:'13px',fontFamily:'var(--font-mono)',textTransform:'uppercase',letterSpacing:'.1em',color:'var(--ink-dim)'}}>
+          <li><Link href="/" style={{color:'var(--ink-dim)',textDecoration:'none'}}>Home</Link></li>
+          <li>/</li>
+          <li style={{color:'var(--ink-muted)'}} aria-current="page">Galleries</li>
         </ol>
       </nav>
-      
-      <header className="mb-6">
-        <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">
+
+      <header style={{marginBottom:'var(--gutter)',paddingBottom:'var(--gutter)',borderBottom:'1px solid var(--rule)'}}>
+        <h1 style={{fontFamily:'var(--font-display)',fontSize:'clamp(2rem,5vw,3rem)',fontWeight:500,color:'var(--ink)',lineHeight:1.1,margin:'0 0 14px 0'}}>
           Photo Galleries
         </h1>
-        <p className="text-gray-600 text-lg max-w-2xl">
-          Explore our collection of {galleries.length} galleries featuring Costa Rica's incredible biodiversity, landscapes, and wildlife.
+        <p style={{color:'var(--ink-muted)',fontSize:'17px',maxWidth:'560px',margin:0,lineHeight:1.55}}>
+          {galleries.length} gallery collections — wildlife, landscapes, birds, and more from Costa Rica.
         </p>
       </header>
-      
+
       {sortedGalleries.length === 0 ? (
-        <div className="text-center py-12 text-gray-500">
-          <p className="text-lg">No galleries available yet.</p>
-          <p className="text-sm mt-2">Check back soon for new photo collections!</p>
+        <div style={{textAlign:'center',padding:'60px 0',color:'var(--ink-dim)',fontFamily:'var(--font-serif)'}}>
+          <p>No galleries available yet.</p>
         </div>
       ) : (
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+        <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fill,minmax(220px,1fr))',gap:'20px'}}>
           {sortedGalleries.map((gallery) => (
-            <Link 
+            <Link
               key={gallery.id}
               href={`/gallery/${gallery.slug}`}
-              className="group block"
+              style={{display:'block',textDecoration:'none'}}
             >
-              <div className="aspect-square bg-gray-100 rounded-lg mb-2 overflow-hidden">
+              <div style={{aspectRatio:'1/1',background:'var(--bg-inset)',borderRadius:'var(--r-md)',overflow:'hidden',marginBottom:'12px',border:'1px solid var(--rule)'}}>
                 {gallery.coverPhotoUrl ? (
-                  <img 
+                  <img
                     src={gallery.coverPhotoUrl}
                     alt={gallery.name}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    style={{width:'100%',height:'100%',objectFit:'cover',display:'block',transition:'transform var(--t-med)'}}
                     loading="lazy"
+                    onMouseEnter={(e) => { (e.currentTarget as HTMLImageElement).style.transform = 'scale(1.04)'; }}
+                    onMouseLeave={(e) => { (e.currentTarget as HTMLImageElement).style.transform = 'scale(1)'; }}
                   />
                 ) : (
-                  <div className="w-full h-full bg-blue-50 flex items-center justify-center text-blue-300">
-                    <span className="text-3xl">📷</span>
-                  </div>
+                  <div style={{width:'100%',height:'100%',display:'flex',alignItems:'center',justifyContent:'center',color:'var(--ink-dim)',fontSize:'32px'}}>📷</div>
                 )}
               </div>
-              <h3 className="font-semibold text-gray-900 group-hover:text-blue-600 transition text-sm md:text-base">
+              <h3 style={{fontFamily:'var(--font-display)',fontSize:'15px',fontWeight:500,color:'var(--ink)',margin:'0 0 4px 0',transition:'color var(--t-fast)'}}>
                 {gallery.name}
               </h3>
-              <p className="text-gray-500 text-xs md:text-sm">
-                {gallery.photoCount} photo{gallery.photoCount !== 1 ? 's' : ''}
+              <p style={{fontFamily:'var(--font-mono)',fontSize:'11px',textTransform:'uppercase',letterSpacing:'.1em',color:'var(--ink-dim)',margin:0}}>
+                {gallery.photoCount} PHOTO{gallery.photoCount !== 1 ? 'S' : ''}
               </p>
             </Link>
           ))}
