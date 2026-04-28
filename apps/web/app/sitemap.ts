@@ -38,6 +38,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: '/region', priority: 0.8, changeFrequency: 'weekly' as const },
     { url: '/article', priority: 0.9, changeFrequency: 'daily' as const },
     { url: '/search', priority: 0.7, changeFrequency: 'weekly' as const },
+    { url: '/photography-featured', priority: 0.6, changeFrequency: 'monthly' as const },
   ];
 
   for (const page of staticPages) {
