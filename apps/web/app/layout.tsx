@@ -18,13 +18,26 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        {/* GA4 — only load for real browsers */}
         <Script async src="https://www.googletagmanager.com/gtag/js?id=G-EPPFTRYF92" strategy="afterInteractive" />
         <Script id="google-analytics" strategy="afterInteractive">
           {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-EPPFTRYF92');
+            (function() {
+              // Bot detection — skip GA4 for headless/automated clients
+              var ua = navigator.userAgent || '';
+              var isBot = /headless|python|curl|wget|scrapy|axios|phantom|selenium|playwright|puppeteer/i.test(ua);
+              var isWebDriver = navigator.webdriver === true;
+              
+              if (isBot || isWebDriver) {
+                // Do not load GA4 for bots
+                return;
+              }
+              
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-EPPFTRYF92', { send_page_view: true });
+            })();
           `}
         </Script>
       </head>
