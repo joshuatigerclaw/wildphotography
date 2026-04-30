@@ -11,30 +11,53 @@ const typesense = new Client({
 });
 
 const COLLECTION = 'photos';
-
 export const dynamic = 'force-dynamic';
+
+// Bot score check helper
+function getBotScore(ua: string, path: string): number {
+  let score = 0;
+  const uaLower = ua.toLowerCase();
+  if (/headless|python|curl|wget|scrapy|axios/.test(uaLower)) score += 3;
+  if (!ua.includes('Accept-Language')) score += 1;
+  if (path.startsWith('/api/') && score > 3) return score;
+  return score;
+}
 
 export async function GET(request: NextRequest) {
   const searchParams = request.nextUrl.searchParams;
   const query = searchParams.get('q') || '*';
   const page = parseInt(searchParams.get('page') || '1', 10);
-  const perPage = parseInt(searchParams.get('per_page') || searchParams.get('limit') || '50', 10);
+  let perPage = parseInt(searchParams.get('per_page') || searchParams.get('limit') || '50', 10);
   
-  // Filter parameters
+  // Cap response size — prevent abuse
+  perPage = Math.min(perPage, 50);
+  
+  const ua = request.headers.get('user-agent') || '';
+  const botScore = getBotScore(ua, '/api/search');
+  
+  // Bot score 6+ — block
+  if (botScore >= 6) {
+    return NextResponse.json({ error: 'Rate limited' }, { status: 429 }, {
+      headers: { 'Cache-Control': 'no-store' }
+    });
+  }
+  
+  // Bot score 3-5 — serve cached/sampled (return fewer results)
+  if (botScore >= 3) {
+    perPage = Math.min(perPage, 10);
+  }
+  
+  const filters: string[] = [];
   const gallery = searchParams.get('gallery');
   const location = searchParams.get('location');
   const camera = searchParams.get('camera');
   const year = searchParams.get('year');
   const orientation = searchParams.get('orientation');
-  
-  // Build filter_by
-  const filters: string[] = [];
   if (gallery) filters.push(`gallery:=${gallery}`);
   if (location) filters.push(`location:=${location}`);
   if (camera) filters.push(`camera_model:=${camera}`);
   if (year) filters.push(`taken_year:=${year}`);
   if (orientation) filters.push(`orientation:=${orientation}`);
-  
   const filterBy = filters.length > 0 ? filters.join(' && ') : undefined;
 
   try {
@@ -52,7 +75,6 @@ export async function GET(request: NextRequest) {
         include_fields: 'id,slug,title,thumb_url,small_url,medium_url,large_url,preview_url,keywords,gallery,location,taken_year',
       });
 
-    // Transform to API response format
     const response = {
       photos: (searchResult.hits || []).map((hit: any) => ({
         id: hit.document.id,
@@ -74,7 +96,12 @@ export async function GET(request: NextRequest) {
       hasMore: (searchResult.page || page) * perPage < (searchResult.found || 0),
     };
 
-    return NextResponse.json(response);
+    return NextResponse.json(response, {
+      headers: {
+        'Cache-Control': 'public, max-age=300, s-maxage=600, stale-while-revalidate=3600',
+        'CDN-Cache-Control': 'public, max-age=600',
+      }
+    });
   } catch (error) {
     console.error('Search API error:', error);
     return NextResponse.json(
