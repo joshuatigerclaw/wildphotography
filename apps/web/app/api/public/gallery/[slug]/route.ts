@@ -18,6 +18,14 @@ export async function GET(
   request: NextRequest,
   { params }: { params: Promise<{ slug: string }> }
 ) {
+  // Bot detection
+  const ua = request.headers.get('user-agent') || '';
+  if (/headless|python|curl|wget|scrapy|axios|phantom|selenium|playwright|puppeteer/i.test(ua)) {
+    return NextResponse.json({ error: 'Gallery not found' }, { status: 404 }, {
+      headers: { 'Cache-Control': 'no-store' }
+    });
+  }
+
   const { slug } = await params;
   const sql = neon(DATABASE_URL);
 
@@ -64,5 +72,10 @@ export async function GET(
     })),
   };
 
-  return NextResponse.json(response);
+  return NextResponse.json(response, {
+      headers: {
+        'Cache-Control': 'public, max-age=3600, s-maxage=7200, stale-while-revalidate=86400',
+        'CDN-Cache-Control': 'public, max-age=7200',
+      }
+    });
 }

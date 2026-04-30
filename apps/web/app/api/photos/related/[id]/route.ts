@@ -15,18 +15,30 @@ function withR2(url: string | null): string | null {
 
 export const dynamic = 'force-dynamic';
 
+// Simple bot check
+function isBot(ua: string): boolean {
+  return /headless|python|curl|wget|scrapy|axios|phantom|selenium|playwright|puppeteer/i.test(ua);
+}
+
 export async function GET(
-  _req: NextRequest,
+  request: NextRequest,
   { params }: { params: Promise<{ id: string }> }
 ) {
   try {
+    const ua = request.headers.get('user-agent') || '';
+    if (isBot(ua)) {
+      return NextResponse.json({ error: 'Rate limited' }, { 
+        status: 429,
+        headers: { 'Cache-Control': 'no-store' }
+      });
+    }
+
     const { id } = await params;
     const photoId = parseInt(id);
     if (isNaN(photoId)) {
       return NextResponse.json({ error: 'Invalid photo ID' }, { status: 400 });
     }
 
-    // Fetch photo metadata for scoring
     const photoMeta = await sql`
       SELECT p.id, p.slug, p.title, p.location, p.region, p.species_common_name,
              p.species_scientific_name, p.keywords, p.thumb_url, p.small_url,
@@ -41,11 +53,8 @@ export async function GET(
 
     const photo = photoMeta[0] as any;
 
-    // Score related photos using page_links (primary source)
-    // and gallery/species/location co-occurrence (secondary)
     const relatedResult = await sql`
       WITH scored_photos AS (
-        -- page_links photo→species matches
         SELECT DISTINCT p.id, p.slug, p.title, p.thumb_url, p.small_url,
                p.species_common_name, p.location,
                40 AS score
@@ -59,7 +68,6 @@ export async function GET(
 
         UNION ALL
 
-        -- page_links photo→location matches
         SELECT DISTINCT p.id, p.slug, p.title, p.thumb_url, p.small_url,
                p.species_common_name, p.location,
                30 AS score
@@ -75,7 +83,6 @@ export async function GET(
 
         UNION ALL
 
-        -- Same gallery via gallery_photos
         SELECT DISTINCT p.id, p.slug, p.title, p.thumb_url, p.small_url,
                p.species_common_name, p.location,
                25 AS score
@@ -87,7 +94,6 @@ export async function GET(
 
         UNION ALL
 
-        -- Same region
         SELECT DISTINCT p.id, p.slug, p.title, p.thumb_url, p.small_url,
                p.species_common_name, p.location,
                15 AS score
@@ -99,7 +105,6 @@ export async function GET(
 
         UNION ALL
 
-        -- Same species
         SELECT DISTINCT p.id, p.slug, p.title, p.thumb_url, p.small_url,
                p.species_common_name, p.location,
                40 AS score
@@ -111,7 +116,6 @@ export async function GET(
 
         UNION ALL
 
-        -- Featured photos boost
         SELECT DISTINCT p.id, p.slug, p.title, p.thumb_url, p.small_url,
                p.species_common_name, p.location,
                5 AS score
@@ -140,7 +144,12 @@ export async function GET(
       score: Number(row.total_score),
     }));
 
-    return NextResponse.json({ photos });
+    return NextResponse.json({ photos }, {
+      headers: {
+        'Cache-Control': 'public, max-age=300, s-maxage=600, stale-while-revalidate=1800',
+        'CDN-Cache-Control': 'public, max-age=600',
+      }
+    });
   } catch (error) {
     console.error('[api/photos/related] Error:', error);
     return NextResponse.json({ error: 'Internal server error' }, { status: 500 });
