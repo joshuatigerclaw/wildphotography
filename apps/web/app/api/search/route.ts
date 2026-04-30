@@ -19,7 +19,6 @@ function getBotScore(ua: string, path: string): number {
   const uaLower = ua.toLowerCase();
   if (/headless|python|curl|wget|scrapy|axios/.test(uaLower)) score += 3;
   if (!ua.includes('Accept-Language')) score += 1;
-  if (path.startsWith('/api/') && score > 3) return score;
   return score;
 }
 
@@ -42,7 +41,7 @@ export async function GET(request: NextRequest) {
     });
   }
   
-  // Bot score 3-5 — serve cached/sampled (return fewer results)
+  // Bot score 3-5 — serve fewer results
   if (botScore >= 3) {
     perPage = Math.min(perPage, 10);
   }
@@ -53,7 +52,7 @@ export async function GET(request: NextRequest) {
   const camera = searchParams.get('camera');
   const year = searchParams.get('year');
   const orientation = searchParams.get('orientation');
-  if (gallery) filters.push(`gallery:=${gallery}`);
+  if (gallery) filters.push(`gallery_slug:=${gallery}`);
   if (location) filters.push(`location:=${location}`);
   if (camera) filters.push(`camera_model:=${camera}`);
   if (year) filters.push(`taken_year:=${year}`);
@@ -66,13 +65,13 @@ export async function GET(request: NextRequest) {
       .documents()
       .search({
         q: query === '*' || !query ? '*' : query,
-        query_by: 'title,description,keywords,location,gallery',
+        query_by: 'title,keywords,location,species_common_name',
         filter_by: filterBy,
         sort_by: 'date_uploaded:desc',
         page,
         per_page: perPage,
-        facet_by: ['keywords', 'gallery', 'location', 'orientation', 'camera_model', 'lens', 'taken_year'],
-        include_fields: 'id,slug,title,thumb_url,small_url,medium_url,large_url,preview_url,keywords,gallery,location,taken_year',
+        facet_by: ['keywords', 'gallery_slug', 'location', 'orientation', 'camera_model', 'animal_group', 'region'],
+        include_fields: 'id,slug,title,thumb_url,small_url,medium_url,large_url,preview_url,keywords,gallery_slug,location,taken_year',
       });
 
     const response = {
@@ -87,7 +86,7 @@ export async function GET(request: NextRequest) {
         previewUrl: hit.document.preview_url,
         keywords: hit.document.keywords,
         locationName: hit.document.location,
-        gallery: hit.document.gallery,
+        gallery: hit.document.gallery_slug,
         takenYear: hit.document.taken_year,
       })),
       total: searchResult.found || 0,

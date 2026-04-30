@@ -15,10 +15,8 @@ export async function GET(request: NextRequest) {
   const page = parseInt(searchParams.get('page') || '1', 10);
   let perPage = parseInt(searchParams.get('limit') || '20', 10);
   
-  // Cap response size
   perPage = Math.min(perPage, 50);
   
-  // Basic bot check
   const ua = request.headers.get('user-agent') || '';
   if (/headless|python|curl|wget|scrapy|axios/.test(ua.toLowerCase())) {
     perPage = Math.min(perPage, 10);
@@ -35,7 +33,7 @@ export async function GET(request: NextRequest) {
       .documents()
       .search({
         q: query,
-        query_by: 'title,description,keywords,location',
+        query_by: 'title,keywords,location,species_common_name',
         page,
         per_page: perPage,
       });
