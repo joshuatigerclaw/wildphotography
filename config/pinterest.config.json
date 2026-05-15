@@ -1,0 +1,41 @@
+{
+  "enabled": true,
+  "dryRun": true,
+  "siteUrl": "https://wildphotography.com",
+  "dailyPinTarget": 20,
+  "maxPinsPerPhotoPer45Days": 1,
+  "pinWidth": 1000,
+  "pinHeight": 1500,
+  "watermarkText": "WildPhotography.com",
+  "outputDir": "exports/pinterest",
+  "pinImageDir": "public/generated/pinterest",
+  "csvFile": "exports/pinterest/pinterest_daily_queue.csv",
+  "defaultStatus": "queued",
+  "priorityBoards": [
+    "Costa Rica Travel Guide",
+    "Costa Rica Wildlife",
+    "Costa Rica Birds",
+    "Costa Rica Beaches",
+    "Costa Rica Waterfalls",
+    "Costa Rica National Parks",
+    "Tropical Wall Art",
+    "Wildlife Photography",
+    "Bird Photography",
+    "Costa Rica Photography",
+    "Manuel Antonio Costa Rica",
+    "Monteverde Costa Rica",
+    "Arenal Costa Rica",
+    "Tamarindo Costa Rica",
+    "Osa Peninsula Costa Rica"
+  ],
+  "titleTemplates": [
+    "{number} {adjective} {topic} in Costa Rica",
+    "Best {topic} in Costa Rica",
+    "Where to See {species} in Costa Rica",
+    "Costa Rica {location} Photo Guide",
+    "{species} Photography from Costa Rica",
+    "Tropical Wall Art from Costa Rica",
+    "Beautiful {topic} from Costa Rica"
+  ],
+  "descriptionTemplate": "Explore real Costa Rica photography from WildPhotography.com. Discover {topic}, {species}, locations, wildlife, beaches, waterfalls, and travel inspiration through a searchable Costa Rica photo archive."
+}
