@@ -64,9 +64,10 @@ export async function GET(request: NextRequest) {
       .documents()
       .search({
         q: query,
-        query_by: 'title,keywords,location,species_common_name',
+        query_by: 'title,keywords,location_name,species_common_name',
         page,
         per_page: perPage,
+        include_fields: 'id,slug,title,description,keywords,location_name,thumb_url,medium_url,gallery_slug',
       });
 
     const photos = (results.hits || []).map((hit: any) => ({
@@ -74,7 +75,7 @@ export async function GET(request: NextRequest) {
       slug: hit.document.slug,
       description: hit.document.description,
       keywords: hit.document.keywords,
-      location: hit.document.location,
+      location: hit.document.location_name,
       images: { thumb: hit.document.thumb_url, medium: hit.document.medium_url },
       canonicalUrl: `https://wildphotography.com/photo/${hit.document.slug}`,
     }));

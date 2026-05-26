@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { Client } from 'typesense';
-import { logSecurityEvent, hashIP, hashUA, getEndpointGroup } from '@/lib/security/logger';
+import { logSecurityEvent, hashIP, hashUA } from '@/lib/security/logger';
 
 const typesense = new Client({
   nodes: [{
@@ -99,14 +99,10 @@ export async function GET(request: NextRequest) {
   const filters: string[] = [];
   const gallery = searchParams.get('gallery');
   const location = searchParams.get('location');
-  const camera = searchParams.get('camera');
   const year = searchParams.get('year');
-  const orientation = searchParams.get('orientation');
   if (gallery) filters.push(`gallery_slug:=${gallery}`);
-  if (location) filters.push(`location:=${location}`);
-  if (camera) filters.push(`camera_model:=${camera}`);
-  if (year) filters.push(`taken_year:=${year}`);
-  if (orientation) filters.push(`orientation:=${orientation}`);
+  if (location) filters.push(`location_name:=${location}`);
+  if (year) filters.push(`date_taken_year:=${year}`);
   const filterBy = filters.length > 0 ? filters.join(' && ') : undefined;
 
   try {
@@ -115,13 +111,12 @@ export async function GET(request: NextRequest) {
       .documents()
       .search({
         q: query === '*' || !query ? '*' : query,
-        query_by: 'title,keywords,location,species_common_name',
+        query_by: 'title,keywords,location_name,species_common_name',
         filter_by: filterBy,
-        sort_by: 'date_uploaded:desc',
+        sort_by: 'date_taken:desc',
         page,
         per_page: perPage,
-        facet_by: ['keywords', 'gallery_slug', 'location', 'orientation', 'camera_model', 'animal_group', 'region'],
-        include_fields: 'id,slug,title,thumb_url,small_url,medium_url,large_url,preview_url,keywords,gallery_slug,location,taken_year',
+        include_fields: 'id,slug,title,thumb_url,medium_url,large_url,keywords,gallery_slug,location_name,date_taken',
       });
 
     const response = {
@@ -133,11 +128,10 @@ export async function GET(request: NextRequest) {
         smallUrl: hit.document.small_url,
         mediumUrl: hit.document.medium_url,
         largeUrl: hit.document.large_url,
-        previewUrl: hit.document.preview_url,
         keywords: hit.document.keywords,
-        locationName: hit.document.location,
+        locationName: hit.document.location_name,
         gallery: hit.document.gallery_slug,
-        takenYear: hit.document.taken_year,
+        takenYear: hit.document.date_taken ? Math.floor(hit.document.date_taken / 10000000000) : null,
       })),
       total: searchResult.found || 0,
       page: searchResult.page || page,
