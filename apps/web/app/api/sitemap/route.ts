@@ -21,7 +21,7 @@ export async function GET() {
     xml += '  </url>\n';
 
     // Static pages
-    const staticPages = ['/galleries', '/search'];
+    const staticPages = ['/galleries', '/search', '/api-access'];
     for (const page of staticPages) {
       xml += '  <url>\n';
       xml += `    <loc>${SITE_URL}${page}</loc>\n`;

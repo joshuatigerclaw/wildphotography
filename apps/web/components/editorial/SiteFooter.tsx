@@ -32,6 +32,13 @@ export default function SiteFooter() {
             </ul>
           </div>
           <div className="footer-col">
+            <h4>API</h4>
+            <ul>
+              <li><Link href="/api-access">API Access</Link></li>
+              <li><Link href="/guides/costa-rica-wildlife-photography">Photography Guide</Link></li>
+            </ul>
+          </div>
+          <div className="footer-col">
             <h4>About</h4>
             <ul>
               <li><Link href="/about">About</Link></li>
