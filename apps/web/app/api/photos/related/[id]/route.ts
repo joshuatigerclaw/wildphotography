@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { neon } from '@neondatabase/serverless';
+import { logSecurityEvent, hashIP, hashUA } from '@/lib/security/logger';
 
 const DATABASE_URL = process.env.DATABASE_URL ||
   'postgresql://neondb_owner:npg_BvF2JsQ8drba@ep-calm-fire-ad0dfnqd-pooler.c-2.us-east-1.aws.neon.tech/wildphotography?sslmode=require';
@@ -15,18 +16,47 @@ function withR2(url: string | null): string | null {
 
 export const dynamic = 'force-dynamic';
 
-// Simple bot check
+function extractCFXHeaders(request: NextRequest): Record<string, string | number | boolean | undefined> {
+  const headers = request.headers;
+  return {
+    country: headers.get('cf-ipcountry') || undefined,
+    colo: headers.get('cf-colo') || undefined,
+    asn: headers.get('cf-asn') || undefined,
+    cf_ray: headers.get('cf-ray') || undefined,
+    threat_score: headers.get('cf-threat-score') ? parseInt(headers.get('cf-threat-score')!, 10) : undefined,
+  };
+}
+
+// Simple bot check — mirrors the bot hardening applied in Phase 2
 function isBot(ua: string): boolean {
   return /headless|python|curl|wget|scrapy|axios|phantom|selenium|playwright|puppeteer/i.test(ua);
 }
 
 export async function GET(
   request: NextRequest,
-  { params }: { params: Promise<{ id: string }> }
+  { params }: { params: Promise<{ id: string } > }
 ) {
+  const startTime = Date.now();
+  const ua = request.headers.get('user-agent') || '';
+  const ip = request.headers.get('cf-connecting-ip') || request.headers.get('x-forwarded-for') || 'unknown';
+  const ipHash = hashIP(ip);
+
   try {
-    const ua = request.headers.get('user-agent') || '';
     if (isBot(ua)) {
+      logSecurityEvent({
+        request_path: '/api/photos/related',
+        request_method: 'GET',
+        endpoint_group: 'related_photos',
+        ip_hash: ipHash,
+        ...extractCFXHeaders(request),
+        user_agent: ua,
+        user_agent_hash: hashUA(ua),
+        referer: request.headers.get('referer') || undefined,
+        action_taken: 'blocked',
+        reason: 'bot_ua_blocked',
+        status_code: 429,
+        response_time_ms: Date.now() - startTime,
+      });
       return NextResponse.json({ error: 'Rate limited' }, { 
         status: 429,
         headers: { 'Cache-Control': 'no-store' }
@@ -151,6 +181,21 @@ export async function GET(
       }
     });
   } catch (error) {
+    logSecurityEvent({
+      request_path: '/api/photos/related',
+      request_method: 'GET',
+      endpoint_group: 'related_photos',
+      ip_hash: ipHash,
+      ...extractCFXHeaders(request),
+      user_agent: ua,
+      user_agent_hash: hashUA(ua),
+      referer: request.headers.get('referer') || undefined,
+      action_taken: 'error',
+      reason: 'related_photos_exception',
+      status_code: 500,
+      response_time_ms: Date.now() - startTime,
+      metadata: { error: error instanceof Error ? error.message : 'unknown' },
+    });
     console.error('[api/photos/related] Error:', error);
     return NextResponse.json({ error: 'Internal server error' }, { status: 500 });
   }
