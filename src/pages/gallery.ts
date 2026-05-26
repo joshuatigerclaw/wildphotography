@@ -574,28 +574,54 @@ export async function renderGallery(slug: string, env: Env, url: URL): Promise<R
   
   // SEO options
   const canonical = `https://wildphotography.com/gallery/${slug}`;
-  const description = galleryDescription 
-    ? `${galleryName} - ${galleryDescription.substring(0, 150)}`
-    : `Browse ${totalCount} professional ${galleryName.toLowerCase()} photos from Costa Rica by Joshua ten Brink`;
+  const galleryDescriptionText = gallery?.description || '';
+  // Build a stronger meta description (minimum 80 chars)
+  const description = galleryDescriptionText && galleryDescriptionText.length > 80
+    ? galleryDescriptionText
+    : `Browse ${totalCount} professional photos from ${galleryName}, Costa Rica by Joshua ten Brink. High-resolution wildlife and nature photography available as prints and downloads.`;
   const ogImage = photos[0]?.small_r2_key 
     ? `https://pub-7d412c6efb5943b5bc587e695e22001e.r2.dev/${photos[0].small_r2_key}` 
     : '';
   
-  // JSON-LD for collection page
+  // JSON-LD for collection page + breadcrumb
   const jsonLd = JSON.stringify({
     "@context": "https://schema.org",
     "@type": "CollectionPage",
     "name": galleryName,
-    "description": galleryDescription || `${galleryName} photography collection`,
+    "description": galleryDescriptionText || `${galleryName} photography collection from Costa Rica`,
     "url": canonical,
     "image": ogImage || undefined,
     "primaryImageOfPage": ogImage ? {
       "@type": "ImageObject",
       "url": ogImage
     } : undefined,
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://wildphotography.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Galleries",
+          "item": "https://wildphotography.com/galleries"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": galleryName,
+          "item": canonical
+        }
+      ]
+    },
     "creator": {
       "@type": "Person",
-      "name": "Joshua ten Brink"
+      "name": "Joshua ten Brink",
+      "url": "https://wildphotography.com/"
     }
   });
   

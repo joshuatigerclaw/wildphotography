@@ -171,8 +171,37 @@ export async function renderHome(env: Env, url: URL): Promise<Response> {
   const title = 'WildPhotography - Professional Wildlife Photography from Costa Rica';
   const description = 'Explore stunning wildlife photography from Costa Rica. Discover bird species, birding regions, and travel guides.';
   
+  // JSON-LD for homepage
+  const jsonLd = JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "WildPhotography",
+    "url": "https://wildphotography.com/",
+    "description": "Professional wildlife and nature photography from Costa Rica by Joshua ten Brink",
+    "image": "https://wildphotography.com/og-image.jpg",
+    "author": {
+      "@type": "Person",
+      "name": "Joshua ten Brink",
+      "url": "https://wildphotography.com/"
+    },
+    "publisher": {
+      "@type": "Person",
+      "name": "Joshua ten Brink",
+      "url": "https://wildphotography.com/"
+    },
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://wildphotography.com/search?q={search_term_string}"
+      },
+      "query-input": "required name=search_term_string"
+    }
+  });
+  
   return layout(title, content, '', '', {
     canonical: 'https://wildphotography.com/',
-    description
+    description,
+    jsonLd
   });
 }

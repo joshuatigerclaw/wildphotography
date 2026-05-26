@@ -3,13 +3,13 @@ import { getPhotoById, updatePhoto, logEdit, getEditHistory } from "@/lib/admin/
 
 export async function GET(
   req: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   const token = req.cookies.get("admin_token")?.value;
   if (token !== process.env.ADMIN_SECRET) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
-  const id = parseInt(params.id);
+  const id = parseInt((await params).id);
   if (isNaN(id)) return NextResponse.json({ error: "Invalid ID" }, { status: 400 });
 
   try {
@@ -24,13 +24,13 @@ export async function GET(
 
 export async function PATCH(
   req: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   const token = req.cookies.get("admin_token")?.value;
   if (token !== process.env.ADMIN_SECRET) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
-  const id = parseInt(params.id);
+  const id = parseInt((await params).id);
   if (isNaN(id)) return NextResponse.json({ error: "Invalid ID" }, { status: 400 });
 
   try {

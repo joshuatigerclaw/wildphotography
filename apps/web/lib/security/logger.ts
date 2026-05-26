@@ -174,7 +174,7 @@ export function extractCFXHeaders(request: Request | NextRequest): {
 
   return {
     country: headers.get('cf-ipcountry') || undefined,
-    colo: headers.get('cf colo') || undefined,
+    colo: headers.get('cf-colo') || undefined,
     asn: headers.get('cf-asn') || undefined,
     as_organization: undefined, // AS org requires separate lookup, leave for now
     cf_ray: headers.get('cf-ray') || undefined,
@@ -184,4 +184,4 @@ export function extractCFXHeaders(request: Request | NextRequest): {
   };
 }
 
-import type { NextRequest } from 'next/server';
+import { NextRequest } from 'next/server';

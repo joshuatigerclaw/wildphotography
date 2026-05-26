@@ -9,11 +9,11 @@ export const dynamic = 'force-dynamic';
 const SITE_URL = 'https://wildphotography.com';
 
 interface Props {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const article = await getArticleBySlug(params.slug);
+  const article = await getArticleBySlug((await params).slug);
   if (!article) return { title: 'Article Not Found | Wildphotography' };
 
   const canonical = `${SITE_URL}/article/${article.slug}`;
@@ -48,8 +48,8 @@ const ARTICLE_TYPE_LABELS: Record<string, string> = {
 
 export default async function ArticlePage({ params }: Props) {
   const [article, relatedArticles] = await Promise.all([
-    getArticleBySlug(params.slug),
-    getRelatedArticles(params.slug, undefined, 3),
+    getArticleBySlug((await params).slug),
+    getRelatedArticles((await params).slug, undefined, 3),
   ]);
 
   if (!article) notFound();

@@ -5010,7 +5010,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Limon-_9c517f66d568df91",
@@ -5023,7 +5024,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Limon-_266942655ced30c1",
@@ -5036,7 +5038,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Limon-_8d8fac7a66cd38b3",
@@ -5049,7 +5052,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Limon-_cf1f038744714aa6",
@@ -5062,7 +5066,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Limon-_9eb5977cef4ee1c8",
@@ -5075,7 +5080,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Limon-_9d94b9152b11a7e7",
@@ -5088,7 +5094,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Limon-_4a057b0cd7aa222f",
@@ -5101,7 +5108,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Limon-_70e26bfe6de32ad2",
@@ -5114,7 +5122,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Limon-_158e0ee65841f29b",
@@ -5127,7 +5136,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Limon-_9d7fa86b19f9fa2e",
@@ -5140,7 +5150,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Limon-_25934fc10c0ef7f2",
@@ -5153,7 +5164,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Limon-_6b4e75b9efa8e92a",
@@ -5166,7 +5178,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Limon-_7b30365be17c014e",
@@ -5179,7 +5192,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Limon-_42906d13e2a653b5",
@@ -5192,7 +5206,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Limon-_2043d4573c307075",
@@ -5205,7 +5220,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Limon-_959435c35526d874",
@@ -5218,7 +5234,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Limon-_5fe0bdaa955b6d63",
@@ -5231,7 +5248,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Limon-_ec87c43f6e4c2380",
@@ -5244,7 +5262,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Limon-_b553e102119c8efa",
@@ -5257,7 +5276,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Limon-_cb456e09dd1ed639",
@@ -5270,7 +5290,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Limon-_94f66d20a6282226",
@@ -5283,7 +5304,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Limon-_d26e9ac4180028ad",
@@ -5296,7 +5318,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Limon-_8bcd8a883c59494a",
@@ -5309,7 +5332,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Limon-_c10c83f0bffbd581",
@@ -5322,7 +5346,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Limon-_24c7fc1b46634def",
@@ -5335,7 +5360,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Limon-_9dc9fb5bbcc11495",
@@ -5348,7 +5374,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Limon-_d803e40ce8300c94",
@@ -5361,7 +5388,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Limon-_aaf9ac3938a4dbc6",
@@ -5374,7 +5402,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Limon-_26a5c6355940f71c",
@@ -5387,7 +5416,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Limon-_7bff3a9e1814aeee",
@@ -5400,7 +5430,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Limon-_965fb9ce991f312f",
@@ -5413,7 +5444,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Limon-_036b8d3011f0c99e",
@@ -5426,7 +5458,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Limon-_fcdf653528b5e50e",
@@ -5439,7 +5472,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Limon-_52b16444b2ada244",
@@ -5452,7 +5486,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Limon-_74d5c7bd1d78c1a9",
@@ -5465,7 +5500,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Limon-_dd8f8385612fda85",
@@ -5478,7 +5514,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Limon-_0185b58bdc651b86",
@@ -5491,7 +5528,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Limon-_4c4ad5c493b0c52b",
@@ -5504,7 +5542,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Limon-_d6305c168a389d5e",
@@ -5517,7 +5556,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_2e7ab80fac9b7879",
@@ -5530,7 +5570,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_0b886cf8cda88ca5",
@@ -5543,7 +5584,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_a86e21baadbd6dbc",
@@ -5556,7 +5598,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_b18e84e4a84749d2",
@@ -5569,7 +5612,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_273b7f71b9e3fe42",
@@ -5582,7 +5626,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_824149b6d89ff93c",
@@ -5595,7 +5640,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_cc9d06893345c0f4",
@@ -5608,7 +5654,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_ce2c58e171308a8f",
@@ -5621,7 +5668,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_3a7502bdbcf731b4",
@@ -5634,7 +5682,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_a9698115eaa4b3d0",
@@ -5647,7 +5696,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_b557e485b8b80eb4",
@@ -5660,7 +5710,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_87f6bdea47f49917",
@@ -5673,7 +5724,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_b69d2921d2664af6",
@@ -5686,7 +5738,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_d2a0f7361d07038d",
@@ -5699,7 +5752,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_89ecaab87d843365",
@@ -5712,7 +5766,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_0701dd225bf6f2c1",
@@ -5725,7 +5780,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_c61c0a7b072a2abe",
@@ -5738,7 +5794,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_09f450f63657e638",
@@ -5751,7 +5808,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_f828426f59db6568",
@@ -5764,7 +5822,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_8b27738288163d59",
@@ -5777,7 +5836,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_8d562659cb33539a",
@@ -5790,7 +5850,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_95ec0c5d7b4950d5",
@@ -5803,7 +5864,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_3e5d31a9a7b554ff",
@@ -5816,7 +5878,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_9509cead185af4e9",
@@ -5829,7 +5892,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_133e4f51a1b7621b",
@@ -5842,7 +5906,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_bf71708b2acb2377",
@@ -5855,7 +5920,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_32f846771fae542d",
@@ -5868,7 +5934,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_73c73cad35080503",
@@ -5881,7 +5948,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_7c764b72ef679e34",
@@ -5894,7 +5962,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_49cc0b8965fe795e",
@@ -5907,7 +5976,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_ba5e7857f5414af7",
@@ -5920,7 +5990,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_0eed83743d198963",
@@ -5933,7 +6004,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_9c8d79e8e615ac65",
@@ -5946,7 +6018,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_84ec4e45bda787c1",
@@ -5959,7 +6032,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_69622b9e8f4294f9",
@@ -5972,7 +6046,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_856e39288e291c7d",
@@ -5985,7 +6060,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_87721a58de7f59d8",
@@ -5998,7 +6074,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_f8afc315cd6ae701",
@@ -6011,7 +6088,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_d085ecdfd35757d3",
@@ -6024,7 +6102,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_acf92edcaefd0889",
@@ -6037,7 +6116,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_0f705db1a1726897",
@@ -6050,7 +6130,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_b09f1904336ee650",
@@ -6063,7 +6144,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_51af2658b5a4fe54",
@@ -6076,7 +6158,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_9ca96a4d986b159e",
@@ -6089,7 +6172,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_d67c6c58db5abb4a",
@@ -6102,7 +6186,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_80429d7e8eddc5c7",
@@ -6115,7 +6200,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_2580b18d22099263",
@@ -6128,7 +6214,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_24ed368fd3c523c5",
@@ -6141,7 +6228,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_51d106f99563c1f6",
@@ -6154,7 +6242,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_fa0b6ce936f56507",
@@ -6167,7 +6256,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_f332bcf4c7638607",
@@ -6180,7 +6270,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_1d0dae76c300cb6e",
@@ -6193,7 +6284,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_2c307cae89c04de6",
@@ -6206,7 +6298,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_fa33e4944a42e906",
@@ -6219,7 +6312,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_c849315b6c475c95",
@@ -6232,7 +6326,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_c8a6ba99e9579152",
@@ -6245,7 +6340,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_8daa816abc5bea91",
@@ -6258,7 +6354,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_a04d32e9e12b0318",
@@ -6271,7 +6368,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_d83de562fe631273",
@@ -6284,7 +6382,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_85d4d7b3a73854c5",
@@ -6297,7 +6396,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_10fc7cb0d72737f3",
@@ -6310,7 +6410,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_90a015ca453c905e",
@@ -6323,7 +6424,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_5de19ee1fa5fa6f9",
@@ -6336,7 +6438,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_97d71d9368043f72",
@@ -6349,7 +6452,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_3fad6cb48e79443c",
@@ -6362,7 +6466,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_9019eedbc8c451fd",
@@ -6375,7 +6480,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_136a5705b5ef32ab",
@@ -6388,7 +6494,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_b517e781982f0653",
@@ -6401,7 +6508,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_38dd52780cf91fd8",
@@ -6414,7 +6522,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_9764dde7c7c77d02",
@@ -6427,7 +6536,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_532e8dc040d26778",
@@ -6440,7 +6550,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_961f7ad1394d5cab",
@@ -6453,7 +6564,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_3d014e2cba9e9965",
@@ -6466,7 +6578,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_6c91a065b9778b6d",
@@ -6479,7 +6592,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_74834177ad9b2c74",
@@ -6492,7 +6606,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_dd828e556aba7e7c",
@@ -6505,7 +6620,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_4cdcad1ff7a9569f",
@@ -6518,7 +6634,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_9016f5eee1265327",
@@ -6531,7 +6648,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_ea6ecc60a3dd31fd",
@@ -6544,7 +6662,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_255bd5c2e740bcba",
@@ -6557,7 +6676,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_d69fecc685c30210",
@@ -6570,7 +6690,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_f16fc9c26c3099ca",
@@ -6583,7 +6704,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_f4bab409f5c07fd9",
@@ -6596,7 +6718,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_88b2637ce56889ed",
@@ -6609,7 +6732,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_cc4085c4014980ab",
@@ -6622,7 +6746,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_b8427fdbf6a870cc",
@@ -6635,7 +6760,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_e05b2114189f0002",
@@ -6648,7 +6774,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_2bfe94b6f5106200",
@@ -6661,7 +6788,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_149ae9521644a6e3",
@@ -6674,7 +6802,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_ee8ec3bc125b7018",
@@ -6687,7 +6816,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_78ff72ab955d7559",
@@ -6700,7 +6830,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_81d5ba9f388fe378",
@@ -6713,7 +6844,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_61dc067af0f77931",
@@ -6726,7 +6858,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_980d5589bea19f6f",
@@ -6739,7 +6872,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_c681e34b477213e7",
@@ -6752,7 +6886,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_1883bf157616aee2",
@@ -6765,7 +6900,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_a318b90f2b7c5cca",
@@ -6778,7 +6914,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_0b396f9c748ed6bb",
@@ -6791,7 +6928,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_abc27cc585e78df2",
@@ -6804,7 +6942,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_d5dc99d7d58a9d39",
@@ -6817,7 +6956,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_139cf95045a52d58",
@@ -6830,7 +6970,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_5fa13690ecb91403",
@@ -6843,7 +6984,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_cf8901753d243a39",
@@ -6856,7 +6998,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_bd6269c292468ef4",
@@ -6869,7 +7012,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_e50342b3e0a8f979",
@@ -6882,7 +7026,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_4861e9a7f6900ef0",
@@ -6895,7 +7040,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_523cdea5298b2916",
@@ -6908,7 +7054,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_6e2028a6800cea3c",
@@ -6921,7 +7068,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_7c7d614ff2af346e",
@@ -6934,7 +7082,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_1ce0c99dba71294d",
@@ -6947,7 +7096,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_548a231a6ab2cb55",
@@ -6960,7 +7110,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_d14f35b5d0c43695",
@@ -6973,7 +7124,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_c5e976e62b5da4db",
@@ -6986,7 +7138,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_98e6e3043f36259c",
@@ -6999,7 +7152,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_e5e1d46054f4f34e",
@@ -7012,7 +7166,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_55b5ddd5a083e4a4",
@@ -7025,7 +7180,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_4203c06a7421baa2",
@@ -7038,7 +7194,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_beff77c7fc8ca898",
@@ -7051,7 +7208,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_0d0b54e86df744e3",
@@ -7064,7 +7222,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_51a3062ecbe7b605",
@@ -7077,7 +7236,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_3633ddb692261dd9",
@@ -7090,7 +7250,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_5d7de08c7683fc23",
@@ -7103,7 +7264,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_ad259686e358ef93",
@@ -7116,7 +7278,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_ec48e97f07a2ad7f",
@@ -7129,7 +7292,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_9de17ac26da97e7a",
@@ -7142,7 +7306,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_99d7a3484a98fc08",
@@ -7155,7 +7320,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_1d5f9f58877b6f99",
@@ -7168,7 +7334,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_44753e7069b94775",
@@ -7181,7 +7348,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_43d55c0de24dc420",
@@ -7194,7 +7362,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_6d90a6a792ac47ff",
@@ -7207,7 +7376,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_2d68469a9240d675",
@@ -7220,7 +7390,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_8e006fc14d9f82bd",
@@ -7233,7 +7404,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_54cbfaeb0f9bcbd4",
@@ -7246,7 +7418,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_dff4c88514aca740",
@@ -7259,7 +7432,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_36d667ac32e1c397",
@@ -7272,7 +7446,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_41579176c7a0cf68",
@@ -7285,7 +7460,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_9411b0d00886cd98",
@@ -7298,7 +7474,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_80bb96d26d7fa830",
@@ -7311,7 +7488,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_4f82306ce5b7903d",
@@ -7324,7 +7502,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_6e2a4b82714bde5f",
@@ -7337,7 +7516,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_1e3e20ca2afa94a6",
@@ -7350,7 +7530,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_891bd28b60ddd9a5",
@@ -7363,7 +7544,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_9d445bcdf0a8c460",
@@ -7376,7 +7558,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_79e2f1c3ef0120ff",
@@ -7389,7 +7572,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_91f680c7e544ed77",
@@ -7402,7 +7586,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_496c87976b71e4b5",
@@ -7415,7 +7600,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_e86dcfd671b8e8a9",
@@ -7428,7 +7614,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_53e0198508b99d71",
@@ -7441,7 +7628,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_aff7dcafe2564aeb",
@@ -7454,7 +7642,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_4ab3c9fb05f01b65",
@@ -7467,7 +7656,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_a4de9a6bebf77d2c",
@@ -7480,7 +7670,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_d29689003399bde2",
@@ -7493,7 +7684,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_6010cc5a9ff99c1c",
@@ -7506,7 +7698,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_ba7511f9c6321556",
@@ -7519,7 +7712,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_418f36a795853cfe",
@@ -7532,7 +7726,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_208e9f2f9f97e713",
@@ -7545,7 +7740,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_439d64d380b1cc4b",
@@ -7558,7 +7754,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_24b29ba15c1f44ac",
@@ -7571,7 +7768,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_9386b7e94f82c415",
@@ -7584,7 +7782,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_6dd57978dd1848b2",
@@ -7597,7 +7796,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_e99dac9dd906c36c",
@@ -7610,7 +7810,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_4c08e2d81bcfe7aa",
@@ -7623,7 +7824,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_addc46e6774d525d",
@@ -7636,7 +7838,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_d82d166141178a0e",
@@ -7649,7 +7852,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_28e4d42c44c732f8",
@@ -7662,7 +7866,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_c96fb4327402ad3f",
@@ -7675,7 +7880,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_597371a89ad409cc",
@@ -7688,7 +7894,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_ad76476451876a45",
@@ -7701,7 +7908,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_ce6ea4eea835278d",
@@ -7714,7 +7922,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_31404c68cea24cfd",
@@ -7727,7 +7936,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_79fa81e293a9b460",
@@ -7740,7 +7950,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_28f1c4b9a23742e8",
@@ -7753,7 +7964,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_b4410767e25ef650",
@@ -7766,7 +7978,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_20d0929697631e38",
@@ -7779,7 +7992,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_a0bb0ddb565f4a00",
@@ -7792,7 +8006,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_a6edfbbf84a9b555",
@@ -7805,7 +8020,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_b8b10ab083a284a1",
@@ -7818,7 +8034,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_c9b9531690928d0d",
@@ -7831,7 +8048,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_fc7f7427d4e2e992",
@@ -7844,7 +8062,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_aee49765ba3b1bc0",
@@ -7857,7 +8076,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_c3eb194c30d4379d",
@@ -7870,7 +8090,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_d17e01586154698d",
@@ -7883,7 +8104,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_77eb9055847915a0",
@@ -7896,7 +8118,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_14365626f26465d0",
@@ -7909,7 +8132,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_e6c9853928e08a5a",
@@ -7922,7 +8146,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_f1fe4b68337e0ce5",
@@ -7935,7 +8160,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_f2e96dc060566b48",
@@ -7948,7 +8174,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_9c8d6e8b0cd69f82",
@@ -7961,7 +8188,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_d16a267ff4171e2e",
@@ -7974,7 +8202,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_368f8b77e56705d7",
@@ -7987,7 +8216,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_f47544a9421d3d68",
@@ -8000,7 +8230,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_2e4d83f6f7dfb666",
@@ -8013,7 +8244,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_b3d7a051c73171c3",
@@ -8026,7 +8258,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_32da325a82cc94d6",
@@ -8039,7 +8272,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_9b31675fb875d34d",
@@ -8052,7 +8286,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_30dd5af1b5c1c4b4",
@@ -8065,7 +8300,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_4d75a6a7b89df210",
@@ -8078,7 +8314,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_4453b69dd3a2df5f",
@@ -8091,7 +8328,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_222c1c88bc809e93",
@@ -8104,7 +8342,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Jaco-B_da6de5b72ef803ca",
@@ -8117,7 +8356,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_1349e85204ef2fd6",
@@ -8130,7 +8370,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_5c3fcd1cac4844d7",
@@ -8143,7 +8384,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_1a144423bcdd44ff",
@@ -8156,7 +8398,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_0f338cf58ff8dbfa",
@@ -8169,7 +8412,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_bf13d563929530ca",
@@ -8182,7 +8426,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_d7a3a2b16a367636",
@@ -8195,7 +8440,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_d948088381f00f40",
@@ -8208,7 +8454,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_5efe0e38f7892838",
@@ -8221,7 +8468,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_557aaaf18807b21a",
@@ -8234,7 +8482,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_718482842fff9695",
@@ -8247,7 +8496,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_52140f84d2a9884c",
@@ -8260,7 +8510,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_8266254355ff5d67",
@@ -8273,7 +8524,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_884e664ecd6d22ae",
@@ -8286,7 +8538,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_5b5a112800ff1dd6",
@@ -8299,7 +8552,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_979bd77b123b71e9",
@@ -8312,7 +8566,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_36158bcc38dfb00d",
@@ -8325,7 +8580,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_ed468e7b1fa5b786",
@@ -8338,7 +8594,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_9b1e6378e91fdaa7",
@@ -8351,7 +8608,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_39a5c7e4a19e3bbb",
@@ -8364,7 +8622,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_d5c70620184e8877",
@@ -8377,7 +8636,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_043851e5ae78f7b9",
@@ -8390,7 +8650,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_217ef656bc7ea43e",
@@ -8403,7 +8664,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_00d1c4b2e75b4a42",
@@ -8416,7 +8678,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_2617debc8f633532",
@@ -8429,7 +8692,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_140a600dc7a5dd6c",
@@ -8442,7 +8706,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_27b8361fef63c96f",
@@ -8455,7 +8720,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_0801517eac6b8e68",
@@ -8468,7 +8734,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_61e8f49683e12134",
@@ -8481,7 +8748,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_665c7f8acf2c3ef8",
@@ -8494,7 +8762,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_46cb1b988dd36d81",
@@ -8507,7 +8776,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_d72570ccbcf19f78",
@@ -8520,7 +8790,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_e0c0fd0af455467e",
@@ -8533,7 +8804,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_52d220bc37623630",
@@ -8546,7 +8818,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_85f36dd3807b51a7",
@@ -8559,7 +8832,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_0b7d70ce1fb43bc8",
@@ -8572,7 +8846,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_e75c74f3e538ccf3",
@@ -8585,7 +8860,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_447e038a2ca6decf",
@@ -8598,7 +8874,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_7eed4b6463c0b8fa",
@@ -8611,7 +8888,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_1f49fbf89552ec72",
@@ -8624,7 +8902,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_28f51216188fc842",
@@ -8637,7 +8916,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_40c657a4510276dc",
@@ -8650,7 +8930,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_d53eea5b039f1c5a",
@@ -8663,7 +8944,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_18b64e7400d60bf3",
@@ -8676,7 +8958,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_79f32044cdbe9c42",
@@ -8689,7 +8972,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_93a45d1e19837548",
@@ -8702,7 +8986,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_bb39e67bb262631f",
@@ -8715,7 +9000,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_261e468872f35359",
@@ -8728,7 +9014,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_33ee58dbe5cce6e6",
@@ -8741,7 +9028,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_0cc8ecdb40b29b9e",
@@ -8754,7 +9042,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_a03cdb4c8b3a7ad3",
@@ -8767,7 +9056,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_698e7ed761582cb4",
@@ -8780,7 +9070,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_8472a2093c057b30",
@@ -8793,7 +9084,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_6738ee86135f97a1",
@@ -8806,7 +9098,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_955e7551e54fdfde",
@@ -8819,7 +9112,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_2fe4e8e12e2cb34b",
@@ -8832,7 +9126,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_c75f514bb37d15e0",
@@ -8845,7 +9140,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_1ac59403d6f6fd5e",
@@ -8858,7 +9154,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_bff6d20ee2ae806e",
@@ -8871,7 +9168,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_f191e53e17275bda",
@@ -8884,7 +9182,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_702e360d1817778b",
@@ -8897,7 +9196,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_bad141623ab5d51e",
@@ -8910,7 +9210,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_b2ae0e36d60ce9f1",
@@ -8923,7 +9224,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_0a8a9de466de41cd",
@@ -8936,7 +9238,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_091e44931772313f",
@@ -8949,7 +9252,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_d948d623242f4366",
@@ -8962,7 +9266,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_161bd6d48444c6bb",
@@ -8975,7 +9280,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_75464687feacc1f4",
@@ -8988,7 +9294,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_6591373dff38375b",
@@ -9001,7 +9308,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_bd56a63eb3a6db11",
@@ -9014,7 +9322,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_83eb0dbb0be46693",
@@ -9027,7 +9336,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_3aab2e87d0c58dbd",
@@ -9040,7 +9350,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_a5ec984120d23b43",
@@ -9053,7 +9364,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_ec434b1c11c51dc8",
@@ -9066,7 +9378,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_21fd8e8e2ee8061f",
@@ -9079,7 +9392,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_c045a4167a2f4704",
@@ -9092,7 +9406,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_80284abb4fedb260",
@@ -9105,7 +9420,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_1847d9d51829ec20",
@@ -9118,7 +9434,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_6168d4512f4ff17c",
@@ -9131,7 +9448,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_37b1a561daf06f1c",
@@ -9144,7 +9462,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_59b77dd3955aaf45",
@@ -9157,7 +9476,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_17217997332a6bd5",
@@ -9170,7 +9490,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_aa48f6831d8cab98",
@@ -9183,7 +9504,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_a7aa14647a4ee027",
@@ -9196,7 +9518,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_74b3cd908ef4bab6",
@@ -9209,7 +9532,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_c4a34d255be240af",
@@ -9222,7 +9546,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_9eb6cb48906f3a7c",
@@ -9235,7 +9560,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_0a8eb5f893c56865",
@@ -9248,7 +9574,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_d674ed5978b5de3a",
@@ -9261,7 +9588,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_42f11a436015937f",
@@ -9274,7 +9602,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_520946326fe74816",
@@ -9287,7 +9616,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_3c09eb4cdd1e1dcd",
@@ -9300,7 +9630,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_0557b6a0f92b6cc4",
@@ -9313,7 +9644,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_a6439d3ca082b6de",
@@ -9326,7 +9658,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_9cc34e9e0f25c27f",
@@ -9339,7 +9672,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_9fc3876d56f09e59",
@@ -9352,7 +9686,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_ebef4eac2d2f32d4",
@@ -9365,7 +9700,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_cb244ab37bc45a49",
@@ -9378,7 +9714,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_c72e72b726c75981",
@@ -9391,7 +9728,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_0562fcea23728517",
@@ -9404,7 +9742,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_168820cabfec5c91",
@@ -9417,7 +9756,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_cb7b1685f6047c6b",
@@ -9430,7 +9770,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_1d7e38adbc780dba",
@@ -9443,7 +9784,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_da10f6a8e34eb62b",
@@ -9456,7 +9798,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_391fe63bc33ac6ba",
@@ -9469,7 +9812,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_53888995fee7c9e8",
@@ -9482,7 +9826,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_a4464a4b7891b3de",
@@ -9495,7 +9840,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_13781c34d3503dd4",
@@ -9508,7 +9854,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_1ed5ae010bb1d16d",
@@ -9521,7 +9868,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_e0008d6022e72c2a",
@@ -9534,7 +9882,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_5dfd8fe4c35696c9",
@@ -9547,7 +9896,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_d80ff9ecbe8a4d22",
@@ -9560,7 +9910,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_9066c6c9d099621d",
@@ -9573,7 +9924,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_560e3a4678e8d552",
@@ -9586,7 +9938,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_6ee3988056ad8bd9",
@@ -9599,7 +9952,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_a00b3ed4758445ff",
@@ -9612,7 +9966,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_a3f9118cdd5f85c2",
@@ -9625,7 +9980,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_2dcab10563d9d640",
@@ -9638,7 +9994,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_84c73d913d11fdd9",
@@ -9651,7 +10008,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_b84d924749b4c0b6",
@@ -9664,7 +10022,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_fc2149e8e5513a05",
@@ -9677,7 +10036,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_2294704302a67d30",
@@ -9690,7 +10050,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_1a61537a9dfd7628",
@@ -9703,7 +10064,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_e94c58b053409702",
@@ -9716,7 +10078,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_bb5bc336e3f77a01",
@@ -9729,7 +10092,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_a52807223f46b039",
@@ -9742,7 +10106,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_7ff9a8a60ca53c73",
@@ -9755,7 +10120,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_64c1aef7bdc3a152",
@@ -9768,7 +10134,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_7ce28a0f35d9bfef",
@@ -9781,7 +10148,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_e3791013c99aa88e",
@@ -9794,7 +10162,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_0f030f8f1c560627",
@@ -9807,7 +10176,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_7a964e7c0e49fbc8",
@@ -9820,7 +10190,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_f8bc4d0868772c36",
@@ -9833,7 +10204,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_1360b69799c7a31a",
@@ -9846,7 +10218,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_35576df9380171ec",
@@ -9859,7 +10232,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_dd53b169e8d5b588",
@@ -9872,7 +10246,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_989e74ac353490f3",
@@ -9885,7 +10260,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_aef876b6b2be660a",
@@ -9898,7 +10274,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_f5d42e3e8ff9633e",
@@ -9911,7 +10288,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_230874921c776e57",
@@ -9924,7 +10302,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_1618329022bbed8a",
@@ -9937,7 +10316,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_466205fdea2d4044",
@@ -9950,7 +10330,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_a887b57249f12a78",
@@ -9963,7 +10344,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_6195e0b516b4b6fa",
@@ -9976,7 +10358,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_5d57185a6e5a13b2",
@@ -9989,7 +10372,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_3885b2fec7ee84aa",
@@ -10002,7 +10386,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_3a2ffe7783479252",
@@ -10015,7 +10400,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_136b6ee2ec38651d",
@@ -10028,7 +10414,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_5570bd832389ed08",
@@ -10041,7 +10428,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_f31d247dffe982f5",
@@ -10054,7 +10442,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_d7ca83ba6588fd9f",
@@ -10067,7 +10456,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_1e3513b1c66c946a",
@@ -10080,7 +10470,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_abe682cbe3af8b0e",
@@ -10093,7 +10484,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_6676157d34be41e3",
@@ -10106,7 +10498,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_9b25e4948ef19fdb",
@@ -10119,7 +10512,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_278cfe2edfaf1e20",
@@ -10132,7 +10526,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_5480abc2a1e9c593",
@@ -10145,7 +10540,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_1caf06be62abb0ff",
@@ -10158,7 +10554,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_3b215130f395441f",
@@ -10171,7 +10568,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_d848eb4b3943f932",
@@ -10184,7 +10582,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_a13cc5dbe1b97369",
@@ -10197,7 +10596,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_90304e86fd376188",
@@ -10210,7 +10610,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_2e1768c622ce071d",
@@ -10223,7 +10624,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_cfdeab184c0bf3cc",
@@ -10236,7 +10638,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_cb7f454022066dd0",
@@ -10249,7 +10652,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_7adfb243eae394dc",
@@ -10262,7 +10666,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_afc26113d3c4e6f2",
@@ -10275,7 +10680,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_4fc6d04b0ca7dcc7",
@@ -10288,7 +10694,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_b05190506a3c9387",
@@ -10301,7 +10708,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_16c75fbd0b1bd03b",
@@ -10314,7 +10722,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_7be28cb865fd4f72",
@@ -10327,7 +10736,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_8235de700b82a5b0",
@@ -10340,7 +10750,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_4c0db1fe5156dcef",
@@ -10353,7 +10764,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_d3685a943df69a5b",
@@ -10366,7 +10778,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_af63c13678d7c314",
@@ -10379,7 +10792,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_4300d18b32193ff9",
@@ -10392,7 +10806,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_e338d69859c7f794",
@@ -10405,7 +10820,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_310745970c91a1a8",
@@ -10418,7 +10834,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_0a92c978b797a01b",
@@ -10431,7 +10848,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_8719587f8a99a036",
@@ -10444,7 +10862,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_3e6ddd6f7a37af25",
@@ -10457,7 +10876,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_a2a9e4220d3d2234",
@@ -10470,7 +10890,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_c0386b7c172cb602",
@@ -10483,7 +10904,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_9b2bcd3ddc908e86",
@@ -10496,7 +10918,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_bfb76d617ca5a54c",
@@ -10509,7 +10932,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_4680a7ce2814f4bf",
@@ -10522,7 +10946,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_c89a04ddbbd7097e",
@@ -10535,7 +10960,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_a27f7eb3faef3378",
@@ -10548,7 +10974,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_bed2f58b1cdeba85",
@@ -10561,7 +10988,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_4c284e99dc43ab8f",
@@ -10574,7 +11002,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_a03f6f80c7985aee",
@@ -10587,7 +11016,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_65d1e88ecbdb0255",
@@ -10600,7 +11030,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_b55bc1963aed4322",
@@ -10613,7 +11044,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_58699fbe6c4cd55e",
@@ -10626,7 +11058,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_f076814a117ba3b0",
@@ -10639,7 +11072,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_0d05cccf2907da53",
@@ -10652,7 +11086,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_77ea5ce28750a8ec",
@@ -10665,7 +11100,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_eab9106093fe638b",
@@ -10678,7 +11114,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_e61a103fa5783ada",
@@ -10691,7 +11128,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_bc13640e6b5b7e0a",
@@ -10704,7 +11142,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Sunris_3f4b5008fcf1eb91",
@@ -10717,7 +11156,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_b60368b2238961b5",
@@ -10730,7 +11170,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_c1e013646e4379e5",
@@ -10743,7 +11184,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_e6dd8f4c5d672479",
@@ -10756,7 +11198,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_3436095a6360d0b3",
@@ -10769,7 +11212,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_4345ecf29a6ceb36",
@@ -10782,7 +11226,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_abbbd0b4af6ffa83",
@@ -10795,7 +11240,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_4aa3dff7968eef4b",
@@ -10808,7 +11254,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_ea5e0fd81b8248d9",
@@ -10821,7 +11268,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_934c48bc0008503b",
@@ -10834,7 +11282,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_f66f0e4fded06a4a",
@@ -10847,7 +11296,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_9c0a12eecf32cf28",
@@ -10860,7 +11310,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_1fbfd43dd77cc833",
@@ -10873,7 +11324,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_a6171ea61db077cd",
@@ -10886,7 +11338,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_128601715b38a03e",
@@ -10899,7 +11352,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_f740a0b9b0675329",
@@ -10912,7 +11366,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_1497dd0dc2c15cdb",
@@ -10925,7 +11380,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_747c895a5c38311c",
@@ -10938,7 +11394,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_bbc02b701038ea23",
@@ -10951,7 +11408,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_adb3e65bb4084002",
@@ -10964,7 +11422,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_1ca45178e0237035",
@@ -10977,7 +11436,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_3731eac48a3ef194",
@@ -10990,7 +11450,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_b22a66928c1e0801",
@@ -11003,7 +11464,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_b56fb6c8ae7fbfe1",
@@ -11016,7 +11478,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_e77c35f1b13dff8c",
@@ -11029,7 +11492,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_b1fb3647f2a90841",
@@ -11042,7 +11506,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_3c91ffe8e29587c4",
@@ -11055,7 +11520,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_b459f1cb58ba0ba3",
@@ -11068,7 +11534,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_ca6d874922789420",
@@ -11081,7 +11548,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_251fdb7bf050b29f",
@@ -11094,7 +11562,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_37f20f537cd276fa",
@@ -11107,7 +11576,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_6d4407967d526eb1",
@@ -11120,7 +11590,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_dc678dcaee21c35b",
@@ -11133,7 +11604,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_e2e2c7dfeacfb0dd",
@@ -11146,7 +11618,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_ef314e6d9dfde95e",
@@ -11159,7 +11632,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_51e39bb2d7404903",
@@ -11172,7 +11646,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_826bf43e6e96631f",
@@ -11185,7 +11660,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_af6612b166c86c0a",
@@ -11198,7 +11674,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_df8e6a8d40215e04",
@@ -11211,7 +11688,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_d6ad4f2af0dd7cf5",
@@ -11224,7 +11702,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_55f155d7501f2b47",
@@ -11237,7 +11716,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_d912dc4f23fcd17d",
@@ -11250,7 +11730,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_c67957dcf5932d16",
@@ -11263,7 +11744,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_2e92fb51e30d4e4f",
@@ -11276,7 +11758,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_71b5486ef2dd1cb9",
@@ -11289,7 +11772,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_7ab4cb5eb98a920a",
@@ -11302,7 +11786,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_6d527b0c071f70cb",
@@ -11315,7 +11800,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_7f14f7d17c008745",
@@ -11328,7 +11814,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_b75859a93ed4efc0",
@@ -11341,7 +11828,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_84478f5e44c8acc8",
@@ -11354,7 +11842,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_c0cc7e0500c93b29",
@@ -11367,7 +11856,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_290760b6ad9f5f84",
@@ -11380,7 +11870,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_4a8577422db506dc",
@@ -11393,7 +11884,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_48754f44533a25fc",
@@ -11406,7 +11898,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_92e6f59ef225599c",
@@ -11419,7 +11912,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_ef03f12d92259792",
@@ -11432,7 +11926,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_2163508312474a5a",
@@ -11445,7 +11940,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_3fe7877c31c49b70",
@@ -11458,7 +11954,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_07a58166f57d4334",
@@ -11471,7 +11968,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_efe5091a5eb437c5",
@@ -11484,7 +11982,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_9f98496bce71cdde",
@@ -11497,7 +11996,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_f0d0fa7a7ade4093",
@@ -11510,7 +12010,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_0b56c74d290b25da",
@@ -11523,7 +12024,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_f43b430960a602e4",
@@ -11536,7 +12038,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_10676ad310bd4513",
@@ -11549,7 +12052,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_556c3f1ef2047d5a",
@@ -11562,7 +12066,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_34e01ba1ea2930c1",
@@ -11575,7 +12080,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_9a90e5299102552c",
@@ -11588,7 +12094,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_c0097400b46aac9c",
@@ -11601,7 +12108,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_d455a18cb09eb7bc",
@@ -11614,7 +12122,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_415c870a7055d96a",
@@ -11627,7 +12136,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_b16f94325ff47c71",
@@ -11640,7 +12150,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_332cc2971a220c18",
@@ -11653,7 +12164,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_366458c75d843dba",
@@ -11666,7 +12178,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_5b937cf9a8c2b583",
@@ -11679,7 +12192,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_d3d3a55385366b78",
@@ -11692,7 +12206,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_6cc92ae36665d235",
@@ -11705,7 +12220,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_fa12b110eedcf69d",
@@ -11718,7 +12234,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_da6462af6f8597f5",
@@ -11731,7 +12248,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_f290e739660ae6ef",
@@ -11744,7 +12262,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_d37b55f745319bb7",
@@ -11757,7 +12276,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_ba3d427444195981",
@@ -11770,7 +12290,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_64c85e7626f03f31",
@@ -11783,7 +12304,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_47c53fda54715c2d",
@@ -11796,7 +12318,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_e0a356b53910c3c0",
@@ -11809,7 +12332,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_f38aa3f9e6d03240",
@@ -11822,7 +12346,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_d6c527098ef28038",
@@ -11835,7 +12360,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_44997e66c7c61b12",
@@ -11848,7 +12374,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_81d340526f499715",
@@ -11861,7 +12388,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_3f8f8cd44cd4f1e1",
@@ -11874,7 +12402,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_8938abfa5b9df322",
@@ -11887,7 +12416,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_6694cca00b640eb9",
@@ -11900,7 +12430,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_f8f4913b60d145ee",
@@ -11913,7 +12444,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_3c91e8a65d4ea43b",
@@ -11926,7 +12458,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_874228326f509e62",
@@ -11939,7 +12472,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_285272f2eb873b8e",
@@ -11952,7 +12486,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_e4e699d14909be99",
@@ -11965,7 +12500,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_8bb935576f547bb3",
@@ -11978,7 +12514,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_2fe3ecdfac094c07",
@@ -11991,7 +12528,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_cd52eb2cddb6b4a4",
@@ -12004,7 +12542,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_7c56c944364bf38f",
@@ -12017,7 +12556,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_bd471e643a716f74",
@@ -12030,7 +12570,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_a0871353014a4f74",
@@ -12043,7 +12584,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_8904263777a1d0ba",
@@ -12056,7 +12598,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_53c56be2471f9c8c",
@@ -12069,7 +12612,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_675f0e4a26416120",
@@ -12082,7 +12626,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_1c6a077ed738886e",
@@ -12095,7 +12640,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_ef518efaf4617cea",
@@ -12108,7 +12654,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_9d630d17abd6d1a1",
@@ -12121,7 +12668,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_0548000390ff9873",
@@ -12134,7 +12682,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_56bae373237134f7",
@@ -12147,7 +12696,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_73d2abdec22f1bb7",
@@ -12160,7 +12710,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_5feb8fc96e12902e",
@@ -12173,7 +12724,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_7636d5e68c2b451b",
@@ -12186,7 +12738,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_58337897692fe784",
@@ -12199,7 +12752,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_1360b69799c7a31a",
@@ -12212,7 +12766,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_40dd5ab0eb58facc",
@@ -12225,7 +12780,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_6195e0b516b4b6fa",
@@ -12238,7 +12794,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_5d57185a6e5a13b2",
@@ -12251,7 +12808,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_3885b2fec7ee84aa",
@@ -12264,7 +12822,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_ff491c8fd48160c9",
@@ -12277,7 +12836,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_3a2ffe7783479252",
@@ -12290,7 +12850,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_abe682cbe3af8b0e",
@@ -12303,7 +12864,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_43bd599f7d7c1fc7",
@@ -12316,7 +12878,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_6676157d34be41e3",
@@ -12329,7 +12892,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_9b25e4948ef19fdb",
@@ -12342,7 +12906,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_278cfe2edfaf1e20",
@@ -12355,7 +12920,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_f389a830ef1347ba",
@@ -12368,7 +12934,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_4afb3ff5a75b4ae3",
@@ -12381,7 +12948,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_af63c13678d7c314",
@@ -12394,7 +12962,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_73ef7892f7ab59db",
@@ -12407,7 +12976,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_5f8de804ad4cd3c9",
@@ -12420,7 +12990,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_f6b343bd40f527c0",
@@ -12433,7 +13004,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_c2ecf41950d17951",
@@ -12446,7 +13018,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_3dfc83e84da227b5",
@@ -12459,7 +13032,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_7596b178edcca4e4",
@@ -12472,7 +13046,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_0b43c971c5e506c4",
@@ -12485,7 +13060,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_1c7ee7f6378a92bc",
@@ -12498,7 +13074,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_3e581e797df87933",
@@ -12511,7 +13088,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_800eebb6bb604390",
@@ -12524,7 +13102,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_ff3c559943a5628f",
@@ -12537,7 +13116,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_3c98db3f750bb996",
@@ -12550,7 +13130,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_55a3369931a88938",
@@ -12563,7 +13144,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_4717d4e2d23d0e0d",
@@ -12576,7 +13158,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_483101ac343cf1e3",
@@ -12589,7 +13172,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_995ee26c3c2cbbf8",
@@ -12602,7 +13186,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_67cf6997fb20e1e6",
@@ -12615,7 +13200,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_229af1d80ca2a881",
@@ -12628,7 +13214,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_c55aa1f27b66dc64",
@@ -12641,7 +13228,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_a31af9d495179421",
@@ -12654,7 +13242,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_b17d17c1e2b9ede1",
@@ -12667,7 +13256,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_307ff2c03b916699",
@@ -12680,7 +13270,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_f9060cf31611cda9",
@@ -12693,7 +13284,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_009e98202b2fc3cc",
@@ -12706,7 +13298,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_0f1447519f422ac2",
@@ -12719,7 +13312,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_9744134a5c6e5ea8",
@@ -12732,7 +13326,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_df5c093b37de9113",
@@ -12745,7 +13340,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_3d7023c403b26f2d",
@@ -12758,7 +13354,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_49135991cb08e287",
@@ -12771,7 +13368,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_7e64ab9f18e68271",
@@ -12784,7 +13382,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_0082fcc3f1fcfb8d",
@@ -12797,7 +13396,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_f85025193e4df696",
@@ -12810,7 +13410,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_2b1b8ada7eafb435",
@@ -12823,7 +13424,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_be34683dbff9bec2",
@@ -12836,7 +13438,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_2e149d245cebbdd6",
@@ -12849,7 +13452,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_67ab5cf41a571eb9",
@@ -12862,7 +13466,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_546a0d014d65a479",
@@ -12875,7 +13480,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_0d2200b5591f4b77",
@@ -12888,7 +13494,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_6a4d9cff3473a74c",
@@ -12901,7 +13508,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_ebc6634b130af912",
@@ -12914,7 +13522,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_df306d9aa4ce68bd",
@@ -12927,7 +13536,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_444d547888f4a861",
@@ -12940,7 +13550,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_45062788dd4d37ac",
@@ -12953,7 +13564,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_0e303cc3394cc14b",
@@ -12966,7 +13578,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_b6d14b654bccf79a",
@@ -12979,7 +13592,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_9da9354997a5835d",
@@ -12992,7 +13606,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_bbb42fb33a2cd457",
@@ -13005,7 +13620,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_d1f204c244f8ca47",
@@ -13018,7 +13634,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_76b561e2d7f5a699",
@@ -13031,7 +13648,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_25ff459c566f70de",
@@ -13044,7 +13662,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_36a0d41d2b6982e5",
@@ -13057,7 +13676,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_a7a5dec02cd40634",
@@ -13070,7 +13690,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_4f76c8f14fea5002",
@@ -13083,7 +13704,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_95dc153bf754876f",
@@ -13096,7 +13718,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_d6b255a9fd1a7492",
@@ -13109,7 +13732,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_31e6bc812d625387",
@@ -13122,7 +13746,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_65ae8f939545b5ab",
@@ -13135,7 +13760,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_6d067c229e1bc56e",
@@ -13148,7 +13774,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_74225733ee2bcb33",
@@ -13161,7 +13788,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_f8bcb97b7ff821a1",
@@ -13174,7 +13802,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_19fbb51b55c5faf4",
@@ -13187,7 +13816,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_d3927596e5557d8d",
@@ -13200,7 +13830,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_8401afac6e5c8ffe",
@@ -13213,7 +13844,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_e943a2f38d560824",
@@ -13226,7 +13858,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_5189eeeb36f028a9",
@@ -13239,7 +13872,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_ed3e7e7b690db4ea",
@@ -13252,7 +13886,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_5d7c7e52f9c90551",
@@ -13265,7 +13900,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_e4750a25fe4d2734",
@@ -13278,7 +13914,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_c8258932f9fcfb9e",
@@ -13291,7 +13928,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_adb7bb2e54b90f32",
@@ -13304,7 +13942,8 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   },
   {
     "id": "ext_Beache_fa924c85f00f6f63",
@@ -13317,6 +13956,7 @@
     "approved": true,
     "priority": 50,
     "attempt_count": 0,
-    "status": "pending"
+    "status": "skipped",
+    "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
   }
 ]

@@ -16,7 +16,8 @@
       "approved": true,
       "priority": 50,
       "attempt_count": 0,
-      "status": "pending"
+      "status": "skipped",
+      "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
     },
     {
       "id": "new_1774112034621_245",
@@ -29,7 +30,8 @@
       "approved": true,
       "priority": 50,
       "attempt_count": 0,
-      "status": "pending"
+      "status": "skipped",
+      "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
     },
     {
       "id": "new_1774112034621_246",
@@ -42,7 +44,8 @@
       "approved": true,
       "priority": 50,
       "attempt_count": 0,
-      "status": "pending"
+      "status": "skipped",
+      "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
     },
     {
       "id": "new_1774112034621_247",
@@ -55,7 +58,8 @@
       "approved": true,
       "priority": 50,
       "attempt_count": 0,
-      "status": "pending"
+      "status": "skipped",
+      "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
     },
     {
       "id": "new_1774112034621_248",
@@ -68,7 +72,8 @@
       "approved": true,
       "priority": 50,
       "attempt_count": 0,
-      "status": "pending"
+      "status": "skipped",
+      "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
     },
     {
       "id": "new_1774112034621_249",
@@ -81,7 +86,8 @@
       "approved": true,
       "priority": 50,
       "attempt_count": 0,
-      "status": "pending"
+      "status": "skipped",
+      "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
     },
     {
       "id": "new_1774112034621_250",
@@ -94,7 +100,8 @@
       "approved": true,
       "priority": 50,
       "attempt_count": 0,
-      "status": "pending"
+      "status": "skipped",
+      "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
     },
     {
       "id": "new_1774112034621_251",
@@ -107,7 +114,8 @@
       "approved": true,
       "priority": 50,
       "attempt_count": 0,
-      "status": "pending"
+      "status": "skipped",
+      "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
     },
     {
       "id": "new_1774112034621_252",
@@ -120,7 +128,8 @@
       "approved": true,
       "priority": 50,
       "attempt_count": 0,
-      "status": "pending"
+      "status": "skipped",
+      "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
     },
     {
       "id": "new_1774112034621_253",
@@ -133,7 +142,8 @@
       "approved": true,
       "priority": 50,
       "attempt_count": 0,
-      "status": "pending"
+      "status": "skipped",
+      "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
     },
     {
       "id": "new_1774112034621_254",
@@ -146,7 +156,8 @@
       "approved": true,
       "priority": 50,
       "attempt_count": 0,
-      "status": "pending"
+      "status": "skipped",
+      "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
     },
     {
       "id": "new_1774112034621_255",
@@ -159,7 +170,8 @@
       "approved": true,
       "priority": 50,
       "attempt_count": 0,
-      "status": "pending"
+      "status": "skipped",
+      "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
     },
     {
       "id": "new_1774112034621_256",
@@ -172,7 +184,8 @@
       "approved": true,
       "priority": 50,
       "attempt_count": 0,
-      "status": "pending"
+      "status": "skipped",
+      "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
     },
     {
       "id": "new_1774112034621_257",
@@ -185,7 +198,8 @@
       "approved": true,
       "priority": 50,
       "attempt_count": 0,
-      "status": "pending"
+      "status": "skipped",
+      "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
     },
     {
       "id": "new_1774112034621_258",
@@ -198,7 +212,8 @@
       "approved": true,
       "priority": 50,
       "attempt_count": 0,
-      "status": "pending"
+      "status": "skipped",
+      "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
     },
     {
       "id": "new_1774112034621_259",
@@ -211,7 +226,8 @@
       "approved": true,
       "priority": 50,
       "attempt_count": 0,
-      "status": "pending"
+      "status": "skipped",
+      "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
     },
     {
       "id": "new_1774112034621_260",
@@ -224,7 +240,8 @@
       "approved": true,
       "priority": 50,
       "attempt_count": 0,
-      "status": "pending"
+      "status": "skipped",
+      "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
     },
     {
       "id": "new_1774112034621_261",
@@ -237,7 +254,8 @@
       "approved": true,
       "priority": 50,
       "attempt_count": 0,
-      "status": "pending"
+      "status": "skipped",
+      "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
     },
     {
       "id": "new_1774112034621_262",
@@ -250,7 +268,8 @@
       "approved": true,
       "priority": 50,
       "attempt_count": 0,
-      "status": "pending"
+      "status": "skipped",
+      "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
     },
     {
       "id": "new_1774112034621_263",
@@ -263,7 +282,8 @@
       "approved": true,
       "priority": 50,
       "attempt_count": 0,
-      "status": "pending"
+      "status": "skipped",
+      "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
     },
     {
       "id": "new_1774112034621_264",
@@ -276,7 +296,8 @@
       "approved": true,
       "priority": 50,
       "attempt_count": 0,
-      "status": "pending"
+      "status": "skipped",
+      "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
     },
     {
       "id": "new_1774112034621_265",
@@ -289,7 +310,8 @@
       "approved": true,
       "priority": 50,
       "attempt_count": 0,
-      "status": "pending"
+      "status": "skipped",
+      "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
     },
     {
       "id": "new_1774112034621_266",
@@ -302,7 +324,8 @@
       "approved": true,
       "priority": 50,
       "attempt_count": 0,
-      "status": "pending"
+      "status": "skipped",
+      "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
     },
     {
       "id": "new_1774112034621_267",
@@ -315,7 +338,8 @@
       "approved": true,
       "priority": 50,
       "attempt_count": 0,
-      "status": "pending"
+      "status": "skipped",
+      "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
     },
     {
       "id": "new_1774112034621_268",
@@ -328,7 +352,8 @@
       "approved": true,
       "priority": 50,
       "attempt_count": 0,
-      "status": "pending"
+      "status": "skipped",
+      "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
     },
     {
       "id": "new_1774112034621_269",
@@ -341,7 +366,8 @@
       "approved": true,
       "priority": 50,
       "attempt_count": 0,
-      "status": "pending"
+      "status": "skipped",
+      "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
     },
     {
       "id": "new_1774112034621_270",
@@ -354,7 +380,8 @@
       "approved": true,
       "priority": 50,
       "attempt_count": 0,
-      "status": "pending"
+      "status": "skipped",
+      "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
     },
     {
       "id": "new_1774112034621_271",
@@ -367,7 +394,8 @@
       "approved": true,
       "priority": 50,
       "attempt_count": 0,
-      "status": "pending"
+      "status": "skipped",
+      "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
     },
     {
       "id": "new_1774112034621_272",
@@ -380,7 +408,8 @@
       "approved": true,
       "priority": 50,
       "attempt_count": 0,
-      "status": "pending"
+      "status": "skipped",
+      "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
     },
     {
       "id": "new_1774112034621_273",
@@ -393,7 +422,8 @@
       "approved": true,
       "priority": 50,
       "attempt_count": 0,
-      "status": "pending"
+      "status": "skipped",
+      "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
     },
     {
       "id": "new_1774112034621_274",
@@ -406,7 +436,8 @@
       "approved": true,
       "priority": 50,
       "attempt_count": 0,
-      "status": "pending"
+      "status": "skipped",
+      "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
     },
     {
       "id": "new_1774112034621_275",
@@ -419,7 +450,8 @@
       "approved": true,
       "priority": 50,
       "attempt_count": 0,
-      "status": "pending"
+      "status": "skipped",
+      "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
     },
     {
       "id": "new_1774112034621_276",
@@ -432,7 +464,8 @@
       "approved": true,
       "priority": 50,
       "attempt_count": 0,
-      "status": "pending"
+      "status": "skipped",
+      "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
     },
     {
       "id": "new_1774112034621_277",
@@ -445,7 +478,8 @@
       "approved": true,
       "priority": 50,
       "attempt_count": 0,
-      "status": "pending"
+      "status": "skipped",
+      "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
     },
     {
       "id": "new_1774112034621_278",
@@ -458,7 +492,8 @@
       "approved": true,
       "priority": 50,
       "attempt_count": 0,
-      "status": "pending"
+      "status": "skipped",
+      "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
     },
     {
       "id": "new_1774112034621_279",
@@ -471,7 +506,8 @@
       "approved": true,
       "priority": 50,
       "attempt_count": 0,
-      "status": "pending"
+      "status": "skipped",
+      "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
     },
     {
       "id": "new_1774112034621_280",
@@ -484,7 +520,8 @@
       "approved": true,
       "priority": 50,
       "attempt_count": 0,
-      "status": "pending"
+      "status": "skipped",
+      "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
     },
     {
       "id": "new_1774112034621_281",
@@ -497,7 +534,8 @@
       "approved": true,
       "priority": 50,
       "attempt_count": 0,
-      "status": "pending"
+      "status": "skipped",
+      "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
     },
     {
       "id": "new_1774112034621_282",
@@ -510,7 +548,8 @@
       "approved": true,
       "priority": 50,
       "attempt_count": 0,
-      "status": "pending"
+      "status": "skipped",
+      "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
     },
     {
       "id": "new_1774112034621_283",
@@ -523,7 +562,8 @@
       "approved": true,
       "priority": 50,
       "attempt_count": 0,
-      "status": "pending"
+      "status": "skipped",
+      "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
     },
     {
       "id": "new_1774112034621_284",
@@ -536,7 +576,8 @@
       "approved": true,
       "priority": 50,
       "attempt_count": 0,
-      "status": "pending"
+      "status": "skipped",
+      "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
     },
     {
       "id": "new_1774112034621_285",
@@ -549,7 +590,8 @@
       "approved": true,
       "priority": 50,
       "attempt_count": 0,
-      "status": "pending"
+      "status": "skipped",
+      "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
     },
     {
       "id": "new_1774112034621_286",
@@ -562,7 +604,8 @@
       "approved": true,
       "priority": 50,
       "attempt_count": 0,
-      "status": "pending"
+      "status": "skipped",
+      "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
     },
     {
       "id": "new_1774112034621_287",
@@ -575,7 +618,8 @@
       "approved": true,
       "priority": 50,
       "attempt_count": 0,
-      "status": "pending"
+      "status": "skipped",
+      "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
     },
     {
       "id": "new_1774112034621_288",
@@ -588,7 +632,8 @@
       "approved": true,
       "priority": 50,
       "attempt_count": 0,
-      "status": "pending"
+      "status": "skipped",
+      "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
     },
     {
       "id": "new_1774112034621_289",
@@ -601,7 +646,8 @@
       "approved": true,
       "priority": 50,
       "attempt_count": 0,
-      "status": "pending"
+      "status": "skipped",
+      "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
     },
     {
       "id": "new_1774112034621_290",
@@ -614,7 +660,8 @@
       "approved": true,
       "priority": 50,
       "attempt_count": 0,
-      "status": "pending"
+      "status": "skipped",
+      "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
     },
     {
       "id": "new_1774112034621_292",
@@ -627,7 +674,8 @@
       "approved": true,
       "priority": 50,
       "attempt_count": 0,
-      "status": "pending"
+      "status": "skipped",
+      "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
     },
     {
       "id": "new_1774112034621_293",
@@ -640,7 +688,8 @@
       "approved": true,
       "priority": 50,
       "attempt_count": 0,
-      "status": "pending"
+      "status": "skipped",
+      "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
     },
     {
       "id": "new_1774112034621_294",
@@ -653,7 +702,8 @@
       "approved": true,
       "priority": 50,
       "attempt_count": 0,
-      "status": "pending"
+      "status": "skipped",
+      "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
     },
     {
       "id": "new_1774112034621_295",
@@ -666,7 +716,8 @@
       "approved": true,
       "priority": 50,
       "attempt_count": 0,
-      "status": "pending"
+      "status": "skipped",
+      "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
     },
     {
       "id": "new_1774112034621_296",
@@ -679,7 +730,8 @@
       "approved": true,
       "priority": 50,
       "attempt_count": 0,
-      "status": "pending"
+      "status": "skipped",
+      "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
     },
     {
       "id": "new_1774112034621_297",
@@ -692,7 +744,8 @@
       "approved": true,
       "priority": 50,
       "attempt_count": 0,
-      "status": "pending"
+      "status": "skipped",
+      "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
     },
     {
       "id": "new_1774112034621_298",
@@ -705,7 +758,8 @@
       "approved": true,
       "priority": 50,
       "attempt_count": 0,
-      "status": "pending"
+      "status": "skipped",
+      "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
     },
     {
       "id": "new_1774112034621_299",
@@ -718,7 +772,8 @@
       "approved": true,
       "priority": 50,
       "attempt_count": 0,
-      "status": "pending"
+      "status": "skipped",
+      "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
     },
     {
       "id": "new_1774112034621_300",
@@ -731,7 +786,8 @@
       "approved": true,
       "priority": 50,
       "attempt_count": 0,
-      "status": "pending"
+      "status": "skipped",
+      "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
     },
     {
       "id": "new_1774112034621_301",
@@ -744,7 +800,8 @@
       "approved": true,
       "priority": 50,
       "attempt_count": 0,
-      "status": "pending"
+      "status": "skipped",
+      "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
     },
     {
       "id": "new_1774112034621_302",
@@ -757,7 +814,8 @@
       "approved": true,
       "priority": 50,
       "attempt_count": 0,
-      "status": "pending"
+      "status": "skipped",
+      "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
     },
     {
       "id": "new_1774112034621_304",
@@ -770,7 +828,8 @@
       "approved": true,
       "priority": 50,
       "attempt_count": 0,
-      "status": "pending"
+      "status": "skipped",
+      "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
     },
     {
       "id": "new_1774112034621_305",
@@ -783,7 +842,8 @@
       "approved": true,
       "priority": 50,
       "attempt_count": 0,
-      "status": "pending"
+      "status": "skipped",
+      "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
     },
     {
       "id": "new_1774112034621_306",
@@ -796,7 +856,8 @@
       "approved": true,
       "priority": 50,
       "attempt_count": 0,
-      "status": "pending"
+      "status": "skipped",
+      "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
     },
     {
       "id": "new_1774112034621_307",
@@ -809,7 +870,8 @@
       "approved": true,
       "priority": 50,
       "attempt_count": 0,
-      "status": "pending"
+      "status": "skipped",
+      "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
     },
     {
       "id": "new_1774112034621_308",
@@ -822,7 +884,8 @@
       "approved": true,
       "priority": 50,
       "attempt_count": 0,
-      "status": "pending"
+      "status": "skipped",
+      "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
     },
     {
       "id": "new_1774112034621_309",
@@ -835,7 +898,8 @@
       "approved": true,
       "priority": 50,
       "attempt_count": 0,
-      "status": "pending"
+      "status": "skipped",
+      "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
     },
     {
       "id": "new_1774112034621_310",
@@ -848,7 +912,8 @@
       "approved": true,
       "priority": 50,
       "attempt_count": 0,
-      "status": "pending"
+      "status": "skipped",
+      "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
     },
     {
       "id": "new_1774112034621_311",
@@ -861,7 +926,8 @@
       "approved": true,
       "priority": 50,
       "attempt_count": 0,
-      "status": "pending"
+      "status": "skipped",
+      "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
     },
     {
       "id": "new_1774112034621_312",
@@ -874,7 +940,8 @@
       "approved": true,
       "priority": 50,
       "attempt_count": 0,
-      "status": "pending"
+      "status": "skipped",
+      "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
     },
     {
       "id": "new_1774112034621_313",
@@ -887,7 +954,8 @@
       "approved": true,
       "priority": 50,
       "attempt_count": 0,
-      "status": "pending"
+      "status": "skipped",
+      "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
     },
     {
       "id": "new_1774112034621_314",
@@ -900,7 +968,8 @@
       "approved": true,
       "priority": 50,
       "attempt_count": 0,
-      "status": "pending"
+      "status": "skipped",
+      "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
     },
     {
       "id": "new_1774112034621_315",
@@ -913,7 +982,8 @@
       "approved": true,
       "priority": 50,
       "attempt_count": 0,
-      "status": "pending"
+      "status": "skipped",
+      "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
     },
     {
       "id": "new_1774112034621_316",
@@ -926,7 +996,8 @@
       "approved": true,
       "priority": 50,
       "attempt_count": 0,
-      "status": "pending"
+      "status": "skipped",
+      "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
     },
     {
       "id": "new_1774112034621_317",
@@ -939,7 +1010,8 @@
       "approved": true,
       "priority": 50,
       "attempt_count": 0,
-      "status": "pending"
+      "status": "skipped",
+      "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
     },
     {
       "id": "new_1774112034621_318",
@@ -952,7 +1024,8 @@
       "approved": true,
       "priority": 50,
       "attempt_count": 0,
-      "status": "pending"
+      "status": "skipped",
+      "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
     },
     {
       "id": "new_1774112034621_319",
@@ -965,7 +1038,8 @@
       "approved": true,
       "priority": 50,
       "attempt_count": 0,
-      "status": "pending"
+      "status": "skipped",
+      "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
     },
     {
       "id": "new_1774112034621_320",
@@ -978,7 +1052,8 @@
       "approved": true,
       "priority": 50,
       "attempt_count": 0,
-      "status": "pending"
+      "status": "skipped",
+      "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
     },
     {
       "id": "new_1774112034621_321",
@@ -991,7 +1066,8 @@
       "approved": true,
       "priority": 50,
       "attempt_count": 0,
-      "status": "pending"
+      "status": "skipped",
+      "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
     },
     {
       "id": "new_1774112034621_322",
@@ -1004,7 +1080,8 @@
       "approved": true,
       "priority": 50,
       "attempt_count": 0,
-      "status": "pending"
+      "status": "skipped",
+      "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
     },
     {
       "id": "new_1774112034621_323",
@@ -1017,7 +1094,8 @@
       "approved": true,
       "priority": 50,
       "attempt_count": 0,
-      "status": "pending"
+      "status": "skipped",
+      "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
     },
     {
       "id": "new_1774112034621_324",
@@ -1030,7 +1108,8 @@
       "approved": true,
       "priority": 50,
       "attempt_count": 0,
-      "status": "pending"
+      "status": "skipped",
+      "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
     },
     {
       "id": "new_1774112034621_325",
@@ -1043,7 +1122,8 @@
       "approved": true,
       "priority": 50,
       "attempt_count": 0,
-      "status": "pending"
+      "status": "skipped",
+      "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
     },
     {
       "id": "new_1774112034621_326",
@@ -1056,7 +1136,8 @@
       "approved": true,
       "priority": 50,
       "attempt_count": 0,
-      "status": "pending"
+      "status": "skipped",
+      "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
     },
     {
       "id": "new_1774112034621_327",
@@ -1069,7 +1150,8 @@
       "approved": true,
       "priority": 50,
       "attempt_count": 0,
-      "status": "pending"
+      "status": "skipped",
+      "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
     },
     {
       "id": "new_1774112034621_328",
@@ -1082,7 +1164,8 @@
       "approved": true,
       "priority": 50,
       "attempt_count": 0,
-      "status": "pending"
+      "status": "skipped",
+      "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
     },
     {
       "id": "new_1774112034621_329",
@@ -1095,7 +1178,8 @@
       "approved": true,
       "priority": 50,
       "attempt_count": 0,
-      "status": "pending"
+      "status": "skipped",
+      "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
     },
     {
       "id": "new_1774112034621_330",
@@ -1108,7 +1192,8 @@
       "approved": true,
       "priority": 50,
       "attempt_count": 0,
-      "status": "pending"
+      "status": "skipped",
+      "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
     },
     {
       "id": "new_1774112034621_331",
@@ -1121,7 +1206,8 @@
       "approved": true,
       "priority": 50,
       "attempt_count": 0,
-      "status": "pending"
+      "status": "skipped",
+      "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
     },
     {
       "id": "new_1774112034621_332",
@@ -1134,7 +1220,8 @@
       "approved": true,
       "priority": 50,
       "attempt_count": 0,
-      "status": "pending"
+      "status": "skipped",
+      "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
     },
     {
       "id": "new_1774112034621_333",
@@ -1147,7 +1234,8 @@
       "approved": true,
       "priority": 50,
       "attempt_count": 0,
-      "status": "pending"
+      "status": "skipped",
+      "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
     },
     {
       "id": "new_1774112034621_334",
@@ -1160,7 +1248,8 @@
       "approved": true,
       "priority": 50,
       "attempt_count": 0,
-      "status": "pending"
+      "status": "skipped",
+      "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
     },
     {
       "id": "new_1774112034621_335",
@@ -1173,7 +1262,8 @@
       "approved": true,
       "priority": 50,
       "attempt_count": 0,
-      "status": "pending"
+      "status": "skipped",
+      "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
     },
     {
       "id": "new_1774112034621_336",
@@ -1186,7 +1276,8 @@
       "approved": true,
       "priority": 50,
       "attempt_count": 0,
-      "status": "pending"
+      "status": "skipped",
+      "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
     },
     {
       "id": "new_1774112034621_337",
@@ -1199,7 +1290,8 @@
       "approved": true,
       "priority": 50,
       "attempt_count": 0,
-      "status": "pending"
+      "status": "skipped",
+      "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
     },
     {
       "id": "new_1774112034621_338",
@@ -1212,7 +1304,8 @@
       "approved": true,
       "priority": 50,
       "attempt_count": 0,
-      "status": "pending"
+      "status": "skipped",
+      "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
     },
     {
       "id": "new_1774112034621_339",
@@ -1225,7 +1318,8 @@
       "approved": true,
       "priority": 50,
       "attempt_count": 0,
-      "status": "pending"
+      "status": "skipped",
+      "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
     },
     {
       "id": "new_1774112034621_340",
@@ -1238,7 +1332,8 @@
       "approved": true,
       "priority": 50,
       "attempt_count": 0,
-      "status": "pending"
+      "status": "skipped",
+      "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
     },
     {
       "id": "new_1774112034621_341",
@@ -1251,7 +1346,8 @@
       "approved": true,
       "priority": 50,
       "attempt_count": 0,
-      "status": "pending"
+      "status": "skipped",
+      "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
     },
     {
       "id": "new_1774112034621_342",
@@ -1264,7 +1360,8 @@
       "approved": true,
       "priority": 50,
       "attempt_count": 0,
-      "status": "pending"
+      "status": "skipped",
+      "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
     },
     {
       "id": "new_1774112034621_343",
@@ -1277,9 +1374,13 @@
       "approved": true,
       "priority": 50,
       "attempt_count": 0,
-      "status": "pending"
+      "status": "skipped",
+      "skip_reason": "stale_duplicate_all_hashes_exist_in_db"
     }
   ],
   "duplicates_removed": 2,
-  "actionable_count": 98
+  "actionable_count": 98,
+  "status": "completed",
+  "completed_at": "2026-05-06T04:01:00Z",
+  "cleanup_note": "all pending items were stale duplicates already in DB"
 }

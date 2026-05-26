@@ -127,8 +127,12 @@ export default async function LocationDetailPage({ params }: { params: Promise<{
             <div>
               <h3 className="font-semibold text-gray-900 text-sm uppercase tracking-wide mb-1">Target Species</h3>
               <div className="flex flex-wrap gap-1">
-                {meta.targetSpecies.slice(0, 12).map((s: string, i: number) => (
-                  <span key={i} className="inline-block px-2 py-0.5 bg-green-100 text-green-800 text-xs rounded-full">{s}</span>
+                {meta.targetSpecies.slice(0, 12).map((s: any, i: number) => (
+                  <Link
+                    key={s.slug || i}
+                    href={s.slug ? `/species/${s.slug}` : '#'}
+                    className="inline-block px-2 py-0.5 bg-green-100 text-green-800 text-xs rounded-full hover:bg-green-200 transition-colors"
+                  >{s.name || s}</Link>
                 ))}
               </div>
             </div>
@@ -154,7 +158,7 @@ export default async function LocationDetailPage({ params }: { params: Promise<{
               <h3 className="font-semibold text-gray-900 text-sm uppercase tracking-wide mb-3">Galleries</h3>
               <div className="space-y-2">
                 {((meta?.galleryLinks || meta?.nearbyGalleries) as any[]).slice(0, 10).map((g: any) => (
-                  <Link 
+                  <Link
                     key={g.slug}
                     href={`/gallery/${g.slug}`}
                     className="flex items-center gap-2 p-2 rounded-lg hover:bg-gray-50 transition-colors group"
@@ -175,9 +179,9 @@ export default async function LocationDetailPage({ params }: { params: Promise<{
               <h3 className="font-semibold text-gray-900 text-sm uppercase tracking-wide mb-3">Species</h3>
               <div className="flex flex-wrap gap-1">
                 {meta.speciesLinks.slice(0, 16).map((s: any, i: number) => (
-                  <Link 
-                    key={s.slug}
-                    href={`/species/${s.slug}`}
+                  <Link
+                    key={s.slug || i}
+                    href={s.slug ? `/species/${s.slug}` : '#'}
                     className="inline-block px-2 py-0.5 bg-amber-50 text-amber-700 text-xs rounded-full hover:bg-amber-100 transition-colors"
                   >
                     {s.name}

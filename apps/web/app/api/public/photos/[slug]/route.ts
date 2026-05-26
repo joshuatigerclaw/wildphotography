@@ -18,14 +18,12 @@ export const dynamic = 'force-dynamic';
 
 export async function GET(
   request: NextRequest,
-  { params }: { params: Promise<{ slug: string }> }
+  { params }: { params: Promise<{ slug: string } > }
 ) {
   // Bot detection
   const ua = request.headers.get('user-agent') || '';
   if (/headless|python|curl|wget|scrapy|axios|phantom|selenium|playwright|puppeteer/i.test(ua)) {
-    return NextResponse.json({ error: 'Not found' }, { status: 404 }, {
-      headers: { 'Cache-Control': 'no-store' }
-    });
+    return NextResponse.json({ error: 'Not found' }, { status: 404, headers: { 'Cache-Control': 'no-store' } });
   }
 
   const { slug } = await params;

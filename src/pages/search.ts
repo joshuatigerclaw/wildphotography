@@ -86,8 +86,27 @@ export async function renderSearch(env: Env, url: URL): Promise<Response> {
     ${resultsContent}
   `;
   
+  // JSON-LD for search page
+  const jsonLd = JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "SearchResultsPage",
+    "name": `Search: ${query}`,
+    "description": `Search results for "${query}" on WildPhotography - Professional Costa Rica nature photography by Joshua ten Brink`,
+    "url": `https://wildphotography.com/search${query ? '?q=' + encodeURIComponent(query) : ''}`,
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://wildphotography.com/search?q={search_term_string}"
+      },
+      "query-input": "required name=search_term_string"
+    }
+  });
+  
   return layout(`Search${query ? ' - ' + query : ''} - Wildphotography`, content, '', '', {
+    canonical: `https://wildphotography.com/search${query ? '?q=' + encodeURIComponent(query) : ''}`,
+    description: `Search results for ${query || 'photos'} on Wildphotography - Costa Rica nature photography by Joshua ten Brink`,
     noindex: true,
-    description: `Search results for ${query || 'photos'} on Wildphotography - Costa Rica nature photography`
+    jsonLd
   });
 }

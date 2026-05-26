@@ -77,8 +77,8 @@ function Field({
   );
 }
 
-export default function PhotoDetailPage({ params }: { params: { id: string } }) {
-  const photoId = parseInt(params.id);
+export default async function PhotoDetailPage({ params }: { params: Promise<{ id: string }> }) {
+  const photoId = parseInt((await params).id);
   const router = useRouter();
   const [photo, setPhoto] = useState<Photo | null>(null);
   const [history, setHistory] = useState<HistoryEntry[]>([]);

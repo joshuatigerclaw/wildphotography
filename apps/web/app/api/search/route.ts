@@ -116,7 +116,7 @@ export async function GET(request: NextRequest) {
         sort_by: 'date_taken:desc',
         page,
         per_page: perPage,
-        include_fields: 'id,slug,title,thumb_url,medium_url,large_url,keywords,gallery_slug,location_name,date_taken',
+        include_fields: 'id,slug,title,thumb_url,small_url,medium_url,large_url,keywords,gallery_slug,location_name,date_taken',
       });
 
     const response = {

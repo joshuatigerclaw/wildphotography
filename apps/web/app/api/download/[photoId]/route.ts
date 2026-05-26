@@ -14,7 +14,7 @@ const sql = neon(process.env.DATABASE_URL || 'postgresql://neondb_owner:npg_BvF2
 
 export async function GET(
   request: NextRequest,
-  { params }: { params: Promise<{ photoId: string }> }
+  { params }: { params: Promise<{ photoId: string } > }
 ) {
   try {
     const { photoId } = await params;

@@ -1,0 +1,312 @@
+[2026-05-05 22:03:44] === PHASE 2: INTERNAL LINKING AUDIT + INJECTION ===
+
+[2026-05-05 22:03:44] 
+=== SPECIES PAGE AUDIT ===
+[2026-05-05 22:03:44] Sections in species/[slug]/page.tsx:
+[2026-05-05 22:03:44]   [EXISTING] Breadcrumb → /, /species (hardcoded Link)
+[2026-05-05 22:03:44]   [EXISTING] Featured Photos — VirtualizedGallery (0 outbound links)
+[2026-05-05 22:03:44]   [EXISTING] Where to See → up to 10 location links from page_links WHERE target_type='location'
+[2026-05-05 22:03:44]   [EXISTING] Galleries Featuring → up to 6 gallery links from page_links WHERE target_type='gallery'
+[2026-05-05 22:03:44]   [EXISTING] Related Species → up to 6 species links from page_links WHERE target_type='species'
+[2026-05-05 22:03:44]   [EXISTING] Travel Guides → up to 3 article links from page_links WHERE target_type='article'
+[2026-05-05 22:03:44]   [EXISTING] Tours CTA → hardcoded /location/{slug}, not via page_links
+[2026-05-05 22:03:44]   [EXISTING] All Photos — VirtualizedGallery (0 outbound links)
+[2026-05-05 22:03:44] 
+[2026-05-05 22:03:44]   [MISSING] Photo Map link — static Next.js page with no DB entity, no 'page' target_type available
+[2026-05-05 22:03:44]   [MISSING] Licensing link — same situation
+[2026-05-05 22:03:44]   [LOW] Related Species UI cap at 6; DB has no limit — more available via region match
+[2026-05-05 22:03:44]   [LOW] Locations UI cap at 10; DB has more locations per region
+[2026-05-05 22:03:44] 
+[2026-05-05 22:03:44]   Current outbound link budget: ~36 junction-driven links max
+[2026-05-05 22:03:44]   Recommended injection: expand species→species, species→location beyond UI caps
+[2026-05-05 22:03:44] 
+=== LOCATION PAGE AUDIT ===
+[2026-05-05 22:03:44] Sections in location/[slug]/page.tsx:
+[2026-05-05 22:03:44]   [EXISTING] Breadcrumb → /, /location (hardcoded)
+[2026-05-05 22:03:44]   [EXISTING] Overview text — metadata-driven (0 outbound links)
+[2026-05-05 22:03:44]   [EXISTING] Highlights list (0 outbound links)
+[2026-05-05 22:03:44]   [EXISTING] Info panel → inline chips for species, not linked
+[2026-05-05 22:03:44]   [EXISTING] Gallery Links → from metadata JSON (up to 10, not DB-driven)
+[2026-05-05 22:03:44]   [EXISTING] Species Links → from metadata JSON (up to 16, not DB-driven)
+[2026-05-05 22:03:44]   [EXISTING] Nearby Locations → same-region filter, hardcoded slice of 6
+[2026-05-05 22:03:44]   [EXISTING] Book a Tour → affiliate blocks
+[2026-05-05 22:03:44]   [EXISTING] Photo Gallery — VirtualizedGallery (0 outbound links)
+[2026-05-05 22:03:44] 
+[2026-05-05 22:03:44]   [MISSING] Photo Map link — static page, no 'page' target_type in page_links
+[2026-05-05 22:03:44]   [MISSING] Licensing link — same
+[2026-05-05 22:03:44]   [MISSING] Breadcrumb region link
+[2026-05-05 22:03:44]   [LOW] Nearby Locations hardcoded at 6; DB may have more same-region locations
+[2026-05-05 22:03:44]   [LOW] Gallery links from metadata JSON — risk of stale/missing vs DB-driven page_links
+[2026-05-05 22:03:44]   [LOW] Species links from metadata JSON — same
+[2026-05-05 22:03:44] 
+[2026-05-05 22:03:44]   Recommended injection: expand location→location (same region) and location→gallery
+[2026-05-05 22:03:45] 
+=== PAGE_LINKS (pre-injection) ===
+[2026-05-05 22:03:45]   10 → gallery: 23
+[2026-05-05 22:03:45]   100 → gallery: 61
+[2026-05-05 22:03:45]   11 → gallery: 24
+[2026-05-05 22:03:45]   13 → gallery: 25
+[2026-05-05 22:03:45]   14 → gallery: 60
+[2026-05-05 22:03:45]   15 → gallery: 25
+[2026-05-05 22:03:45]   16 → gallery: 24
+[2026-05-05 22:03:45]   17 → gallery: 28
+[2026-05-05 22:03:45]   18 → gallery: 26
+[2026-05-05 22:03:45]   19 → gallery: 29
+[2026-05-05 22:03:45]   21 → gallery: 29
+[2026-05-05 22:03:45]   23 → gallery: 30
+[2026-05-05 22:03:45]   24 → gallery: 4
+[2026-05-05 22:03:45]   26 → gallery: 31
+[2026-05-05 22:03:45]   27 → gallery: 31
+[2026-05-05 22:03:45]   28 → gallery: 60
+[2026-05-05 22:03:45]   29 → gallery: 60
+[2026-05-05 22:03:45]   30 → gallery: 1
+[2026-05-05 22:03:45]   31 → gallery: 5
+[2026-05-05 22:03:45]   32 → gallery: 32
+[2026-05-05 22:03:45]   33 → gallery: 5
+[2026-05-05 22:03:45]   34 → gallery: 33
+[2026-05-05 22:03:45]   35 → gallery: 34
+[2026-05-05 22:03:45]   36 → gallery: 60
+[2026-05-05 22:03:45]   37 → gallery: 35
+[2026-05-05 22:03:45]   38 → gallery: 61
+[2026-05-05 22:03:45]   39 → gallery: 36
+[2026-05-05 22:03:45]   40 → gallery: 37
+[2026-05-05 22:03:45]   41 → gallery: 38
+[2026-05-05 22:03:45]   42 → gallery: 60
+[2026-05-05 22:03:45]   43 → gallery: 39
+[2026-05-05 22:03:45]   44 → gallery: 40
+[2026-05-05 22:03:45]   45 → gallery: 40
+[2026-05-05 22:03:45]   46 → gallery: 60
+[2026-05-05 22:03:45]   48 → gallery: 5
+[2026-05-05 22:03:45]   49 → gallery: 41
+[2026-05-05 22:03:45]   5 → gallery: 19
+[2026-05-05 22:03:45]   50 → gallery: 41
+[2026-05-05 22:03:45]   51 → gallery: 42
+[2026-05-05 22:03:45]   52 → gallery: 2
+[2026-05-05 22:03:45]   53 → gallery: 43
+[2026-05-05 22:03:45]   55 → gallery: 6
+[2026-05-05 22:03:45]   56 → gallery: 44
+[2026-05-05 22:03:45]   57 → gallery: 45
+[2026-05-05 22:03:45]   59 → gallery: 3
+[2026-05-05 22:03:45]   6 → gallery: 20
+[2026-05-05 22:03:45]   60 → gallery: 15
+[2026-05-05 22:03:45]   63 → gallery: 46
+[2026-05-05 22:03:45]   64 → gallery: 6
+[2026-05-05 22:03:45]   65 → gallery: 11
+[2026-05-05 22:03:45]   66 → gallery: 60
+[2026-05-05 22:03:45]   67 → gallery: 46
+[2026-05-05 22:03:45]   68 → gallery: 60
+[2026-05-05 22:03:45]   69 → gallery: 60
+[2026-05-05 22:03:45]   70 → gallery: 7
+[2026-05-05 22:03:45]   71 → gallery: 8
+[2026-05-05 22:03:45]   72 → gallery: 9
+[2026-05-05 22:03:45]   73 → gallery: 9
+[2026-05-05 22:03:45]   74 → gallery: 60
+[2026-05-05 22:03:45]   75 → gallery: 11
+[2026-05-05 22:03:45]   76 → gallery: 48
+[2026-05-05 22:03:45]   77 → gallery: 60
+[2026-05-05 22:03:45]   78 → gallery: 48
+[2026-05-05 22:03:45]   79 → gallery: 60
+[2026-05-05 22:03:45]   8 → gallery: 61
+[2026-05-05 22:03:45]   80 → gallery: 10
+[2026-05-05 22:03:45]   81 → gallery: 49
+[2026-05-05 22:03:45]   82 → gallery: 60
+[2026-05-05 22:03:45]   83 → gallery: 51
+[2026-05-05 22:03:45]   84 → gallery: 60
+[2026-05-05 22:03:45]   85 → gallery: 60
+[2026-05-05 22:03:45]   86 → gallery: 60
+[2026-05-05 22:03:45]   87 → gallery: 13
+[2026-05-05 22:03:45]   88 → gallery: 52
+[2026-05-05 22:03:45]   89 → gallery: 60
+[2026-05-05 22:03:45]   9 → gallery: 22
+[2026-05-05 22:03:45]   90 → gallery: 53
+[2026-05-05 22:03:45]   91 → gallery: 57
+[2026-05-05 22:03:45]   92 → gallery: 60
+[2026-05-05 22:03:45]   93 → gallery: 55
+[2026-05-05 22:03:45]   94 → gallery: 11
+[2026-05-05 22:03:45]   95 → gallery: 15
+[2026-05-05 22:03:45]   96 → gallery: 56
+[2026-05-05 22:03:45]   97 → gallery: 57
+[2026-05-05 22:03:45]   98 → gallery: 58
+[2026-05-05 22:03:45]   99 → gallery: 59
+[2026-05-05 22:03:45]   article → article: 3179
+[2026-05-05 22:03:45]   article → gallery: 391
+[2026-05-05 22:03:45]   article → location: 302
+[2026-05-05 22:03:45]   article → location_guide: 1193
+[2026-05-05 22:03:45]   article → region: 56
+[2026-05-05 22:03:45]   article → species: 5643
+[2026-05-05 22:03:45]   article → species_guide: 402
+[2026-05-05 22:03:45]   gallery → article: 86
+[2026-05-05 22:03:45]   gallery → gallery: 1475
+[2026-05-05 22:03:45]   gallery → location: 160
+[2026-05-05 22:03:45]   gallery → location_guide: 185
+[2026-05-05 22:03:45]   gallery → photo: 5000
+[2026-05-05 22:03:45]   gallery → region: 41
+[2026-05-05 22:03:45]   gallery → species: 190
+[2026-05-05 22:03:45]   gallery → species_guide: 77
+[2026-05-05 22:03:45]   location → article: 62
+[2026-05-05 22:03:45]   location → gallery: 209
+[2026-05-05 22:03:45]   location → location: 100
+[2026-05-05 22:03:45]   location → location_guide: 1
+[2026-05-05 22:03:45]   location → region: 24
+[2026-05-05 22:03:45]   location → species: 194
+[2026-05-05 22:03:45]   location_guide → article: 2110
+[2026-05-05 22:03:45]   location_guide → cluster: 912
+[2026-05-05 22:03:45]   location_guide → gallery: 336
+[2026-05-05 22:03:45]   location_guide → location_guide: 14
+[2026-05-05 22:03:45]   location_guide → species_guide: 1102
+[2026-05-05 22:03:45]   photo → gallery: 17064
+[2026-05-05 22:03:45]   photo → location: 5549
+[2026-05-05 22:03:45]   photo → photo: 5000
+[2026-05-05 22:03:45]   photo → species: 208
+[2026-05-05 22:03:45]   photography_guide → location_guide: 1
+[2026-05-05 22:03:45]   region → location: 24
+[2026-05-05 22:03:45]   species → article: 583
+[2026-05-05 22:03:45]   species → gallery: 60
+[2026-05-05 22:03:45]   species → location: 434
+[2026-05-05 22:03:45]   species → species: 122
+[2026-05-05 22:03:45]   species_guide → article: 4360
+[2026-05-05 22:03:45]   species_guide → cluster: 76
+[2026-05-05 22:03:45]   species_guide → gallery: 6
+[2026-05-05 22:03:45]   species_guide → location_guide: 1102
+[2026-05-05 22:03:45]   species_guide → photography_guide: 78
+[2026-05-05 22:03:46] 
+=== INJECTING SPECIES INTERNAL LINKS ===
+[2026-05-05 22:03:46]   Found 76 public species
+[2026-05-05 22:04:19]   Species page_links injected (total): 0
+[2026-05-05 22:04:20] 
+=== INJECTING LOCATION INTERNAL LINKS ===
+[2026-05-05 22:04:20]   Found 24 public locations
+[2026-05-05 22:04:30]   Location page_links injected (total): 0
+[2026-05-05 22:04:31] 
+=== PAGE_LINKS (post-injection) ===
+[2026-05-05 22:04:31]   10 → gallery: 23
+[2026-05-05 22:04:31]   100 → gallery: 61
+[2026-05-05 22:04:31]   11 → gallery: 24
+[2026-05-05 22:04:31]   13 → gallery: 25
+[2026-05-05 22:04:31]   14 → gallery: 60
+[2026-05-05 22:04:31]   15 → gallery: 25
+[2026-05-05 22:04:31]   16 → gallery: 24
+[2026-05-05 22:04:31]   17 → gallery: 28
+[2026-05-05 22:04:31]   18 → gallery: 26
+[2026-05-05 22:04:31]   19 → gallery: 29
+[2026-05-05 22:04:31]   21 → gallery: 29
+[2026-05-05 22:04:31]   23 → gallery: 30
+[2026-05-05 22:04:31]   24 → gallery: 4
+[2026-05-05 22:04:31]   26 → gallery: 31
+[2026-05-05 22:04:31]   27 → gallery: 31
+[2026-05-05 22:04:31]   28 → gallery: 60
+[2026-05-05 22:04:31]   29 → gallery: 60
+[2026-05-05 22:04:31]   30 → gallery: 1
+[2026-05-05 22:04:31]   31 → gallery: 5
+[2026-05-05 22:04:31]   32 → gallery: 32
+[2026-05-05 22:04:31]   33 → gallery: 5
+[2026-05-05 22:04:31]   34 → gallery: 33
+[2026-05-05 22:04:31]   35 → gallery: 34
+[2026-05-05 22:04:31]   36 → gallery: 60
+[2026-05-05 22:04:31]   37 → gallery: 35
+[2026-05-05 22:04:31]   38 → gallery: 61
+[2026-05-05 22:04:31]   39 → gallery: 36
+[2026-05-05 22:04:31]   40 → gallery: 37
+[2026-05-05 22:04:31]   41 → gallery: 38
+[2026-05-05 22:04:31]   42 → gallery: 60
+[2026-05-05 22:04:31]   43 → gallery: 39
+[2026-05-05 22:04:31]   44 → gallery: 40
+[2026-05-05 22:04:31]   45 → gallery: 40
+[2026-05-05 22:04:31]   46 → gallery: 60
+[2026-05-05 22:04:31]   48 → gallery: 5
+[2026-05-05 22:04:31]   49 → gallery: 41
+[2026-05-05 22:04:31]   5 → gallery: 19
+[2026-05-05 22:04:31]   50 → gallery: 41
+[2026-05-05 22:04:31]   51 → gallery: 42
+[2026-05-05 22:04:31]   52 → gallery: 2
+[2026-05-05 22:04:31]   53 → gallery: 43
+[2026-05-05 22:04:31]   55 → gallery: 6
+[2026-05-05 22:04:31]   56 → gallery: 44
+[2026-05-05 22:04:31]   57 → gallery: 45
+[2026-05-05 22:04:31]   59 → gallery: 3
+[2026-05-05 22:04:31]   6 → gallery: 20
+[2026-05-05 22:04:31]   60 → gallery: 15
+[2026-05-05 22:04:31]   63 → gallery: 46
+[2026-05-05 22:04:31]   64 → gallery: 6
+[2026-05-05 22:04:31]   65 → gallery: 11
+[2026-05-05 22:04:31]   66 → gallery: 60
+[2026-05-05 22:04:31]   67 → gallery: 46
+[2026-05-05 22:04:31]   68 → gallery: 60
+[2026-05-05 22:04:31]   69 → gallery: 60
+[2026-05-05 22:04:31]   70 → gallery: 7
+[2026-05-05 22:04:31]   71 → gallery: 8
+[2026-05-05 22:04:31]   72 → gallery: 9
+[2026-05-05 22:04:31]   73 → gallery: 9
+[2026-05-05 22:04:31]   74 → gallery: 60
+[2026-05-05 22:04:31]   75 → gallery: 11
+[2026-05-05 22:04:31]   76 → gallery: 48
+[2026-05-05 22:04:31]   77 → gallery: 60
+[2026-05-05 22:04:31]   78 → gallery: 48
+[2026-05-05 22:04:31]   79 → gallery: 60
+[2026-05-05 22:04:31]   8 → gallery: 61
+[2026-05-05 22:04:31]   80 → gallery: 10
+[2026-05-05 22:04:31]   81 → gallery: 49
+[2026-05-05 22:04:31]   82 → gallery: 60
+[2026-05-05 22:04:31]   83 → gallery: 51
+[2026-05-05 22:04:31]   84 → gallery: 60
+[2026-05-05 22:04:31]   85 → gallery: 60
+[2026-05-05 22:04:31]   86 → gallery: 60
+[2026-05-05 22:04:31]   87 → gallery: 13
+[2026-05-05 22:04:31]   88 → gallery: 52
+[2026-05-05 22:04:31]   89 → gallery: 60
+[2026-05-05 22:04:31]   9 → gallery: 22
+[2026-05-05 22:04:31]   90 → gallery: 53
+[2026-05-05 22:04:31]   91 → gallery: 57
+[2026-05-05 22:04:31]   92 → gallery: 60
+[2026-05-05 22:04:31]   93 → gallery: 55
+[2026-05-05 22:04:31]   94 → gallery: 11
+[2026-05-05 22:04:31]   95 → gallery: 15
+[2026-05-05 22:04:31]   96 → gallery: 56
+[2026-05-05 22:04:31]   97 → gallery: 57
+[2026-05-05 22:04:31]   98 → gallery: 58
+[2026-05-05 22:04:31]   99 → gallery: 59
+[2026-05-05 22:04:31]   article → article: 3179
+[2026-05-05 22:04:31]   article → gallery: 391
+[2026-05-05 22:04:31]   article → location: 302
+[2026-05-05 22:04:31]   article → location_guide: 1193
+[2026-05-05 22:04:31]   article → region: 56
+[2026-05-05 22:04:31]   article → species: 5643
+[2026-05-05 22:04:31]   article → species_guide: 402
+[2026-05-05 22:04:31]   gallery → article: 86
+[2026-05-05 22:04:31]   gallery → gallery: 1475
+[2026-05-05 22:04:31]   gallery → location: 160
+[2026-05-05 22:04:31]   gallery → location_guide: 185
+[2026-05-05 22:04:31]   gallery → photo: 5000
+[2026-05-05 22:04:31]   gallery → region: 41
+[2026-05-05 22:04:31]   gallery → species: 190
+[2026-05-05 22:04:31]   gallery → species_guide: 77
+[2026-05-05 22:04:31]   location → article: 62
+[2026-05-05 22:04:31]   location → gallery: 209
+[2026-05-05 22:04:31]   location → location: 100
+[2026-05-05 22:04:31]   location → location_guide: 1
+[2026-05-05 22:04:31]   location → region: 24
+[2026-05-05 22:04:31]   location → species: 194
+[2026-05-05 22:04:31]   location_guide → article: 2110
+[2026-05-05 22:04:31]   location_guide → cluster: 912
+[2026-05-05 22:04:31]   location_guide → gallery: 336
+[2026-05-05 22:04:31]   location_guide → location_guide: 14
+[2026-05-05 22:04:31]   location_guide → species_guide: 1102
+[2026-05-05 22:04:31]   photo → gallery: 17064
+[2026-05-05 22:04:31]   photo → location: 5549
+[2026-05-05 22:04:31]   photo → photo: 5000
+[2026-05-05 22:04:31]   photo → species: 208
+[2026-05-05 22:04:31]   photography_guide → location_guide: 1
+[2026-05-05 22:04:31]   region → location: 24
+[2026-05-05 22:04:31]   species → article: 583
+[2026-05-05 22:04:31]   species → gallery: 60
+[2026-05-05 22:04:31]   species → location: 434
+[2026-05-05 22:04:31]   species → species: 122
+[2026-05-05 22:04:31]   species_guide → article: 4360
+[2026-05-05 22:04:31]   species_guide → cluster: 76
+[2026-05-05 22:04:31]   species_guide → gallery: 6
+[2026-05-05 22:04:31]   species_guide → location_guide: 1102
+[2026-05-05 22:04:31]   species_guide → photography_guide: 78
+[2026-05-05 22:04:31] 
+=== PHASE 2 COMPLETE ===
+[2026-05-05 22:04:31] Species rows added: 0
+[2026-05-05 22:04:31] Location rows added: 0

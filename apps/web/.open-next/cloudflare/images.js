@@ -330,7 +330,7 @@ function createImageResponse(image, contentType, imageResponseFlags) {
     headers: {
       Vary: "Accept",
       "Content-Type": contentType,
-      "Content-Disposition": "inline",
+      "Content-Disposition": "attachment",
       "Content-Security-Policy": "script-src 'none'; frame-src 'none'; sandbox;"
     }
   });

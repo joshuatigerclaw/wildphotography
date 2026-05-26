@@ -929,7 +929,7 @@ export async function getPhotosByLocation(
     return { photos: [], total: 0, hasMore: false };
   }
 
-  const placeholders = gallerySlugs.map((_, i) => `$${i + 2}`).join(',');
+  const placeholders = gallerySlugs.map((_, i) => `$${i + 1}`).join(',');
   
   const countResult = await sql(`
     SELECT COUNT(*) as count
@@ -951,7 +951,7 @@ export async function getPhotosByLocation(
       AND p.is_active = true AND p.ready_for_public_render = true
       AND (p.thumb_url IS NOT NULL OR p.small_url IS NOT NULL OR p.medium_url IS NOT NULL OR p.large_url IS NOT NULL)
     ORDER BY p.date_uploaded DESC
-    LIMIT $${gallerySlugs.length + 2} OFFSET $${gallerySlugs.length + 3}
+    LIMIT $${gallerySlugs.length + 1} OFFSET $${gallerySlugs.length + 2}
   `, [...gallerySlugs, limit + 1, offset]);
 
   const hasMore = result.length > limit;

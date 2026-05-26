@@ -1,0 +1,384 @@
+[2026-05-05 22:16:31] === Backlink Discovery Started ===
+[2026-05-05 22:16:32] 
+Searching: Joshua ten Brink photography
+[2026-05-05 22:16:33]   Found 10 results
+[2026-05-05 22:16:33]   ERROR visiting //duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.joshuatenbrink.com%2F&rut=e9970d913b103282e7d6d82b5ce1712ee0c5eaf34744f2d738bff18d89e1714c: Invalid URL '//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.joshuatenbrink.com%2F&rut=e9970d913b103282e7d6d82b5ce1712ee0c5eaf34744f2d738bff18d89e1714c': No scheme supplied. Perhaps you meant https:////duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.joshuatenbrink.com%2F&rut=e9970d913b103282e7d6d82b5ce1712ee0c5eaf34744f2d738bff18d89e1714c?
+[2026-05-05 22:16:33]   ERROR visiting //duckduckgo.com/l/?uddg=https%3A%2F%2Fwildphotography.com%2Fabout&rut=d4861aa0656246ff930fb8d47a10d7d42f7866211e9ef2800577b84e4f2dd9bb: Invalid URL '//duckduckgo.com/l/?uddg=https%3A%2F%2Fwildphotography.com%2Fabout&rut=d4861aa0656246ff930fb8d47a10d7d42f7866211e9ef2800577b84e4f2dd9bb': No scheme supplied. Perhaps you meant https:////duckduckgo.com/l/?uddg=https%3A%2F%2Fwildphotography.com%2Fabout&rut=d4861aa0656246ff930fb8d47a10d7d42f7866211e9ef2800577b84e4f2dd9bb?
+[2026-05-05 22:16:33]   ERROR visiting //duckduckgo.com/l/?uddg=https%3A%2F%2Fnaturalcostarica.com%2Fabout&rut=7c4020873f0d35d7a64c8923835299fb8b7362361ba6a41a5d1e7215ae07775b: Invalid URL '//duckduckgo.com/l/?uddg=https%3A%2F%2Fnaturalcostarica.com%2Fabout&rut=7c4020873f0d35d7a64c8923835299fb8b7362361ba6a41a5d1e7215ae07775b': No scheme supplied. Perhaps you meant https:////duckduckgo.com/l/?uddg=https%3A%2F%2Fnaturalcostarica.com%2Fabout&rut=7c4020873f0d35d7a64c8923835299fb8b7362361ba6a41a5d1e7215ae07775b?
+[2026-05-05 22:16:33]   ERROR visiting //duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.photoquest.com%2FAbout%2DWild%2DPhotography&rut=ac8f51a2456a4029b3ef9b7b3c0681e3c01282f3de42d3f800d8d5674b7acc36: Invalid URL '//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.photoquest.com%2FAbout%2DWild%2DPhotography&rut=ac8f51a2456a4029b3ef9b7b3c0681e3c01282f3de42d3f800d8d5674b7acc36': No scheme supplied. Perhaps you meant https:////duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.photoquest.com%2FAbout%2DWild%2DPhotography&rut=ac8f51a2456a4029b3ef9b7b3c0681e3c01282f3de42d3f800d8d5674b7acc36?
+[2026-05-05 22:16:33]   ERROR visiting //duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.shutterstock.com%2Fg%2Fjoshua%2Bten%2Bbrink&rut=adaa9fd45b94003526600b76637507a3c010a51a56757e919d95c40be5830872: Invalid URL '//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.shutterstock.com%2Fg%2Fjoshua%2Bten%2Bbrink&rut=adaa9fd45b94003526600b76637507a3c010a51a56757e919d95c40be5830872': No scheme supplied. Perhaps you meant https:////duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.shutterstock.com%2Fg%2Fjoshua%2Bten%2Bbrink&rut=adaa9fd45b94003526600b76637507a3c010a51a56757e919d95c40be5830872?
+[2026-05-05 22:16:33]   ERROR visiting //duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.360costarica.com%2Fjoshua%2Dten%2Dbrink%2Dcosta%2Drica.html&rut=d656836e3bfbdf403aae1af696e2658b356d86aa47e639551e6864ad3fb25772: Invalid URL '//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.360costarica.com%2Fjoshua%2Dten%2Dbrink%2Dcosta%2Drica.html&rut=d656836e3bfbdf403aae1af696e2658b356d86aa47e639551e6864ad3fb25772': No scheme supplied. Perhaps you meant https:////duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.360costarica.com%2Fjoshua%2Dten%2Dbrink%2Dcosta%2Drica.html&rut=d656836e3bfbdf403aae1af696e2658b356d86aa47e639551e6864ad3fb25772?
+[2026-05-05 22:16:33]   ERROR visiting //duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.facebook.com%2FRealWildPhotography%2F&rut=57a138ba6592071248ee17d59209cbab79f3058e5553abcae750d649b8a1aa1f: Invalid URL '//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.facebook.com%2FRealWildPhotography%2F&rut=57a138ba6592071248ee17d59209cbab79f3058e5553abcae750d649b8a1aa1f': No scheme supplied. Perhaps you meant https:////duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.facebook.com%2FRealWildPhotography%2F&rut=57a138ba6592071248ee17d59209cbab79f3058e5553abcae750d649b8a1aa1f?
+[2026-05-05 22:16:33]   ERROR visiting //duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.instagram.com%2Fjoshuatenbrink%2F&rut=4448e0bc2654362fbb163a236fc582026d5754b74e82201d6238e8d821ec2973: Invalid URL '//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.instagram.com%2Fjoshuatenbrink%2F&rut=4448e0bc2654362fbb163a236fc582026d5754b74e82201d6238e8d821ec2973': No scheme supplied. Perhaps you meant https:////duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.instagram.com%2Fjoshuatenbrink%2F&rut=4448e0bc2654362fbb163a236fc582026d5754b74e82201d6238e8d821ec2973?
+[2026-05-05 22:16:33]   ERROR visiting //duckduckgo.com/l/?uddg=https%3A%2F%2Fwildphotography.com%2Fpages%2Fabout%2Dus&rut=2d62f98cd3739ffdeb10eb3be1bfc94ae04590088876bb8a55de4ab04f69b7b7: Invalid URL '//duckduckgo.com/l/?uddg=https%3A%2F%2Fwildphotography.com%2Fpages%2Fabout%2Dus&rut=2d62f98cd3739ffdeb10eb3be1bfc94ae04590088876bb8a55de4ab04f69b7b7': No scheme supplied. Perhaps you meant https:////duckduckgo.com/l/?uddg=https%3A%2F%2Fwildphotography.com%2Fpages%2Fabout%2Dus&rut=2d62f98cd3739ffdeb10eb3be1bfc94ae04590088876bb8a55de4ab04f69b7b7?
+[2026-05-05 22:16:33]   ERROR visiting //duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.joshuatenbrink.com%2Fphotography&rut=926d41ff988c0e9f41f6a0d837babb9c5ca11c46042bd05e56a99073b2c95edf: Invalid URL '//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.joshuatenbrink.com%2Fphotography&rut=926d41ff988c0e9f41f6a0d837babb9c5ca11c46042bd05e56a99073b2c95edf': No scheme supplied. Perhaps you meant https:////duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.joshuatenbrink.com%2Fphotography&rut=926d41ff988c0e9f41f6a0d837babb9c5ca11c46042bd05e56a99073b2c95edf?
+[2026-05-05 22:16:33] 
+Searching: Joshua ten Brink Costa Rica
+[2026-05-05 22:16:34]   Found 10 results
+[2026-05-05 22:16:34]   ERROR visiting //duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.joshuatenbrink.com%2F&rut=e9970d913b103282e7d6d82b5ce1712ee0c5eaf34744f2d738bff18d89e1714c: Invalid URL '//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.joshuatenbrink.com%2F&rut=e9970d913b103282e7d6d82b5ce1712ee0c5eaf34744f2d738bff18d89e1714c': No scheme supplied. Perhaps you meant https:////duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.joshuatenbrink.com%2F&rut=e9970d913b103282e7d6d82b5ce1712ee0c5eaf34744f2d738bff18d89e1714c?
+[2026-05-05 22:16:34]   ERROR visiting //duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.joshuatenbrink.com%2Fabout&rut=42b3faf6a22bc79850a96296a28d19b1a8a048018c3f2565f6bc3d72de3d245d: Invalid URL '//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.joshuatenbrink.com%2Fabout&rut=42b3faf6a22bc79850a96296a28d19b1a8a048018c3f2565f6bc3d72de3d245d': No scheme supplied. Perhaps you meant https:////duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.joshuatenbrink.com%2Fabout&rut=42b3faf6a22bc79850a96296a28d19b1a8a048018c3f2565f6bc3d72de3d245d?
+[2026-05-05 22:16:34]   ERROR visiting //duckduckgo.com/l/?uddg=https%3A%2F%2Fcostarica1.com%2F%3Festate_agent%3Djoshua%2Dtenbrink&rut=dac363422176845cb9a3b11442bc9e3d1270f65be6e7c420dd48c2813ed7dbd6: Invalid URL '//duckduckgo.com/l/?uddg=https%3A%2F%2Fcostarica1.com%2F%3Festate_agent%3Djoshua%2Dtenbrink&rut=dac363422176845cb9a3b11442bc9e3d1270f65be6e7c420dd48c2813ed7dbd6': No scheme supplied. Perhaps you meant https:////duckduckgo.com/l/?uddg=https%3A%2F%2Fcostarica1.com%2F%3Festate_agent%3Djoshua%2Dtenbrink&rut=dac363422176845cb9a3b11442bc9e3d1270f65be6e7c420dd48c2813ed7dbd6?
+[2026-05-05 22:16:34]   ERROR visiting //duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.360costarica.com%2Fjoshua%2Dten%2Dbrink%2Dcosta%2Drica.html&rut=d656836e3bfbdf403aae1af696e2658b356d86aa47e639551e6864ad3fb25772: Invalid URL '//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.360costarica.com%2Fjoshua%2Dten%2Dbrink%2Dcosta%2Drica.html&rut=d656836e3bfbdf403aae1af696e2658b356d86aa47e639551e6864ad3fb25772': No scheme supplied. Perhaps you meant https:////duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.360costarica.com%2Fjoshua%2Dten%2Dbrink%2Dcosta%2Drica.html&rut=d656836e3bfbdf403aae1af696e2658b356d86aa47e639551e6864ad3fb25772?
+[2026-05-05 22:16:34]   ERROR visiting //duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.linkedin.com%2Fposts%2Fjoshuatenbrink_costaricarealestate%2Dsustainableliving%2Dactivity%2D7329130063780585472%2DoUDZ&rut=b3fc1681810584938cbc17040ea85e1879542d29e1f42e8daf55346b57ef5ea9: Invalid URL '//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.linkedin.com%2Fposts%2Fjoshuatenbrink_costaricarealestate%2Dsustainableliving%2Dactivity%2D7329130063780585472%2DoUDZ&rut=b3fc1681810584938cbc17040ea85e1879542d29e1f42e8daf55346b57ef5ea9': No scheme supplied. Perhaps you meant https:////duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.linkedin.com%2Fposts%2Fjoshuatenbrink_costaricarealestate%2Dsustainableliving%2Dactivity%2D7329130063780585472%2DoUDZ&rut=b3fc1681810584938cbc17040ea85e1879542d29e1f42e8daf55346b57ef5ea9?
+[2026-05-05 22:16:34]   ERROR visiting //duckduckgo.com/l/?uddg=https%3A%2F%2Fwildphotography.com%2Fphotography%2Dfeatured&rut=53e9c18abcdfc993bd4c4dbed7c9feca427b70d0c1adfc1c89c5774a3f734c54: Invalid URL '//duckduckgo.com/l/?uddg=https%3A%2F%2Fwildphotography.com%2Fphotography%2Dfeatured&rut=53e9c18abcdfc993bd4c4dbed7c9feca427b70d0c1adfc1c89c5774a3f734c54': No scheme supplied. Perhaps you meant https:////duckduckgo.com/l/?uddg=https%3A%2F%2Fwildphotography.com%2Fphotography%2Dfeatured&rut=53e9c18abcdfc993bd4c4dbed7c9feca427b70d0c1adfc1c89c5774a3f734c54?
+[2026-05-05 22:16:34]   ERROR visiting //duckduckgo.com/l/?uddg=https%3A%2F%2Fwildphotography.com%2Fpages%2Fabout%2Dus&rut=2d62f98cd3739ffdeb10eb3be1bfc94ae04590088876bb8a55de4ab04f69b7b7: Invalid URL '//duckduckgo.com/l/?uddg=https%3A%2F%2Fwildphotography.com%2Fpages%2Fabout%2Dus&rut=2d62f98cd3739ffdeb10eb3be1bfc94ae04590088876bb8a55de4ab04f69b7b7': No scheme supplied. Perhaps you meant https:////duckduckgo.com/l/?uddg=https%3A%2F%2Fwildphotography.com%2Fpages%2Fabout%2Dus&rut=2d62f98cd3739ffdeb10eb3be1bfc94ae04590088876bb8a55de4ab04f69b7b7?
+[2026-05-05 22:16:34]   ERROR visiting //duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.linkedin.com%2Fpulse%2Fthriving%2D2025%2Dcosta%2Drica%2Dreal%2Destate%2Dmarket%2Dlessons%2Dfrom%2Dten%2Dbrink%2Dnlrpe&rut=80c0d27d307ba7d99ee00d1e7acff0e8f775be0b4993bbadccf771a06dfd7009: Invalid URL '//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.linkedin.com%2Fpulse%2Fthriving%2D2025%2Dcosta%2Drica%2Dreal%2Destate%2Dmarket%2Dlessons%2Dfrom%2Dten%2Dbrink%2Dnlrpe&rut=80c0d27d307ba7d99ee00d1e7acff0e8f775be0b4993bbadccf771a06dfd7009': No scheme supplied. Perhaps you meant https:////duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.linkedin.com%2Fpulse%2Fthriving%2D2025%2Dcosta%2Drica%2Dreal%2Destate%2Dmarket%2Dlessons%2Dfrom%2Dten%2Dbrink%2Dnlrpe&rut=80c0d27d307ba7d99ee00d1e7acff0e8f775be0b4993bbadccf771a06dfd7009?
+[2026-05-05 22:16:34]   ERROR visiting //duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.shutterstock.com%2Fg%2Fjoshua%2Bten%2Bbrink&rut=adaa9fd45b94003526600b76637507a3c010a51a56757e919d95c40be5830872: Invalid URL '//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.shutterstock.com%2Fg%2Fjoshua%2Bten%2Bbrink&rut=adaa9fd45b94003526600b76637507a3c010a51a56757e919d95c40be5830872': No scheme supplied. Perhaps you meant https:////duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.shutterstock.com%2Fg%2Fjoshua%2Bten%2Bbrink&rut=adaa9fd45b94003526600b76637507a3c010a51a56757e919d95c40be5830872?
+[2026-05-05 22:16:34]   ERROR visiting //duckduckgo.com/l/?uddg=https%3A%2F%2Fcostaricadao.com%2Fcostaricadao%2Dteam%2F&rut=3898dd60494fa30f70a77736ee444d00b8649db464f692e93cc631bca3774ba2: Invalid URL '//duckduckgo.com/l/?uddg=https%3A%2F%2Fcostaricadao.com%2Fcostaricadao%2Dteam%2F&rut=3898dd60494fa30f70a77736ee444d00b8649db464f692e93cc631bca3774ba2': No scheme supplied. Perhaps you meant https:////duckduckgo.com/l/?uddg=https%3A%2F%2Fcostaricadao.com%2Fcostaricadao%2Dteam%2F&rut=3898dd60494fa30f70a77736ee444d00b8649db464f692e93cc631bca3774ba2?
+[2026-05-05 22:16:34] 
+Searching: Joshua ten Brink photo
+[2026-05-05 22:16:34]   Found 0 results
+[2026-05-05 22:16:34] 
+Searching: Joshua ten Brink WildPhotography
+[2026-05-05 22:16:35]   Found 0 results
+[2026-05-05 22:16:35] 
+Searching: Joshua ten Brink Costa Rica wildlife
+[2026-05-05 22:16:35]   Found 0 results
+[2026-05-05 22:16:35] 
+Searching: WildPhotography.com Costa Rica
+[2026-05-05 22:16:36]   Found 0 results
+[2026-05-05 22:16:36] 
+Saved 0 outreach drafts to /Users/joshuatenbrink/wildphotography_cloudflare_src/reports/outreach_drafts.json
+[2026-05-05 22:16:36] 
+=== Summary ===
+[2026-05-05 22:16:36] Pages visited:   20
+[2026-05-05 22:16:36] New opportunities: 0
+[2026-05-05 22:16:36] Already have backlinks: 0
+[2026-05-05 22:16:36] Contact emails found: 0
+[2026-05-05 22:16:36] Errors: 20
+[2026-05-05 22:16:36] === Done ===
+[2026-05-05 22:18:56] === Backlink Discovery Started ===
+[2026-05-05 22:18:57] 
+Searching: Joshua ten Brink photography
+[2026-05-05 22:18:58]   Found 10 results
+[2026-05-05 22:18:58]   ✅ www.joshuatenbrink.com - Wildlife Photography by Joshua Ten Brink in Costa Rica | Jos
+[2026-05-05 22:18:58]        credit=True, backlink=False, email=None
+[2026-05-05 22:18:58] DB insert error: there is no unique or exclusion constraint matching the ON CONFLICT specification
+
+[2026-05-05 22:19:02]   ✅ wildphotography.com - Joshua ten Brink — Featured in Global Media
+[2026-05-05 22:19:02]        credit=True, backlink=True, email=None
+[2026-05-05 22:19:02] DB insert error: there is no unique or exclusion constraint matching the ON CONFLICT specification
+
+[2026-05-05 22:19:06]   ✅ naturalcostarica.com - About Joshua ten Brink - Natural Costa Rica
+[2026-05-05 22:19:06]        credit=True, backlink=False, email=None
+[2026-05-05 22:19:06] DB insert error: there is no unique or exclusion constraint matching the ON CONFLICT specification
+
+[2026-05-05 22:19:09]   ERROR visiting https://www.shutterstock.com/g/joshua+ten+brink: 403 Client Error: HTTP Forbidden for url: https://www.shutterstock.com/g/joshua+ten+brink
+[2026-05-05 22:19:10]   ✅ www.photoquest.com - About Wild Photography - Photo Quest- Beyond Stock , Beyond 
+[2026-05-05 22:19:10]        credit=True, backlink=True, email=None
+[2026-05-05 22:19:10] DB insert error: there is no unique or exclusion constraint matching the ON CONFLICT specification
+
+[2026-05-05 22:19:14]   ❌ www.instagram.com - Joshua Ten Brink (@joshuatenbrink) • Instagram photos and vi
+[2026-05-05 22:19:14]        credit=False, backlink=False, email=None
+[2026-05-05 22:19:17]   ERROR visiting https://www.facebook.com/RealWildPhotography/: 400 Client Error: Bad Request for url: https://www.facebook.com/RealWildPhotography/
+[2026-05-05 22:19:19]   ✅ www.360costarica.com - About Me: Joshua ten Brink - appsumo-789f05a8-772e-4e65-b303
+[2026-05-05 22:19:19]        credit=True, backlink=True, email=None
+[2026-05-05 22:19:19] DB insert error: there is no unique or exclusion constraint matching the ON CONFLICT specification
+
+[2026-05-05 22:19:24]   ❌ cr.linkedin.com - Joshua ten Brink - Costa Rica Real Estate Developer & Invest
+[2026-05-05 22:19:24]        credit=False, backlink=False, email=None
+[2026-05-05 22:19:27]   ✅ www.youtube.com - Joshua Ten Brink - YouTube
+[2026-05-05 22:19:27]        credit=True, backlink=False, email=None
+[2026-05-05 22:19:27] DB insert error: there is no unique or exclusion constraint matching the ON CONFLICT specification
+
+[2026-05-05 22:19:31] 
+Searching: Joshua ten Brink Costa Rica
+[2026-05-05 22:19:32]   Found 10 results
+[2026-05-05 22:19:32]   ✅ www.joshuatenbrink.com - Joshua Ten Brink: Real Estate and Wildlife Photography Exper
+[2026-05-05 22:19:32]        credit=True, backlink=True, email=None
+[2026-05-05 22:19:32] DB insert error: there is no unique or exclusion constraint matching the ON CONFLICT specification
+
+[2026-05-05 22:19:36]   ✅ naturalcostarica.com - About Joshua ten Brink - Natural Costa Rica
+[2026-05-05 22:19:36]        credit=True, backlink=False, email=None
+[2026-05-05 22:19:36] DB insert error: there is no unique or exclusion constraint matching the ON CONFLICT specification
+
+[2026-05-05 22:19:39]   ERROR visiting https://wildphotography.com/about: 404 Client Error: Not Found for url: https://wildphotography.com/about
+[2026-05-05 22:19:40]   ❌ cr.linkedin.com - Joshua ten Brink - Costa Rica Real Estate Developer & Invest
+[2026-05-05 22:19:40]        credit=False, backlink=False, email=None
+[2026-05-05 22:19:47]   ✅ www.realtycostarica.com - About Us - Realty Costa Rica
+[2026-05-05 22:19:47]        credit=True, backlink=False, email=josh@realtycostarica.com
+[2026-05-05 22:19:47] DB insert error: there is no unique or exclusion constraint matching the ON CONFLICT specification
+
+[2026-05-05 22:19:50]   ❌ costarica1.com - Joshua ten Brink - Costa Rica Firesale
+[2026-05-05 22:19:50]        credit=False, backlink=False, email=None
+[2026-05-05 22:19:54]   ✅ www.photoquest.com - About Photo Quest - Discover Costa Rica Through Our Lens
+[2026-05-05 22:19:54]        credit=True, backlink=True, email=None
+[2026-05-05 22:19:54] DB insert error: there is no unique or exclusion constraint matching the ON CONFLICT specification
+
+[2026-05-05 22:19:58]   ❌ www.instagram.com - Joshua Ten Brink (@joshuatenbrink) • Instagram photos and vi
+[2026-05-05 22:19:58]        credit=False, backlink=False, email=None
+[2026-05-05 22:20:02]   ✅ www.360costarica.com - About Me: Joshua ten Brink - appsumo-789f05a8-772e-4e65-b303
+[2026-05-05 22:20:02]        credit=True, backlink=True, email=None
+[2026-05-05 22:20:02] DB insert error: there is no unique or exclusion constraint matching the ON CONFLICT specification
+
+[2026-05-05 22:20:05]   ERROR visiting https://www.facebook.com/joshuatenbrinkcr/: 400 Client Error: Bad Request for url: https://www.facebook.com/joshuatenbrinkcr/
+[2026-05-05 22:20:05] 
+Searching: Joshua ten Brink photo
+[2026-05-05 22:20:06]   Found 10 results
+[2026-05-05 22:20:07]   ✅ www.joshuatenbrink.com - Joshua Ten Brink: Real Estate and Wildlife Photography Exper
+[2026-05-05 22:20:07]        credit=True, backlink=True, email=None
+[2026-05-05 22:20:07] DB insert error: there is no unique or exclusion constraint matching the ON CONFLICT specification
+
+[2026-05-05 22:20:10]   ERROR visiting https://www.shutterstock.com/g/joshua+ten+brink: 403 Client Error: HTTP Forbidden for url: https://www.shutterstock.com/g/joshua+ten+brink
+[2026-05-05 22:20:10]   ✅ wildphotography.com - Joshua ten Brink — Featured in Global Media
+[2026-05-05 22:20:10]        credit=True, backlink=True, email=None
+[2026-05-05 22:20:11] DB insert error: there is no unique or exclusion constraint matching the ON CONFLICT specification
+
+[2026-05-05 22:20:14]   ✅ www.photoquest.com - About Wild Photography - Photo Quest- Beyond Stock , Beyond 
+[2026-05-05 22:20:14]        credit=True, backlink=True, email=None
+[2026-05-05 22:20:15] DB insert error: there is no unique or exclusion constraint matching the ON CONFLICT specification
+
+[2026-05-05 22:20:18]   ✅ naturalcostarica.com - About Joshua ten Brink - Natural Costa Rica
+[2026-05-05 22:20:18]        credit=True, backlink=False, email=None
+[2026-05-05 22:20:18] DB insert error: there is no unique or exclusion constraint matching the ON CONFLICT specification
+
+[2026-05-05 22:20:22]   ✅ www.flickr.com - Joshua ten Brink - Flickr
+[2026-05-05 22:20:22]        credit=True, backlink=False, email=None
+[2026-05-05 22:20:22] DB insert error: there is no unique or exclusion constraint matching the ON CONFLICT specification
+
+[2026-05-05 22:20:26]   ERROR visiting https://www.bhphotovideo.com/explora/contest/photos/costa-rica-beach-paradise: 403 Client Error: Forbidden for url: https://www.bhphotovideo.com/explora/contest/photos/costa-rica-beach-paradise
+[2026-05-05 22:20:26]   ❌ www.instagram.com - Joshua Ten Brink (@joshuatenbrink) • Instagram photos and vi
+[2026-05-05 22:20:26]        credit=False, backlink=False, email=None
+[2026-05-05 22:20:29]   ERROR visiting https://www.facebook.com/RealWildPhotography/: 400 Client Error: Bad Request for url: https://www.facebook.com/RealWildPhotography/
+[2026-05-05 22:20:30]   ERROR visiting https://wildphotography.com/about: 404 Client Error: Not Found for url: https://wildphotography.com/about
+[2026-05-05 22:20:30] 
+Searching: Joshua ten Brink WildPhotography
+[2026-05-05 22:20:30]   Found 10 results
+[2026-05-05 22:20:31]   ERROR visiting https://wildphotography.com/about: 404 Client Error: Not Found for url: https://wildphotography.com/about
+[2026-05-05 22:20:31]   ✅ www.joshuatenbrink.com - Wildlife Photography by Joshua Ten Brink in Costa Rica | Jos
+[2026-05-05 22:20:31]        credit=True, backlink=False, email=None
+[2026-05-05 22:20:31] DB insert error: there is no unique or exclusion constraint matching the ON CONFLICT specification
+
+[2026-05-05 22:20:36]   ✅ wildphotography.com - Wildphotography | Costa Rica Nature Photography
+[2026-05-05 22:20:36]        credit=True, backlink=True, email=None
+[2026-05-05 22:20:36] DB insert error: there is no unique or exclusion constraint matching the ON CONFLICT specification
+
+[2026-05-05 22:20:39]   ✅ wildphotography.com - Joshua ten Brink — Featured in Global Media - wildphotograph
+[2026-05-05 22:20:39]        credit=True, backlink=True, email=None
+[2026-05-05 22:20:39] DB insert error: there is no unique or exclusion constraint matching the ON CONFLICT specification
+
+[2026-05-05 22:20:43]   ✅ www.joshuatenbrink.com - Joshua Ten Brink: Real Estate and Wildlife Photography Exper
+[2026-05-05 22:20:43]        credit=True, backlink=True, email=None
+[2026-05-05 22:20:43] DB insert error: there is no unique or exclusion constraint matching the ON CONFLICT specification
+
+[2026-05-05 22:20:47]   ✅ www.joshuatenbrink.com - Joshua Ten Brink: Real Estate and Wildlife Photography Exper
+[2026-05-05 22:20:47]        credit=True, backlink=False, email=None
+[2026-05-05 22:20:47] DB insert error: there is no unique or exclusion constraint matching the ON CONFLICT specification
+
+[2026-05-05 22:20:50]   ERROR visiting https://wildphotography.com/pages/about-us: 404 Client Error: Not Found for url: https://wildphotography.com/pages/about-us
+[2026-05-05 22:20:51]   ERROR visiting https://www.facebook.com/RealWildPhotography/: 400 Client Error: Bad Request for url: https://www.facebook.com/RealWildPhotography/
+[2026-05-05 22:20:51]   ✅ www.photoquest.com - About Wild Photography - Photo Quest- Beyond Stock , Beyond 
+[2026-05-05 22:20:51]        credit=True, backlink=True, email=None
+[2026-05-05 22:20:51] DB insert error: there is no unique or exclusion constraint matching the ON CONFLICT specification
+
+[2026-05-05 22:20:55]   ERROR visiting https://www.facebook.com/RealWildPhotography/shop/: 400 Client Error: Bad Request for url: https://www.facebook.com/RealWildPhotography/shop/
+[2026-05-05 22:20:55] 
+Searching: Joshua ten Brink Costa Rica wildlife
+[2026-05-05 22:20:56]   Found 10 results
+[2026-05-05 22:20:56]   ✅ www.joshuatenbrink.com - Wildlife Photography by Joshua Ten Brink in Costa Rica | Jos
+[2026-05-05 22:20:56]        credit=True, backlink=False, email=None
+[2026-05-05 22:20:57] DB insert error: there is no unique or exclusion constraint matching the ON CONFLICT specification
+
+[2026-05-05 22:21:00]   ✅ naturalcostarica.com - About Joshua ten Brink - Natural Costa Rica
+[2026-05-05 22:21:00]        credit=True, backlink=False, email=None
+[2026-05-05 22:21:00] DB insert error: there is no unique or exclusion constraint matching the ON CONFLICT specification
+
+[2026-05-05 22:21:03]   ERROR visiting https://wildphotography.com/about: 404 Client Error: Not Found for url: https://wildphotography.com/about
+[2026-05-05 22:21:05]   ❌ cr.linkedin.com - Joshua ten Brink - Costa Rica Real Estate Developer & Invest
+[2026-05-05 22:21:05]        credit=False, backlink=False, email=None
+[2026-05-05 22:21:08]   ✅ www.photoquest.com - About Photo Quest - Discover Costa Rica Through Our Lens
+[2026-05-05 22:21:08]        credit=True, backlink=True, email=None
+[2026-05-05 22:21:09] DB insert error: there is no unique or exclusion constraint matching the ON CONFLICT specification
+
+[2026-05-05 22:21:12]   ERROR visiting https://www.facebook.com/RealWildPhotography/about/: 400 Client Error: Bad Request for url: https://www.facebook.com/RealWildPhotography/about/
+[2026-05-05 22:21:12]   ERROR visiting https://www.shutterstock.com/g/joshua+ten+brink: 403 Client Error: HTTP Forbidden for url: https://www.shutterstock.com/g/joshua+ten+brink
+[2026-05-05 22:21:13]   ✅ www.youtube.com - Joshua Ten Brink - YouTube
+[2026-05-05 22:21:13]        credit=True, backlink=False, email=None
+[2026-05-05 22:21:13] DB insert error: there is no unique or exclusion constraint matching the ON CONFLICT specification
+
+[2026-05-05 22:21:17]   ✅ joshuatenbrink.blogspot.com - Joshua ten Brink
+[2026-05-05 22:21:17]        credit=True, backlink=True, email=None
+[2026-05-05 22:21:17] DB insert error: there is no unique or exclusion constraint matching the ON CONFLICT specification
+
+[2026-05-05 22:21:21]   ❌ www.instagram.com - Joshua Ten Brink (@joshuatenbrink) • Instagram photos and vi
+[2026-05-05 22:21:21]        credit=False, backlink=False, email=None
+[2026-05-05 22:21:24] 
+Searching: WildPhotography.com Costa Rica
+[2026-05-05 22:21:25]   Found 10 results
+[2026-05-05 22:21:26]   ✅ wildphotography.com - Wildphotography | Costa Rica Nature Photography
+[2026-05-05 22:21:26]        credit=True, backlink=True, email=None
+[2026-05-05 22:21:26] DB insert error: there is no unique or exclusion constraint matching the ON CONFLICT specification
+
+[2026-05-05 22:21:31]   ❌ backcountrygallery.com - 2027 Costa Rica Wildlife Photography Workshops
+[2026-05-05 22:21:31]        credit=False, backlink=False, email=None
+[2026-05-05 22:21:36]   ❌ wildshutteradventures.com - COSTA RICA - Wildlife Photography Tours & Workshops with Wil
+[2026-05-05 22:21:36]        credit=False, backlink=False, email=Joe@WildShutterAdventures.com
+[2026-05-05 22:21:39]   ERROR visiting https://www.wildimages-phototours.com/photography-tours/costa-rica-wildlife-photography-tour/: 403 Client Error: Forbidden for url: https://www.wildimages-phototours.com/photography-tours/costa-rica-wildlife-photography-tour/
+[2026-05-05 22:21:40]   ERROR visiting https://misticopark.com/blog/nature-photography/costa-rica-wildlife-photography-guide/: 403 Client Error: Forbidden for url: https://misticopark.com/blog/nature-photography/costa-rica-wildlife-photography-guide/
+[2026-05-05 22:21:41]   ❌ physis.cr - Costa Rica Photography Tours | Private & Custom Photo Tours
+[2026-05-05 22:21:41]        credit=False, backlink=False, email=None
+[2026-05-05 22:21:45]   ❌ costaricatravelblog.com - Costa Rica Wildlife Photography - The Official Costa Rica Tr
+[2026-05-05 22:21:45]        credit=False, backlink=False, email=None
+[2026-05-05 22:21:49]   ❌ www.photowildlifetours.com - Costa Rica Photo Tour - Photo Wildlife Tours - Tours
+[2026-05-05 22:21:49]        credit=False, backlink=False, email=None
+[2026-05-05 22:21:53]   ❌ campphototours.com - Unique Places to Photograph Wildlife in Costa Rica
+[2026-05-05 22:21:53]        credit=False, backlink=False, email=None
+[2026-05-05 22:21:58]   ✅ www.wildphotography.com - Costa Rica Photography | WildPhotography
+[2026-05-05 22:21:58]        credit=True, backlink=True, email=None
+[2026-05-05 22:21:58] DB insert error: there is no unique or exclusion constraint matching the ON CONFLICT specification
+
+[2026-05-05 22:22:01] 
+Saved 1 outreach drafts to /Users/joshuatenbrink/wildphotography_cloudflare_src/reports/outreach_drafts.json
+[2026-05-05 22:22:01] 
+=== Summary ===
+[2026-05-05 22:22:01] Pages visited:   60
+[2026-05-05 22:22:01] New opportunities: 0
+[2026-05-05 22:22:01] Already have backlinks: 17
+[2026-05-05 22:22:01] Contact emails found: 1
+[2026-05-05 22:22:01] Errors: 17
+[2026-05-05 22:22:01] === Done ===
+[2026-05-05 22:22:14] === Backlink Discovery Started ===
+[2026-05-05 22:22:14] 
+Searching: Joshua ten Brink photography
+[2026-05-05 22:22:15]   Found 10 results
+[2026-05-05 22:22:16]   ✅ www.joshuatenbrink.com - Joshua Ten Brink: Real Estate and Wildlife Photography Exper
+[2026-05-05 22:22:16]        credit=True, backlink=True, email=None
+[2026-05-05 22:22:16]        → New opportunity added
+[2026-05-05 22:22:19]   ERROR visiting https://wildphotography.com/about: 404 Client Error: Not Found for url: https://wildphotography.com/about
+[2026-05-05 22:22:19]   ✅ naturalcostarica.com - About Joshua ten Brink - Natural Costa Rica
+[2026-05-05 22:22:19]        credit=True, backlink=False, email=None
+[2026-05-05 22:22:20]        → New opportunity added
+[2026-05-05 22:22:23]   ✅ www.photoquest.com - About Wild Photography - Photo Quest- Beyond Stock , Beyond 
+[2026-05-05 22:22:23]        credit=True, backlink=True, email=None
+[2026-05-05 22:22:24]        → New opportunity added
+[2026-05-05 22:22:27]   ERROR visiting https://www.shutterstock.com/g/joshua+ten+brink: 403 Client Error: HTTP Forbidden for url: https://www.shutterstock.com/g/joshua+ten+brink
+[2026-05-05 22:22:27]   ✅ www.360costarica.com - About Me: Joshua ten Brink - appsumo-789f05a8-772e-4e65-b303
+[2026-05-05 22:22:27]        credit=True, backlink=True, email=None
+[2026-05-05 22:22:28]        → New opportunity added
+[2026-05-05 22:22:31]   ERROR visiting https://www.facebook.com/RealWildPhotography/: 400 Client Error: Bad Request for url: https://www.facebook.com/RealWildPhotography/
+[2026-05-05 22:22:32]   ❌ www.instagram.com - Joshua Ten Brink (@joshuatenbrink) • Instagram photos and vi
+[2026-05-05 22:22:32]        credit=False, backlink=False, email=None
+[2026-05-05 22:22:35]   ✅ www.linkedin.com - Joshua ten Brink's Post - LinkedIn
+[2026-05-05 22:22:35]        credit=True, backlink=False, email=info@serenacondo.com
+[2026-05-05 22:22:35]        → New opportunity added
+[2026-05-05 22:22:38]   ERROR visiting https://wildphotography.com/pages/about-us: 404 Client Error: Not Found for url: https://wildphotography.com/pages/about-us
+[2026-05-05 22:22:38] 
+Searching: Joshua ten Brink Costa Rica
+[2026-05-05 22:22:39]   Found 10 results
+[2026-05-05 22:22:40]   ✅ www.joshuatenbrink.com - Joshua Ten Brink: Real Estate and Wildlife Photography Exper
+[2026-05-05 22:22:40]        credit=True, backlink=True, email=None
+[2026-05-05 22:22:43]   ERROR visiting https://wildphotography.com/about: 404 Client Error: Not Found for url: https://wildphotography.com/about
+[2026-05-05 22:22:44]   ✅ www.realtycostarica.com - About Us - Realty Costa Rica
+[2026-05-05 22:22:44]        credit=True, backlink=False, email=josh@realtycostarica.com
+[2026-05-05 22:22:44]        → New opportunity added
+[2026-05-05 22:22:49]   ❌ cr.linkedin.com - Joshua ten Brink - Costa Rica Real Estate Developer & Invest
+[2026-05-05 22:22:49]        credit=False, backlink=False, email=None
+[2026-05-05 22:22:52]   ✅ www.photoquest.com - About Photo Quest - Discover Costa Rica Through Our Lens
+[2026-05-05 22:22:52]        credit=True, backlink=True, email=None
+[2026-05-05 22:22:56]   ✅ naturalcostarica.com - About Joshua ten Brink - Natural Costa Rica
+[2026-05-05 22:22:56]        credit=True, backlink=False, email=None
+[2026-05-05 22:23:00]   ✅ www.360costarica.com - About Me: Joshua ten Brink - appsumo-789f05a8-772e-4e65-b303
+[2026-05-05 22:23:00]        credit=True, backlink=True, email=None
+[2026-05-05 22:23:03]   ❌ costarica1.com - Joshua ten Brink - Costa Rica Firesale
+[2026-05-05 22:23:03]        credit=False, backlink=False, email=None
+[2026-05-05 22:23:07]   ✅ www.youtube.com - Joshua Ten Brink - YouTube
+[2026-05-05 22:23:07]        credit=True, backlink=False, email=None
+[2026-05-05 22:23:07]        → New opportunity added
+[2026-05-05 22:23:11]   ✅ www.linkedin.com - Thriving in the 2025 Costa Rica Real Estate Market: Lessons 
+[2026-05-05 22:23:11]        credit=True, backlink=False, email=None
+[2026-05-05 22:23:11]        → New opportunity added
+[2026-05-05 22:23:14] 
+Searching: Joshua ten Brink photo
+[2026-05-05 22:23:15]   Found 10 results
+[2026-05-05 22:23:15]   ERROR visiting https://www.shutterstock.com/g/joshua+ten+brink: 403 Client Error: HTTP Forbidden for url: https://www.shutterstock.com/g/joshua+ten+brink
+[2026-05-05 22:23:16]   ✅ www.joshuatenbrink.com - Joshua Ten Brink: Real Estate and Wildlife Photography Exper
+[2026-05-05 22:23:16]        credit=True, backlink=True, email=None
+[2026-05-05 22:23:20]   ❌ www.instagram.com - Joshua Ten Brink (@joshuatenbrink) • Instagram photos and vi
+[2026-05-05 22:23:20]        credit=False, backlink=False, email=None
+[2026-05-05 22:23:23]   ✅ naturalcostarica.com - About Joshua ten Brink - Natural Costa Rica
+[2026-05-05 22:23:23]        credit=True, backlink=False, email=None
+[2026-05-05 22:23:27]   ✅ www.photoquest.com - About Wild Photography - Photo Quest- Beyond Stock , Beyond 
+[2026-05-05 22:23:27]        credit=True, backlink=True, email=None
+[2026-05-05 22:23:30]   ERROR visiting https://wildphotography.com/about: 404 Client Error: Not Found for url: https://wildphotography.com/about
+[2026-05-05 22:23:31]   ERROR visiting https://www.facebook.com/joshua.ten.brink/: 400 Client Error: Bad Request for url: https://www.facebook.com/joshua.ten.brink/
+[2026-05-05 22:23:32]   ❌ cr.linkedin.com - Joshua ten Brink - Costa Rica Real Estate Developer & Invest
+[2026-05-05 22:23:32]        credit=False, backlink=False, email=None
+[2026-05-05 22:23:36]   ✅ www.flickr.com - Joshua ten Brink - Flickr
+[2026-05-05 22:23:36]        credit=True, backlink=False, email=None
+[2026-05-05 22:23:36]        → New opportunity added
+[2026-05-05 22:23:40]   ✅ joshuatenbrink.blogspot.com - Blogger - Joshua ten Brink
+[2026-05-05 22:23:40]        credit=True, backlink=True, email=None
+[2026-05-05 22:23:40]        → New opportunity added
+[2026-05-05 22:23:43] 
+Searching: Joshua ten Brink WildPhotography
+[2026-05-05 22:23:44]   Found 10 results
+[2026-05-05 22:23:44]   ✅ www.joshuatenbrink.com - Joshua Ten Brink: Real Estate and Wildlife Photography Exper
+[2026-05-05 22:23:44]        credit=True, backlink=True, email=None
+[2026-05-05 22:23:48]   ERROR visiting https://wildphotography.com/about: 404 Client Error: Not Found for url: https://wildphotography.com/about
+[2026-05-05 22:23:49]   ✅ www.photoquest.com - About Wild Photography - Photo Quest- Beyond Stock , Beyond 
+[2026-05-05 22:23:49]        credit=True, backlink=True, email=None
+[2026-05-05 22:23:52]   ERROR visiting https://www.facebook.com/RealWildPhotography/: 400 Client Error: Bad Request for url: https://www.facebook.com/RealWildPhotography/
+[2026-05-05 22:23:53]   ERROR visiting https://www.shutterstock.com/g/joshua+ten+brink: 403 Client Error: HTTP Forbidden for url: https://www.shutterstock.com/g/joshua+ten+brink
+[2026-05-05 22:23:53]   ❌ www.instagram.com - Joshua ten brink (@wildphotography506) - Instagram
+[2026-05-05 22:23:53]        credit=False, backlink=False, email=None
+[2026-05-05 22:23:57]   ERROR visiting https://www.facebook.com/joshuatenbrinkcr/: 400 Client Error: Bad Request for url: https://www.facebook.com/joshuatenbrinkcr/
+[2026-05-05 22:23:57]   ERROR visiting https://wildphotography.com/pages/about-us: 404 Client Error: Not Found for url: https://wildphotography.com/pages/about-us
+[2026-05-05 22:23:58]   ❌ www.instagram.com - Wild Photography (@realwildphotography) - Instagram
+[2026-05-05 22:23:58]        credit=False, backlink=False, email=None
+[2026-05-05 22:24:01]   ✅ wildphotography.com - Joshua ten Brink — Featured in Global Media - wildphotograph
+[2026-05-05 22:24:01]        credit=True, backlink=True, email=None
+[2026-05-05 22:24:01]        → New opportunity added
+[2026-05-05 22:24:05] 
+Searching: Joshua ten Brink Costa Rica wildlife
+[2026-05-05 22:24:05]   Found 10 results
+[2026-05-05 22:24:06]   ✅ www.joshuatenbrink.com - Wildlife Photography by Joshua Ten Brink in Costa Rica | Jos
+[2026-05-05 22:24:06]        credit=True, backlink=False, email=None
+[2026-05-05 22:24:06]        → New opportunity added
+[2026-05-05 22:24:10]   ✅ naturalcostarica.com - About Joshua ten Brink - Natural Costa Rica
+[2026-05-05 22:24:10]        credit=True, backlink=False, email=None
+[2026-05-05 22:24:13]   ERROR visiting https://wildphotography.com/about: 404 Client Error: Not Found for url: https://wildphotography.com/about
+[2026-05-05 22:24:14]   ❌ cr.linkedin.com - Joshua ten Brink - Costa Rica Real Estate Developer & Invest
+[2026-05-05 22:24:14]        credit=False, backlink=False, email=None
+[2026-05-05 22:24:18]   ✅ www.photoquest.com - About Photo Quest - Discover Costa Rica Through Our Lens
+[2026-05-05 22:24:18]        credit=True, backlink=True, email=None
+[2026-05-05 22:24:22]   ERROR visiting https://www.facebook.com/RealWildPhotography/about/: 400 Client Error: Bad Request for url: https://www.facebook.com/RealWildPhotography/about/
+[2026-05-05 22:24:22]   ✅ joshuatenbrink.blogspot.com - Joshua ten Brink
+[2026-05-05 22:24:22]        credit=True, backlink=True, email=None
+[2026-05-05 22:24:26]   ERROR visiting https://www.shutterstock.com/g/joshua+ten+brink: 403 Client Error: HTTP Forbidden for url: https://www.shutterstock.com/g/joshua+ten+brink
+[2026-05-05 22:24:26]   ✅ www.youtube.com - Joshua Ten Brink - YouTube
+[2026-05-05 22:24:26]        credit=True, backlink=False, email=None
+[2026-05-05 22:24:30]   ✅ www.joshuatenbrink.com - Joshua Ten Brink: Real Estate and Wildlife Photography Exper
+[2026-05-05 22:24:30]        credit=True, backlink=True, email=None
+[2026-05-05 22:24:33] 
+Searching: WildPhotography.com Costa Rica
+[2026-05-05 22:24:34]   Found 10 results
+[2026-05-05 22:24:36]   ✅ wildphotography.com - Wildphotography | Costa Rica Nature Photography
+[2026-05-05 22:24:36]        credit=True, backlink=True, email=None
+[2026-05-05 22:24:36]        → New opportunity added
+[2026-05-05 22:24:40]   ❌ backcountrygallery.com - 2027 Costa Rica Wildlife Photography Workshops
+[2026-05-05 22:24:40]        credit=False, backlink=False, email=None
+[2026-05-05 22:24:43]   ERROR visiting https://www.wildimages-phototours.com/photography-tours/costa-rica-wildlife-photography-tour/: 403 Client Error: Forbidden for url: https://www.wildimages-phototours.com/photography-tours/costa-rica-wildlife-photography-tour/
+[2026-05-05 22:24:44]   ❌ wildshutteradventures.com - COSTA RICA - Wildlife Photography Tours & Workshops with Wil
+[2026-05-05 22:24:44]        credit=False, backlink=False, email=Joe@WildShutterAdventures.com
+[2026-05-05 22:24:47]   ❌ physis.cr - Costa Rica Photography Tours | Private & Custom Photo Tours
+[2026-05-05 22:24:47]        credit=False, backlink=False, email=None
+[2026-05-05 22:24:51]   ❌ costaricatravelblog.com - Costa Rica Wildlife Photography - The Official Costa Rica Tr
+[2026-05-05 22:24:51]        credit=False, backlink=False, email=None
+[2026-05-05 22:24:55]   ERROR visiting https://misticopark.com/blog/nature-photography/costa-rica-wildlife-photography-guide/: 403 Client Error: Forbidden for url: https://misticopark.com/blog/nature-photography/costa-rica-wildlife-photography-guide/
+[2026-05-05 22:24:58]   ❌ www.wildlifeworldwide.com - Wildlife Photography Trips in Costa Rica
+[2026-05-05 22:24:58]        credit=False, backlink=False, email=None
+[2026-05-05 22:25:03]   ❌ www.photowildlifetours.com - Costa Rica Photo Tour - Photo Wildlife Tours - Tours
+[2026-05-05 22:25:03]        credit=False, backlink=False, email=None
+[2026-05-05 22:25:11]   ✅ www.wildphotography.com - Costa Rica Photography | WildPhotography
+[2026-05-05 22:25:11]        credit=True, backlink=True, email=None
+[2026-05-05 22:25:11]        → New opportunity added
+[2026-05-05 22:25:14] 
+Saved 2 outreach drafts to /Users/joshuatenbrink/wildphotography_cloudflare_src/reports/outreach_drafts.json
+[2026-05-05 22:25:14] 
+=== Summary ===
+[2026-05-05 22:25:14] Pages visited:   60
+[2026-05-05 22:25:14] New opportunities: 14
+[2026-05-05 22:25:14] Already have backlinks: 17
+[2026-05-05 22:25:14] Contact emails found: 2
+[2026-05-05 22:25:14] Errors: 18
+[2026-05-05 22:25:14] === Done ===

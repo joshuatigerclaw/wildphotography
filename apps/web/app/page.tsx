@@ -24,6 +24,14 @@ export const metadata: Metadata = {
     siteName: 'Wildphotography',
     locale: 'en_US',
     type: 'website',
+    images: [
+      {
+        url: 'https://images.wildphotography.com/derivatives/medium/p5242368-63fc.jpg',
+        width: 1200,
+        height: 800,
+        alt: 'Wildphotography | Costa Rica Nature Photography',
+      },
+    ],
   },
 };
 
