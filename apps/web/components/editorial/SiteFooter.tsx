@@ -35,6 +35,7 @@ export default function SiteFooter() {
             <h4>API</h4>
             <ul>
               <li><Link href="/api-access">API Access</Link></li>
+              <li><Link href="/developers/api">API Docs</Link></li>
               <li><Link href="/guides/costa-rica-wildlife-photography">Photography Guide</Link></li>
             </ul>
           </div>
