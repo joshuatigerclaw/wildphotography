@@ -162,7 +162,7 @@ export default async function PhotoPage({
   try {
     const speciesResult = await sql`
       SELECT DISTINCT p.id, p.slug, p.title, p.thumb_url, p.small_url,
-             p.species_common_name, p.location
+             p.species_common_name, p.location, p.popularity
       FROM photos p
       JOIN page_links pl ON pl.target_type = 'photo' AND pl.target_id = p.id
       WHERE pl.source_type = 'species'
@@ -194,7 +194,7 @@ export default async function PhotoPage({
   try {
     const locationResult = await sql`
       SELECT DISTINCT p.id, p.slug, p.title, p.thumb_url, p.small_url,
-             p.species_common_name, p.location
+             p.species_common_name, p.location, p.popularity
       FROM photos p
       JOIN page_links pl ON pl.target_type = 'photo' AND pl.target_id = p.id
       WHERE pl.source_type = 'location'
@@ -231,7 +231,8 @@ export default async function PhotoPage({
         const altResult = await sql`
           SELECT DISTINCT p.id, p.slug, p.title, p.thumb_url, p.small_url,
                  p.species_common_name, p.location,
-                 g.id as gallery_id, g.name as gallery_name, g.slug as gallery_slug
+                 g.id as gallery_id, g.name as gallery_name, g.slug as gallery_slug,
+                 p.popularity
           FROM photos p
           JOIN gallery_photos gp ON gp.photo_id = p.id
           JOIN galleries g ON g.id = gp.gallery_id

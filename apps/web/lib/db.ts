@@ -551,7 +551,7 @@ export async function getPhotosFromGallery(
       ${excludePhotoSlug ? `AND p.slug != $2` : ''}
       AND (p.thumb_url IS NOT NULL OR p.small_url IS NOT NULL OR p.medium_url IS NOT NULL OR p.large_url IS NOT NULL)
     ORDER BY ${GALLERY_PHOTO_ORDER}
-    LIMIT $${excludePhotoSlug ? 3 : 2}
+    LIMIT $2
   `, excludePhotoSlug ? [gallerySlug, excludePhotoSlug] : [gallerySlug, limit]);
   
   return (result as any[]).map(mapPhoto);
