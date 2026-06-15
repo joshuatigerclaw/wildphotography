@@ -9,7 +9,7 @@
  *   node scripts/rollup-photo-view-counts.js [--dry-run] [--lock]
  *
  * Run via cron every 6 hours:
- *   0 */6 * * *  node /path/to/rollup-photo-view-counts.js --lock
+ *   0 \*\/6 * * *  node /path/to/rollup-photo-view-counts.js --lock
  *
  * Advisory lock key: 12342 (different from health-check=12341 and reconcile=12340)
  */
@@ -26,7 +26,7 @@ const ADVISORY_LOCK_KEY = 12342n;
 const opts = require('commander')
   .option('--dry-run', 'Show what would be updated without making changes', false)
   .option('--lock', 'Use advisory lock to prevent overlapping runs', false)
-  .parse(process.argv())
+  .parse(process.argv)
   .opts();
 
 async function main() {
@@ -74,17 +74,16 @@ async function main() {
     for (let i = 0; i < aggRes.rows.length; i += BATCH_SIZE) {
       const batch = aggRes.rows.slice(i, i + BATCH_SIZE);
 
-      // Build multi-value UPDATE
-      const sets = batch.map((_, idx) => `($${idx * 2 + 1}, $${idx * 2 + 2})`);
-      const values = batch.flatMap(r => [r.photo_id, r.total_visits]);
-
+      // Use unnest with int[] casts to avoid parameterized VALUES type inference issues
+      const photoIds = batch.map(r => parseInt(r.photo_id, 10));
+      const visitCounts = batch.map(r => parseInt(r.total_visits, 10));
       const updateRes = await client.query(`
         UPDATE photos p
         SET views_count = v.new_count
-        FROM (VALUES ${sets.join(', ')}) AS v(photo_id, new_count)
+        FROM unnest($1::int[], $2::int[]) AS v(photo_id, new_count)
         WHERE p.id = v.photo_id
           AND p.views_count IS DISTINCT FROM v.new_count
-      `, values);
+      `, [photoIds, visitCounts]);
 
       updated += updateRes.rowCount || 0;
     }

@@ -1,29 +1,38 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { after } from 'next/server';
+import { neon } from '@neondatabase/serverless';
 
-interface VisitEvent {
-  photoId: number;
-  ipHash: string;
-  day: string;       // YYYY-MM-DD
-  queuedAt: number;  // unix ms timestamp
-}
+const DATABASE_URL = process.env.DATABASE_URL ||
+  'postgresql://neondb_owner:npg_BvF2JsQ8drba@ep-calm-fire-ad0dfnqd-pooler.c-2.us-east-1.aws.neon.tech/wildphotography?sslmode=require';
+
+export const dynamic = 'force-dynamic';
 
 /**
- * Visit tracking — zero Neon calls in the hot path.
- * 
- * Architecture:
- * 1. /api/visit returns 200 immediately (bot check only)
- * 2. Event is serialized and sent to Cloudflare Queue `do-queue`
- * 3. Queue consumer (scripts/flush-visit-queue.js) runs every 5 min
- *    and batch-upserts events into photo_visit_daily
- * 4. views_count rollup: scripts/rollup-photo-view-counts.js (every 6h)
- * 
- * Neon is no longer called from the visit hot path at all.
+ * Visit tracking.
+ *
+ * Writes directly to photo_visit_daily (upsert) — no per-request photo_views update.
+ * photo_visit_daily columns: photo_id, day, source, visit_count, last_seen_at, created_at, updated_at
+ * No ip_address column in photo_visit_daily (separate table: photo_visits for detailed logs).
+ *
+ * Bot detection + IP hash (FNV, anonymized).
+ *
+ * Future: switch to queue producer once consumer is deployed, for batched writes.
+ * Currently: direct write (single UPSERT, fast path since no FK on photo_visit_daily).
  */
+
+function hashIP(ip: string): string {
+  if (!ip || ip === 'unknown') return 'unknown';
+  let h = 2166136261;
+  for (let i = 0; i < ip.length; i++) {
+    h ^= ip.charCodeAt(i);
+    h = (h * 16777619) >>> 0;
+  }
+  return h.toString(16);
+}
+
 export async function POST(request: NextRequest) {
   const userAgent = request.headers.get('user-agent') || '';
 
-  // ── Bot / non-user detection ─────────────────────────────
+  // ── Bot / non-user detection ─────────────────────────────────────────────
   const ua = userAgent.toLowerCase();
   if (/bot|crawler|spider|googlebot|bingbot|slurp|duckduckbot|baiduspider|yandexbot|facebookexternal|twitterbot|applebot|anthropic|claudebot|perplexity|imagesift|ccbot|amazonbot|semrushbot|ahrefsbot|mj12bot|dotbot|rogerbot|linkedinbot|skypeuripreview|whatsapp|telegram/i.test(ua)) {
     return NextResponse.json({ success: true, counted: false, reason: 'bot' });
@@ -50,49 +59,40 @@ export async function POST(request: NextRequest) {
     || request.headers.get('x-real-ip')
     || 'unknown';
   const ipHash = hashIP(ip);
-  const today = new Date().toISOString().slice(0, 10);
 
-  // ── Send to queue (non-blocking, after response) ───────
-  after(() => {
-    sendToQueue(pid, ipHash, today).catch((err: Error) => {
-      console.error('[visit] Queue send error:', err.message);
-    });
-  });
-
-  return NextResponse.json({ success: true, counted: true });
-}
-
-async function sendToQueue(photoId: number, ipHash: string, day: string) {
-  // Access the Cloudflare Queue binding — available in Cloudflare Workers runtime
-  // @ts-expect-error — env types not available at build time for Next.js route handlers
-  const queue: import('@cloudflare/workers-types').Queue.ProducerAdapter = 
-    // @ts-expect-error
-    globalThis.ThisWorker?.env?.DOQueue;
-
-  if (!queue) {
-    // Fallback: queue not available, skip silently (visit not critical path)
-    console.warn('[visit] DOQueue binding not available, skipping');
-    return;
+  // ── Try queue send first (non-blocking) ─────────────────────────────────
+  // TODO: once queue consumer is deployed, switch to queue-only path
+  try {
+    const env = (request as any).env;
+    if (env?.DOQueue) {
+      await env.DOQueue.send({
+        photoId: pid,
+        ipHash,
+        timestamp: Date.now(),
+      }).catch(() => {}); // non-critical, fall through to direct write
+    }
+  } catch {
+    // queue unavailable — fall through to direct write
   }
 
-  const event: VisitEvent = {
-    photoId,
-    ipHash,
-    day,
-    queuedAt: Date.now(),
-  };
+  // ── Direct upsert to photo_visit_daily ─────────────────────────────────
+  // photo_visit_daily schema: photo_id, day, source, visit_count, last_seen_at, created_at, updated_at
+  // No FK on photo_visit_daily — inserts always succeed for valid photo IDs
+  const sql = neon(DATABASE_URL);
 
-  // sendBatch is the Cloudflare Queue producer API
-  await queue.sendBatch([{ body: JSON.stringify(event) }]);
-}
-
-/** Fast FNV-style hash for IP anonymization (not reversible) */
-function hashIP(ip: string): string {
-  if (!ip || ip === 'unknown') return 'unknown';
-  let h = 2166136261;
-  for (let i = 0; i < ip.length; i++) {
-    h ^= ip.charCodeAt(i);
-    h = (h * 16777619) >>> 0;
+  try {
+    await sql`
+      INSERT INTO photo_visit_daily (photo_id, day, source, visit_count, last_seen_at)
+      VALUES (${pid}, CURRENT_DATE, 'web', 1, NOW())
+      ON CONFLICT (photo_id, day)
+      DO UPDATE SET
+        visit_count = photo_visit_daily.visit_count + 1,
+        last_seen_at = NOW()
+    `;
+    return NextResponse.json({ success: true, counted: true });
+  } catch (err) {
+    // photo_visit_daily has no FK, so the only failure is connection/timeout
+    console.error('[visit] Error:', err instanceof Error ? err.message : err);
+    return NextResponse.json({ error: 'Internal error' }, { status: 500 });
   }
-  return h.toString(16);
 }
