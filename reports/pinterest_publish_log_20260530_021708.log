@@ -1,0 +1,154 @@
+[2026-05-30T08:17:08.867Z] === Pinterest Queue Publisher Started ===
+[2026-05-30T08:17:08.869Z] Loaded 15 cookies
+(node:25705) Warning: SECURITY WARNING: The SSL modes 'prefer', 'require', and 'verify-ca' are treated as aliases for 'verify-full'.
+In the next major version (pg-connection-string v3.0.0 and pg v9.0.0), these modes will adopt standard libpq semantics, which have weaker security guarantees.
+
+To prepare for this change:
+- If you want the current behavior, explicitly use 'sslmode=verify-full'
+- If you want libpq compatibility now, use 'uselibpqcompat=true&sslmode=require'
+
+See https://www.postgresql.org/docs/current/libpq-ssl.html for libpq SSL mode definitions.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[2026-05-30T08:17:09.439Z] Got 20 pins from queue
+[2026-05-30T08:17:11.375Z] 
+Processing pin 180: Roseate Spoonbill Photography — Costa Rica, Costa Rica
+[2026-05-30T08:17:15.728Z]   Logged in - Pin Builder page loaded
+[2026-05-30T08:17:15.728Z]   Pin title: Roseate Spoonbill Photography — Costa Rica, Costa Rica
+[2026-05-30T08:17:15.728Z]   Destination: https://www.wildphotography.com/article/species-roseate-spoonbill
+[2026-05-30T08:17:15.728Z]   Board ID: 1
+[2026-05-30T08:17:15.800Z]   SUCCESS: Pin builder loaded - manual completion required
+[2026-05-30T08:17:17.876Z] 
+Processing pin 177: Rufous Hummingbird Photography — Costa Rica, Costa Rica
+[2026-05-30T08:17:21.297Z]   Logged in - Pin Builder page loaded
+[2026-05-30T08:17:21.297Z]   Pin title: Rufous Hummingbird Photography — Costa Rica, Costa Rica
+[2026-05-30T08:17:21.297Z]   Destination: https://www.wildphotography.com/article/species-rufous-hummingbird
+[2026-05-30T08:17:21.297Z]   Board ID: 1
+[2026-05-30T08:17:21.374Z]   SUCCESS: Pin builder loaded - manual completion required
+[2026-05-30T08:17:23.449Z] 
+Processing pin 173: How to Photograph Cattle Egret in Costa Rica
+[2026-05-30T08:17:26.855Z]   Logged in - Pin Builder page loaded
+[2026-05-30T08:17:26.855Z]   Pin title: How to Photograph Cattle Egret in Costa Rica
+[2026-05-30T08:17:26.855Z]   Destination: https://wildphotography.com/article/species-cattle-egret
+[2026-05-30T08:17:26.855Z]   Board ID: 1
+[2026-05-30T08:17:26.926Z]   SUCCESS: Pin builder loaded - manual completion required
+[2026-05-30T08:17:29.003Z] 
+Processing pin 176: How to Photograph Rufous Hummingbird in Costa Rica
+[2026-05-30T08:17:32.412Z]   Logged in - Pin Builder page loaded
+[2026-05-30T08:17:32.413Z]   Pin title: How to Photograph Rufous Hummingbird in Costa Rica
+[2026-05-30T08:17:32.413Z]   Destination: https://www.wildphotography.com/article/species-rufous-hummingbird
+[2026-05-30T08:17:32.413Z]   Board ID: 1
+[2026-05-30T08:17:32.492Z]   SUCCESS: Pin builder loaded - manual completion required
+[2026-05-30T08:17:34.573Z] 
+Processing pin 1511: landscape — Samara-Playa-Carillo — DJI_0224 | WildPhotography
+[2026-05-30T08:17:38.048Z]   Logged in - Pin Builder page loaded
+[2026-05-30T08:17:38.049Z]   Pin title: landscape — Samara-Playa-Carillo — DJI_0224 | WildPhotography
+[2026-05-30T08:17:38.050Z]   Destination: https://www.wildphotography.com/photo/dji-0224-a64b39d9
+[2026-05-30T08:17:38.050Z]   Board ID: costa-rica-photography
+[2026-05-30T08:17:38.127Z]   SUCCESS: Pin builder loaded - manual completion required
+[2026-05-30T08:17:40.201Z] 
+Processing pin 1514: landscape — Samara-Playa-Carillo — DJI_0220 | WildPhotography
+[2026-05-30T08:17:43.610Z]   Logged in - Pin Builder page loaded
+[2026-05-30T08:17:43.611Z]   Pin title: landscape — Samara-Playa-Carillo — DJI_0220 | WildPhotography
+[2026-05-30T08:17:43.611Z]   Destination: https://www.wildphotography.com/photo/dji-0220-c1683792
+[2026-05-30T08:17:43.611Z]   Board ID: costa-rica-photography
+[2026-05-30T08:17:43.686Z]   SUCCESS: Pin builder loaded - manual completion required
+[2026-05-30T08:17:45.758Z] 
+Processing pin 1515: landscape — Samara-Playa-Carillo — DJI_0218 | WildPhotography
+[2026-05-30T08:17:49.173Z]   Logged in - Pin Builder page loaded
+[2026-05-30T08:17:49.174Z]   Pin title: landscape — Samara-Playa-Carillo — DJI_0218 | WildPhotography
+[2026-05-30T08:17:49.174Z]   Destination: https://www.wildphotography.com/photo/dji-0218-8ca0516d
+[2026-05-30T08:17:49.174Z]   Board ID: costa-rica-photography
+[2026-05-30T08:17:49.247Z]   SUCCESS: Pin builder loaded - manual completion required
+[2026-05-30T08:17:51.318Z] 
+Processing pin 1505: landscape — Samara-Playa-Carillo — DJI_0234 | WildPhotography
+[2026-05-30T08:17:54.788Z]   Logged in - Pin Builder page loaded
+[2026-05-30T08:17:54.789Z]   Pin title: landscape — Samara-Playa-Carillo — DJI_0234 | WildPhotography
+[2026-05-30T08:17:54.789Z]   Destination: https://www.wildphotography.com/photo/dji-0234-0035d6de
+[2026-05-30T08:17:54.789Z]   Board ID: costa-rica-photography
+[2026-05-30T08:17:54.862Z]   SUCCESS: Pin builder loaded - manual completion required
+[2026-05-30T08:17:56.938Z] 
+Processing pin 1507: landscape — Samara-Playa-Carillo — DJI_0231 | WildPhotography
+[2026-05-30T08:18:00.399Z]   Logged in - Pin Builder page loaded
+[2026-05-30T08:18:00.399Z]   Pin title: landscape — Samara-Playa-Carillo — DJI_0231 | WildPhotography
+[2026-05-30T08:18:00.399Z]   Destination: https://www.wildphotography.com/photo/dji-0231-6ec1d476
+[2026-05-30T08:18:00.400Z]   Board ID: costa-rica-photography
+[2026-05-30T08:18:00.472Z]   SUCCESS: Pin builder loaded - manual completion required
+[2026-05-30T08:18:02.546Z] 
+Processing pin 1506: landscape — Samara-Playa-Carillo — DJI_0233 | WildPhotography
+[2026-05-30T08:18:06.023Z]   Logged in - Pin Builder page loaded
+[2026-05-30T08:18:06.023Z]   Pin title: landscape — Samara-Playa-Carillo — DJI_0233 | WildPhotography
+[2026-05-30T08:18:06.023Z]   Destination: https://www.wildphotography.com/photo/dji-0233-46f6c558
+[2026-05-30T08:18:06.024Z]   Board ID: costa-rica-photography
+[2026-05-30T08:18:06.102Z]   SUCCESS: Pin builder loaded - manual completion required
+[2026-05-30T08:18:08.177Z] 
+Processing pin 1509: landscape — Samara-Playa-Carillo — DJI_0227 | WildPhotography
+[2026-05-30T08:18:11.591Z]   Logged in - Pin Builder page loaded
+[2026-05-30T08:18:11.592Z]   Pin title: landscape — Samara-Playa-Carillo — DJI_0227 | WildPhotography
+[2026-05-30T08:18:11.592Z]   Destination: https://www.wildphotography.com/photo/dji-0227-3fcdc220
+[2026-05-30T08:18:11.592Z]   Board ID: costa-rica-photography
+[2026-05-30T08:18:11.669Z]   SUCCESS: Pin builder loaded - manual completion required
+[2026-05-30T08:18:13.745Z] 
+Processing pin 1510: landscape — Samara-Playa-Carillo — DJI_0225 | WildPhotography
+[2026-05-30T08:18:17.132Z]   Logged in - Pin Builder page loaded
+[2026-05-30T08:18:17.132Z]   Pin title: landscape — Samara-Playa-Carillo — DJI_0225 | WildPhotography
+[2026-05-30T08:18:17.132Z]   Destination: https://www.wildphotography.com/photo/dji-0225-f3294e32
+[2026-05-30T08:18:17.132Z]   Board ID: costa-rica-photography
+[2026-05-30T08:18:17.206Z]   SUCCESS: Pin builder loaded - manual completion required
+[2026-05-30T08:18:19.279Z] 
+Processing pin 1512: landscape — Samara-Playa-Carillo — DJI_0223 | WildPhotography
+[2026-05-30T08:18:22.701Z]   Logged in - Pin Builder page loaded
+[2026-05-30T08:18:22.701Z]   Pin title: landscape — Samara-Playa-Carillo — DJI_0223 | WildPhotography
+[2026-05-30T08:18:22.701Z]   Destination: https://www.wildphotography.com/photo/dji-0223-90e017de
+[2026-05-30T08:18:22.701Z]   Board ID: costa-rica-photography
+[2026-05-30T08:18:22.778Z]   SUCCESS: Pin builder loaded - manual completion required
+[2026-05-30T08:18:24.861Z] 
+Processing pin 1513: landscape — Samara-Playa-Carillo — DJI_0222 | WildPhotography
+[2026-05-30T08:18:28.251Z]   Logged in - Pin Builder page loaded
+[2026-05-30T08:18:28.251Z]   Pin title: landscape — Samara-Playa-Carillo — DJI_0222 | WildPhotography
+[2026-05-30T08:18:28.251Z]   Destination: https://www.wildphotography.com/photo/dji-0222-18c83eb0
+[2026-05-30T08:18:28.251Z]   Board ID: costa-rica-photography
+[2026-05-30T08:18:28.330Z]   SUCCESS: Pin builder loaded - manual completion required
+[2026-05-30T08:18:30.404Z] 
+Processing pin 1500: landscape — Samara-Playa-Carillo — DJI_0240 | WildPhotography
+[2026-05-30T08:18:33.827Z]   Logged in - Pin Builder page loaded
+[2026-05-30T08:18:33.827Z]   Pin title: landscape — Samara-Playa-Carillo — DJI_0240 | WildPhotography
+[2026-05-30T08:18:33.827Z]   Destination: https://www.wildphotography.com/photo/dji-0240-72bf867a
+[2026-05-30T08:18:33.827Z]   Board ID: costa-rica-photography
+[2026-05-30T08:18:33.903Z]   SUCCESS: Pin builder loaded - manual completion required
+[2026-05-30T08:18:35.975Z] 
+Processing pin 1502: landscape — Samara-Playa-Carillo — DJI_0237 | WildPhotography
+[2026-05-30T08:18:39.381Z]   Logged in - Pin Builder page loaded
+[2026-05-30T08:18:39.381Z]   Pin title: landscape — Samara-Playa-Carillo — DJI_0237 | WildPhotography
+[2026-05-30T08:18:39.381Z]   Destination: https://www.wildphotography.com/photo/dji-0237-398dc58a
+[2026-05-30T08:18:39.382Z]   Board ID: costa-rica-photography
+[2026-05-30T08:18:39.452Z]   SUCCESS: Pin builder loaded - manual completion required
+[2026-05-30T08:18:41.525Z] 
+Processing pin 1498: landscape — Samara-Playa-Carillo — DJI_0243 | WildPhotography
+[2026-05-30T08:18:45.012Z]   Logged in - Pin Builder page loaded
+[2026-05-30T08:18:45.013Z]   Pin title: landscape — Samara-Playa-Carillo — DJI_0243 | WildPhotography
+[2026-05-30T08:18:45.013Z]   Destination: https://www.wildphotography.com/photo/dji-0243-3e85972c
+[2026-05-30T08:18:45.013Z]   Board ID: costa-rica-photography
+[2026-05-30T08:18:45.083Z]   SUCCESS: Pin builder loaded - manual completion required
+[2026-05-30T08:18:47.156Z] 
+Processing pin 1501: landscape — Samara-Playa-Carillo — DJI_0239 | WildPhotography
+[2026-05-30T08:18:50.567Z]   Logged in - Pin Builder page loaded
+[2026-05-30T08:18:50.567Z]   Pin title: landscape — Samara-Playa-Carillo — DJI_0239 | WildPhotography
+[2026-05-30T08:18:50.567Z]   Destination: https://www.wildphotography.com/photo/dji-0239-62e33802
+[2026-05-30T08:18:50.567Z]   Board ID: costa-rica-photography
+[2026-05-30T08:18:50.640Z]   SUCCESS: Pin builder loaded - manual completion required
+[2026-05-30T08:18:52.713Z] 
+Processing pin 1504: landscape — Samara-Playa-Carillo — DJI_0235 | WildPhotography
+[2026-05-30T08:18:56.126Z]   Logged in - Pin Builder page loaded
+[2026-05-30T08:18:56.126Z]   Pin title: landscape — Samara-Playa-Carillo — DJI_0235 | WildPhotography
+[2026-05-30T08:18:56.126Z]   Destination: https://www.wildphotography.com/photo/dji-0235-7159d1df
+[2026-05-30T08:18:56.126Z]   Board ID: costa-rica-photography
+[2026-05-30T08:18:56.202Z]   SUCCESS: Pin builder loaded - manual completion required
+[2026-05-30T08:18:58.275Z] 
+Processing pin 1499: landscape — Samara-Playa-Carillo — DJI_0241 | WildPhotography
+[2026-05-30T08:19:01.710Z]   Logged in - Pin Builder page loaded
+[2026-05-30T08:19:01.712Z]   Pin title: landscape — Samara-Playa-Carillo — DJI_0241 | WildPhotography
+[2026-05-30T08:19:01.713Z]   Destination: https://www.wildphotography.com/photo/dji-0241-eabe8d09
+[2026-05-30T08:19:01.713Z]   Board ID: costa-rica-photography
+[2026-05-30T08:19:01.785Z]   SUCCESS: Pin builder loaded - manual completion required
+[2026-05-30T08:19:04.058Z] 
+=== Done ===

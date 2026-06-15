@@ -217,9 +217,8 @@ export default async function SpeciesDetailPage({ params }: { params: Promise<{ 
               <Link
                 key={loc.id}
                 href={`/location/${loc.slug}`}
-                style={{display:'block',padding:'18px',border:'1px solid var(--rule)',borderRadius:'var(--r-md)',textDecoration:'none',transition:'border-color var(--t-fast)'}}
-                onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.borderColor = 'var(--accent)'; }}
-                onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.borderColor = 'var(--rule)'; }}
+                className="species-location-link"
+                style={{display:'block',padding:'18px',border:'1px solid var(--rule)',borderRadius:'var(--r-md)',textDecoration:'none'}}
               >
                 <h3 style={{fontFamily:'var(--font-display)',fontSize:'15px',fontWeight:500,color:'var(--ink)',margin:'0 0 4px 0'}}>{loc.name}</h3>
                 {loc.region && <p style={{fontFamily:'var(--font-mono)',fontSize:'10px',textTransform:'uppercase',letterSpacing:'.1em',color:'var(--ink-dim)',margin:'0 0 8px 0'}}>{loc.region} region</p>}
@@ -239,9 +238,8 @@ export default async function SpeciesDetailPage({ params }: { params: Promise<{ 
               <Link
                 key={g.id}
                 href={`/gallery/${g.slug}`}
-                style={{display:'block',padding:'18px',border:'1px solid var(--rule)',borderRadius:'var(--r-md)',textDecoration:'none',transition:'border-color var(--t-fast)'}}
-                onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.borderColor = 'var(--accent)'; }}
-                onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.borderColor = 'var(--rule)'; }}
+                className="species-gallery-link"
+                style={{display:'block',padding:'18px',border:'1px solid var(--rule)',borderRadius:'var(--r-md)',textDecoration:'none'}}
               >
                 <h3 style={{fontFamily:'var(--font-display)',fontSize:'15px',fontWeight:500,color:'var(--ink)',margin:'0 0 4px 0'}}>{g.name}</h3>
                 {g.description && <p style={{fontSize:'13px',color:'var(--ink-dim)',margin:0,lineHeight:1.4,display:'-webkit-box',WebkitLineClamp:2,WebkitBoxOrient:'vertical',overflow:'hidden'}}>{g.description}</p>}
@@ -260,9 +258,8 @@ export default async function SpeciesDetailPage({ params }: { params: Promise<{ 
               <Link
                 key={rs.id}
                 href={`/species/${rs.slug}`}
-                style={{display:'inline-flex',alignItems:'center',padding:'8px 16px',border:'1px solid var(--rule)',borderRadius:'var(--r-sm)',fontFamily:'var(--font-serif)',fontSize:'14px',color:'var(--ink-muted)',textDecoration:'none',transition:'border-color var(--t-fast), color var(--t-fast)'}}
-                onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.borderColor = 'var(--accent)'; (e.currentTarget as HTMLAnchorElement).style.color = 'var(--accent)'; }}
-                onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.borderColor = 'var(--rule)'; (e.currentTarget as HTMLAnchorElement).style.color = 'var(--ink-muted)'; }}
+                className="species-species-link"
+                style={{display:'inline-flex',alignItems:'center',padding:'8px 16px',border:'1px solid var(--rule)',borderRadius:'var(--r-sm)',fontFamily:'var(--font-serif)',fontSize:'14px',color:'var(--ink-muted)',textDecoration:'none'}}
               >
                 {rs.common_name}
               </Link>
@@ -280,9 +277,8 @@ export default async function SpeciesDetailPage({ params }: { params: Promise<{ 
               <Link
                 key={art.id}
                 href={`/article/${art.slug}`}
-                style={{display:'block',padding:'18px',border:'1px solid var(--rule)',borderRadius:'var(--r-md)',textDecoration:'none',transition:'border-color var(--t-fast)'}}
-                onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.borderColor = 'var(--accent)'; }}
-                onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.borderColor = 'var(--rule)'; }}
+                className="species-article-link"
+                style={{display:'block',padding:'18px',border:'1px solid var(--rule)',borderRadius:'var(--r-md)',textDecoration:'none'}}
               >
                 <h3 style={{fontFamily:'var(--font-display)',fontSize:'16px',fontWeight:500,color:'var(--ink)',margin:'0 0 6px 0'}}>{art.title}</h3>
                 {art.excerpt && <p style={{fontSize:'13px',color:'var(--ink-dim)',margin:0,lineHeight:1.4,display:'-webkit-box',WebkitLineClamp:2,WebkitBoxOrient:'vertical',overflow:'hidden'}}>{art.excerpt}</p>}

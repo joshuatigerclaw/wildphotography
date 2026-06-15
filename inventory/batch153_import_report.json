@@ -1,0 +1,27 @@
+{
+  "batch": 153,
+  "timestamp": "2026-06-07T01:08:46Z",
+  "folders_seen": [
+    "Costa-Rica-Gallery/Boats-in-Costa-Rica",
+    "Costa-Rica-Gallery/Conchal-Guanacaste",
+    "Costa-Rica-Gallery/Costa-Rica-Travel-Tourism",
+    "Costa-Rica-Gallery/Heredia-Costa-Rica",
+    "Costa-Rica-Gallery/Insects-and-Butterflies"
+  ],
+  "folders_with_existing_gallery_match": [
+    "Costa-Rica-Gallery/Boats-in-Costa-Rica",
+    "Costa-Rica-Gallery/Conchal-Guanacaste",
+    "Costa-Rica-Gallery/Costa-Rica-Travel-Tourism",
+    "Costa-Rica-Gallery/Heredia-Costa-Rica",
+    "Costa-Rica-Gallery/Insects-and-Butterflies"
+  ],
+  "folders_skipped_no_existing_gallery": [],
+  "folders_skipped_ambiguous_mapping": [],
+  "folders_processed": 5,
+  "photos_scanned": 268,
+  "duplicates_skipped": 268,
+  "new_imported": 0,
+  "failed": 0,
+  "result": "all_duplicates",
+  "note": "All 268 photos across 5 galleries were already imported - no new photos to add"
+}

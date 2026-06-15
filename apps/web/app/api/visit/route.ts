@@ -1,57 +1,98 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { neon } from '@neondatabase/serverless';
+import { after } from 'next/server';
 
-const DATABASE_URL = process.env.DATABASE_URL || 
-  'postgresql://neondb_owner:npg_BvF2JsQ8drba@ep-calm-fire-ad0dfnqd-pooler.c-2.us-east-1.aws.neon.tech/wildphotography?sslmode=require';
+interface VisitEvent {
+  photoId: number;
+  ipHash: string;
+  day: string;       // YYYY-MM-DD
+  queuedAt: number;  // unix ms timestamp
+}
 
+/**
+ * Visit tracking — zero Neon calls in the hot path.
+ * 
+ * Architecture:
+ * 1. /api/visit returns 200 immediately (bot check only)
+ * 2. Event is serialized and sent to Cloudflare Queue `do-queue`
+ * 3. Queue consumer (scripts/flush-visit-queue.js) runs every 5 min
+ *    and batch-upserts events into photo_visit_daily
+ * 4. views_count rollup: scripts/rollup-photo-view-counts.js (every 6h)
+ * 
+ * Neon is no longer called from the visit hot path at all.
+ */
 export async function POST(request: NextRequest) {
-  try {
-    const sql = neon(DATABASE_URL);
-    
-    const body = await request.json();
-    const { photoId, slug } = body;
-    
-    if (!photoId || !slug) {
-      return NextResponse.json({ error: 'Missing photoId or slug' }, { status: 400 });
-    }
-    
-    // Get client IP (use forwarded header if behind proxy)
-    const ip = request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() 
-      || request.headers.get('x-real-ip')
-      || 'unknown';
-    
-    const referrer = request.headers.get('referer') || undefined;
-    const userAgent = request.headers.get('user-agent') || undefined;
-    
-    // Check for recent visit from same IP (within 30 minutes) to prevent inflation
-    const existingVisit = await sql`
-      SELECT id FROM photo_visits 
-      WHERE photo_id = ${parseInt(photoId)} 
-        AND ip_address = ${ip}
-        AND visited_at > NOW() - INTERVAL '30 minutes'
-      LIMIT 1
-    `;
-    
-    if (existingVisit.length > 0) {
-      // Already visited recently, just return success
-      return NextResponse.json({ success: true, counted: false });
-    }
-    
-    // Insert visit record
-    await sql`
-      INSERT INTO photo_visits (photo_id, slug, referrer, user_agent, ip_address, visited_at)
-      VALUES (${parseInt(photoId)}, ${slug}, ${referrer || null}, ${userAgent || null}, ${ip}, NOW())
-    `;
-    
-    // Update aggregate count on photo
-    await sql`
-      UPDATE photos SET views_count = COALESCE(views_count, 0) + 1
-      WHERE id = ${parseInt(photoId)}
-    `;
-    
-    return NextResponse.json({ success: true, counted: true });
-  } catch (error) {
-    console.error('[visit] Error:', error);
-    return NextResponse.json({ error: 'Internal error' }, { status: 500 });
+  const userAgent = request.headers.get('user-agent') || '';
+
+  // ── Bot / non-user detection ─────────────────────────────
+  const ua = userAgent.toLowerCase();
+  if (/bot|crawler|spider|googlebot|bingbot|slurp|duckduckbot|baiduspider|yandexbot|facebookexternal|twitterbot|applebot|anthropic|claudebot|perplexity|imagesift|ccbot|amazonbot|semrushbot|ahrefsbot|mj12bot|dotbot|rogerbot|linkedinbot|skypeuripreview|whatsapp|telegram/i.test(ua)) {
+    return NextResponse.json({ success: true, counted: false, reason: 'bot' });
   }
+
+  let body: { photoId?: string } = {};
+  try {
+    body = await request.json();
+  } catch {
+    return NextResponse.json({ error: 'Invalid JSON' }, { status: 400 });
+  }
+
+  const { photoId } = body;
+  if (!photoId) {
+    return NextResponse.json({ error: 'Missing photoId' }, { status: 400 });
+  }
+
+  const pid = parseInt(photoId);
+  if (isNaN(pid)) {
+    return NextResponse.json({ error: 'Invalid photoId' }, { status: 400 });
+  }
+
+  const ip = request.headers.get('x-forwarded-for')?.split(',')[0]?.trim()
+    || request.headers.get('x-real-ip')
+    || 'unknown';
+  const ipHash = hashIP(ip);
+  const today = new Date().toISOString().slice(0, 10);
+
+  // ── Send to queue (non-blocking, after response) ───────
+  after(() => {
+    sendToQueue(pid, ipHash, today).catch((err: Error) => {
+      console.error('[visit] Queue send error:', err.message);
+    });
+  });
+
+  return NextResponse.json({ success: true, counted: true });
+}
+
+async function sendToQueue(photoId: number, ipHash: string, day: string) {
+  // Access the Cloudflare Queue binding — available in Cloudflare Workers runtime
+  // @ts-expect-error — env types not available at build time for Next.js route handlers
+  const queue: import('@cloudflare/workers-types').Queue.ProducerAdapter = 
+    // @ts-expect-error
+    globalThis.ThisWorker?.env?.DOQueue;
+
+  if (!queue) {
+    // Fallback: queue not available, skip silently (visit not critical path)
+    console.warn('[visit] DOQueue binding not available, skipping');
+    return;
+  }
+
+  const event: VisitEvent = {
+    photoId,
+    ipHash,
+    day,
+    queuedAt: Date.now(),
+  };
+
+  // sendBatch is the Cloudflare Queue producer API
+  await queue.sendBatch([{ body: JSON.stringify(event) }]);
+}
+
+/** Fast FNV-style hash for IP anonymization (not reversible) */
+function hashIP(ip: string): string {
+  if (!ip || ip === 'unknown') return 'unknown';
+  let h = 2166136261;
+  for (let i = 0; i < ip.length; i++) {
+    h ^= ip.charCodeAt(i);
+    h = (h * 16777619) >>> 0;
+  }
+  return h.toString(16);
 }

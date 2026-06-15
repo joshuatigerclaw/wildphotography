@@ -1,0 +1,49 @@
+{
+  "batch": 170,
+  "run_date": "2026-06-10T10:52:00Z",
+  "source": "/Volumes/ADATA SC740/Smugmug Backup/_uploaded_mirror/originals",
+  "folders_seen": ["arenal-volcano"],
+  "folders_with_existing_gallery_match": ["arenal-volcano"],
+  "folders_skipped_no_existing_gallery": [],
+  "folders_skipped_ambiguous_mapping": [],
+  "folders_processed": 1,
+  "photos_scanned": 8,
+  "duplicates_skipped": 7,
+  "filename_collisions_renamed": 0,
+  "new_imported": 1,
+  "failed": 0,
+  "failed_paths": [],
+  "new_photo_ids": [94535],
+  "derivatives_generated": 5,
+  "og_images_set": 1,
+  "seo_titles_generated": 1,
+  "seo_metadata_generated": 1,
+  "ready_for_public_render": 1,
+  "search_ready": 1,
+  "skipped_existing_high_quality": 0,
+  "repaired_prior_collision_records": 0,
+  "existing_gallery_ids_used": [16],
+  "inactive_galleries": [],
+  "per_gallery": {
+    "arenal-volcano": {
+      "total_on_disk": 8,
+      "new": 1,
+      "duplicates": 7,
+      "filename_collisions": 0,
+      "status": "new_import",
+      "gallery_id": 16,
+      "gallery_slug": "arenal-volcano"
+    }
+  },
+  "seo_sample_outputs": [
+    {
+      "photo_id": 94535,
+      "filename": "dji-0423-26e16cd98c83.jpg",
+      "slug": "arenal-volcano-305bb746",
+      "gallery": "arenal-volcano",
+      "gallery_url": "https://www.wildphotography.com/gallery/arenal-volcano/",
+      "thumb_url": "https://pub-7d412c6efb5943b5bc587e695e22001e.r2.dev/derivatives/305bb7468fb851be_thumb.jpg"
+    }
+  ],
+  "notes": "Full scan of ADATA SC740 completed. Only 1 new file found across entire backup drive. All other content already imported as duplicates. Batch 170 processes the single new DJI drone photo from arenal-volcano folder."
+}

@@ -1,63 +1,280 @@
-[2026-05-05 20:15:44] Photos missing SEO fields (search_ready=true): 562
-[2026-05-05 20:15:44] Photos already with seo_title: 38043
-[2026-05-05 20:15:44] Photos already with og_image_url: 38043
-[2026-05-05 20:15:44] Will process: 562 photos in batches of 25
-[2026-05-05 20:15:45] Processing batch 1 (25 photos)...
-[2026-05-05 20:15:48]   Batch 1 committed.
-[2026-05-05 20:15:49] Processing batch 2 (25 photos)...
-[2026-05-05 20:15:53]   Batch 2 committed.
-[2026-05-05 20:15:53] Processing batch 3 (25 photos)...
-[2026-05-05 20:15:57]   Batch 3 committed.
-[2026-05-05 20:15:57] Processing batch 4 (25 photos)...
-[2026-05-05 20:16:01]   Batch 4 committed.
-[2026-05-05 20:16:02] Processing batch 5 (25 photos)...
-[2026-05-05 20:16:06]   Batch 5 committed.
-[2026-05-05 20:16:06] Processing batch 6 (25 photos)...
-[2026-05-05 20:16:10]   Batch 6 committed.
-[2026-05-05 20:16:10] Processing batch 7 (25 photos)...
-[2026-05-05 20:16:14]   Batch 7 committed.
-[2026-05-05 20:16:15] Processing batch 8 (25 photos)...
-[2026-05-05 20:16:19]   Batch 8 committed.
-[2026-05-05 20:16:19] Processing batch 9 (25 photos)...
-[2026-05-05 20:16:23]   Batch 9 committed.
-[2026-05-05 20:16:23] Processing batch 10 (25 photos)...
-[2026-05-05 20:16:27]   Batch 10 committed.
-[2026-05-05 20:16:28] Processing batch 11 (25 photos)...
-[2026-05-05 20:16:32]   Batch 11 committed.
-[2026-05-05 20:16:32] Processing batch 12 (25 photos)...
-[2026-05-05 20:16:36]   Batch 12 committed.
-[2026-05-05 20:16:37] Processing batch 13 (25 photos)...
-[2026-05-05 20:16:40]   Batch 13 committed.
-[2026-05-05 20:16:41] Processing batch 14 (25 photos)...
-[2026-05-05 20:16:45]   Batch 14 committed.
-[2026-05-05 20:16:45] Processing batch 15 (25 photos)...
-[2026-05-05 20:16:49]   Batch 15 committed.
-[2026-05-05 20:16:50] Processing batch 16 (25 photos)...
-[2026-05-05 20:16:53]   Batch 16 committed.
-[2026-05-05 20:16:54] Processing batch 17 (25 photos)...
-[2026-05-05 20:16:58]   Batch 17 committed.
-[2026-05-05 20:16:58] Processing batch 18 (25 photos)...
-[2026-05-05 20:17:02]   Batch 18 committed.
-[2026-05-05 20:17:03] Processing batch 19 (25 photos)...
-[2026-05-05 20:17:06]   Batch 19 committed.
-[2026-05-05 20:17:07] Processing batch 20 (25 photos)...
-[2026-05-05 20:17:11]   Batch 20 committed.
-[2026-05-05 20:17:11] Processing batch 21 (25 photos)...
-[2026-05-05 20:17:15]   Batch 21 committed.
-[2026-05-05 20:17:16] Processing batch 22 (25 photos)...
-[2026-05-05 20:17:19]   Batch 22 committed.
-[2026-05-05 20:17:20] Processing batch 23 (12 photos)...
-[2026-05-05 20:17:22]   Batch 23 committed.
-[2026-05-05 20:17:23] 
+[2026-06-02 07:46:46] Photos missing SEO fields (search_ready=true): 1493
+[2026-06-02 07:46:46] Photos already with seo_title: 63703
+[2026-06-02 07:46:46] Photos already with og_image_url: 62237
+[2026-06-02 07:46:46] Will process: 1493 photos in batches of 25
+[2026-06-02 07:46:47] Processing batch 1 (25 photos)...
+[2026-06-02 07:46:47]   Photo 76201: no medium_url or large_url, skipping
+[2026-06-02 07:46:47]   Photo 76202: no medium_url or large_url, skipping
+[2026-06-02 07:46:47]   Photo 76203: no medium_url or large_url, skipping
+[2026-06-02 07:46:47]   Photo 76204: no medium_url or large_url, skipping
+[2026-06-02 07:46:47]   Photo 76205: no medium_url or large_url, skipping
+[2026-06-02 07:46:47]   Photo 76206: no medium_url or large_url, skipping
+[2026-06-02 07:46:47]   Photo 76207: no medium_url or large_url, skipping
+[2026-06-02 07:46:47]   Photo 76208: no medium_url or large_url, skipping
+[2026-06-02 07:46:47]   Photo 76209: no medium_url or large_url, skipping
+[2026-06-02 07:46:47]   Photo 76210: no medium_url or large_url, skipping
+[2026-06-02 07:46:47]   Photo 76211: no medium_url or large_url, skipping
+[2026-06-02 07:46:47]   Photo 76212: no medium_url or large_url, skipping
+[2026-06-02 07:46:47]   Photo 76213: no medium_url or large_url, skipping
+[2026-06-02 07:46:47]   Photo 76214: no medium_url or large_url, skipping
+[2026-06-02 07:46:47]   Photo 76215: no medium_url or large_url, skipping
+[2026-06-02 07:46:47]   Photo 76216: no medium_url or large_url, skipping
+[2026-06-02 07:46:47]   Photo 76219: no medium_url or large_url, skipping
+[2026-06-02 07:46:47]   Photo 76220: no medium_url or large_url, skipping
+[2026-06-02 07:46:47]   Photo 76221: no medium_url or large_url, skipping
+[2026-06-02 07:46:47]   Photo 76222: no medium_url or large_url, skipping
+[2026-06-02 07:46:47]   Photo 76223: no medium_url or large_url, skipping
+[2026-06-02 07:46:47]   Photo 76224: no medium_url or large_url, skipping
+[2026-06-02 07:46:47]   Photo 76225: no medium_url or large_url, skipping
+[2026-06-02 07:46:47]   Photo 76226: no medium_url or large_url, skipping
+[2026-06-02 07:46:47]   Photo 76243: no medium_url or large_url, skipping
+[2026-06-02 07:46:47]   Batch 1 committed.
+[2026-06-02 07:46:48] Processing batch 2 (25 photos)...
+[2026-06-02 07:46:48]   Photo 76245: no medium_url or large_url, skipping
+[2026-06-02 07:46:48]   Photo 76248: no medium_url or large_url, skipping
+[2026-06-02 07:46:48]   Photo 76253: no medium_url or large_url, skipping
+[2026-06-02 07:46:48]   Photo 76254: no medium_url or large_url, skipping
+[2026-06-02 07:46:48]   Photo 76259: no medium_url or large_url, skipping
+[2026-06-02 07:46:48]   Photo 76260: no medium_url or large_url, skipping
+[2026-06-02 07:46:48]   Photo 76264: no medium_url or large_url, skipping
+[2026-06-02 07:46:48]   Photo 76267: no medium_url or large_url, skipping
+[2026-06-02 07:46:48]   Photo 76272: no medium_url or large_url, skipping
+[2026-06-02 07:46:48]   Photo 76273: no medium_url or large_url, skipping
+[2026-06-02 07:46:48]   Photo 76277: no medium_url or large_url, skipping
+[2026-06-02 07:46:48]   Photo 76278: no medium_url or large_url, skipping
+[2026-06-02 07:46:48]   Photo 76281: no medium_url or large_url, skipping
+[2026-06-02 07:46:48]   Photo 76282: no medium_url or large_url, skipping
+[2026-06-02 07:46:48]   Photo 76283: no medium_url or large_url, skipping
+[2026-06-02 07:46:48]   Photo 76285: no medium_url or large_url, skipping
+[2026-06-02 07:46:48]   Photo 76286: no medium_url or large_url, skipping
+[2026-06-02 07:46:48]   Photo 76287: no medium_url or large_url, skipping
+[2026-06-02 07:46:48]   Photo 76288: no medium_url or large_url, skipping
+[2026-06-02 07:46:48]   Photo 76290: no medium_url or large_url, skipping
+[2026-06-02 07:46:48]   Photo 76291: no medium_url or large_url, skipping
+[2026-06-02 07:46:48]   Photo 76292: no medium_url or large_url, skipping
+[2026-06-02 07:46:48]   Photo 76293: no medium_url or large_url, skipping
+[2026-06-02 07:46:48]   Photo 76296: no medium_url or large_url, skipping
+[2026-06-02 07:46:48]   Photo 76297: no medium_url or large_url, skipping
+[2026-06-02 07:46:48]   Batch 2 committed.
+[2026-06-02 07:46:48] Processing batch 3 (25 photos)...
+[2026-06-02 07:46:48]   Photo 76298: no medium_url or large_url, skipping
+[2026-06-02 07:46:48]   Photo 76299: no medium_url or large_url, skipping
+[2026-06-02 07:46:48]   Photo 76300: no medium_url or large_url, skipping
+[2026-06-02 07:46:48]   Photo 76301: no medium_url or large_url, skipping
+[2026-06-02 07:46:48]   Photo 76302: no medium_url or large_url, skipping
+[2026-06-02 07:46:48]   Photo 76303: no medium_url or large_url, skipping
+[2026-06-02 07:46:48]   Photo 76304: no medium_url or large_url, skipping
+[2026-06-02 07:46:48]   Photo 76305: no medium_url or large_url, skipping
+[2026-06-02 07:46:48]   Photo 76306: no medium_url or large_url, skipping
+[2026-06-02 07:46:48]   Photo 76307: no medium_url or large_url, skipping
+[2026-06-02 07:46:48]   Photo 76308: no medium_url or large_url, skipping
+[2026-06-02 07:46:48]   Photo 76309: no medium_url or large_url, skipping
+[2026-06-02 07:46:48]   Photo 76310: no medium_url or large_url, skipping
+[2026-06-02 07:46:48]   Photo 76311: no medium_url or large_url, skipping
+[2026-06-02 07:46:48]   Photo 76312: no medium_url or large_url, skipping
+[2026-06-02 07:46:48]   Photo 76313: no medium_url or large_url, skipping
+[2026-06-02 07:46:48]   Photo 76314: no medium_url or large_url, skipping
+[2026-06-02 07:46:48]   Photo 76315: no medium_url or large_url, skipping
+[2026-06-02 07:46:48]   Photo 76316: no medium_url or large_url, skipping
+[2026-06-02 07:46:48]   Photo 76317: no medium_url or large_url, skipping
+[2026-06-02 07:46:48]   Photo 76318: no medium_url or large_url, skipping
+[2026-06-02 07:46:48]   Photo 76319: no medium_url or large_url, skipping
+[2026-06-02 07:46:48]   Photo 76320: no medium_url or large_url, skipping
+[2026-06-02 07:46:48]   Photo 76321: no medium_url or large_url, skipping
+[2026-06-02 07:46:48]   Photo 76322: no medium_url or large_url, skipping
+[2026-06-02 07:46:48]   Batch 3 committed.
+[2026-06-02 07:46:49] Processing batch 4 (25 photos)...
+[2026-06-02 07:46:49]   Photo 76323: no medium_url or large_url, skipping
+[2026-06-02 07:46:49]   Photo 76324: no medium_url or large_url, skipping
+[2026-06-02 07:46:49]   Photo 76325: no medium_url or large_url, skipping
+[2026-06-02 07:46:49]   Photo 76326: no medium_url or large_url, skipping
+[2026-06-02 07:46:49]   Photo 76327: no medium_url or large_url, skipping
+[2026-06-02 07:46:49]   Photo 76328: no medium_url or large_url, skipping
+[2026-06-02 07:46:49]   Photo 76329: no medium_url or large_url, skipping
+[2026-06-02 07:46:49]   Photo 76330: no medium_url or large_url, skipping
+[2026-06-02 07:46:49]   Photo 76331: no medium_url or large_url, skipping
+[2026-06-02 07:46:49]   Photo 76332: no medium_url or large_url, skipping
+[2026-06-02 07:46:49]   Photo 76333: no medium_url or large_url, skipping
+[2026-06-02 07:46:49]   Photo 76334: no medium_url or large_url, skipping
+[2026-06-02 07:46:49]   Photo 76335: no medium_url or large_url, skipping
+[2026-06-02 07:46:49]   Photo 76336: no medium_url or large_url, skipping
+[2026-06-02 07:46:49]   Photo 76337: no medium_url or large_url, skipping
+[2026-06-02 07:46:49]   Photo 76338: no medium_url or large_url, skipping
+[2026-06-02 07:46:49]   Photo 76339: no medium_url or large_url, skipping
+[2026-06-02 07:46:49]   Photo 76340: no medium_url or large_url, skipping
+[2026-06-02 07:46:49]   Photo 76341: no medium_url or large_url, skipping
+[2026-06-02 07:46:49]   Photo 76342: no medium_url or large_url, skipping
+[2026-06-02 07:46:49]   Photo 76343: no medium_url or large_url, skipping
+[2026-06-02 07:46:49]   Photo 76344: no medium_url or large_url, skipping
+[2026-06-02 07:46:49]   Photo 76345: no medium_url or large_url, skipping
+[2026-06-02 07:46:49]   Photo 76346: no medium_url or large_url, skipping
+[2026-06-02 07:46:49]   Photo 76347: no medium_url or large_url, skipping
+[2026-06-02 07:46:49]   Batch 4 committed.
+[2026-06-02 07:46:49] Processing batch 5 (25 photos)...
+[2026-06-02 07:46:49]   Photo 76348: no medium_url or large_url, skipping
+[2026-06-02 07:46:49]   Photo 76349: no medium_url or large_url, skipping
+[2026-06-02 07:46:49]   Photo 76350: no medium_url or large_url, skipping
+[2026-06-02 07:46:49]   Photo 76351: no medium_url or large_url, skipping
+[2026-06-02 07:46:49]   Photo 76352: no medium_url or large_url, skipping
+[2026-06-02 07:46:49]   Photo 76353: no medium_url or large_url, skipping
+[2026-06-02 07:46:49]   Photo 76354: no medium_url or large_url, skipping
+[2026-06-02 07:46:49]   Photo 76355: no medium_url or large_url, skipping
+[2026-06-02 07:46:49]   Photo 76356: no medium_url or large_url, skipping
+[2026-06-02 07:46:49]   Photo 76357: no medium_url or large_url, skipping
+[2026-06-02 07:46:49]   Photo 76358: no medium_url or large_url, skipping
+[2026-06-02 07:46:49]   Photo 76359: no medium_url or large_url, skipping
+[2026-06-02 07:46:49]   Photo 76360: no medium_url or large_url, skipping
+[2026-06-02 07:46:49]   Photo 76363: no medium_url or large_url, skipping
+[2026-06-02 07:46:49]   Photo 76365: no medium_url or large_url, skipping
+[2026-06-02 07:46:49]   Photo 76366: no medium_url or large_url, skipping
+[2026-06-02 07:46:49]   Photo 76367: no medium_url or large_url, skipping
+[2026-06-02 07:46:49]   Photo 76368: no medium_url or large_url, skipping
+[2026-06-02 07:46:49]   Photo 76369: no medium_url or large_url, skipping
+[2026-06-02 07:46:49]   Photo 76370: no medium_url or large_url, skipping
+[2026-06-02 07:46:49]   Photo 76371: no medium_url or large_url, skipping
+[2026-06-02 07:46:49]   Photo 76372: no medium_url or large_url, skipping
+[2026-06-02 07:46:49]   Photo 76373: no medium_url or large_url, skipping
+[2026-06-02 07:46:50]   Batch 5 committed.
+[2026-06-02 07:46:50] Processing batch 6 (25 photos)...
+[2026-06-02 07:46:54]   Batch 6 committed.
+[2026-06-02 07:46:54] Processing batch 7 (25 photos)...
+[2026-06-02 07:46:58]   Batch 7 committed.
+[2026-06-02 07:46:59] Processing batch 8 (25 photos)...
+[2026-06-02 07:47:03]   Batch 8 committed.
+[2026-06-02 07:47:03] Processing batch 9 (25 photos)...
+[2026-06-02 07:47:07]   Batch 9 committed.
+[2026-06-02 07:47:07] Processing batch 10 (25 photos)...
+[2026-06-02 07:47:11]   Batch 10 committed.
+[2026-06-02 07:47:12] Processing batch 11 (25 photos)...
+[2026-06-02 07:47:15]   Batch 11 committed.
+[2026-06-02 07:47:16] Processing batch 12 (25 photos)...
+[2026-06-02 07:47:20]   Batch 12 committed.
+[2026-06-02 07:47:20] Processing batch 13 (25 photos)...
+[2026-06-02 07:47:24]   Batch 13 committed.
+[2026-06-02 07:47:24] Processing batch 14 (25 photos)...
+[2026-06-02 07:47:28]   Batch 14 committed.
+[2026-06-02 07:47:29] Processing batch 15 (25 photos)...
+[2026-06-02 07:47:33]   Batch 15 committed.
+[2026-06-02 07:47:33] Processing batch 16 (25 photos)...
+[2026-06-02 07:47:37]   Batch 16 committed.
+[2026-06-02 07:47:37] Processing batch 17 (25 photos)...
+[2026-06-02 07:47:41]   Batch 17 committed.
+[2026-06-02 07:47:42] Processing batch 18 (25 photos)...
+[2026-06-02 07:47:45]   Batch 18 committed.
+[2026-06-02 07:47:46] Processing batch 19 (25 photos)...
+[2026-06-02 07:47:50]   Batch 19 committed.
+[2026-06-02 07:47:50] Processing batch 20 (25 photos)...
+[2026-06-02 07:47:54]   Batch 20 committed.
+[2026-06-02 07:47:55] Processing batch 21 (25 photos)...
+[2026-06-02 07:47:58]   Batch 21 committed.
+[2026-06-02 07:47:59] Processing batch 22 (25 photos)...
+[2026-06-02 07:48:03]   Batch 22 committed.
+[2026-06-02 07:48:03] Processing batch 23 (25 photos)...
+[2026-06-02 07:48:07]   Batch 23 committed.
+[2026-06-02 07:48:07] Processing batch 24 (25 photos)...
+[2026-06-02 07:48:11]   Batch 24 committed.
+[2026-06-02 07:48:12] Processing batch 25 (25 photos)...
+[2026-06-02 07:48:16]   Batch 25 committed.
+[2026-06-02 07:48:16] Processing batch 26 (25 photos)...
+[2026-06-02 07:48:20]   Batch 26 committed.
+[2026-06-02 07:48:20] Processing batch 27 (25 photos)...
+[2026-06-02 07:48:24]   Batch 27 committed.
+[2026-06-02 07:48:25] Processing batch 28 (25 photos)...
+[2026-06-02 07:48:28]   Batch 28 committed.
+[2026-06-02 07:48:29] Processing batch 29 (25 photos)...
+[2026-06-02 07:48:33]   Batch 29 committed.
+[2026-06-02 07:48:33] Processing batch 30 (25 photos)...
+[2026-06-02 07:48:37]   Batch 30 committed.
+[2026-06-02 07:48:38] Processing batch 31 (25 photos)...
+[2026-06-02 07:48:41]   Batch 31 committed.
+[2026-06-02 07:48:42] Processing batch 32 (25 photos)...
+[2026-06-02 07:48:46]   Batch 32 committed.
+[2026-06-02 07:48:46] Processing batch 33 (25 photos)...
+[2026-06-02 07:48:50]   Batch 33 committed.
+[2026-06-02 07:48:50] Processing batch 34 (25 photos)...
+[2026-06-02 07:48:54]   Batch 34 committed.
+[2026-06-02 07:48:55] Processing batch 35 (25 photos)...
+[2026-06-02 07:48:59]   Batch 35 committed.
+[2026-06-02 07:48:59] Processing batch 36 (25 photos)...
+[2026-06-02 07:49:03]   Batch 36 committed.
+[2026-06-02 07:49:03] Processing batch 37 (25 photos)...
+[2026-06-02 07:49:07]   Batch 37 committed.
+[2026-06-02 07:49:08] Processing batch 38 (25 photos)...
+[2026-06-02 07:49:12]   Batch 38 committed.
+[2026-06-02 07:49:12] Processing batch 39 (25 photos)...
+[2026-06-02 07:49:16]   Batch 39 committed.
+[2026-06-02 07:49:16] Processing batch 40 (25 photos)...
+[2026-06-02 07:49:20]   Batch 40 committed.
+[2026-06-02 07:49:21] Processing batch 41 (25 photos)...
+[2026-06-02 07:49:24]   Batch 41 committed.
+[2026-06-02 07:49:25] Processing batch 42 (25 photos)...
+[2026-06-02 07:49:29]   Batch 42 committed.
+[2026-06-02 07:49:29] Processing batch 43 (25 photos)...
+[2026-06-02 07:49:33]   Batch 43 committed.
+[2026-06-02 07:49:34] Processing batch 44 (25 photos)...
+[2026-06-02 07:49:37]   Batch 44 committed.
+[2026-06-02 07:49:38] Processing batch 45 (25 photos)...
+[2026-06-02 07:49:41]   Batch 45 committed.
+[2026-06-02 07:49:42] Processing batch 46 (25 photos)...
+[2026-06-02 07:49:46]   Batch 46 committed.
+[2026-06-02 07:49:46] Processing batch 47 (25 photos)...
+[2026-06-02 07:49:50]   Batch 47 committed.
+[2026-06-02 07:49:50] Processing batch 48 (25 photos)...
+[2026-06-02 07:49:54]   Batch 48 committed.
+[2026-06-02 07:49:55] Processing batch 49 (25 photos)...
+[2026-06-02 07:49:59]   Batch 49 committed.
+[2026-06-02 07:49:59] Processing batch 50 (25 photos)...
+[2026-06-02 07:50:03]   Batch 50 committed.
+[2026-06-02 07:50:03] Processing batch 51 (25 photos)...
+[2026-06-02 07:50:07]   Batch 51 committed.
+[2026-06-02 07:50:08] Processing batch 52 (25 photos)...
+[2026-06-02 07:50:11]   Batch 52 committed.
+[2026-06-02 07:50:12] Processing batch 53 (25 photos)...
+[2026-06-02 07:50:16]   Batch 53 committed.
+[2026-06-02 07:50:16] Processing batch 54 (25 photos)...
+[2026-06-02 07:50:20]   Batch 54 committed.
+[2026-06-02 07:50:20] Processing batch 55 (25 photos)...
+[2026-06-02 07:50:24]   Batch 55 committed.
+[2026-06-02 07:50:25] Processing batch 56 (25 photos)...
+[2026-06-02 07:50:28]   Batch 56 committed.
+[2026-06-02 07:50:29] Processing batch 57 (25 photos)...
+[2026-06-02 07:50:33]   Batch 57 committed.
+[2026-06-02 07:50:33] Processing batch 58 (25 photos)...
+[2026-06-02 07:50:37]   Batch 58 committed.
+[2026-06-02 07:50:37] Processing batch 59 (25 photos)...
+[2026-06-02 07:50:41]   Batch 59 committed.
+[2026-06-02 07:50:42] Processing batch 60 (18 photos)...
+[2026-06-02 07:50:44]   Batch 60 committed.
+[2026-06-02 07:50:45] 
 === PHASE 3 RESULTS ===
-[2026-05-05 20:17:23] Total photos updated: 562
-[2026-05-05 20:17:23]   - seo_title populated: 562
-[2026-05-05 20:17:23]   - og_image_url populated: 562
-[2026-05-05 20:17:23] Errors: 0
-[2026-05-05 20:17:23] 
+[2026-06-02 07:50:45] Total photos updated: 1370
+[2026-06-02 07:50:45]   - seo_title populated: 1370
+[2026-06-02 07:50:45]   - og_image_url populated: 1370
+[2026-06-02 07:50:45] Errors: 123
+[2026-06-02 07:50:45]   ERROR DETAIL: photo_id=76201: no media URLs
+[2026-06-02 07:50:45]   ERROR DETAIL: photo_id=76202: no media URLs
+[2026-06-02 07:50:45]   ERROR DETAIL: photo_id=76203: no media URLs
+[2026-06-02 07:50:45]   ERROR DETAIL: photo_id=76204: no media URLs
+[2026-06-02 07:50:45]   ERROR DETAIL: photo_id=76205: no media URLs
+[2026-06-02 07:50:45]   ERROR DETAIL: photo_id=76206: no media URLs
+[2026-06-02 07:50:45]   ERROR DETAIL: photo_id=76207: no media URLs
+[2026-06-02 07:50:45]   ERROR DETAIL: photo_id=76208: no media URLs
+[2026-06-02 07:50:45]   ERROR DETAIL: photo_id=76209: no media URLs
+[2026-06-02 07:50:45]   ERROR DETAIL: photo_id=76210: no media URLs
+[2026-06-02 07:50:45]   ERROR DETAIL: photo_id=76211: no media URLs
+[2026-06-02 07:50:45]   ERROR DETAIL: photo_id=76212: no media URLs
+[2026-06-02 07:50:45]   ERROR DETAIL: photo_id=76213: no media URLs
+[2026-06-02 07:50:45]   ERROR DETAIL: photo_id=76214: no media URLs
+[2026-06-02 07:50:45]   ERROR DETAIL: photo_id=76215: no media URLs
+[2026-06-02 07:50:45]   ERROR DETAIL: photo_id=76216: no media URLs
+[2026-06-02 07:50:45]   ERROR DETAIL: photo_id=76219: no media URLs
+[2026-06-02 07:50:45]   ERROR DETAIL: photo_id=76220: no media URLs
+[2026-06-02 07:50:45]   ERROR DETAIL: photo_id=76221: no media URLs
+[2026-06-02 07:50:45]   ERROR DETAIL: photo_id=76222: no media URLs
+[2026-06-02 07:50:45] 
 === SAMPLE SEO OUTPUTS (first 5) ===
-[2026-05-05 20:17:23]   photo_id=45212 | seo_title=Butterfly Photograph - IMG_4838 | og=https://images.wildphotography.com/derivatives/butterflies/butterflies-img_4838-1_600.jpg
-[2026-05-05 20:17:23]   photo_id=45213 | seo_title=Butterfly Photograph - IMG_6675 | og=https://images.wildphotography.com/derivatives/butterflies/butterflies-img_6675-1_600.jpg
-[2026-05-05 20:17:23]   photo_id=45214 | seo_title=20131014_125311.jpg | og=https://pub-3ec62f93675c404fe4a9a4949e38e5e5.wildphotography.com/photos/beaches/20131014_125311_medium.jpg
-[2026-05-05 20:17:23]   photo_id=45215 | seo_title=2016-12-29 12.25.35.jpg | og=https://pub-3ec62f93675c404fe4a9a4949e38e5e5.wildphotography.com/photos/beaches/2016-12-29-12.25.35_medium.jpg
-[2026-05-05 20:17:23]   photo_id=45216 | seo_title=2018-03-28 09.05.11.jpg | og=https://pub-3ec62f93675c404fe4a9a4949e38e5e5.wildphotography.com/photos/beaches/2018-03-28-09.05.11_medium.jpg
+[2026-06-02 07:50:45]   photo_id=76374 | seo_title=2021 10 10 14.39.13 | og=https://cdn.wildphotography.com/derivatives/76374/medium.webp
+[2026-06-02 07:50:45]   photo_id=76375 | seo_title=2022 04 14 21.27.29 | og=https://cdn.wildphotography.com/derivatives/76375/medium.webp
+[2026-06-02 07:50:45]   photo_id=76376 | seo_title=2022 05 14 12.12.51 | og=https://cdn.wildphotography.com/derivatives/76376/medium.webp
+[2026-06-02 07:50:45]   photo_id=76377 | seo_title=2022 09 02 19.42.34 | og=https://cdn.wildphotography.com/derivatives/76377/medium.webp
+[2026-06-02 07:50:45]   photo_id=76378 | seo_title=2022 09 04 05.24.55 | og=https://cdn.wildphotography.com/derivatives/76378/medium.webp

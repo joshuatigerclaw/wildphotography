@@ -9,7 +9,8 @@ import {
   getAllArticles,
 } from '@/lib/db';
 
-export const dynamic = 'force-dynamic';
+// Revalidate every 15 minutes — eliminates ~6 Neon calls per second of traffic
+export const revalidate = 900;
 
 const SITE_URL = 'https://wildphotography.com';
 

@@ -245,6 +245,20 @@ async function main() {
   const start = Date.now();
   const recordedAt = new Date().toISOString();
 
+  // ── Advisory lock: prevent overlapping runs ──────────────────
+  const ADVISORY_LOCK_KEY = 12341;
+  try {
+    const lockResult = await sql`SELECT pg_try_advisory_lock(${ADVISORY_LOCK_KEY}) AS acquired`;
+    if (!lockResult[0]?.acquired) {
+      console.log('⚠️  Could not acquire advisory lock — another instance is running. Exiting.');
+      process.exit(0);
+    }
+    console.log('🔒 Advisory lock acquired');
+  } catch (e) {
+    console.warn('⚠️  Advisory lock check failed (continuing anyway):', e.message);
+  }
+
+
   try {
     const [inventory, endpoints, lastMetrics] = await Promise.all([
       checkInventory(),

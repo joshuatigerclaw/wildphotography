@@ -9,6 +9,7 @@ const typesense = new Client({
     protocol: 'https',
   }],
   apiKey: process.env.TYPESENSE_SEARCH_KEY || 'Hhg7V2CK3DsS94nZwgEkRzikLnEYiizE',
+  additionalHeaders: { 'Accept-Encoding': 'gzip' },
 });
 
 const COLLECTION = 'photos';
@@ -45,10 +46,10 @@ export async function GET(request: NextRequest) {
   const query = searchParams.get('q') || '*';
   const page = parseInt(searchParams.get('page') || '1', 10);
   let perPage = parseInt(searchParams.get('per_page') || searchParams.get('limit') || '50', 10);
-  
+
   // Cap response size — prevent abuse
-  perPage = Math.min(perPage, 50);
-  
+  perPage = Math.min(perPage, 30);
+
   const ua = request.headers.get('user-agent') || '';
   const botScore = getBotScore(ua);
   const ip = request.headers.get('cf-connecting-ip') || request.headers.get('x-forwarded-for') || 'unknown';
@@ -74,7 +75,7 @@ export async function GET(request: NextRequest) {
     });
     return NextResponse.json({ error: 'Rate limited' }, { status: 429, headers: { 'Cache-Control': 'no-store' } });
   }
-  
+
   // Bot score 3-5 — downgrade and log
   if (botScore >= 3) {
     perPage = Math.min(perPage, 10);
@@ -95,7 +96,7 @@ export async function GET(request: NextRequest) {
       metadata: { perPage },
     });
   }
-  
+
   const filters: string[] = [];
   const gallery = searchParams.get('gallery');
   const location = searchParams.get('location');
@@ -111,12 +112,12 @@ export async function GET(request: NextRequest) {
       .documents()
       .search({
         q: query === '*' || !query ? '*' : query,
-        query_by: 'title,keywords,location_name,species_common_name',
+        query_by: 'title,keywords,location_name,species',
         filter_by: filterBy,
-        sort_by: 'date_taken:desc',
+        sort_by: 'search_ready:desc',
         page,
         per_page: perPage,
-        include_fields: 'id,slug,title,thumb_url,small_url,medium_url,large_url,keywords,gallery_slug,location_name,date_taken',
+        include_fields: 'id,slug,title,location_name,thumb_url,gallery_slug,search_ready,keywords',
       });
 
     const response = {
@@ -125,13 +126,9 @@ export async function GET(request: NextRequest) {
         slug: hit.document.slug,
         title: hit.document.title,
         thumbUrl: hit.document.thumb_url,
-        smallUrl: hit.document.small_url,
-        mediumUrl: hit.document.medium_url,
-        largeUrl: hit.document.large_url,
-        keywords: hit.document.keywords,
         locationName: hit.document.location_name,
         gallery: hit.document.gallery_slug,
-        takenYear: hit.document.date_taken ? Math.floor(hit.document.date_taken / 10000000000) : null,
+        searchReady: hit.document.search_ready,
       })),
       total: searchResult.found || 0,
       page: searchResult.page || page,
@@ -164,7 +161,7 @@ export async function GET(request: NextRequest) {
     });
     console.error('Search API error:', error);
     return NextResponse.json(
-      { error: 'Search failed', message: error instanceof Error ? error.message : 'Unknown error' },
+      { error: 'Search is temporarily unavailable', message: error instanceof Error ? error.message : 'Unknown error' },
       { status: 500 }
     );
   }

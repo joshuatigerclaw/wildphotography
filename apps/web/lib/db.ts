@@ -427,6 +427,18 @@ export async function getAllPhotos(limit = 20): Promise<Photo[]> {
  * Get random photos
  */
 export async function getRandomPhotos(limit = 12): Promise<Photo[]> {
+  // Use a deterministic daily-offset approach instead of RANDOM() to avoid full table scan.
+  // The offset is derived from the current date and changes daily.
+  // This is safe because the homepage is ISR cached (revalidate=900).
+  const today = new Date().toISOString().slice(0, 10); // YYYY-MM-DD
+  // FNV-like hash to get a stable positive integer from the date string
+  let h = 2166136261;
+  for (let i = 0; i < today.length; i++) {
+    h ^= today.charCodeAt(i);
+    h = (h * 16777619) >>> 0;
+  }
+  const offset = h % 5000; // wrap to a manageable range
+
   const result = await sql(`
     SELECT p.id, p.slug, p.title, p.description, p.description_long, p.keywords,
            p.width, p.height, p.camera_make, p.camera_model, p.lens,
@@ -434,13 +446,14 @@ export async function getRandomPhotos(limit = 12): Promise<Photo[]> {
            p.lat, p.lon, p.views_count, p.date_taken, p.date_uploaded,
            p.thumb_url, p.small_url, p.medium_url, p.large_url, p.location
     FROM photos p
-    WHERE p.is_active = true 
+    WHERE p.is_active = true
       AND p.ready_for_public_render = true
       AND (p.thumb_url IS NOT NULL OR p.small_url IS NOT NULL OR p.medium_url IS NOT NULL OR p.large_url IS NOT NULL)
-    ORDER BY RANDOM()
+    ORDER BY p.id DESC
+    OFFSET ${offset}
     LIMIT $1
   `, [limit]);
-  
+
   return (result as any[]).map(mapPhoto);
 }
 

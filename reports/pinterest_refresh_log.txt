@@ -1,0 +1,107 @@
+[2026-05-28 19:10:48] === Pinterest Cookie Refresh Started ===
+[2026-05-28 19:12:42] === Pinterest Cookie Refresh Started ===
+[2026-05-29T01:14:08.012Z] === Pinterest Cookie Refresh (Node.js) Started ===
+[2026-05-29T01:14:08.778Z] ERROR: Failed to open browser: browserType.launchPersistentContext: Target page, context or browser has been closed
+Browser logs:
+
+<launching> /Users/joshuatenbrink/Library/Caches/ms-playwright/chromium-1208/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,BoundaryEventDispatchTracksNodeRemoval,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,Translate,AutoDeElevate,RenderDocument,OptimizationHints --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --enable-automation --disable-infobars --disable-search-engine-choice-screen --disable-sync --no-sandbox --no-sandbox --disable-setuid-sandbox --user-data-dir=/Users/joshuatenbrink/Downloads/.pinterest-profile --remote-debugging-pipe about:blank
+<launched> pid=90494
+[pid=90494][err] [0528/191408.569448:WARNING:third_party/crashpad/crashpad/util/process/process_memory_mac.cc:94] mach_vm_read(0x16d8c0000, 0x8000): (os/kern) invalid address (1)
+Call log:
+  - <launching> /Users/joshuatenbrink/Library/Caches/ms-playwright/chromium-1208/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,BoundaryEventDispatchTracksNodeRemoval,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,Translate,AutoDeElevate,RenderDocument,OptimizationHints --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --enable-automation --disable-infobars --disable-search-engine-choice-screen --disable-sync --no-sandbox --no-sandbox --disable-setuid-sandbox --user-data-dir=/Users/joshuatenbrink/Downloads/.pinterest-profile --remote-debugging-pipe about:blank
+  - <launched> pid=90494
+  - [pid=90494][err] [0528/191408.569448:WARNING:third_party/crashpad/crashpad/util/process/process_memory_mac.cc:94] mach_vm_read(0x16d8c0000, 0x8000): (os/kern) invalid address (1)
+  - [pid=90494] <gracefully close start>
+  - [pid=90494] <kill>
+  - [pid=90494] <will force kill>
+  - [pid=90494] exception while trying to kill process: Error: kill EPERM
+  - [pid=90494] <process did exit: exitCode=null, signal=SIGTRAP>
+  - [pid=90494] starting temporary directories cleanup
+  - [pid=90494] finished temporary directories cleanup
+  - [pid=90494] <gracefully close end>
+
+[2026-05-29T01:14:53.832Z] === Pinterest Cookie Refresh (Node.js) Started ===
+[2026-05-29T01:14:54.753Z] ERROR: Failed to open browser: browserType.launchPersistentContext: Target page, context or browser has been closed
+Browser logs:
+
+<launching> /Users/joshuatenbrink/Library/Caches/ms-playwright/chromium-1208/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,BoundaryEventDispatchTracksNodeRemoval,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,Translate,AutoDeElevate,RenderDocument,OptimizationHints --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --enable-automation --disable-infobars --disable-search-engine-choice-screen --disable-sync --no-sandbox --no-sandbox --disable-setuid-sandbox --user-data-dir=/Users/joshuatenbrink/Downloads/.pinterest-profile --remote-debugging-pipe about:blank
+<launched> pid=90708
+[pid=90708][err] [0528/191454.519530:WARNING:third_party/crashpad/crashpad/util/process/process_memory_mac.cc:94] mach_vm_read(0x16eec0000, 0x8000): (os/kern) invalid address (1)
+Call log:
+  - <launching> /Users/joshuatenbrink/Library/Caches/ms-playwright/chromium-1208/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,BoundaryEventDispatchTracksNodeRemoval,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,Translate,AutoDeElevate,RenderDocument,OptimizationHints --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --enable-automation --disable-infobars --disable-search-engine-choice-screen --disable-sync --no-sandbox --no-sandbox --disable-setuid-sandbox --user-data-dir=/Users/joshuatenbrink/Downloads/.pinterest-profile --remote-debugging-pipe about:blank
+  - <launched> pid=90708
+  - [pid=90708][err] [0528/191454.519530:WARNING:third_party/crashpad/crashpad/util/process/process_memory_mac.cc:94] mach_vm_read(0x16eec0000, 0x8000): (os/kern) invalid address (1)
+  - [pid=90708] <gracefully close start>
+  - [pid=90708] <kill>
+  - [pid=90708] <will force kill>
+  - [pid=90708] exception while trying to kill process: Error: kill ESRCH
+  - [pid=90708] <process did exit: exitCode=null, signal=SIGTRAP>
+  - [pid=90708] starting temporary directories cleanup
+  - [pid=90708] finished temporary directories cleanup
+  - [pid=90708] <gracefully close end>
+
+[2026-05-29T01:15:33.349Z] === Pinterest Cookie Refresh (Node.js) Started ===
+[2026-05-29T01:15:34.058Z] ERROR: Failed to open browser: browserType.launchPersistentContext: Target page, context or browser has been closed
+Browser logs:
+
+<launching> /Users/joshuatenbrink/Library/Caches/ms-playwright/chromium-1208/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,BoundaryEventDispatchTracksNodeRemoval,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,Translate,AutoDeElevate,RenderDocument,OptimizationHints --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --enable-automation --disable-infobars --disable-search-engine-choice-screen --disable-sync --no-sandbox --no-sandbox --disable-setuid-sandbox --disable-dev-shm-usage --disable-gpu --no-first-run --no-service-autorun --disable-extensions --disable-background-networking --disable-sync --disable-translate --user-data-dir=/Users/joshuatenbrink/Downloads/.pinterest-profile --remote-debugging-pipe about:blank
+<launched> pid=90855
+Call log:
+  - <launching> /Users/joshuatenbrink/Library/Caches/ms-playwright/chromium-1208/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,BoundaryEventDispatchTracksNodeRemoval,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,Translate,AutoDeElevate,RenderDocument,OptimizationHints --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --enable-automation --disable-infobars --disable-search-engine-choice-screen --disable-sync --no-sandbox --no-sandbox --disable-setuid-sandbox --disable-dev-shm-usage --disable-gpu --no-first-run --no-service-autorun --disable-extensions --disable-background-networking --disable-sync --disable-translate --user-data-dir=/Users/joshuatenbrink/Downloads/.pinterest-profile --remote-debugging-pipe about:blank
+  - <launched> pid=90855
+  - [pid=90855] <gracefully close start>
+  - [pid=90855] <kill>
+  - [pid=90855] <will force kill>
+  - [pid=90855] exception while trying to kill process: Error: kill ESRCH
+  - [pid=90855] <process did exit: exitCode=null, signal=SIGTRAP>
+  - [pid=90855] starting temporary directories cleanup
+  - [pid=90855] finished temporary directories cleanup
+  - [pid=90855] <gracefully close end>
+
+[2026-05-29T01:19:26.063Z] === Pinterest Cookie Refresh via CDP Started ===
+[2026-05-29T01:19:26.785Z] Connected to Chrome at http://localhost:18800
+[2026-05-29T01:19:32.512Z] Loaded Pinterest
+[2026-05-29T01:19:32.520Z] Total cookies in browser context: 162
+[2026-05-29T01:19:32.521Z] Pinterest cookies: 14
+[2026-05-29T01:19:32.521Z] Auth cookies found: 5
+[2026-05-29T01:19:32.521Z]   csrftoken: expires=2027-03-24T00:54:50.090Z httpOnly=false
+[2026-05-29T01:19:32.521Z]   csrftoken: expires=2027-05-08T16:37:14.384Z httpOnly=false
+[2026-05-29T01:19:32.521Z]   csrftoken: expires=session httpOnly=false
+[2026-05-29T01:19:32.521Z]   _auth: expires=2027-05-24T00:02:49.158Z httpOnly=true
+[2026-05-29T01:19:32.521Z]   _pinterest_sess: expires=2027-05-24T00:02:49.158Z httpOnly=true
+[2026-05-29T01:19:32.521Z] Session appears valid
+[2026-05-29T01:19:32.522Z] Saved 14 Pinterest cookies to /Users/joshuatenbrink/.openclaw/workspace/pinterest_cookies.json
+[2026-05-29T01:19:32.538Z] === Done ===
+[2026-05-29T05:07:31.760Z] === Pinterest Cookie Refresh (Node.js) Started ===
+[2026-05-29T05:07:34.289Z] ERROR: Failed to open browser: browserType.launchPersistentContext: Target page, context or browser has been closed
+Browser logs:
+
+<launching> /Users/joshuatenbrink/Library/Caches/ms-playwright/chromium-1208/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,BoundaryEventDispatchTracksNodeRemoval,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,Translate,AutoDeElevate,RenderDocument,OptimizationHints --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --enable-automation --disable-infobars --disable-search-engine-choice-screen --disable-sync --no-sandbox --no-sandbox --disable-setuid-sandbox --disable-dev-shm-usage --disable-gpu --no-first-run --no-service-autorun --disable-extensions --disable-background-networking --disable-sync --disable-translate --user-data-dir=/Users/joshuatenbrink/Downloads/.pinterest-profile --remote-debugging-pipe about:blank
+<launched> pid=79695
+[pid=79695][err] [79716:2048247:0528/230734.283783:ERROR:base/memory/shared_memory_switch.cc:273] Mach rendezvous failed, terminating process (parent died?)
+[pid=79695][err] [79713:2048220:0528/230734.283789:ERROR:base/memory/shared_memory_switch.cc:273] Mach rendezvous failed, terminating process (parent died?)
+[pid=79695][err] [79717:2048248:0528/230734.283912:ERROR:base/memory/shared_memory_switch.cc:273] Mach rendezvous failed, terminating process (parent died?)
+Call log:
+  - <launching> /Users/joshuatenbrink/Library/Caches/ms-playwright/chromium-1208/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,BoundaryEventDispatchTracksNodeRemoval,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,Translate,AutoDeElevate,RenderDocument,OptimizationHints --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --enable-automation --disable-infobars --disable-search-engine-choice-screen --disable-sync --no-sandbox --no-sandbox --disable-setuid-sandbox --disable-dev-shm-usage --disable-gpu --no-first-run --no-service-autorun --disable-extensions --disable-background-networking --disable-sync --disable-translate --user-data-dir=/Users/joshuatenbrink/Downloads/.pinterest-profile --remote-debugging-pipe about:blank
+  - <launched> pid=79695
+  - [pid=79695][err] [79716:2048247:0528/230734.283783:ERROR:base/memory/shared_memory_switch.cc:273] Mach rendezvous failed, terminating process (parent died?)
+  - [pid=79695][err] [79713:2048220:0528/230734.283789:ERROR:base/memory/shared_memory_switch.cc:273] Mach rendezvous failed, terminating process (parent died?)
+  - [pid=79695][err] [79717:2048248:0528/230734.283912:ERROR:base/memory/shared_memory_switch.cc:273] Mach rendezvous failed, terminating process (parent died?)
+  - [pid=79695] <gracefully close start>
+  - [pid=79695] <kill>
+  - [pid=79695] <will force kill>
+  - [pid=79695] exception while trying to kill process: Error: kill ESRCH
+  - [pid=79695] <process did exit: exitCode=null, signal=SIGTRAP>
+  - [pid=79695] starting temporary directories cleanup
+  - [pid=79695] finished temporary directories cleanup
+  - [pid=79695] <gracefully close end>
+
+[2026-06-01T22:07:17.809Z] === Pinterest Cookie Refresh (Node.js) Started ===
+[2026-06-01T22:07:18.521Z] Opening Pinterest...
+[2026-06-01T22:07:22.459Z] Appears to be logged in
+[2026-06-01T22:07:22.460Z] Current cookie count: 6
+[2026-06-01T22:07:22.460Z] Auth cookies found: 2
+[2026-06-01T22:07:22.460Z]   csrftoken: expires=1811011576.651588
+[2026-06-01T22:07:22.460Z]   _pinterest_sess: expires=1810579576.651638
+[2026-06-01T22:07:22.461Z] Saved 6 cookies to /Users/joshuatenbrink/.openclaw/workspace/pinterest_cookies.json
+[2026-06-01T22:07:22.637Z] === Done ===

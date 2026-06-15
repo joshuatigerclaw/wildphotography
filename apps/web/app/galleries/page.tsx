@@ -3,7 +3,8 @@ import { Metadata } from 'next';
 import { getGalleries } from '@/lib/db';
 import { canonicalUrl } from '@/lib/seo';
 
-export const dynamic = 'force-dynamic';
+// ISR — revalidate every 60s instead of hitting Neon on every request
+export const revalidate = 60;
 
 const SITE_URL = 'https://wildphotography.com';
 
@@ -58,6 +59,7 @@ export default async function GalleriesPage() {
             <Link
               key={gallery.id}
               href={`/gallery/${gallery.slug}`}
+              className="gallery-card-link"
               style={{display:'block',textDecoration:'none'}}
             >
               <div style={{aspectRatio:'1/1',background:'var(--bg-inset)',borderRadius:'var(--r-md)',overflow:'hidden',marginBottom:'12px',border:'1px solid var(--rule)'}}>
@@ -67,8 +69,7 @@ export default async function GalleriesPage() {
                     alt={gallery.name}
                     style={{width:'100%',height:'100%',objectFit:'cover',display:'block',transition:'transform var(--t-med)'}}
                     loading="lazy"
-                    onMouseEnter={(e) => { (e.currentTarget as HTMLImageElement).style.transform = 'scale(1.04)'; }}
-                    onMouseLeave={(e) => { (e.currentTarget as HTMLImageElement).style.transform = 'scale(1)'; }}
+                    className="gallery-cover-img"
                   />
                 ) : (
                   <div style={{width:'100%',height:'100%',display:'flex',alignItems:'center',justifyContent:'center',color:'var(--ink-dim)',fontSize:'32px'}}>📷</div>

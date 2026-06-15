@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { Metadata } from 'next';
 import { getAllSpecies } from '@/lib/db';
+import { HoverableLink } from '@/components/HoverableLink';
 
 export const dynamic = 'force-dynamic';
 
@@ -66,9 +67,8 @@ export default async function SpeciesPage() {
               <a
                 key={letter}
                 href={`#letter-${letter}`}
-                style={{display:'flex',alignItems:'center',justifyContent:'center',width:'34px',height:'34px',borderRadius:'50%',border:'1px solid var(--rule)',fontFamily:'var(--font-mono)',fontSize:'13px',fontWeight:500,color:'var(--ink-muted)',textDecoration:'none',transition:'border-color var(--t-fast), color var(--t-fast)'}}
-                onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.borderColor = 'var(--accent)'; (e.currentTarget as HTMLAnchorElement).style.color = 'var(--accent)'; }}
-                onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.borderColor = 'var(--rule)'; (e.currentTarget as HTMLAnchorElement).style.color = 'var(--ink-muted)'; }}
+                className="letter-nav-link"
+                style={{display:'flex',alignItems:'center',justifyContent:'center',width:'34px',height:'34px',borderRadius:'50%',border:'1px solid var(--rule)',fontFamily:'var(--font-mono)',fontSize:'13px',fontWeight:500,color:'var(--ink-muted)',textDecoration:'none'}}
               >
                 {letter}
               </a>
@@ -89,6 +89,7 @@ export default async function SpeciesPage() {
                     <Link
                       key={`${s.name}-${s.scientificName || 'no-sci'}`}
                       href={`/species/${s.slug}`}
+                      className="species-card-link"
                       style={{display:'block',textDecoration:'none'}}
                     >
                       <div style={{aspectRatio:'1/1',background:'var(--bg-inset)',borderRadius:'var(--r-md)',overflow:'hidden',marginBottom:'10px',border:'1px solid var(--rule)'}}>
@@ -96,10 +97,9 @@ export default async function SpeciesPage() {
                           <img
                             src={s.sampleThumb}
                             alt={s.name}
-                            style={{width:'100%',height:'100%',objectFit:'cover',display:'block',transition:'transform var(--t-med)'}}
+                            className="species-card-img"
+                            style={{width:'100%',height:'100%',objectFit:'cover',display:'block'}}
                             loading="lazy"
-                            onMouseEnter={(e) => { (e.currentTarget as HTMLImageElement).style.transform = 'scale(1.05)'; }}
-                            onMouseLeave={(e) => { (e.currentTarget as HTMLImageElement).style.transform = 'scale(1)'; }}
                           />
                         ) : (
                           <div style={{width:'100%',height:'100%',display:'flex',alignItems:'center',justifyContent:'center',color:'var(--ink-dim)',fontSize:'28px'}}>🦜</div>

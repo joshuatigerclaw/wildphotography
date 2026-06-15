@@ -1,0 +1,1068 @@
+/bin/sh: node: command not found
+/bin/sh: node: command not found
+/bin/sh: node: command not found
+/bin/sh: node: command not found
+/bin/sh: node: command not found
+=== WildPhotography System Health Check ===
+
+Inventory:  TS=47409 / Neon eligible=47014 | Drift=0.84% ✅
+Derivatives: 18 missing / 400 | Fail%=5% ✅
+Search:     6/6 OK | ✅
+Endpoints:  2/3 OK | ⚠️
+Time:      11446ms
+
+Sample failing derivatives (for debug):
+  ID 61731: thumb=false small=false medium=false large=false
+  ID 42792: thumb=false small=false medium=false large=false
+  ID 51424: thumb=false small=false medium=false large=false
+  ID 51395: thumb=false small=false medium=false large=false
+  ID 52735: thumb=true small=true medium=false large=false
+
+❌ Alerts: ENDPOINT
+=== WildPhotography System Health Check ===
+
+Inventory:  TS=49881 / Neon eligible=46848 | Drift=6.474% ⚠️
+Derivatives: 22 missing / 400 | Fail%=7% ⚠️
+Search:     6/6 OK | ✅
+Endpoints:  2/3 OK | ⚠️
+Time:      13064ms
+
+Sample failing derivatives (for debug):
+  ID 37063: thumb=true small=false medium=false large=false
+  ID 46487: thumb=false small=false medium=false large=false
+  ID 27389: thumb=false small=false medium=false large=false
+  ID 15470: thumb=true small=true medium=false large=true
+  ID 51388: thumb=false small=false medium=false large=false
+
+❌ Alerts: DRIFT, DERIVATIVE, ENDPOINT
+=== WildPhotography System Health Check ===
+
+Inventory:  TS=49086 / Neon eligible=47521 | Drift=3.293% ✅
+Derivatives: 45 missing / 400 | Fail%=36% ⚠️
+Search:     6/6 OK | ✅
+Endpoints:  2/3 OK | ⚠️
+Time:      13717ms
+
+Sample failing derivatives (for debug):
+  ID 4665: thumb=false small=true medium=true large=true
+  ID 46155: thumb=false small=false medium=false large=false
+  ID 6058: thumb=false small=true medium=true large=true
+  ID 21499: thumb=false small=true medium=true large=true
+  ID 12896: thumb=false small=true medium=true large=true
+
+❌ Alerts: DERIVATIVE, ENDPOINT
+=== WildPhotography System Health Check ===
+
+Inventory:  TS=48010 / Neon eligible=48621 | Drift=1.257% ✅
+Derivatives: 26 missing / 400 | Fail%=9% ⚠️
+Search:     6/6 OK | ✅
+Endpoints:  2/3 OK | ⚠️
+Time:      11667ms
+
+Sample failing derivatives (for debug):
+  ID 61947: thumb=false small=false medium=false large=false
+  ID 62009: thumb=true small=true medium=false large=true
+  ID 62498: thumb=true small=true medium=false large=true
+  ID 54885: thumb=false small=true medium=true large=true
+  ID 42633: thumb=false small=false medium=false large=false
+
+❌ Alerts: DERIVATIVE, ENDPOINT
+=== WildPhotography System Health Check ===
+
+Inventory:  TS=49167 / Neon eligible=49982 | Drift=1.631% ✅
+Derivatives: 22 missing / 400 | Fail%=7% ⚠️
+Search:     6/6 OK | ✅
+Endpoints:  2/3 OK | ⚠️
+Time:      12932ms
+
+Sample failing derivatives (for debug):
+  ID 64624: thumb=false small=false medium=false large=false
+  ID 63551: thumb=false small=false medium=false large=false
+  ID 62272: thumb=false small=false medium=false large=false
+  ID 61658: thumb=false small=false medium=false large=false
+  ID 64605: thumb=false small=false medium=false large=false
+
+❌ Alerts: DERIVATIVE, ENDPOINT
+=== WildPhotography System Health Check ===
+
+Search drop: "scarlet macaw" 62% (1032→388)
+Search drop: "beach" 30% (7814→5453)
+Search drop: "volcano" 44% (895→502)
+Search drop: "monkey" 40% (124→74)
+Inventory:  TS=29690 / Neon eligible=34616 | Drift=14.23% ⚠️
+Derivatives: 41 missing / 400 | Fail%=14% ⚠️
+Search:     6/6 OK | ⚠️
+Endpoints:  2/3 OK | ⚠️
+Time:      10502ms
+
+Sample failing derivatives (for debug):
+  ID 42819: thumb=false small=false medium=false large=false
+  ID 62777: thumb=true small=false medium=false large=false
+  ID 62454: thumb=true small=false medium=false large=false
+  ID 61791: thumb=true small=false medium=false large=false
+  ID 46502: thumb=false small=false medium=false large=false
+
+❌ Alerts: DRIFT, DERIVATIVE, SEARCH_DROP, ENDPOINT
+=== WildPhotography System Health Check ===
+
+Inventory:  TS=31722 / Neon eligible=34704 | Drift=8.593% ⚠️
+Derivatives: 29 missing / 400 | Fail%=10% ⚠️
+Search:     6/6 OK | ✅
+Endpoints:  2/3 OK | ⚠️
+Time:      13885ms
+
+Sample failing derivatives (for debug):
+  ID 24609: thumb=true small=true medium=false large=true
+  ID 62506: thumb=true small=false medium=false large=false
+  ID 789: thumb=false small=false medium=false large=false
+  ID 63263: thumb=true small=false medium=false large=false
+  ID 63543: thumb=true small=false medium=false large=false
+
+❌ Alerts: DRIFT, DERIVATIVE, ENDPOINT
+=== WildPhotography System Health Check ===
+
+Inventory:  TS=35295 / Neon eligible=35171 | Drift=0.353% ✅
+Derivatives: 40 missing / 400 | Fail%=13% ⚠️
+Search:     6/6 OK | ✅
+Endpoints:  2/3 OK | ⚠️
+Time:      10972ms
+
+Sample failing derivatives (for debug):
+  ID 1029: thumb=false small=false medium=false large=false
+  ID 63463: thumb=true small=false medium=false large=false
+  ID 63880: thumb=true small=false medium=false large=false
+  ID 63300: thumb=true small=false medium=false large=false
+  ID 63667: thumb=true small=false medium=false large=false
+
+❌ Alerts: DERIVATIVE, ENDPOINT
+=== WildPhotography System Health Check ===
+
+Inventory:  TS=35611 / Neon eligible=35440 | Drift=0.483% ✅
+Derivatives: 43 missing / 400 | Fail%=15% ⚠️
+Search:     6/6 OK | ✅
+Endpoints:  2/3 OK | ⚠️
+Time:      11415ms
+
+Sample failing derivatives (for debug):
+  ID 51405: thumb=true small=false medium=false large=false
+  ID 64250: thumb=true small=false medium=false large=false
+  ID 46356: thumb=false small=false medium=false large=false
+  ID 63708: thumb=true small=false medium=false large=false
+  ID 64448: thumb=true small=false medium=false large=false
+
+❌ Alerts: DERIVATIVE, ENDPOINT
+=== WildPhotography System Health Check ===
+
+Inventory:  TS=36939 / Neon eligible=35093 | Drift=5.26% ⚠️
+Derivatives: 24 missing / 400 | Fail%=7% ⚠️
+Search:     6/6 OK | ✅
+Endpoints:  2/3 OK | ⚠️
+Time:      11433ms
+
+Sample failing derivatives (for debug):
+  ID 64246: thumb=true small=false medium=false large=false
+  ID 64184: thumb=true small=false medium=false large=false
+  ID 43448: thumb=false small=false medium=false large=false
+  ID 42931: thumb=false small=false medium=false large=false
+  ID 43461: thumb=false small=false medium=false large=false
+
+❌ Alerts: DRIFT, DERIVATIVE, ENDPOINT
+=== WildPhotography System Health Check ===
+
+Search drop: "sloth" 40% (5→3)
+Inventory:  TS=33821 / Neon eligible=43094 | Drift=21.518% ⚠️
+Derivatives: 139 missing / 400 | Fail%=99% ⚠️
+Search:     6/6 OK | ⚠️
+Endpoints:  2/3 OK | ⚠️
+Time:      12799ms
+
+Sample failing derivatives (for debug):
+  ID 7203: thumb=false small=false medium=false large=false
+  ID 17448: thumb=true small=false medium=true large=true
+  ID 23168: thumb=true small=false medium=true large=true
+  ID 16438: thumb=true small=false medium=true large=true
+  ID 62003: thumb=true small=false medium=true large=true
+
+❌ Alerts: DRIFT, DERIVATIVE, SEARCH_DROP, ENDPOINT
+=== WildPhotography System Health Check ===
+
+Inventory:  TS=38648 / Neon eligible=46338 | Drift=16.595% ⚠️
+Derivatives: 182 missing / 400 | Fail%=100% ⚠️
+Search:     6/6 OK | ✅
+Endpoints:  2/3 OK | ⚠️
+Time:      12658ms
+
+Sample failing derivatives (for debug):
+  ID 43155: thumb=true small=false medium=true large=true
+  ID 61257: thumb=true small=false medium=true large=true
+  ID 8443: thumb=true small=false medium=true large=true
+  ID 6518: thumb=true small=false medium=true large=true
+  ID 47847: thumb=true small=false medium=true large=true
+Health check exception: numeric field overflow
+=== WildPhotography System Health Check ===
+
+Inventory:  TS=51148 / Neon eligible=49866 | Drift=2.571% ✅
+Derivatives: 168 missing / 400 | Fail%=99% ⚠️
+Search:     6/6 OK | ✅
+Endpoints:  2/3 OK | ⚠️
+Time:      9401ms
+
+Sample failing derivatives (for debug):
+  ID 65410: thumb=true small=false medium=true large=true
+  ID 63990: thumb=true small=false medium=true large=true
+  ID 63676: thumb=true small=false medium=true large=true
+  ID 61918: thumb=true small=false medium=true large=true
+  ID 5572: thumb=true small=false medium=true large=true
+
+❌ Alerts: DERIVATIVE, ENDPOINT
+=== WildPhotography System Health Check ===
+
+Request #1780250411172: Request to Node 0 failed due to "ECONNABORTED timeout of 30000ms exceeded"
+Request #1780250411172: Sleeping for 0.1s and then retrying request...
+Request #1780250411175: Request to Node 0 failed due to "ECONNABORTED timeout of 30000ms exceeded"
+Request #1780250411175: Sleeping for 0.1s and then retrying request...
+Inventory:  TS=50632 / Neon eligible=49867 | Drift=1.534% ✅
+Derivatives: 361 missing / 400 | Fail%=100% ⚠️
+Search:     6/6 OK | ✅
+Endpoints:  0/3 OK | ⚠️
+Time:      42545ms
+
+Sample failing derivatives (for debug):
+  ID 1973: thumb=true small=false medium=true large=true
+  ID 4652: thumb=false small=false medium=false large=false
+  ID 69664: thumb=false small=false medium=false large=false
+  ID 45369: thumb=false small=false medium=false large=false
+  ID 68049: thumb=false small=false medium=false large=false
+Health check exception: numeric field overflow
+=== WildPhotography System Health Check ===
+
+Inventory:  TS=51446 / Neon eligible=52394 | Drift=1.809% ✅
+Derivatives: 186 missing / 400 | Fail%=100% ⚠️
+Search:     6/6 OK | ✅
+Endpoints:  2/3 OK | ⚠️
+Time:      8882ms
+
+Sample failing derivatives (for debug):
+  ID 69983: thumb=false small=false medium=false large=false
+  ID 61513: thumb=true small=false medium=true large=true
+  ID 30917: thumb=true small=false medium=true large=true
+  ID 42971: thumb=true small=false medium=true large=true
+  ID 44740: thumb=false small=false medium=false large=false
+Health check exception: numeric field overflow
+=== WildPhotography System Health Check ===
+
+Inventory:  TS=49670 / Neon eligible=60119 | Drift=17.381% ⚠️
+Derivatives: 243 missing / 400 | Fail%=97% ⚠️
+Search:     6/6 OK | ✅
+Endpoints:  2/3 OK | ⚠️
+Time:      12786ms
+
+Sample failing derivatives (for debug):
+  ID 72009: thumb=false small=false medium=false large=false
+  ID 45864: thumb=false small=false medium=false large=false
+  ID 46335: thumb=false small=false medium=false large=false
+  ID 69045: thumb=false small=false medium=false large=false
+  ID 24374: thumb=true small=false medium=true large=true
+
+❌ Alerts: DRIFT, DERIVATIVE, ENDPOINT
+=== WildPhotography System Health Check ===
+
+Inventory:  TS=60472 / Neon eligible=60426 | Drift=0.076% ✅
+Derivatives: 177 missing / 400 | Fail%=92% ⚠️
+Search:     6/6 OK | ✅
+Endpoints:  2/3 OK | ⚠️
+Time:      9731ms
+
+Sample failing derivatives (for debug):
+  ID 25993: thumb=true small=false medium=true large=true
+  ID 8153: thumb=true small=false medium=true large=true
+  ID 34304: thumb=false small=false medium=false large=false
+  ID 41053: thumb=true small=false medium=true large=true
+  ID 45177: thumb=true small=false medium=true large=true
+
+❌ Alerts: DERIVATIVE, ENDPOINT
+=== WildPhotography System Health Check ===
+
+Inventory:  TS=62497 / Neon eligible=60456 | Drift=3.376% ✅
+Derivatives: 152 missing / 400 | Fail%=82% ⚠️
+Search:     6/6 OK | ✅
+Endpoints:  2/3 OK | ⚠️
+Time:      10217ms
+
+Sample failing derivatives (for debug):
+  ID 19059: thumb=false small=false medium=false large=false
+  ID 9416: thumb=true small=false medium=true large=true
+  ID 62504: thumb=true small=false medium=true large=true
+  ID 51444: thumb=true small=false medium=true large=true
+  ID 43216: thumb=false small=false medium=false large=false
+
+❌ Alerts: DERIVATIVE, ENDPOINT
+=== WildPhotography System Health Check ===
+
+Inventory:  TS=51796 / Neon eligible=60433 | Drift=14.292% ⚠️
+Derivatives: 11 missing / 400 | Fail%=4% ✅
+Search:     6/6 OK | ✅
+Endpoints:  2/3 OK | ⚠️
+Time:      11517ms
+
+Sample failing derivatives (for debug):
+  ID 42335: thumb=true small=true medium=false large=false
+  ID 66370: thumb=true small=false medium=true large=true
+  ID 71908: thumb=false small=false medium=false large=false
+  ID 42804: thumb=false small=false medium=false large=false
+
+❌ Alerts: DRIFT, ENDPOINT
+=== WildPhotography System Health Check ===
+
+Inventory:  TS=61143 / Neon eligible=60443 | Drift=1.158% ✅
+Derivatives: 26 missing / 400 | Fail%=7% ⚠️
+Search:     6/6 OK | ✅
+Endpoints:  2/3 OK | ⚠️
+Time:      10898ms
+
+Sample failing derivatives (for debug):
+  ID 54992: thumb=false small=true medium=false large=false
+  ID 46522: thumb=false small=false medium=false large=false
+  ID 71758: thumb=false small=false medium=false large=false
+  ID 49273: thumb=false small=false medium=false large=false
+  ID 65312: thumb=false small=true medium=false large=false
+
+❌ Alerts: DERIVATIVE, ENDPOINT
+=== WildPhotography System Health Check ===
+
+Search drop: "sloth" 100% (4→0)
+Search drop: "scarlet macaw" 51% (1166→568)
+Search drop: "beach" 66% (10616→3652)
+Search drop: "volcano" 65% (1137→395)
+Search drop: "monkey" 74% (129→34)
+Inventory:  TS=16354 / Neon eligible=61667 | Drift=73.48% ⚠️
+Derivatives: 38 missing / 400 | Fail%=12% ⚠️
+Search:     6/6 OK | ⚠️
+Endpoints:  2/3 OK | ⚠️
+Time:      11734ms
+
+Sample failing derivatives (for debug):
+  ID 78713: thumb=false small=false medium=false large=false
+  ID 42846: thumb=false small=false medium=false large=false
+  ID 44643: thumb=false small=false medium=false large=false
+  ID 66860: thumb=true small=true medium=false large=false
+  ID 66619: thumb=true small=true medium=false large=false
+
+❌ Alerts: DRIFT, DERIVATIVE, SEARCH_DROP, ENDPOINT
+=== WildPhotography System Health Check ===
+
+Inventory:  TS=64504 / Neon eligible=62310 | Drift=3.521% ✅
+Derivatives: 24 missing / 400 | Fail%=7% ⚠️
+Search:     6/6 OK | ✅
+Endpoints:  2/3 OK | ⚠️
+Time:      10526ms
+
+Sample failing derivatives (for debug):
+  ID 81846: thumb=false small=false medium=false large=false
+  ID 52706: thumb=true small=false medium=false large=false
+  ID 80331: thumb=false small=false medium=false large=false
+  ID 62976: thumb=true small=true medium=false large=false
+  ID 49762: thumb=false small=false medium=false large=false
+
+❌ Alerts: DERIVATIVE, ENDPOINT
+=== WildPhotography System Health Check ===
+
+Inventory:  TS=24849 / Neon eligible=63717 | Drift=61.001% ⚠️
+Derivatives: 10 missing / 400 | Fail%=3% ✅
+Search:     0/6 OK | ✅
+Endpoints:  1/3 OK | ⚠️
+Time:      10684ms
+
+Sample failing derivatives (for debug):
+  ID 64763: thumb=false small=false medium=false large=false
+  ID 49804: thumb=false small=false medium=false large=false
+  ID 62207: thumb=true small=true medium=false large=false
+
+❌ Alerts: DRIFT, ENDPOINT
+=== WildPhotography System Health Check ===
+
+Inventory:  TS=60810 / Neon eligible=63881 | Drift=4.807% ✅
+Derivatives: 23 missing / 400 | Fail%=8% ⚠️
+Search:     0/6 OK | ✅
+Endpoints:  1/3 OK | ⚠️
+Time:      11346ms
+
+Sample failing derivatives (for debug):
+  ID 76346: thumb=true small=true medium=true large=false
+  ID 71780: thumb=false small=false medium=false large=false
+  ID 49152: thumb=false small=false medium=false large=false
+  ID 66086: thumb=true small=false medium=true large=true
+  ID 71985: thumb=false small=false medium=false large=false
+
+❌ Alerts: DERIVATIVE, ENDPOINT
+=== WildPhotography System Health Check ===
+
+Inventory:  TS=61223 / Neon eligible=64066 | Drift=4.438% ✅
+Derivatives: 36 missing / 400 | Fail%=12% ⚠️
+Search:     0/6 OK | ✅
+Endpoints:  1/3 OK | ⚠️
+Time:      11968ms
+
+Sample failing derivatives (for debug):
+  ID 46483: thumb=false small=false medium=false large=false
+  ID 78154: thumb=false small=false medium=false large=false
+  ID 44334: thumb=false small=false medium=false large=false
+  ID 64885: thumb=false small=false medium=false large=false
+  ID 66763: thumb=true small=true medium=false large=false
+
+❌ Alerts: DERIVATIVE, ENDPOINT
+=== WildPhotography System Health Check ===
+
+Inventory:  TS=55841 / Neon eligible=64493 | Drift=13.415% ⚠️
+Derivatives: 24 missing / 400 | Fail%=10% ⚠️
+Search:     0/6 OK | ✅
+Endpoints:  1/3 OK | ⚠️
+Time:      12579ms
+
+Sample failing derivatives (for debug):
+  ID 76365: thumb=true small=true medium=true large=false
+  ID 25354: thumb=true small=false medium=false large=false
+  ID 76203: thumb=true small=false medium=false large=false
+  ID 43145: thumb=false small=false medium=false large=false
+  ID 78770: thumb=false small=false medium=false large=false
+
+❌ Alerts: DRIFT, DERIVATIVE, ENDPOINT
+=== WildPhotography System Health Check ===
+
+Inventory:  TS=55841 / Neon eligible=65145 | Drift=14.282% ⚠️
+Derivatives: 38 missing / 400 | Fail%=12% ⚠️
+Search:     0/6 OK | ✅
+Endpoints:  1/3 OK | ⚠️
+Time:      10526ms
+
+Sample failing derivatives (for debug):
+  ID 77362: thumb=false small=false medium=false large=false
+  ID 66990: thumb=true small=true medium=false large=false
+  ID 84040: thumb=false small=false medium=false large=false
+  ID 52685: thumb=true small=false medium=false large=false
+  ID 84109: thumb=false small=false medium=false large=false
+
+❌ Alerts: DRIFT, DERIVATIVE, ENDPOINT
+=== WildPhotography System Health Check ===
+
+Inventory:  TS=55841 / Neon eligible=66658 | Drift=16.228% ⚠️
+Derivatives: 40 missing / 400 | Fail%=12% ⚠️
+Search:     0/6 OK | ✅
+Endpoints:  1/3 OK | ⚠️
+Time:      10652ms
+
+Sample failing derivatives (for debug):
+  ID 66692: thumb=true small=true medium=false large=false
+  ID 84695: thumb=false small=false medium=false large=false
+  ID 78736: thumb=false small=false medium=false large=false
+  ID 92164: thumb=false small=false medium=false large=false
+  ID 84730: thumb=false small=false medium=false large=false
+
+❌ Alerts: DRIFT, DERIVATIVE, ENDPOINT
+=== WildPhotography System Health Check ===
+
+Typesense unavailable: Request failed with HTTP code 403 | Server said: Forbidden - if you are the admin, please visit your Typesense Cloud dashboard for additional information.
+Inventory:  TS=0 / Neon eligible=66504 | Drift=100% ⚠️
+Derivatives: 37 missing / 400 | Fail%=10% ⚠️
+Search:     0/6 OK | ✅
+Endpoints:  1/3 OK | ⚠️
+Time:      10534ms
+
+Sample failing derivatives (for debug):
+  ID 90658: thumb=false small=false medium=false large=false
+  ID 81711: thumb=false small=false medium=false large=false
+  ID 42692: thumb=false small=false medium=false large=false
+  ID 66684: thumb=true small=true medium=false large=false
+  ID 78144: thumb=false small=false medium=false large=false
+Health check exception: numeric field overflow
+=== WildPhotography System Health Check ===
+
+Typesense unavailable: Request failed with HTTP code 403 | Server said: Forbidden - if you are the admin, please visit your Typesense Cloud dashboard for additional information.
+Inventory:  TS=0 / Neon eligible=66602 | Drift=100% ⚠️
+Derivatives: 36 missing / 400 | Fail%=11% ⚠️
+Search:     0/6 OK | ✅
+Endpoints:  1/3 OK | ⚠️
+Time:      10585ms
+
+Sample failing derivatives (for debug):
+  ID 86040: thumb=false small=false medium=false large=false
+  ID 52704: thumb=true small=false medium=false large=false
+  ID 90481: thumb=true small=false medium=false large=false
+  ID 86381: thumb=false small=false medium=false large=false
+  ID 52662: thumb=true small=false medium=false large=false
+Health check exception: numeric field overflow
+=== WildPhotography System Health Check ===
+
+Typesense unavailable: Request failed with HTTP code 403 | Server said: Forbidden - if you are the admin, please visit your Typesense Cloud dashboard for additional information.
+Inventory:  TS=0 / Neon eligible=66123 | Drift=100% ⚠️
+Derivatives: 28 missing / 400 | Fail%=10% ⚠️
+Search:     0/6 OK | ✅
+Endpoints:  1/3 OK | ⚠️
+Time:      10426ms
+
+Sample failing derivatives (for debug):
+  ID 43517: thumb=false small=false medium=false large=false
+  ID 77148: thumb=false small=false medium=false large=false
+  ID 44704: thumb=true small=false medium=true large=true
+  ID 90518: thumb=true small=false medium=false large=false
+  ID 49630: thumb=false small=false medium=false large=false
+Health check exception: numeric field overflow
+=== WildPhotography System Health Check ===
+
+Typesense unavailable: Request failed with HTTP code 403 | Server said: Forbidden - if you are the admin, please visit your Typesense Cloud dashboard for additional information.
+Inventory:  TS=0 / Neon eligible=66647 | Drift=100% ⚠️
+Derivatives: 26 missing / 400 | Fail%=7% ⚠️
+Search:     0/6 OK | ✅
+Endpoints:  1/3 OK | ⚠️
+Time:      12179ms
+
+Sample failing derivatives (for debug):
+  ID 78916: thumb=false small=false medium=false large=false
+  ID 45081: thumb=false small=false medium=false large=false
+  ID 66836: thumb=true small=true medium=false large=false
+  ID 78176: thumb=false small=false medium=false large=false
+  ID 71767: thumb=false small=false medium=false large=false
+Health check exception: numeric field overflow
+=== WildPhotography System Health Check ===
+
+Typesense unavailable: Request failed with HTTP code 403 | Server said: Forbidden - if you are the admin, please visit your Typesense Cloud dashboard for additional information.
+Inventory:  TS=0 / Neon eligible=66700 | Drift=100% ⚠️
+Derivatives: 25 missing / 400 | Fail%=8% ⚠️
+Search:     0/6 OK | ✅
+Endpoints:  1/3 OK | ⚠️
+Time:      11718ms
+
+Sample failing derivatives (for debug):
+  ID 46358: thumb=false small=false medium=false large=false
+  ID 66050: thumb=false small=false medium=false large=false
+  ID 37058: thumb=true small=false medium=false large=false
+  ID 90704: thumb=true small=false medium=false large=false
+  ID 66635: thumb=true small=true medium=false large=false
+Health check exception: numeric field overflow
+=== WildPhotography System Health Check ===
+
+Typesense unavailable: Request failed with HTTP code 403 | Server said: Forbidden - if you are the admin, please visit your Typesense Cloud dashboard for additional information.
+Inventory:  TS=0 / Neon eligible=66815 | Drift=100% ⚠️
+Derivatives: 32 missing / 400 | Fail%=9% ⚠️
+Search:     0/6 OK | ✅
+Endpoints:  1/3 OK | ⚠️
+Time:      11767ms
+
+Sample failing derivatives (for debug):
+  ID 49651: thumb=false small=false medium=false large=false
+  ID 67262: thumb=true small=true medium=false large=false
+  ID 76840: thumb=false small=false medium=false large=false
+  ID 67337: thumb=true small=true medium=false large=false
+  ID 80446: thumb=false small=false medium=false large=false
+Health check exception: numeric field overflow
+=== WildPhotography System Health Check ===
+
+Typesense unavailable: Request failed with HTTP code 403 | Server said: Forbidden - if you are the admin, please visit your Typesense Cloud dashboard for additional information.
+Inventory:  TS=0 / Neon eligible=66830 | Drift=100% ⚠️
+Derivatives: 39 missing / 400 | Fail%=15% ⚠️
+Search:     0/6 OK | ✅
+Endpoints:  1/3 OK | ⚠️
+Time:      12107ms
+
+Sample failing derivatives (for debug):
+  ID 91985: thumb=false small=true medium=false large=true
+  ID 67117: thumb=true small=true medium=false large=false
+  ID 91684: thumb=false small=true medium=false large=true
+  ID 77348: thumb=false small=false medium=false large=false
+  ID 66258: thumb=true small=false medium=true large=true
+Health check exception: numeric field overflow
+=== WildPhotography System Health Check ===
+
+Typesense unavailable: Request failed with HTTP code 403 | Server said: Forbidden - if you are the admin, please visit your Typesense Cloud dashboard for additional information.
+Inventory:  TS=0 / Neon eligible=66830 | Drift=100% ⚠️
+Derivatives: 28 missing / 400 | Fail%=9% ⚠️
+Search:     0/6 OK | ✅
+Endpoints:  1/3 OK | ⚠️
+Time:      12000ms
+
+Sample failing derivatives (for debug):
+  ID 67610: thumb=true small=true medium=false large=false
+  ID 43013: thumb=false small=false medium=false large=false
+  ID 91769: thumb=true small=false medium=false large=false
+  ID 66149: thumb=true small=false medium=true large=true
+  ID 65054: thumb=false small=false medium=false large=false
+Health check exception: numeric field overflow
+=== WildPhotography System Health Check ===
+
+Typesense unavailable: Request failed with HTTP code 403 | Server said: Forbidden - if you are the admin, please visit your Typesense Cloud dashboard for additional information.
+Inventory:  TS=0 / Neon eligible=67089 | Drift=100% ⚠️
+Derivatives: 28 missing / 400 | Fail%=11% ⚠️
+Search:     0/6 OK | ✅
+Endpoints:  1/3 OK | ⚠️
+Time:      13575ms
+
+Sample failing derivatives (for debug):
+  ID 67333: thumb=true small=true medium=false large=false
+  ID 44120: thumb=true small=false medium=true large=true
+  ID 67004: thumb=true small=true medium=false large=false
+  ID 90512: thumb=true small=false medium=false large=false
+  ID 91541: thumb=true small=false medium=false large=false
+Health check exception: numeric field overflow
+=== WildPhotography System Health Check ===
+
+Typesense unavailable: Request failed with HTTP code 403 | Server said: Forbidden - if you are the admin, please visit your Typesense Cloud dashboard for additional information.
+Inventory:  TS=0 / Neon eligible=66980 | Drift=100% ⚠️
+Derivatives: 40 missing / 400 | Fail%=12% ⚠️
+Search:     0/6 OK | ✅
+Endpoints:  0/3 OK | ⚠️
+Time:      4515ms
+
+Sample failing derivatives (for debug):
+  ID 78673: thumb=false small=false medium=false large=false
+  ID 46479: thumb=false small=false medium=false large=false
+  ID 82078: thumb=false small=false medium=false large=false
+  ID 77316: thumb=false small=false medium=false large=false
+  ID 66245: thumb=true small=false medium=true large=true
+Health check exception: numeric field overflow
+=== WildPhotography System Health Check ===
+
+Typesense unavailable: Request failed with HTTP code 403 | Server said: Forbidden - if you are the admin, please visit your Typesense Cloud dashboard for additional information.
+Inventory:  TS=0 / Neon eligible=67492 | Drift=100% ⚠️
+Derivatives: 38 missing / 400 | Fail%=11% ⚠️
+Search:     0/6 OK | ✅
+Endpoints:  1/3 OK | ⚠️
+Time:      12361ms
+
+Sample failing derivatives (for debug):
+  ID 64940: thumb=true small=false medium=false large=false
+  ID 49077: thumb=false small=false medium=false large=false
+  ID 77275: thumb=false small=false medium=false large=false
+  ID 81889: thumb=false small=false medium=false large=false
+  ID 66646: thumb=true small=true medium=false large=false
+Health check exception: numeric field overflow
+=== WildPhotography System Health Check ===
+
+Typesense unavailable: Request failed with HTTP code 403 | Server said: Forbidden - if you are the admin, please visit your Typesense Cloud dashboard for additional information.
+Inventory:  TS=0 / Neon eligible=67325 | Drift=100% ⚠️
+Derivatives: 42 missing / 400 | Fail%=13% ⚠️
+Search:     0/6 OK | ✅
+Endpoints:  1/3 OK | ⚠️
+Time:      13333ms
+
+Sample failing derivatives (for debug):
+  ID 54833: thumb=false small=true medium=false large=false
+  ID 67055: thumb=true small=true medium=false large=false
+  ID 71886: thumb=false small=false medium=false large=false
+  ID 49796: thumb=false small=false medium=false large=false
+  ID 81727: thumb=false small=false medium=false large=false
+Health check exception: numeric field overflow
+=== WildPhotography System Health Check ===
+
+Typesense unavailable: Request failed with HTTP code 403 | Server said: Forbidden - if you are the admin, please visit your Typesense Cloud dashboard for additional information.
+Inventory:  TS=0 / Neon eligible=67476 | Drift=100% ⚠️
+Derivatives: 28 missing / 400 | Fail%=10% ⚠️
+Search:     0/6 OK | ✅
+Endpoints:  1/3 OK | ⚠️
+Time:      12063ms
+
+Sample failing derivatives (for debug):
+  ID 81817: thumb=false small=false medium=false large=false
+  ID 71762: thumb=false small=false medium=false large=false
+  ID 46363: thumb=false small=false medium=false large=false
+  ID 51909: thumb=false small=true medium=false large=false
+  ID 78395: thumb=false small=false medium=false large=false
+Health check exception: numeric field overflow
+=== WildPhotography System Health Check ===
+
+Typesense unavailable: Request failed with HTTP code 403 | Server said: Forbidden - if you are the admin, please visit your Typesense Cloud dashboard for additional information.
+Request #1780898434566: Request to Node 0 failed due to "ECONNABORTED timeout of 30000ms exceeded"
+Request #1780898434566: Sleeping for 0.1s and then retrying request...
+Request #1780898434567: Request to Node 0 failed due to "ECONNABORTED timeout of 30000ms exceeded"
+Request #1780898434567: Sleeping for 0.1s and then retrying request...
+Request #1780898434566: Request to Node 0 failed due to "ECONNABORTED timeout of 30000ms exceeded"
+Request #1780898434567: Request to Node 0 failed due to "ECONNABORTED timeout of 30000ms exceeded"
+Inventory:  TS=0 / Neon eligible=67576 | Drift=100% ⚠️
+Derivatives: 400 missing / 400 | Fail%=100% ⚠️
+Search:     0/6 OK | ✅
+Endpoints:  0/3 OK | ⚠️
+Time:      100324ms
+
+Sample failing derivatives (for debug):
+  ID 35979: thumb=false small=false medium=false large=false
+  ID 30374: thumb=false small=false medium=false large=false
+  ID 51376: thumb=false small=false medium=false large=false
+  ID 11644: thumb=false small=false medium=false large=false
+  ID 2114: thumb=false small=false medium=false large=false
+Health check exception: numeric field overflow
+=== WildPhotography System Health Check ===
+
+Typesense unavailable: Request failed with HTTP code 403 | Server said: Forbidden - if you are the admin, please visit your Typesense Cloud dashboard for additional information.
+Inventory:  TS=0 / Neon eligible=67576 | Drift=100% ⚠️
+Derivatives: 37 missing / 400 | Fail%=11% ⚠️
+Search:     0/6 OK | ✅
+Endpoints:  1/3 OK | ⚠️
+Time:      11903ms
+
+Sample failing derivatives (for debug):
+  ID 77561: thumb=false small=false medium=false large=false
+  ID 46505: thumb=false small=false medium=false large=false
+  ID 46498: thumb=false small=false medium=false large=false
+  ID 66941: thumb=true small=true medium=false large=false
+  ID 67055: thumb=true small=true medium=false large=false
+Health check exception: numeric field overflow
+=== WildPhotography System Health Check ===
+
+Inventory:  TS=67695 / Neon eligible=67576 | Drift=0.176% ✅
+Derivatives: 18 missing / 400 | Fail%=7% ⚠️
+Search:     0/6 OK | ✅
+Endpoints:  1/3 OK | ⚠️
+Time:      14415ms
+
+Sample failing derivatives (for debug):
+  ID 76309: thumb=true small=true medium=true large=false
+  ID 36899: thumb=true small=false medium=false large=false
+  ID 39155: thumb=false small=true medium=true large=true
+  ID 77180: thumb=false small=false medium=false large=false
+  ID 49816: thumb=false small=false medium=false large=false
+
+❌ Alerts: DERIVATIVE, ENDPOINT
+=== WildPhotography System Health Check ===
+
+Inventory:  TS=67946 / Neon eligible=67160 | Drift=1.17% ✅
+Derivatives: 31 missing / 400 | Fail%=8% ⚠️
+Search:     0/6 OK | ✅
+Endpoints:  1/3 OK | ⚠️
+Time:      13433ms
+
+Sample failing derivatives (for debug):
+  ID 77398: thumb=false small=false medium=false large=false
+  ID 71946: thumb=false small=false medium=false large=false
+  ID 80316: thumb=false small=false medium=false large=false
+  ID 71835: thumb=false small=false medium=false large=false
+  ID 80327: thumb=false small=false medium=false large=false
+
+❌ Alerts: DERIVATIVE, ENDPOINT
+=== WildPhotography System Health Check ===
+
+Inventory:  TS=68164 / Neon eligible=67414 | Drift=1.113% ✅
+Derivatives: 18 missing / 400 | Fail%=6% ⚠️
+Search:     0/6 OK | ✅
+Endpoints:  1/3 OK | ⚠️
+Time:      12344ms
+
+Sample failing derivatives (for debug):
+  ID 77386: thumb=false small=false medium=false large=false
+  ID 67441: thumb=true small=true medium=false large=false
+  ID 90477: thumb=true small=false medium=false large=false
+  ID 91779: thumb=false small=false medium=false large=false
+  ID 66756: thumb=true small=true medium=false large=false
+
+❌ Alerts: DERIVATIVE, ENDPOINT
+=== WildPhotography System Health Check ===
+
+Inventory:  TS=67041 / Neon eligible=67862 | Drift=1.21% ✅
+Derivatives: 36 missing / 400 | Fail%=14% ⚠️
+Search:     0/6 OK | ✅
+Endpoints:  1/3 OK | ⚠️
+Time:      12557ms
+
+Sample failing derivatives (for debug):
+  ID 71784: thumb=false small=false medium=false large=false
+  ID 65768: thumb=false small=true medium=true large=true
+  ID 49114: thumb=false small=false medium=false large=false
+  ID 76884: thumb=false small=false medium=false large=false
+  ID 45643: thumb=false small=true medium=true large=true
+
+❌ Alerts: DERIVATIVE, ENDPOINT
+=== WildPhotography System Health Check ===
+
+Inventory:  TS=67051 / Neon eligible=67725 | Drift=0.995% ✅
+Derivatives: 273 missing / 400 | Fail%=86% ⚠️
+Search:     0/6 OK | ✅
+Endpoints:  1/3 OK | ⚠️
+Time:      13364ms
+
+Sample failing derivatives (for debug):
+  ID 72603: thumb=true small=true medium=false large=true
+  ID 69338: thumb=false small=false medium=false large=false
+  ID 38822: thumb=false small=false medium=false large=false
+  ID 10643: thumb=false small=false medium=false large=false
+  ID 34748: thumb=false small=false medium=false large=false
+
+❌ Alerts: DERIVATIVE, ENDPOINT
+=== WildPhotography System Health Check ===
+
+Inventory:  TS=68365 / Neon eligible=67861 | Drift=0.743% ✅
+Derivatives: 288 missing / 400 | Fail%=94% ⚠️
+Search:     0/6 OK | ✅
+Endpoints:  1/3 OK | ⚠️
+Time:      4688ms
+
+Sample failing derivatives (for debug):
+  ID 61233: thumb=true small=true medium=false large=true
+  ID 80465: thumb=false small=false medium=false large=false
+  ID 91740: thumb=false small=false medium=false large=false
+  ID 19004: thumb=false small=false medium=false large=false
+  ID 45553: thumb=false small=true medium=false large=true
+
+❌ Alerts: DERIVATIVE, ENDPOINT
+=== WildPhotography System Health Check ===
+
+Inventory:  TS=66921 / Neon eligible=67759 | Drift=1.237% ✅
+Derivatives: 132 missing / 400 | Fail%=84% ⚠️
+Search:     0/6 OK | ✅
+Endpoints:  1/3 OK | ⚠️
+Time:      6318ms
+
+Sample failing derivatives (for debug):
+  ID 52017: thumb=true small=true medium=false large=true
+  ID 5921: thumb=true small=true medium=false large=true
+  ID 93520: thumb=true small=true medium=false large=true
+  ID 1824: thumb=false small=true medium=false large=false
+  ID 72746: thumb=true small=true medium=false large=true
+
+❌ Alerts: DERIVATIVE, ENDPOINT
+=== WildPhotography System Health Check ===
+
+Inventory:  TS=67493 / Neon eligible=68355 | Drift=1.261% ✅
+Derivatives: 124 missing / 400 | Fail%=87% ⚠️
+Search:     0/6 OK | ✅
+Endpoints:  1/3 OK | ⚠️
+Time:      6747ms
+
+Sample failing derivatives (for debug):
+  ID 22917: thumb=true small=true medium=false large=true
+  ID 74342: thumb=true small=true medium=false large=true
+  ID 82198: thumb=true small=true medium=false large=true
+  ID 15534: thumb=true small=true medium=false large=true
+  ID 66487: thumb=true small=false medium=false large=false
+
+❌ Alerts: DERIVATIVE, ENDPOINT
+=== WildPhotography System Health Check ===
+
+Inventory:  TS=69122 / Neon eligible=68515 | Drift=0.886% ✅
+Derivatives: 139 missing / 400 | Fail%=86% ⚠️
+Search:     0/6 OK | ✅
+Endpoints:  1/3 OK | ⚠️
+Time:      6558ms
+
+Sample failing derivatives (for debug):
+  ID 90508: thumb=true small=true medium=false large=true
+  ID 64624: thumb=true small=true medium=false large=true
+  ID 12987: thumb=true small=true medium=false large=true
+  ID 32123: thumb=true small=true medium=false large=true
+  ID 23408: thumb=true small=true medium=false large=true
+
+❌ Alerts: DERIVATIVE, ENDPOINT
+=== WildPhotography System Health Check ===
+
+Inventory:  TS=68519 / Neon eligible=68515 | Drift=0.006% ✅
+Derivatives: 400 missing / 400 | Fail%=100% ⚠️
+Search:     0/6 OK | ✅
+Endpoints:  1/3 OK | ⚠️
+Time:      22191ms
+
+Sample failing derivatives (for debug):
+  ID 73042: thumb=false small=false medium=false large=false
+  ID 10754: thumb=false small=false medium=false large=false
+  ID 35889: thumb=false small=false medium=false large=false
+  ID 3529: thumb=false small=false medium=false large=false
+  ID 1552: thumb=false small=false medium=false large=false
+Health check exception: numeric field overflow
+=== WildPhotography System Health Check ===
+
+Inventory:  TS=68073 / Neon eligible=68516 | Drift=0.647% ✅
+Derivatives: 118 missing / 400 | Fail%=84% ⚠️
+Search:     0/6 OK | ✅
+Endpoints:  1/3 OK | ⚠️
+Time:      6703ms
+
+Sample failing derivatives (for debug):
+  ID 53667: thumb=true small=true medium=false large=true
+  ID 22775: thumb=true small=true medium=false large=true
+  ID 25509: thumb=true small=true medium=false large=true
+  ID 50597: thumb=true small=true medium=false large=true
+  ID 10863: thumb=true small=true medium=false large=true
+
+❌ Alerts: DERIVATIVE, ENDPOINT
+=== WildPhotography System Health Check ===
+
+Inventory:  TS=47038 / Neon eligible=32386 | Drift=45.242% ⚠️
+Derivatives: 78 missing / 400 | Fail%=73% ⚠️
+Search:     0/6 OK | ✅
+Endpoints:  1/3 OK | ⚠️
+Time:      6275ms
+
+Sample failing derivatives (for debug):
+  ID 16219: thumb=true small=true medium=false large=true
+  ID 64205: thumb=true small=true medium=false large=true
+  ID 14107: thumb=true small=true medium=false large=true
+  ID 20380: thumb=true small=true medium=false large=true
+  ID 17185: thumb=true small=true medium=false large=true
+
+❌ Alerts: DRIFT, DERIVATIVE, ENDPOINT
+=== WildPhotography System Health Check ===
+
+Inventory:  TS=58697 / Neon eligible=68599 | Drift=14.435% ⚠️
+Derivatives: 114 missing / 400 | Fail%=82% ⚠️
+Search:     0/6 OK | ✅
+Endpoints:  1/3 OK | ⚠️
+Time:      6471ms
+
+Sample failing derivatives (for debug):
+  ID 64277: thumb=true small=true medium=false large=true
+  ID 38910: thumb=true small=true medium=false large=true
+  ID 20151: thumb=true small=true medium=false large=true
+  ID 63876: thumb=true small=true medium=false large=true
+  ID 42975: thumb=true small=true medium=false large=true
+
+❌ Alerts: DRIFT, DERIVATIVE, ENDPOINT
+=== WildPhotography System Health Check ===
+
+Inventory:  TS=66254 / Neon eligible=62160 | Drift=6.586% ⚠️
+Derivatives: 36 missing / 400 | Fail%=14% ⚠️
+Search:     6/6 OK | ✅
+Endpoints:  1/3 OK | ⚠️
+Time:      6398ms
+
+Sample failing derivatives (for debug):
+  ID 66493: thumb=true small=false medium=false large=false
+  ID 46136: thumb=false small=false medium=false large=false
+  ID 49692: thumb=false small=false medium=false large=false
+  ID 62753: thumb=true small=true medium=false large=false
+  ID 92861: thumb=true small=false medium=false large=false
+
+❌ Alerts: DRIFT, DERIVATIVE, ENDPOINT
+=== WildPhotography System Health Check ===
+
+Inventory:  TS=135171 / Neon eligible=62672 | Drift=115.68% ⚠️
+Derivatives: 64 missing / 400 | Fail%=19% ⚠️
+Search:     6/6 OK | ✅
+Endpoints:  1/3 OK | ⚠️
+Time:      6447ms
+
+Sample failing derivatives (for debug):
+  ID 44847: thumb=false small=false medium=false large=false
+  ID 20922: thumb=true small=true medium=true large=false
+  ID 68112: thumb=false small=false medium=false large=false
+  ID 68186: thumb=false small=false medium=false large=false
+  ID 66854: thumb=false small=false medium=false large=false
+Health check exception: numeric field overflow
+=== WildPhotography System Health Check ===
+
+Health check exception: Error connecting to database: TypeError: fetch failed
+=== WildPhotography System Health Check ===
+
+Inventory:  TS=80835 / Neon eligible=68662 | Drift=17.729% ⚠️
+Derivatives: 131 missing / 400 | Fail%=37% ⚠️
+Search:     6/6 OK | ✅
+Endpoints:  1/3 OK | ⚠️
+Time:      6594ms
+
+Sample failing derivatives (for debug):
+  ID 46555: thumb=false small=false medium=false large=false
+  ID 67697: thumb=false small=false medium=false large=false
+  ID 52714: thumb=true small=false medium=false large=false
+  ID 68223: thumb=false small=false medium=false large=false
+  ID 77366: thumb=false small=false medium=false large=false
+
+❌ Alerts: DRIFT, DERIVATIVE, ENDPOINT
+=== WildPhotography System Health Check ===
+
+Inventory:  TS=66222 / Neon eligible=68555 | Drift=3.403% ✅
+Derivatives: 157 missing / 400 | Fail%=45% ⚠️
+Search:     6/6 OK | ✅
+Endpoints:  1/3 OK | ⚠️
+Time:      6521ms
+
+Sample failing derivatives (for debug):
+  ID 64889: thumb=false small=false medium=false large=false
+  ID 67372: thumb=false small=false medium=false large=false
+  ID 69480: thumb=false small=false medium=false large=false
+  ID 44898: thumb=false small=false medium=false large=false
+  ID 69822: thumb=false small=false medium=false large=false
+
+❌ Alerts: DERIVATIVE, ENDPOINT
+=== WildPhotography System Health Check ===
+
+Search drop: "toucan" 86% (753→106)
+Inventory:  TS=72170 / Neon eligible=59925 | Drift=20.434% ⚠️
+Derivatives: 49 missing / 400 | Fail%=15% ⚠️
+Search:     6/6 OK | ⚠️
+Endpoints:  1/3 OK | ⚠️
+Time:      6249ms
+
+Sample failing derivatives (for debug):
+  ID 70915: thumb=false small=false medium=false large=false
+  ID 46349: thumb=false small=false medium=false large=false
+  ID 90667: thumb=true small=false medium=false large=false
+  ID 70716: thumb=false small=false medium=false large=false
+  ID 66963: thumb=false small=false medium=false large=false
+
+❌ Alerts: DRIFT, DERIVATIVE, SEARCH_DROP, ENDPOINT
+=== WildPhotography System Health Check ===
+
+Search drop: "toucan" 35% (106→69)
+Search drop: "sloth" 33% (6→4)
+Inventory:  TS=66414 / Neon eligible=61024 | Drift=8.833% ⚠️
+Derivatives: 65 missing / 400 | Fail%=18% ⚠️
+Search:     6/6 OK | ⚠️
+Endpoints:  1/3 OK | ⚠️
+Time:      6616ms
+
+Sample failing derivatives (for debug):
+  ID 46399: thumb=false small=false medium=false large=false
+  ID 68383: thumb=false small=false medium=false large=false
+  ID 43161: thumb=false small=false medium=false large=false
+  ID 71351: thumb=false small=false medium=false large=false
+  ID 68309: thumb=false small=false medium=false large=false
+
+❌ Alerts: DRIFT, DERIVATIVE, SEARCH_DROP, ENDPOINT
+=== WildPhotography System Health Check ===
+
+Inventory:  TS=66842 / Neon eligible=68738 | Drift=2.758% ✅
+Derivatives: 238 missing / 400 | Fail%=65% ⚠️
+Search:     6/6 OK | ✅
+Endpoints:  1/3 OK | ⚠️
+Time:      9280ms
+
+Sample failing derivatives (for debug):
+  ID 75216: thumb=true small=false medium=false large=false
+  ID 38804: thumb=false small=true medium=true large=true
+  ID 78160: thumb=false small=false medium=false large=false
+  ID 29643: thumb=true small=true medium=false large=true
+  ID 68281: thumb=false small=false medium=false large=false
+
+❌ Alerts: DERIVATIVE, ENDPOINT
+=== WildPhotography System Health Check ===
+
+Health check exception: Error connecting to database: TypeError: fetch failed
+=== WildPhotography System Health Check ===
+
+🔒 Advisory lock acquired
+Inventory:  TS=72669 / Neon eligible=69065 | Drift=5.218% ⚠️
+Derivatives: 41 missing / 400 | Fail%=11% ⚠️
+Search:     6/6 OK | ✅
+Endpoints:  3/3 OK | ✅
+Time:      12451ms
+
+Sample failing derivatives (for debug):
+  ID 68098: thumb=false small=false medium=false large=false
+  ID 67594: thumb=false small=false medium=false large=false
+  ID 68580: thumb=false small=false medium=false large=false
+  ID 70886: thumb=false small=false medium=false large=false
+  ID 67320: thumb=false small=false medium=false large=false
+
+❌ Alerts: DRIFT, DERIVATIVE
+=== WildPhotography System Health Check ===
+
+🔒 Advisory lock acquired
+Inventory:  TS=69031 / Neon eligible=69296 | Drift=0.382% ✅
+Derivatives: 50 missing / 400 | Fail%=14% ⚠️
+Search:     0/6 OK | ✅
+Endpoints:  3/3 OK | ✅
+Time:      13318ms
+
+Sample failing derivatives (for debug):
+  ID 69471: thumb=false small=false medium=false large=false
+  ID 71289: thumb=false small=false medium=false large=false
+  ID 65163: thumb=false small=false medium=false large=false
+  ID 68114: thumb=false small=false medium=false large=false
+  ID 67135: thumb=false small=false medium=false large=false
+
+❌ Alerts: DERIVATIVE

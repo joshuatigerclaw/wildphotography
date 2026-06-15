@@ -1,0 +1,1469 @@
+{
+  "batch": 1,
+  "startedAt": "2026-06-01T22:06:51.332Z",
+  "photosAttempted": 50,
+  "photosRepaired": 50,
+  "photosFailed": 0,
+  "cannotRepair": 0,
+  "r2UploadFailed": 0,
+  "skipped": 0,
+  "repairs": [
+    {
+      "photoId": 73323,
+      "slug": "img-3246",
+      "originalKey": "originals/gallery_34/img-3246.jpg",
+      "repaired": true,
+      "error": null,
+      "derivatives": {
+        "thumb": {
+          "key": "derivatives/thumbs/73323.webp",
+          "url": "https://images.wildphotography.com/derivatives/thumbs/73323.webp",
+          "size": 25200
+        },
+        "small": {
+          "key": "derivatives/small/73323.webp",
+          "url": "https://images.wildphotography.com/derivatives/small/73323.webp",
+          "size": 102596
+        },
+        "medium": {
+          "key": "derivatives/medium/73323.webp",
+          "url": "https://images.wildphotography.com/derivatives/medium/73323.webp",
+          "size": 284120
+        },
+        "large": {
+          "key": "derivatives/large/73323.webp",
+          "url": "https://images.wildphotography.com/derivatives/large/73323.webp",
+          "size": 568978
+        }
+      }
+    },
+    {
+      "photoId": 74999,
+      "slug": "img-5627-1",
+      "originalKey": "originals/gallery_74/img-5627-1.jpg",
+      "repaired": true,
+      "error": null,
+      "derivatives": {
+        "thumb": {
+          "key": "derivatives/thumbs/74999.webp",
+          "url": "https://images.wildphotography.com/derivatives/thumbs/74999.webp",
+          "size": 7946
+        },
+        "small": {
+          "key": "derivatives/small/74999.webp",
+          "url": "https://images.wildphotography.com/derivatives/small/74999.webp",
+          "size": 36108
+        },
+        "medium": {
+          "key": "derivatives/medium/74999.webp",
+          "url": "https://images.wildphotography.com/derivatives/medium/74999.webp",
+          "size": 135076
+        },
+        "large": {
+          "key": "derivatives/large/74999.webp",
+          "url": "https://images.wildphotography.com/derivatives/large/74999.webp",
+          "size": 371186
+        }
+      }
+    },
+    {
+      "photoId": 75107,
+      "slug": "cl0a6796-1",
+      "originalKey": "originals/gallery_21/cl0a6796-1.jpg",
+      "repaired": true,
+      "error": null,
+      "derivatives": {
+        "thumb": {
+          "key": "derivatives/thumbs/75107.webp",
+          "url": "https://images.wildphotography.com/derivatives/thumbs/75107.webp",
+          "size": 11488
+        },
+        "small": {
+          "key": "derivatives/small/75107.webp",
+          "url": "https://images.wildphotography.com/derivatives/small/75107.webp",
+          "size": 58626
+        },
+        "medium": {
+          "key": "derivatives/medium/75107.webp",
+          "url": "https://images.wildphotography.com/derivatives/medium/75107.webp",
+          "size": 195466
+        },
+        "large": {
+          "key": "derivatives/large/75107.webp",
+          "url": "https://images.wildphotography.com/derivatives/large/75107.webp",
+          "size": 387054
+        }
+      }
+    },
+    {
+      "photoId": 73252,
+      "slug": "hyperlapse-0327",
+      "originalKey": "originals/gallery_32/hyperlapse-0327.jpg",
+      "repaired": true,
+      "error": null,
+      "derivatives": {
+        "thumb": {
+          "key": "derivatives/thumbs/73252.webp",
+          "url": "https://images.wildphotography.com/derivatives/thumbs/73252.webp",
+          "size": 13284
+        },
+        "small": {
+          "key": "derivatives/small/73252.webp",
+          "url": "https://images.wildphotography.com/derivatives/small/73252.webp",
+          "size": 71498
+        },
+        "medium": {
+          "key": "derivatives/medium/73252.webp",
+          "url": "https://images.wildphotography.com/derivatives/medium/73252.webp",
+          "size": 289184
+        },
+        "large": {
+          "key": "derivatives/large/73252.webp",
+          "url": "https://images.wildphotography.com/derivatives/large/73252.webp",
+          "size": 861562
+        }
+      }
+    },
+    {
+      "photoId": 75118,
+      "slug": "dji-0242-1",
+      "originalKey": "originals/gallery_21/dji-0242-1.jpg",
+      "repaired": true,
+      "error": null,
+      "derivatives": {
+        "thumb": {
+          "key": "derivatives/thumbs/75118.webp",
+          "url": "https://images.wildphotography.com/derivatives/thumbs/75118.webp",
+          "size": 17256
+        },
+        "small": {
+          "key": "derivatives/small/75118.webp",
+          "url": "https://images.wildphotography.com/derivatives/small/75118.webp",
+          "size": 131552
+        },
+        "medium": {
+          "key": "derivatives/medium/75118.webp",
+          "url": "https://images.wildphotography.com/derivatives/medium/75118.webp",
+          "size": 558288
+        },
+        "large": {
+          "key": "derivatives/large/75118.webp",
+          "url": "https://images.wildphotography.com/derivatives/large/75118.webp",
+          "size": 1421382
+        }
+      }
+    },
+    {
+      "photoId": 73249,
+      "slug": "hyperlapse-0550-1",
+      "originalKey": "originals/gallery_32/hyperlapse-0550-1.jpeg",
+      "repaired": true,
+      "error": null,
+      "derivatives": {
+        "thumb": {
+          "key": "derivatives/thumbs/73249.webp",
+          "url": "https://images.wildphotography.com/derivatives/thumbs/73249.webp",
+          "size": 19448
+        },
+        "small": {
+          "key": "derivatives/small/73249.webp",
+          "url": "https://images.wildphotography.com/derivatives/small/73249.webp",
+          "size": 100964
+        },
+        "medium": {
+          "key": "derivatives/medium/73249.webp",
+          "url": "https://images.wildphotography.com/derivatives/medium/73249.webp",
+          "size": 365876
+        },
+        "large": {
+          "key": "derivatives/large/73249.webp",
+          "url": "https://images.wildphotography.com/derivatives/large/73249.webp",
+          "size": 938570
+        }
+      }
+    },
+    {
+      "photoId": 75204,
+      "slug": "img-4592-2",
+      "originalKey": "originals/gallery_44/img-4592-2.jpg",
+      "repaired": true,
+      "error": null,
+      "derivatives": {
+        "thumb": {
+          "key": "derivatives/thumbs/75204.webp",
+          "url": "https://images.wildphotography.com/derivatives/thumbs/75204.webp",
+          "size": 11308
+        },
+        "small": {
+          "key": "derivatives/small/75204.webp",
+          "url": "https://images.wildphotography.com/derivatives/small/75204.webp",
+          "size": 40362
+        },
+        "medium": {
+          "key": "derivatives/medium/75204.webp",
+          "url": "https://images.wildphotography.com/derivatives/medium/75204.webp",
+          "size": 168986
+        },
+        "large": {
+          "key": "derivatives/large/75204.webp",
+          "url": "https://images.wildphotography.com/derivatives/large/75204.webp",
+          "size": 528526
+        }
+      }
+    },
+    {
+      "photoId": 72770,
+      "slug": "dji-0878-1",
+      "originalKey": "originals/gallery_19/dji-0878-1.jpg",
+      "repaired": true,
+      "error": null,
+      "derivatives": {
+        "thumb": {
+          "key": "derivatives/thumbs/72770.webp",
+          "url": "https://images.wildphotography.com/derivatives/thumbs/72770.webp",
+          "size": 28552
+        },
+        "small": {
+          "key": "derivatives/small/72770.webp",
+          "url": "https://images.wildphotography.com/derivatives/small/72770.webp",
+          "size": 158674
+        },
+        "medium": {
+          "key": "derivatives/medium/72770.webp",
+          "url": "https://images.wildphotography.com/derivatives/medium/72770.webp",
+          "size": 597640
+        },
+        "large": {
+          "key": "derivatives/large/72770.webp",
+          "url": "https://images.wildphotography.com/derivatives/large/72770.webp",
+          "size": 1436358
+        }
+      }
+    },
+    {
+      "photoId": 72918,
+      "slug": "img-1045",
+      "originalKey": "originals/gallery_345/img-1045.jpg",
+      "repaired": true,
+      "error": null,
+      "derivatives": {
+        "thumb": {
+          "key": "derivatives/thumbs/72918.webp",
+          "url": "https://images.wildphotography.com/derivatives/thumbs/72918.webp",
+          "size": 2316
+        },
+        "small": {
+          "key": "derivatives/small/72918.webp",
+          "url": "https://images.wildphotography.com/derivatives/small/72918.webp",
+          "size": 9536
+        },
+        "medium": {
+          "key": "derivatives/medium/72918.webp",
+          "url": "https://images.wildphotography.com/derivatives/medium/72918.webp",
+          "size": 79884
+        },
+        "large": {
+          "key": "derivatives/large/72918.webp",
+          "url": "https://images.wildphotography.com/derivatives/large/72918.webp",
+          "size": 287322
+        }
+      }
+    },
+    {
+      "photoId": 73303,
+      "slug": "img-0103",
+      "originalKey": "originals/gallery_34/img-0103.jpg",
+      "repaired": true,
+      "error": null,
+      "derivatives": {
+        "thumb": {
+          "key": "derivatives/thumbs/73303.webp",
+          "url": "https://images.wildphotography.com/derivatives/thumbs/73303.webp",
+          "size": 74808
+        },
+        "small": {
+          "key": "derivatives/small/73303.webp",
+          "url": "https://images.wildphotography.com/derivatives/small/73303.webp",
+          "size": 361164
+        },
+        "medium": {
+          "key": "derivatives/medium/73303.webp",
+          "url": "https://images.wildphotography.com/derivatives/medium/73303.webp",
+          "size": 1122422
+        },
+        "large": {
+          "key": "derivatives/large/73303.webp",
+          "url": "https://images.wildphotography.com/derivatives/large/73303.webp",
+          "size": 2355196
+        }
+      }
+    },
+    {
+      "photoId": 73581,
+      "slug": "cl0a9508",
+      "originalKey": "photos/flying-in-costa-rica/cl0a9508_original.jpg",
+      "repaired": true,
+      "error": null,
+      "derivatives": {
+        "thumb": {
+          "key": "derivatives/thumbs/73581.webp",
+          "url": "https://images.wildphotography.com/derivatives/thumbs/73581.webp",
+          "size": 23402
+        },
+        "small": {
+          "key": "derivatives/small/73581.webp",
+          "url": "https://images.wildphotography.com/derivatives/small/73581.webp",
+          "size": 109526
+        },
+        "medium": {
+          "key": "derivatives/medium/73581.webp",
+          "url": "https://images.wildphotography.com/derivatives/medium/73581.webp",
+          "size": 321150
+        },
+        "large": {
+          "key": "derivatives/large/73581.webp",
+          "url": "https://images.wildphotography.com/derivatives/large/73581.webp",
+          "size": 624738
+        }
+      }
+    },
+    {
+      "photoId": 73141,
+      "slug": "dji-0365-2",
+      "originalKey": "originals/gallery_27/dji-0365-2.jpg",
+      "repaired": true,
+      "error": null,
+      "derivatives": {
+        "thumb": {
+          "key": "derivatives/thumbs/73141.webp",
+          "url": "https://images.wildphotography.com/derivatives/thumbs/73141.webp",
+          "size": 30468
+        },
+        "small": {
+          "key": "derivatives/small/73141.webp",
+          "url": "https://images.wildphotography.com/derivatives/small/73141.webp",
+          "size": 176904
+        },
+        "medium": {
+          "key": "derivatives/medium/73141.webp",
+          "url": "https://images.wildphotography.com/derivatives/medium/73141.webp",
+          "size": 649058
+        },
+        "large": {
+          "key": "derivatives/large/73141.webp",
+          "url": "https://images.wildphotography.com/derivatives/large/73141.webp",
+          "size": 1531614
+        }
+      }
+    },
+    {
+      "photoId": 72722,
+      "slug": "dji-0065-2",
+      "originalKey": "originals/gallery_19/dji-0065-2.jpg",
+      "repaired": true,
+      "error": null,
+      "derivatives": {
+        "thumb": {
+          "key": "derivatives/thumbs/72722.webp",
+          "url": "https://images.wildphotography.com/derivatives/thumbs/72722.webp",
+          "size": 37030
+        },
+        "small": {
+          "key": "derivatives/small/72722.webp",
+          "url": "https://images.wildphotography.com/derivatives/small/72722.webp",
+          "size": 209200
+        },
+        "medium": {
+          "key": "derivatives/medium/72722.webp",
+          "url": "https://images.wildphotography.com/derivatives/medium/72722.webp",
+          "size": 763026
+        },
+        "large": {
+          "key": "derivatives/large/72722.webp",
+          "url": "https://images.wildphotography.com/derivatives/large/72722.webp",
+          "size": 1694206
+        }
+      }
+    },
+    {
+      "photoId": 72793,
+      "slug": "img-4340-1",
+      "originalKey": "originals/gallery_345/img-4340-1.jpg",
+      "repaired": true,
+      "error": null,
+      "derivatives": {
+        "thumb": {
+          "key": "derivatives/thumbs/72793.webp",
+          "url": "https://images.wildphotography.com/derivatives/thumbs/72793.webp",
+          "size": 27814
+        },
+        "small": {
+          "key": "derivatives/small/72793.webp",
+          "url": "https://images.wildphotography.com/derivatives/small/72793.webp",
+          "size": 93718
+        },
+        "medium": {
+          "key": "derivatives/medium/72793.webp",
+          "url": "https://images.wildphotography.com/derivatives/medium/72793.webp",
+          "size": 257052
+        },
+        "large": {
+          "key": "derivatives/large/72793.webp",
+          "url": "https://images.wildphotography.com/derivatives/large/72793.webp",
+          "size": 590274
+        }
+      }
+    },
+    {
+      "photoId": 75642,
+      "slug": "dji-0673-1",
+      "originalKey": "originals/gallery_85/dji-0673-1.jpg",
+      "repaired": true,
+      "error": null,
+      "derivatives": {
+        "thumb": {
+          "key": "derivatives/thumbs/75642.webp",
+          "url": "https://images.wildphotography.com/derivatives/thumbs/75642.webp",
+          "size": 63026
+        },
+        "small": {
+          "key": "derivatives/small/75642.webp",
+          "url": "https://images.wildphotography.com/derivatives/small/75642.webp",
+          "size": 354226
+        },
+        "medium": {
+          "key": "derivatives/medium/75642.webp",
+          "url": "https://images.wildphotography.com/derivatives/medium/75642.webp",
+          "size": 1361642
+        },
+        "large": {
+          "key": "derivatives/large/75642.webp",
+          "url": "https://images.wildphotography.com/derivatives/large/75642.webp",
+          "size": 2946758
+        }
+      }
+    },
+    {
+      "photoId": 73160,
+      "slug": "2023-03-10-16-04-50",
+      "originalKey": "originals/gallery_30/2023-03-10-16-04-50.jpg",
+      "repaired": true,
+      "error": null,
+      "derivatives": {
+        "thumb": {
+          "key": "derivatives/thumbs/73160.webp",
+          "url": "https://images.wildphotography.com/derivatives/thumbs/73160.webp",
+          "size": 25256
+        },
+        "small": {
+          "key": "derivatives/small/73160.webp",
+          "url": "https://images.wildphotography.com/derivatives/small/73160.webp",
+          "size": 161546
+        },
+        "medium": {
+          "key": "derivatives/medium/73160.webp",
+          "url": "https://images.wildphotography.com/derivatives/medium/73160.webp",
+          "size": 581512
+        },
+        "large": {
+          "key": "derivatives/large/73160.webp",
+          "url": "https://images.wildphotography.com/derivatives/large/73160.webp",
+          "size": 1249876
+        }
+      }
+    },
+    {
+      "photoId": 72762,
+      "slug": "dji-0768-1",
+      "originalKey": "originals/gallery_19/dji-0768-1.jpg",
+      "repaired": true,
+      "error": null,
+      "derivatives": {
+        "thumb": {
+          "key": "derivatives/thumbs/72762.webp",
+          "url": "https://images.wildphotography.com/derivatives/thumbs/72762.webp",
+          "size": 35198
+        },
+        "small": {
+          "key": "derivatives/small/72762.webp",
+          "url": "https://images.wildphotography.com/derivatives/small/72762.webp",
+          "size": 182970
+        },
+        "medium": {
+          "key": "derivatives/medium/72762.webp",
+          "url": "https://images.wildphotography.com/derivatives/medium/72762.webp",
+          "size": 648052
+        },
+        "large": {
+          "key": "derivatives/large/72762.webp",
+          "url": "https://images.wildphotography.com/derivatives/large/72762.webp",
+          "size": 1473586
+        }
+      }
+    },
+    {
+      "photoId": 72756,
+      "slug": "dji-0703-1",
+      "originalKey": "originals/gallery_19/dji-0703-1.jpg",
+      "repaired": true,
+      "error": null,
+      "derivatives": {
+        "thumb": {
+          "key": "derivatives/thumbs/72756.webp",
+          "url": "https://images.wildphotography.com/derivatives/thumbs/72756.webp",
+          "size": 19338
+        },
+        "small": {
+          "key": "derivatives/small/72756.webp",
+          "url": "https://images.wildphotography.com/derivatives/small/72756.webp",
+          "size": 108574
+        },
+        "medium": {
+          "key": "derivatives/medium/72756.webp",
+          "url": "https://images.wildphotography.com/derivatives/medium/72756.webp",
+          "size": 438458
+        },
+        "large": {
+          "key": "derivatives/large/72756.webp",
+          "url": "https://images.wildphotography.com/derivatives/large/72756.webp",
+          "size": 1048050
+        }
+      }
+    },
+    {
+      "photoId": 72701,
+      "slug": "img-3067-1",
+      "originalKey": "originals/gallery_19/img-3067-1.jpg",
+      "repaired": true,
+      "error": null,
+      "derivatives": {
+        "thumb": {
+          "key": "derivatives/thumbs/72701.webp",
+          "url": "https://images.wildphotography.com/derivatives/thumbs/72701.webp",
+          "size": 50018
+        },
+        "small": {
+          "key": "derivatives/small/72701.webp",
+          "url": "https://images.wildphotography.com/derivatives/small/72701.webp",
+          "size": 189402
+        },
+        "medium": {
+          "key": "derivatives/medium/72701.webp",
+          "url": "https://images.wildphotography.com/derivatives/medium/72701.webp",
+          "size": 548262
+        },
+        "large": {
+          "key": "derivatives/large/72701.webp",
+          "url": "https://images.wildphotography.com/derivatives/large/72701.webp",
+          "size": 1121630
+        }
+      }
+    },
+    {
+      "photoId": 72699,
+      "slug": "img-3048",
+      "originalKey": "originals/gallery_19/img-3048.jpg",
+      "repaired": true,
+      "error": null,
+      "derivatives": {
+        "thumb": {
+          "key": "derivatives/thumbs/72699.webp",
+          "url": "https://images.wildphotography.com/derivatives/thumbs/72699.webp",
+          "size": 19276
+        },
+        "small": {
+          "key": "derivatives/small/72699.webp",
+          "url": "https://images.wildphotography.com/derivatives/small/72699.webp",
+          "size": 95136
+        },
+        "medium": {
+          "key": "derivatives/medium/72699.webp",
+          "url": "https://images.wildphotography.com/derivatives/medium/72699.webp",
+          "size": 392490
+        },
+        "large": {
+          "key": "derivatives/large/72699.webp",
+          "url": "https://images.wildphotography.com/derivatives/large/72699.webp",
+          "size": 1096044
+        }
+      }
+    },
+    {
+      "photoId": 72625,
+      "slug": "dji-0203-1",
+      "originalKey": "originals/gallery_19/dji-0203-1.jpg",
+      "repaired": true,
+      "error": null,
+      "derivatives": {
+        "thumb": {
+          "key": "derivatives/thumbs/72625.webp",
+          "url": "https://images.wildphotography.com/derivatives/thumbs/72625.webp",
+          "size": 13704
+        },
+        "small": {
+          "key": "derivatives/small/72625.webp",
+          "url": "https://images.wildphotography.com/derivatives/small/72625.webp",
+          "size": 66662
+        },
+        "medium": {
+          "key": "derivatives/medium/72625.webp",
+          "url": "https://images.wildphotography.com/derivatives/medium/72625.webp",
+          "size": 297386
+        },
+        "large": {
+          "key": "derivatives/large/72625.webp",
+          "url": "https://images.wildphotography.com/derivatives/large/72625.webp",
+          "size": 803534
+        }
+      }
+    },
+    {
+      "photoId": 75566,
+      "slug": "pano00004-2",
+      "originalKey": "originals/gallery_29/pano00004-2.jpg",
+      "repaired": true,
+      "error": null,
+      "derivatives": {
+        "thumb": {
+          "key": "derivatives/thumbs/75566.webp",
+          "url": "https://images.wildphotography.com/derivatives/thumbs/75566.webp",
+          "size": 14124
+        },
+        "small": {
+          "key": "derivatives/small/75566.webp",
+          "url": "https://images.wildphotography.com/derivatives/small/75566.webp",
+          "size": 70916
+        },
+        "medium": {
+          "key": "derivatives/medium/75566.webp",
+          "url": "https://images.wildphotography.com/derivatives/medium/75566.webp",
+          "size": 246726
+        },
+        "large": {
+          "key": "derivatives/large/75566.webp",
+          "url": "https://images.wildphotography.com/derivatives/large/75566.webp",
+          "size": 576388
+        }
+      }
+    },
+    {
+      "photoId": 72818,
+      "slug": "img-4747",
+      "originalKey": "originals/gallery_345/img-4747.jpg",
+      "repaired": true,
+      "error": null,
+      "derivatives": {
+        "thumb": {
+          "key": "derivatives/thumbs/72818.webp",
+          "url": "https://images.wildphotography.com/derivatives/thumbs/72818.webp",
+          "size": 41026
+        },
+        "small": {
+          "key": "derivatives/small/72818.webp",
+          "url": "https://images.wildphotography.com/derivatives/small/72818.webp",
+          "size": 177908
+        },
+        "medium": {
+          "key": "derivatives/medium/72818.webp",
+          "url": "https://images.wildphotography.com/derivatives/medium/72818.webp",
+          "size": 612760
+        },
+        "large": {
+          "key": "derivatives/large/72818.webp",
+          "url": "https://images.wildphotography.com/derivatives/large/72818.webp",
+          "size": 1506172
+        }
+      }
+    },
+    {
+      "photoId": 50103,
+      "slug": "dji-0295-arenal-volcano",
+      "originalKey": "originals/50103/DJI_0295.jpg",
+      "repaired": true,
+      "error": null,
+      "derivatives": {
+        "thumb": {
+          "key": "derivatives/thumbs/50103.webp",
+          "url": "https://images.wildphotography.com/derivatives/thumbs/50103.webp",
+          "size": 36154
+        },
+        "small": {
+          "key": "derivatives/small/50103.webp",
+          "url": "https://images.wildphotography.com/derivatives/small/50103.webp",
+          "size": 196388
+        },
+        "medium": {
+          "key": "derivatives/medium/50103.webp",
+          "url": "https://images.wildphotography.com/derivatives/medium/50103.webp",
+          "size": 739498
+        },
+        "large": {
+          "key": "derivatives/large/50103.webp",
+          "url": "https://images.wildphotography.com/derivatives/large/50103.webp",
+          "size": 1709714
+        }
+      }
+    },
+    {
+      "photoId": 72843,
+      "slug": "img-2658-1",
+      "originalKey": "originals/gallery_345/img-2658-1.jpg",
+      "repaired": true,
+      "error": null,
+      "derivatives": {
+        "thumb": {
+          "key": "derivatives/thumbs/72843.webp",
+          "url": "https://images.wildphotography.com/derivatives/thumbs/72843.webp",
+          "size": 23124
+        },
+        "small": {
+          "key": "derivatives/small/72843.webp",
+          "url": "https://images.wildphotography.com/derivatives/small/72843.webp",
+          "size": 89516
+        },
+        "medium": {
+          "key": "derivatives/medium/72843.webp",
+          "url": "https://images.wildphotography.com/derivatives/medium/72843.webp",
+          "size": 320254
+        },
+        "large": {
+          "key": "derivatives/large/72843.webp",
+          "url": "https://images.wildphotography.com/derivatives/large/72843.webp",
+          "size": 825452
+        }
+      }
+    },
+    {
+      "photoId": 72889,
+      "slug": "img-7552",
+      "originalKey": "originals/gallery_345/img-7552.jpg",
+      "repaired": true,
+      "error": null,
+      "derivatives": {
+        "thumb": {
+          "key": "derivatives/thumbs/72889.webp",
+          "url": "https://images.wildphotography.com/derivatives/thumbs/72889.webp",
+          "size": 14842
+        },
+        "small": {
+          "key": "derivatives/small/72889.webp",
+          "url": "https://images.wildphotography.com/derivatives/small/72889.webp",
+          "size": 72772
+        },
+        "medium": {
+          "key": "derivatives/medium/72889.webp",
+          "url": "https://images.wildphotography.com/derivatives/medium/72889.webp",
+          "size": 241314
+        },
+        "large": {
+          "key": "derivatives/large/72889.webp",
+          "url": "https://images.wildphotography.com/derivatives/large/72889.webp",
+          "size": 550176
+        }
+      }
+    },
+    {
+      "photoId": 72970,
+      "slug": "img-9504",
+      "originalKey": "originals/gallery_345/img-9504.jpg",
+      "repaired": true,
+      "error": null,
+      "derivatives": {
+        "thumb": {
+          "key": "derivatives/thumbs/72970.webp",
+          "url": "https://images.wildphotography.com/derivatives/thumbs/72970.webp",
+          "size": 9698
+        },
+        "small": {
+          "key": "derivatives/small/72970.webp",
+          "url": "https://images.wildphotography.com/derivatives/small/72970.webp",
+          "size": 43992
+        },
+        "medium": {
+          "key": "derivatives/medium/72970.webp",
+          "url": "https://images.wildphotography.com/derivatives/medium/72970.webp",
+          "size": 151674
+        },
+        "large": {
+          "key": "derivatives/large/72970.webp",
+          "url": "https://images.wildphotography.com/derivatives/large/72970.webp",
+          "size": 331898
+        }
+      }
+    },
+    {
+      "photoId": 75939,
+      "slug": "2025-12-01-06-08-38-copy-south-america-argentina",
+      "originalKey": "originals/75939/2025-12-01_06.08.38_-_Copy.jpg",
+      "repaired": true,
+      "error": null,
+      "derivatives": {
+        "thumb": {
+          "key": "derivatives/thumbs/75939.webp",
+          "url": "https://images.wildphotography.com/derivatives/thumbs/75939.webp",
+          "size": 3228
+        },
+        "small": {
+          "key": "derivatives/small/75939.webp",
+          "url": "https://images.wildphotography.com/derivatives/small/75939.webp",
+          "size": 11844
+        },
+        "medium": {
+          "key": "derivatives/medium/75939.webp",
+          "url": "https://images.wildphotography.com/derivatives/medium/75939.webp",
+          "size": 42698
+        },
+        "large": {
+          "key": "derivatives/large/75939.webp",
+          "url": "https://images.wildphotography.com/derivatives/large/75939.webp",
+          "size": 115136
+        }
+      }
+    },
+    {
+      "photoId": 72853,
+      "slug": "img-3232",
+      "originalKey": "originals/gallery_345/img-3232.jpg",
+      "repaired": true,
+      "error": null,
+      "derivatives": {
+        "thumb": {
+          "key": "derivatives/thumbs/72853.webp",
+          "url": "https://images.wildphotography.com/derivatives/thumbs/72853.webp",
+          "size": 10950
+        },
+        "small": {
+          "key": "derivatives/small/72853.webp",
+          "url": "https://images.wildphotography.com/derivatives/small/72853.webp",
+          "size": 45432
+        },
+        "medium": {
+          "key": "derivatives/medium/72853.webp",
+          "url": "https://images.wildphotography.com/derivatives/medium/72853.webp",
+          "size": 257318
+        },
+        "large": {
+          "key": "derivatives/large/72853.webp",
+          "url": "https://images.wildphotography.com/derivatives/large/72853.webp",
+          "size": 707856
+        }
+      }
+    },
+    {
+      "photoId": 72895,
+      "slug": "img-1716",
+      "originalKey": "originals/gallery_345/img-1716.jpg",
+      "repaired": true,
+      "error": null,
+      "derivatives": {
+        "thumb": {
+          "key": "derivatives/thumbs/72895.webp",
+          "url": "https://images.wildphotography.com/derivatives/thumbs/72895.webp",
+          "size": 8982
+        },
+        "small": {
+          "key": "derivatives/small/72895.webp",
+          "url": "https://images.wildphotography.com/derivatives/small/72895.webp",
+          "size": 45382
+        },
+        "medium": {
+          "key": "derivatives/medium/72895.webp",
+          "url": "https://images.wildphotography.com/derivatives/medium/72895.webp",
+          "size": 311824
+        },
+        "large": {
+          "key": "derivatives/large/72895.webp",
+          "url": "https://images.wildphotography.com/derivatives/large/72895.webp",
+          "size": 879490
+        }
+      }
+    },
+    {
+      "photoId": 72783,
+      "slug": "img-6540-001-1",
+      "originalKey": "originals/gallery_345/img-6540-001-1.jpg",
+      "repaired": true,
+      "error": null,
+      "derivatives": {
+        "thumb": {
+          "key": "derivatives/thumbs/72783.webp",
+          "url": "https://images.wildphotography.com/derivatives/thumbs/72783.webp",
+          "size": 36248
+        },
+        "small": {
+          "key": "derivatives/small/72783.webp",
+          "url": "https://images.wildphotography.com/derivatives/small/72783.webp",
+          "size": 147996
+        },
+        "medium": {
+          "key": "derivatives/medium/72783.webp",
+          "url": "https://images.wildphotography.com/derivatives/medium/72783.webp",
+          "size": 591404
+        },
+        "large": {
+          "key": "derivatives/large/72783.webp",
+          "url": "https://images.wildphotography.com/derivatives/large/72783.webp",
+          "size": 1486046
+        }
+      }
+    },
+    {
+      "photoId": 72872,
+      "slug": "img-5238",
+      "originalKey": "originals/gallery_345/img-5238.jpg",
+      "repaired": true,
+      "error": null,
+      "derivatives": {
+        "thumb": {
+          "key": "derivatives/thumbs/72872.webp",
+          "url": "https://images.wildphotography.com/derivatives/thumbs/72872.webp",
+          "size": 13472
+        },
+        "small": {
+          "key": "derivatives/small/72872.webp",
+          "url": "https://images.wildphotography.com/derivatives/small/72872.webp",
+          "size": 55302
+        },
+        "medium": {
+          "key": "derivatives/medium/72872.webp",
+          "url": "https://images.wildphotography.com/derivatives/medium/72872.webp",
+          "size": 196954
+        },
+        "large": {
+          "key": "derivatives/large/72872.webp",
+          "url": "https://images.wildphotography.com/derivatives/large/72872.webp",
+          "size": 525778
+        }
+      }
+    },
+    {
+      "photoId": 72857,
+      "slug": "img-3411",
+      "originalKey": "originals/gallery_345/img-3411.jpg",
+      "repaired": true,
+      "error": null,
+      "derivatives": {
+        "thumb": {
+          "key": "derivatives/thumbs/72857.webp",
+          "url": "https://images.wildphotography.com/derivatives/thumbs/72857.webp",
+          "size": 11146
+        },
+        "small": {
+          "key": "derivatives/small/72857.webp",
+          "url": "https://images.wildphotography.com/derivatives/small/72857.webp",
+          "size": 50856
+        },
+        "medium": {
+          "key": "derivatives/medium/72857.webp",
+          "url": "https://images.wildphotography.com/derivatives/medium/72857.webp",
+          "size": 184006
+        },
+        "large": {
+          "key": "derivatives/large/72857.webp",
+          "url": "https://images.wildphotography.com/derivatives/large/72857.webp",
+          "size": 422530
+        }
+      }
+    },
+    {
+      "photoId": 72792,
+      "slug": "img-7818-1",
+      "originalKey": "originals/gallery_345/img-7818-1.jpg",
+      "repaired": true,
+      "error": null,
+      "derivatives": {
+        "thumb": {
+          "key": "derivatives/thumbs/72792.webp",
+          "url": "https://images.wildphotography.com/derivatives/thumbs/72792.webp",
+          "size": 10298
+        },
+        "small": {
+          "key": "derivatives/small/72792.webp",
+          "url": "https://images.wildphotography.com/derivatives/small/72792.webp",
+          "size": 40950
+        },
+        "medium": {
+          "key": "derivatives/medium/72792.webp",
+          "url": "https://images.wildphotography.com/derivatives/medium/72792.webp",
+          "size": 167224
+        },
+        "large": {
+          "key": "derivatives/large/72792.webp",
+          "url": "https://images.wildphotography.com/derivatives/large/72792.webp",
+          "size": 558582
+        }
+      }
+    },
+    {
+      "photoId": 12426,
+      "slug": "pano00010-rio-savagre-costa-rica-9044",
+      "originalKey": "originals/9044/pano00010.jpg",
+      "repaired": true,
+      "error": null,
+      "derivatives": {
+        "thumb": {
+          "key": "derivatives/thumbs/12426.webp",
+          "url": "https://images.wildphotography.com/derivatives/thumbs/12426.webp",
+          "size": 14502
+        },
+        "small": {
+          "key": "derivatives/small/12426.webp",
+          "url": "https://images.wildphotography.com/derivatives/small/12426.webp",
+          "size": 77246
+        },
+        "medium": {
+          "key": "derivatives/medium/12426.webp",
+          "url": "https://images.wildphotography.com/derivatives/medium/12426.webp",
+          "size": 309418
+        },
+        "large": {
+          "key": "derivatives/large/12426.webp",
+          "url": "https://images.wildphotography.com/derivatives/large/12426.webp",
+          "size": 772868
+        }
+      }
+    },
+    {
+      "photoId": 73037,
+      "slug": "dji-0386",
+      "originalKey": "originals/gallery_347/dji-0386.jpg",
+      "repaired": true,
+      "error": null,
+      "derivatives": {
+        "thumb": {
+          "key": "derivatives/thumbs/73037.webp",
+          "url": "https://images.wildphotography.com/derivatives/thumbs/73037.webp",
+          "size": 42702
+        },
+        "small": {
+          "key": "derivatives/small/73037.webp",
+          "url": "https://images.wildphotography.com/derivatives/small/73037.webp",
+          "size": 260732
+        },
+        "medium": {
+          "key": "derivatives/medium/73037.webp",
+          "url": "https://images.wildphotography.com/derivatives/medium/73037.webp",
+          "size": 907642
+        },
+        "large": {
+          "key": "derivatives/large/73037.webp",
+          "url": "https://images.wildphotography.com/derivatives/large/73037.webp",
+          "size": 2000680
+        }
+      }
+    },
+    {
+      "photoId": 45747,
+      "slug": "dji-0941",
+      "originalKey": "photos/puerto-caldera-puntarenas-port/DJI_0941_original.jpg",
+      "repaired": true,
+      "error": null,
+      "derivatives": {
+        "thumb": {
+          "key": "derivatives/thumbs/45747.webp",
+          "url": "https://images.wildphotography.com/derivatives/thumbs/45747.webp",
+          "size": 10138
+        },
+        "small": {
+          "key": "derivatives/small/45747.webp",
+          "url": "https://images.wildphotography.com/derivatives/small/45747.webp",
+          "size": 48816
+        },
+        "medium": {
+          "key": "derivatives/medium/45747.webp",
+          "url": "https://images.wildphotography.com/derivatives/medium/45747.webp",
+          "size": 172426
+        },
+        "large": {
+          "key": "derivatives/large/45747.webp",
+          "url": "https://images.wildphotography.com/derivatives/large/45747.webp",
+          "size": 437810
+        }
+      }
+    },
+    {
+      "photoId": 73594,
+      "slug": "20241019-100429",
+      "originalKey": "photos/forests-of-costa-rica/20241019-100429_original.jpg",
+      "repaired": true,
+      "error": null,
+      "derivatives": {
+        "thumb": {
+          "key": "derivatives/thumbs/73594.webp",
+          "url": "https://images.wildphotography.com/derivatives/thumbs/73594.webp",
+          "size": 43342
+        },
+        "small": {
+          "key": "derivatives/small/73594.webp",
+          "url": "https://images.wildphotography.com/derivatives/small/73594.webp",
+          "size": 275800
+        },
+        "medium": {
+          "key": "derivatives/medium/73594.webp",
+          "url": "https://images.wildphotography.com/derivatives/medium/73594.webp",
+          "size": 1049418
+        },
+        "large": {
+          "key": "derivatives/large/73594.webp",
+          "url": "https://images.wildphotography.com/derivatives/large/73594.webp",
+          "size": 2314034
+        }
+      }
+    },
+    {
+      "photoId": 73596,
+      "slug": "cl0a4344",
+      "originalKey": "photos/forests-of-costa-rica/cl0a4344_original.jpg",
+      "repaired": true,
+      "error": null,
+      "derivatives": {
+        "thumb": {
+          "key": "derivatives/thumbs/73596.webp",
+          "url": "https://images.wildphotography.com/derivatives/thumbs/73596.webp",
+          "size": 14442
+        },
+        "small": {
+          "key": "derivatives/small/73596.webp",
+          "url": "https://images.wildphotography.com/derivatives/small/73596.webp",
+          "size": 82250
+        },
+        "medium": {
+          "key": "derivatives/medium/73596.webp",
+          "url": "https://images.wildphotography.com/derivatives/medium/73596.webp",
+          "size": 282508
+        },
+        "large": {
+          "key": "derivatives/large/73596.webp",
+          "url": "https://images.wildphotography.com/derivatives/large/73596.webp",
+          "size": 559400
+        }
+      }
+    },
+    {
+      "photoId": 11001,
+      "slug": "dji-0918-peninsula-de-osa-7619",
+      "originalKey": "originals/7619/DJI_0918.jpg",
+      "repaired": true,
+      "error": null,
+      "derivatives": {
+        "thumb": {
+          "key": "derivatives/thumbs/11001.webp",
+          "url": "https://images.wildphotography.com/derivatives/thumbs/11001.webp",
+          "size": 30968
+        },
+        "small": {
+          "key": "derivatives/small/11001.webp",
+          "url": "https://images.wildphotography.com/derivatives/small/11001.webp",
+          "size": 193700
+        },
+        "medium": {
+          "key": "derivatives/medium/11001.webp",
+          "url": "https://images.wildphotography.com/derivatives/medium/11001.webp",
+          "size": 758190
+        },
+        "large": {
+          "key": "derivatives/large/11001.webp",
+          "url": "https://images.wildphotography.com/derivatives/large/11001.webp",
+          "size": 1722684
+        }
+      }
+    },
+    {
+      "photoId": 75200,
+      "slug": "img-3594",
+      "originalKey": "originals/gallery_44/img-3594.jpg",
+      "repaired": true,
+      "error": null,
+      "derivatives": {
+        "thumb": {
+          "key": "derivatives/thumbs/75200.webp",
+          "url": "https://images.wildphotography.com/derivatives/thumbs/75200.webp",
+          "size": 16690
+        },
+        "small": {
+          "key": "derivatives/small/75200.webp",
+          "url": "https://images.wildphotography.com/derivatives/small/75200.webp",
+          "size": 62612
+        },
+        "medium": {
+          "key": "derivatives/medium/75200.webp",
+          "url": "https://images.wildphotography.com/derivatives/medium/75200.webp",
+          "size": 197162
+        },
+        "large": {
+          "key": "derivatives/large/75200.webp",
+          "url": "https://images.wildphotography.com/derivatives/large/75200.webp",
+          "size": 473080
+        }
+      }
+    },
+    {
+      "photoId": 75205,
+      "slug": "img-3594-1",
+      "originalKey": "originals/gallery_44/img-3594-1.jpg",
+      "repaired": true,
+      "error": null,
+      "derivatives": {
+        "thumb": {
+          "key": "derivatives/thumbs/75205.webp",
+          "url": "https://images.wildphotography.com/derivatives/thumbs/75205.webp",
+          "size": 16690
+        },
+        "small": {
+          "key": "derivatives/small/75205.webp",
+          "url": "https://images.wildphotography.com/derivatives/small/75205.webp",
+          "size": 62612
+        },
+        "medium": {
+          "key": "derivatives/medium/75205.webp",
+          "url": "https://images.wildphotography.com/derivatives/medium/75205.webp",
+          "size": 197162
+        },
+        "large": {
+          "key": "derivatives/large/75205.webp",
+          "url": "https://images.wildphotography.com/derivatives/large/75205.webp",
+          "size": 473080
+        }
+      }
+    },
+    {
+      "photoId": 75207,
+      "slug": "img-4712",
+      "originalKey": "originals/gallery_44/img-4712.jpg",
+      "repaired": true,
+      "error": null,
+      "derivatives": {
+        "thumb": {
+          "key": "derivatives/thumbs/75207.webp",
+          "url": "https://images.wildphotography.com/derivatives/thumbs/75207.webp",
+          "size": 14294
+        },
+        "small": {
+          "key": "derivatives/small/75207.webp",
+          "url": "https://images.wildphotography.com/derivatives/small/75207.webp",
+          "size": 60038
+        },
+        "medium": {
+          "key": "derivatives/medium/75207.webp",
+          "url": "https://images.wildphotography.com/derivatives/medium/75207.webp",
+          "size": 245856
+        },
+        "large": {
+          "key": "derivatives/large/75207.webp",
+          "url": "https://images.wildphotography.com/derivatives/large/75207.webp",
+          "size": 481198
+        }
+      }
+    },
+    {
+      "photoId": 75212,
+      "slug": "img-4712-1",
+      "originalKey": "originals/gallery_44/img-4712-1.jpg",
+      "repaired": true,
+      "error": null,
+      "derivatives": {
+        "thumb": {
+          "key": "derivatives/thumbs/75212.webp",
+          "url": "https://images.wildphotography.com/derivatives/thumbs/75212.webp",
+          "size": 14294
+        },
+        "small": {
+          "key": "derivatives/small/75212.webp",
+          "url": "https://images.wildphotography.com/derivatives/small/75212.webp",
+          "size": 60038
+        },
+        "medium": {
+          "key": "derivatives/medium/75212.webp",
+          "url": "https://images.wildphotography.com/derivatives/medium/75212.webp",
+          "size": 245856
+        },
+        "large": {
+          "key": "derivatives/large/75212.webp",
+          "url": "https://images.wildphotography.com/derivatives/large/75212.webp",
+          "size": 481198
+        }
+      }
+    },
+    {
+      "photoId": 75216,
+      "slug": "img-4734-2",
+      "originalKey": "originals/gallery_44/img-4734-2.jpg",
+      "repaired": true,
+      "error": null,
+      "derivatives": {
+        "thumb": {
+          "key": "derivatives/thumbs/75216.webp",
+          "url": "https://images.wildphotography.com/derivatives/thumbs/75216.webp",
+          "size": 10536
+        },
+        "small": {
+          "key": "derivatives/small/75216.webp",
+          "url": "https://images.wildphotography.com/derivatives/small/75216.webp",
+          "size": 34680
+        },
+        "medium": {
+          "key": "derivatives/medium/75216.webp",
+          "url": "https://images.wildphotography.com/derivatives/medium/75216.webp",
+          "size": 124592
+        },
+        "large": {
+          "key": "derivatives/large/75216.webp",
+          "url": "https://images.wildphotography.com/derivatives/large/75216.webp",
+          "size": 386604
+        }
+      }
+    },
+    {
+      "photoId": 75223,
+      "slug": "img-4838",
+      "originalKey": "originals/gallery_44/img-4838.jpg",
+      "repaired": true,
+      "error": null,
+      "derivatives": {
+        "thumb": {
+          "key": "derivatives/thumbs/75223.webp",
+          "url": "https://images.wildphotography.com/derivatives/thumbs/75223.webp",
+          "size": 10482
+        },
+        "small": {
+          "key": "derivatives/small/75223.webp",
+          "url": "https://images.wildphotography.com/derivatives/small/75223.webp",
+          "size": 34060
+        },
+        "medium": {
+          "key": "derivatives/medium/75223.webp",
+          "url": "https://images.wildphotography.com/derivatives/medium/75223.webp",
+          "size": 98262
+        },
+        "large": {
+          "key": "derivatives/large/75223.webp",
+          "url": "https://images.wildphotography.com/derivatives/large/75223.webp",
+          "size": 253486
+        }
+      }
+    },
+    {
+      "photoId": 75240,
+      "slug": "img-8987-1",
+      "originalKey": "originals/gallery_44/img-8987-1.jpg",
+      "repaired": true,
+      "error": null,
+      "derivatives": {
+        "thumb": {
+          "key": "derivatives/thumbs/75240.webp",
+          "url": "https://images.wildphotography.com/derivatives/thumbs/75240.webp",
+          "size": 7904
+        },
+        "small": {
+          "key": "derivatives/small/75240.webp",
+          "url": "https://images.wildphotography.com/derivatives/small/75240.webp",
+          "size": 28776
+        },
+        "medium": {
+          "key": "derivatives/medium/75240.webp",
+          "url": "https://images.wildphotography.com/derivatives/medium/75240.webp",
+          "size": 185986
+        },
+        "large": {
+          "key": "derivatives/large/75240.webp",
+          "url": "https://images.wildphotography.com/derivatives/large/75240.webp",
+          "size": 566814
+        }
+      }
+    },
+    {
+      "photoId": 75543,
+      "slug": "cl0a4233-1",
+      "originalKey": "originals/gallery_89/cl0a4233-1.jpg",
+      "repaired": true,
+      "error": null,
+      "derivatives": {
+        "thumb": {
+          "key": "derivatives/thumbs/75543.webp",
+          "url": "https://images.wildphotography.com/derivatives/thumbs/75543.webp",
+          "size": 20430
+        },
+        "small": {
+          "key": "derivatives/small/75543.webp",
+          "url": "https://images.wildphotography.com/derivatives/small/75543.webp",
+          "size": 103436
+        },
+        "medium": {
+          "key": "derivatives/medium/75543.webp",
+          "url": "https://images.wildphotography.com/derivatives/medium/75543.webp",
+          "size": 361054
+        },
+        "large": {
+          "key": "derivatives/large/75543.webp",
+          "url": "https://images.wildphotography.com/derivatives/large/75543.webp",
+          "size": 694954
+        }
+      }
+    },
+    {
+      "photoId": 75262,
+      "slug": "img-9891-2",
+      "originalKey": "originals/gallery_44/img-9891-2.jpg",
+      "repaired": true,
+      "error": null,
+      "derivatives": {
+        "thumb": {
+          "key": "derivatives/thumbs/75262.webp",
+          "url": "https://images.wildphotography.com/derivatives/thumbs/75262.webp",
+          "size": 9784
+        },
+        "small": {
+          "key": "derivatives/small/75262.webp",
+          "url": "https://images.wildphotography.com/derivatives/small/75262.webp",
+          "size": 33614
+        },
+        "medium": {
+          "key": "derivatives/medium/75262.webp",
+          "url": "https://images.wildphotography.com/derivatives/medium/75262.webp",
+          "size": 113872
+        },
+        "large": {
+          "key": "derivatives/large/75262.webp",
+          "url": "https://images.wildphotography.com/derivatives/large/75262.webp",
+          "size": 351176
+        }
+      }
+    },
+    {
+      "photoId": 75266,
+      "slug": "img-9896-2",
+      "originalKey": "originals/gallery_44/img-9896-2.jpg",
+      "repaired": true,
+      "error": null,
+      "derivatives": {
+        "thumb": {
+          "key": "derivatives/thumbs/75266.webp",
+          "url": "https://images.wildphotography.com/derivatives/thumbs/75266.webp",
+          "size": 12838
+        },
+        "small": {
+          "key": "derivatives/small/75266.webp",
+          "url": "https://images.wildphotography.com/derivatives/small/75266.webp",
+          "size": 44330
+        },
+        "medium": {
+          "key": "derivatives/medium/75266.webp",
+          "url": "https://images.wildphotography.com/derivatives/medium/75266.webp",
+          "size": 183100
+        },
+        "large": {
+          "key": "derivatives/large/75266.webp",
+          "url": "https://images.wildphotography.com/derivatives/large/75266.webp",
+          "size": 623950
+        }
+      }
+    }
+  ],
+  "failures": [],
+  "healthCheck": {
+    "sampled": 20,
+    "passed": 20,
+    "failed": 0
+  },
+  "completedAt": "2026-06-01T22:10:24.599Z"
+}

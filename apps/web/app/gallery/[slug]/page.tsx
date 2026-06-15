@@ -4,7 +4,8 @@ import { notFound } from 'next/navigation';
 import { sql, getGalleryBySlug } from '@/lib/db';
 import GalleryClient from './GalleryClient';
 
-export const dynamic = 'force-dynamic';
+// ISR — revalidate every 60s instead of hitting Neon on every request
+export const revalidate = 60;
 
 const R2_PUBLIC = 'https://images.wildphotography.com';
 const SITE_URL = 'https://wildphotography.com';
@@ -225,9 +226,8 @@ export default async function GalleryPage({ params }: { params: Promise<{ slug: 
               <Link
                 key={s.id}
                 href={`/species/${s.slug}`}
-                style={{display:'inline-flex',alignItems:'center',gap:'8px',padding:'8px 16px',border:'1px solid var(--rule)',borderRadius:'var(--r-sm)',fontFamily:'var(--font-serif)',fontSize:'14px',color:'var(--ink-muted)',textDecoration:'none',transition:'border-color var(--t-fast), color var(--t-fast)'}}
-                onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.borderColor = 'var(--accent)'; (e.currentTarget as HTMLAnchorElement).style.color = 'var(--accent)'; }}
-                onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.borderColor = 'var(--rule)'; (e.currentTarget as HTMLAnchorElement).style.color = 'var(--ink-muted)'; }}
+                className="gallery-species-link"
+                style={{display:'inline-flex',alignItems:'center',gap:'8px',padding:'8px 16px',border:'1px solid var(--rule)',borderRadius:'var(--r-sm)',fontFamily:'var(--font-serif)',fontSize:'14px',color:'var(--ink-muted)',textDecoration:'none'}}
               >
                 {s.common_name}
                 {s.scientific_name && (
@@ -250,9 +250,8 @@ export default async function GalleryPage({ params }: { params: Promise<{ slug: 
                   <Link
                     key={loc.id}
                     href={`/location/${loc.slug}`}
-                    style={{display:'block',padding:'16px',border:'1px solid var(--rule)',borderRadius:'var(--r-md)',textDecoration:'none',transition:'border-color var(--t-fast)'}}
-                    onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.borderColor = 'var(--accent)'; }}
-                    onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.borderColor = 'var(--rule)'; }}
+                    className="gallery-location-link"
+                    style={{display:'block',padding:'16px',border:'1px solid var(--rule)',borderRadius:'var(--r-md)',textDecoration:'none'}}
                   >
                     <span style={{fontFamily:'var(--font-display)',fontSize:'15px',fontWeight:500,color:'var(--ink)'}}>{loc.name}</span>
                     {loc.region && <span style={{display:'block',fontFamily:'var(--font-mono)',fontSize:'10px',textTransform:'uppercase',letterSpacing:'.1em',color:'var(--ink-dim)',marginTop:'4px'}}>{loc.region}</span>}
@@ -277,9 +276,8 @@ export default async function GalleryPage({ params }: { params: Promise<{ slug: 
               <Link
                 key={g.id}
                 href={`/gallery/${g.slug}`}
-                style={{display:'block',padding:'20px',border:'1px solid var(--rule)',borderRadius:'var(--r-md)',textDecoration:'none',transition:'border-color var(--t-fast)'}}
-                onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.borderColor = 'var(--accent)'; }}
-                onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.borderColor = 'var(--rule)'; }}
+                className="gallery-related-link"
+                style={{display:'block',padding:'20px',border:'1px solid var(--rule)',borderRadius:'var(--r-md)',textDecoration:'none'}}
               >
                 <h3 style={{fontFamily:'var(--font-display)',fontSize:'16px',fontWeight:500,color:'var(--ink)',margin:'0 0 6px 0'}}>{g.name}</h3>
                 {g.description && (

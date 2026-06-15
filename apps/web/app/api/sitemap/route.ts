@@ -53,7 +53,7 @@ export async function GET() {
     return new NextResponse(xml, {
       headers: {
         'Content-Type': 'application/xml',
-        'Cache-Control': 'public, max-age=3600, s-maxage=86400',
+        'Cache-Control': 'public, max-age=86400, s-maxage=259200, stale-while-revalidate=604800',
       },
     });
   } catch (error) {

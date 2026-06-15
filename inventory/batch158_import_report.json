@@ -1,0 +1,98 @@
+{
+  "batch": 158,
+  "timestamp": "2026-06-10T12:20:28.854474Z",
+  "folders_processed": 5,
+  "folders_seen": [
+    "Costa-Rica-Gallery/Land-Animals",
+    "Costa-Rica-Gallery/Landmarks",
+    "Costa-Rica-Gallery/Landscape",
+    "Costa-Rica-Gallery/Las-Catalinas-Guanacaste",
+    "Costa-Rica-Gallery/Lifestyle"
+  ],
+  "folders_with_existing_gallery_match": [
+    "Costa-Rica-Gallery/Land-Animals",
+    "Costa-Rica-Gallery/Landmarks",
+    "Costa-Rica-Gallery/Landscape",
+    "Costa-Rica-Gallery/Las-Catalinas-Guanacaste",
+    "Costa-Rica-Gallery/Lifestyle"
+  ],
+  "folders_skipped_no_existing_gallery": [],
+  "folders_skipped_ambiguous_mapping": [],
+  "photos_scanned": 326,
+  "duplicates_skipped": 310,
+  "filename_collisions_renamed": 0,
+  "new_imported": 0,
+  "failed": 6,
+  "failed_paths": [
+    "/Volumes/ADATA SC740/Smugmug Backup/Galleries/Costa-Rica-Gallery/Landscape/HYPERLAPSE_0103.jpg",
+    "/Volumes/ADATA SC740/Smugmug Backup/Galleries/Costa-Rica-Gallery/Landscape/IMG_0428.jpg",
+    "/Volumes/ADATA SC740/Smugmug Backup/Galleries/Costa-Rica-Gallery/Landscape/IMG_0437.jpg",
+    "/Volumes/ADATA SC740/Smugmug Backup/Galleries/Costa-Rica-Gallery/Lifestyle/P1101910.jpg",
+    "/Volumes/ADATA SC740/Smugmug Backup/Galleries/Costa-Rica-Gallery/Lifestyle/P1101911.jpg",
+    "/Volumes/ADATA SC740/Smugmug Backup/Galleries/Costa-Rica-Gallery/Lifestyle/P1101909.jpg"
+  ],
+  "new_photo_ids": [],
+  "derivatives_generated": 30,
+  "og_images_set": 0,
+  "seo_titles_generated": 0,
+  "seo_metadata_generated": 0,
+  "ready_for_public_render": 0,
+  "search_ready": 0,
+  "skipped_existing_high_quality": 0,
+  "repaired_prior_collision_records": 0,
+  "per_gallery": {
+    "Land-Animals": {
+      "total_on_disk": 20,
+      "new": 0,
+      "duplicates": 20,
+      "filename_collisions": 0,
+      "status": "fully_imported",
+      "gallery_id": 52,
+      "gallery_slug": "land-animals"
+    },
+    "Landmarks": {
+      "total_on_disk": 69,
+      "new": 0,
+      "duplicates": 69,
+      "filename_collisions": 0,
+      "status": "fully_imported",
+      "gallery_id": 53,
+      "gallery_slug": "landmarks"
+    },
+    "Landscape": {
+      "total_on_disk": 134,
+      "new": 0,
+      "duplicates": 131,
+      "filename_collisions": 0,
+      "status": "fully_imported",
+      "gallery_id": 54,
+      "gallery_slug": "landscape"
+    },
+    "Las-Catalinas-Guanacaste": {
+      "total_on_disk": 90,
+      "new": 0,
+      "duplicates": 90,
+      "filename_collisions": 0,
+      "status": "fully_imported",
+      "gallery_id": 55,
+      "gallery_slug": "las-catalinas-guanacaste"
+    },
+    "Lifestyle": {
+      "total_on_disk": 13,
+      "new": 0,
+      "duplicates": 0,
+      "filename_collisions": 0,
+      "status": "fully_imported",
+      "gallery_id": 56,
+      "gallery_slug": "lifestyle"
+    }
+  },
+  "existing_gallery_ids_used": [
+    52,
+    53,
+    54,
+    55,
+    56
+  ],
+  "inactive_galleries": []
+}

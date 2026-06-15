@@ -34,13 +34,12 @@ def main():
         return
     
     p = sync_playwright().start()
-    browser = p.chromium.launch(
+    # Use launch_persistent_context for profile-based sessions
+    context = p.chromium.launch_persistent_context(
+        PROFILE_PATH,
         headless=False,
-        user_data_dir=PROFILE_PATH,
         args=['--no-sandbox', '--disable-setuid-sandbox']
     )
-    
-    context = browser.contexts[0] if browser.contexts else browser.new_context()
     page = context.new_page()
     
     # Navigate to Pinterest
@@ -75,7 +74,7 @@ def main():
         json.dump(cookies, f, indent=2)
     log(f"Saved {len(cookies)} cookies to {COOKIES_FILE}")
     
-    browser.close()
+    context.close()
     p.stop()
     
     log("=== Done ===")

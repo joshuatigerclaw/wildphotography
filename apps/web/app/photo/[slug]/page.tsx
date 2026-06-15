@@ -14,7 +14,8 @@ import { generatePhotoJsonLd, canonicalUrl } from '@/lib/seo';
 import { getDisplayTitle } from '@/lib/titles';
 import PhotoPageClient from './PhotoPageClient';
 
-export const dynamic = 'force-dynamic';
+// ISR — revalidate every 60s instead of hitting Neon on every request
+export const revalidate = 60;
 
 const R2_PUBLIC = 'https://images.wildphotography.com';
 const SITE_URL = 'https://wildphotography.com';

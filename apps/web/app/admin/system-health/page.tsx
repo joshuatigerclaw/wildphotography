@@ -45,6 +45,32 @@ async function getHealthData(hours = 168) {
   return { records, summary: summary[0] };
 }
 
+async function getNeonCostStats() {
+  const sql = neon(DATABASE_URL);
+  const [tables, secLog24h, healthRuns24h] = await Promise.all([
+    sql`SELECT
+      (SELECT count(*)::int FROM photos) AS photo_count,
+      (SELECT count(*)::int FROM galleries) AS gallery_count,
+      (SELECT count(*)::int FROM locations) AS location_count,
+      (SELECT count(*)::int FROM content_articles) AS article_count,
+      (SELECT coalesce(sum(visit_count)::int, 0) FROM photo_visit_daily WHERE day >= CURRENT_DATE - 1) AS visits_24h,
+      (SELECT count(*)::int FROM request_security_log WHERE created_at > NOW() - INTERVAL '24 hours') AS security_logs_24h,
+      (SELECT count(*)::int FROM system_health_history WHERE recorded_at > NOW() - INTERVAL '24 hours') AS health_runs_24h
+    `,
+    sql`SELECT count(*)::int FROM request_security_log WHERE created_at > NOW() - INTERVAL '24 hours'`,
+    sql`SELECT count(*)::int FROM system_health_history WHERE recorded_at > NOW() - INTERVAL '24 hours'`,
+  ]);
+  return {
+    photoCount: tables[0]?.photo_count ?? 0,
+    galleryCount: tables[0]?.gallery_count ?? 0,
+    locationCount: tables[0]?.location_count ?? 0,
+    articleCount: tables[0]?.article_count ?? 0,
+    visits24h: tables[0]?.visits_24h ?? 0,
+    securityLogs24h: tables[0]?.security_logs_24h ?? 0,
+    healthRuns24h: tables[0]?.health_runs_24h ?? 0,
+  };
+}
+
 function formatTs(ts: string) {
   return new Date(ts).toLocaleString('en-US', {
     month: 'short', day: 'numeric',
@@ -81,6 +107,10 @@ export default async function SystemHealthPage() {
   } catch (e: any) {
     error = e.message;
   }
+
+  // Neon cost stats — non-blocking, best-effort
+  let neonCost: { photoCount: number; galleryCount: number; locationCount: number; articleCount: number; visits24h: number; securityLogs24h: number; healthRuns24h: number } | null = null;
+  try { neonCost = await getNeonCostStats(); } catch (_) {}
 
   if (error) {
     return (
@@ -244,6 +274,27 @@ export default async function SystemHealthPage() {
           ) : <div className="empty">No data</div>}
         </div>
       </div>
+
+      {neonCost ? (
+        <div className="card">
+          <div className="card-title"><Database size={16} />Neon Cost Snapshot · Last 24h</div>
+          <table>
+            <thead><tr><th>Metric</th><th>Count</th><th>Notes</th></tr></thead>
+            <tbody>
+              <tr><td>Photos</td><td><strong>{neonCost.photoCount.toLocaleString()}</strong></td><td>Total in database</td></tr>
+              <tr><td>Galleries</td><td><strong>{neonCost.galleryCount.toLocaleString()}</strong></td><td>Total in database</td></tr>
+              <tr><td>Locations</td><td><strong>{neonCost.locationCount.toLocaleString()}</strong></td><td>Total in database</td></tr>
+              <tr><td>Articles</td><td><strong>{neonCost.articleCount.toLocaleString()}</strong></td><td>Total in database</td></tr>
+              <tr><td>Photo visits</td><td style={{ color: neonCost.visits24h > 500000 ? '#ef4444' : '#065f46', fontWeight: 600 }}>{neonCost.visits24h.toLocaleString()}</td><td>Deferred via waitUntil (background); aggregate = photo_visit_daily</td></tr>
+              <tr><td>Security log writes</td><td style={{ color: neonCost.securityLogs24h > 10000 ? '#ef4444' : '#065f46', fontWeight: 600 }}>{neonCost.securityLogs24h.toLocaleString()}</td><td>High count = slow query risk</td></tr>
+              <tr><td>Health check runs</td><td>{neonCost.healthRuns24h.toLocaleString()}</td><td>4/day expected; more = overlapping jobs</td></tr>
+            </tbody>
+          </table>
+          <p style={{ fontSize: '12px', color: '#6b7280', marginTop: '12px' }}>
+            Cost drivers: photo_visit_daily upserts (now deferred via waitUntil), security_log writes (background), system_health_history writes, and on-demand page Neon calls. Use ISR (revalidate) on public pages to reduce wakeups.
+          </p>
+        </div>
+      ) : null}
 
       {latest && latest.search_metrics ? (
         <div className="card">

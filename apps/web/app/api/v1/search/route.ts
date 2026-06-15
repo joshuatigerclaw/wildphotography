@@ -13,6 +13,62 @@ const COLLECTION = 'photos';
 
 export const dynamic = 'force-dynamic';
 
+// Plan-based include_fields gating (uses only fields that exist in production schema)
+function getIncludeFields(planId: string): string {
+  // Production schema fields: title, description, keywords, location, region, country,
+  //   species, gallery_slug, gallery_title, slug, url,
+  //   search_ready, derivatives_complete, ready_for_public_render,
+  //   location_name, thumb_url, species_common_name
+  switch (planId) {
+    case 'explorer':
+      return 'slug,title,location_name,thumb_url,gallery_slug';
+    case 'professional':
+      return 'slug,title,location_name,thumb_url,gallery_slug,species_common_name,keywords';
+    case 'enterprise':
+    default:
+      return 'slug,title,description,keywords,location_name,thumb_url,gallery_slug,gallery_title,species_common_name,search_ready';
+  }
+}
+
+function mapHitToResponse(hit: any, planId: string) {
+  const doc = hit.document;
+  const base = {
+    slug: doc.slug,
+    title: doc.title,
+  };
+  switch (planId) {
+    case 'explorer':
+      return {
+        ...base,
+        thumbUrl: doc.thumb_url,
+        locationName: doc.location_name,
+        gallery: doc.gallery_slug,
+      };
+    case 'professional':
+      return {
+        ...base,
+        thumbUrl: doc.thumb_url,
+        locationName: doc.location_name,
+        gallery: doc.gallery_slug,
+        species: doc.species_common_name,
+        keywords: doc.keywords,
+      };
+    case 'enterprise':
+    default:
+      return {
+        ...base,
+        title: doc.title,
+        description: doc.description,
+        keywords: doc.keywords,
+        locationName: doc.location_name,
+        gallery: doc.gallery_slug,
+        galleryTitle: doc.gallery_title,
+        species: doc.species_common_name,
+        searchReady: doc.search_ready,
+      };
+  }
+}
+
 export async function GET(request: NextRequest) {
   // Authenticate
   const auth = await validateApiKey(request);
@@ -27,13 +83,16 @@ export async function GET(request: NextRequest) {
   const page = Math.max(1, parseInt(searchParams.get('page') || '1', 10));
   let perPage = Math.min(50, Math.max(1, parseInt(searchParams.get('per_page') || searchParams.get('limit') || '20', 10)));
 
-  // Plan-based per_page cap (conservative)
+  // Plan-based per_page cap
   if (perPage > 20) perPage = 20;
 
   const typesense = new Client({
     nodes: [{ host: TYPESENSE_HOST, port: 443, protocol: 'https' }],
     apiKey: TYPESENSE_SEARCH_KEY,
+    additionalHeaders: { 'Accept-Encoding': 'gzip' },
   });
+
+  const includeFields = getIncludeFields(customer.planId);
 
   try {
     const result = await typesense
@@ -41,28 +100,17 @@ export async function GET(request: NextRequest) {
       .documents()
       .search({
         q: query === '*' || !query ? '*' : query,
-        query_by: 'title,keywords,location_name,species_common_name',
-        sort_by: 'date_taken:desc',
+        query_by: 'title,keywords,location_name,species',
+        sort_by: 'search_ready:desc',
         page,
         per_page: perPage,
-        include_fields: 'id,slug,title,thumb_url,small_url,medium_url,large_url,keywords,gallery_slug,location_name,date_taken',
+        include_fields: includeFields,
       });
 
     const total = result.found || 0;
 
     return NextResponse.json({
-      photos: (result.hits || []).map((hit: any) => ({
-        id: String(hit.document.id),
-        slug: hit.document.slug,
-        title: hit.document.title,
-        thumbUrl: hit.document.thumb_url,
-        smallUrl: hit.document.small_url,
-        mediumUrl: hit.document.medium_url,
-        largeUrl: hit.document.large_url,
-        keywords: hit.document.keywords,
-        locationName: hit.document.location_name,
-        gallery: hit.document.gallery_slug,
-      })),
+      photos: (result.hits || []).map((hit: any) => mapHitToResponse(hit, customer.planId)),
       total,
       page,
       per_page: perPage,

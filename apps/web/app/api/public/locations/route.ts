@@ -10,7 +10,7 @@ export async function GET() {
     const locations = await sql`
       SELECT id, name, slug, country, region, photo_count
       FROM locations 
-      WHERE status = 'active'
+      WHERE is_public = true
       ORDER BY name ASC
     `;
     

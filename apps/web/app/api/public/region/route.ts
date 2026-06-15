@@ -8,9 +8,9 @@ export const dynamic = 'force-dynamic';
 export async function GET() {
   try {
     const regions = await sql`
-      SELECT id, name, slug, description, photo_count, gallery_count
-      FROM regions 
-      WHERE status = 'active'
+      SELECT id, name, slug, summary, photo_count
+      FROM regions
+      WHERE is_public = true
       ORDER BY name ASC
     `;
     

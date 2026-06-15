@@ -22,7 +22,7 @@ AWS_SECRET_ACCESS_KEY = "3af780dfe8dbb6d48b792e4bf8ba5836ae659c89192645a7ae97130
 
 NEON_CONN = "postgresql://neondb_owner:npg_BvF2JsQ8drba@ep-calm-fire-ad0dfnqd-pooler.c-2.us-east-1.aws.neon.tech/wildphotography?sslmode=require"
 
-QUEUE_PATH = "/Users/joshuatenbrink/.openclaw/workspace/wildphotography/inventory/import_batch_active.json"
+QUEUE_PATH = "/Users/joshuatenbrink/wildphotography_cloudflare_src/inventory/import_batch_active.json"
 
 # Gallery folder to ID/slug mapping
 GALLERY_MAP = {

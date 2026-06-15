@@ -1,0 +1,96 @@
+{
+  "batch": 155,
+  "timestamp": "2026-06-10T07:15:34.598514Z",
+  "folders_processed": 5,
+  "folders_seen": [
+    "Costa-Rica-Gallery/Cartago",
+    "Costa-Rica-Gallery/Crocodiles",
+    "Costa-Rica-Gallery/Jaco-Beach",
+    "Costa-Rica-Gallery/Limon-Puerto-Viejo-Cocles-Playa-Chiquita-y-Punta-Uva",
+    "Costa-Rica-Gallery/Monkeys"
+  ],
+  "folders_with_existing_gallery_match": [
+    "Costa-Rica-Gallery/Cartago",
+    "Costa-Rica-Gallery/Crocodiles",
+    "Costa-Rica-Gallery/Jaco-Beach",
+    "Costa-Rica-Gallery/Limon-Puerto-Viejo-Cocles-Playa-Chiquita-y-Punta-Uva",
+    "Costa-Rica-Gallery/Monkeys"
+  ],
+  "folders_skipped_no_existing_gallery": [],
+  "folders_skipped_ambiguous_mapping": [],
+  "photos_scanned": 996,
+  "duplicates_skipped": 992,
+  "filename_collisions_renamed": 0,
+  "new_imported": 4,
+  "failed": 0,
+  "failed_paths": [],
+  "new_photo_ids": [
+    94290,
+    94295,
+    94300,
+    94306
+  ],
+  "derivatives_generated": 20,
+  "og_images_set": 0,
+  "seo_titles_generated": 0,
+  "seo_metadata_generated": 0,
+  "ready_for_public_render": 4,
+  "search_ready": 4,
+  "skipped_existing_high_quality": 0,
+  "repaired_prior_collision_records": 0,
+  "per_gallery": {
+    "Cartago": {
+      "total_on_disk": 21,
+      "new": 0,
+      "duplicates": 21,
+      "filename_collisions": 0,
+      "status": "unknown",
+      "gallery_id": 23,
+      "gallery_slug": "cartago"
+    },
+    "Crocodiles": {
+      "total_on_disk": 37,
+      "new": 0,
+      "duplicates": 37,
+      "filename_collisions": 0,
+      "status": "unknown",
+      "gallery_id": 30,
+      "gallery_slug": "crocodiles"
+    },
+    "Jaco-Beach": {
+      "total_on_disk": 447,
+      "new": 0,
+      "duplicates": 447,
+      "filename_collisions": 0,
+      "status": "unknown",
+      "gallery_id": 48,
+      "gallery_slug": "jaco-beach"
+    },
+    "Limon-Puerto-Viejo-Cocles-Playa-Chiquita-y-Punta-Uva": {
+      "total_on_disk": 462,
+      "new": 0,
+      "duplicates": 462,
+      "filename_collisions": 0,
+      "status": "unknown",
+      "gallery_id": 57,
+      "gallery_slug": "limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva"
+    },
+    "Monkeys": {
+      "total_on_disk": 29,
+      "new": 4,
+      "duplicates": 25,
+      "filename_collisions": 0,
+      "status": "unknown",
+      "gallery_id": 59,
+      "gallery_slug": "monkeys"
+    }
+  },
+  "existing_gallery_ids_used": [
+    23,
+    30,
+    48,
+    57,
+    59
+  ],
+  "inactive_galleries": []
+}

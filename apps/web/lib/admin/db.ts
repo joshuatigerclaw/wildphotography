@@ -1,13 +1,35 @@
 /**
  * Photo Operations Admin — Database layer
- * Uses `pg` for full SQL support (transactions, RETURNING, bulk upserts).
+ *
+ * Admin routes / local scripts: getAdminClient() — pg Client (WebSocket)
+ * getPool() is available for hot-path reuse but may fail in CF Workers edge runtime
+ * if pg WebSockets are blocked (use getAdminClient() instead for CF Workers safety).
  */
 
-import { Client } from "pg";
+import { Client, Pool } from 'pg';
 
 const DATABASE_URL =
   process.env.DATABASE_URL ||
-  "postgresql://neondb_owner:npg_BvF2JsQ8drba@ep-calm-fire-ad0dfnqd-pooler.c-2.us-east-1.aws.neon.tech/wildphotography?sslmode=require";
+  'postgresql://neondb_owner:npg_BvF2JsQ8drba@ep-calm-fire-ad0dfnqd-pooler.c-2.us-east-1.aws.neon.tech/wildphotography?sslmode=require';
+
+/**
+ * Persistent pg Pool — reused across Worker invocations.
+ * globalThis survives within the same isolate instance.
+ * NOTE: May fail in CF Workers edge if WebSockets are blocked.
+ */
+let _pool: Pool | null = null;
+
+export function getPool(): Pool {
+  if (!_pool) {
+    _pool = new Pool({
+      connectionString: DATABASE_URL,
+      statement_timeout: 30000,
+      max: 5,
+      idleTimeoutMillis: 60000,
+    });
+  }
+  return _pool;
+}
 
 export function getAdminClient(): Client {
   return new Client({ connectionString: DATABASE_URL, statement_timeout: 30000 });

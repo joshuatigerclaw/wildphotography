@@ -1,0 +1,620 @@
+/bin/sh: node: command not found
+⚠️  Running in LIVE mode (--apply). Use --force to skip the 20% stale guard.
+
+[09:00:00] start: Typesense reconciliation (mode: LIVE)
+[09:00:00] query: fetching eligible photo IDs from Neon…
+[09:00:01] eligible: 47629 photos eligible in Neon
+[09:00:01] query: fetching all indexed document IDs from Typesense…
+[09:00:03] query: fetched 49355 indexed IDs from Typesense
+[09:00:03] indexed: 49355 documents currently in Typesense
+[09:00:03] diff: missing from Typesense: 0  |  stale in Typesense: 369
+[09:00:03] safety: stale percentage: 0.75% (threshold: undefined%)
+[09:00:03] action: Applying reconciliation…
+[09:00:03] done: no missing documents to insert
+[09:00:03] delete: batch NaN: removing 0 stale docs…
+[09:00:04] delete:   → deleted 0 docs
+[09:00:04] done: removed 0 stale documents
+
+─────────────────────────────────────────────
+  RECONCILIATION COMPLETE (LIVE)
+─────────────────────────────────────────────
+  eligible count      : 47,629
+  final TS count     : 49,355
+  inserted           : 0
+  removed (stale)    : 0
+  new drift          : 1,726 docs (3.624%)
+  execution time     : 3.4s
+─────────────────────────────────────────────
+
+[09:00:04] done: exiting (mode: LIVE, elapsed: 3.4s)
+⚠️  Running in LIVE mode (--apply). Use --force to skip the 20% stale guard.
+
+[09:00:01] start: Typesense reconciliation (mode: LIVE)
+[09:00:01] query: fetching eligible photo IDs from Neon…
+[09:00:02] eligible: 50523 photos eligible in Neon
+[09:00:02] query: fetching all indexed document IDs from Typesense…
+[09:00:04] query: fetched 49159 indexed IDs from Typesense
+[09:00:04] indexed: 49159 documents currently in Typesense
+[09:00:04] diff: missing from Typesense: 1952  |  stale in Typesense: 0
+[09:00:04] safety: stale percentage: 0.00% (threshold: undefined%)
+[09:00:04] action: Applying reconciliation…
+
+[x] Fatal error: No documents provided
+[09:00:00] start: Typesense batch reconcile (batch size: 500)
+[09:00:00] query: fetching eligible photo IDs from Neon…
+[09:00:01] eligible: 35274 photos eligible in Neon
+[09:00:01] query: fetching indexed document IDs from Typesense…
+[09:00:02] indexed: 1176 documents currently in Typesense
+[09:00:02] diff: missing from TS: 34686 | stale in TS: 1176
+[09:00:02] action: inserting 34686 missing documents in batches of 500…
+[09:00:03] batch: batch 1: 500/500 upserted (total: 500)
+[09:00:04] batch: batch 2: 500/500 upserted (total: 1000)
+[09:00:05] batch: batch 3: 500/500 upserted (total: 1500)
+[09:00:06] batch: batch 4: 500/500 upserted (total: 2000)
+[09:00:07] batch: batch 5: 500/500 upserted (total: 2500)
+[09:00:08] batch: batch 6: 500/500 upserted (total: 3000)
+[09:00:10] batch: batch 7: 500/500 upserted (total: 3500)
+[09:00:11] batch: batch 8: 500/500 upserted (total: 4000)
+[09:00:12] batch: batch 9: 500/500 upserted (total: 4500)
+[09:00:13] batch: batch 10: 500/500 upserted (total: 5000)
+[09:00:14] batch: batch 11: 500/500 upserted (total: 5500)
+[09:00:15] batch: batch 12: 500/500 upserted (total: 6000)
+[09:00:16] batch: batch 13: 500/500 upserted (total: 6500)
+[09:00:17] batch: batch 14: 500/500 upserted (total: 7000)
+[09:00:19] batch: batch 15: 500/500 upserted (total: 7500)
+[09:00:21] batch: batch 16: 500/500 upserted (total: 8000)
+[09:00:22] batch: batch 17: 500/500 upserted (total: 8500)
+[09:00:24] batch: batch 18: 500/500 upserted (total: 9000)
+[09:00:26] batch: batch 19: 500/500 upserted (total: 9500)
+[09:00:27] batch: batch 20: 500/500 upserted (total: 10000)
+[09:00:29] batch: batch 21: 500/500 upserted (total: 10500)
+[09:00:31] batch: batch 22: 500/500 upserted (total: 11000)
+[09:00:32] batch: batch 23: 500/500 upserted (total: 11500)
+[09:00:34] batch: batch 24: 500/500 upserted (total: 12000)
+[09:00:35] batch: batch 25: 500/500 upserted (total: 12500)
+[09:00:37] batch: batch 26: 500/500 upserted (total: 13000)
+[09:00:38] batch: batch 27: 500/500 upserted (total: 13500)
+[09:00:40] batch: batch 28: 500/500 upserted (total: 14000)
+[09:00:41] batch: batch 29: 500/500 upserted (total: 14500)
+[09:00:43] batch: batch 30: 500/500 upserted (total: 15000)
+[09:00:44] batch: batch 31: 500/500 upserted (total: 15500)
+[09:00:45] batch: batch 32: 500/500 upserted (total: 16000)
+[09:00:47] batch: batch 33: 500/500 upserted (total: 16500)
+[09:00:48] batch: batch 34: 500/500 upserted (total: 17000)
+[09:00:49] batch: batch 35: 500/500 upserted (total: 17500)
+[09:00:51] batch: batch 36: 500/500 upserted (total: 18000)
+[09:00:52] batch: batch 37: 500/500 upserted (total: 18500)
+[09:00:54] batch: batch 38: 500/500 upserted (total: 19000)
+[09:00:55] batch: batch 39: 500/500 upserted (total: 19500)
+[09:00:56] batch: batch 40: 500/500 upserted (total: 20000)
+[09:00:57] batch: batch 41: 500/500 upserted (total: 20500)
+[09:00:58] batch: batch 42: 500/500 upserted (total: 21000)
+[09:01:00] batch: batch 43: 500/500 upserted (total: 21500)
+[09:01:01] batch: batch 44: 500/500 upserted (total: 22000)
+[09:01:02] batch: batch 45: 500/500 upserted (total: 22500)
+[09:01:03] batch: batch 46: 500/500 upserted (total: 23000)
+[09:01:04] batch: batch 47: 500/500 upserted (total: 23500)
+[09:01:05] batch: batch 48: 500/500 upserted (total: 24000)
+[09:01:06] batch: batch 49: 500/500 upserted (total: 24500)
+[09:01:07] batch: batch 50: 500/500 upserted (total: 25000)
+[09:01:08] batch: batch 51: 500/500 upserted (total: 25500)
+[09:01:10] batch: batch 52: 500/500 upserted (total: 26000)
+[09:01:11] batch: batch 53: 500/500 upserted (total: 26500)
+[09:01:12] batch: batch 54: 500/500 upserted (total: 27000)
+[09:01:13] batch: batch 55: 500/500 upserted (total: 27500)
+[09:01:14] batch: batch 56: 500/500 upserted (total: 28000)
+[09:01:15] batch: batch 57: 500/500 upserted (total: 28500)
+[09:01:16] batch: batch 58: 500/500 upserted (total: 29000)
+[09:01:17] batch: batch 59: 500/500 upserted (total: 29500)
+[09:01:18] batch: batch 60: 500/500 upserted (total: 30000)
+[09:01:19] batch: batch 61: 500/500 upserted (total: 30500)
+[09:01:21] batch: batch 62: 500/500 upserted (total: 31000)
+[09:01:22] batch: batch 63: 500/500 upserted (total: 31500)
+[09:01:23] batch: batch 64: 500/500 upserted (total: 32000)
+[09:01:24] batch: batch 65: 500/500 upserted (total: 32500)
+[09:01:25] batch: batch 66: 500/500 upserted (total: 33000)
+[09:01:26] batch: batch 67: 500/500 upserted (total: 33500)
+[09:01:27] batch: batch 68: 500/500 upserted (total: 34000)
+[09:01:28] batch: batch 69: 500/500 upserted (total: 34500)
+[09:01:29] batch: batch 70: 186/186 upserted (total: 34686)
+[09:01:29] action: removing 1176 stale documents in batches of 500…
+[09:01:29] delete: batch 1: removed 500
+[09:01:29] delete: batch 2: removed 141
+[09:01:29] delete: batch 3: removed 0
+
+─────────────────────────────────────────────
+  RECONCILIATION COMPLETE
+─────────────────────────────────────────────
+  eligible count      : 35,274
+  final TS count      : 35,221
+  inserted            : 34,686
+  removed (stale)     : 641
+  execution time      : 89.1s
+─────────────────────────────────────────────
+
+[14:23:59] start: Typesense batch reconcile (batch size: 500)
+[14:23:59] query: fetching eligible photo IDs from Neon…
+[14:24:00] eligible: 36739 photos eligible in Neon
+[14:24:00] query: fetching indexed document IDs from Typesense…
+[14:24:02] indexed: 33555 documents currently in Typesense
+[14:24:02] diff: missing from TS: 3197 | stale in TS: 33555
+[14:24:02] action: inserting 3197 missing documents in batches of 500…
+[14:24:03] batch: batch 1: 500/500 upserted (total: 500)
+[14:24:04] batch: batch 2: 500/500 upserted (total: 1000)
+[14:24:05] batch: batch 3: 500/500 upserted (total: 1500)
+[14:24:06] batch: batch 4: 500/500 upserted (total: 2000)
+[14:24:07] batch: batch 5: 500/500 upserted (total: 2500)
+[14:24:08] batch: batch 6: 500/500 upserted (total: 3000)
+[14:24:09] batch: batch 7: 197/197 upserted (total: 3197)
+[14:24:09] action: removing 33555 stale documents in batches of 500…
+[14:24:09] delete: batch 1: removed 500
+[14:24:09] delete: batch 2: removed 500
+[14:24:10] delete: batch 3: removed 500
+[14:24:10] delete: batch 4: removed 500
+[14:24:10] delete: batch 5: removed 500
+[14:24:10] delete: batch 6: removed 500
+[14:24:11] delete: batch 7: removed 500
+[14:24:11] delete: batch 8: removed 500
+[14:24:11] delete: batch 9: removed 500
+[14:24:11] delete: batch 10: removed 500
+[14:24:12] delete: batch 11: removed 500
+[14:24:12] delete: batch 12: removed 500
+[14:24:12] delete: batch 13: removed 500
+[14:24:12] delete: batch 14: removed 500
+[14:24:13] delete: batch 15: removed 500
+[14:24:13] delete: batch 16: removed 500
+[14:24:13] delete: batch 17: removed 500
+[14:24:13] delete: batch 18: removed 500
+[14:24:14] delete: batch 19: removed 500
+[14:24:14] delete: batch 20: removed 500
+[14:24:14] delete: batch 21: removed 500
+[14:24:14] delete: batch 22: removed 500
+[14:24:15] delete: batch 23: removed 500
+[14:24:15] delete: batch 24: removed 500
+[14:24:15] delete: batch 25: removed 500
+[14:24:15] delete: batch 26: removed 500
+[14:24:15] delete: batch 27: removed 500
+[14:24:16] delete: batch 28: removed 500
+[14:24:16] delete: batch 29: removed 500
+[14:24:16] delete: batch 30: removed 500
+[14:24:16] delete: batch 31: removed 500
+[14:24:17] delete: batch 32: removed 500
+[14:24:17] delete: batch 33: removed 500
+[14:24:17] delete: batch 34: removed 500
+[14:24:17] delete: batch 35: removed 500
+[14:24:18] delete: batch 36: removed 500
+[14:24:18] delete: batch 37: removed 500
+[14:24:18] delete: batch 38: removed 500
+[14:24:18] delete: batch 39: removed 500
+[14:24:19] delete: batch 40: removed 500
+[14:24:19] delete: batch 41: removed 500
+[14:24:19] delete: batch 42: removed 500
+[14:24:19] delete: batch 43: removed 500
+[14:24:20] delete: batch 44: removed 500
+[14:24:20] delete: batch 45: removed 500
+[14:24:20] delete: batch 46: removed 500
+[14:24:20] delete: batch 47: removed 500
+[14:24:20] delete: batch 48: removed 500
+[14:24:21] delete: batch 49: removed 500
+[14:24:21] delete: batch 50: removed 500
+[14:24:21] delete: batch 51: removed 500
+[14:24:21] delete: batch 52: removed 500
+[14:24:22] delete: batch 53: removed 500
+[14:24:22] delete: batch 54: removed 500
+[14:24:22] delete: batch 55: removed 500
+[14:24:22] delete: batch 56: removed 500
+[14:24:22] delete: batch 57: removed 500
+[14:24:23] delete: batch 58: removed 500
+[14:24:23] delete: batch 59: removed 500
+[14:24:23] delete: batch 60: removed 500
+[14:24:23] delete: batch 61: removed 500
+[14:24:23] delete: batch 62: removed 500
+[14:24:24] delete: batch 63: removed 500
+[14:24:24] delete: batch 64: removed 500
+[14:24:24] delete: batch 65: removed 500
+[14:24:24] delete: batch 66: removed 500
+[14:24:24] delete: batch 67: removed 500
+[14:24:24] delete: batch 68: removed 43
+
+─────────────────────────────────────────────
+  RECONCILIATION COMPLETE
+─────────────────────────────────────────────
+  eligible count      : 36,739
+  final TS count      : 3,732
+  inserted            : 3,197
+  removed (stale)     : 33,543
+  execution time      : 25.3s
+─────────────────────────────────────────────
+
+[01:38:41] start: Typesense batch reconcile (batch size: 500)
+[01:38:41] query: fetching eligible photo IDs from Neon…
+[01:38:42] eligible: 44413 photos eligible in Neon
+[01:38:42] query: fetching indexed document IDs from Typesense…
+[01:38:44] indexed: 34449 documents currently in Typesense
+[01:38:44] diff: missing from TS: 10547 | stale in TS: 1
+[01:38:44] action: inserting 10547 missing documents in batches of 500…
+[01:38:45] batch: batch 1: 500/500 upserted (total: 500)
+[01:38:46] batch: batch 2: 500/500 upserted (total: 1000)
+[01:38:47] batch: batch 3: 500/500 upserted (total: 1500)
+[01:38:48] batch: batch 4: 500/500 upserted (total: 2000)
+[01:38:49] batch: batch 5: 500/500 upserted (total: 2500)
+[01:38:50] batch: batch 6: 500/500 upserted (total: 3000)
+[01:38:51] batch: batch 7: 500/500 upserted (total: 3500)
+[01:38:52] batch: batch 8: 500/500 upserted (total: 4000)
+[01:38:53] batch: batch 9: 500/500 upserted (total: 4500)
+[01:38:54] batch: batch 10: 500/500 upserted (total: 5000)
+[01:38:55] batch: batch 11: 500/500 upserted (total: 5500)
+[01:38:56] batch: batch 12: 500/500 upserted (total: 6000)
+[01:38:57] batch: batch 13: 500/500 upserted (total: 6500)
+[01:38:58] batch: batch 14: 500/500 upserted (total: 7000)
+[01:38:59] batch: batch 15: 500/500 upserted (total: 7500)
+[01:39:00] batch: batch 16: 500/500 upserted (total: 8000)
+[01:39:01] batch: batch 17: 500/500 upserted (total: 8500)
+[01:39:03] batch: batch 18: 500/500 upserted (total: 9000)
+[01:39:04] batch: batch 19: 500/500 upserted (total: 9500)
+[01:39:05] batch: batch 20: 500/500 upserted (total: 10000)
+[01:39:06] batch: batch 21: 500/500 upserted (total: 10500)
+[01:39:07] batch: batch 22: 47/47 upserted (total: 10547)
+[01:39:07] action: removing 1 stale documents in batches of 500…
+[01:39:07] delete: batch 1: removed 1
+
+─────────────────────────────────────────────
+  RECONCILIATION COMPLETE
+─────────────────────────────────────────────
+  eligible count      : 44,413
+  final TS count      : 44,948
+  inserted            : 10,547
+  removed (stale)     : 1
+  execution time      : 25.8s
+─────────────────────────────────────────────
+
+[09:00:00] start: Typesense batch reconcile (batch size: 500)
+[09:00:00] query: fetching eligible photo IDs from Neon…
+[09:00:01] eligible: 49975 photos eligible in Neon
+[09:00:01] query: fetching indexed document IDs from Typesense…
+[09:00:04] indexed: 51643 documents currently in Typesense
+[09:00:04] diff: missing from TS: 1 | stale in TS: 1089
+[09:00:04] action: inserting 1 missing documents in batches of 500…
+[09:00:04] batch: batch 1: 1/1 upserted (total: 1)
+[09:00:04] action: removing 1089 stale documents in batches of 500…
+[09:00:04] delete: batch 1: removed 500
+[09:00:05] delete: batch 2: removed 500
+[09:00:05] delete: batch 3: removed 89
+
+─────────────────────────────────────────────
+  RECONCILIATION COMPLETE
+─────────────────────────────────────────────
+  eligible count      : 49,975
+  final TS count      : 50,503
+  inserted            : 1
+  removed (stale)     : 1,089
+  execution time      : 4.5s
+─────────────────────────────────────────────
+
+[09:00:00] start: Typesense batch reconcile (batch size: 500)
+[09:00:00] query: fetching eligible photo IDs from Neon…
+[09:00:01] eligible: 61750 photos eligible in Neon
+[09:00:01] query: fetching indexed document IDs from Typesense…
+[09:00:04] indexed: 56473 documents currently in Typesense
+[09:00:04] diff: missing from TS: 6463 | stale in TS: 611
+[09:00:04] action: inserting 6463 missing documents in batches of 500…
+[09:00:05] batch: batch 1: 500/500 upserted (total: 500)
+[09:00:06] batch: batch 2: 500/500 upserted (total: 1000)
+[09:00:07] batch: batch 3: 500/500 upserted (total: 1500)
+[09:00:08] batch: batch 4: 500/500 upserted (total: 2000)
+[09:00:09] batch: batch 5: 500/500 upserted (total: 2500)
+[09:00:11] batch: batch 6: 500/500 upserted (total: 3000)
+[09:00:12] batch: batch 7: 500/500 upserted (total: 3500)
+[09:00:13] batch: batch 8: 500/500 upserted (total: 4000)
+[09:00:14] batch: batch 9: 500/500 upserted (total: 4500)
+[09:00:15] batch: batch 10: 500/500 upserted (total: 5000)
+[09:00:16] batch: batch 11: 500/500 upserted (total: 5500)
+[09:00:17] batch: batch 12: 500/500 upserted (total: 6000)
+[09:00:19] batch: batch 13: 463/463 upserted (total: 6463)
+[09:00:19] action: removing 611 stale documents in batches of 500…
+[09:00:19] delete: batch 1: removed 500
+[09:00:19] delete: batch 2: removed 111
+
+─────────────────────────────────────────────
+  RECONCILIATION COMPLETE
+─────────────────────────────────────────────
+  eligible count      : 61,750
+  final TS count      : 62,278
+  inserted            : 6,463
+  removed (stale)     : 611
+  execution time      : 18.9s
+─────────────────────────────────────────────
+
+[09:00:01] start: Typesense batch reconcile (batch size: 500)
+[09:00:01] query: fetching eligible photo IDs from Neon…
+[09:00:01] eligible: 61797 photos eligible in Neon
+[09:00:01] query: fetching indexed document IDs from Typesense…
+[09:00:05] indexed: 59386 documents currently in Typesense
+[09:00:05] diff: missing from TS: 2881 | stale in TS: 461
+[09:00:05] action: inserting 2881 missing documents in batches of 500…
+[09:00:06] ERROR: batch 1 failed: Request failed with HTTP code 422 | Server said: Rejecting write: running out of resource type: OUT_OF_MEMORY
+[09:00:06] ERROR: batch 2 failed: Request failed with HTTP code 422 | Server said: Rejecting write: running out of resource type: OUT_OF_MEMORY
+[09:00:07] ERROR: batch 3 failed: Request failed with HTTP code 422 | Server said: Rejecting write: running out of resource type: OUT_OF_MEMORY
+[09:00:08] ERROR: batch 4 failed: Request failed with HTTP code 422 | Server said: Rejecting write: running out of resource type: OUT_OF_MEMORY
+[09:00:09] ERROR: batch 5 failed: Request failed with HTTP code 422 | Server said: Rejecting write: running out of resource type: OUT_OF_MEMORY
+[09:00:10] ERROR: batch 6 failed: Request failed with HTTP code 422 | Server said: Rejecting write: running out of resource type: OUT_OF_MEMORY
+[09:00:10] action: removing 461 stale documents in batches of 500…
+[09:00:10] delete: batch 1: removed 461
+
+─────────────────────────────────────────────
+  RECONCILIATION COMPLETE
+─────────────────────────────────────────────
+  eligible count      : 61,797
+  final TS count      : 59,444
+  inserted            : 0
+  removed (stale)     : 461
+  execution time      : 9.5s
+─────────────────────────────────────────────
+
+node:events:486
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: write EPIPE
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:19)
+Emitted 'error' event on TLSSocket instance at:
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  errno: -32,
+  code: 'EPIPE',
+  syscall: 'write'
+}
+
+Node.js v25.6.1
+[09:00:00] start: Typesense batch reconcile (batch size: 500)
+[09:00:00] query: fetching eligible photo IDs from Neon…
+[09:00:01] eligible: 64215 photos eligible in Neon
+[09:00:01] query: fetching indexed document IDs from Typesense…
+[09:00:04] indexed: 60809 documents currently in Typesense
+[09:00:04] diff: missing from TS: 3410 | stale in TS: 4
+[09:00:04] action: inserting 3410 missing documents in batches of 500…
+[09:00:05] ERROR: batch 1 failed: 0 documents imported successfully, 500 documents failed during import. Use `error.importResults` from the raised exception to get a detailed error reason for each document.
+[09:00:07] ERROR: batch 2 failed: 0 documents imported successfully, 500 documents failed during import. Use `error.importResults` from the raised exception to get a detailed error reason for each document.
+[09:00:08] ERROR: batch 3 failed: 0 documents imported successfully, 500 documents failed during import. Use `error.importResults` from the raised exception to get a detailed error reason for each document.
+[09:00:09] ERROR: batch 4 failed: 0 documents imported successfully, 500 documents failed during import. Use `error.importResults` from the raised exception to get a detailed error reason for each document.
+[09:00:10] ERROR: batch 5 failed: Request failed with HTTP code 422 | Server said: Rejecting write: running out of resource type: OUT_OF_MEMORY
+[09:00:10] ERROR: batch 6 failed: Request failed with HTTP code 422 | Server said: Rejecting write: running out of resource type: OUT_OF_MEMORY
+[09:00:11] ERROR: batch 7 failed: Request failed with HTTP code 422 | Server said: Rejecting write: running out of resource type: OUT_OF_MEMORY
+[09:00:11] action: removing 4 stale documents in batches of 500…
+[09:00:11] delete: batch 1: removed 4
+
+─────────────────────────────────────────────
+  RECONCILIATION COMPLETE
+─────────────────────────────────────────────
+  eligible count      : 64,215
+  final TS count      : 60,805
+  inserted            : 0
+  removed (stale)     : 4
+  execution time      : 11.2s
+─────────────────────────────────────────────
+
+node:events:486
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: write EPIPE
+    at WriteWrap.onWriteComplete [as oncomplete] (node:internal/stream_base_commons:87:19)
+Emitted 'error' event on TLSSocket instance at:
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  errno: -32,
+  code: 'EPIPE',
+  syscall: 'write'
+}
+
+Node.js v25.6.1
+[09:00:01] start: Typesense batch reconcile (batch size: 500)
+[09:00:01] query: fetching eligible photo IDs from Neon…
+[09:00:02] eligible: 66770 photos eligible in Neon
+[09:00:02] query: fetching indexed document IDs from Typesense…
+Fatal error: Request failed with HTTP code 403 | Server said: Forbidden - if you are the admin, please visit your Typesense Cloud dashboard for additional information.
+[09:00:00] start: Typesense batch reconcile (batch size: 500)
+[09:00:00] query: fetching eligible photo IDs from Neon…
+[09:00:01] eligible: 66670 photos eligible in Neon
+[09:00:01] query: fetching indexed document IDs from Typesense…
+Fatal error: Request failed with HTTP code 403 | Server said: Forbidden - if you are the admin, please visit your Typesense Cloud dashboard for additional information.
+[09:00:01] start: Typesense batch reconcile (batch size: 500)
+[09:00:01] query: fetching eligible photo IDs from Neon…
+[09:00:02] eligible: 66949 photos eligible in Neon
+[09:00:02] query: fetching indexed document IDs from Typesense…
+Fatal error: Request failed with HTTP code 403 | Server said: Forbidden - if you are the admin, please visit your Typesense Cloud dashboard for additional information.
+[09:00:01] start: Typesense batch reconcile (batch size: 500)
+[09:00:01] query: fetching eligible photo IDs from Neon…
+[09:00:02] eligible: 67178 photos eligible in Neon
+[09:00:02] query: fetching indexed document IDs from Typesense…
+Fatal error: Request failed with HTTP code 403 | Server said: Forbidden - if you are the admin, please visit your Typesense Cloud dashboard for additional information.
+[09:00:00] start: Typesense batch reconcile (batch size: 500)
+[09:00:00] query: fetching eligible photo IDs from Neon…
+[09:00:01] eligible: 67761 photos eligible in Neon
+[09:00:01] query: fetching indexed document IDs from Typesense…
+Fatal error: Request failed with HTTP code 403 | Server said: Forbidden - if you are the admin, please visit your Typesense Cloud dashboard for additional information.
+[09:00:00] start: Typesense batch reconcile (batch size: 500)
+[09:00:00] query: fetching eligible photo IDs from Neon…
+[09:00:01] eligible: 67339 photos eligible in Neon
+[09:00:01] query: fetching indexed document IDs from Typesense…
+[09:00:04] indexed: 63016 documents currently in Typesense
+[09:00:04] diff: missing from TS: 4488 | stale in TS: 165
+[09:00:04] action: inserting 4488 missing documents in batches of 500…
+[09:00:05] ERROR: batch 1 failed: 0 documents imported successfully, 500 documents failed during import. Use `error.importResults` from the raised exception to get a detailed error reason for each document.
+[09:00:06] ERROR: batch 2 failed: 0 documents imported successfully, 500 documents failed during import. Use `error.importResults` from the raised exception to get a detailed error reason for each document.
+[09:00:07] ERROR: batch 3 failed: 0 documents imported successfully, 500 documents failed during import. Use `error.importResults` from the raised exception to get a detailed error reason for each document.
+[09:00:08] ERROR: batch 4 failed: 0 documents imported successfully, 500 documents failed during import. Use `error.importResults` from the raised exception to get a detailed error reason for each document.
+[09:00:09] ERROR: batch 5 failed: 0 documents imported successfully, 500 documents failed during import. Use `error.importResults` from the raised exception to get a detailed error reason for each document.
+[09:00:10] ERROR: batch 6 failed: 0 documents imported successfully, 500 documents failed during import. Use `error.importResults` from the raised exception to get a detailed error reason for each document.
+[09:00:11] ERROR: batch 7 failed: 0 documents imported successfully, 500 documents failed during import. Use `error.importResults` from the raised exception to get a detailed error reason for each document.
+[09:00:12] ERROR: batch 8 failed: 0 documents imported successfully, 500 documents failed during import. Use `error.importResults` from the raised exception to get a detailed error reason for each document.
+[09:00:13] ERROR: batch 9 failed: 0 documents imported successfully, 488 documents failed during import. Use `error.importResults` from the raised exception to get a detailed error reason for each document.
+[09:00:13] action: removing 165 stale documents in batches of 500…
+[09:00:13] delete: batch 1: removed 165
+
+─────────────────────────────────────────────
+  RECONCILIATION COMPLETE
+─────────────────────────────────────────────
+  eligible count      : 67,339
+  final TS count      : 62,851
+  inserted            : 0
+  removed (stale)     : 165
+  execution time      : 12.9s
+─────────────────────────────────────────────
+
+[09:00:00] start: Typesense batch reconcile (batch size: 500)
+[09:00:00] query: fetching eligible photo IDs from Neon…
+[09:00:01] eligible: 68243 photos eligible in Neon
+[09:00:01] query: fetching indexed document IDs from Typesense…
+[09:00:04] indexed: 68382 documents currently in Typesense
+[09:00:04] diff: missing from TS: 194 | stale in TS: 333
+[09:00:04] action: inserting 194 missing documents in batches of 500…
+[09:00:05] batch: batch 1: 194/194 upserted (total: 194)
+[09:00:05] action: removing 333 stale documents in batches of 500…
+[09:00:05] delete: batch 1: removed 333
+
+─────────────────────────────────────────────
+  RECONCILIATION COMPLETE
+─────────────────────────────────────────────
+  eligible count      : 68,243
+  final TS count      : 68,243
+  inserted            : 194
+  removed (stale)     : 333
+  execution time      : 4.8s
+─────────────────────────────────────────────
+
+[09:00:01] start: Typesense batch reconcile (batch size: 500)
+[09:00:01] query: fetching eligible photo IDs from Neon…
+[09:00:02] eligible: 68704 photos eligible in Neon
+[09:00:02] query: fetching indexed document IDs from Typesense…
+[09:00:05] indexed: 69038 documents currently in Typesense
+[09:00:05] diff: missing from TS: 36 | stale in TS: 370
+[09:00:05] action: inserting 36 missing documents in batches of 500…
+[09:00:06] ERROR: batch 1 failed: 0 documents imported successfully, 36 documents failed during import. Use `error.importResults` from the raised exception to get a detailed error reason for each document.
+[09:00:06] action: removing 370 stale documents in batches of 500…
+[09:00:06] delete: batch 1: removed 368
+
+─────────────────────────────────────────────
+  RECONCILIATION COMPLETE
+─────────────────────────────────────────────
+  eligible count      : 68,704
+  final TS count      : 68,668
+  inserted            : 0
+  removed (stale)     : 368
+  execution time      : 5.3s
+─────────────────────────────────────────────
+
+[09:00:00] start: Typesense batch reconcile (batch size: 500)
+[09:00:00] query: fetching eligible photo IDs from Neon…
+[09:00:01] eligible: 66517 photos eligible in Neon
+[09:00:01] query: fetching indexed document IDs from Typesense…
+[09:00:04] indexed: 62454 documents currently in Typesense
+[09:00:04] diff: missing from TS: 4552 | stale in TS: 489
+[09:00:04] action: inserting 4552 missing documents in batches of 500…
+[09:00:05] ERROR: batch 1 failed: 0 documents imported successfully, 500 documents failed during import. Use `error.importResults` from the raised exception to get a detailed error reason for each document.
+[09:00:07] ERROR: batch 2 failed: 0 documents imported successfully, 500 documents failed during import. Use `error.importResults` from the raised exception to get a detailed error reason for each document.
+[09:00:08] ERROR: batch 3 failed: 0 documents imported successfully, 500 documents failed during import. Use `error.importResults` from the raised exception to get a detailed error reason for each document.
+[09:00:10] ERROR: batch 4 failed: 0 documents imported successfully, 500 documents failed during import. Use `error.importResults` from the raised exception to get a detailed error reason for each document.
+[09:00:11] ERROR: batch 5 failed: 0 documents imported successfully, 500 documents failed during import. Use `error.importResults` from the raised exception to get a detailed error reason for each document.
+[09:00:12] ERROR: batch 6 failed: 0 documents imported successfully, 500 documents failed during import. Use `error.importResults` from the raised exception to get a detailed error reason for each document.
+[09:00:13] ERROR: batch 7 failed: 0 documents imported successfully, 500 documents failed during import. Use `error.importResults` from the raised exception to get a detailed error reason for each document.
+[09:00:14] ERROR: batch 8 failed: 0 documents imported successfully, 500 documents failed during import. Use `error.importResults` from the raised exception to get a detailed error reason for each document.
+[09:00:15] ERROR: batch 9 failed: 0 documents imported successfully, 500 documents failed during import. Use `error.importResults` from the raised exception to get a detailed error reason for each document.
+[09:00:15] ERROR: batch 10 failed: 0 documents imported successfully, 52 documents failed during import. Use `error.importResults` from the raised exception to get a detailed error reason for each document.
+[09:00:15] action: removing 489 stale documents in batches of 500…
+[09:00:16] delete: batch 1: removed 489
+
+─────────────────────────────────────────────
+  RECONCILIATION COMPLETE
+─────────────────────────────────────────────
+  eligible count      : 66,517
+  final TS count      : 62,010
+  inserted            : 0
+  removed (stale)     : 489
+  execution time      : 15.5s
+─────────────────────────────────────────────
+
+[09:00:01] start: Typesense batch reconcile (batch size: 500)
+[09:00:01] query: fetching eligible photo IDs from Neon…
+[09:00:02] eligible: 68208 photos eligible in Neon
+[09:00:02] query: fetching indexed document IDs from Typesense…
+[09:00:06] indexed: 69511 documents currently in Typesense
+[09:00:06] diff: missing from TS: 5216 | stale in TS: 303
+[09:00:06] action: inserting 5216 missing documents in batches of 500…
+[09:00:08] ERROR: batch 1 failed: 0 documents imported successfully, 500 documents failed during import. Use `error.importResults` from the raised exception to get a detailed error reason for each document.
+[09:00:10] ERROR: batch 2 failed: 0 documents imported successfully, 500 documents failed during import. Use `error.importResults` from the raised exception to get a detailed error reason for each document.
+[09:00:13] ERROR: batch 3 failed: 0 documents imported successfully, 500 documents failed during import. Use `error.importResults` from the raised exception to get a detailed error reason for each document.
+[09:00:20] ERROR: batch 4 failed: 0 documents imported successfully, 500 documents failed during import. Use `error.importResults` from the raised exception to get a detailed error reason for each document.
+[09:00:24] ERROR: batch 5 failed: 0 documents imported successfully, 500 documents failed during import. Use `error.importResults` from the raised exception to get a detailed error reason for each document.
+[09:00:28] ERROR: batch 6 failed: 0 documents imported successfully, 500 documents failed during import. Use `error.importResults` from the raised exception to get a detailed error reason for each document.
+[09:00:33] ERROR: batch 7 failed: 0 documents imported successfully, 500 documents failed during import. Use `error.importResults` from the raised exception to get a detailed error reason for each document.
+[09:00:36] ERROR: batch 8 failed: 0 documents imported successfully, 500 documents failed during import. Use `error.importResults` from the raised exception to get a detailed error reason for each document.
+[09:00:39] ERROR: batch 9 failed: 0 documents imported successfully, 500 documents failed during import. Use `error.importResults` from the raised exception to get a detailed error reason for each document.
+[09:00:42] ERROR: batch 10 failed: 0 documents imported successfully, 500 documents failed during import. Use `error.importResults` from the raised exception to get a detailed error reason for each document.
+[09:00:44] ERROR: batch 11 failed: 0 documents imported successfully, 216 documents failed during import. Use `error.importResults` from the raised exception to get a detailed error reason for each document.
+[09:00:44] action: removing 303 stale documents in batches of 500…
+[09:00:44] delete: batch 1: removed 303
+
+─────────────────────────────────────────────
+  RECONCILIATION COMPLETE
+─────────────────────────────────────────────
+  eligible count      : 68,208
+  final TS count      : 74,259
+  inserted            : 0
+  removed (stale)     : 303
+  execution time      : 43.6s
+─────────────────────────────────────────────
+
+[09:00:00] start: Typesense batch reconcile (batch size: 500)
+[09:00:00] query: fetching eligible photo IDs from Neon…
+[09:00:03] eligible: 69253 photos eligible in Neon
+[09:00:03] query: fetching indexed document IDs from Typesense…
+[09:00:06] indexed: 57222 documents currently in Typesense
+[09:00:06] diff: missing from TS: 15422 | stale in TS: 356
+[09:00:06] action: inserting 15422 missing documents in batches of 500…
+[09:00:08] ERROR: batch 1 failed: 0 documents imported successfully, 500 documents failed during import. Use `error.importResults` from the raised exception to get a detailed error reason for each document.
+[09:00:10] ERROR: batch 2 failed: 0 documents imported successfully, 500 documents failed during import. Use `error.importResults` from the raised exception to get a detailed error reason for each document.
+[09:00:12] ERROR: batch 3 failed: 0 documents imported successfully, 500 documents failed during import. Use `error.importResults` from the raised exception to get a detailed error reason for each document.
+[09:00:14] ERROR: batch 4 failed: 0 documents imported successfully, 500 documents failed during import. Use `error.importResults` from the raised exception to get a detailed error reason for each document.
+[09:00:16] ERROR: batch 5 failed: 0 documents imported successfully, 500 documents failed during import. Use `error.importResults` from the raised exception to get a detailed error reason for each document.
+[09:00:18] ERROR: batch 6 failed: 0 documents imported successfully, 500 documents failed during import. Use `error.importResults` from the raised exception to get a detailed error reason for each document.
+[09:00:21] ERROR: batch 7 failed: 0 documents imported successfully, 500 documents failed during import. Use `error.importResults` from the raised exception to get a detailed error reason for each document.
+[09:00:23] ERROR: batch 8 failed: 0 documents imported successfully, 500 documents failed during import. Use `error.importResults` from the raised exception to get a detailed error reason for each document.
+[09:00:25] ERROR: batch 9 failed: 0 documents imported successfully, 500 documents failed during import. Use `error.importResults` from the raised exception to get a detailed error reason for each document.
+[09:00:27] ERROR: batch 10 failed: 0 documents imported successfully, 500 documents failed during import. Use `error.importResults` from the raised exception to get a detailed error reason for each document.
+[09:00:28] ERROR: batch 11 failed: 0 documents imported successfully, 500 documents failed during import. Use `error.importResults` from the raised exception to get a detailed error reason for each document.
+[09:00:30] ERROR: batch 12 failed: 0 documents imported successfully, 500 documents failed during import. Use `error.importResults` from the raised exception to get a detailed error reason for each document.
+[09:00:32] ERROR: batch 13 failed: 0 documents imported successfully, 500 documents failed during import. Use `error.importResults` from the raised exception to get a detailed error reason for each document.
+[09:00:33] ERROR: batch 14 failed: 0 documents imported successfully, 500 documents failed during import. Use `error.importResults` from the raised exception to get a detailed error reason for each document.
+[09:00:35] ERROR: batch 15 failed: 0 documents imported successfully, 500 documents failed during import. Use `error.importResults` from the raised exception to get a detailed error reason for each document.
+[09:00:37] ERROR: batch 16 failed: 0 documents imported successfully, 500 documents failed during import. Use `error.importResults` from the raised exception to get a detailed error reason for each document.
+[09:00:40] ERROR: batch 17 failed: 0 documents imported successfully, 500 documents failed during import. Use `error.importResults` from the raised exception to get a detailed error reason for each document.
+[09:00:42] ERROR: batch 18 failed: 0 documents imported successfully, 500 documents failed during import. Use `error.importResults` from the raised exception to get a detailed error reason for each document.
+[09:00:43] ERROR: batch 19 failed: 0 documents imported successfully, 500 documents failed during import. Use `error.importResults` from the raised exception to get a detailed error reason for each document.
+[09:00:45] ERROR: batch 20 failed: 0 documents imported successfully, 500 documents failed during import. Use `error.importResults` from the raised exception to get a detailed error reason for each document.
+[09:00:46] ERROR: batch 21 failed: 0 documents imported successfully, 500 documents failed during import. Use `error.importResults` from the raised exception to get a detailed error reason for each document.
+[09:00:48] ERROR: batch 22 failed: 0 documents imported successfully, 500 documents failed during import. Use `error.importResults` from the raised exception to get a detailed error reason for each document.
+[09:00:50] ERROR: batch 23 failed: 0 documents imported successfully, 500 documents failed during import. Use `error.importResults` from the raised exception to get a detailed error reason for each document.
+[09:00:52] ERROR: batch 24 failed: 0 documents imported successfully, 500 documents failed during import. Use `error.importResults` from the raised exception to get a detailed error reason for each document.
+[09:00:53] ERROR: batch 25 failed: 0 documents imported successfully, 500 documents failed during import. Use `error.importResults` from the raised exception to get a detailed error reason for each document.
+[09:00:55] ERROR: batch 26 failed: 0 documents imported successfully, 500 documents failed during import. Use `error.importResults` from the raised exception to get a detailed error reason for each document.
+[09:00:57] ERROR: batch 27 failed: 0 documents imported successfully, 500 documents failed during import. Use `error.importResults` from the raised exception to get a detailed error reason for each document.
+[09:00:58] ERROR: batch 28 failed: 0 documents imported successfully, 500 documents failed during import. Use `error.importResults` from the raised exception to get a detailed error reason for each document.
+[09:01:00] ERROR: batch 29 failed: 0 documents imported successfully, 500 documents failed during import. Use `error.importResults` from the raised exception to get a detailed error reason for each document.
+[09:01:02] ERROR: batch 30 failed: 0 documents imported successfully, 500 documents failed during import. Use `error.importResults` from the raised exception to get a detailed error reason for each document.
+[09:01:04] ERROR: batch 31 failed: 0 documents imported successfully, 422 documents failed during import. Use `error.importResults` from the raised exception to get a detailed error reason for each document.
+[09:01:04] action: removing 356 stale documents in batches of 500…
+[09:01:04] delete: batch 1: removed 355
+
+─────────────────────────────────────────────
+  RECONCILIATION COMPLETE
+─────────────────────────────────────────────
+  eligible count      : 69,253
+  final TS count      : 61,940
+  inserted            : 0
+  removed (stale)     : 355
+  execution time      : 64.2s
+─────────────────────────────────────────────
+

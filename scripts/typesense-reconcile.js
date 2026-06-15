@@ -201,6 +201,21 @@ async function getTsCount() {
 // ── Main ────────────────────────────────────────────────────────────────────
 async function main() {
   const startTime = Date.now();
+
+  // ── Advisory lock: prevent overlapping runs ──────────────────
+  const ADVISORY_LOCK_KEY = 12342;
+  try {
+    const lockResult = await sql`SELECT pg_try_advisory_lock(${ADVISORY_LOCK_KEY}) AS acquired`;
+    if (!lockResult[0]?.acquired) {
+      log('skip', 'Could not acquire advisory lock — another instance is running. Exiting.');
+      process.exit(0);
+    }
+    log('info', '🔒 Advisory lock acquired');
+  } catch (e) {
+    log('warn', 'Advisory lock check failed (continuing anyway): ' + e.message);
+  }
+
+
   let exitCode = 0;
 
   log('start', `Typesense reconciliation (mode: ${opts.apply ? 'LIVE' : 'DRY-RUN'})`);

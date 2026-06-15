@@ -1,0 +1,70 @@
+name: wild_rebuild_dispatcher
+description: >
+  Scan for photos that have R2 originals and local source paths but are missing
+  derivative derivatives and are not yet in the derivative_rebuild_queue. Insert
+  pending queue entries for up to batch_size photos per run. Keeps the
+  derivative_rebuild_queue filled so workers never starve. Runs daily via cron.
+  10,421 photos currently need queuing.
+
+inputs:
+  batch_size: 200
+  status_filter: "'pending','processing','done','completed'"
+
+steps:
+  - id: count_eligible_not_queued
+    name: count_eligible_not_queued
+    description: Count photos that have R2 originals, local source paths, are active, and are not in the rebuild queue
+    tool: db_query
+    args:
+      sql: |
+        SELECT COUNT(*) as eligible_count
+        FROM photos p
+        WHERE p.status NOT IN ('archived', 'archived_unrecoverable')
+          AND p.r2_original_key IS NOT NULL AND p.r2_original_key != ''
+          AND p.source_path IS NOT NULL AND p.source_path != ''
+          AND NOT EXISTS (
+              SELECT 1 FROM derivative_rebuild_queue q
+              WHERE q.photo_id = p.id AND q.status IN ('pending','processing','done','completed')
+          )
+
+  - id: fetch_eligible_photos
+    name: fetch_eligible_photos
+    description: Fetch up to batch_size eligible photo IDs and slugs to queue
+    tool: db_query
+    args:
+      sql: |
+        SELECT p.id, p.slug, p.source_path, p.r2_original_key
+        FROM photos p
+        WHERE p.status NOT IN ('archived', 'archived_unrecoverable')
+          AND p.r2_original_key IS NOT NULL AND p.r2_original_key != ''
+          AND p.source_path IS NOT NULL AND p.source_path != ''
+          AND NOT EXISTS (
+              SELECT 1 FROM derivative_rebuild_queue q
+              WHERE q.photo_id = p.id AND q.status IN ('pending','processing','done','completed')
+          )
+        ORDER BY p.id ASC
+        LIMIT {{ inputs.batch_size }}
+
+  - id: insert_queue_entries
+    name: insert_queue_entries
+    description: Insert pending derivative_rebuild_queue entries for fetched photos
+    tool: db_upsert
+    args:
+      table: derivative_rebuild_queue
+      conflict_key: photo_id
+      rows: "{{ steps.fetch_eligible_photos.rows }}"
+      set:
+        status: pending
+        attempts: 0
+
+  - id: summary
+    name: summary
+    description: Emit dispatch summary
+    tool: result_emit
+    args:
+      fields:
+        eligible_not_queued_before: "{{ steps.count_eligible_not_queued.rows[0].eligible_count }}"
+        queued_this_run: "{{ steps.insert_queue_entries.upserted_count }}"
+        eligible_not_queued_after: "{{ steps.count_eligible_not_queued.rows[0].eligible_count - steps.insert_queue_entries.upserted_count }}"
+        batch_size: "{{ inputs.batch_size }}"
+        next_action: "repair_batch.py will process the new pending entries; derivative workers will pick them up"

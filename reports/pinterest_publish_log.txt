@@ -1,0 +1,353 @@
+[2026-05-27T19:53:20.623Z] === Pinterest Queue Publisher Started ===
+[2026-05-27T19:53:20.626Z] Loaded 11 cookies
+[2026-05-27T19:53:21.175Z] Got 2 pins from queue
+[2026-05-27T19:53:21.409Z] Fatal: userDataDir option is not supported in `browserType.launch`. Use `browserType.launchPersistentContext` instead
+[2026-05-27T19:55:59.861Z] === Pinterest Queue Publisher Started ===
+[2026-05-27T19:55:59.863Z] Loaded 11 cookies
+[2026-05-27T19:56:00.391Z] Got 2 pins from queue
+[2026-05-27T19:56:01.946Z] Fatal: browserType.launchPersistentContext: Target page, context or browser has been closed
+Browser logs:
+
+<launching> /Users/joshuatenbrink/Library/Caches/ms-playwright/chromium-1208/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,BoundaryEventDispatchTracksNodeRemoval,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,Translate,AutoDeElevate,RenderDocument,OptimizationHints --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --enable-automation --disable-infobars --disable-search-engine-choice-screen --disable-sync --no-sandbox --no-sandbox --disable-setuid-sandbox --user-data-dir=/Users/joshuatenbrink/Downloads/.pinterest-profile --remote-debugging-pipe about:blank
+<launched> pid=91120
+[pid=91120][err] [0527/135601.704407:WARNING:third_party/crashpad/crashpad/util/process/process_memory_mac.cc:94] mach_vm_read(0x16d5dc000, 0x8000): (os/kern) invalid address (1)
+Call log:
+  - <launching> /Users/joshuatenbrink/Library/Caches/ms-playwright/chromium-1208/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,BoundaryEventDispatchTracksNodeRemoval,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,Translate,AutoDeElevate,RenderDocument,OptimizationHints --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --enable-automation --disable-infobars --disable-search-engine-choice-screen --disable-sync --no-sandbox --no-sandbox --disable-setuid-sandbox --user-data-dir=/Users/joshuatenbrink/Downloads/.pinterest-profile --remote-debugging-pipe about:blank
+  - <launched> pid=91120
+  - [pid=91120][err] [0527/135601.704407:WARNING:third_party/crashpad/crashpad/util/process/process_memory_mac.cc:94] mach_vm_read(0x16d5dc000, 0x8000): (os/kern) invalid address (1)
+  - [pid=91120] <gracefully close start>
+  - [pid=91120] <kill>
+  - [pid=91120] <will force kill>
+  - [pid=91120] <process did exit: exitCode=null, signal=SIGTRAP>
+  - [pid=91120] starting temporary directories cleanup
+  - [pid=91120] finished temporary directories cleanup
+  - [pid=91120] <gracefully close end>
+
+[2026-05-27T19:56:39.249Z] === Pinterest Queue Publisher Started ===
+[2026-05-27T19:56:39.252Z] Loaded 11 cookies
+[2026-05-27T19:56:39.776Z] Got 2 pins from queue
+[2026-05-27T19:56:40.629Z] 
+Processing pin 203: Tambor, Nicoya Peninsula Costa Rica Wildlife Photography
+[2026-05-27T19:56:44.666Z]   Logged in - Pin Builder page loaded
+[2026-05-27T19:56:44.666Z]   Pin title: Tambor, Nicoya Peninsula Costa Rica Wildlife Photography
+[2026-05-27T19:56:44.666Z]   Destination: https://wildphotography.com/photo/dji-0222-tambor-nicoya-peninsula-costa-rica-10545?utm_source=pinterest&utm_medium=social&utm_campaign=photo_growth
+[2026-05-27T19:56:44.666Z]   Board ID: 1
+[2026-05-27T19:56:44.739Z]   ERROR: column "error_message" does not exist
+[2026-05-27T19:56:44.810Z] Fatal: column "error_message" does not exist
+[2026-05-27T19:57:39.819Z] === Pinterest Queue Publisher Started ===
+[2026-05-27T19:57:39.822Z] Loaded 11 cookies
+[2026-05-27T19:57:40.404Z] Got 2 pins from queue
+[2026-05-27T19:57:40.954Z] 
+Processing pin 203: Tambor, Nicoya Peninsula Costa Rica Wildlife Photography
+[2026-05-27T19:57:44.559Z]   Logged in - Pin Builder page loaded
+[2026-05-27T19:57:44.559Z]   Pin title: Tambor, Nicoya Peninsula Costa Rica Wildlife Photography
+[2026-05-27T19:57:44.560Z]   Destination: https://wildphotography.com/photo/dji-0222-tambor-nicoya-peninsula-costa-rica-10545?utm_source=pinterest&utm_medium=social&utm_campaign=photo_growth
+[2026-05-27T19:57:44.560Z]   Board ID: 1
+[2026-05-27T19:57:44.632Z]   SUCCESS: Pin builder loaded - manual completion required
+[2026-05-27T19:57:46.709Z] 
+Processing pin 204: Puerto Viejo, Limón Costa Rica Wildlife Photography
+[2026-05-27T19:57:50.082Z]   Logged in - Pin Builder page loaded
+[2026-05-27T19:57:50.083Z]   Pin title: Puerto Viejo, Limón Costa Rica Wildlife Photography
+[2026-05-27T19:57:50.083Z]   Destination: https://wildphotography.com/photo/pano00030-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-6479?utm_source=pinterest&utm_medium=social&utm_campaign=photo_growth
+[2026-05-27T19:57:50.083Z]   Board ID: 1
+[2026-05-27T19:57:50.160Z]   SUCCESS: Pin builder loaded - manual completion required
+[2026-05-27T19:57:52.337Z] 
+=== Done ===
+[2026-05-27T19:59:36.295Z] === Pinterest Queue Publisher Started ===
+[2026-05-27T19:59:36.298Z] Loaded 11 cookies
+[2026-05-27T19:59:36.839Z] Got 20 pins from queue
+[2026-05-27T19:59:37.694Z] 
+Processing pin 4625: Costa Rica Wildlife Photography Calendar | 12-Month Guide
+[2026-05-27T19:59:41.885Z]   Logged in - Pin Builder page loaded
+[2026-05-27T19:59:41.886Z]   Pin title: Costa Rica Wildlife Photography Calendar | 12-Month Guide
+[2026-05-27T19:59:41.886Z]   Destination: https://wildphotography.com/articles/best-months-wildlife-photography-costa-rica-seasonal-guide
+[2026-05-27T19:59:41.886Z]   Board ID: null
+[2026-05-27T19:59:41.962Z]   SUCCESS: Pin builder loaded - manual completion required
+[2026-05-27T19:59:44.038Z] 
+Processing pin 4635: When to Photograph Birds in Costa Rica | Seasonal Patterns
+[2026-05-27T19:59:47.940Z]   Logged in - Pin Builder page loaded
+[2026-05-27T19:59:47.941Z]   Pin title: When to Photograph Birds in Costa Rica | Seasonal Patterns
+[2026-05-27T19:59:47.941Z]   Destination: https://wildphotography.com/articles/best-months-wildlife-photography-costa-rica-seasonal-guide
+[2026-05-27T19:59:47.941Z]   Board ID: null
+[2026-05-27T19:59:48.014Z]   SUCCESS: Pin builder loaded - manual completion required
+[2026-05-27T19:59:50.088Z] 
+Processing pin 111: Scarlet Macaw in Costa Rica: Photos, Habitat & Best Places
+[2026-05-27T19:59:53.488Z]   Logged in - Pin Builder page loaded
+[2026-05-27T19:59:53.490Z]   Pin title: Scarlet Macaw in Costa Rica: Photos, Habitat & Best Places
+[2026-05-27T19:59:53.490Z]   Destination: https://wildphotography.com/species/scarlet-macaw
+[2026-05-27T19:59:53.490Z]   Board ID: 1
+[2026-05-27T19:59:53.562Z]   SUCCESS: Pin builder loaded - manual completion required
+[2026-05-27T19:59:55.642Z] 
+Processing pin 4626: Crocodile Photography Guide | Costa Rica Pacific Coast
+[2026-05-27T19:59:59.045Z]   Logged in - Pin Builder page loaded
+[2026-05-27T19:59:59.045Z]   Pin title: Crocodile Photography Guide | Costa Rica Pacific Coast
+[2026-05-27T19:59:59.046Z]   Destination: https://wildphotography.com/articles/crocodile-photography-costa-rica-field-guide
+[2026-05-27T19:59:59.046Z]   Board ID: null
+[2026-05-27T19:59:59.119Z]   SUCCESS: Pin builder loaded - manual completion required
+[2026-05-27T20:00:01.195Z] 
+Processing pin 4628: Best Wildlife Photography Tours in Costa Rica | 2026 Guide
+[2026-05-27T20:00:04.589Z]   Logged in - Pin Builder page loaded
+[2026-05-27T20:00:04.590Z]   Pin title: Best Wildlife Photography Tours in Costa Rica | 2026 Guide
+[2026-05-27T20:00:04.590Z]   Destination: https://wildphotography.com/articles/best-wildlife-photography-tours-costa-rica-2026
+[2026-05-27T20:00:04.590Z]   Board ID: null
+[2026-05-27T20:00:04.662Z]   SUCCESS: Pin builder loaded - manual completion required
+[2026-05-27T20:00:06.734Z] 
+Processing pin 4627: Red-Eyed Tree Frog Photography Guide | Costa Rica Rainforest
+[2026-05-27T20:00:10.131Z]   Logged in - Pin Builder page loaded
+[2026-05-27T20:00:10.131Z]   Pin title: Red-Eyed Tree Frog Photography Guide | Costa Rica Rainforest
+[2026-05-27T20:00:10.132Z]   Destination: https://wildphotography.com/article/red-eyed-tree-frog-costa-rica-photography-guide
+[2026-05-27T20:00:10.132Z]   Board ID: null
+[2026-05-27T20:00:10.204Z]   SUCCESS: Pin builder loaded - manual completion required
+[2026-05-27T20:00:12.278Z] 
+Processing pin 4633: Bare-throated Tiger Heron | Guanacaste Wetland Photography
+[2026-05-27T20:00:15.708Z]   Logged in - Pin Builder page loaded
+[2026-05-27T20:00:15.708Z]   Pin title: Bare-throated Tiger Heron | Guanacaste Wetland Photography
+[2026-05-27T20:00:15.708Z]   Destination: https://wildphotography.com/species/bare-throated-tiger-heron
+[2026-05-27T20:00:15.708Z]   Board ID: null
+[2026-05-27T20:00:15.780Z]   SUCCESS: Pin builder loaded - manual completion required
+[2026-05-27T20:00:17.860Z] 
+Processing pin 4634: White-headed Capuchin Photography | Manuel Antonio and Guanacaste
+[2026-05-27T20:00:21.267Z]   Logged in - Pin Builder page loaded
+[2026-05-27T20:00:21.267Z]   Pin title: White-headed Capuchin Photography | Manuel Antonio and Guanacaste
+[2026-05-27T20:00:21.267Z]   Destination: https://wildphotography.com/species/white-headed-capuchin
+[2026-05-27T20:00:21.267Z]   Board ID: null
+[2026-05-27T20:00:21.339Z]   SUCCESS: Pin builder loaded - manual completion required
+[2026-05-27T20:00:23.412Z] 
+Processing pin 144: Yellow-headed Caracara in Costa Rica: Photography Guide
+[2026-05-27T20:00:27.555Z]   Logged in - Pin Builder page loaded
+[2026-05-27T20:00:27.555Z]   Pin title: Yellow-headed Caracara in Costa Rica: Photography Guide
+[2026-05-27T20:00:27.555Z]   Destination: https://wildphotography.com/article/species-yellow-headed-caracara
+[2026-05-27T20:00:27.555Z]   Board ID: 1
+[2026-05-27T20:00:27.628Z]   SUCCESS: Pin builder loaded - manual completion required
+[2026-05-27T20:00:29.702Z] 
+Processing pin 178: Rare Rufous Hummingbird Spotted in Costa Rica
+[2026-05-27T20:00:33.639Z]   Logged in - Pin Builder page loaded
+[2026-05-27T20:00:33.639Z]   Pin title: Rare Rufous Hummingbird Spotted in Costa Rica
+[2026-05-27T20:00:33.639Z]   Destination: https://www.wildphotography.com/article/species-rufous-hummingbird
+[2026-05-27T20:00:33.640Z]   Board ID: 1
+[2026-05-27T20:00:33.711Z]   SUCCESS: Pin builder loaded - manual completion required
+[2026-05-27T20:00:35.784Z] 
+Processing pin 174: Cattle Egret Photography — Costa Rica, Costa Rica
+[2026-05-27T20:00:39.223Z]   Logged in - Pin Builder page loaded
+[2026-05-27T20:00:39.224Z]   Pin title: Cattle Egret Photography — Costa Rica, Costa Rica
+[2026-05-27T20:00:39.224Z]   Destination: https://wildphotography.com/article/species-cattle-egret
+[2026-05-27T20:00:39.224Z]   Board ID: 1
+[2026-05-27T20:00:39.298Z]   SUCCESS: Pin builder loaded - manual completion required
+[2026-05-27T20:00:41.371Z] 
+Processing pin 184: Rare Guanacaste Beaches Spotted in Costa Rica
+[2026-05-27T20:00:45.299Z]   Logged in - Pin Builder page loaded
+[2026-05-27T20:00:45.299Z]   Pin title: Rare Guanacaste Beaches Spotted in Costa Rica
+[2026-05-27T20:00:45.300Z]   Destination: https://www.wildphotography.com/article/guanacaste-beaches-costa-rica-photography-guide
+[2026-05-27T20:00:45.300Z]   Board ID: 1
+[2026-05-27T20:00:45.373Z]   SUCCESS: Pin builder loaded - manual completion required
+[2026-05-27T20:00:47.447Z] 
+Processing pin 183: Guanacaste Beaches Photography — Costa Rica, Costa Rica
+[2026-05-27T20:00:51.393Z]   Logged in - Pin Builder page loaded
+[2026-05-27T20:00:51.394Z]   Pin title: Guanacaste Beaches Photography — Costa Rica, Costa Rica
+[2026-05-27T20:00:51.394Z]   Destination: https://www.wildphotography.com/article/guanacaste-beaches-costa-rica-photography-guide
+[2026-05-27T20:00:51.394Z]   Board ID: 1
+[2026-05-27T20:00:51.466Z]   SUCCESS: Pin builder loaded - manual completion required
+[2026-05-27T20:00:53.539Z] 
+Processing pin 182: How to Photograph Guanacaste Beaches in Costa Rica
+[2026-05-27T20:00:56.939Z]   Logged in - Pin Builder page loaded
+[2026-05-27T20:00:56.939Z]   Pin title: How to Photograph Guanacaste Beaches in Costa Rica
+[2026-05-27T20:00:56.940Z]   Destination: https://www.wildphotography.com/article/guanacaste-beaches-costa-rica-photography-guide
+[2026-05-27T20:00:56.940Z]   Board ID: 1
+[2026-05-27T20:00:57.011Z]   SUCCESS: Pin builder loaded - manual completion required
+[2026-05-27T20:00:59.085Z] 
+Processing pin 179: How to Photograph Roseate Spoonbill in Costa Rica
+[2026-05-27T20:01:02.982Z]   Logged in - Pin Builder page loaded
+[2026-05-27T20:01:02.983Z]   Pin title: How to Photograph Roseate Spoonbill in Costa Rica
+[2026-05-27T20:01:02.983Z]   Destination: https://www.wildphotography.com/article/species-roseate-spoonbill
+[2026-05-27T20:01:02.983Z]   Board ID: 1
+[2026-05-27T20:01:03.057Z]   SUCCESS: Pin builder loaded - manual completion required
+[2026-05-27T20:01:05.133Z] 
+Processing pin 181: Rare Roseate Spoonbill Spotted in Costa Rica
+[2026-05-27T20:01:09.109Z]   Logged in - Pin Builder page loaded
+[2026-05-27T20:01:09.110Z]   Pin title: Rare Roseate Spoonbill Spotted in Costa Rica
+[2026-05-27T20:01:09.110Z]   Destination: https://www.wildphotography.com/article/species-roseate-spoonbill
+[2026-05-27T20:01:09.110Z]   Board ID: 1
+[2026-05-27T20:01:09.182Z]   SUCCESS: Pin builder loaded - manual completion required
+[2026-05-27T20:01:11.254Z] 
+Processing pin 172: Rare Humpback Whale Spotted in Costa Rica
+[2026-05-27T20:01:15.247Z]   Logged in - Pin Builder page loaded
+[2026-05-27T20:01:15.248Z]   Pin title: Rare Humpback Whale Spotted in Costa Rica
+[2026-05-27T20:01:15.248Z]   Destination: https://wildphotography.com/article/species-humpback-whale
+[2026-05-27T20:01:15.248Z]   Board ID: 1
+[2026-05-27T20:01:15.321Z]   SUCCESS: Pin builder loaded - manual completion required
+[2026-05-27T20:01:17.395Z] 
+Processing pin 171: Humpback Whale Photography — Costa Rica, Costa Rica
+[2026-05-27T20:01:20.818Z]   Logged in - Pin Builder page loaded
+[2026-05-27T20:01:20.818Z]   Pin title: Humpback Whale Photography — Costa Rica, Costa Rica
+[2026-05-27T20:01:20.818Z]   Destination: https://wildphotography.com/article/species-humpback-whale
+[2026-05-27T20:01:20.818Z]   Board ID: 1
+[2026-05-27T20:01:20.895Z]   SUCCESS: Pin builder loaded - manual completion required
+[2026-05-27T20:01:22.968Z] 
+Processing pin 175: Rare Cattle Egret Spotted in Costa Rica
+[2026-05-27T20:01:26.349Z]   Logged in - Pin Builder page loaded
+[2026-05-27T20:01:26.350Z]   Pin title: Rare Cattle Egret Spotted in Costa Rica
+[2026-05-27T20:01:26.350Z]   Destination: https://www.wildphotography.com/article/species-cattle-egret
+[2026-05-27T20:01:26.350Z]   Board ID: 1
+[2026-05-27T20:01:26.429Z]   SUCCESS: Pin builder loaded - manual completion required
+[2026-05-27T20:01:28.504Z] 
+Processing pin 170: How to Photograph Humpback Whale in Costa Rica
+[2026-05-27T20:01:32.508Z]   Logged in - Pin Builder page loaded
+[2026-05-27T20:01:32.508Z]   Pin title: How to Photograph Humpback Whale in Costa Rica
+[2026-05-27T20:01:32.508Z]   Destination: https://wildphotography.com/article/species-humpback-whale
+[2026-05-27T20:01:32.508Z]   Board ID: 1
+[2026-05-27T20:01:32.590Z]   SUCCESS: Pin builder loaded - manual completion required
+[2026-05-27T20:01:34.794Z] 
+=== Done ===
+[2026-05-30T08:13:28.858Z] === Pinterest Queue Publisher Started ===
+[2026-05-30T08:13:28.860Z] Loaded 15 cookies
+[2026-05-30T08:13:29.395Z] Got 20 pins from queue
+[2026-05-30T08:13:29.950Z] Fatal: browserType.launchPersistentContext: Failed to launch chromium because executable doesn't exist at /Users/joshuatenbrink/Library/Caches/ms-playwright/chromium_headless_shell-1217/chrome-mac-arm64/Headless Shell.app/Contents/MacOS/Headless Shell
+[2026-05-30T08:14:36.487Z] === Pinterest Queue Publisher Started ===
+[2026-05-30T08:14:36.489Z] Loaded 15 cookies
+[2026-05-30T08:14:37.028Z] Got 20 pins from queue
+[2026-05-30T08:14:37.514Z] Fatal: browserType.launchPersistentContext: Failed to launch chromium because executable doesn't exist at /Users/joshuatenbrink/Library/Caches/ms-playwright/chromium_headless_shell-1217/chrome-headless-shell-mac-arm64/Headless Shell.app/Contents/MacOS/Headless Shell
+[2026-05-30T08:17:08.867Z] === Pinterest Queue Publisher Started ===
+[2026-05-30T08:17:08.869Z] Loaded 15 cookies
+[2026-05-30T08:17:09.439Z] Got 20 pins from queue
+[2026-05-30T08:17:11.375Z] 
+Processing pin 180: Roseate Spoonbill Photography — Costa Rica, Costa Rica
+[2026-05-30T08:17:15.728Z]   Logged in - Pin Builder page loaded
+[2026-05-30T08:17:15.728Z]   Pin title: Roseate Spoonbill Photography — Costa Rica, Costa Rica
+[2026-05-30T08:17:15.728Z]   Destination: https://www.wildphotography.com/article/species-roseate-spoonbill
+[2026-05-30T08:17:15.728Z]   Board ID: 1
+[2026-05-30T08:17:15.800Z]   SUCCESS: Pin builder loaded - manual completion required
+[2026-05-30T08:17:17.876Z] 
+Processing pin 177: Rufous Hummingbird Photography — Costa Rica, Costa Rica
+[2026-05-30T08:17:21.297Z]   Logged in - Pin Builder page loaded
+[2026-05-30T08:17:21.297Z]   Pin title: Rufous Hummingbird Photography — Costa Rica, Costa Rica
+[2026-05-30T08:17:21.297Z]   Destination: https://www.wildphotography.com/article/species-rufous-hummingbird
+[2026-05-30T08:17:21.297Z]   Board ID: 1
+[2026-05-30T08:17:21.374Z]   SUCCESS: Pin builder loaded - manual completion required
+[2026-05-30T08:17:23.449Z] 
+Processing pin 173: How to Photograph Cattle Egret in Costa Rica
+[2026-05-30T08:17:26.855Z]   Logged in - Pin Builder page loaded
+[2026-05-30T08:17:26.855Z]   Pin title: How to Photograph Cattle Egret in Costa Rica
+[2026-05-30T08:17:26.855Z]   Destination: https://wildphotography.com/article/species-cattle-egret
+[2026-05-30T08:17:26.855Z]   Board ID: 1
+[2026-05-30T08:17:26.926Z]   SUCCESS: Pin builder loaded - manual completion required
+[2026-05-30T08:17:29.003Z] 
+Processing pin 176: How to Photograph Rufous Hummingbird in Costa Rica
+[2026-05-30T08:17:32.412Z]   Logged in - Pin Builder page loaded
+[2026-05-30T08:17:32.413Z]   Pin title: How to Photograph Rufous Hummingbird in Costa Rica
+[2026-05-30T08:17:32.413Z]   Destination: https://www.wildphotography.com/article/species-rufous-hummingbird
+[2026-05-30T08:17:32.413Z]   Board ID: 1
+[2026-05-30T08:17:32.492Z]   SUCCESS: Pin builder loaded - manual completion required
+[2026-05-30T08:17:34.573Z] 
+Processing pin 1511: landscape — Samara-Playa-Carillo — DJI_0224 | WildPhotography
+[2026-05-30T08:17:38.048Z]   Logged in - Pin Builder page loaded
+[2026-05-30T08:17:38.049Z]   Pin title: landscape — Samara-Playa-Carillo — DJI_0224 | WildPhotography
+[2026-05-30T08:17:38.050Z]   Destination: https://www.wildphotography.com/photo/dji-0224-a64b39d9
+[2026-05-30T08:17:38.050Z]   Board ID: costa-rica-photography
+[2026-05-30T08:17:38.127Z]   SUCCESS: Pin builder loaded - manual completion required
+[2026-05-30T08:17:40.201Z] 
+Processing pin 1514: landscape — Samara-Playa-Carillo — DJI_0220 | WildPhotography
+[2026-05-30T08:17:43.610Z]   Logged in - Pin Builder page loaded
+[2026-05-30T08:17:43.611Z]   Pin title: landscape — Samara-Playa-Carillo — DJI_0220 | WildPhotography
+[2026-05-30T08:17:43.611Z]   Destination: https://www.wildphotography.com/photo/dji-0220-c1683792
+[2026-05-30T08:17:43.611Z]   Board ID: costa-rica-photography
+[2026-05-30T08:17:43.686Z]   SUCCESS: Pin builder loaded - manual completion required
+[2026-05-30T08:17:45.758Z] 
+Processing pin 1515: landscape — Samara-Playa-Carillo — DJI_0218 | WildPhotography
+[2026-05-30T08:17:49.173Z]   Logged in - Pin Builder page loaded
+[2026-05-30T08:17:49.174Z]   Pin title: landscape — Samara-Playa-Carillo — DJI_0218 | WildPhotography
+[2026-05-30T08:17:49.174Z]   Destination: https://www.wildphotography.com/photo/dji-0218-8ca0516d
+[2026-05-30T08:17:49.174Z]   Board ID: costa-rica-photography
+[2026-05-30T08:17:49.247Z]   SUCCESS: Pin builder loaded - manual completion required
+[2026-05-30T08:17:51.318Z] 
+Processing pin 1505: landscape — Samara-Playa-Carillo — DJI_0234 | WildPhotography
+[2026-05-30T08:17:54.788Z]   Logged in - Pin Builder page loaded
+[2026-05-30T08:17:54.789Z]   Pin title: landscape — Samara-Playa-Carillo — DJI_0234 | WildPhotography
+[2026-05-30T08:17:54.789Z]   Destination: https://www.wildphotography.com/photo/dji-0234-0035d6de
+[2026-05-30T08:17:54.789Z]   Board ID: costa-rica-photography
+[2026-05-30T08:17:54.862Z]   SUCCESS: Pin builder loaded - manual completion required
+[2026-05-30T08:17:56.938Z] 
+Processing pin 1507: landscape — Samara-Playa-Carillo — DJI_0231 | WildPhotography
+[2026-05-30T08:18:00.399Z]   Logged in - Pin Builder page loaded
+[2026-05-30T08:18:00.399Z]   Pin title: landscape — Samara-Playa-Carillo — DJI_0231 | WildPhotography
+[2026-05-30T08:18:00.399Z]   Destination: https://www.wildphotography.com/photo/dji-0231-6ec1d476
+[2026-05-30T08:18:00.400Z]   Board ID: costa-rica-photography
+[2026-05-30T08:18:00.472Z]   SUCCESS: Pin builder loaded - manual completion required
+[2026-05-30T08:18:02.546Z] 
+Processing pin 1506: landscape — Samara-Playa-Carillo — DJI_0233 | WildPhotography
+[2026-05-30T08:18:06.023Z]   Logged in - Pin Builder page loaded
+[2026-05-30T08:18:06.023Z]   Pin title: landscape — Samara-Playa-Carillo — DJI_0233 | WildPhotography
+[2026-05-30T08:18:06.023Z]   Destination: https://www.wildphotography.com/photo/dji-0233-46f6c558
+[2026-05-30T08:18:06.024Z]   Board ID: costa-rica-photography
+[2026-05-30T08:18:06.102Z]   SUCCESS: Pin builder loaded - manual completion required
+[2026-05-30T08:18:08.177Z] 
+Processing pin 1509: landscape — Samara-Playa-Carillo — DJI_0227 | WildPhotography
+[2026-05-30T08:18:11.591Z]   Logged in - Pin Builder page loaded
+[2026-05-30T08:18:11.592Z]   Pin title: landscape — Samara-Playa-Carillo — DJI_0227 | WildPhotography
+[2026-05-30T08:18:11.592Z]   Destination: https://www.wildphotography.com/photo/dji-0227-3fcdc220
+[2026-05-30T08:18:11.592Z]   Board ID: costa-rica-photography
+[2026-05-30T08:18:11.669Z]   SUCCESS: Pin builder loaded - manual completion required
+[2026-05-30T08:18:13.745Z] 
+Processing pin 1510: landscape — Samara-Playa-Carillo — DJI_0225 | WildPhotography
+[2026-05-30T08:18:17.132Z]   Logged in - Pin Builder page loaded
+[2026-05-30T08:18:17.132Z]   Pin title: landscape — Samara-Playa-Carillo — DJI_0225 | WildPhotography
+[2026-05-30T08:18:17.132Z]   Destination: https://www.wildphotography.com/photo/dji-0225-f3294e32
+[2026-05-30T08:18:17.132Z]   Board ID: costa-rica-photography
+[2026-05-30T08:18:17.206Z]   SUCCESS: Pin builder loaded - manual completion required
+[2026-05-30T08:18:19.279Z] 
+Processing pin 1512: landscape — Samara-Playa-Carillo — DJI_0223 | WildPhotography
+[2026-05-30T08:18:22.701Z]   Logged in - Pin Builder page loaded
+[2026-05-30T08:18:22.701Z]   Pin title: landscape — Samara-Playa-Carillo — DJI_0223 | WildPhotography
+[2026-05-30T08:18:22.701Z]   Destination: https://www.wildphotography.com/photo/dji-0223-90e017de
+[2026-05-30T08:18:22.701Z]   Board ID: costa-rica-photography
+[2026-05-30T08:18:22.778Z]   SUCCESS: Pin builder loaded - manual completion required
+[2026-05-30T08:18:24.861Z] 
+Processing pin 1513: landscape — Samara-Playa-Carillo — DJI_0222 | WildPhotography
+[2026-05-30T08:18:28.251Z]   Logged in - Pin Builder page loaded
+[2026-05-30T08:18:28.251Z]   Pin title: landscape — Samara-Playa-Carillo — DJI_0222 | WildPhotography
+[2026-05-30T08:18:28.251Z]   Destination: https://www.wildphotography.com/photo/dji-0222-18c83eb0
+[2026-05-30T08:18:28.251Z]   Board ID: costa-rica-photography
+[2026-05-30T08:18:28.330Z]   SUCCESS: Pin builder loaded - manual completion required
+[2026-05-30T08:18:30.404Z] 
+Processing pin 1500: landscape — Samara-Playa-Carillo — DJI_0240 | WildPhotography
+[2026-05-30T08:18:33.827Z]   Logged in - Pin Builder page loaded
+[2026-05-30T08:18:33.827Z]   Pin title: landscape — Samara-Playa-Carillo — DJI_0240 | WildPhotography
+[2026-05-30T08:18:33.827Z]   Destination: https://www.wildphotography.com/photo/dji-0240-72bf867a
+[2026-05-30T08:18:33.827Z]   Board ID: costa-rica-photography
+[2026-05-30T08:18:33.903Z]   SUCCESS: Pin builder loaded - manual completion required
+[2026-05-30T08:18:35.975Z] 
+Processing pin 1502: landscape — Samara-Playa-Carillo — DJI_0237 | WildPhotography
+[2026-05-30T08:18:39.381Z]   Logged in - Pin Builder page loaded
+[2026-05-30T08:18:39.381Z]   Pin title: landscape — Samara-Playa-Carillo — DJI_0237 | WildPhotography
+[2026-05-30T08:18:39.381Z]   Destination: https://www.wildphotography.com/photo/dji-0237-398dc58a
+[2026-05-30T08:18:39.382Z]   Board ID: costa-rica-photography
+[2026-05-30T08:18:39.452Z]   SUCCESS: Pin builder loaded - manual completion required
+[2026-05-30T08:18:41.525Z] 
+Processing pin 1498: landscape — Samara-Playa-Carillo — DJI_0243 | WildPhotography
+[2026-05-30T08:18:45.012Z]   Logged in - Pin Builder page loaded
+[2026-05-30T08:18:45.013Z]   Pin title: landscape — Samara-Playa-Carillo — DJI_0243 | WildPhotography
+[2026-05-30T08:18:45.013Z]   Destination: https://www.wildphotography.com/photo/dji-0243-3e85972c
+[2026-05-30T08:18:45.013Z]   Board ID: costa-rica-photography
+[2026-05-30T08:18:45.083Z]   SUCCESS: Pin builder loaded - manual completion required
+[2026-05-30T08:18:47.156Z] 
+Processing pin 1501: landscape — Samara-Playa-Carillo — DJI_0239 | WildPhotography
+[2026-05-30T08:18:50.567Z]   Logged in - Pin Builder page loaded
+[2026-05-30T08:18:50.567Z]   Pin title: landscape — Samara-Playa-Carillo — DJI_0239 | WildPhotography
+[2026-05-30T08:18:50.567Z]   Destination: https://www.wildphotography.com/photo/dji-0239-62e33802
+[2026-05-30T08:18:50.567Z]   Board ID: costa-rica-photography
+[2026-05-30T08:18:50.640Z]   SUCCESS: Pin builder loaded - manual completion required
+[2026-05-30T08:18:52.713Z] 
+Processing pin 1504: landscape — Samara-Playa-Carillo — DJI_0235 | WildPhotography
+[2026-05-30T08:18:56.126Z]   Logged in - Pin Builder page loaded
+[2026-05-30T08:18:56.126Z]   Pin title: landscape — Samara-Playa-Carillo — DJI_0235 | WildPhotography
+[2026-05-30T08:18:56.126Z]   Destination: https://www.wildphotography.com/photo/dji-0235-7159d1df
+[2026-05-30T08:18:56.126Z]   Board ID: costa-rica-photography
+[2026-05-30T08:18:56.202Z]   SUCCESS: Pin builder loaded - manual completion required
+[2026-05-30T08:18:58.275Z] 
+Processing pin 1499: landscape — Samara-Playa-Carillo — DJI_0241 | WildPhotography
+[2026-05-30T08:19:01.710Z]   Logged in - Pin Builder page loaded
+[2026-05-30T08:19:01.712Z]   Pin title: landscape — Samara-Playa-Carillo — DJI_0241 | WildPhotography
+[2026-05-30T08:19:01.713Z]   Destination: https://www.wildphotography.com/photo/dji-0241-eabe8d09
+[2026-05-30T08:19:01.713Z]   Board ID: costa-rica-photography
+[2026-05-30T08:19:01.785Z]   SUCCESS: Pin builder loaded - manual completion required
+[2026-05-30T08:19:04.058Z] 
+=== Done ===

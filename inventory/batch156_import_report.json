@@ -1,0 +1,91 @@
+{
+  "batch": 156,
+  "timestamp": "2026-06-10T12:10:53.311464Z",
+  "folders_processed": 5,
+  "folders_seen": [
+    "Costa-Rica-Gallery/Dominical-and-Uvita",
+    "Costa-Rica-Gallery/Flora-Fauna",
+    "Costa-Rica-Gallery/Food-",
+    "Costa-Rica-Gallery/Guanacaste-Costa-Rica-Travel-and-Tourism",
+    "Costa-Rica-Gallery/Heredia-Costa-Rica"
+  ],
+  "folders_with_existing_gallery_match": [
+    "Costa-Rica-Gallery/Dominical-and-Uvita",
+    "Costa-Rica-Gallery/Flora-Fauna",
+    "Costa-Rica-Gallery/Food-",
+    "Costa-Rica-Gallery/Guanacaste-Costa-Rica-Travel-and-Tourism",
+    "Costa-Rica-Gallery/Heredia-Costa-Rica"
+  ],
+  "folders_skipped_no_existing_gallery": [],
+  "folders_skipped_ambiguous_mapping": [],
+  "photos_scanned": 579,
+  "duplicates_skipped": 579,
+  "filename_collisions_renamed": 0,
+  "new_imported": 0,
+  "failed": 0,
+  "failed_paths": [],
+  "new_photo_ids": [],
+  "derivatives_generated": 0,
+  "og_images_set": 0,
+  "seo_titles_generated": 0,
+  "seo_metadata_generated": 0,
+  "ready_for_public_render": 0,
+  "search_ready": 0,
+  "skipped_existing_high_quality": 0,
+  "repaired_prior_collision_records": 0,
+  "per_gallery": {
+    "Dominical-and-Uvita": {
+      "total_on_disk": 50,
+      "new": 0,
+      "duplicates": 50,
+      "filename_collisions": 0,
+      "status": "fully_imported",
+      "gallery_id": 31,
+      "gallery_slug": "dominical-and-uvita"
+    },
+    "Flora-Fauna": {
+      "total_on_disk": 64,
+      "new": 0,
+      "duplicates": 64,
+      "filename_collisions": 0,
+      "status": "fully_imported",
+      "gallery_id": 34,
+      "gallery_slug": "flora-fauna"
+    },
+    "Food-": {
+      "total_on_disk": 386,
+      "new": 0,
+      "duplicates": 386,
+      "filename_collisions": 0,
+      "status": "fully_imported",
+      "gallery_id": 37,
+      "gallery_slug": "food"
+    },
+    "Guanacaste-Costa-Rica-Travel-and-Tourism": {
+      "total_on_disk": 68,
+      "new": 0,
+      "duplicates": 68,
+      "filename_collisions": 0,
+      "status": "fully_imported",
+      "gallery_id": 40,
+      "gallery_slug": "guanacaste-costa-rica-travel-and-tourism"
+    },
+    "Heredia-Costa-Rica": {
+      "total_on_disk": 11,
+      "new": 0,
+      "duplicates": 11,
+      "filename_collisions": 0,
+      "status": "fully_imported",
+      "gallery_id": 41,
+      "gallery_slug": "heredia-costa-rica"
+    }
+  },
+  "existing_gallery_ids_used": [
+    31,
+    34,
+    37,
+    40,
+    41
+  ],
+  "inactive_galleries": []
+}

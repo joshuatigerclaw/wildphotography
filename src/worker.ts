@@ -62,6 +62,26 @@ export default {
 
     try {
       // API routes
+      // GET /api/search (legacy redirect → public endpoint)
+      if (path === 'api/search') {
+        const q = url.searchParams.get('q') || '';
+        const { searchPhotos } = await import('./lib/db');
+        const photos = await searchPhotos(q, 20);
+        return Response.json({
+          query: q,
+          count: photos.length,
+          results: photos.map((p: any) => ({
+            slug: p.slug,
+            title: p.title,
+            thumb_url: p.thumb_url,
+            small_url: p.small_url,
+            medium_url: p.medium_url,
+            large_url: p.large_url,
+            canonical_url: `${env.SITE_URL}/photo/${p.slug}`,
+          })),
+        });
+      }
+
       if (path === 'api/v1/health') {
         return handleHealth();
       }

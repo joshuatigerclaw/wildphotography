@@ -1,0 +1,114 @@
+{
+  "batch": 157,
+  "timestamp": "2026-06-10T12:14:44.720624Z",
+  "folders_processed": 5,
+  "folders_seen": [
+    "Costa-Rica-Gallery/Hotels-of-Costa-Rica",
+    "Costa-Rica-Gallery/Industrial-Costa-Rica",
+    "Costa-Rica-Gallery/Inspirational-Quotes",
+    "Costa-Rica-Gallery/Isla-San-Lucas-Puntarenas-Costa-Rica",
+    "Costa-Rica-Gallery/Isla-Tortuga"
+  ],
+  "folders_with_existing_gallery_match": [
+    "Costa-Rica-Gallery/Hotels-of-Costa-Rica",
+    "Costa-Rica-Gallery/Industrial-Costa-Rica",
+    "Costa-Rica-Gallery/Inspirational-Quotes",
+    "Costa-Rica-Gallery/Isla-San-Lucas-Puntarenas-Costa-Rica",
+    "Costa-Rica-Gallery/Isla-Tortuga"
+  ],
+  "folders_skipped_no_existing_gallery": [],
+  "folders_skipped_ambiguous_mapping": [],
+  "photos_scanned": 476,
+  "duplicates_skipped": 454,
+  "filename_collisions_renamed": 0,
+  "new_imported": 22,
+  "failed": 0,
+  "failed_paths": [],
+  "new_photo_ids": [
+    94576,
+    94577,
+    94578,
+    94579,
+    94580,
+    94581,
+    94582,
+    94583,
+    94584,
+    94585,
+    94586,
+    94587,
+    94588,
+    94589,
+    94590,
+    94591,
+    94592,
+    94593,
+    94594,
+    94595,
+    94596,
+    94597
+  ],
+  "derivatives_generated": 110,
+  "og_images_set": 0,
+  "seo_titles_generated": 0,
+  "seo_metadata_generated": 0,
+  "ready_for_public_render": 22,
+  "search_ready": 22,
+  "skipped_existing_high_quality": 0,
+  "repaired_prior_collision_records": 0,
+  "per_gallery": {
+    "Hotels-of-Costa-Rica": {
+      "total_on_disk": 17,
+      "new": 0,
+      "duplicates": 17,
+      "filename_collisions": 0,
+      "status": "fully_imported",
+      "gallery_id": 42,
+      "gallery_slug": "hotels-of-costa-rica"
+    },
+    "Industrial-Costa-Rica": {
+      "total_on_disk": 35,
+      "new": 0,
+      "duplicates": 35,
+      "filename_collisions": 0,
+      "status": "fully_imported",
+      "gallery_id": 43,
+      "gallery_slug": "industrial-costa-rica"
+    },
+    "Inspirational-Quotes": {
+      "total_on_disk": 63,
+      "new": 0,
+      "duplicates": 63,
+      "filename_collisions": 0,
+      "status": "fully_imported",
+      "gallery_id": 45,
+      "gallery_slug": "inspirational-quotes"
+    },
+    "Isla-San-Lucas-Puntarenas-Costa-Rica": {
+      "total_on_disk": 22,
+      "new": 22,
+      "duplicates": 0,
+      "filename_collisions": 0,
+      "status": "new_import",
+      "gallery_id": 46,
+      "gallery_slug": "isla-san-lucas-puntarenas-costa-rica"
+    },
+    "Isla-Tortuga": {
+      "total_on_disk": 339,
+      "new": 0,
+      "duplicates": 339,
+      "filename_collisions": 0,
+      "status": "fully_imported",
+      "gallery_id": 47,
+      "gallery_slug": "isla-tortuga"
+    }
+  },
+  "existing_gallery_ids_used": [
+    42,
+    43,
+    45,
+    46,
+    47
+  ],
+  "inactive_galleries": []
+}

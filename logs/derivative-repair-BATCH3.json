@@ -1,0 +1,1417 @@
+{
+  "batch": 3,
+  "startedAt": "2026-06-01T22:09:55.419Z",
+  "attempted": 50,
+  "repaired": 50,
+  "failed": 0,
+  "cannotRepair": 0,
+  "repairs": [
+    {
+      "photoId": 6039,
+      "slug": "cl0a7873-birds-macaws-lapas-2657",
+      "repaired": true,
+      "error": null,
+      "derivs": {
+        "thumb": {
+          "key": "derivatives/thumbs/6039.webp",
+          "url": "https://images.wildphotography.com/derivatives/thumbs/6039.webp",
+          "bytes": 34434
+        },
+        "small": {
+          "key": "derivatives/small/6039.webp",
+          "url": "https://images.wildphotography.com/derivatives/small/6039.webp",
+          "bytes": 127922
+        },
+        "medium": {
+          "key": "derivatives/medium/6039.webp",
+          "url": "https://images.wildphotography.com/derivatives/medium/6039.webp",
+          "bytes": 342674
+        },
+        "large": {
+          "key": "derivatives/large/6039.webp",
+          "url": "https://images.wildphotography.com/derivatives/large/6039.webp",
+          "bytes": 728352
+        }
+      }
+    },
+    {
+      "photoId": 6073,
+      "slug": "dji-0054-birds-macaws-lapas-2691",
+      "repaired": true,
+      "error": null,
+      "derivs": {
+        "thumb": {
+          "key": "derivatives/thumbs/6073.webp",
+          "url": "https://images.wildphotography.com/derivatives/thumbs/6073.webp",
+          "bytes": 34046
+        },
+        "small": {
+          "key": "derivatives/small/6073.webp",
+          "url": "https://images.wildphotography.com/derivatives/small/6073.webp",
+          "bytes": 168426
+        },
+        "medium": {
+          "key": "derivatives/medium/6073.webp",
+          "url": "https://images.wildphotography.com/derivatives/medium/6073.webp",
+          "bytes": 619212
+        },
+        "large": {
+          "key": "derivatives/large/6073.webp",
+          "url": "https://images.wildphotography.com/derivatives/large/6073.webp",
+          "bytes": 1512902
+        }
+      }
+    },
+    {
+      "photoId": 34786,
+      "slug": "peninsula-de-osa-dji-0722-64b943e3",
+      "repaired": true,
+      "error": null,
+      "derivs": {
+        "thumb": {
+          "key": "derivatives/thumbs/34786.webp",
+          "url": "https://images.wildphotography.com/derivatives/thumbs/34786.webp",
+          "bytes": 15372
+        },
+        "small": {
+          "key": "derivatives/small/34786.webp",
+          "url": "https://images.wildphotography.com/derivatives/small/34786.webp",
+          "bytes": 110018
+        },
+        "medium": {
+          "key": "derivatives/medium/34786.webp",
+          "url": "https://images.wildphotography.com/derivatives/medium/34786.webp",
+          "bytes": 554234
+        },
+        "large": {
+          "key": "derivatives/large/34786.webp",
+          "url": "https://images.wildphotography.com/derivatives/large/34786.webp",
+          "bytes": 1422256
+        }
+      }
+    },
+    {
+      "photoId": 38924,
+      "slug": "landmarks-2024-02-15-104441-4d9e82",
+      "repaired": true,
+      "error": null,
+      "derivs": {
+        "thumb": {
+          "key": "derivatives/thumbs/38924.webp",
+          "url": "https://images.wildphotography.com/derivatives/thumbs/38924.webp",
+          "bytes": 25990
+        },
+        "small": {
+          "key": "derivatives/small/38924.webp",
+          "url": "https://images.wildphotography.com/derivatives/small/38924.webp",
+          "bytes": 153016
+        },
+        "medium": {
+          "key": "derivatives/medium/38924.webp",
+          "url": "https://images.wildphotography.com/derivatives/medium/38924.webp",
+          "bytes": 574746
+        },
+        "large": {
+          "key": "derivatives/large/38924.webp",
+          "url": "https://images.wildphotography.com/derivatives/large/38924.webp",
+          "bytes": 1245822
+        }
+      }
+    },
+    {
+      "photoId": 34304,
+      "slug": "2020-11-26-14-11-13-5806c105-5806c1",
+      "repaired": true,
+      "error": null,
+      "derivs": {
+        "thumb": {
+          "key": "derivatives/thumbs/34304.webp",
+          "url": "https://images.wildphotography.com/derivatives/thumbs/34304.webp",
+          "bytes": 26426
+        },
+        "small": {
+          "key": "derivatives/small/34304.webp",
+          "url": "https://images.wildphotography.com/derivatives/small/34304.webp",
+          "bytes": 141344
+        },
+        "medium": {
+          "key": "derivatives/medium/34304.webp",
+          "url": "https://images.wildphotography.com/derivatives/medium/34304.webp",
+          "bytes": 501218
+        },
+        "large": {
+          "key": "derivatives/large/34304.webp",
+          "url": "https://images.wildphotography.com/derivatives/large/34304.webp",
+          "bytes": 1066346
+        }
+      }
+    },
+    {
+      "photoId": 11053,
+      "slug": "dji-0205-perez-zeledon-san-isidro-del-general-7671",
+      "repaired": true,
+      "error": null,
+      "derivs": {
+        "thumb": {
+          "key": "derivatives/thumbs/11053.webp",
+          "url": "https://images.wildphotography.com/derivatives/thumbs/11053.webp",
+          "bytes": 32868
+        },
+        "small": {
+          "key": "derivatives/small/11053.webp",
+          "url": "https://images.wildphotography.com/derivatives/small/11053.webp",
+          "bytes": 164454
+        },
+        "medium": {
+          "key": "derivatives/medium/11053.webp",
+          "url": "https://images.wildphotography.com/derivatives/medium/11053.webp",
+          "bytes": 582132
+        },
+        "large": {
+          "key": "derivatives/large/11053.webp",
+          "url": "https://images.wildphotography.com/derivatives/large/11053.webp",
+          "bytes": 1297382
+        }
+      }
+    },
+    {
+      "photoId": 13631,
+      "slug": "dji-0956-tamarindo-guanacaste-costa-rica-10249",
+      "repaired": true,
+      "error": null,
+      "derivs": {
+        "thumb": {
+          "key": "derivatives/thumbs/13631.webp",
+          "url": "https://images.wildphotography.com/derivatives/thumbs/13631.webp",
+          "bytes": 33922
+        },
+        "small": {
+          "key": "derivatives/small/13631.webp",
+          "url": "https://images.wildphotography.com/derivatives/small/13631.webp",
+          "bytes": 187436
+        },
+        "medium": {
+          "key": "derivatives/medium/13631.webp",
+          "url": "https://images.wildphotography.com/derivatives/medium/13631.webp",
+          "bytes": 679456
+        },
+        "large": {
+          "key": "derivatives/large/13631.webp",
+          "url": "https://images.wildphotography.com/derivatives/large/13631.webp",
+          "bytes": 1578202
+        }
+      }
+    },
+    {
+      "photoId": 13912,
+      "slug": "dji-0185-tambor-nicoya-peninsula-costa-rica-10530",
+      "repaired": true,
+      "error": null,
+      "derivs": {
+        "thumb": {
+          "key": "derivatives/thumbs/13912.webp",
+          "url": "https://images.wildphotography.com/derivatives/thumbs/13912.webp",
+          "bytes": 5964
+        },
+        "small": {
+          "key": "derivatives/small/13912.webp",
+          "url": "https://images.wildphotography.com/derivatives/small/13912.webp",
+          "bytes": 36256
+        },
+        "medium": {
+          "key": "derivatives/medium/13912.webp",
+          "url": "https://images.wildphotography.com/derivatives/medium/13912.webp",
+          "bytes": 149282
+        },
+        "large": {
+          "key": "derivatives/large/13912.webp",
+          "url": "https://images.wildphotography.com/derivatives/large/13912.webp",
+          "bytes": 375788
+        }
+      }
+    },
+    {
+      "photoId": 4678,
+      "slug": "2023-12-27-13-00-56-9088",
+      "repaired": true,
+      "error": null,
+      "derivs": {
+        "thumb": {
+          "key": "derivatives/thumbs/4678.webp",
+          "url": "https://images.wildphotography.com/derivatives/thumbs/4678.webp",
+          "bytes": 40670
+        },
+        "small": {
+          "key": "derivatives/small/4678.webp",
+          "url": "https://images.wildphotography.com/derivatives/small/4678.webp",
+          "bytes": 237912
+        },
+        "medium": {
+          "key": "derivatives/medium/4678.webp",
+          "url": "https://images.wildphotography.com/derivatives/medium/4678.webp",
+          "bytes": 818160
+        },
+        "large": {
+          "key": "derivatives/large/4678.webp",
+          "url": "https://images.wildphotography.com/derivatives/large/4678.webp",
+          "bytes": 1831838
+        }
+      }
+    },
+    {
+      "photoId": 8232,
+      "slug": "dji-0124-isla-tortuga-4850",
+      "repaired": true,
+      "error": null,
+      "derivs": {
+        "thumb": {
+          "key": "derivatives/thumbs/8232.webp",
+          "url": "https://images.wildphotography.com/derivatives/thumbs/8232.webp",
+          "bytes": 11004
+        },
+        "small": {
+          "key": "derivatives/small/8232.webp",
+          "url": "https://images.wildphotography.com/derivatives/small/8232.webp",
+          "bytes": 57140
+        },
+        "medium": {
+          "key": "derivatives/medium/8232.webp",
+          "url": "https://images.wildphotography.com/derivatives/medium/8232.webp",
+          "bytes": 221756
+        },
+        "large": {
+          "key": "derivatives/large/8232.webp",
+          "url": "https://images.wildphotography.com/derivatives/large/8232.webp",
+          "bytes": 567908
+        }
+      }
+    },
+    {
+      "photoId": 5339,
+      "slug": "20241018-103413-11208",
+      "repaired": true,
+      "error": null,
+      "derivs": {
+        "thumb": {
+          "key": "derivatives/thumbs/5339.webp",
+          "url": "https://images.wildphotography.com/derivatives/thumbs/5339.webp",
+          "bytes": 44340
+        },
+        "small": {
+          "key": "derivatives/small/5339.webp",
+          "url": "https://images.wildphotography.com/derivatives/small/5339.webp",
+          "bytes": 266548
+        },
+        "medium": {
+          "key": "derivatives/medium/5339.webp",
+          "url": "https://images.wildphotography.com/derivatives/medium/5339.webp",
+          "bytes": 972542
+        },
+        "large": {
+          "key": "derivatives/large/5339.webp",
+          "url": "https://images.wildphotography.com/derivatives/large/5339.webp",
+          "bytes": 2178696
+        }
+      }
+    },
+    {
+      "photoId": 9921,
+      "slug": "cl0a4605-marine-life-of-costa-rica-6539",
+      "repaired": true,
+      "error": null,
+      "derivs": {
+        "thumb": {
+          "key": "derivatives/thumbs/9921.webp",
+          "url": "https://images.wildphotography.com/derivatives/thumbs/9921.webp",
+          "bytes": 17700
+        },
+        "small": {
+          "key": "derivatives/small/9921.webp",
+          "url": "https://images.wildphotography.com/derivatives/small/9921.webp",
+          "bytes": 108870
+        },
+        "medium": {
+          "key": "derivatives/medium/9921.webp",
+          "url": "https://images.wildphotography.com/derivatives/medium/9921.webp",
+          "bytes": 402392
+        },
+        "large": {
+          "key": "derivatives/large/9921.webp",
+          "url": "https://images.wildphotography.com/derivatives/large/9921.webp",
+          "bytes": 806112
+        }
+      }
+    },
+    {
+      "photoId": 13030,
+      "slug": "2022-02-19-08-28-10-sports-and-adventure-9648",
+      "repaired": true,
+      "error": null,
+      "derivs": {
+        "thumb": {
+          "key": "derivatives/thumbs/13030.webp",
+          "url": "https://images.wildphotography.com/derivatives/thumbs/13030.webp",
+          "bytes": 14474
+        },
+        "small": {
+          "key": "derivatives/small/13030.webp",
+          "url": "https://images.wildphotography.com/derivatives/small/13030.webp",
+          "bytes": 73528
+        },
+        "medium": {
+          "key": "derivatives/medium/13030.webp",
+          "url": "https://images.wildphotography.com/derivatives/medium/13030.webp",
+          "bytes": 247264
+        },
+        "large": {
+          "key": "derivatives/large/13030.webp",
+          "url": "https://images.wildphotography.com/derivatives/large/13030.webp",
+          "bytes": 535366
+        }
+      }
+    },
+    {
+      "photoId": 4028,
+      "slug": "dji-0799-best-of-costa-rica-1694",
+      "repaired": true,
+      "error": null,
+      "derivs": {
+        "thumb": {
+          "key": "derivatives/thumbs/4028.webp",
+          "url": "https://images.wildphotography.com/derivatives/thumbs/4028.webp",
+          "bytes": 37508
+        },
+        "small": {
+          "key": "derivatives/small/4028.webp",
+          "url": "https://images.wildphotography.com/derivatives/small/4028.webp",
+          "bytes": 204136
+        },
+        "medium": {
+          "key": "derivatives/medium/4028.webp",
+          "url": "https://images.wildphotography.com/derivatives/medium/4028.webp",
+          "bytes": 736350
+        },
+        "large": {
+          "key": "derivatives/large/4028.webp",
+          "url": "https://images.wildphotography.com/derivatives/large/4028.webp",
+          "bytes": 1701958
+        }
+      }
+    },
+    {
+      "photoId": 11077,
+      "slug": "20250425-155545-0-playa-hermosa-guanacaste-7695",
+      "repaired": true,
+      "error": null,
+      "derivs": {
+        "thumb": {
+          "key": "derivatives/thumbs/11077.webp",
+          "url": "https://images.wildphotography.com/derivatives/thumbs/11077.webp",
+          "bytes": 7232
+        },
+        "small": {
+          "key": "derivatives/small/11077.webp",
+          "url": "https://images.wildphotography.com/derivatives/small/11077.webp",
+          "bytes": 37154
+        },
+        "medium": {
+          "key": "derivatives/medium/11077.webp",
+          "url": "https://images.wildphotography.com/derivatives/medium/11077.webp",
+          "bytes": 145720
+        },
+        "large": {
+          "key": "derivatives/large/11077.webp",
+          "url": "https://images.wildphotography.com/derivatives/large/11077.webp",
+          "bytes": 349074
+        }
+      }
+    },
+    {
+      "photoId": 11603,
+      "slug": "dji-0927-puerto-caldera-puntarenas-port-8221",
+      "repaired": true,
+      "error": null,
+      "derivs": {
+        "thumb": {
+          "key": "derivatives/thumbs/11603.webp",
+          "url": "https://images.wildphotography.com/derivatives/thumbs/11603.webp",
+          "bytes": 26768
+        },
+        "small": {
+          "key": "derivatives/small/11603.webp",
+          "url": "https://images.wildphotography.com/derivatives/small/11603.webp",
+          "bytes": 157166
+        },
+        "medium": {
+          "key": "derivatives/medium/11603.webp",
+          "url": "https://images.wildphotography.com/derivatives/medium/11603.webp",
+          "bytes": 628054
+        },
+        "large": {
+          "key": "derivatives/large/11603.webp",
+          "url": "https://images.wildphotography.com/derivatives/large/11603.webp",
+          "bytes": 1477894
+        }
+      }
+    },
+    {
+      "photoId": 3154,
+      "slug": "img-2550-beaches-1483",
+      "repaired": true,
+      "error": null,
+      "derivs": {
+        "thumb": {
+          "key": "derivatives/thumbs/3154.webp",
+          "url": "https://images.wildphotography.com/derivatives/thumbs/3154.webp",
+          "bytes": 16126
+        },
+        "small": {
+          "key": "derivatives/small/3154.webp",
+          "url": "https://images.wildphotography.com/derivatives/small/3154.webp",
+          "bytes": 92668
+        },
+        "medium": {
+          "key": "derivatives/medium/3154.webp",
+          "url": "https://images.wildphotography.com/derivatives/medium/3154.webp",
+          "bytes": 327916
+        },
+        "large": {
+          "key": "derivatives/large/3154.webp",
+          "url": "https://images.wildphotography.com/derivatives/large/3154.webp",
+          "bytes": 740182
+        }
+      }
+    },
+    {
+      "photoId": 11593,
+      "slug": "dji-0904-puerto-caldera-puntarenas-port-8211",
+      "repaired": true,
+      "error": null,
+      "derivs": {
+        "thumb": {
+          "key": "derivatives/thumbs/11593.webp",
+          "url": "https://images.wildphotography.com/derivatives/thumbs/11593.webp",
+          "bytes": 14202
+        },
+        "small": {
+          "key": "derivatives/small/11593.webp",
+          "url": "https://images.wildphotography.com/derivatives/small/11593.webp",
+          "bytes": 106388
+        },
+        "medium": {
+          "key": "derivatives/medium/11593.webp",
+          "url": "https://images.wildphotography.com/derivatives/medium/11593.webp",
+          "bytes": 475904
+        },
+        "large": {
+          "key": "derivatives/large/11593.webp",
+          "url": "https://images.wildphotography.com/derivatives/large/11593.webp",
+          "bytes": 1224368
+        }
+      }
+    },
+    {
+      "photoId": 8362,
+      "slug": "dji-0779-isla-tortuga-4980",
+      "repaired": true,
+      "error": null,
+      "derivs": {
+        "thumb": {
+          "key": "derivatives/thumbs/8362.webp",
+          "url": "https://images.wildphotography.com/derivatives/thumbs/8362.webp",
+          "bytes": 39626
+        },
+        "small": {
+          "key": "derivatives/small/8362.webp",
+          "url": "https://images.wildphotography.com/derivatives/small/8362.webp",
+          "bytes": 225646
+        },
+        "medium": {
+          "key": "derivatives/medium/8362.webp",
+          "url": "https://images.wildphotography.com/derivatives/medium/8362.webp",
+          "bytes": 849062
+        },
+        "large": {
+          "key": "derivatives/large/8362.webp",
+          "url": "https://images.wildphotography.com/derivatives/large/8362.webp",
+          "bytes": 2003066
+        }
+      }
+    },
+    {
+      "photoId": 9820,
+      "slug": "dji-0715-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-6438",
+      "repaired": true,
+      "error": null,
+      "derivs": {
+        "thumb": {
+          "key": "derivatives/thumbs/9820.webp",
+          "url": "https://images.wildphotography.com/derivatives/thumbs/9820.webp",
+          "bytes": 23800
+        },
+        "small": {
+          "key": "derivatives/small/9820.webp",
+          "url": "https://images.wildphotography.com/derivatives/small/9820.webp",
+          "bytes": 149330
+        },
+        "medium": {
+          "key": "derivatives/medium/9820.webp",
+          "url": "https://images.wildphotography.com/derivatives/medium/9820.webp",
+          "bytes": 649948
+        },
+        "large": {
+          "key": "derivatives/large/9820.webp",
+          "url": "https://images.wildphotography.com/derivatives/large/9820.webp",
+          "bytes": 1603302
+        }
+      }
+    },
+    {
+      "photoId": 7717,
+      "slug": "img-3086-food--4335",
+      "repaired": true,
+      "error": null,
+      "derivs": {
+        "thumb": {
+          "key": "derivatives/thumbs/7717.webp",
+          "url": "https://images.wildphotography.com/derivatives/thumbs/7717.webp",
+          "bytes": 6920
+        },
+        "small": {
+          "key": "derivatives/small/7717.webp",
+          "url": "https://images.wildphotography.com/derivatives/small/7717.webp",
+          "bytes": 29686
+        },
+        "medium": {
+          "key": "derivatives/medium/7717.webp",
+          "url": "https://images.wildphotography.com/derivatives/medium/7717.webp",
+          "bytes": 246094
+        },
+        "large": {
+          "key": "derivatives/large/7717.webp",
+          "url": "https://images.wildphotography.com/derivatives/large/7717.webp",
+          "bytes": 816830
+        }
+      }
+    },
+    {
+      "photoId": 6968,
+      "slug": "dji-0873-escazu-costa-rica-3586",
+      "repaired": true,
+      "error": null,
+      "derivs": {
+        "thumb": {
+          "key": "derivatives/thumbs/6968.webp",
+          "url": "https://images.wildphotography.com/derivatives/thumbs/6968.webp",
+          "bytes": 18692
+        },
+        "small": {
+          "key": "derivatives/small/6968.webp",
+          "url": "https://images.wildphotography.com/derivatives/small/6968.webp",
+          "bytes": 90312
+        },
+        "medium": {
+          "key": "derivatives/medium/6968.webp",
+          "url": "https://images.wildphotography.com/derivatives/medium/6968.webp",
+          "bytes": 328166
+        },
+        "large": {
+          "key": "derivatives/large/6968.webp",
+          "url": "https://images.wildphotography.com/derivatives/large/6968.webp",
+          "bytes": 769254
+        }
+      }
+    },
+    {
+      "photoId": 6595,
+      "slug": "hyperlapse-0026-costa-rica-3213",
+      "repaired": true,
+      "error": null,
+      "derivs": {
+        "thumb": {
+          "key": "derivatives/thumbs/6595.webp",
+          "url": "https://images.wildphotography.com/derivatives/thumbs/6595.webp",
+          "bytes": 4364
+        },
+        "small": {
+          "key": "derivatives/small/6595.webp",
+          "url": "https://images.wildphotography.com/derivatives/small/6595.webp",
+          "bytes": 25030
+        },
+        "medium": {
+          "key": "derivatives/medium/6595.webp",
+          "url": "https://images.wildphotography.com/derivatives/medium/6595.webp",
+          "bytes": 98490
+        },
+        "large": {
+          "key": "derivatives/large/6595.webp",
+          "url": "https://images.wildphotography.com/derivatives/large/6595.webp",
+          "bytes": 331308
+        }
+      }
+    },
+    {
+      "photoId": 37288,
+      "slug": "20250426-113138-0-6194613b-2",
+      "repaired": true,
+      "error": null,
+      "derivs": {
+        "thumb": {
+          "key": "derivatives/thumbs/37288.webp",
+          "url": "https://images.wildphotography.com/derivatives/thumbs/37288.webp",
+          "bytes": 7618
+        },
+        "small": {
+          "key": "derivatives/small/37288.webp",
+          "url": "https://images.wildphotography.com/derivatives/small/37288.webp",
+          "bytes": 44302
+        },
+        "medium": {
+          "key": "derivatives/medium/37288.webp",
+          "url": "https://images.wildphotography.com/derivatives/medium/37288.webp",
+          "bytes": 186464
+        },
+        "large": {
+          "key": "derivatives/large/37288.webp",
+          "url": "https://images.wildphotography.com/derivatives/large/37288.webp",
+          "bytes": 483240
+        }
+      }
+    },
+    {
+      "photoId": 10560,
+      "slug": "cl0a6165-peninsula-papagayo-7178",
+      "repaired": true,
+      "error": null,
+      "derivs": {
+        "thumb": {
+          "key": "derivatives/thumbs/10560.webp",
+          "url": "https://images.wildphotography.com/derivatives/thumbs/10560.webp",
+          "bytes": 37998
+        },
+        "small": {
+          "key": "derivatives/small/10560.webp",
+          "url": "https://images.wildphotography.com/derivatives/small/10560.webp",
+          "bytes": 169622
+        },
+        "medium": {
+          "key": "derivatives/medium/10560.webp",
+          "url": "https://images.wildphotography.com/derivatives/medium/10560.webp",
+          "bytes": 507744
+        },
+        "large": {
+          "key": "derivatives/large/10560.webp",
+          "url": "https://images.wildphotography.com/derivatives/large/10560.webp",
+          "bytes": 995024
+        }
+      }
+    },
+    {
+      "photoId": 45533,
+      "slug": "dji-0205",
+      "repaired": true,
+      "error": null,
+      "derivs": {
+        "thumb": {
+          "key": "derivatives/thumbs/45533.webp",
+          "url": "https://images.wildphotography.com/derivatives/thumbs/45533.webp",
+          "bytes": 31714
+        },
+        "small": {
+          "key": "derivatives/small/45533.webp",
+          "url": "https://images.wildphotography.com/derivatives/small/45533.webp",
+          "bytes": 215896
+        },
+        "medium": {
+          "key": "derivatives/medium/45533.webp",
+          "url": "https://images.wildphotography.com/derivatives/medium/45533.webp",
+          "bytes": 867630
+        },
+        "large": {
+          "key": "derivatives/large/45533.webp",
+          "url": "https://images.wildphotography.com/derivatives/large/45533.webp",
+          "bytes": 2103360
+        }
+      }
+    },
+    {
+      "photoId": 19755,
+      "slug": "dji-0554-tambor-nicoya-peninsula-costa-rica-1417",
+      "repaired": true,
+      "error": null,
+      "derivs": {
+        "thumb": {
+          "key": "derivatives/thumbs/19755.webp",
+          "url": "https://images.wildphotography.com/derivatives/thumbs/19755.webp",
+          "bytes": 47676
+        },
+        "small": {
+          "key": "derivatives/small/19755.webp",
+          "url": "https://images.wildphotography.com/derivatives/small/19755.webp",
+          "bytes": 279274
+        },
+        "medium": {
+          "key": "derivatives/medium/19755.webp",
+          "url": "https://images.wildphotography.com/derivatives/medium/19755.webp",
+          "bytes": 1086190
+        },
+        "large": {
+          "key": "derivatives/large/19755.webp",
+          "url": "https://images.wildphotography.com/derivatives/large/19755.webp",
+          "bytes": 2495686
+        }
+      }
+    },
+    {
+      "photoId": 6850,
+      "slug": "dji-0533-dominical-and-uvita-3468",
+      "repaired": true,
+      "error": null,
+      "derivs": {
+        "thumb": {
+          "key": "derivatives/thumbs/6850.webp",
+          "url": "https://images.wildphotography.com/derivatives/thumbs/6850.webp",
+          "bytes": 19544
+        },
+        "small": {
+          "key": "derivatives/small/6850.webp",
+          "url": "https://images.wildphotography.com/derivatives/small/6850.webp",
+          "bytes": 139406
+        },
+        "medium": {
+          "key": "derivatives/medium/6850.webp",
+          "url": "https://images.wildphotography.com/derivatives/medium/6850.webp",
+          "bytes": 605784
+        },
+        "large": {
+          "key": "derivatives/large/6850.webp",
+          "url": "https://images.wildphotography.com/derivatives/large/6850.webp",
+          "bytes": 1493074
+        }
+      }
+    },
+    {
+      "photoId": 9202,
+      "slug": "dji-0901-landmarks-5820",
+      "repaired": true,
+      "error": null,
+      "derivs": {
+        "thumb": {
+          "key": "derivatives/thumbs/9202.webp",
+          "url": "https://images.wildphotography.com/derivatives/thumbs/9202.webp",
+          "bytes": 8576
+        },
+        "small": {
+          "key": "derivatives/small/9202.webp",
+          "url": "https://images.wildphotography.com/derivatives/small/9202.webp",
+          "bytes": 51338
+        },
+        "medium": {
+          "key": "derivatives/medium/9202.webp",
+          "url": "https://images.wildphotography.com/derivatives/medium/9202.webp",
+          "bytes": 371580
+        },
+        "large": {
+          "key": "derivatives/large/9202.webp",
+          "url": "https://images.wildphotography.com/derivatives/large/9202.webp",
+          "bytes": 1251590
+        }
+      }
+    },
+    {
+      "photoId": 18588,
+      "slug": "dji-0541-waterfalls-in-costa-rica-1066",
+      "repaired": true,
+      "error": null,
+      "derivs": {
+        "thumb": {
+          "key": "derivatives/thumbs/18588.webp",
+          "url": "https://images.wildphotography.com/derivatives/thumbs/18588.webp",
+          "bytes": 47130
+        },
+        "small": {
+          "key": "derivatives/small/18588.webp",
+          "url": "https://images.wildphotography.com/derivatives/small/18588.webp",
+          "bytes": 284738
+        },
+        "medium": {
+          "key": "derivatives/medium/18588.webp",
+          "url": "https://images.wildphotography.com/derivatives/medium/18588.webp",
+          "bytes": 1091016
+        },
+        "large": {
+          "key": "derivatives/large/18588.webp",
+          "url": "https://images.wildphotography.com/derivatives/large/18588.webp",
+          "bytes": 2576970
+        }
+      }
+    },
+    {
+      "photoId": 13185,
+      "slug": "cl0a2015-sunrise-sunset-9803",
+      "repaired": true,
+      "error": null,
+      "derivs": {
+        "thumb": {
+          "key": "derivatives/thumbs/13185.webp",
+          "url": "https://images.wildphotography.com/derivatives/thumbs/13185.webp",
+          "bytes": 11150
+        },
+        "small": {
+          "key": "derivatives/small/13185.webp",
+          "url": "https://images.wildphotography.com/derivatives/small/13185.webp",
+          "bytes": 45250
+        },
+        "medium": {
+          "key": "derivatives/medium/13185.webp",
+          "url": "https://images.wildphotography.com/derivatives/medium/13185.webp",
+          "bytes": 130644
+        },
+        "large": {
+          "key": "derivatives/large/13185.webp",
+          "url": "https://images.wildphotography.com/derivatives/large/13185.webp",
+          "bytes": 264934
+        }
+      }
+    },
+    {
+      "photoId": 39436,
+      "slug": "birds-cl0a3195-jpg",
+      "repaired": true,
+      "error": null,
+      "derivs": {
+        "thumb": {
+          "key": "derivatives/thumbs/39436.webp",
+          "url": "https://images.wildphotography.com/derivatives/thumbs/39436.webp",
+          "bytes": 21904
+        },
+        "small": {
+          "key": "derivatives/small/39436.webp",
+          "url": "https://images.wildphotography.com/derivatives/small/39436.webp",
+          "bytes": 95022
+        },
+        "medium": {
+          "key": "derivatives/medium/39436.webp",
+          "url": "https://images.wildphotography.com/derivatives/medium/39436.webp",
+          "bytes": 310662
+        },
+        "large": {
+          "key": "derivatives/large/39436.webp",
+          "url": "https://images.wildphotography.com/derivatives/large/39436.webp",
+          "bytes": 702730
+        }
+      }
+    },
+    {
+      "photoId": 5506,
+      "slug": "cl0a6717-11265",
+      "repaired": true,
+      "error": null,
+      "derivs": {
+        "thumb": {
+          "key": "derivatives/thumbs/5506.webp",
+          "url": "https://images.wildphotography.com/derivatives/thumbs/5506.webp",
+          "bytes": 25206
+        },
+        "small": {
+          "key": "derivatives/small/5506.webp",
+          "url": "https://images.wildphotography.com/derivatives/small/5506.webp",
+          "bytes": 131364
+        },
+        "medium": {
+          "key": "derivatives/medium/5506.webp",
+          "url": "https://images.wildphotography.com/derivatives/medium/5506.webp",
+          "bytes": 473546
+        },
+        "large": {
+          "key": "derivatives/large/5506.webp",
+          "url": "https://images.wildphotography.com/derivatives/large/5506.webp",
+          "bytes": 1014316
+        }
+      }
+    },
+    {
+      "photoId": 11017,
+      "slug": "p9143051-peninsula-de-osa-7635",
+      "repaired": true,
+      "error": null,
+      "derivs": {
+        "thumb": {
+          "key": "derivatives/thumbs/11017.webp",
+          "url": "https://images.wildphotography.com/derivatives/thumbs/11017.webp",
+          "bytes": 24028
+        },
+        "small": {
+          "key": "derivatives/small/11017.webp",
+          "url": "https://images.wildphotography.com/derivatives/small/11017.webp",
+          "bytes": 129206
+        },
+        "medium": {
+          "key": "derivatives/medium/11017.webp",
+          "url": "https://images.wildphotography.com/derivatives/medium/11017.webp",
+          "bytes": 470820
+        },
+        "large": {
+          "key": "derivatives/large/11017.webp",
+          "url": "https://images.wildphotography.com/derivatives/large/11017.webp",
+          "bytes": 1033722
+        }
+      }
+    },
+    {
+      "photoId": 12514,
+      "slug": "2021-02-28-09-50-28-rural-costa-rica-9132",
+      "repaired": true,
+      "error": null,
+      "derivs": {
+        "thumb": {
+          "key": "derivatives/thumbs/12514.webp",
+          "url": "https://images.wildphotography.com/derivatives/thumbs/12514.webp",
+          "bytes": 26532
+        },
+        "small": {
+          "key": "derivatives/small/12514.webp",
+          "url": "https://images.wildphotography.com/derivatives/small/12514.webp",
+          "bytes": 164720
+        },
+        "medium": {
+          "key": "derivatives/medium/12514.webp",
+          "url": "https://images.wildphotography.com/derivatives/medium/12514.webp",
+          "bytes": 595578
+        },
+        "large": {
+          "key": "derivatives/large/12514.webp",
+          "url": "https://images.wildphotography.com/derivatives/large/12514.webp",
+          "bytes": 1328436
+        }
+      }
+    },
+    {
+      "photoId": 3163,
+      "slug": "cl0a4655-2071",
+      "repaired": true,
+      "error": null,
+      "derivs": {
+        "thumb": {
+          "key": "derivatives/thumbs/3163.webp",
+          "url": "https://images.wildphotography.com/derivatives/thumbs/3163.webp",
+          "bytes": 25210
+        },
+        "small": {
+          "key": "derivatives/small/3163.webp",
+          "url": "https://images.wildphotography.com/derivatives/small/3163.webp",
+          "bytes": 87964
+        },
+        "medium": {
+          "key": "derivatives/medium/3163.webp",
+          "url": "https://images.wildphotography.com/derivatives/medium/3163.webp",
+          "bytes": 232886
+        },
+        "large": {
+          "key": "derivatives/large/3163.webp",
+          "url": "https://images.wildphotography.com/derivatives/large/3163.webp",
+          "bytes": 459482
+        }
+      }
+    },
+    {
+      "photoId": 10565,
+      "slug": "cl0a6218-peninsula-papagayo-7183",
+      "repaired": true,
+      "error": null,
+      "derivs": {
+        "thumb": {
+          "key": "derivatives/thumbs/10565.webp",
+          "url": "https://images.wildphotography.com/derivatives/thumbs/10565.webp",
+          "bytes": 14608
+        },
+        "small": {
+          "key": "derivatives/small/10565.webp",
+          "url": "https://images.wildphotography.com/derivatives/small/10565.webp",
+          "bytes": 94034
+        },
+        "medium": {
+          "key": "derivatives/medium/10565.webp",
+          "url": "https://images.wildphotography.com/derivatives/medium/10565.webp",
+          "bytes": 380754
+        },
+        "large": {
+          "key": "derivatives/large/10565.webp",
+          "url": "https://images.wildphotography.com/derivatives/large/10565.webp",
+          "bytes": 856698
+        }
+      }
+    },
+    {
+      "photoId": 18987,
+      "slug": "dji-0751-playa-real-roble-guanacaste-costa-rica-1059",
+      "repaired": true,
+      "error": null,
+      "derivs": {
+        "thumb": {
+          "key": "derivatives/thumbs/18987.webp",
+          "url": "https://images.wildphotography.com/derivatives/thumbs/18987.webp",
+          "bytes": 16480
+        },
+        "small": {
+          "key": "derivatives/small/18987.webp",
+          "url": "https://images.wildphotography.com/derivatives/small/18987.webp",
+          "bytes": 97146
+        },
+        "medium": {
+          "key": "derivatives/medium/18987.webp",
+          "url": "https://images.wildphotography.com/derivatives/medium/18987.webp",
+          "bytes": 377436
+        },
+        "large": {
+          "key": "derivatives/large/18987.webp",
+          "url": "https://images.wildphotography.com/derivatives/large/18987.webp",
+          "bytes": 982102
+        }
+      }
+    },
+    {
+      "photoId": 10679,
+      "slug": "dji-0354-peninsula-papagayo-7297",
+      "repaired": true,
+      "error": null,
+      "derivs": {
+        "thumb": {
+          "key": "derivatives/thumbs/10679.webp",
+          "url": "https://images.wildphotography.com/derivatives/thumbs/10679.webp",
+          "bytes": 13312
+        },
+        "small": {
+          "key": "derivatives/small/10679.webp",
+          "url": "https://images.wildphotography.com/derivatives/small/10679.webp",
+          "bytes": 105010
+        },
+        "medium": {
+          "key": "derivatives/medium/10679.webp",
+          "url": "https://images.wildphotography.com/derivatives/medium/10679.webp",
+          "bytes": 515526
+        },
+        "large": {
+          "key": "derivatives/large/10679.webp",
+          "url": "https://images.wildphotography.com/derivatives/large/10679.webp",
+          "bytes": 1271678
+        }
+      }
+    },
+    {
+      "photoId": 14721,
+      "slug": "img-5417-wildlife-11339",
+      "repaired": true,
+      "error": null,
+      "derivs": {
+        "thumb": {
+          "key": "derivatives/thumbs/14721.webp",
+          "url": "https://images.wildphotography.com/derivatives/thumbs/14721.webp",
+          "bytes": 23228
+        },
+        "small": {
+          "key": "derivatives/small/14721.webp",
+          "url": "https://images.wildphotography.com/derivatives/small/14721.webp",
+          "bytes": 101578
+        },
+        "medium": {
+          "key": "derivatives/medium/14721.webp",
+          "url": "https://images.wildphotography.com/derivatives/medium/14721.webp",
+          "bytes": 343340
+        },
+        "large": {
+          "key": "derivatives/large/14721.webp",
+          "url": "https://images.wildphotography.com/derivatives/large/14721.webp",
+          "bytes": 824534
+        }
+      }
+    },
+    {
+      "photoId": 2724,
+      "slug": "cl0a1521-1910",
+      "repaired": true,
+      "error": null,
+      "derivs": {
+        "thumb": {
+          "key": "derivatives/thumbs/2724.webp",
+          "url": "https://images.wildphotography.com/derivatives/thumbs/2724.webp",
+          "bytes": 7952
+        },
+        "small": {
+          "key": "derivatives/small/2724.webp",
+          "url": "https://images.wildphotography.com/derivatives/small/2724.webp",
+          "bytes": 30290
+        },
+        "medium": {
+          "key": "derivatives/medium/2724.webp",
+          "url": "https://images.wildphotography.com/derivatives/medium/2724.webp",
+          "bytes": 106270
+        },
+        "large": {
+          "key": "derivatives/large/2724.webp",
+          "url": "https://images.wildphotography.com/derivatives/large/2724.webp",
+          "bytes": 297134
+        }
+      }
+    },
+    {
+      "photoId": 8834,
+      "slug": "dji-0880-jaco-beach-5452",
+      "repaired": true,
+      "error": null,
+      "derivs": {
+        "thumb": {
+          "key": "derivatives/thumbs/8834.webp",
+          "url": "https://images.wildphotography.com/derivatives/thumbs/8834.webp",
+          "bytes": 36934
+        },
+        "small": {
+          "key": "derivatives/small/8834.webp",
+          "url": "https://images.wildphotography.com/derivatives/small/8834.webp",
+          "bytes": 199168
+        },
+        "medium": {
+          "key": "derivatives/medium/8834.webp",
+          "url": "https://images.wildphotography.com/derivatives/medium/8834.webp",
+          "bytes": 723100
+        },
+        "large": {
+          "key": "derivatives/large/8834.webp",
+          "url": "https://images.wildphotography.com/derivatives/large/8834.webp",
+          "bytes": 1654902
+        }
+      }
+    },
+    {
+      "photoId": 15760,
+      "slug": "birds-33e3d616",
+      "repaired": true,
+      "error": null,
+      "derivs": {
+        "thumb": {
+          "key": "derivatives/thumbs/15760.webp",
+          "url": "https://images.wildphotography.com/derivatives/thumbs/15760.webp",
+          "bytes": 9274
+        },
+        "small": {
+          "key": "derivatives/small/15760.webp",
+          "url": "https://images.wildphotography.com/derivatives/small/15760.webp",
+          "bytes": 50358
+        },
+        "medium": {
+          "key": "derivatives/medium/15760.webp",
+          "url": "https://images.wildphotography.com/derivatives/medium/15760.webp",
+          "bytes": 148076
+        },
+        "large": {
+          "key": "derivatives/large/15760.webp",
+          "url": "https://images.wildphotography.com/derivatives/large/15760.webp",
+          "bytes": 285296
+        }
+      }
+    },
+    {
+      "photoId": 3853,
+      "slug": "dji-0537-best-of-costa-rica-1644",
+      "repaired": true,
+      "error": null,
+      "derivs": {
+        "thumb": {
+          "key": "derivatives/thumbs/3853.webp",
+          "url": "https://images.wildphotography.com/derivatives/thumbs/3853.webp",
+          "bytes": 38390
+        },
+        "small": {
+          "key": "derivatives/small/3853.webp",
+          "url": "https://images.wildphotography.com/derivatives/small/3853.webp",
+          "bytes": 236576
+        },
+        "medium": {
+          "key": "derivatives/medium/3853.webp",
+          "url": "https://images.wildphotography.com/derivatives/medium/3853.webp",
+          "bytes": 863850
+        },
+        "large": {
+          "key": "derivatives/large/3853.webp",
+          "url": "https://images.wildphotography.com/derivatives/large/3853.webp",
+          "bytes": 1982658
+        }
+      }
+    },
+    {
+      "photoId": 19576,
+      "slug": "dji-0173-tambor-nicoya-peninsula-costa-rica-1238",
+      "repaired": true,
+      "error": null,
+      "derivs": {
+        "thumb": {
+          "key": "derivatives/thumbs/19576.webp",
+          "url": "https://images.wildphotography.com/derivatives/thumbs/19576.webp",
+          "bytes": 8788
+        },
+        "small": {
+          "key": "derivatives/small/19576.webp",
+          "url": "https://images.wildphotography.com/derivatives/small/19576.webp",
+          "bytes": 44248
+        },
+        "medium": {
+          "key": "derivatives/medium/19576.webp",
+          "url": "https://images.wildphotography.com/derivatives/medium/19576.webp",
+          "bytes": 177960
+        },
+        "large": {
+          "key": "derivatives/large/19576.webp",
+          "url": "https://images.wildphotography.com/derivatives/large/19576.webp",
+          "bytes": 494224
+        }
+      }
+    },
+    {
+      "photoId": 7865,
+      "slug": "pano00021-golfo-de-nicoya-4483",
+      "repaired": true,
+      "error": null,
+      "derivs": {
+        "thumb": {
+          "key": "derivatives/thumbs/7865.webp",
+          "url": "https://images.wildphotography.com/derivatives/thumbs/7865.webp",
+          "bytes": 10506
+        },
+        "small": {
+          "key": "derivatives/small/7865.webp",
+          "url": "https://images.wildphotography.com/derivatives/small/7865.webp",
+          "bytes": 49034
+        },
+        "medium": {
+          "key": "derivatives/medium/7865.webp",
+          "url": "https://images.wildphotography.com/derivatives/medium/7865.webp",
+          "bytes": 194566
+        },
+        "large": {
+          "key": "derivatives/large/7865.webp",
+          "url": "https://images.wildphotography.com/derivatives/large/7865.webp",
+          "bytes": 521738
+        }
+      }
+    },
+    {
+      "photoId": 7518,
+      "slug": "2025-03-08-06-46-31-food--4136",
+      "repaired": true,
+      "error": null,
+      "derivs": {
+        "thumb": {
+          "key": "derivatives/thumbs/7518.webp",
+          "url": "https://images.wildphotography.com/derivatives/thumbs/7518.webp",
+          "bytes": 23322
+        },
+        "small": {
+          "key": "derivatives/small/7518.webp",
+          "url": "https://images.wildphotography.com/derivatives/small/7518.webp",
+          "bytes": 131238
+        },
+        "medium": {
+          "key": "derivatives/medium/7518.webp",
+          "url": "https://images.wildphotography.com/derivatives/medium/7518.webp",
+          "bytes": 478078
+        },
+        "large": {
+          "key": "derivatives/large/7518.webp",
+          "url": "https://images.wildphotography.com/derivatives/large/7518.webp",
+          "bytes": 1075590
+        }
+      }
+    },
+    {
+      "photoId": 4050,
+      "slug": "dji-0831-best-of-costa-rica-1700",
+      "repaired": true,
+      "error": null,
+      "derivs": {
+        "thumb": {
+          "key": "derivatives/thumbs/4050.webp",
+          "url": "https://images.wildphotography.com/derivatives/thumbs/4050.webp",
+          "bytes": 27986
+        },
+        "small": {
+          "key": "derivatives/small/4050.webp",
+          "url": "https://images.wildphotography.com/derivatives/small/4050.webp",
+          "bytes": 165768
+        },
+        "medium": {
+          "key": "derivatives/medium/4050.webp",
+          "url": "https://images.wildphotography.com/derivatives/medium/4050.webp",
+          "bytes": 663036
+        },
+        "large": {
+          "key": "derivatives/large/4050.webp",
+          "url": "https://images.wildphotography.com/derivatives/large/4050.webp",
+          "bytes": 1655708
+        }
+      }
+    },
+    {
+      "photoId": 19222,
+      "slug": "img-0180-best-of-costa-rica-1217",
+      "repaired": true,
+      "error": null,
+      "derivs": {
+        "thumb": {
+          "key": "derivatives/thumbs/19222.webp",
+          "url": "https://images.wildphotography.com/derivatives/thumbs/19222.webp",
+          "bytes": 97966
+        },
+        "small": {
+          "key": "derivatives/small/19222.webp",
+          "url": "https://images.wildphotography.com/derivatives/small/19222.webp",
+          "bytes": 436416
+        },
+        "medium": {
+          "key": "derivatives/medium/19222.webp",
+          "url": "https://images.wildphotography.com/derivatives/medium/19222.webp",
+          "bytes": 1261780
+        },
+        "large": {
+          "key": "derivatives/large/19222.webp",
+          "url": "https://images.wildphotography.com/derivatives/large/19222.webp",
+          "bytes": 2544834
+        }
+      }
+    },
+    {
+      "photoId": 17065,
+      "slug": "dji-0261-las-catalinas-guanacaste-1044",
+      "repaired": true,
+      "error": null,
+      "derivs": {
+        "thumb": {
+          "key": "derivatives/thumbs/17065.webp",
+          "url": "https://images.wildphotography.com/derivatives/thumbs/17065.webp",
+          "bytes": 16080
+        },
+        "small": {
+          "key": "derivatives/small/17065.webp",
+          "url": "https://images.wildphotography.com/derivatives/small/17065.webp",
+          "bytes": 98284
+        },
+        "medium": {
+          "key": "derivatives/medium/17065.webp",
+          "url": "https://images.wildphotography.com/derivatives/medium/17065.webp",
+          "bytes": 426346
+        },
+        "large": {
+          "key": "derivatives/large/17065.webp",
+          "url": "https://images.wildphotography.com/derivatives/large/17065.webp",
+          "bytes": 1090532
+        }
+      }
+    }
+  ],
+  "failures": [],
+  "healthCheck": {
+    "sampled": 20,
+    "passed": 20,
+    "failed": 0
+  },
+  "completedAt": "2026-06-01T22:13:04.277Z"
+}

@@ -31,8 +31,8 @@ export async function GET(request: NextRequest) {
   const ip = request.headers.get('cf-connecting-ip') || request.headers.get('x-forwarded-for') || 'unknown';
   const ipHash = hashIP(ip);
 
-  perPage = Math.min(perPage, 50);
-  
+  perPage = Math.min(perPage, 30);
+
   const isBotUA = /headless|python|curl|wget|scrapy|axios|phantom|selenium|playwright|puppeteer/i.test(ua);
   if (isBotUA) {
     perPage = Math.min(perPage, 10);
@@ -56,6 +56,7 @@ export async function GET(request: NextRequest) {
   const typesense = new Client({
     nodes: [{ host: TYPESENSE_HOST, port: 443, protocol: 'https' }],
     apiKey: TYPESENSE_SEARCH_KEY,
+    additionalHeaders: { 'Accept-Encoding': 'gzip' },
   });
 
   try {
@@ -64,19 +65,18 @@ export async function GET(request: NextRequest) {
       .documents()
       .search({
         q: query,
-        query_by: 'title,keywords,location_name,species_common_name',
+        query_by: 'title,keywords,location_name,species',
         page,
         per_page: perPage,
-        include_fields: 'id,slug,title,description,keywords,location_name,thumb_url,medium_url,gallery_slug',
+        // Stripped: description (bloat), keywords (not shown on cards), medium_url (cards use thumb)
+        include_fields: 'id,slug,title,location_name,thumb_url,gallery_slug',
       });
 
     const photos = (results.hits || []).map((hit: any) => ({
       title: hit.document.title,
       slug: hit.document.slug,
-      description: hit.document.description,
-      keywords: hit.document.keywords,
       location: hit.document.location_name,
-      images: { thumb: hit.document.thumb_url, medium: hit.document.medium_url },
+      images: { thumb: hit.document.thumb_url },
       canonicalUrl: `https://wildphotography.com/photo/${hit.document.slug}`,
     }));
 

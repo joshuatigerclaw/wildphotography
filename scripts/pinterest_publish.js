@@ -35,11 +35,11 @@ async function downloadImage(url, filepath) {
   }
 }
 
-async function getNextPins(client, limit = 2) {
+async function getNextPins(client, limit = 20) {
   const result = await client.query(`
     SELECT id, photo_id, destination_url, board_id, pin_title, pin_description
     FROM pin_queue
-    WHERE status IN ('drafted', 'pending')
+    WHERE status = 'ready_for_pinterest'
     ORDER BY priority DESC, created_at ASC
     LIMIT $1
   `, [limit]);
@@ -49,10 +49,9 @@ async function getNextPins(client, limit = 2) {
 async function updatePinStatus(client, id, status, errorMsg = null) {
   await client.query(`
     UPDATE pin_queue 
-    SET status = $1, updated_at = NOW(), 
-        error_message = COALESCE($2, error_message)
-    WHERE id = $3
-  `, [status, errorMsg, id]);
+    SET status = $1, updated_at = NOW()
+    WHERE id = $2
+  `, [status, id]);
 }
 
 async function main() {
@@ -72,7 +71,7 @@ async function main() {
   await db.connect();
   
   // Get next pins from queue
-  const pins = await getNextPins(db, 2);
+  const pins = await getNextPins(db, 20);
   log(`Got ${pins.length} pins from queue`);
   
   if (pins.length === 0) {
@@ -82,15 +81,11 @@ async function main() {
   }
 
   const { chromium } = require('playwright');
-  const browser = await chromium.launch({
-    headless: false,
-    userDataDir: PROFILE_PATH,
-    args: ['--no-sandbox', '--disable-setuid-sandbox']
+  const context = await chromium.launchPersistentContext(PROFILE_PATH, {
+    headless: true,
+    executablePath: '/Users/joshuatenbrink/Library/Caches/ms-playwright/chromium-1217/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing',
+    args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-dev-shm-usage']
   });
-
-  const context = await browser.newContext();
-  // Set cookies
-  await context.addCookies(cookies);
   
   const page = await context.newPage();
   
@@ -139,7 +134,7 @@ async function main() {
     await sleep(2000);
   }
   
-  await browser.close();
+  await context.close();
   await db.end();
   log('\n=== Done ===');
 }
