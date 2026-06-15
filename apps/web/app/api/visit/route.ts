@@ -7,16 +7,17 @@ const DATABASE_URL = process.env.DATABASE_URL ||
 export const dynamic = 'force-dynamic';
 
 /**
- * Visit tracking.
+ * Visit tracking — queue-first, Neon-free hot path.
  *
- * Writes directly to photo_visit_daily (upsert) — no per-request photo_views update.
- * photo_visit_daily columns: photo_id, day, source, visit_count, last_seen_at, created_at, updated_at
- * No ip_address column in photo_visit_daily (separate table: photo_visits for detailed logs).
+ * Sends visit event to do-queue for batched async processing.
+ * Direct Neon fallback only if VISIT_DIRECT_NEON_FALLBACK=true (default: false).
  *
- * Bot detection + IP hash (FNV, anonymized).
+ * Message payload sent to queue:
+ *   { photoId, ipHash, timestamp }
  *
- * Future: switch to queue producer once consumer is deployed, for batched writes.
- * Currently: direct write (single UPSERT, fast path since no FK on photo_visit_daily).
+ * photo_visit_daily columns: photo_id, day, source, visit_count, last_seen_at
+ *
+ * Bot detection + IP hash (FNV, anonymized, not stored in queue payload).
  */
 
 function hashIP(ip: string): string {
@@ -29,7 +30,18 @@ function hashIP(ip: string): string {
   return h.toString(16);
 }
 
-export async function POST(request: NextRequest) {
+export async function POST(
+  request: NextRequest,
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  _context: any
+) {
+  // env bindings from CF Workers (DOQueue, etc.) are exposed on globalThis.__env
+  // by the patched worker.js right before calling the Next.js handler.
+  const cfEnv = (globalThis as Record<string, unknown>)['__env'] as
+    | { DOQueue?: { send: (msg: object) => Promise<void> }; VISIT_DIRECT_NEON_FALLBACK?: string }
+    | undefined;
+  const doQueue = cfEnv?.DOQueue;
+  const visitDirectFallback = cfEnv?.VISIT_DIRECT_NEON_FALLBACK ?? 'false';
   const userAgent = request.headers.get('user-agent') || '';
 
   // ── Bot / non-user detection ─────────────────────────────────────────────
@@ -60,39 +72,42 @@ export async function POST(request: NextRequest) {
     || 'unknown';
   const ipHash = hashIP(ip);
 
-  // ── Try queue send first (non-blocking) ─────────────────────────────────
-  // TODO: once queue consumer is deployed, switch to queue-only path
+  // ── Queue send (primary path) ───────────────────────────────────────────
+  let queued = false;
   try {
-    const env = (request as any).env;
-    if (env?.DOQueue) {
-      await env.DOQueue.send({
+    if (doQueue) {
+      await doQueue.send({
         photoId: pid,
         ipHash,
         timestamp: Date.now(),
-      }).catch(() => {}); // non-critical, fall through to direct write
+      });
+      queued = true;
+    } else {
+      console.error('[visit] DOQueue not available via globalThis.__env');
     }
-  } catch {
-    // queue unavailable — fall through to direct write
-  }
-
-  // ── Direct upsert to photo_visit_daily ─────────────────────────────────
-  // photo_visit_daily schema: photo_id, day, source, visit_count, last_seen_at, created_at, updated_at
-  // No FK on photo_visit_daily — inserts always succeed for valid photo IDs
-  const sql = neon(DATABASE_URL);
-
-  try {
-    await sql`
-      INSERT INTO photo_visit_daily (photo_id, day, source, visit_count, last_seen_at)
-      VALUES (${pid}, CURRENT_DATE, 'web', 1, NOW())
-      ON CONFLICT (photo_id, day)
-      DO UPDATE SET
-        visit_count = photo_visit_daily.visit_count + 1,
-        last_seen_at = NOW()
-    `;
-    return NextResponse.json({ success: true, counted: true });
   } catch (err) {
-    // photo_visit_daily has no FK, so the only failure is connection/timeout
-    console.error('[visit] Error:', err instanceof Error ? err.message : err);
-    return NextResponse.json({ error: 'Internal error' }, { status: 500 });
+    console.error('[visit] Queue send error:', err instanceof Error ? err.message : String(err));
   }
+
+  // ── Direct Neon fallback (only if env flag is set) ─────────────────────
+  if (visitDirectFallback === 'true') {
+    const sql = neon(DATABASE_URL);
+    try {
+      await sql`
+        INSERT INTO photo_visit_daily (photo_id, day, source, visit_count, last_seen_at)
+        VALUES (${pid}, CURRENT_DATE, 'web', 1, NOW())
+        ON CONFLICT (photo_id, day)
+        DO UPDATE SET
+          visit_count = photo_visit_daily.visit_count + 1,
+          last_seen_at = NOW()
+      `;
+      return NextResponse.json({ success: true, counted: true, queued });
+    } catch (err) {
+      console.error('[visit] Neon fallback error:', err instanceof Error ? err.message : err);
+      return NextResponse.json({ error: 'Internal error' }, { status: 500 });
+    }
+  }
+
+  // Default: queue-only (queued or not, return success to client)
+  return NextResponse.json({ success: true, counted: true, queued });
 }

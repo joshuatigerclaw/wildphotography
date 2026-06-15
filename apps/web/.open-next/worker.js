@@ -37,6 +37,8 @@ export default {
             }
             // @ts-expect-error: resolved by wrangler build
             const { handler } = await import("./server-functions/default/handler.mjs");
+            // Expose env bindings globally so Next.js route handlers can access them
+            (globalThis).__env = env;
             return handler(reqOrResp, env, ctx, request.signal);
         });
     },

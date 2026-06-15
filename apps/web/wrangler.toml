@@ -6,6 +6,7 @@ workers_dev = false
 
 [vars]
 NEXTJS_ENV = "production"
+VISIT_DIRECT_NEON_FALLBACK = "false"
 PAYPAL_BUSINESS_EMAIL = "cash@pobox.com"
 PAYPAL_PROFILE_LINK = "paypal.me/joshuatenbrink"
 WILDPHOTO_ADMIN_EMAIL = "cash@pobox.com"

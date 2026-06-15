@@ -1,0 +1,15 @@
+name = "wildphotography-visit-consumer"
+main = "queue-consumer.ts"
+compatibility_date = "2026-03-07"
+compatibility_flags = ["nodejs_compat"]
+workers_dev = false
+
+[vars]
+DATABASE_URL = "postgresql://neondb_owner:npg_BvF2JsQ8drba@ep-calm-fire-ad0dfnqd-pooler.c-2.us-east-1.aws.neon.tech/wildphotography?sslmode=require"
+NEXTJS_ENV = "production"
+
+[[queues.consumers]]
+queue = "do-queue"
+max_batch_size = 100
+max_batch_timeout = 30
+max_retries = 3
