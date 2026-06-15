@@ -1,0 +1,27 @@
+2026-05-11 21:09:42,079 INFO === WildPhotography Typesense Reconciliation (FIXED) ===
+2026-05-11 21:09:42,079 INFO 
+2026-05-11 21:09:42,506 INFO [1] Typesense current doc count: 41664
+2026-05-11 21:09:42,506 INFO [2] Loading eligible Neon docs...
+2026-05-11 21:09:44,869 INFO     Eligible Neon docs: 41447
+2026-05-11 21:09:44,869 INFO [3] Drift before reconcile: -217 (eligible=41447, TS=41664)
+2026-05-11 21:09:44,869 INFO [4] Exporting Typesense docs to identify stale...
+2026-05-11 21:10:19,828 INFO     TS docs: 41664, Stale: 371, Missing: 154
+2026-05-11 21:10:19,828 INFO [5] Removing 371 stale docs by slug...
+2026-05-11 21:10:22,918 INFO     Stale removed: 374
+2026-05-11 21:10:22,919 INFO [6] Adding 154 missing docs...
+2026-05-11 21:10:23,531 WARNING     Error batch 1: Field `search_ready` has been declared in the schema, but is not found in the document.
+2026-05-11 21:10:23,531 WARNING     Error batch 1: Field `search_ready` has been declared in the schema, but is not found in the document.
+2026-05-11 21:10:23,531 WARNING     Error batch 1: Field `search_ready` has been declared in the schema, but is not found in the document.
+2026-05-11 21:10:23,531 INFO   Batch 1/1: 0 ok, 154 errors
+2026-05-11 21:10:23,936 INFO     Missing added: 0, errors: 154
+2026-05-11 21:10:26,464 INFO 
+2026-05-11 21:10:26,465 INFO === Reconciliation Complete ===
+2026-05-11 21:10:26,465 INFO   Eligible Neon:     41447
+2026-05-11 21:10:26,465 INFO   TS before:         41664
+2026-05-11 21:10:26,465 INFO   Stale removed:     374
+2026-05-11 21:10:26,465 INFO   Missing added:     0
+2026-05-11 21:10:26,465 INFO   TS after:          41290
+2026-05-11 21:10:26,465 INFO   Drift before:      -217
+2026-05-11 21:10:26,465 INFO   Drift after:       157
+2026-05-11 21:10:26,466 INFO   Duration:          44.4s
+2026-05-11 21:10:26,466 INFO   Report: /Users/joshuatenbrink/.openclaw/workspace/wildphotography/logs/typesense_reconcile_20260512T031026Z.json

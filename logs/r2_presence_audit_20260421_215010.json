@@ -1,0 +1,53 @@
+{
+  "run_at": "2026-04-22T03:50:10.534106+00:00",
+  "total_photos_with_r2_key": 32248,
+  "sample_size": 200,
+  "present_count": 193,
+  "missing_count": 7,
+  "missing_rate_pct": 3.5,
+  "missing": [
+    {
+      "photo_id": 14820,
+      "key": "originals/favorites/img-2560-f21669943d58.jpg",
+      "present": false,
+      "error": "404"
+    },
+    {
+      "photo_id": 35660,
+      "key": "photos/original/sa/santateresa-dji-0756-3c308809.jpg",
+      "present": false,
+      "error": "404"
+    },
+    {
+      "photo_id": 35729,
+      "key": "photos/original/sa/santateresa-pano00086-1a2a3469.jpg",
+      "present": false,
+      "error": "404"
+    },
+    {
+      "photo_id": 35550,
+      "key": "photos/original/sa/santateresa-2023-12-30-17-55-36-054a41a5.jpg",
+      "present": false,
+      "error": "404"
+    },
+    {
+      "photo_id": 14783,
+      "key": "originals/favorites/2019-04-01-13-38-26-99d1a7270780.jpg",
+      "present": false,
+      "error": "404"
+    },
+    {
+      "photo_id": 35712,
+      "key": "photos/original/sa/santateresa-pano00009-b3752728.jpg",
+      "present": false,
+      "error": "404"
+    },
+    {
+      "photo_id": 35674,
+      "key": "photos/original/sa/santateresa-dji-0788-b110433d.jpg",
+      "present": false,
+      "error": "404"
+    }
+  ],
+  "status": "success"
+}

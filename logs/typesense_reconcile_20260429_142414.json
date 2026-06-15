@@ -1,0 +1,13 @@
+{
+  "task": "wild_typesense_reconcile_no_llm",
+  "eligible_db_count": 35804,
+  "typesense_count_before": 34353,
+  "stale_removed": 18,
+  "missing_added": 1469,
+  "typesense_count_after": 35804,
+  "final_drift": 0,
+  "status": "success",
+  "duration_seconds": 600,
+  "error": null,
+  "notes": "Removed 18 stale docs (slugs not in eligible Neon). Added 1469 missing docs. Also cleaned up 1468 duplicate docs that were created during import attempts (bulk import without upsert mode created duplicates). Final count matches eligible DB exactly."
+}

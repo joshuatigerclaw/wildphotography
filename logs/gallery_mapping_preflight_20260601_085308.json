@@ -1,0 +1,690 @@
+{
+  "run_at": "2026-06-01T14:53:08.516936+00:00",
+  "total_issues": 22250,
+  "issues": {
+    "orphaned_gallery_photos_missing_photo": {
+      "count": 31,
+      "records": [
+        {
+          "gp_id": 53435,
+          "photo_id": 1,
+          "gallery_id": 1
+        },
+        {
+          "gp_id": 62448,
+          "photo_id": 37410,
+          "gallery_id": 19
+        },
+        {
+          "gp_id": 66025,
+          "photo_id": 41204,
+          "gallery_id": 32
+        },
+        {
+          "gp_id": 80686,
+          "photo_id": 50032,
+          "gallery_id": 17
+        },
+        {
+          "gp_id": 80687,
+          "photo_id": 50033,
+          "gallery_id": 17
+        },
+        {
+          "gp_id": 80688,
+          "photo_id": 50034,
+          "gallery_id": 17
+        },
+        {
+          "gp_id": 80689,
+          "photo_id": 50035,
+          "gallery_id": 17
+        },
+        {
+          "gp_id": 80690,
+          "photo_id": 50036,
+          "gallery_id": 18
+        },
+        {
+          "gp_id": 80691,
+          "photo_id": 50037,
+          "gallery_id": 18
+        },
+        {
+          "gp_id": 80692,
+          "photo_id": 50038,
+          "gallery_id": 18
+        },
+        {
+          "gp_id": 80693,
+          "photo_id": 50039,
+          "gallery_id": 18
+        },
+        {
+          "gp_id": 80694,
+          "photo_id": 50040,
+          "gallery_id": 18
+        },
+        {
+          "gp_id": 80695,
+          "photo_id": 50041,
+          "gallery_id": 18
+        },
+        {
+          "gp_id": 80696,
+          "photo_id": 50042,
+          "gallery_id": 18
+        },
+        {
+          "gp_id": 80697,
+          "photo_id": 50043,
+          "gallery_id": 18
+        },
+        {
+          "gp_id": 80698,
+          "photo_id": 50044,
+          "gallery_id": 18
+        },
+        {
+          "gp_id": 80699,
+          "photo_id": 50045,
+          "gallery_id": 18
+        },
+        {
+          "gp_id": 80700,
+          "photo_id": 50046,
+          "gallery_id": 18
+        },
+        {
+          "gp_id": 80701,
+          "photo_id": 50047,
+          "gallery_id": 18
+        },
+        {
+          "gp_id": 80702,
+          "photo_id": 50048,
+          "gallery_id": 18
+        },
+        {
+          "gp_id": 80703,
+          "photo_id": 50049,
+          "gallery_id": 18
+        },
+        {
+          "gp_id": 80704,
+          "photo_id": 50050,
+          "gallery_id": 18
+        },
+        {
+          "gp_id": 80705,
+          "photo_id": 50051,
+          "gallery_id": 18
+        },
+        {
+          "gp_id": 80706,
+          "photo_id": 50052,
+          "gallery_id": 18
+        },
+        {
+          "gp_id": 80707,
+          "photo_id": 50053,
+          "gallery_id": 18
+        },
+        {
+          "gp_id": 80708,
+          "photo_id": 50054,
+          "gallery_id": 18
+        },
+        {
+          "gp_id": 80709,
+          "photo_id": 50055,
+          "gallery_id": 18
+        },
+        {
+          "gp_id": 80710,
+          "photo_id": 50056,
+          "gallery_id": 18
+        },
+        {
+          "gp_id": 80711,
+          "photo_id": 50057,
+          "gallery_id": 18
+        },
+        {
+          "gp_id": 80712,
+          "photo_id": 50058,
+          "gallery_id": 18
+        },
+        {
+          "gp_id": 80713,
+          "photo_id": 50059,
+          "gallery_id": 18
+        }
+      ]
+    },
+    "orphaned_gallery_photos_missing_gallery": {
+      "count": 1,
+      "records": [
+        {
+          "gp_id": 53435,
+          "photo_id": 1,
+          "gallery_id": 1
+        }
+      ]
+    },
+    "galleries_with_invalid_cover_photo": {
+      "count": 0,
+      "records": []
+    },
+    "photos_with_invalid_gallery_slug": {
+      "count": 159,
+      "records": [
+        {
+          "photo_id": 47110,
+          "slug": "costa-rica-travel-tourism-2018-11-23-08-25-59-1",
+          "gallery_slug": "costa-rica-gallery"
+        },
+        {
+          "photo_id": 49575,
+          "slug": "costa-rica-gallery-heredia-costa-rica-dji-0109",
+          "gallery_slug": "costa-rica-gallery-heredia-costa-rica"
+        },
+        {
+          "photo_id": 49576,
+          "slug": "costa-rica-gallery-heredia-costa-rica-dji-0226",
+          "gallery_slug": "costa-rica-gallery-heredia-costa-rica"
+        },
+        {
+          "photo_id": 49577,
+          "slug": "costa-rica-gallery-heredia-costa-rica-dji-0687",
+          "gallery_slug": "costa-rica-gallery-heredia-costa-rica"
+        },
+        {
+          "photo_id": 49578,
+          "slug": "costa-rica-gallery-heredia-costa-rica-hyperlapse-0141",
+          "gallery_slug": "costa-rica-gallery-heredia-costa-rica"
+        },
+        {
+          "photo_id": 49579,
+          "slug": "costa-rica-gallery-heredia-costa-rica-hyperlapse-0173",
+          "gallery_slug": "costa-rica-gallery-heredia-costa-rica"
+        },
+        {
+          "photo_id": 49580,
+          "slug": "costa-rica-gallery-heredia-costa-rica-img-0660-jpg",
+          "gallery_slug": "costa-rica-gallery-heredia-costa-rica"
+        },
+        {
+          "photo_id": 49581,
+          "slug": "costa-rica-gallery-heredia-costa-rica-img-0667-jpg",
+          "gallery_slug": "costa-rica-gallery-heredia-costa-rica"
+        },
+        {
+          "photo_id": 63332,
+          "slug": "dji-0227-8fc345b2",
+          "gallery_slug": "costa-rica-gallery-puenta-de-la-amistad-tempisque"
+        },
+        {
+          "photo_id": 63333,
+          "slug": "dji-0230-1860ec85",
+          "gallery_slug": "costa-rica-gallery-puenta-de-la-amistad-tempisque"
+        },
+        {
+          "photo_id": 63334,
+          "slug": "dji-0231-69b6dcca",
+          "gallery_slug": "costa-rica-gallery-puenta-de-la-amistad-tempisque"
+        },
+        {
+          "photo_id": 63335,
+          "slug": "dji-0233-dba7696b",
+          "gallery_slug": "costa-rica-gallery-puenta-de-la-amistad-tempisque"
+        },
+        {
+          "photo_id": 63336,
+          "slug": "dji-0234-db066e1d",
+          "gallery_slug": "costa-rica-gallery-puenta-de-la-amistad-tempisque"
+        },
+        {
+          "photo_id": 63337,
+          "slug": "dji-0235-7b100778",
+          "gallery_slug": "costa-rica-gallery-puenta-de-la-amistad-tempisque"
+        },
+        {
+          "photo_id": 63338,
+          "slug": "dji-0237-1487afe7",
+          "gallery_slug": "costa-rica-gallery-puenta-de-la-amistad-tempisque"
+        },
+        {
+          "photo_id": 63339,
+          "slug": "dji-0239-a711a151",
+          "gallery_slug": "costa-rica-gallery-puenta-de-la-amistad-tempisque"
+        },
+        {
+          "photo_id": 63340,
+          "slug": "dji-0240-7f343ad6",
+          "gallery_slug": "costa-rica-gallery-puenta-de-la-amistad-tempisque"
+        },
+        {
+          "photo_id": 63341,
+          "slug": "dji-0242-622e256e",
+          "gallery_slug": "costa-rica-gallery-puenta-de-la-amistad-tempisque"
+        },
+        {
+          "photo_id": 63342,
+          "slug": "dji-0244-295ca013",
+          "gallery_slug": "costa-rica-gallery-puenta-de-la-amistad-tempisque"
+        },
+        {
+          "photo_id": 63343,
+          "slug": "dji-0245-425fc251",
+          "gallery_slug": "costa-rica-gallery-puenta-de-la-amistad-tempisque"
+        },
+        {
+          "photo_id": 63344,
+          "slug": "dji-0246-724aa1d9",
+          "gallery_slug": "costa-rica-gallery-puenta-de-la-amistad-tempisque"
+        },
+        {
+          "photo_id": 63345,
+          "slug": "dji-0247-d00c9312",
+          "gallery_slug": "costa-rica-gallery-puenta-de-la-amistad-tempisque"
+        },
+        {
+          "photo_id": 63346,
+          "slug": "dji-0248-0143d289",
+          "gallery_slug": "costa-rica-gallery-puenta-de-la-amistad-tempisque"
+        },
+        {
+          "photo_id": 63347,
+          "slug": "dji-0250-b257f486",
+          "gallery_slug": "costa-rica-gallery-puenta-de-la-amistad-tempisque"
+        },
+        {
+          "photo_id": 63348,
+          "slug": "dji-0255-a91379b1",
+          "gallery_slug": "costa-rica-gallery-puenta-de-la-amistad-tempisque"
+        },
+        {
+          "photo_id": 63349,
+          "slug": "dji-0257-b1eb5e03",
+          "gallery_slug": "costa-rica-gallery-puenta-de-la-amistad-tempisque"
+        },
+        {
+          "photo_id": 63256,
+          "slug": "2024-01-29-16-17-14-393f1bf8",
+          "gallery_slug": "costa-rica-gallery-santa-ana-costa-rica"
+        },
+        {
+          "photo_id": 63257,
+          "slug": "dji-0513-de18e405",
+          "gallery_slug": "costa-rica-gallery-santa-ana-costa-rica"
+        },
+        {
+          "photo_id": 63258,
+          "slug": "dji-0514-5be2d4e6",
+          "gallery_slug": "costa-rica-gallery-santa-ana-costa-rica"
+        },
+        {
+          "photo_id": 63259,
+          "slug": "dji-0517-96b0cc71",
+          "gallery_slug": "costa-rica-gallery-santa-ana-costa-rica"
+        },
+        {
+          "photo_id": 63260,
+          "slug": "dji-0520-497537a7",
+          "gallery_slug": "costa-rica-gallery-santa-ana-costa-rica"
+        },
+        {
+          "photo_id": 63261,
+          "slug": "dji-0522-35d15e01",
+          "gallery_slug": "costa-rica-gallery-santa-ana-costa-rica"
+        },
+        {
+          "photo_id": 63262,
+          "slug": "dji-0539-65ddc79a",
+          "gallery_slug": "costa-rica-gallery-santa-ana-costa-rica"
+        },
+        {
+          "photo_id": 63263,
+          "slug": "dji-0541-eda3c185",
+          "gallery_slug": "costa-rica-gallery-santa-ana-costa-rica"
+        },
+        {
+          "photo_id": 63264,
+          "slug": "dji-0543-8725b0a6",
+          "gallery_slug": "costa-rica-gallery-santa-ana-costa-rica"
+        },
+        {
+          "photo_id": 63265,
+          "slug": "dji-0553-1b5423c5",
+          "gallery_slug": "costa-rica-gallery-santa-ana-costa-rica"
+        },
+        {
+          "photo_id": 63266,
+          "slug": "dji-0568-38f25e24",
+          "gallery_slug": "costa-rica-gallery-santa-ana-costa-rica"
+        },
+        {
+          "photo_id": 63267,
+          "slug": "dji-0586-ef88a9e5",
+          "gallery_slug": "costa-rica-gallery-santa-ana-costa-rica"
+        },
+        {
+          "photo_id": 63268,
+          "slug": "dji-0601-2c3c8c96",
+          "gallery_slug": "costa-rica-gallery-santa-ana-costa-rica"
+        },
+        {
+          "photo_id": 63269,
+          "slug": "dji-0608-37004581",
+          "gallery_slug": "costa-rica-gallery-santa-ana-costa-rica"
+        },
+        {
+          "photo_id": 63270,
+          "slug": "dji-0818-18b20fa9",
+          "gallery_slug": "costa-rica-gallery-santa-ana-costa-rica"
+        },
+        {
+          "photo_id": 63271,
+          "slug": "dji-0819-950758c4",
+          "gallery_slug": "costa-rica-gallery-santa-ana-costa-rica"
+        },
+        {
+          "photo_id": 63272,
+          "slug": "img-1300-6f223888",
+          "gallery_slug": "costa-rica-gallery-santa-ana-costa-rica"
+        },
+        {
+          "photo_id": 63273,
+          "slug": "img-1302-2f21b2eb",
+          "gallery_slug": "costa-rica-gallery-santa-ana-costa-rica"
+        },
+        {
+          "photo_id": 63292,
+          "slug": "2022-02-19-08-28-02-d80fb239",
+          "gallery_slug": "costa-rica-gallery-sports-and-adventure"
+        },
+        {
+          "photo_id": 63293,
+          "slug": "2022-02-19-08-28-06-56ad20a5",
+          "gallery_slug": "costa-rica-gallery-sports-and-adventure"
+        },
+        {
+          "photo_id": 63294,
+          "slug": "2022-02-19-08-28-10-3df22ea0",
+          "gallery_slug": "costa-rica-gallery-sports-and-adventure"
+        },
+        {
+          "photo_id": 63295,
+          "slug": "2022-02-19-08-28-13-5e92aa23",
+          "gallery_slug": "costa-rica-gallery-sports-and-adventure"
+        },
+        {
+          "photo_id": 63296,
+          "slug": "2023-04-12-11-15-55-2d413a59",
+          "gallery_slug": "costa-rica-gallery-sports-and-adventure"
+        },
+        {
+          "photo_id": 63297,
+          "slug": "20250418-121727-f0f29c89",
+          "gallery_slug": "costa-rica-gallery-sports-and-adventure"
+        },
+        {
+          "photo_id": 63298,
+          "slug": "20250418-121854-630bc2ee",
+          "gallery_slug": "costa-rica-gallery-sports-and-adventure"
+        },
+        {
+          "photo_id": 63299,
+          "slug": "cl0a6923-76d52373",
+          "gallery_slug": "costa-rica-gallery-sports-and-adventure"
+        },
+        {
+          "photo_id": 63300,
+          "slug": "cl0a6929-fefdcac5",
+          "gallery_slug": "costa-rica-gallery-sports-and-adventure"
+        },
+        {
+          "photo_id": 63301,
+          "slug": "cl0a6942-22e3b374",
+          "gallery_slug": "costa-rica-gallery-sports-and-adventure"
+        },
+        {
+          "photo_id": 63302,
+          "slug": "cl0a9533-ec52de4c",
+          "gallery_slug": "costa-rica-gallery-sports-and-adventure"
+        },
+        {
+          "photo_id": 63303,
+          "slug": "cl0a9536-792efd2a",
+          "gallery_slug": "costa-rica-gallery-sports-and-adventure"
+        },
+        {
+          "photo_id": 63304,
+          "slug": "cl0a9571-4f7fd66a",
+          "gallery_slug": "costa-rica-gallery-sports-and-adventure"
+        },
+        {
+          "photo_id": 63305,
+          "slug": "cl0a9583-6062d63f",
+          "gallery_slug": "costa-rica-gallery-sports-and-adventure"
+        },
+        {
+          "photo_id": 63306,
+          "slug": "cl0a9587-732b88b9",
+          "gallery_slug": "costa-rica-gallery-sports-and-adventure"
+        },
+        {
+          "photo_id": 63307,
+          "slug": "cl0a9598-c69432b2",
+          "gallery_slug": "costa-rica-gallery-sports-and-adventure"
+        },
+        {
+          "photo_id": 63308,
+          "slug": "cl0a9600-35231e33",
+          "gallery_slug": "costa-rica-gallery-sports-and-adventure"
+        },
+        {
+          "photo_id": 63309,
+          "slug": "cl0a9604-16372646",
+          "gallery_slug": "costa-rica-gallery-sports-and-adventure"
+        },
+        {
+          "photo_id": 63310,
+          "slug": "cl0a9613-000b5b93",
+          "gallery_slug": "costa-rica-gallery-sports-and-adventure"
+        },
+        {
+          "photo_id": 63311,
+          "slug": "cl0a9658-5f474188",
+          "gallery_slug": "costa-rica-gallery-sports-and-adventure"
+        },
+        {
+          "photo_id": 63312,
+          "slug": "dji-0669-529de88a",
+          "gallery_slug": "costa-rica-gallery-sports-and-adventure"
+        },
+        {
+          "photo_id": 63313,
+          "slug": "dji-0711-42ef28ab",
+          "gallery_slug": "costa-rica-gallery-sports-and-adventure"
+        },
+        {
+          "photo_id": 63314,
+          "slug": "p9171978-15f1c0f3",
+          "gallery_slug": "costa-rica-gallery-sports-and-adventure"
+        },
+        {
+          "photo_id": 41741,
+          "slug": "guanacaste-costa-rica-2018-07-15-08-19-05",
+          "gallery_slug": "guanacaste-costa-rica"
+        },
+        {
+          "photo_id": 41742,
+          "slug": "guanacaste-costa-rica-2018-11-23-08-25-59",
+          "gallery_slug": "guanacaste-costa-rica"
+        },
+        {
+          "photo_id": 41743,
+          "slug": "guanacaste-costa-rica-dji_0051",
+          "gallery_slug": "guanacaste-costa-rica"
+        },
+        {
+          "photo_id": 41744,
+          "slug": "guanacaste-costa-rica-dji_0052",
+          "gallery_slug": "guanacaste-costa-rica"
+        },
+        {
+          "photo_id": 41745,
+          "slug": "guanacaste-costa-rica-dji_0101",
+          "gallery_slug": "guanacaste-costa-rica"
+        },
+        {
+          "photo_id": 41746,
+          "slug": "guanacaste-costa-rica-dji_0126",
+          "gallery_slug": "guanacaste-costa-rica"
+        },
+        {
+          "photo_id": 41747,
+          "slug": "guanacaste-costa-rica-dji_0279",
+          "gallery_slug": "guanacaste-costa-rica"
+        },
+        {
+          "photo_id": 41748,
+          "slug": "guanacaste-costa-rica-dji_0296",
+          "gallery_slug": "guanacaste-costa-rica"
+        },
+        {
+          "photo_id": 41749,
+          "slug": "guanacaste-costa-rica-dji_0298",
+          "gallery_slug": "guanacaste-costa-rica"
+        },
+        {
+          "photo_id": 41750,
+          "slug": "guanacaste-costa-rica-dji_0301",
+          "gallery_slug": "guanacaste-costa-rica"
+        },
+        {
+          "photo_id": 41751,
+          "slug": "guanacaste-costa-rica-dji_0308",
+          "gallery_slug": "guanacaste-costa-rica"
+        },
+        {
+          "photo_id": 41752,
+          "slug": "guanacaste-costa-rica-dji_0329",
+          "gallery_slug": "guanacaste-costa-rica"
+        },
+        {
+          "photo_id": 41753,
+          "slug": "guanacaste-costa-rica-dji_0330",
+          "gallery_slug": "guanacaste-costa-rica"
+        },
+        {
+          "photo_id": 41754,
+          "slug": "guanacaste-costa-rica-dji_0332",
+          "gallery_slug": "guanacaste-costa-rica"
+        },
+        {
+          "photo_id": 41755,
+          "slug": "guanacaste-costa-rica-dji_0334-1",
+          "gallery_slug": "guanacaste-costa-rica"
+        },
+        {
+          "photo_id": 41756,
+          "slug": "guanacaste-costa-rica-dji_0334",
+          "gallery_slug": "guanacaste-costa-rica"
+        },
+        {
+          "photo_id": 41757,
+          "slug": "guanacaste-costa-rica-dji_0343",
+          "gallery_slug": "guanacaste-costa-rica"
+        },
+        {
+          "photo_id": 41758,
+          "slug": "guanacaste-costa-rica-dji_0350",
+          "gallery_slug": "guanacaste-costa-rica"
+        },
+        {
+          "photo_id": 41759,
+          "slug": "guanacaste-costa-rica-dji_0351",
+          "gallery_slug": "guanacaste-costa-rica"
+        },
+        {
+          "photo_id": 41760,
+          "slug": "guanacaste-costa-rica-dji_0356",
+          "gallery_slug": "guanacaste-costa-rica"
+        },
+        {
+          "photo_id": 41803,
+          "slug": "guanacaste-costa-rica-dji_0361",
+          "gallery_slug": "guanacaste-costa-rica"
+        },
+        {
+          "photo_id": 41804,
+          "slug": "guanacaste-costa-rica-dji_0363",
+          "gallery_slug": "guanacaste-costa-rica"
+        },
+        {
+          "photo_id": 41805,
+          "slug": "guanacaste-costa-rica-dji_0365",
+          "gallery_slug": "guanacaste-costa-rica"
+        },
+        {
+          "photo_id": 41806,
+          "slug": "guanacaste-costa-rica-dji_0370",
+          "gallery_slug": "guanacaste-costa-rica"
+        },
+        {
+          "photo_id": 41807,
+          "slug": "guanacaste-costa-rica-dji_0374",
+          "gallery_slug": "guanacaste-costa-rica"
+        },
+        {
+          "photo_id": 41808,
+          "slug": "guanacaste-costa-rica-dji_0397",
+          "gallery_slug": "guanacaste-costa-rica"
+        },
+        {
+          "photo_id": 41809,
+          "slug": "guanacaste-costa-rica-dji_0399",
+          "gallery_slug": "guanacaste-costa-rica"
+        },
+        {
+          "photo_id": 41810,
+          "slug": "guanacaste-costa-rica-dji_0400",
+          "gallery_slug": "guanacaste-costa-rica"
+        },
+        {
+          "photo_id": 41811,
+          "slug": "guanacaste-costa-rica-dji_0404",
+          "gallery_slug": "guanacaste-costa-rica"
+        },
+        {
+          "photo_id": 41812,
+          "slug": "guanacaste-costa-rica-dji_0406",
+          "gallery_slug": "guanacaste-costa-rica"
+        },
+        {
+          "photo_id": 41813,
+          "slug": "guanacaste-costa-rica-dji_0427",
+          "gallery_slug": "guanacaste-costa-rica"
+        },
+        {
+          "photo_id": 41814,
+          "slug": "guanacaste-costa-rica-dji_0432",
+          "gallery_slug": "guanacaste-costa-rica"
+        },
+        {
+          "photo_id": 41815,
+          "slug": "guanacaste-costa-rica-dji_0440",
+          "gallery_slug": "guanacaste-costa-rica"
+        }
+      ]
+    },
+    "render_ready_photos_in_no_gallery": {
+      "count": 22059
+    }
+  },
+  "status": "success",
+  "action_required": true
+}

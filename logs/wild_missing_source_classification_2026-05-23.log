@@ -1,0 +1,56 @@
+WILDMISSING_SOURCE_CLASSIFICATION — 2026-05-23 07:02 UTC
+
+Query: photos with no R2 original key, no local source path, AND no derivative URLs (thumb/small/medium/large/preview all NULL)
+
+SUMMARY
+=======
+Total records classified: 47
+
+CLASSIFICATION BREAKDOWN
+=======================
+
+Category A: LEGACY_STATIC_UNRECOVERABLE (43 records)
+  - Status: archived_unrecoverable
+  - State: missing_media
+  - Origin: legacy_static
+  - No source, no derivatives, already archived
+  - Verdict: PERMANENTLY_EXCLUDED — no recovery path, no repair warranted
+
+  Galleries affected:
+    gallery_id 25 (Quetzal):  2 records  (ids 14906, 14907)
+    gallery_id 13 (Guanacaste): 13 records (ids 186,188,189,190,191,194,195,198,199,214,215,216,237,238,239)
+    gallery_id 12 (Limón):     8 records  (ids 161,162,163,170,173,181,182,184)
+    gallery_id 11 (Poás/Turrialba): 20 records (ids 121,122,126,127,128,130,131,132,133,134,137,140,141,143,144,145,146,147)
+
+Category B: ARCHIVED_UNRECOVERABLE_DUPLICATE (2 records)
+  - Status: archived_unrecoverable
+  - State: missing_media
+  - Origin: archived_unrecoverable
+  - Verdict: PERMANENTLY_EXCLUDED — test entries, no value, already marked unrecoverable
+  - Ids: 49529 (test-minimal-xyz), 37410 (test-test1776)
+
+Category C: ARCHIVED_LOCAL_IMPORT (1 record)
+  - Id: 51459, slug: test-slag, gallery_id 158
+  - Status: archived, origin: local_import
+  - Verdict: PERMANENTLY_EXCLUDED — test artifact, no media, no SEO value
+
+Category D: DRAFT_ORPHAN (1 record)
+  - Id: 51458, slug: test-s, gallery_id NULL
+  - Status: draft, origin: NULL
+  - Verdict: EXCLUDED_FROM_PROCESSING — no gallery, no source, test artifact
+  - Recommended action: set exclude_from_processing=true
+
+DISPOSITION
+==========
+PERMANENTLY_EXCLUDED (Category A, B, C):  46 records
+PROCESSING_EXCLUDED (Category D):           1 record
+REPAIR_CANDIDATE:                           0 records
+
+No records found with a valid source path that could be reprocessed.
+All 47 records are unrecoverable test artifacts or legacy records with missing media.
+
+RECOMMENDED ACTIONS
+===================
+1. Set exclude_from_processing=true for id 51458 (draft orphan)
+2. Categories A, B, C are already properly archived_unrecoverable — no action needed
+3. No repair queue generation required for this batch

@@ -1,0 +1,21 @@
+=== WildPhotography Typesense Reconciliation ===
+Collection: wildphotos_photos
+Time: 2026-06-14 07:07:49 UTC
+
+[1/4] Fetching Neon search_ready photo IDs...
+  Neon search_ready photos: 69119
+[2/4] Fetching Typesense document IDs...
+  Typesense documents: 69026
+
+  Orphaned in Typesense (will delete): 20
+  Missing from Typesense (will upsert): 113
+  Total drift: 133
+
+[3/4] Deleting 20 orphaned documents from Typesense...
+  Deleted: 20
+
+[4/4] Upserting 113 missing documents to Typesense...
+  Upserted batch 1: 113/113 docs
+  Upserted: 113, Errors: 0
+
+=== Reconciliation Complete ===

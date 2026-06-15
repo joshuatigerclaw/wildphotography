@@ -1,0 +1,526 @@
+{
+  "run_at": "2026-05-22T12:45:18.979432+00:00",
+  "total_photos": 43958,
+  "render_ready_total": 43882,
+  "photos_with_issues": 243,
+  "all_clear": false,
+  "checks": {
+    "missing_thumb_url": {
+      "count": 0,
+      "sample": []
+    },
+    "missing_slug": {
+      "count": 0,
+      "sample": []
+    },
+    "missing_title": {
+      "count": 0,
+      "sample": []
+    },
+    "missing_gallery_slug": {
+      "count": 5250,
+      "sample": [
+        {
+          "id": 242,
+          "slug": "hermosa-beach-1",
+          "title": "Hermosa Beach Sunset",
+          "status": "archived"
+        },
+        {
+          "id": 14905,
+          "slug": "resplendent-quetzal",
+          "title": "Resplendent Quetzal \u2014 Costa Rica",
+          "status": "archived"
+        },
+        {
+          "id": 41302,
+          "slug": "sunrise-sunset-2016-07-31-17-59-49",
+          "title": "Pacific Coast Sunrise, Guanacaste 2016",
+          "status": "published"
+        },
+        {
+          "id": 41303,
+          "slug": "sunrise-sunset-2017-07-15-18-57-45",
+          "title": "Tropical Sunset, Guanacaste 2017",
+          "status": "published"
+        },
+        {
+          "id": 41304,
+          "slug": "sunrise-sunset-2018-03-29-18-22-12",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41304 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41305,
+          "slug": "sunrise-sunset-2018-08-21-17-53-04",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41305 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41306,
+          "slug": "sunrise-sunset-2018-08-21-17-55-57",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41306 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41307,
+          "slug": "sunrise-sunset-2018-08-21-18-01-08",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41307 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41308,
+          "slug": "sunrise-sunset-2018-08-21-18-02-56",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41308 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41309,
+          "slug": "sunrise-sunset-2018-08-21-18-09-15",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41309 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41310,
+          "slug": "sunrise-sunset-2018-08-24-17-55-36",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41310 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41311,
+          "slug": "sunrise-sunset-2019-july-19-hyperlapse-0311",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41311 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41312,
+          "slug": "sunrise-sunset-2019-03-31-05-46-08",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41312 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41313,
+          "slug": "sunrise-sunset-2019-11-08-17-16-08",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41313 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41314,
+          "slug": "sunrise-sunset-2020-06-06-17-38-31",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41314 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41315,
+          "slug": "sunrise-sunset-2020-06-07-17-57-31",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41315 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41316,
+          "slug": "sunrise-sunset-2020-06-07-17-58-30",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41316 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41317,
+          "slug": "sunrise-sunset-2020-06-07-18-00-38",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41317 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41318,
+          "slug": "sunrise-sunset-2020-07-17-05-10-04",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41318 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41319,
+          "slug": "sunrise-sunset-2020-07-17-05-18-15",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41319 | WildPhotography",
+          "status": "published"
+        }
+      ]
+    },
+    "search_not_ready": {
+      "count": 43,
+      "sample": [
+        {
+          "id": 49600,
+          "slug": "costa-rica-gallery-sunrise-sunset-DJI_0659",
+          "title": "Aerial View of Pacific Coast at Golden Hour",
+          "status": "repair_needed"
+        },
+        {
+          "id": 49604,
+          "slug": "costa-rica-gallery-sunrise-sunset-DJI_0678-2",
+          "title": "Aerial View of Pacific Coast at Golden Hour",
+          "status": "repair_needed"
+        },
+        {
+          "id": 49612,
+          "slug": "costa-rica-gallery-sunrise-sunset-DJI_0732",
+          "title": "Aerial View of Pacific Coast at Golden Hour",
+          "status": "repair_needed"
+        },
+        {
+          "id": 49613,
+          "slug": "costa-rica-gallery-sunrise-sunset-DJI_0733",
+          "title": "Aerial View of Pacific Coast at Golden Hour",
+          "status": "repair_needed"
+        },
+        {
+          "id": 49619,
+          "slug": "costa-rica-gallery-sunrise-sunset-DJI_0852",
+          "title": "Aerial View of Pacific Coast at Golden Hour",
+          "status": "repair_needed"
+        },
+        {
+          "id": 49770,
+          "slug": "butterflies-img-1445",
+          "title": "Bajos Del Toro Costa Rica Costa Rica \u2014 nature_macro",
+          "status": "repair_needed"
+        },
+        {
+          "id": 49771,
+          "slug": "butterflies-img-2475",
+          "title": "Alajuela Photography",
+          "status": "repair_needed"
+        },
+        {
+          "id": 49772,
+          "slug": "butterflies-img-3594",
+          "title": "Alajuela Photography",
+          "status": "repair_needed"
+        },
+        {
+          "id": 49773,
+          "slug": "butterflies-img-4592",
+          "title": "Alajuela Photography",
+          "status": "repair_needed"
+        },
+        {
+          "id": 49774,
+          "slug": "butterflies-img-4712",
+          "title": "Alajuela Photography",
+          "status": "repair_needed"
+        },
+        {
+          "id": 49775,
+          "slug": "butterflies-img-4734",
+          "title": "Alajuela Photography",
+          "status": "repair_needed"
+        },
+        {
+          "id": 49776,
+          "slug": "butterflies-img-4757",
+          "title": "Bajos Del Toro Costa Rica Costa Rica \u2014 nature_macro",
+          "status": "repair_needed"
+        },
+        {
+          "id": 49777,
+          "slug": "butterflies-img-4762",
+          "title": "Bajos del Toro Photography",
+          "status": "repair_needed"
+        },
+        {
+          "id": 49778,
+          "slug": "butterflies-img-4838",
+          "title": "Alajuela Photography",
+          "status": "repair_needed"
+        },
+        {
+          "id": 49779,
+          "slug": "butterflies-img-6675",
+          "title": "Bajos Del Toro Costa Rica Costa Rica \u2014 nature_macro",
+          "status": "repair_needed"
+        },
+        {
+          "id": 49780,
+          "slug": "butterflies-img-6824",
+          "title": "Alajuela Photography",
+          "status": "repair_needed"
+        },
+        {
+          "id": 49781,
+          "slug": "butterflies-img-8987",
+          "title": "Bajos del Toro Photography",
+          "status": "repair_needed"
+        },
+        {
+          "id": 49782,
+          "slug": "butterflies-img-9788",
+          "title": "Alajuela Photography",
+          "status": "repair_needed"
+        },
+        {
+          "id": 49783,
+          "slug": "butterflies-img-9891",
+          "title": "Bajos Del Toro Costa Rica Costa Rica \u2014 nature_macro",
+          "status": "repair_needed"
+        },
+        {
+          "id": 49784,
+          "slug": "butterflies-img-9896",
+          "title": "Alajuela Photography",
+          "status": "repair_needed"
+        }
+      ]
+    },
+    "derivatives_incomplete": {
+      "count": 0,
+      "sample": []
+    },
+    "missing_description": {
+      "count": 20,
+      "sample": [
+        {
+          "id": 51246,
+          "slug": "land-animals-1779452457586-89zvk",
+          "title": "2020-10-04 11.12.15",
+          "status": "pending_import"
+        },
+        {
+          "id": 51247,
+          "slug": "land-animals-1779452460784-t0z63",
+          "title": "2020-10-04 11.13.18",
+          "status": "pending_import"
+        },
+        {
+          "id": 51248,
+          "slug": "land-animals-1779452464043-mi79r",
+          "title": "IMG_0243",
+          "status": "pending_import"
+        },
+        {
+          "id": 51249,
+          "slug": "land-animals-1779452466431-hjoqr",
+          "title": "IMG_0249",
+          "status": "pending_import"
+        },
+        {
+          "id": 51250,
+          "slug": "land-animals-1779452468386-rrfsj",
+          "title": "IMG_0264",
+          "status": "pending_import"
+        },
+        {
+          "id": 51251,
+          "slug": "land-animals-1779452471406-3cjjj",
+          "title": "IMG_0280",
+          "status": "pending_import"
+        },
+        {
+          "id": 51252,
+          "slug": "land-animals-1779452474417-wffjp",
+          "title": "IMG_0368",
+          "status": "pending_import"
+        },
+        {
+          "id": 51253,
+          "slug": "land-animals-1779452477152-fgwpr",
+          "title": "IMG_4566",
+          "status": "pending_import"
+        },
+        {
+          "id": 51254,
+          "slug": "land-animals-1779452478353-4yro1",
+          "title": "IMG_4786",
+          "status": "pending_import"
+        },
+        {
+          "id": 51255,
+          "slug": "land-animals-1779452480162-mi2nh",
+          "title": "IMG_6428",
+          "status": "pending_import"
+        },
+        {
+          "id": 51256,
+          "slug": "land-animals-1779452482490-cyawd",
+          "title": "IMG_7489",
+          "status": "pending_import"
+        },
+        {
+          "id": 51257,
+          "slug": "land-animals-1779452483948-swhbq",
+          "title": "IMG_7568",
+          "status": "pending_import"
+        },
+        {
+          "id": 51258,
+          "slug": "land-animals-1779452486300-46ssj",
+          "title": "IMG_9782",
+          "status": "pending_import"
+        },
+        {
+          "id": 51259,
+          "slug": "land-animals-1779452487968-2eo3m",
+          "title": "PC290811",
+          "status": "pending_import"
+        },
+        {
+          "id": 51260,
+          "slug": "land-animals-1779452489690-ndy08",
+          "title": "tambor_IMG_0949_6",
+          "status": "pending_import"
+        },
+        {
+          "id": 51261,
+          "slug": "land-animals-1779452491951-k26sa",
+          "title": "tambor_IMG_0955_7",
+          "status": "pending_import"
+        },
+        {
+          "id": 51262,
+          "slug": "land-animals-1779452494918-39wi6",
+          "title": "tambor_IMG_0959_8",
+          "status": "pending_import"
+        },
+        {
+          "id": 51263,
+          "slug": "land-animals-1779452497528-nf12q",
+          "title": "tambor_IMG_0963_9",
+          "status": "pending_import"
+        },
+        {
+          "id": 51264,
+          "slug": "land-animals-1779452499732-te16f",
+          "title": "tambor_IMG_0967_10",
+          "status": "pending_import"
+        },
+        {
+          "id": 51265,
+          "slug": "land-animals-1779452501850-l9rzq",
+          "title": "tambor_IMG_0972_11",
+          "status": "pending_import"
+        }
+      ]
+    },
+    "missing_keywords": {
+      "count": 20,
+      "sample": [
+        {
+          "id": 51246,
+          "slug": "land-animals-1779452457586-89zvk",
+          "title": "2020-10-04 11.12.15",
+          "status": "pending_import"
+        },
+        {
+          "id": 51247,
+          "slug": "land-animals-1779452460784-t0z63",
+          "title": "2020-10-04 11.13.18",
+          "status": "pending_import"
+        },
+        {
+          "id": 51248,
+          "slug": "land-animals-1779452464043-mi79r",
+          "title": "IMG_0243",
+          "status": "pending_import"
+        },
+        {
+          "id": 51249,
+          "slug": "land-animals-1779452466431-hjoqr",
+          "title": "IMG_0249",
+          "status": "pending_import"
+        },
+        {
+          "id": 51250,
+          "slug": "land-animals-1779452468386-rrfsj",
+          "title": "IMG_0264",
+          "status": "pending_import"
+        },
+        {
+          "id": 51251,
+          "slug": "land-animals-1779452471406-3cjjj",
+          "title": "IMG_0280",
+          "status": "pending_import"
+        },
+        {
+          "id": 51252,
+          "slug": "land-animals-1779452474417-wffjp",
+          "title": "IMG_0368",
+          "status": "pending_import"
+        },
+        {
+          "id": 51253,
+          "slug": "land-animals-1779452477152-fgwpr",
+          "title": "IMG_4566",
+          "status": "pending_import"
+        },
+        {
+          "id": 51254,
+          "slug": "land-animals-1779452478353-4yro1",
+          "title": "IMG_4786",
+          "status": "pending_import"
+        },
+        {
+          "id": 51255,
+          "slug": "land-animals-1779452480162-mi2nh",
+          "title": "IMG_6428",
+          "status": "pending_import"
+        },
+        {
+          "id": 51256,
+          "slug": "land-animals-1779452482490-cyawd",
+          "title": "IMG_7489",
+          "status": "pending_import"
+        },
+        {
+          "id": 51257,
+          "slug": "land-animals-1779452483948-swhbq",
+          "title": "IMG_7568",
+          "status": "pending_import"
+        },
+        {
+          "id": 51258,
+          "slug": "land-animals-1779452486300-46ssj",
+          "title": "IMG_9782",
+          "status": "pending_import"
+        },
+        {
+          "id": 51259,
+          "slug": "land-animals-1779452487968-2eo3m",
+          "title": "PC290811",
+          "status": "pending_import"
+        },
+        {
+          "id": 51260,
+          "slug": "land-animals-1779452489690-ndy08",
+          "title": "tambor_IMG_0949_6",
+          "status": "pending_import"
+        },
+        {
+          "id": 51261,
+          "slug": "land-animals-1779452491951-k26sa",
+          "title": "tambor_IMG_0955_7",
+          "status": "pending_import"
+        },
+        {
+          "id": 51262,
+          "slug": "land-animals-1779452494918-39wi6",
+          "title": "tambor_IMG_0959_8",
+          "status": "pending_import"
+        },
+        {
+          "id": 51263,
+          "slug": "land-animals-1779452497528-nf12q",
+          "title": "tambor_IMG_0963_9",
+          "status": "pending_import"
+        },
+        {
+          "id": 51264,
+          "slug": "land-animals-1779452499732-te16f",
+          "title": "tambor_IMG_0967_10",
+          "status": "pending_import"
+        },
+        {
+          "id": 51265,
+          "slug": "land-animals-1779452501850-l9rzq",
+          "title": "tambor_IMG_0972_11",
+          "status": "pending_import"
+        }
+      ]
+    }
+  },
+  "status": "success"
+}

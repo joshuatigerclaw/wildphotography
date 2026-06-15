@@ -1,0 +1,10 @@
+{
+  "started_at": "2026-05-30T21:17:23.485040Z",
+  "ts_count_before": 37065,
+  "ts_count_after": 37273,
+  "docs_upserted": 212,
+  "upsert_failures": 0,
+  "missing_count": 423,
+  "errors": [],
+  "completed_at": "2026-05-30T21:17:46.589601Z"
+}

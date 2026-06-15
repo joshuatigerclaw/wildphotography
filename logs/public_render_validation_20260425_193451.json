@@ -1,0 +1,526 @@
+{
+  "run_at": "2026-04-26T01:34:51.056890+00:00",
+  "total_photos": 34623,
+  "render_ready_total": 34536,
+  "photos_with_issues": 348,
+  "all_clear": false,
+  "checks": {
+    "missing_thumb_url": {
+      "count": 49,
+      "sample": [
+        {
+          "id": 14776,
+          "slug": "costa-rica-gallery-best-of-costa-rica-20070520-2268",
+          "title": "Favorites | Costa Rica Wildlife Photography by Joshua ten Brink",
+          "status": "archived"
+        },
+        {
+          "id": 14777,
+          "slug": "20070521-2491",
+          "title": "Favorites | Costa Rica Wildlife Photography by Joshua ten Brink",
+          "status": "archived"
+        },
+        {
+          "id": 14778,
+          "slug": "2018-03-28-081211",
+          "title": "Favorites | Costa Rica Wildlife Photography by Joshua ten Brink",
+          "status": "archived"
+        },
+        {
+          "id": 14779,
+          "slug": "2018-04-30-115646-1",
+          "title": "Favorites | Costa Rica Wildlife Photography by Joshua ten Brink",
+          "status": "archived"
+        },
+        {
+          "id": 14781,
+          "slug": "asia-china-2019-03-26-18-06-31-1",
+          "title": "Favorites | Costa Rica Wildlife Photography by Joshua ten Brink",
+          "status": "archived"
+        },
+        {
+          "id": 14782,
+          "slug": "2019-03-31-061618-1",
+          "title": "Favorites | Costa Rica Wildlife Photography by Joshua ten Brink",
+          "status": "archived"
+        },
+        {
+          "id": 14783,
+          "slug": "2019-04-01-133826",
+          "title": "Favorites | Costa Rica Wildlife Photography by Joshua ten Brink",
+          "status": "archived"
+        },
+        {
+          "id": 14784,
+          "slug": "2019-04-16-103409",
+          "title": "Favorites | Costa Rica Wildlife Photography by Joshua ten Brink",
+          "status": "archived"
+        },
+        {
+          "id": 14785,
+          "slug": "23-img-5550",
+          "title": "Costa Rica | WildPhotography",
+          "status": "archived"
+        },
+        {
+          "id": 14786,
+          "slug": "32-img-5623",
+          "title": "Costa Rica | WildPhotography",
+          "status": "archived"
+        },
+        {
+          "id": 14787,
+          "slug": "china-shanghai-2019-04-02-191544",
+          "title": "China Shanghai 2019 04 02 19.15.44",
+          "status": "archived"
+        },
+        {
+          "id": 14789,
+          "slug": "dji-0136",
+          "title": "Favorites | Costa Rica Wildlife Photography by Joshua ten Brink",
+          "status": "archived"
+        },
+        {
+          "id": 14790,
+          "slug": "dji-0301-001",
+          "title": "Favorites - Costa Rica Photography",
+          "status": "archived"
+        },
+        {
+          "id": 14791,
+          "slug": "dji-0322",
+          "title": "Favorites | Costa Rica Wildlife Photography by Joshua ten Brink",
+          "status": "archived"
+        },
+        {
+          "id": 14793,
+          "slug": "dji-0433-2",
+          "title": "Favorites Photography",
+          "status": "archived"
+        },
+        {
+          "id": 14794,
+          "slug": "dji-0491",
+          "title": "Favorites | Costa Rica Wildlife Photography by Joshua ten Brink",
+          "status": "archived"
+        },
+        {
+          "id": 14795,
+          "slug": "dji-0494",
+          "title": "Favorites | Costa Rica Wildlife Photography by Joshua ten Brink",
+          "status": "archived"
+        },
+        {
+          "id": 14796,
+          "slug": "dji-0513",
+          "title": "Favorites | Costa Rica Wildlife Photography by Joshua ten Brink",
+          "status": "archived"
+        },
+        {
+          "id": 14797,
+          "slug": "dji-0517",
+          "title": "Favorites | Costa Rica Wildlife Photography by Joshua ten Brink",
+          "status": "archived"
+        },
+        {
+          "id": 14798,
+          "slug": "dji-0562-001",
+          "title": "Favorites Photography",
+          "status": "archived"
+        }
+      ]
+    },
+    "missing_slug": {
+      "count": 0,
+      "sample": []
+    },
+    "missing_title": {
+      "count": 0,
+      "sample": []
+    },
+    "missing_gallery_slug": {
+      "count": 2084,
+      "sample": [
+        {
+          "id": 242,
+          "slug": "hermosa-beach-1",
+          "title": "Hermosa Beach Sunset",
+          "status": "archived"
+        },
+        {
+          "id": 14905,
+          "slug": "resplendent-quetzal",
+          "title": "Resplendent Quetzal",
+          "status": "archived"
+        },
+        {
+          "id": 36571,
+          "slug": "121619-hyperlapse-0051-caa78cf4",
+          "title": ". 121619 HYPERLAPSE 0051",
+          "status": "archived"
+        },
+        {
+          "id": 38536,
+          "slug": "costa-rica-gallery-beaches-20131014-125311-jpg",
+          "title": "Beaches, Costa Rica at Beaches, Costa Rica | WildPhotography",
+          "status": "active"
+        },
+        {
+          "id": 38537,
+          "slug": "costa-rica-gallery-beaches-2016-01-13-12-58-06-jpg",
+          "title": "2016 01 13 12.58.06",
+          "status": "active"
+        },
+        {
+          "id": 38538,
+          "slug": "costa-rica-gallery-beaches-2016-12-29-12-25-27-jpg",
+          "title": "2016 12 29 12.25.27",
+          "status": "active"
+        },
+        {
+          "id": 38539,
+          "slug": "costa-rica-gallery-beaches-2016-12-29-12-25-35-jpg",
+          "title": "2016 12 29 12.25.35",
+          "status": "active"
+        },
+        {
+          "id": 38540,
+          "slug": "costa-rica-gallery-beaches-2018-03-28-08-12-11-jpg",
+          "title": "2018 03 28 08.12.11",
+          "status": "active"
+        },
+        {
+          "id": 38541,
+          "slug": "costa-rica-gallery-beaches-2018-03-28-09-05-11-jpg",
+          "title": "2018 03 28 09.05.11",
+          "status": "active"
+        },
+        {
+          "id": 38542,
+          "slug": "costa-rica-gallery-beaches-2018-03-28-09-08-29-jpg",
+          "title": "2018 03 28 09.08.29",
+          "status": "active"
+        },
+        {
+          "id": 38659,
+          "slug": "costa-rica-gallery-beaches-2018-03-28-09-41-20-jpg",
+          "title": "2018 03 28 09.41.20",
+          "status": "active"
+        },
+        {
+          "id": 38660,
+          "slug": "costa-rica-gallery-beaches-2018-03-29-18-22-12-jpg",
+          "title": "2018 03 29 18.22.12",
+          "status": "active"
+        },
+        {
+          "id": 38661,
+          "slug": "costa-rica-gallery-beaches-2018-06-23-12-27-31-jpg",
+          "title": "2018 06 23 12.27.31",
+          "status": "active"
+        },
+        {
+          "id": 38662,
+          "slug": "costa-rica-gallery-beaches-2018-08-03-12-49-23-jpg",
+          "title": "2018 08 03 12.49.23",
+          "status": "active"
+        },
+        {
+          "id": 38663,
+          "slug": "costa-rica-gallery-beaches-2018-08-03-17-26-22-jpg",
+          "title": "2018 08 03 17.26.22",
+          "status": "active"
+        },
+        {
+          "id": 38664,
+          "slug": "costa-rica-gallery-beaches-2018-08-03-17-26-23-jpg",
+          "title": "2018 08 03 17.26.23",
+          "status": "active"
+        },
+        {
+          "id": 38665,
+          "slug": "costa-rica-gallery-beaches-2018-12-29-07-31-09-jpg",
+          "title": "2018 12 29 07.31.09",
+          "status": "active"
+        },
+        {
+          "id": 38781,
+          "slug": "costa-rica-gallery-beaches-2018-12-29-16-40-38-jpg",
+          "title": "2018 12 29 16.40.38",
+          "status": "active"
+        },
+        {
+          "id": 38782,
+          "slug": "costa-rica-gallery-beaches-2018-12-29-16-40-58-jpg",
+          "title": "2018 12 29 16.40.58",
+          "status": "active"
+        },
+        {
+          "id": 38783,
+          "slug": "costa-rica-gallery-beaches-2019-04-14-14-50-28-jpg",
+          "title": "2019 04 14 14.50.28",
+          "status": "active"
+        }
+      ]
+    },
+    "search_not_ready": {
+      "count": 149,
+      "sample": [
+        {
+          "id": 14776,
+          "slug": "costa-rica-gallery-best-of-costa-rica-20070520-2268",
+          "title": "Favorites | Costa Rica Wildlife Photography by Joshua ten Brink",
+          "status": "archived"
+        },
+        {
+          "id": 14777,
+          "slug": "20070521-2491",
+          "title": "Favorites | Costa Rica Wildlife Photography by Joshua ten Brink",
+          "status": "archived"
+        },
+        {
+          "id": 14778,
+          "slug": "2018-03-28-081211",
+          "title": "Favorites | Costa Rica Wildlife Photography by Joshua ten Brink",
+          "status": "archived"
+        },
+        {
+          "id": 14779,
+          "slug": "2018-04-30-115646-1",
+          "title": "Favorites | Costa Rica Wildlife Photography by Joshua ten Brink",
+          "status": "archived"
+        },
+        {
+          "id": 14781,
+          "slug": "asia-china-2019-03-26-18-06-31-1",
+          "title": "Favorites | Costa Rica Wildlife Photography by Joshua ten Brink",
+          "status": "archived"
+        },
+        {
+          "id": 14782,
+          "slug": "2019-03-31-061618-1",
+          "title": "Favorites | Costa Rica Wildlife Photography by Joshua ten Brink",
+          "status": "archived"
+        },
+        {
+          "id": 14783,
+          "slug": "2019-04-01-133826",
+          "title": "Favorites | Costa Rica Wildlife Photography by Joshua ten Brink",
+          "status": "archived"
+        },
+        {
+          "id": 14784,
+          "slug": "2019-04-16-103409",
+          "title": "Favorites | Costa Rica Wildlife Photography by Joshua ten Brink",
+          "status": "archived"
+        },
+        {
+          "id": 14785,
+          "slug": "23-img-5550",
+          "title": "Costa Rica | WildPhotography",
+          "status": "archived"
+        },
+        {
+          "id": 14786,
+          "slug": "32-img-5623",
+          "title": "Costa Rica | WildPhotography",
+          "status": "archived"
+        },
+        {
+          "id": 14787,
+          "slug": "china-shanghai-2019-04-02-191544",
+          "title": "China Shanghai 2019 04 02 19.15.44",
+          "status": "archived"
+        },
+        {
+          "id": 14789,
+          "slug": "dji-0136",
+          "title": "Favorites | Costa Rica Wildlife Photography by Joshua ten Brink",
+          "status": "archived"
+        },
+        {
+          "id": 14790,
+          "slug": "dji-0301-001",
+          "title": "Favorites - Costa Rica Photography",
+          "status": "archived"
+        },
+        {
+          "id": 14791,
+          "slug": "dji-0322",
+          "title": "Favorites | Costa Rica Wildlife Photography by Joshua ten Brink",
+          "status": "archived"
+        },
+        {
+          "id": 14793,
+          "slug": "dji-0433-2",
+          "title": "Favorites Photography",
+          "status": "archived"
+        },
+        {
+          "id": 14794,
+          "slug": "dji-0491",
+          "title": "Favorites | Costa Rica Wildlife Photography by Joshua ten Brink",
+          "status": "archived"
+        },
+        {
+          "id": 14795,
+          "slug": "dji-0494",
+          "title": "Favorites | Costa Rica Wildlife Photography by Joshua ten Brink",
+          "status": "archived"
+        },
+        {
+          "id": 14796,
+          "slug": "dji-0513",
+          "title": "Favorites | Costa Rica Wildlife Photography by Joshua ten Brink",
+          "status": "archived"
+        },
+        {
+          "id": 14797,
+          "slug": "dji-0517",
+          "title": "Favorites | Costa Rica Wildlife Photography by Joshua ten Brink",
+          "status": "archived"
+        },
+        {
+          "id": 14798,
+          "slug": "dji-0562-001",
+          "title": "Favorites Photography",
+          "status": "archived"
+        }
+      ]
+    },
+    "derivatives_incomplete": {
+      "count": 149,
+      "sample": [
+        {
+          "id": 14776,
+          "slug": "costa-rica-gallery-best-of-costa-rica-20070520-2268",
+          "title": "Favorites | Costa Rica Wildlife Photography by Joshua ten Brink",
+          "status": "archived"
+        },
+        {
+          "id": 14777,
+          "slug": "20070521-2491",
+          "title": "Favorites | Costa Rica Wildlife Photography by Joshua ten Brink",
+          "status": "archived"
+        },
+        {
+          "id": 14778,
+          "slug": "2018-03-28-081211",
+          "title": "Favorites | Costa Rica Wildlife Photography by Joshua ten Brink",
+          "status": "archived"
+        },
+        {
+          "id": 14779,
+          "slug": "2018-04-30-115646-1",
+          "title": "Favorites | Costa Rica Wildlife Photography by Joshua ten Brink",
+          "status": "archived"
+        },
+        {
+          "id": 14781,
+          "slug": "asia-china-2019-03-26-18-06-31-1",
+          "title": "Favorites | Costa Rica Wildlife Photography by Joshua ten Brink",
+          "status": "archived"
+        },
+        {
+          "id": 14782,
+          "slug": "2019-03-31-061618-1",
+          "title": "Favorites | Costa Rica Wildlife Photography by Joshua ten Brink",
+          "status": "archived"
+        },
+        {
+          "id": 14783,
+          "slug": "2019-04-01-133826",
+          "title": "Favorites | Costa Rica Wildlife Photography by Joshua ten Brink",
+          "status": "archived"
+        },
+        {
+          "id": 14784,
+          "slug": "2019-04-16-103409",
+          "title": "Favorites | Costa Rica Wildlife Photography by Joshua ten Brink",
+          "status": "archived"
+        },
+        {
+          "id": 14785,
+          "slug": "23-img-5550",
+          "title": "Costa Rica | WildPhotography",
+          "status": "archived"
+        },
+        {
+          "id": 14786,
+          "slug": "32-img-5623",
+          "title": "Costa Rica | WildPhotography",
+          "status": "archived"
+        },
+        {
+          "id": 14787,
+          "slug": "china-shanghai-2019-04-02-191544",
+          "title": "China Shanghai 2019 04 02 19.15.44",
+          "status": "archived"
+        },
+        {
+          "id": 14789,
+          "slug": "dji-0136",
+          "title": "Favorites | Costa Rica Wildlife Photography by Joshua ten Brink",
+          "status": "archived"
+        },
+        {
+          "id": 14790,
+          "slug": "dji-0301-001",
+          "title": "Favorites - Costa Rica Photography",
+          "status": "archived"
+        },
+        {
+          "id": 14791,
+          "slug": "dji-0322",
+          "title": "Favorites | Costa Rica Wildlife Photography by Joshua ten Brink",
+          "status": "archived"
+        },
+        {
+          "id": 14793,
+          "slug": "dji-0433-2",
+          "title": "Favorites Photography",
+          "status": "archived"
+        },
+        {
+          "id": 14794,
+          "slug": "dji-0491",
+          "title": "Favorites | Costa Rica Wildlife Photography by Joshua ten Brink",
+          "status": "archived"
+        },
+        {
+          "id": 14795,
+          "slug": "dji-0494",
+          "title": "Favorites | Costa Rica Wildlife Photography by Joshua ten Brink",
+          "status": "archived"
+        },
+        {
+          "id": 14796,
+          "slug": "dji-0513",
+          "title": "Favorites | Costa Rica Wildlife Photography by Joshua ten Brink",
+          "status": "archived"
+        },
+        {
+          "id": 14797,
+          "slug": "dji-0517",
+          "title": "Favorites | Costa Rica Wildlife Photography by Joshua ten Brink",
+          "status": "archived"
+        },
+        {
+          "id": 14798,
+          "slug": "dji-0562-001",
+          "title": "Favorites Photography",
+          "status": "archived"
+        }
+      ]
+    },
+    "missing_description": {
+      "count": 0,
+      "sample": []
+    },
+    "missing_keywords": {
+      "count": 0,
+      "sample": []
+    }
+  },
+  "status": "success"
+}

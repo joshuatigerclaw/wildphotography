@@ -1,0 +1,16 @@
+{
+  "workflow": "wild_google_incoming_supervisor",
+  "run_type": "evening",
+  "timestamp_utc": "2026-06-11T00:03:00Z",
+  "scan_result": {
+    "new_files_detected": 0,
+    "total_in_incoming": 193,
+    "manifest_total": 386
+  },
+  "import_result": {
+    "imported_count": 0,
+    "failed_count": 0
+  },
+  "status": "idle",
+  "message": "No new files - all 193 incoming files already indexed in manifest"
+}

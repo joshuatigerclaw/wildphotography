@@ -1,0 +1,12 @@
+{
+  "run_at": "2026-04-19T18:24:51.092960+00:00",
+  "db_eligible_count": 20233,
+  "typesense_count": 20233,
+  "drift": 0,
+  "abs_drift": 0,
+  "drift_threshold": 50,
+  "exceeds_threshold": false,
+  "drift_direction": "in_sync",
+  "status": "success",
+  "recommendation": "No action required."
+}

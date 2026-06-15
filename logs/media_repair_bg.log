@@ -1,0 +1,913 @@
+
+[2026-06-13T19:41:49.298913+00:00] === WildPhotography Media Repair Batch ===
+Processing 100 photos...
+
+[238] slug=lush-rainforest-river-rapids-pristine-nature-6nLzd9
+  original_r2_key=wildphoto-storage/originals/238/original.jpg
+  Original verified in R2: wildphoto-storage/originals/238/original.jpg
+    thumb_300: OK → derivatives/238/238_thumb_300.webp
+    preview_800: OK → derivatives/238/238_preview_800.webp
+    medium_1600: OK → derivatives/238/238_medium_1600.webp
+    large_2800: OK → derivatives/238/238_large_2800.webp
+  REPAIRED photo_id=238
+
+[239] slug=lush-green-waterfall-in-a-tropical-forest-R3W7bX
+  original_r2_key=wildphoto-storage/originals/239/original.jpg
+  Original verified in R2: wildphoto-storage/originals/239/original.jpg
+    thumb_300: OK → derivatives/239/239_thumb_300.webp
+    preview_800: OK → derivatives/239/239_preview_800.webp
+    medium_1600: OK → derivatives/239/239_medium_1600.webp
+    large_2800: OK → derivatives/239/239_large_2800.webp
+  REPAIRED photo_id=239
+
+[1293] slug=cl0a0695-1002
+  original_r2_key=originals/1002/CL0A0695.JPG
+  Original verified in R2: originals/1002/CL0A0695.JPG
+    thumb_300: OK → derivatives/1293/1293_thumb_300.webp
+    preview_800: OK → derivatives/1293/1293_preview_800.webp
+    medium_1600: OK → derivatives/1293/1293_medium_1600.webp
+    large_2800: OK → derivatives/1293/1293_large_2800.webp
+  REPAIRED photo_id=1293
+
+[1309] slug=dji-0510-1018
+  original_r2_key=originals/1018/DJI_0510.jpg
+  Original verified in R2: originals/1018/DJI_0510.jpg
+    thumb_300: OK → derivatives/1309/1309_thumb_300.webp
+    preview_800: OK → derivatives/1309/1309_preview_800.webp
+    medium_1600: OK → derivatives/1309/1309_medium_1600.webp
+    large_2800: OK → derivatives/1309/1309_large_2800.webp
+  REPAIRED photo_id=1309
+
+[1312] slug=hyperlapse-0025-1021
+  original_r2_key=originals/1021/HYPERLAPSE_0025.jpg
+  Original verified in R2: originals/1021/HYPERLAPSE_0025.jpg
+    thumb_300: OK → derivatives/1312/1312_thumb_300.webp
+    preview_800: OK → derivatives/1312/1312_preview_800.webp
+    medium_1600: OK → derivatives/1312/1312_medium_1600.webp
+    large_2800: OK → derivatives/1312/1312_large_2800.webp
+  REPAIRED photo_id=1312
+
+[1328] slug=2018-04-28-10-24-40-1037
+  original_r2_key=originals/1037/2018-04-28_10.24.40.jpg
+  Original verified in R2: originals/1037/2018-04-28_10.24.40.jpg
+    thumb_300: OK → derivatives/1328/1328_thumb_300.webp
+    preview_800: OK → derivatives/1328/1328_preview_800.webp
+    medium_1600: OK → derivatives/1328/1328_medium_1600.webp
+    large_2800: OK → derivatives/1328/1328_large_2800.webp
+  REPAIRED photo_id=1328
+
+[1329] slug=2018-04-28-13-35-41-1038
+  original_r2_key=originals/1038/2018-04-28_13.35.41.jpg
+  Original verified in R2: originals/1038/2018-04-28_13.35.41.jpg
+    thumb_300: OK → derivatives/1329/1329_thumb_300.webp
+    preview_800: OK → derivatives/1329/1329_preview_800.webp
+    medium_1600: OK → derivatives/1329/1329_medium_1600.webp
+    large_2800: OK → derivatives/1329/1329_large_2800.webp
+  REPAIRED photo_id=1329
+
+[1331] slug=2018-04-30-11-41-37-1040
+  original_r2_key=originals/1040/2018-04-30_11.41.37.jpg
+  Original verified in R2: originals/1040/2018-04-30_11.41.37.jpg
+    thumb_300: OK → derivatives/1331/1331_thumb_300.webp
+    preview_800: OK → derivatives/1331/1331_preview_800.webp
+    medium_1600: OK → derivatives/1331/1331_medium_1600.webp
+    large_2800: OK → derivatives/1331/1331_large_2800.webp
+  REPAIRED photo_id=1331
+
+[1333] slug=2018-05-01-09-25-44-1042
+  original_r2_key=originals/1042/2018-05-01_09.25.44.jpg
+  Original verified in R2: originals/1042/2018-05-01_09.25.44.jpg
+    thumb_300: OK → derivatives/1333/1333_thumb_300.webp
+    preview_800: OK → derivatives/1333/1333_preview_800.webp
+    medium_1600: OK → derivatives/1333/1333_medium_1600.webp
+    large_2800: OK → derivatives/1333/1333_large_2800.webp
+  REPAIRED photo_id=1333
+
+[1361] slug=dji-0957-1070
+  original_r2_key=originals/1070/DJI_0957.jpg
+  Original verified in R2: originals/1070/DJI_0957.jpg
+    thumb_300: OK → derivatives/1361/1361_thumb_300.webp
+    preview_800: OK → derivatives/1361/1361_preview_800.webp
+    medium_1600: OK → derivatives/1361/1361_medium_1600.webp
+    large_2800: OK → derivatives/1361/1361_large_2800.webp
+  REPAIRED photo_id=1361
+
+[1368] slug=dji-0995-1077
+  original_r2_key=originals/1077/DJI_0995.jpg
+  Original verified in R2: originals/1077/DJI_0995.jpg
+    thumb_300: OK → derivatives/1368/1368_thumb_300.webp
+    preview_800: OK → derivatives/1368/1368_preview_800.webp
+    medium_1600: OK → derivatives/1368/1368_medium_1600.webp
+    large_2800: OK → derivatives/1368/1368_large_2800.webp
+  REPAIRED photo_id=1368
+
+[1386] slug=img-0917-1092
+  original_r2_key=originals/1092/IMG_0917.JPG
+  Original verified in R2: originals/1092/IMG_0917.JPG
+    thumb_300: OK → derivatives/1386/1386_thumb_300.webp
+    preview_800: OK → derivatives/1386/1386_preview_800.webp
+    medium_1600: OK → derivatives/1386/1386_medium_1600.webp
+    large_2800: OK → derivatives/1386/1386_large_2800.webp
+  REPAIRED photo_id=1386
+
+[1406] slug=img-9850-1102
+  original_r2_key=originals/1102/IMG_9850.JPG
+  Original verified in R2: originals/1102/IMG_9850.JPG
+    thumb_300: OK → derivatives/1406/1406_thumb_300.webp
+    preview_800: OK → derivatives/1406/1406_preview_800.webp
+    medium_1600: OK → derivatives/1406/1406_medium_1600.webp
+    large_2800: OK → derivatives/1406/1406_large_2800.webp
+  REPAIRED photo_id=1406
+
+[1414] slug=2016-12-29-12-25-27-1106
+  original_r2_key=originals/1106/2016-12-29_12.25.27.jpg
+  Original verified in R2: originals/1106/2016-12-29_12.25.27.jpg
+    thumb_300: OK → derivatives/1414/1414_thumb_300.webp
+    preview_800: OK → derivatives/1414/1414_preview_800.webp
+    medium_1600: OK → derivatives/1414/1414_medium_1600.webp
+    large_2800: OK → derivatives/1414/1414_large_2800.webp
+  REPAIRED photo_id=1414
+
+[1440] slug=2018-12-29-16-40-58-1119
+  original_r2_key=originals/1119/2018-12-29_16.40.58.jpg
+  Original verified in R2: originals/1119/2018-12-29_16.40.58.jpg
+    thumb_300: OK → derivatives/1440/1440_thumb_300.webp
+    preview_800: OK → derivatives/1440/1440_preview_800.webp
+    medium_1600: OK → derivatives/1440/1440_medium_1600.webp
+    large_2800: OK → derivatives/1440/1440_large_2800.webp
+  REPAIRED photo_id=1440
+
+[1442] slug=2019-04-14-14-50-28-1120
+  original_r2_key=originals/1120/2019-04-14_14.50.28.jpg
+  Original verified in R2: originals/1120/2019-04-14_14.50.28.jpg
+    thumb_300: OK → derivatives/1442/1442_thumb_300.webp
+    preview_800: OK → derivatives/1442/1442_preview_800.webp
+    medium_1600: OK → derivatives/1442/1442_medium_1600.webp
+    large_2800: OK → derivatives/1442/1442_large_2800.webp
+  REPAIRED photo_id=1442
+
+[1452] slug=2019-04-19-12-50-57-1125
+  original_r2_key=originals/1125/2019-04-19_12.50.57.jpg
+  Original verified in R2: originals/1125/2019-04-19_12.50.57.jpg
+    thumb_300: OK → derivatives/1452/1452_thumb_300.webp
+    preview_800: OK → derivatives/1452/1452_preview_800.webp
+    medium_1600: OK → derivatives/1452/1452_medium_1600.webp
+    large_2800: OK → derivatives/1452/1452_large_2800.webp
+  REPAIRED photo_id=1452
+
+[1490] slug=2021-03-25-11-10-24-1144
+  original_r2_key=originals/1144/2021-03-25_11.10.24.jpg
+  Original verified in R2: originals/1144/2021-03-25_11.10.24.jpg
+    thumb_300: OK → derivatives/1490/1490_thumb_300.webp
+    preview_800: OK → derivatives/1490/1490_preview_800.webp
+    medium_1600: OK → derivatives/1490/1490_medium_1600.webp
+    large_2800: OK → derivatives/1490/1490_large_2800.webp
+  REPAIRED photo_id=1490
+
+[1492] slug=2021-03-25-11-13-09-1145
+  original_r2_key=originals/1145/2021-03-25_11.13.09.jpg
+  Original verified in R2: originals/1145/2021-03-25_11.13.09.jpg
+    thumb_300: OK → derivatives/1492/1492_thumb_300.webp
+    preview_800: OK → derivatives/1492/1492_preview_800.webp
+    medium_1600: OK → derivatives/1492/1492_medium_1600.webp
+    large_2800: OK → derivatives/1492/1492_large_2800.webp
+  REPAIRED photo_id=1492
+
+[1510] slug=2021-03-28-13-36-40-1154
+  original_r2_key=originals/1154/2021-03-28_13.36.40.jpg
+  Original verified in R2: originals/1154/2021-03-28_13.36.40.jpg
+    thumb_300: OK → derivatives/1510/1510_thumb_300.webp
+    preview_800: OK → derivatives/1510/1510_preview_800.webp
+    medium_1600: OK → derivatives/1510/1510_medium_1600.webp
+    large_2800: OK → derivatives/1510/1510_large_2800.webp
+  REPAIRED photo_id=1510
+
+[1512] slug=2021-03-30-11-20-41-1155
+  original_r2_key=originals/1155/2021-03-30_11.20.41.jpg
+  Original verified in R2: originals/1155/2021-03-30_11.20.41.jpg
+    thumb_300: OK → derivatives/1512/1512_thumb_300.webp
+    preview_800: OK → derivatives/1512/1512_preview_800.webp
+    medium_1600: OK → derivatives/1512/1512_medium_1600.webp
+    large_2800: OK → derivatives/1512/1512_large_2800.webp
+  REPAIRED photo_id=1512
+
+[1518] slug=2021-05-01-11-09-45-1158
+  original_r2_key=originals/1158/2021-05-01_11.09.45.jpg
+  Original verified in R2: originals/1158/2021-05-01_11.09.45.jpg
+    thumb_300: OK → derivatives/1518/1518_thumb_300.webp
+    preview_800: OK → derivatives/1518/1518_preview_800.webp
+    medium_1600: OK → derivatives/1518/1518_medium_1600.webp
+    large_2800: OK → derivatives/1518/1518_large_2800.webp
+  REPAIRED photo_id=1518
+
+[1540] slug=2021-12-30-06-29-34-1169
+  original_r2_key=originals/1169/2021-12-30_06.29.34.jpg
+  Original verified in R2: originals/1169/2021-12-30_06.29.34.jpg
+    thumb_300: OK → derivatives/1540/1540_thumb_300.webp
+    preview_800: OK → derivatives/1540/1540_preview_800.webp
+    medium_1600: OK → derivatives/1540/1540_medium_1600.webp
+    large_2800: OK → derivatives/1540/1540_large_2800.webp
+  REPAIRED photo_id=1540
+
+[1550] slug=2022-02-19-08-28-02-1174
+  original_r2_key=originals/1174/2022-02-19_08.28.02.jpg
+  Original verified in R2: originals/1174/2022-02-19_08.28.02.jpg
+    thumb_300: OK → derivatives/1550/1550_thumb_300.webp
+    preview_800: OK → derivatives/1550/1550_preview_800.webp
+    medium_1600: OK → derivatives/1550/1550_medium_1600.webp
+    large_2800: OK → derivatives/1550/1550_large_2800.webp
+  REPAIRED photo_id=1550
+
+[1624] slug=cl0a0877-1211
+  original_r2_key=originals/1211/CL0A0877.JPG
+  Original verified in R2: originals/1211/CL0A0877.JPG
+    thumb_300: OK → derivatives/1624/1624_thumb_300.webp
+    preview_800: OK → derivatives/1624/1624_preview_800.webp
+    medium_1600: OK → derivatives/1624/1624_medium_1600.webp
+    large_2800: OK → derivatives/1624/1624_large_2800.webp
+  REPAIRED photo_id=1624
+
+[1633] slug=cl0a0694-alajuela-1001
+  original_r2_key=originals/1001/CL0A0694.jpg
+  Original verified in R2: originals/1001/CL0A0694.jpg
+    thumb_300: OK → derivatives/1633/1633_thumb_300.webp
+    preview_800: OK → derivatives/1633/1633_preview_800.webp
+    medium_1600: OK → derivatives/1633/1633_medium_1600.webp
+    large_2800: OK → derivatives/1633/1633_large_2800.webp
+  REPAIRED photo_id=1633
+
+[1645] slug=cl0a2335-1219
+  original_r2_key=originals/1219/CL0A2335.jpg
+  Original verified in R2: originals/1219/CL0A2335.jpg
+    thumb_300: OK → derivatives/1645/1645_thumb_300.webp
+    preview_800: OK → derivatives/1645/1645_preview_800.webp
+    medium_1600: OK → derivatives/1645/1645_medium_1600.webp
+    large_2800: OK → derivatives/1645/1645_large_2800.webp
+  REPAIRED photo_id=1645
+
+[1657] slug=dji-0444-alajuela-1008
+  original_r2_key=originals/1008/DJI_0444.jpg
+  Original verified in R2: originals/1008/DJI_0444.jpg
+    thumb_300: OK → derivatives/1657/1657_thumb_300.webp
+    preview_800: OK → derivatives/1657/1657_preview_800.webp
+    medium_1600: OK → derivatives/1657/1657_medium_1600.webp
+    large_2800: OK → derivatives/1657/1657_large_2800.webp
+  REPAIRED photo_id=1657
+
+[1684] slug=cl0a5979-1233
+  original_r2_key=originals/1233/CL0A5979.jpg
+  Original verified in R2: originals/1233/CL0A5979.jpg
+    thumb_300: OK → derivatives/1684/1684_thumb_300.webp
+    preview_800: OK → derivatives/1684/1684_preview_800.webp
+    medium_1600: OK → derivatives/1684/1684_medium_1600.webp
+    large_2800: OK → derivatives/1684/1684_large_2800.webp
+  REPAIRED photo_id=1684
+
+[1685] slug=dji-0508-alajuela-1016
+  original_r2_key=originals/1016/DJI_0508.jpg
+  Original verified in R2: originals/1016/DJI_0508.jpg
+    thumb_300: OK → derivatives/1685/1685_thumb_300.webp
+    preview_800: OK → derivatives/1685/1685_preview_800.webp
+    medium_1600: OK → derivatives/1685/1685_medium_1600.webp
+    large_2800: OK → derivatives/1685/1685_large_2800.webp
+  REPAIRED photo_id=1685
+
+[1690] slug=dji-0509-alajuela-1017
+  original_r2_key=originals/1017/DJI_0509.jpg
+  Original verified in R2: originals/1017/DJI_0509.jpg
+    thumb_300: OK → derivatives/1690/1690_thumb_300.webp
+    preview_800: OK → derivatives/1690/1690_preview_800.webp
+    medium_1600: OK → derivatives/1690/1690_medium_1600.webp
+    large_2800: OK → derivatives/1690/1690_large_2800.webp
+  REPAIRED photo_id=1690
+
+[1709] slug=cl0a6798-1242
+  original_r2_key=originals/1242/CL0A6798.jpg
+  Original verified in R2: originals/1242/CL0A6798.jpg
+    thumb_300: OK → derivatives/1709/1709_thumb_300.webp
+    preview_800: OK → derivatives/1709/1709_preview_800.webp
+    medium_1600: OK → derivatives/1709/1709_medium_1600.webp
+    large_2800: OK → derivatives/1709/1709_large_2800.webp
+  REPAIRED photo_id=1709
+
+[1721] slug=hyperlapse-0114-alajuela-1026
+  original_r2_key=originals/1026/HYPERLAPSE_0114.jpg
+  Original verified in R2: originals/1026/HYPERLAPSE_0114.jpg
+    thumb_300: OK → derivatives/1721/1721_thumb_300.webp
+    preview_800: OK → derivatives/1721/1721_preview_800.webp
+    medium_1600: OK → derivatives/1721/1721_medium_1600.webp
+    large_2800: OK → derivatives/1721/1721_large_2800.webp
+  REPAIRED photo_id=1721
+
+[1734] slug=dji-0022-1251
+  original_r2_key=originals/1251/DJI_0022.jpg
+  Original verified in R2: originals/1251/DJI_0022.jpg
+    thumb_300: OK → derivatives/1734/1734_thumb_300.webp
+    preview_800: OK → derivatives/1734/1734_preview_800.webp
+    medium_1600: OK → derivatives/1734/1734_medium_1600.webp
+    large_2800: OK → derivatives/1734/1734_large_2800.webp
+  REPAIRED photo_id=1734
+
+[1743] slug=img-0396-alajuela-1033
+  original_r2_key=originals/1033/IMG_0396.JPG
+  Original verified in R2: originals/1033/IMG_0396.JPG
+    thumb_300: OK → derivatives/1743/1743_thumb_300.webp
+    preview_800: OK → derivatives/1743/1743_preview_800.webp
+    medium_1600: OK → derivatives/1743/1743_medium_1600.webp
+    large_2800: OK → derivatives/1743/1743_large_2800.webp
+  REPAIRED photo_id=1743
+
+[1753] slug=img-0471-alajuela-1036
+  original_r2_key=originals/1036/IMG_0471.JPG
+  Original verified in R2: originals/1036/IMG_0471.JPG
+    thumb_300: OK → derivatives/1753/1753_thumb_300.webp
+    preview_800: OK → derivatives/1753/1753_preview_800.webp
+    medium_1600: OK → derivatives/1753/1753_medium_1600.webp
+    large_2800: OK → derivatives/1753/1753_large_2800.webp
+  REPAIRED photo_id=1753
+
+[1910] slug=img-0917-arenal-volcano-1092
+  original_r2_key=originals/1092/IMG_0917.JPG
+  Original verified in R2: originals/1092/IMG_0917.JPG
+    thumb_300: OK → derivatives/1910/1910_thumb_300.webp
+    preview_800: OK → derivatives/1910/1910_preview_800.webp
+    medium_1600: OK → derivatives/1910/1910_medium_1600.webp
+    large_2800: OK → derivatives/1910/1910_large_2800.webp
+  REPAIRED photo_id=1910
+
+[1914] slug=dji-0222-1309
+  original_r2_key=originals/1309/DJI_0222.jpg
+  Original verified in R2: originals/1309/DJI_0222.jpg
+    thumb_300: OK → derivatives/1914/1914_thumb_300.webp
+    preview_800: OK → derivatives/1914/1914_preview_800.webp
+    medium_1600: OK → derivatives/1914/1914_medium_1600.webp
+    large_2800: OK → derivatives/1914/1914_large_2800.webp
+  REPAIRED photo_id=1914
+
+[1919] slug=img-5854-arenal-volcano-1095
+  original_r2_key=originals/1095/IMG_5854.jpg
+  Original verified in R2: originals/1095/IMG_5854.jpg
+    thumb_300: OK → derivatives/1919/1919_thumb_300.webp
+    preview_800: OK → derivatives/1919/1919_preview_800.webp
+    medium_1600: OK → derivatives/1919/1919_medium_1600.webp
+    large_2800: OK → derivatives/1919/1919_large_2800.webp
+  REPAIRED photo_id=1919
+
+[1924] slug=img-9618-arenal-volcano-1097
+  original_r2_key=originals/1097/IMG_9618.JPG
+  Original verified in R2: originals/1097/IMG_9618.JPG
+    thumb_300: OK → derivatives/1924/1924_thumb_300.webp
+    preview_800: OK → derivatives/1924/1924_preview_800.webp
+    medium_1600: OK → derivatives/1924/1924_medium_1600.webp
+    large_2800: OK → derivatives/1924/1924_large_2800.webp
+  REPAIRED photo_id=1924
+
+[1983] slug=2018-12-29-16-40-58-beaches-1119
+  original_r2_key=originals/1119/2018-12-29_16.40.58.jpg
+  Original verified in R2: originals/1119/2018-12-29_16.40.58.jpg
+    thumb_300: OK → derivatives/1983/1983_thumb_300.webp
+    preview_800: OK → derivatives/1983/1983_preview_800.webp
+    medium_1600: OK → derivatives/1983/1983_medium_1600.webp
+    large_2800: OK → derivatives/1983/1983_large_2800.webp
+  REPAIRED photo_id=1983
+
+[1998] slug=2019-04-16-10-35-03-beaches-1124
+  original_r2_key=originals/1124/2019-04-16_10.35.03.jpg
+  Original verified in R2: originals/1124/2019-04-16_10.35.03.jpg
+    thumb_300: OK → derivatives/1998/1998_thumb_300.webp
+    preview_800: OK → derivatives/1998/1998_preview_800.webp
+    medium_1600: OK → derivatives/1998/1998_medium_1600.webp
+    large_2800: OK → derivatives/1998/1998_large_2800.webp
+  REPAIRED photo_id=1998
+
+[1999] slug=dji-0355-1336
+  original_r2_key=originals/1336/DJI_0355.jpg
+  Original verified in R2: originals/1336/DJI_0355.jpg
+    thumb_300: OK → derivatives/1999/1999_thumb_300.webp
+    preview_800: OK → derivatives/1999/1999_preview_800.webp
+    medium_1600: OK → derivatives/1999/1999_medium_1600.webp
+    large_2800: OK → derivatives/1999/1999_large_2800.webp
+  REPAIRED photo_id=1999
+
+[2001] slug=2019-04-19-12-50-57-beaches-1125
+  original_r2_key=originals/1125/2019-04-19_12.50.57.jpg
+  Original verified in R2: originals/1125/2019-04-19_12.50.57.jpg
+    thumb_300: OK → derivatives/2001/2001_thumb_300.webp
+    preview_800: OK → derivatives/2001/2001_preview_800.webp
+    medium_1600: OK → derivatives/2001/2001_medium_1600.webp
+    large_2800: OK → derivatives/2001/2001_large_2800.webp
+  REPAIRED photo_id=2001
+
+[2008] slug=2019-12-27-14-17-48-beaches-1128
+  original_r2_key=originals/1128/2019-12-27_14.17.48.jpg
+  Original verified in R2: originals/1128/2019-12-27_14.17.48.jpg
+    thumb_300: OK → derivatives/2008/2008_thumb_300.webp
+    preview_800: OK → derivatives/2008/2008_preview_800.webp
+    medium_1600: OK → derivatives/2008/2008_medium_1600.webp
+    large_2800: OK → derivatives/2008/2008_large_2800.webp
+  REPAIRED photo_id=2008
+
+[2011] slug=2020-05-14-10-23-17-beaches-1129
+  original_r2_key=originals/1129/2020-05-14_10.23.17.jpg
+  Original verified in R2: originals/1129/2020-05-14_10.23.17.jpg
+    thumb_300: OK → derivatives/2011/2011_thumb_300.webp
+    preview_800: OK → derivatives/2011/2011_preview_800.webp
+    medium_1600: OK → derivatives/2011/2011_medium_1600.webp
+    large_2800: OK → derivatives/2011/2011_large_2800.webp
+  REPAIRED photo_id=2011
+
+[2028] slug=2020-11-26-15-06-06-beaches-1135
+  original_r2_key=originals/1135/2020-11-26_15.06.06.jpg
+  Original verified in R2: originals/1135/2020-11-26_15.06.06.jpg
+    thumb_300: OK → derivatives/2028/2028_thumb_300.webp
+    preview_800: OK → derivatives/2028/2028_preview_800.webp
+    medium_1600: OK → derivatives/2028/2028_medium_1600.webp
+    large_2800: OK → derivatives/2028/2028_large_2800.webp
+  REPAIRED photo_id=2028
+
+[2033] slug=dji-0395-1347
+  original_r2_key=originals/1347/DJI_0395.jpg
+  Original verified in R2: originals/1347/DJI_0395.jpg
+    thumb_300: OK → derivatives/2033/2033_thumb_300.webp
+    preview_800: OK → derivatives/2033/2033_preview_800.webp
+    medium_1600: OK → derivatives/2033/2033_medium_1600.webp
+    large_2800: OK → derivatives/2033/2033_large_2800.webp
+  REPAIRED photo_id=2033
+
+[2045] slug=dji-0429-1351
+  original_r2_key=originals/1351/DJI_0429.jpg
+  Original verified in R2: originals/1351/DJI_0429.jpg
+    thumb_300: OK → derivatives/2045/2045_thumb_300.webp
+    preview_800: OK → derivatives/2045/2045_preview_800.webp
+    medium_1600: OK → derivatives/2045/2045_medium_1600.webp
+    large_2800: OK → derivatives/2045/2045_large_2800.webp
+  REPAIRED photo_id=2045
+
+[2046] slug=2020-11-29-06-43-57-beaches-1141
+  original_r2_key=originals/1141/2020-11-29_06.43.57.jpg
+  Original verified in R2: originals/1141/2020-11-29_06.43.57.jpg
+    thumb_300: OK → derivatives/2046/2046_thumb_300.webp
+    preview_800: OK → derivatives/2046/2046_preview_800.webp
+    medium_1600: OK → derivatives/2046/2046_medium_1600.webp
+    large_2800: OK → derivatives/2046/2046_large_2800.webp
+  REPAIRED photo_id=2046
+
+[2060] slug=dji-0443-1356
+  original_r2_key=originals/1356/DJI_0443.jpg
+  Original verified in R2: originals/1356/DJI_0443.jpg
+    thumb_300: OK → derivatives/2060/2060_thumb_300.webp
+    preview_800: OK → derivatives/2060/2060_preview_800.webp
+    medium_1600: OK → derivatives/2060/2060_medium_1600.webp
+    large_2800: OK → derivatives/2060/2060_large_2800.webp
+  REPAIRED photo_id=2060
+
+[2111] slug=dji-0565-1373
+  original_r2_key=originals/1373/DJI_0565.jpg
+  Original verified in R2: originals/1373/DJI_0565.jpg
+    thumb_300: OK → derivatives/2111/2111_thumb_300.webp
+    preview_800: OK → derivatives/2111/2111_preview_800.webp
+    medium_1600: OK → derivatives/2111/2111_medium_1600.webp
+    large_2800: OK → derivatives/2111/2111_large_2800.webp
+  REPAIRED photo_id=2111
+
+[2134] slug=2022-02-18-17-03-50-beaches-1173
+  original_r2_key=originals/1173/2022-02-18_17.03.50.jpg
+  Original verified in R2: originals/1173/2022-02-18_17.03.50.jpg
+    thumb_300: OK → derivatives/2134/2134_thumb_300.webp
+    preview_800: OK → derivatives/2134/2134_preview_800.webp
+    medium_1600: OK → derivatives/2134/2134_medium_1600.webp
+    large_2800: OK → derivatives/2134/2134_large_2800.webp
+  REPAIRED photo_id=2134
+
+[2144] slug=2022-02-19-08-28-13-beaches-1177
+  original_r2_key=originals/1177/2022-02-19_08.28.13.jpg
+  Original verified in R2: originals/1177/2022-02-19_08.28.13.jpg
+    thumb_300: OK → derivatives/2144/2144_thumb_300.webp
+    preview_800: OK → derivatives/2144/2144_preview_800.webp
+    medium_1600: OK → derivatives/2144/2144_medium_1600.webp
+    large_2800: OK → derivatives/2144/2144_large_2800.webp
+  REPAIRED photo_id=2144
+
+[2150] slug=2023-12-26-07-01-49-beaches-1179
+  original_r2_key=originals/1179/2023-12-26_07.01.49.jpg
+  Original verified in R2: originals/1179/2023-12-26_07.01.49.jpg
+    thumb_300: OK → derivatives/2150/2150_thumb_300.webp
+    preview_800: OK → derivatives/2150/2150_preview_800.webp
+    medium_1600: OK → derivatives/2150/2150_medium_1600.webp
+    large_2800: OK → derivatives/2150/2150_large_2800.webp
+  REPAIRED photo_id=2150
+
+[2165] slug=2023-12-27-07-32-08-beaches-1184
+  original_r2_key=originals/1184/2023-12-27_07.32.08.jpg
+  Original verified in R2: originals/1184/2023-12-27_07.32.08.jpg
+    thumb_300: OK → derivatives/2165/2165_thumb_300.webp
+    preview_800: OK → derivatives/2165/2165_preview_800.webp
+    medium_1600: OK → derivatives/2165/2165_medium_1600.webp
+    large_2800: OK → derivatives/2165/2165_large_2800.webp
+  REPAIRED photo_id=2165
+
+[2176] slug=20250410-075253-beaches-1188
+  original_r2_key=originals/1188/20250410_075253.jpg
+  Original verified in R2: originals/1188/20250410_075253.jpg
+    thumb_300: OK → derivatives/2176/2176_thumb_300.webp
+    preview_800: OK → derivatives/2176/2176_preview_800.webp
+    medium_1600: OK → derivatives/2176/2176_medium_1600.webp
+    large_2800: OK → derivatives/2176/2176_large_2800.webp
+  REPAIRED photo_id=2176
+
+[2179] slug=20250410-075256-beaches-1189
+  original_r2_key=originals/1189/20250410_075256.jpg
+  Original verified in R2: originals/1189/20250410_075256.jpg
+    thumb_300: OK → derivatives/2179/2179_thumb_300.webp
+    preview_800: OK → derivatives/2179/2179_preview_800.webp
+    medium_1600: OK → derivatives/2179/2179_medium_1600.webp
+    large_2800: OK → derivatives/2179/2179_large_2800.webp
+  REPAIRED photo_id=2179
+
+[2183] slug=dji-0670-1396
+  original_r2_key=originals/1396/DJI_0670.jpg
+  Original verified in R2: originals/1396/DJI_0670.jpg
+    thumb_300: OK → derivatives/2183/2183_thumb_300.webp
+    preview_800: OK → derivatives/2183/2183_preview_800.webp
+    medium_1600: OK → derivatives/2183/2183_medium_1600.webp
+    large_2800: OK → derivatives/2183/2183_large_2800.webp
+  REPAIRED photo_id=2183
+
+[2192] slug=20250414-201432-beaches-1194
+  original_r2_key=originals/1194/20250414_201432.jpg
+  Original verified in R2: originals/1194/20250414_201432.jpg
+    thumb_300: OK → derivatives/2192/2192_thumb_300.webp
+    preview_800: OK → derivatives/2192/2192_preview_800.webp
+    medium_1600: OK → derivatives/2192/2192_medium_1600.webp
+    large_2800: OK → derivatives/2192/2192_large_2800.webp
+  REPAIRED photo_id=2192
+
+[2193] slug=dji-0697-2-1399
+  original_r2_key=originals/1399/DJI_0697-2.jpg
+  Original verified in R2: originals/1399/DJI_0697-2.jpg
+    thumb_300: OK → derivatives/2193/2193_thumb_300.webp
+    preview_800: OK → derivatives/2193/2193_preview_800.webp
+    medium_1600: OK → derivatives/2193/2193_medium_1600.webp
+    large_2800: OK → derivatives/2193/2193_large_2800.webp
+  REPAIRED photo_id=2193
+
+[2196] slug=dji-0701-2-1400
+  original_r2_key=originals/1400/DJI_0701-2.jpg
+  Original verified in R2: originals/1400/DJI_0701-2.jpg
+    thumb_300: OK → derivatives/2196/2196_thumb_300.webp
+    preview_800: OK → derivatives/2196/2196_preview_800.webp
+    medium_1600: OK → derivatives/2196/2196_medium_1600.webp
+    large_2800: OK → derivatives/2196/2196_large_2800.webp
+  REPAIRED photo_id=2196
+
+[2202] slug=dji-0717-1402
+  original_r2_key=originals/1402/DJI_0717.jpg
+  Original verified in R2: originals/1402/DJI_0717.jpg
+    thumb_300: OK → derivatives/2202/2202_thumb_300.webp
+    preview_800: OK → derivatives/2202/2202_preview_800.webp
+    medium_1600: OK → derivatives/2202/2202_medium_1600.webp
+    large_2800: OK → derivatives/2202/2202_large_2800.webp
+  REPAIRED photo_id=2202
+
+[2205] slug=dji-0727-1403
+  original_r2_key=originals/1403/DJI_0727.jpg
+  Original verified in R2: originals/1403/DJI_0727.jpg
+    thumb_300: OK → derivatives/2205/2205_thumb_300.webp
+    preview_800: OK → derivatives/2205/2205_preview_800.webp
+    medium_1600: OK → derivatives/2205/2205_medium_1600.webp
+    large_2800: OK → derivatives/2205/2205_large_2800.webp
+  REPAIRED photo_id=2205
+
+[2218] slug=20250426-115150-beaches-1203
+  original_r2_key=originals/1203/20250426_115150.jpg
+  Original verified in R2: originals/1203/20250426_115150.jpg
+    thumb_300: OK → derivatives/2218/2218_thumb_300.webp
+    preview_800: OK → derivatives/2218/2218_preview_800.webp
+    medium_1600: OK → derivatives/2218/2218_medium_1600.webp
+    large_2800: OK → derivatives/2218/2218_large_2800.webp
+  REPAIRED photo_id=2218
+
+[2223] slug=dji-0769-1409
+  original_r2_key=originals/1409/DJI_0769.jpg
+  Original verified in R2: originals/1409/DJI_0769.jpg
+    thumb_300: OK → derivatives/2223/2223_thumb_300.webp
+    preview_800: OK → derivatives/2223/2223_preview_800.webp
+    medium_1600: OK → derivatives/2223/2223_medium_1600.webp
+    large_2800: OK → derivatives/2223/2223_large_2800.webp
+  REPAIRED photo_id=2223
+
+[2234] slug=cl0a0831-beaches-1209
+  original_r2_key=originals/1209/CL0A0831.jpg
+  Original verified in R2: originals/1209/CL0A0831.jpg
+    thumb_300: OK → derivatives/2234/2234_thumb_300.webp
+    preview_800: OK → derivatives/2234/2234_preview_800.webp
+    medium_1600: OK → derivatives/2234/2234_medium_1600.webp
+    large_2800: OK → derivatives/2234/2234_large_2800.webp
+  REPAIRED photo_id=2234
+
+[2239] slug=cl0a0877-beaches-1211
+  original_r2_key=originals/1211/CL0A0877.JPG
+  Original verified in R2: originals/1211/CL0A0877.JPG
+    thumb_300: OK → derivatives/2239/2239_thumb_300.webp
+    preview_800: OK → derivatives/2239/2239_preview_800.webp
+    medium_1600: OK → derivatives/2239/2239_medium_1600.webp
+    large_2800: OK → derivatives/2239/2239_large_2800.webp
+  REPAIRED photo_id=2239
+
+[2255] slug=dji-0812-1418
+  original_r2_key=originals/1418/DJI_0812.jpg
+  Original verified in R2: originals/1418/DJI_0812.jpg
+    thumb_300: OK → derivatives/2255/2255_thumb_300.webp
+    preview_800: OK → derivatives/2255/2255_preview_800.webp
+    medium_1600: OK → derivatives/2255/2255_medium_1600.webp
+    large_2800: OK → derivatives/2255/2255_large_2800.webp
+  REPAIRED photo_id=2255
+
+[2276] slug=cl0a3702-beaches-1226
+  original_r2_key=originals/1226/CL0A3702.JPG
+  Original verified in R2: originals/1226/CL0A3702.JPG
+    thumb_300: OK → derivatives/2276/2276_thumb_300.webp
+    preview_800: OK → derivatives/2276/2276_preview_800.webp
+    medium_1600: OK → derivatives/2276/2276_medium_1600.webp
+    large_2800: OK → derivatives/2276/2276_large_2800.webp
+  REPAIRED photo_id=2276
+
+[2284] slug=cl0a3742-beaches-1229
+  original_r2_key=originals/1229/CL0A3742.JPG
+  Original verified in R2: originals/1229/CL0A3742.JPG
+    thumb_300: OK → derivatives/2284/2284_thumb_300.webp
+    preview_800: OK → derivatives/2284/2284_preview_800.webp
+    medium_1600: OK → derivatives/2284/2284_medium_1600.webp
+    large_2800: OK → derivatives/2284/2284_large_2800.webp
+  REPAIRED photo_id=2284
+
+[2296] slug=dji-0936-1431
+  original_r2_key=originals/1431/DJI_0936.jpg
+  Original verified in R2: originals/1431/DJI_0936.jpg
+    thumb_300: OK → derivatives/2296/2296_thumb_300.webp
+    preview_800: OK → derivatives/2296/2296_preview_800.webp
+    medium_1600: OK → derivatives/2296/2296_medium_1600.webp
+    large_2800: OK → derivatives/2296/2296_large_2800.webp
+  REPAIRED photo_id=2296
+
+[2321] slug=dji-0970-1438
+  original_r2_key=originals/1438/DJI_0970.jpg
+  Original verified in R2: originals/1438/DJI_0970.jpg
+    thumb_300: OK → derivatives/2321/2321_thumb_300.webp
+    preview_800: OK → derivatives/2321/2321_preview_800.webp
+    medium_1600: OK → derivatives/2321/2321_medium_1600.webp
+    large_2800: OK → derivatives/2321/2321_large_2800.webp
+  REPAIRED photo_id=2321
+
+[2331] slug=cl0a8615-beaches-1247
+  original_r2_key=originals/1247/CL0A8615.jpg
+  Original verified in R2: originals/1247/CL0A8615.jpg
+    thumb_300: OK → derivatives/2331/2331_thumb_300.webp
+    preview_800: OK → derivatives/2331/2331_preview_800.webp
+    medium_1600: OK → derivatives/2331/2331_medium_1600.webp
+    large_2800: OK → derivatives/2331/2331_large_2800.webp
+  REPAIRED photo_id=2331
+
+[2339] slug=dji-0018-beaches-1250
+  original_r2_key=originals/1250/DJI_0018.jpg
+  Original verified in R2: originals/1250/DJI_0018.jpg
+    thumb_300: OK → derivatives/2339/2339_thumb_300.webp
+    preview_800: OK → derivatives/2339/2339_preview_800.webp
+    medium_1600: OK → derivatives/2339/2339_medium_1600.webp
+    large_2800: OK → derivatives/2339/2339_large_2800.webp
+  REPAIRED photo_id=2339
+
+[2350] slug=dji-0028-beaches-1253
+  original_r2_key=originals/1253/DJI_0028.jpg
+  Original verified in R2: originals/1253/DJI_0028.jpg
+    thumb_300: OK → derivatives/2350/2350_thumb_300.webp
+    preview_800: OK → derivatives/2350/2350_preview_800.webp
+    medium_1600: OK → derivatives/2350/2350_medium_1600.webp
+    large_2800: OK → derivatives/2350/2350_large_2800.webp
+  REPAIRED photo_id=2350
+
+[2368] slug=dji-0055-beaches-1259
+  original_r2_key=originals/1259/DJI_0055.jpg
+  Original verified in R2: originals/1259/DJI_0055.jpg
+    thumb_300: OK → derivatives/2368/2368_thumb_300.webp
+    preview_800: OK → derivatives/2368/2368_preview_800.webp
+    medium_1600: OK → derivatives/2368/2368_medium_1600.webp
+    large_2800: OK → derivatives/2368/2368_large_2800.webp
+  REPAIRED photo_id=2368
+
+[2441] slug=img-2453-1479
+  original_r2_key=originals/1479/IMG_2453.JPG
+  Original verified in R2: originals/1479/IMG_2453.JPG
+    thumb_300: OK → derivatives/2441/2441_thumb_300.webp
+    preview_800: OK → derivatives/2441/2441_preview_800.webp
+    medium_1600: OK → derivatives/2441/2441_medium_1600.webp
+    large_2800: OK → derivatives/2441/2441_large_2800.webp
+  REPAIRED photo_id=2441
+
+[2447] slug=img-2462-1481
+  original_r2_key=originals/1481/IMG_2462.jpg
+  Original verified in R2: originals/1481/IMG_2462.jpg
+    thumb_300: OK → derivatives/2447/2447_thumb_300.webp
+    preview_800: OK → derivatives/2447/2447_preview_800.webp
+    medium_1600: OK → derivatives/2447/2447_medium_1600.webp
+    large_2800: OK → derivatives/2447/2447_large_2800.webp
+  REPAIRED photo_id=2447
+
+[2469] slug=dji-0146-beaches-1290
+  original_r2_key=originals/1290/DJI_0146.jpg
+  Original verified in R2: originals/1290/DJI_0146.jpg
+    thumb_300: OK → derivatives/2469/2469_thumb_300.webp
+    preview_800: OK → derivatives/2469/2469_preview_800.webp
+    medium_1600: OK → derivatives/2469/2469_medium_1600.webp
+    large_2800: OK → derivatives/2469/2469_large_2800.webp
+  REPAIRED photo_id=2469
+
+[2472] slug=dji-0147-beaches-1291
+  original_r2_key=originals/1291/DJI_0147.jpg
+  Original verified in R2: originals/1291/DJI_0147.jpg
+    thumb_300: OK → derivatives/2472/2472_thumb_300.webp
+    preview_800: OK → derivatives/2472/2472_preview_800.webp
+    medium_1600: OK → derivatives/2472/2472_medium_1600.webp
+    large_2800: OK → derivatives/2472/2472_large_2800.webp
+  REPAIRED photo_id=2472
+
+[2481] slug=img-8585-1493
+  original_r2_key=originals/1493/IMG_8585.jpg
+  Original verified in R2: originals/1493/IMG_8585.jpg
+    thumb_300: OK → derivatives/2481/2481_thumb_300.webp
+    preview_800: OK → derivatives/2481/2481_preview_800.webp
+    medium_1600: OK → derivatives/2481/2481_medium_1600.webp
+    large_2800: OK → derivatives/2481/2481_large_2800.webp
+  REPAIRED photo_id=2481
+
+[2483] slug=dji-0161-beaches-1294
+  original_r2_key=originals/1294/DJI_0161.jpg
+  Original verified in R2: originals/1294/DJI_0161.jpg
+    thumb_300: OK → derivatives/2483/2483_thumb_300.webp
+    preview_800: OK → derivatives/2483/2483_preview_800.webp
+    medium_1600: OK → derivatives/2483/2483_medium_1600.webp
+    large_2800: OK → derivatives/2483/2483_large_2800.webp
+  REPAIRED photo_id=2483
+
+[2496] slug=img-9569-1498
+  original_r2_key=originals/1498/IMG_9569.jpg
+  Original verified in R2: originals/1498/IMG_9569.jpg
+    thumb_300: OK → derivatives/2496/2496_thumb_300.webp
+    preview_800: OK → derivatives/2496/2496_preview_800.webp
+    medium_1600: OK → derivatives/2496/2496_medium_1600.webp
+    large_2800: OK → derivatives/2496/2496_large_2800.webp
+  REPAIRED photo_id=2496
+
+[2505] slug=img-9604-1501
+  original_r2_key=originals/1501/IMG_9604.jpg
+  Original verified in R2: originals/1501/IMG_9604.jpg
+    thumb_300: OK → derivatives/2505/2505_thumb_300.webp
+    preview_800: OK → derivatives/2505/2505_preview_800.webp
+    medium_1600: OK → derivatives/2505/2505_medium_1600.webp
+    large_2800: OK → derivatives/2505/2505_large_2800.webp
+  REPAIRED photo_id=2505
+
+[2521] slug=dji-0210-beaches-1306
+  original_r2_key=originals/1306/DJI_0210.jpg
+  Original verified in R2: originals/1306/DJI_0210.jpg
+    thumb_300: OK → derivatives/2521/2521_thumb_300.webp
+    preview_800: OK → derivatives/2521/2521_preview_800.webp
+    medium_1600: OK → derivatives/2521/2521_medium_1600.webp
+    large_2800: OK → derivatives/2521/2521_large_2800.webp
+  REPAIRED photo_id=2521
+
+[2538] slug=p2161656-effects-1513
+  original_r2_key=originals/1513/P2161656-EFFECTS.jpg
+  Original verified in R2: originals/1513/P2161656-EFFECTS.jpg
+    thumb_300: OK → derivatives/2538/2538_thumb_300.webp
+    preview_800: OK → derivatives/2538/2538_preview_800.webp
+    medium_1600: OK → derivatives/2538/2538_medium_1600.webp
+    large_2800: OK → derivatives/2538/2538_large_2800.webp
+  REPAIRED photo_id=2538
+
+[2561] slug=dji-0299-beaches-1318
+  original_r2_key=originals/1318/DJI_0299.jpg
+  Original verified in R2: originals/1318/DJI_0299.jpg
+    thumb_300: OK → derivatives/2561/2561_thumb_300.webp
+    preview_800: OK → derivatives/2561/2561_preview_800.webp
+    medium_1600: OK → derivatives/2561/2561_medium_1600.webp
+    large_2800: OK → derivatives/2561/2561_large_2800.webp
+  REPAIRED photo_id=2561
+
+[2581] slug=pano00018-1527
+  original_r2_key=originals/1527/pano00018.jpg
+  Original verified in R2: originals/1527/pano00018.jpg
+    thumb_300: OK → derivatives/2581/2581_thumb_300.webp
+    preview_800: OK → derivatives/2581/2581_preview_800.webp
+    medium_1600: OK → derivatives/2581/2581_medium_1600.webp
+    large_2800: OK → derivatives/2581/2581_large_2800.webp
+  REPAIRED photo_id=2581
+
+[2583] slug=dji-0323-beaches-1325
+  original_r2_key=originals/1325/DJI_0323.jpg
+  Original verified in R2: originals/1325/DJI_0323.jpg
+    thumb_300: OK → derivatives/2583/2583_thumb_300.webp
+    preview_800: OK → derivatives/2583/2583_preview_800.webp
+    medium_1600: OK → derivatives/2583/2583_medium_1600.webp
+    large_2800: OK → derivatives/2583/2583_large_2800.webp
+  REPAIRED photo_id=2583
+
+[2594] slug=dji-0344-beaches-1333
+  original_r2_key=originals/1333/DJI_0344.jpg
+  Original verified in R2: originals/1333/DJI_0344.jpg
+    thumb_300: OK → derivatives/2594/2594_thumb_300.webp
+    preview_800: OK → derivatives/2594/2594_preview_800.webp
+    medium_1600: OK → derivatives/2594/2594_medium_1600.webp
+    large_2800: OK → derivatives/2594/2594_large_2800.webp
+  REPAIRED photo_id=2594
+
+[2597] slug=dji-0345-beaches-1334
+  original_r2_key=originals/1334/DJI_0345.jpg
+  Original verified in R2: originals/1334/DJI_0345.jpg
+    thumb_300: OK → derivatives/2597/2597_thumb_300.webp
+    preview_800: OK → derivatives/2597/2597_preview_800.webp
+    medium_1600: OK → derivatives/2597/2597_medium_1600.webp
+    large_2800: OK → derivatives/2597/2597_large_2800.webp
+  REPAIRED photo_id=2597
+
+[2607] slug=20250415-085324-1867
+  original_r2_key=originals/1867/20250415_085324.jpg
+  Original verified in R2: originals/1867/20250415_085324.jpg
+    thumb_300: OK → derivatives/2607/2607_thumb_300.webp
+    preview_800: OK → derivatives/2607/2607_preview_800.webp
+    medium_1600: OK → derivatives/2607/2607_medium_1600.webp
+    large_2800: OK → derivatives/2607/2607_large_2800.webp
+  REPAIRED photo_id=2607
+
+[2618] slug=ar-img-1733-1871
+  original_r2_key=originals/1871/AR_IMG_1733.JPG
+  Original verified in R2: originals/1871/AR_IMG_1733.JPG
+    thumb_300: OK → derivatives/2618/2618_thumb_300.webp
+    preview_800: OK → derivatives/2618/2618_preview_800.webp
+    medium_1600: OK → derivatives/2618/2618_medium_1600.webp
+    large_2800: OK → derivatives/2618/2618_large_2800.webp
+  REPAIRED photo_id=2618
+
+[2677] slug=dji-0442-beaches-1355
+  original_r2_key=originals/1355/DJI_0442.jpg
+  Original verified in R2: originals/1355/DJI_0442.jpg
+    thumb_300: OK → derivatives/2677/2677_thumb_300.webp
+    preview_800: OK → derivatives/2677/2677_preview_800.webp
+    medium_1600: OK → derivatives/2677/2677_medium_1600.webp
+    large_2800: OK → derivatives/2677/2677_large_2800.webp
+  REPAIRED photo_id=2677
+
+[2681] slug=dji-0443-beaches-1356
+  original_r2_key=originals/1356/DJI_0443.jpg
+  Original verified in R2: originals/1356/DJI_0443.jpg
+    thumb_300: OK → derivatives/2681/2681_thumb_300.webp
+    preview_800: OK → derivatives/2681/2681_preview_800.webp
+    medium_1600: OK → derivatives/2681/2681_medium_1600.webp
+    large_2800: OK → derivatives/2681/2681_large_2800.webp
+  REPAIRED photo_id=2681
+
+[2754] slug=cl0a1819-1921
+  original_r2_key=originals/1921/CL0A1819.jpg
+  Original verified in R2: originals/1921/CL0A1819.jpg
+    thumb_300: OK → derivatives/2754/2754_thumb_300.webp
+    preview_800: OK → derivatives/2754/2754_preview_800.webp
+    medium_1600: OK → derivatives/2754/2754_medium_1600.webp
+    large_2800: OK → derivatives/2754/2754_large_2800.webp
+  REPAIRED photo_id=2754
+
+[2758] slug=dji-0581-beaches-1377
+  original_r2_key=originals/1377/DJI_0581.jpg
+  Original verified in R2: originals/1377/DJI_0581.jpg
+    thumb_300: OK → derivatives/2758/2758_thumb_300.webp
+    preview_800: OK → derivatives/2758/2758_preview_800.webp
+    medium_1600: OK → derivatives/2758/2758_medium_1600.webp
+    large_2800: OK → derivatives/2758/2758_large_2800.webp
+  REPAIRED photo_id=2758
+
+[2779] slug=cl0a2196-1930
+  original_r2_key=originals/1930/CL0A2196.jpg
+  Original verified in R2: originals/1930/CL0A2196.jpg
+    thumb_300: OK → derivatives/2779/2779_thumb_300.webp
+    preview_800: OK → derivatives/2779/2779_preview_800.webp
+    medium_1600: OK → derivatives/2779/2779_medium_1600.webp
+    large_2800: OK → derivatives/2779/2779_large_2800.webp
+  REPAIRED photo_id=2779
+
+[2791] slug=dji-0614-beaches-1386
+  original_r2_key=originals/1386/DJI_0614.jpg
+  Original verified in R2: originals/1386/DJI_0614.jpg
+    thumb_300: OK → derivatives/2791/2791_thumb_300.webp
+    preview_800: OK → derivatives/2791/2791_preview_800.webp
+    medium_1600: OK → derivatives/2791/2791_medium_1600.webp
+    large_2800: OK → derivatives/2791/2791_large_2800.webp
+  REPAIRED photo_id=2791
+
+=== BATCH COMPLETE ===
+photos_in_batch: 100
+photos_repaired: 100
+photos_skipped_missing_original: 0
+photos_failed: 0
+
+repaired_photo_ids: [238, 239, 1293, 1309, 1312, 1328, 1329, 1331, 1333, 1361, 1368, 1386, 1406, 1414, 1440, 1442, 1452, 1490, 1492, 1510, 1512, 1518, 1540, 1550, 1624, 1633, 1645, 1657, 1684, 1685, 1690, 1709, 1721, 1734, 1743, 1753, 1910, 1914, 1919, 1924, 1983, 1998, 1999, 2001, 2008, 2011, 2028, 2033, 2045, 2046, 2060, 2111, 2134, 2144, 2150, 2165, 2176, 2179, 2183, 2192, 2193, 2196, 2202, 2205, 2218, 2223, 2234, 2239, 2255, 2276, 2284, 2296, 2321, 2331, 2339, 2350, 2368, 2441, 2447, 2469, 2472, 2481, 2483, 2496, 2505, 2521, 2538, 2561, 2581, 2583, 2594, 2597, 2607, 2618, 2677, 2681, 2754, 2758, 2779, 2791]
+
+Report written to: /Users/joshuatenbrink/.openclaw/workspace/wildphotography/logs/MEDIA_REPAIR_20260613_204927.json

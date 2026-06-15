@@ -1,0 +1,31 @@
+{
+  "timestamp": "2026-04-24T15:27:54Z",
+  "workflow": "wild_repair_incomplete_legacy",
+  "stats": {
+    "photo_40932": {
+      "small": [
+        "ok",
+        "derivatives/40932/40932_small.jpg"
+      ],
+      "medium": [
+        "ok",
+        "derivatives/40932/40932_medium.jpg"
+      ],
+      "large": [
+        "ok",
+        "derivatives/40932/40932_large.jpg"
+      ]
+    },
+    "photo_40933": {
+      "small": [
+        "ok",
+        "derivatives/40933/40933_small.jpg"
+      ],
+      "large": [
+        "ok",
+        "derivatives/40933/40933_large.jpg"
+      ]
+    },
+    "errors": []
+  }
+}

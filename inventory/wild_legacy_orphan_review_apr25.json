@@ -1,0 +1,61 @@
+{
+  "workflow": "wild_legacy_orphan_review",
+  "run_at": "2026-04-25T17:59:00Z",
+  "status": "completed",
+  "total_photos_in_db": 34523,
+  "render_ready": 34058,
+  "search_ready": 34057,
+  "orphan_candidates": 459,
+  "classification": {
+    "true_orphans_unrecoverable": 71,
+    "recoverable_has_r2_and_thumb": 340,
+    "recoverable_has_r2_no_thumb": 48
+  },
+  "true_orphan_breakdown_by_gallery": [
+    { "gallery_slug": "volcan-poas", "gallery_name": "Volcan Poas", "count": 19 },
+    { "gallery_slug": "rivers", "gallery_name": "Rivers", "count": 15 },
+    { "gallery_slug": "turtles", "gallery_name": "Turtles", "count": 8 },
+    { "gallery_slug": "birds", "gallery_name": "Birds of Costa Rica", "count": 7 },
+    { "gallery_slug": "uncategorized", "gallery_name": "Uncategorized", "count": 3 },
+    { "gallery_slug": "best-of-costa-rica", "gallery_name": "Best of Costa Rica", "count": 2 },
+    { "gallery_slug": "wildlife", "gallery_name": "Wildlife", "count": 1 },
+    { "gallery_slug": "water-sports-and-surfing", "gallery_name": "Water Sports and Surfing", "count": 1 },
+    { "gallery_slug": "costa-rica-gallery-beaches", "gallery_name": "Beaches", "count": 1 },
+    { "gallery_slug": "volcan-irazu", "gallery_name": "Volcan Irazu", "count": 1 },
+    { "gallery_slug": "rainforests", "gallery_name": "Rainforests", "count": 1 }
+  ],
+  "recoverable_breakdown_by_gallery": [
+    { "gallery_slug": "sunrise-sunset", "gallery_name": "Sunrise Sunset", "count": 113 },
+    { "gallery_slug": "peninsula-de-osa", "gallery_name": "Peninsula De Osa", "count": 62 },
+    { "gallery_slug": "birds", "gallery_name": "Birds of Costa Rica", "count": 49 },
+    { "gallery_slug": "favorites", "gallery_name": "Favorites", "count": 46 },
+    { "gallery_slug": "costa-rica-gallery-sunrise-sunset", "gallery_name": "Sunrise-Sunset", "count": 32 },
+    { "gallery_slug": "landmarks", "gallery_name": "Landmarks", "count": 31 },
+    { "gallery_slug": "alajuela", "gallery_name": "Alajuela", "count": 23 },
+    { "gallery_slug": "tambor-photos", "gallery_name": "Tambor Photos", "count": 19 },
+    { "gallery_slug": "rivers", "gallery_name": "Rivers", "count": 8 },
+    { "gallery_slug": "china", "gallery_name": "China", "count": 2 },
+    { "gallery_slug": "arenal-volcano", "gallery_name": "Arenal Volcano", "count": 2 },
+    { "gallery_slug": "volcan-poas", "gallery_name": "Volcan Poas", "count": 1 }
+  ],
+  "true_orphan_sample": [
+    { "id": 17, "slug": "quetzal", "title": "Resplendent Quetzal", "gallery_id": 5 },
+    { "id": 21, "slug": "green-iguana", "title": "Green Iguana in Costa Rica, Costa Rica", "gallery_id": 6 },
+    { "id": 25, "slug": "rufous-hummingbird", "title": "Rufous Hummingbird", "gallery_id": 5 }
+  ],
+  "recoverable_sample": [
+    { "id": 139, "slug": "default-QDVfNk", "title": "Volcan Poas", "gallery_id": 11, "has_r2": true, "has_thumb": true },
+    { "id": 202, "slug": "p1101882-jpg-vbBFGp", "title": "Costa Rica Rivers", "gallery_id": 13, "has_r2": true, "has_thumb": true }
+  ],
+  "notes": {
+    "true_orphan_definition": "source_path empty AND original_r2_key empty AND thumb_url empty",
+    "recoverable_condition": "source_path empty BUT original_r2_key populated AND thumb_url populated — derivatives exist in R2",
+    "48_missing_thumb_note": "Records 14776+ in favorites gallery are legacy imports missing both source_path and thumb_url despite having original_r2_key — likely failed derivative generation during original import"
+  },
+  "recommended_actions": [
+    "archive_true_orphans: Move 71 true orphans to archived_unrecoverable status, remove from public-facing inventory",
+    "batch_repair_recoverable: For 340 records with R2 key + thumb, set ready_for_public_render=true",
+    "investigate_48: For 48 records (favorites gallery) with missing thumb_url, run derivative regeneration check against R2 originals",
+    "volcan_poas_priority: 19 Volcan Poas true orphans suggest a failed import batch — verify R2 originals exist before archiving"
+  ]
+}

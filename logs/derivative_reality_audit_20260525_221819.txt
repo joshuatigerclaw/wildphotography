@@ -1,0 +1,34 @@
+WILDPHOTOGRAPHY DERIVATIVE REALITY AUDIT
+Run: 2026-05-26T04:18:19.543051+00:00
+Total RPR photos: 46,000
+Total DB derivatives_complete: 46,691
+Sample size: 300
+
+--- REALITY CHECK ---
+Total keys checked (R2 HeadObject): 1411
+Keys present: 1346
+Keys missing: 65
+
+--- FLAG ACCURACY ---
+Photos OK (reality matches DB): 283
+Flag mismatch (DB=complete but objects missing): 17
+Flag missing (objects exist but DB=False): 0
+
+--- DISCREPANCIES ---
+  [51378] slug=tambor-new-years-2025-cl0a1079 status=flag_mismatch db_flag=True present=4 missing=1
+  [49463] slug=costa-rica-gallery-tambor-nicoya-peninsula-costa-rica-dji-0281 status=flag_mismatch db_flag=True present=1 missing=4
+  [43220] slug=beaches--img-0804 status=flag_mismatch db_flag=True present=1 missing=4
+  [42985] slug=sunrise-sunset--dji-0733 status=flag_mismatch db_flag=True present=1 missing=4
+  [46562] slug=costa-rica-gallery-wildlife-cl0a6389 status=flag_mismatch db_flag=True present=1 missing=4
+  [46577] slug=costa-rica-gallery-wildlife-cl0a7628 status=flag_mismatch db_flag=True present=1 missing=4
+  [46519] slug=costa-rica-gallery-wildlife-2023-10-15-06-54-51 status=flag_mismatch db_flag=True present=1 missing=4
+  [46572] slug=costa-rica-gallery-wildlife-cl0a6717 status=flag_mismatch db_flag=True present=1 missing=4
+  [49270] slug=costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-pano00056 status=flag_mismatch db_flag=True present=1 missing=4
+  [49167] slug=costa-rica-gallery-jaco-beach-pano00025 status=flag_mismatch db_flag=True present=1 missing=4
+  [46366] slug=costa-rica-gallery-jaco-beach-dji_0084 status=flag_mismatch db_flag=True present=1 missing=4
+  [25352] slug=dji-0517-1b5113a7 status=flag_mismatch db_flag=True present=2 missing=3
+  [42897] slug=sunrise-sunset--cl0a3820 status=flag_mismatch db_flag=True present=1 missing=4
+  [43261] slug=beaches-dji-0614-2 status=flag_mismatch db_flag=True present=1 missing=4
+  [44668] slug=cl0a9619 status=flag_mismatch db_flag=True present=1 missing=4
+  [49555] slug=costa-rica-gallery-la-sabana-estadio-nacional-costa-rica-san-jose-hyperlapse-0282-jpeg status=flag_mismatch db_flag=True present=1 missing=4
+  [47245] slug=inspirational-quotes-2018-08-03-17-34-23 status=flag_mismatch db_flag=True present=0 missing=5

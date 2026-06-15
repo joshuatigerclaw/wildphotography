@@ -1,0 +1,40 @@
+{
+  "run_at": "2026-04-26T06:52:56.345995+00:00",
+  "imported_count": 0,
+  "failed_count": 3,
+  "total_processed": 3,
+  "sample_gallery_url": null,
+  "sample_photo_url": null,
+  "results": [
+    {
+      "filename": "CL0A0818.JPG",
+      "leaf_folder_name": "R6 Selected",
+      "status": "failed",
+      "photo_id": null,
+      "gallery_id": 293,
+      "gallery_slug": "r6-selected",
+      "failure_reason": "neon_update_failed:tuple index out of range",
+      "fail_count": 3
+    },
+    {
+      "filename": "CL0A0831.JPG",
+      "leaf_folder_name": "R6 Selected",
+      "status": "failed",
+      "photo_id": null,
+      "gallery_id": 294,
+      "gallery_slug": "r6-selected",
+      "failure_reason": "neon_update_failed:tuple index out of range",
+      "fail_count": 3
+    },
+    {
+      "filename": "CL0A0832.JPG",
+      "leaf_folder_name": "R6 Selected",
+      "status": "failed",
+      "photo_id": null,
+      "gallery_id": 295,
+      "gallery_slug": "r6-selected",
+      "failure_reason": "neon_update_failed:tuple index out of range",
+      "fail_count": 3
+    }
+  ]
+}

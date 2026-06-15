@@ -49,10 +49,10 @@ const REGIONS: Record<string, RegionData> = {
     ],
     nearbyRegions: [
       { name: "Alajuela", slug: "alajuela", distance: "~2 hours north" },
-      { name: "Puntarenas", slug: "punta-renas", distance: "South via ferry or 3-hour road" }
+      { name: "Puntarenas", slug: "puntarenas", distance: "South via ferry or 3-hour road" }
     ]
   },
-  "punta-renas": {
+  "puntarenas": {
     name: "Puntarenas",
     overview: "Puntarenas Province stretches along Costa Rica entire Pacific coast, from the bustling beach town of Jaco in the north to the remote wilderness of the Osa Peninsula in the south, plus the entire Nicoya Peninsula jutting westward. This geographic diversity produces an extraordinary range of photographic subjects: nesting Scarlet Macaws at Carara, humpback whales off the Drake Bay coast, surf photography at Santa Teresa, and the mangrove labyrinths of the Gulf of Nicoya.",
     highlights: [
@@ -392,7 +392,7 @@ const LOCATIONS: Record<string, LocationData> = {
   },
   "carara-national-park": {
     name: "Carara National Park",
-    regionSlug: "punta-renas",
+    regionSlug: "puntarenas",
     habitat: "Transitional rainforest, river, mangrove edge",
     seasons: [
       { name: "Dry Season (Dec–Apr)", description: "Peak macaw activity; best light; most visitors." },
@@ -404,7 +404,7 @@ const LOCATIONS: Record<string, LocationData> = {
   },
   "corcovado-national-park": {
     name: "Corcovado National Park",
-    regionSlug: "punta-renas",
+    regionSlug: "puntarenas",
     habitat: "Lowland tropical rainforest, lagoon, beach",
     seasons: [
       { name: "Dry Season (Dec–Apr)", description: "Easiest access; wildlife most concentrated near water sources." },

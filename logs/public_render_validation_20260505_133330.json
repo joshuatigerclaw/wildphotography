@@ -1,0 +1,405 @@
+{
+  "run_at": "2026-05-05T19:33:30.114711+00:00",
+  "total_photos": 38426,
+  "render_ready_total": 37537,
+  "photos_with_issues": 277,
+  "all_clear": false,
+  "checks": {
+    "missing_thumb_url": {
+      "count": 0,
+      "sample": []
+    },
+    "missing_slug": {
+      "count": 0,
+      "sample": []
+    },
+    "missing_title": {
+      "count": 77,
+      "sample": [
+        {
+          "id": 45100,
+          "slug": "roads-bridges-and-infrastructure-5c6788c7",
+          "title": null,
+          "status": "draft"
+        },
+        {
+          "id": 45101,
+          "slug": "roads-bridges-and-infrastructure-bdde34fb",
+          "title": null,
+          "status": "draft"
+        },
+        {
+          "id": 45102,
+          "slug": "roads-bridges-and-infrastructure-59bab10a",
+          "title": null,
+          "status": "draft"
+        },
+        {
+          "id": 45103,
+          "slug": "roads-bridges-and-infrastructure-29fac5fc",
+          "title": null,
+          "status": "draft"
+        },
+        {
+          "id": 45104,
+          "slug": "roads-bridges-and-infrastructure-b1d7da15",
+          "title": null,
+          "status": "draft"
+        },
+        {
+          "id": 45105,
+          "slug": "roads-bridges-and-infrastructure-30140f61",
+          "title": null,
+          "status": "draft"
+        },
+        {
+          "id": 45106,
+          "slug": "potrero-beach-guanacaste-0dc9affc",
+          "title": null,
+          "status": "draft"
+        },
+        {
+          "id": 45107,
+          "slug": "potrero-beach-guanacaste-338f2012",
+          "title": null,
+          "status": "draft"
+        },
+        {
+          "id": 45108,
+          "slug": "potrero-beach-guanacaste-22d18957",
+          "title": null,
+          "status": "draft"
+        },
+        {
+          "id": 45109,
+          "slug": "potrero-beach-guanacaste-db86c81d",
+          "title": null,
+          "status": "draft"
+        },
+        {
+          "id": 45110,
+          "slug": "potrero-beach-guanacaste-1bc6f9be",
+          "title": null,
+          "status": "draft"
+        },
+        {
+          "id": 45111,
+          "slug": "potrero-beach-guanacaste-3cff5b64",
+          "title": null,
+          "status": "draft"
+        },
+        {
+          "id": 45112,
+          "slug": "punta-cacique-guancaste-4a8fca22",
+          "title": null,
+          "status": "draft"
+        },
+        {
+          "id": 45113,
+          "slug": "punta-cacique-guancaste-9f36d04f",
+          "title": null,
+          "status": "draft"
+        },
+        {
+          "id": 45114,
+          "slug": "punta-cacique-guancaste-2da6e3c3",
+          "title": null,
+          "status": "draft"
+        },
+        {
+          "id": 45115,
+          "slug": "punta-cacique-guancaste-2ac7b796",
+          "title": null,
+          "status": "draft"
+        },
+        {
+          "id": 45116,
+          "slug": "punta-cacique-guancaste-684357f1",
+          "title": null,
+          "status": "draft"
+        },
+        {
+          "id": 45117,
+          "slug": "punta-cacique-guancaste-040b1a2b",
+          "title": null,
+          "status": "draft"
+        },
+        {
+          "id": 45118,
+          "slug": "punta-cacique-guancaste-c9a8f063",
+          "title": null,
+          "status": "draft"
+        },
+        {
+          "id": 45119,
+          "slug": "punta-cacique-guancaste-ff569612",
+          "title": null,
+          "status": "draft"
+        }
+      ]
+    },
+    "missing_gallery_slug": {
+      "count": 1395,
+      "sample": [
+        {
+          "id": 242,
+          "slug": "hermosa-beach-1",
+          "title": "Hermosa Beach Sunset",
+          "status": "archived"
+        },
+        {
+          "id": 14905,
+          "slug": "resplendent-quetzal",
+          "title": "Resplendent Quetzal \u2014 #14905 | WildPhotography",
+          "status": "archived"
+        },
+        {
+          "id": 41302,
+          "slug": "sunrise-sunset-2016-07-31-17-59-49",
+          "title": "Pacific Coast Sunrise, Guanacaste 2016",
+          "status": "published"
+        },
+        {
+          "id": 41303,
+          "slug": "sunrise-sunset-2017-07-15-18-57-45",
+          "title": "Tropical Sunset, Guanacaste 2017",
+          "status": "published"
+        },
+        {
+          "id": 41304,
+          "slug": "sunrise-sunset-2018-03-29-18-22-12",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41304 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41305,
+          "slug": "sunrise-sunset-2018-08-21-17-53-04",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41305 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41306,
+          "slug": "sunrise-sunset-2018-08-21-17-55-57",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41306 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41307,
+          "slug": "sunrise-sunset-2018-08-21-18-01-08",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41307 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41308,
+          "slug": "sunrise-sunset-2018-08-21-18-02-56",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41308 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41309,
+          "slug": "sunrise-sunset-2018-08-21-18-09-15",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41309 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41310,
+          "slug": "sunrise-sunset-2018-08-24-17-55-36",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41310 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41311,
+          "slug": "sunrise-sunset-2019-july-19-hyperlapse-0311",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41311 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41312,
+          "slug": "sunrise-sunset-2019-03-31-05-46-08",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41312 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41313,
+          "slug": "sunrise-sunset-2019-11-08-17-16-08",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41313 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41314,
+          "slug": "sunrise-sunset-2020-06-06-17-38-31",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41314 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41315,
+          "slug": "sunrise-sunset-2020-06-07-17-57-31",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41315 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41316,
+          "slug": "sunrise-sunset-2020-06-07-17-58-30",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41316 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41317,
+          "slug": "sunrise-sunset-2020-06-07-18-00-38",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41317 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41318,
+          "slug": "sunrise-sunset-2020-07-17-05-10-04",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41318 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41319,
+          "slug": "sunrise-sunset-2020-07-17-05-18-15",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41319 | WildPhotography",
+          "status": "published"
+        }
+      ]
+    },
+    "search_not_ready": {
+      "count": 0,
+      "sample": []
+    },
+    "derivatives_incomplete": {
+      "count": 0,
+      "sample": []
+    },
+    "missing_description": {
+      "count": 77,
+      "sample": [
+        {
+          "id": 45100,
+          "slug": "roads-bridges-and-infrastructure-5c6788c7",
+          "title": null,
+          "status": "draft"
+        },
+        {
+          "id": 45101,
+          "slug": "roads-bridges-and-infrastructure-bdde34fb",
+          "title": null,
+          "status": "draft"
+        },
+        {
+          "id": 45102,
+          "slug": "roads-bridges-and-infrastructure-59bab10a",
+          "title": null,
+          "status": "draft"
+        },
+        {
+          "id": 45103,
+          "slug": "roads-bridges-and-infrastructure-29fac5fc",
+          "title": null,
+          "status": "draft"
+        },
+        {
+          "id": 45104,
+          "slug": "roads-bridges-and-infrastructure-b1d7da15",
+          "title": null,
+          "status": "draft"
+        },
+        {
+          "id": 45105,
+          "slug": "roads-bridges-and-infrastructure-30140f61",
+          "title": null,
+          "status": "draft"
+        },
+        {
+          "id": 45106,
+          "slug": "potrero-beach-guanacaste-0dc9affc",
+          "title": null,
+          "status": "draft"
+        },
+        {
+          "id": 45107,
+          "slug": "potrero-beach-guanacaste-338f2012",
+          "title": null,
+          "status": "draft"
+        },
+        {
+          "id": 45108,
+          "slug": "potrero-beach-guanacaste-22d18957",
+          "title": null,
+          "status": "draft"
+        },
+        {
+          "id": 45109,
+          "slug": "potrero-beach-guanacaste-db86c81d",
+          "title": null,
+          "status": "draft"
+        },
+        {
+          "id": 45110,
+          "slug": "potrero-beach-guanacaste-1bc6f9be",
+          "title": null,
+          "status": "draft"
+        },
+        {
+          "id": 45111,
+          "slug": "potrero-beach-guanacaste-3cff5b64",
+          "title": null,
+          "status": "draft"
+        },
+        {
+          "id": 45112,
+          "slug": "punta-cacique-guancaste-4a8fca22",
+          "title": null,
+          "status": "draft"
+        },
+        {
+          "id": 45113,
+          "slug": "punta-cacique-guancaste-9f36d04f",
+          "title": null,
+          "status": "draft"
+        },
+        {
+          "id": 45114,
+          "slug": "punta-cacique-guancaste-2da6e3c3",
+          "title": null,
+          "status": "draft"
+        },
+        {
+          "id": 45115,
+          "slug": "punta-cacique-guancaste-2ac7b796",
+          "title": null,
+          "status": "draft"
+        },
+        {
+          "id": 45116,
+          "slug": "punta-cacique-guancaste-684357f1",
+          "title": null,
+          "status": "draft"
+        },
+        {
+          "id": 45117,
+          "slug": "punta-cacique-guancaste-040b1a2b",
+          "title": null,
+          "status": "draft"
+        },
+        {
+          "id": 45118,
+          "slug": "punta-cacique-guancaste-c9a8f063",
+          "title": null,
+          "status": "draft"
+        },
+        {
+          "id": 45119,
+          "slug": "punta-cacique-guancaste-ff569612",
+          "title": null,
+          "status": "draft"
+        }
+      ]
+    },
+    "missing_keywords": {
+      "count": 0,
+      "sample": []
+    }
+  },
+  "status": "success"
+}

@@ -1,561 +1,1809 @@
 {
-  "audit_time": "2026-03-25T04:38:03.789665",
-  "total_records_in_db": 20721,
-  "records_audited": 20721,
-  "unique_r2_keys_in_db": 29420,
-  "unique_r2_keys_in_r2": 123619,
-  "keys_missing_in_r2": 87,
-  "keys_extra_in_r2": 94286,
-  "affected_photo_count": 35,
-  "sample_affected_photos": [
+  "audit_ts": "2026-06-14T00:08:03.370259+00:00",
+  "total_sampled": 1000,
+  "valid": 134,
+  "missing": 866,
+  "mismatch_rate_pct": 86.6,
+  "items": [
     {
-      "id": 15367,
-      "slug": "cl0a5144",
+      "id": 47934,
+      "slug": "china-shanghai-2019-04-02-21-10-00-1",
       "derivatives_complete": true,
-      "ready_for_public_render": true,
-      "search_ready": true,
-      "status": "active",
-      "missing_keys": [
-        "derivatives/thumb/b51b5db6cb04eeffb51e8a71174154c346ac535ad967e22ab5a156e2a286f4b9.jpg",
-        "derivatives/small/b51b5db6cb04eeffb51e8a71174154c346ac535ad967e22ab5a156e2a286f4b9.jpg",
-        "derivatives/large/b51b5db6cb04eeffb51e8a71174154c346ac535ad967e22ab5a156e2a286f4b9.jpg",
-        "derivatives/large/b51b5db6cb04eeffb51e8a71174154c346ac535ad967e22ab5a156e2a286f4b9.jpg"
-      ]
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 1,
+      "keys_missing": 4
     },
     {
-      "id": 15340,
-      "slug": "cl0a1360",
+      "id": 73362,
+      "slug": "2020-10-10-08-33-26",
       "derivatives_complete": true,
-      "ready_for_public_render": true,
-      "search_ready": true,
-      "status": "active",
-      "missing_keys": [
-        "derivatives/large/fbb3e63752621893e16d5ec83d51b85ddec5bf7c2efc028ecf5e1c483acf3e37.jpg",
-        "derivatives/large/fbb3e63752621893e16d5ec83d51b85ddec5bf7c2efc028ecf5e1c483acf3e37.jpg",
-        "derivatives/thumb/fbb3e63752621893e16d5ec83d51b85ddec5bf7c2efc028ecf5e1c483acf3e37.jpg",
-        "derivatives/small/fbb3e63752621893e16d5ec83d51b85ddec5bf7c2efc028ecf5e1c483acf3e37.jpg"
-      ]
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
     },
     {
-      "id": 21105,
-      "slug": "dji_0988",
+      "id": 21460,
+      "slug": "dji-0358-21460",
       "derivatives_complete": true,
-      "ready_for_public_render": true,
-      "search_ready": true,
-      "status": "active",
-      "missing_keys": [
-        "derivatives/large/e7a62522c01623f217314f6ef9a4b2c3ec83a4275085de0abf0266c7469a8d94.jpg",
-        "derivatives/large/e7a62522c01623f217314f6ef9a4b2c3ec83a4275085de0abf0266c7469a8d94.jpg",
-        "derivatives/small/e7a62522c01623f217314f6ef9a4b2c3ec83a4275085de0abf0266c7469a8d94.jpg",
-        "derivatives/thumb/e7a62522c01623f217314f6ef9a4b2c3ec83a4275085de0abf0266c7469a8d94.jpg"
-      ]
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
     },
     {
-      "id": 15238,
-      "slug": "cl0a0991",
+      "id": 13502,
+      "slug": "img-2084-surfing-costa-rica-10120",
       "derivatives_complete": true,
-      "ready_for_public_render": true,
-      "search_ready": true,
-      "status": "active",
-      "missing_keys": [
-        "derivatives/thumb/b5502e9df72eb292471639564d86d998ff903a68ec601b58754b21a1990c5754.jpg",
-        "derivatives/small/b5502e9df72eb292471639564d86d998ff903a68ec601b58754b21a1990c5754.jpg",
-        "derivatives/large/b5502e9df72eb292471639564d86d998ff903a68ec601b58754b21a1990c5754.jpg",
-        "derivatives/large/b5502e9df72eb292471639564d86d998ff903a68ec601b58754b21a1990c5754.jpg"
-      ]
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
     },
     {
-      "id": 721,
-      "slug": "dji-0992-Nrp9Fz",
+      "id": 19970,
+      "slug": "costa-rica-gallery-best-of-costa-rica-2019-11-09-07-55-39",
       "derivatives_complete": true,
-      "ready_for_public_render": true,
-      "search_ready": true,
-      "status": "draft",
-      "missing_keys": [
-        "derivatives/7210/DJI_0022_thumb.JPG"
-      ]
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
     },
     {
-      "id": 15394,
-      "slug": "cl0a3009",
+      "id": 66228,
+      "slug": "p9122657",
       "derivatives_complete": true,
-      "ready_for_public_render": true,
-      "search_ready": true,
-      "status": "active",
-      "missing_keys": [
-        "derivatives/small/6aa3967d97859ee4d63b8d0f90cec1aae90ce0e56d71e877eba3e97f6bdcd2ee.jpg",
-        "derivatives/thumb/6aa3967d97859ee4d63b8d0f90cec1aae90ce0e56d71e877eba3e97f6bdcd2ee.jpg",
-        "derivatives/large/6aa3967d97859ee4d63b8d0f90cec1aae90ce0e56d71e877eba3e97f6bdcd2ee.jpg",
-        "derivatives/large/6aa3967d97859ee4d63b8d0f90cec1aae90ce0e56d71e877eba3e97f6bdcd2ee.jpg"
-      ]
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 1,
+      "keys_missing": 4
     },
     {
-      "id": 15089,
-      "slug": "img_8120",
+      "id": 72430,
+      "slug": "each-new-day",
       "derivatives_complete": true,
-      "ready_for_public_render": true,
-      "search_ready": true,
-      "status": "active",
-      "missing_keys": [
-        "derivatives/small/bc65cbef58e77b3b93d2631d4fa7497a4ef66bd6615ad2f2c6b8047ef60d553b.jpg",
-        "derivatives/large/bc65cbef58e77b3b93d2631d4fa7497a4ef66bd6615ad2f2c6b8047ef60d553b.jpg",
-        "derivatives/large/bc65cbef58e77b3b93d2631d4fa7497a4ef66bd6615ad2f2c6b8047ef60d553b.jpg",
-        "derivatives/thumb/bc65cbef58e77b3b93d2631d4fa7497a4ef66bd6615ad2f2c6b8047ef60d553b.jpg"
-      ]
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
     },
     {
-      "id": 15088,
-      "slug": "img_7099",
+      "id": 51521,
+      "slug": "2021-03-25-11-10-47-4929",
       "derivatives_complete": true,
-      "ready_for_public_render": true,
-      "search_ready": true,
-      "status": "active",
-      "missing_keys": [
-        "derivatives/large/91b78334ef5e0ea5c32f21da6d863ec801ff489e9bb9e7cd32b2e6019bef1afc.jpg",
-        "derivatives/large/91b78334ef5e0ea5c32f21da6d863ec801ff489e9bb9e7cd32b2e6019bef1afc.jpg",
-        "derivatives/thumb/91b78334ef5e0ea5c32f21da6d863ec801ff489e9bb9e7cd32b2e6019bef1afc.jpg",
-        "derivatives/small/91b78334ef5e0ea5c32f21da6d863ec801ff489e9bb9e7cd32b2e6019bef1afc.jpg"
-      ]
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
     },
     {
-      "id": 14463,
-      "slug": "2022-06-25-11-32-55-waterfalls-in-costa-rica-11081",
+      "id": 77391,
+      "slug": "20241129-111652",
       "derivatives_complete": true,
-      "ready_for_public_render": true,
-      "search_ready": true,
-      "status": "draft",
-      "missing_keys": [
-        "derivatives/smalls/2022-06-25-11-32-55-waterfalls-in-costa-rica-11081-small.jpg",
-        "derivatives/larges/2022-06-25-11-32-55-waterfalls-in-costa-rica-11081-large.jpg",
-        "derivatives/thumbs/2022-06-25-11-32-55-waterfalls-in-costa-rica-11081-thumb.jpg"
-      ]
+      "actual_derivatives_exist": false,
+      "flag_mismatch": true,
+      "keys_present": 0,
+      "keys_missing": 5
     },
     {
-      "id": 4975,
-      "slug": "cl0a7808-birds-2159",
+      "id": 78713,
+      "slug": "2024-01-29-09.05.07",
       "derivatives_complete": true,
-      "ready_for_public_render": true,
-      "search_ready": true,
-      "status": "draft",
-      "missing_keys": [
-        "derivatives/2159/CL0A7808_thumb.jpg",
-        "derivatives/2159/CL0A7808_large.jpg",
-        "derivatives/2159/CL0A7808_small.jpg"
-      ]
+      "actual_derivatives_exist": false,
+      "flag_mismatch": true,
+      "keys_present": 0,
+      "keys_missing": 5
     },
     {
-      "id": 19,
-      "slug": "three-toed-sloth",
+      "id": 77875,
+      "slug": "dji-0664",
       "derivatives_complete": true,
-      "ready_for_public_render": false,
-      "search_ready": false,
-      "status": "active",
-      "missing_keys": [
-        "thumbs/three-thumb.jpg"
-      ]
+      "actual_derivatives_exist": false,
+      "flag_mismatch": true,
+      "keys_present": 0,
+      "keys_missing": 5
     },
     {
-      "id": 15338,
-      "slug": "cl0a1356",
+      "id": 10326,
+      "slug": "dji-0512-nauyaca-waterfalls-6944",
       "derivatives_complete": true,
-      "ready_for_public_render": true,
-      "search_ready": true,
-      "status": "active",
-      "missing_keys": [
-        "derivatives/large/a09878a1574f732c91061e954842321a41d6aac77a811633a10015c8835bed3a.jpg",
-        "derivatives/large/a09878a1574f732c91061e954842321a41d6aac77a811633a10015c8835bed3a.jpg",
-        "derivatives/small/a09878a1574f732c91061e954842321a41d6aac77a811633a10015c8835bed3a.jpg",
-        "derivatives/thumb/a09878a1574f732c91061e954842321a41d6aac77a811633a10015c8835bed3a.jpg"
-      ]
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
     },
     {
-      "id": 15353,
-      "slug": "cl0a3678",
+      "id": 7834,
+      "slug": "dji-0786-golfo-de-nicoya-4452",
       "derivatives_complete": true,
-      "ready_for_public_render": true,
-      "search_ready": true,
-      "status": "active",
-      "missing_keys": [
-        "derivatives/large/d0b1d3af8358edf7d800e2464d6b327a33943830d0576a1d4c92e4dfd9b03e96.jpg",
-        "derivatives/large/d0b1d3af8358edf7d800e2464d6b327a33943830d0576a1d4c92e4dfd9b03e96.jpg",
-        "derivatives/thumb/d0b1d3af8358edf7d800e2464d6b327a33943830d0576a1d4c92e4dfd9b03e96.jpg",
-        "derivatives/small/d0b1d3af8358edf7d800e2464d6b327a33943830d0576a1d4c92e4dfd9b03e96.jpg"
-      ]
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
     },
     {
-      "id": 21109,
-      "slug": "hyperlapse_0028",
+      "id": 35231,
+      "slug": "montezuma-costa-rica-dji-0974-4ba43675",
       "derivatives_complete": true,
-      "ready_for_public_render": true,
-      "search_ready": true,
-      "status": "active",
-      "missing_keys": [
-        "derivatives/small/c43627eb824757695f7684ffae999de99913951a48193efaa8a016c08095d9a6.jpg",
-        "derivatives/large/c43627eb824757695f7684ffae999de99913951a48193efaa8a016c08095d9a6.jpg",
-        "derivatives/large/c43627eb824757695f7684ffae999de99913951a48193efaa8a016c08095d9a6.jpg",
-        "derivatives/thumb/c43627eb824757695f7684ffae999de99913951a48193efaa8a016c08095d9a6.jpg"
-      ]
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
     },
     {
-      "id": 21104,
-      "slug": "dji_0976",
+      "id": 35191,
+      "slug": "peninsula-papagayo-dji-0238-c7948d5d",
       "derivatives_complete": true,
-      "ready_for_public_render": true,
-      "search_ready": true,
-      "status": "active",
-      "missing_keys": [
-        "derivatives/large/497c9e1431f8eec1780e585982599eb86f6985a660370218b4b88841e5b7d64b.jpg",
-        "derivatives/large/497c9e1431f8eec1780e585982599eb86f6985a660370218b4b88841e5b7d64b.jpg",
-        "derivatives/thumb/497c9e1431f8eec1780e585982599eb86f6985a660370218b4b88841e5b7d64b.jpg",
-        "derivatives/small/497c9e1431f8eec1780e585982599eb86f6985a660370218b4b88841e5b7d64b.jpg"
-      ]
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
     },
     {
-      "id": 15184,
-      "slug": "img_4308",
+      "id": 22547,
+      "slug": "2022-09-11-10-54-57",
       "derivatives_complete": true,
-      "ready_for_public_render": true,
-      "search_ready": true,
-      "status": "active",
-      "missing_keys": [
-        "derivatives/thumb/15a01c735110ecdc761c8efaefb38aa13fd2d3d546312cb5c0af5da2afc4edfa.jpg",
-        "derivatives/large/15a01c735110ecdc761c8efaefb38aa13fd2d3d546312cb5c0af5da2afc4edfa.jpg",
-        "derivatives/large/15a01c735110ecdc761c8efaefb38aa13fd2d3d546312cb5c0af5da2afc4edfa.jpg",
-        "derivatives/small/15a01c735110ecdc761c8efaefb38aa13fd2d3d546312cb5c0af5da2afc4edfa.jpg"
-      ]
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
     },
     {
-      "id": 15404,
-      "slug": "cl0a4359",
+      "id": 55585,
+      "slug": "cl0a4499-jpg",
       "derivatives_complete": true,
-      "ready_for_public_render": true,
-      "search_ready": true,
-      "status": "active",
-      "missing_keys": [
-        "derivatives/large/da0a5e532541c1a9883cd77ff1368fdfa2f904f3b44c12fda0d6596fa75a718d.jpg",
-        "derivatives/large/da0a5e532541c1a9883cd77ff1368fdfa2f904f3b44c12fda0d6596fa75a718d.jpg",
-        "derivatives/thumb/da0a5e532541c1a9883cd77ff1368fdfa2f904f3b44c12fda0d6596fa75a718d.jpg",
-        "derivatives/small/da0a5e532541c1a9883cd77ff1368fdfa2f904f3b44c12fda0d6596fa75a718d.jpg"
-      ]
+      "actual_derivatives_exist": false,
+      "flag_mismatch": true,
+      "keys_present": 0,
+      "keys_missing": 1
     },
     {
-      "id": 15420,
-      "slug": "cl0a6827",
+      "id": 78907,
+      "slug": "img-6097",
       "derivatives_complete": true,
-      "ready_for_public_render": true,
-      "search_ready": true,
-      "status": "active",
-      "missing_keys": [
-        "derivatives/large/a840ae99e7f3a035bb5cf0f294709fd4ab7cc053adb4fc7e7521f69029d85136.jpg",
-        "derivatives/large/a840ae99e7f3a035bb5cf0f294709fd4ab7cc053adb4fc7e7521f69029d85136.jpg",
-        "derivatives/thumb/a840ae99e7f3a035bb5cf0f294709fd4ab7cc053adb4fc7e7521f69029d85136.jpg",
-        "derivatives/small/a840ae99e7f3a035bb5cf0f294709fd4ab7cc053adb4fc7e7521f69029d85136.jpg"
-      ]
+      "actual_derivatives_exist": false,
+      "flag_mismatch": true,
+      "keys_present": 0,
+      "keys_missing": 5
     },
     {
-      "id": 15097,
-      "slug": "img_8214",
+      "id": 40904,
+      "slug": "birds-macaws-lapas-img-9776",
       "derivatives_complete": true,
-      "ready_for_public_render": true,
-      "search_ready": true,
-      "status": "active",
-      "missing_keys": [
-        "derivatives/thumb/03f61c4f1e842cd85a6a910321dd37e405375f0b0beec2093db401048b3eab37.jpg",
-        "derivatives/small/03f61c4f1e842cd85a6a910321dd37e405375f0b0beec2093db401048b3eab37.jpg",
-        "derivatives/large/03f61c4f1e842cd85a6a910321dd37e405375f0b0beec2093db401048b3eab37.jpg",
-        "derivatives/large/03f61c4f1e842cd85a6a910321dd37e405375f0b0beec2093db401048b3eab37.jpg"
-      ]
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
     },
     {
-      "id": 729,
-      "slug": "-2021-04-11-09-08-12",
+      "id": 23549,
+      "slug": "south-america-peru-ddf34d80",
       "derivatives_complete": true,
-      "ready_for_public_render": true,
-      "search_ready": true,
-      "status": "draft",
-      "missing_keys": [
-        "derivatives/7290/DJI_0328_thumb.JPG"
-      ]
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
     },
     {
-      "id": 15092,
-      "slug": "img_8126",
+      "id": 36259,
+      "slug": "20250415_162822jpg",
       "derivatives_complete": true,
-      "ready_for_public_render": true,
-      "search_ready": true,
-      "status": "active",
-      "missing_keys": [
-        "derivatives/small/80488b5594d864eb1b4e24a36d9bb233e879bdca04eaa9804e08ce86707fe2cb.jpg",
-        "derivatives/thumb/80488b5594d864eb1b4e24a36d9bb233e879bdca04eaa9804e08ce86707fe2cb.jpg",
-        "derivatives/large/80488b5594d864eb1b4e24a36d9bb233e879bdca04eaa9804e08ce86707fe2cb.jpg",
-        "derivatives/large/80488b5594d864eb1b4e24a36d9bb233e879bdca04eaa9804e08ce86707fe2cb.jpg"
-      ]
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
     },
     {
-      "id": 21106,
-      "slug": "dji_0990",
+      "id": 13592,
+      "slug": "dji-0890-tamarindo-guanacaste-costa-rica-10210",
       "derivatives_complete": true,
-      "ready_for_public_render": true,
-      "search_ready": true,
-      "status": "active",
-      "missing_keys": [
-        "derivatives/small/5c80d6e36de75c2451b1435a4b8c6e119d374e990f60a4aa80d3ace2f04a5728.jpg",
-        "derivatives/large/5c80d6e36de75c2451b1435a4b8c6e119d374e990f60a4aa80d3ace2f04a5728.jpg",
-        "derivatives/large/5c80d6e36de75c2451b1435a4b8c6e119d374e990f60a4aa80d3ace2f04a5728.jpg",
-        "derivatives/thumb/5c80d6e36de75c2451b1435a4b8c6e119d374e990f60a4aa80d3ace2f04a5728.jpg"
-      ]
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
     },
     {
-      "id": 726,
-      "slug": "dji-0880-wGhxxc",
+      "id": 13076,
+      "slug": "2022-02-26-18-14-20-sunrise-sunset-9694",
       "derivatives_complete": true,
-      "ready_for_public_render": true,
-      "search_ready": true,
-      "status": "draft",
-      "missing_keys": [
-        "derivatives/7260/DJI_0244_thumb.JPG"
-      ]
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
     },
     {
-      "id": 15090,
-      "slug": "img_8122",
+      "id": 16513,
+      "slug": "tambor-nicoya-peninsula-costa-rica-58d5ceac",
       "derivatives_complete": true,
-      "ready_for_public_render": true,
-      "search_ready": true,
-      "status": "active",
-      "missing_keys": [
-        "derivatives/thumb/1c5a1521dbd2c5fb858d6cb5b7ade33ba0bec2fae9a72dcc2a91e98a203dfaa8.jpg",
-        "derivatives/small/1c5a1521dbd2c5fb858d6cb5b7ade33ba0bec2fae9a72dcc2a91e98a203dfaa8.jpg",
-        "derivatives/large/1c5a1521dbd2c5fb858d6cb5b7ade33ba0bec2fae9a72dcc2a91e98a203dfaa8.jpg",
-        "derivatives/large/1c5a1521dbd2c5fb858d6cb5b7ade33ba0bec2fae9a72dcc2a91e98a203dfaa8.jpg"
-      ]
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
     },
     {
-      "id": 15231,
-      "slug": "cl0a0540",
+      "id": 41887,
+      "slug": "isla-tortuga-dji_0917",
       "derivatives_complete": true,
-      "ready_for_public_render": true,
-      "search_ready": true,
-      "status": "active",
-      "missing_keys": [
-        "derivatives/small/a1209ee3860d2481591da4a1061a3b723ccf073e48213004ed7bc0fc7a07dbc9.jpg",
-        "derivatives/thumb/a1209ee3860d2481591da4a1061a3b723ccf073e48213004ed7bc0fc7a07dbc9.jpg",
-        "derivatives/large/a1209ee3860d2481591da4a1061a3b723ccf073e48213004ed7bc0fc7a07dbc9.jpg",
-        "derivatives/large/a1209ee3860d2481591da4a1061a3b723ccf073e48213004ed7bc0fc7a07dbc9.jpg"
-      ]
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 3,
+      "keys_missing": 2
     },
     {
-      "id": 18445,
-      "slug": "2022-06-25-11-32-55-waterfalls-in-costa-rica-1014",
+      "id": 77208,
+      "slug": "cl0a5708",
       "derivatives_complete": true,
-      "ready_for_public_render": true,
-      "search_ready": true,
-      "status": "draft",
-      "missing_keys": [
-        "derivatives/smalls/2022-06-25-11-32-55-waterfalls-in-costa-rica-1014-small.jpg",
-        "derivatives/thumbs/2022-06-25-11-32-55-waterfalls-in-costa-rica-1014-thumb.jpg",
-        "derivatives/larges/2022-06-25-11-32-55-waterfalls-in-costa-rica-1014-large.jpg"
-      ]
+      "actual_derivatives_exist": false,
+      "flag_mismatch": true,
+      "keys_present": 0,
+      "keys_missing": 5
     },
     {
-      "id": 21107,
-      "slug": "dscf2388-21107",
+      "id": 63069,
+      "slug": "dji_0640-001-5c9be622",
       "derivatives_complete": true,
-      "ready_for_public_render": true,
-      "search_ready": true,
-      "status": "active",
-      "missing_keys": [
-        "derivatives/large/e9031835bc1d3c9c696ccea985c2402bb527cc3523c36420b826706781ac76a0.jpg",
-        "derivatives/large/e9031835bc1d3c9c696ccea985c2402bb527cc3523c36420b826706781ac76a0.jpg",
-        "derivatives/thumb/e9031835bc1d3c9c696ccea985c2402bb527cc3523c36420b826706781ac76a0.jpg",
-        "derivatives/small/e9031835bc1d3c9c696ccea985c2402bb527cc3523c36420b826706781ac76a0.jpg"
-      ]
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
     },
     {
-      "id": 15372,
-      "slug": "cl0a6467",
+      "id": 70549,
+      "slug": "img-3048-6c905dbe",
       "derivatives_complete": true,
-      "ready_for_public_render": true,
-      "search_ready": true,
-      "status": "active",
-      "missing_keys": [
-        "derivatives/small/26aeedf6c8c2e798a29f95b802e0b8599d538a37ec6fe79d23fdc9c0ecb63ad4.jpg",
-        "derivatives/large/26aeedf6c8c2e798a29f95b802e0b8599d538a37ec6fe79d23fdc9c0ecb63ad4.jpg",
-        "derivatives/large/26aeedf6c8c2e798a29f95b802e0b8599d538a37ec6fe79d23fdc9c0ecb63ad4.jpg",
-        "derivatives/thumb/26aeedf6c8c2e798a29f95b802e0b8599d538a37ec6fe79d23fdc9c0ecb63ad4.jpg"
-      ]
+      "actual_derivatives_exist": false,
+      "flag_mismatch": true,
+      "keys_present": 0,
+      "keys_missing": 5
     },
     {
-      "id": 718,
-      "slug": "dji-0976-cZLrXZ",
+      "id": 63964,
+      "slug": "dji-0215-8b9bd7e5",
       "derivatives_complete": true,
-      "ready_for_public_render": true,
-      "search_ready": true,
-      "status": "draft",
-      "missing_keys": [
-        "derivatives/7180/CL0A6179_thumb.JPG"
-      ]
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
     },
     {
-      "id": 15423,
-      "slug": "cl0a3998",
+      "id": 75364,
+      "slug": "peninsula-papagayo-47426c03",
       "derivatives_complete": true,
-      "ready_for_public_render": true,
-      "search_ready": true,
-      "status": "active",
-      "missing_keys": [
-        "derivatives/large/58416cf44418c02e4d492b4576acf5b153b0cafcdcd85778edf053f0b1a48e3a.jpg",
-        "derivatives/large/58416cf44418c02e4d492b4576acf5b153b0cafcdcd85778edf053f0b1a48e3a.jpg",
-        "derivatives/thumb/58416cf44418c02e4d492b4576acf5b153b0cafcdcd85778edf053f0b1a48e3a.jpg",
-        "derivatives/small/58416cf44418c02e4d492b4576acf5b153b0cafcdcd85778edf053f0b1a48e3a.jpg"
-      ]
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
     },
     {
-      "id": 734,
-      "slug": "-2021-04-11-09-08-12-jpg",
+      "id": 30230,
+      "slug": "dji0586-4badcecb",
       "derivatives_complete": true,
-      "ready_for_public_render": true,
-      "search_ready": true,
-      "status": "draft",
-      "missing_keys": [
-        "derivatives/7340/DJI_0502_thumb.JPG"
-      ]
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
     },
     {
-      "id": 719,
-      "slug": "pano00047-QP8QWV",
+      "id": 14970,
+      "slug": "dji-0818-peninsula-de-nicoya-1003",
       "derivatives_complete": true,
-      "ready_for_public_render": true,
-      "search_ready": true,
-      "status": "draft",
-      "missing_keys": [
-        "derivatives/7190/CL0A6470_thumb.JPG"
-      ]
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
     },
     {
-      "id": 21108,
-      "slug": "hyperlapse_0001",
+      "id": 9170,
+      "slug": "2024-02-15-10-41-26-landmarks-5788",
       "derivatives_complete": true,
-      "ready_for_public_render": true,
-      "search_ready": true,
-      "status": "active",
-      "missing_keys": [
-        "derivatives/small/9f8a2091c2d8da551009de85e32072fdeaba9982ca86bbe6ec5b0ec48cd7c62b.jpg",
-        "derivatives/thumb/9f8a2091c2d8da551009de85e32072fdeaba9982ca86bbe6ec5b0ec48cd7c62b.jpg",
-        "derivatives/large/9f8a2091c2d8da551009de85e32072fdeaba9982ca86bbe6ec5b0ec48cd7c62b.jpg",
-        "derivatives/large/9f8a2091c2d8da551009de85e32072fdeaba9982ca86bbe6ec5b0ec48cd7c62b.jpg"
-      ]
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
     },
     {
-      "id": 728,
-      "slug": "dji-0893-KKX5Mn",
+      "id": 39801,
+      "slug": "birds-cl0a7363-jpg",
       "derivatives_complete": true,
-      "ready_for_public_render": true,
-      "search_ready": true,
-      "status": "draft",
-      "missing_keys": [
-        "derivatives/7280/DJI_0312_thumb.JPG"
-      ]
+      "actual_derivatives_exist": false,
+      "flag_mismatch": true,
+      "keys_present": 0,
+      "keys_missing": 1
     },
     {
-      "id": 821,
-      "slug": "dji-0883-821",
+      "id": 30669,
+      "slug": "pano00048-3d89ef51",
       "derivatives_complete": true,
-      "ready_for_public_render": false,
-      "search_ready": false,
-      "status": "archived",
-      "missing_keys": [
-        "thumbs/821-thumb.jpg"
-      ]
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 65802,
+      "slug": "dji-0093-best-of-costa-rica",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": false,
+      "flag_mismatch": true,
+      "keys_present": 0,
+      "keys_missing": 1
+    },
+    {
+      "id": 64136,
+      "slug": "dji-0063-2d1d4708",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 50569,
+      "slug": "2023-10-15-06-16-33-2d2c",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 35012,
+      "slug": "peninsula-papagayo-dji-0890-beef05de",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 24825,
+      "slug": "dji-0824-d00d1857",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 74137,
+      "slug": "isla-tortuga-c232e07e",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 43299,
+      "slug": "costa-rica--2017-02-07-140230-copy",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 72992,
+      "slug": "img-8851",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 76019,
+      "slug": "dji-0851-028800",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 54921,
+      "slug": "south-america-peru-5bfdd4af",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 74755,
+      "slug": "punta-leona-e942575b",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 72409,
+      "slug": "img-6053",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 5006,
+      "slug": "img-9867-10164",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 72453,
+      "slug": "dji-0467",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 69220,
+      "slug": "dji-0174-c5637867",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": false,
+      "flag_mismatch": true,
+      "keys_present": 0,
+      "keys_missing": 5
+    },
+    {
+      "id": 40100,
+      "slug": "birds-img-5021-jpg",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 14157,
+      "slug": "dji-0889-tambor-nicoya-peninsula-costa-rica-10775",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 36250,
+      "slug": "20231014_075456jpg",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 10527,
+      "slug": "2020-11-27-08-03-05-peninsula-papagayo-7145",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 25913,
+      "slug": "puntarenas-costa-rica-812b2546",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 91410,
+      "slug": "cl0a5837-1",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": false,
+      "flag_mismatch": true,
+      "keys_present": 0,
+      "keys_missing": 2
+    },
+    {
+      "id": 23375,
+      "slug": "south-america-argentina-6b305338",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 21440,
+      "slug": "dji-0304-21440",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 21749,
+      "slug": "dji0727",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 7396,
+      "slug": "2019-11-10-10-04-35-food--4014",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 75145,
+      "slug": "peninsula-papagayo-adcdf9fa",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 65839,
+      "slug": "dji-0099-beaches",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 76021,
+      "slug": "dji-0858-392a6d",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 92091,
+      "slug": "rio-savagre-bb434750",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 69944,
+      "slug": "20250201-173623-844f523a",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": false,
+      "flag_mismatch": true,
+      "keys_present": 0,
+      "keys_missing": 5
+    },
+    {
+      "id": 2721,
+      "slug": "cl0a1421-1909",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 18379,
+      "slug": "dji-0579-escazu-costa-rica-1077",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 37098,
+      "slug": "dji-0775-a2143cbc",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 1,
+      "keys_missing": 4
+    },
+    {
+      "id": 35840,
+      "slug": "sunrise-sunset-2018-08-24 17.55.36-557aaa",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 55867,
+      "slug": "south-america-argentina-2025-12-02-12-53-28-1",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": false,
+      "flag_mismatch": true,
+      "keys_present": 0,
+      "keys_missing": 1
+    },
+    {
+      "id": 43268,
+      "slug": "costa-rica--2014-09-20-160257-copy",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 22131,
+      "slug": "dji-0056-beaches-1156",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 7563,
+      "slug": "2025-03-08-06-55-42-food--4181",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 15445,
+      "slug": "cl0a4021",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 68295,
+      "slug": "dji-0364-34f0b70a",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": false,
+      "flag_mismatch": true,
+      "keys_present": 0,
+      "keys_missing": 5
+    },
+    {
+      "id": 6064,
+      "slug": "cl0a9417-birds-macaws-lapas-2682",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 22610,
+      "slug": "dji0058",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 63573,
+      "slug": "cl0a3493-e9ff266c",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 41214,
+      "slug": "dji-0279-25ac79fa",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": false,
+      "flag_mismatch": true,
+      "keys_present": 0,
+      "keys_missing": 5
+    },
+    {
+      "id": 12045,
+      "slug": "dji-0091-puntarenas-costa-rica-8663",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 23756,
+      "slug": "south-america-peru-281b5147",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 52938,
+      "slug": "birds-cl0a7725",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 22561,
+      "slug": "2023-03-12-12-06-32",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 5931,
+      "slug": "cl0a1398-birds-macaws-lapas-2549",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 15665,
+      "slug": "birds-e268f2ee",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 6349,
+      "slug": "dji-0841-conchal-guanacaste-2967",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 50743,
+      "slug": "dji-0018-005a",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 1970,
+      "slug": "2018-08-03-12-49-23-beaches-1114",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 62754,
+      "slug": "img_2384-0609e3f9",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 7198,
+      "slug": "2020-11-15-11-02-41-flowers-plants-trees-3816",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 55799,
+      "slug": "dji-0874-jpg",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": false,
+      "flag_mismatch": true,
+      "keys_present": 0,
+      "keys_missing": 1
+    },
+    {
+      "id": 25284,
+      "slug": "dji-0521-a8dd7b83",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 6660,
+      "slug": "pc306028-costa-rica-3278",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 18357,
+      "slug": "dji-0818-santa-ana-costa-rica-1014",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 2305,
+      "slug": "cl0a6563-beaches-1237",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 54102,
+      "slug": "food-2025-03-08-06-56-14",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 9052,
+      "slug": "cpano0007-la-sabana-estadio-nacional-costa-rica-san-jose-5670",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 66595,
+      "slug": "2024-12-28-12-39-23-bccbb36f",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": false,
+      "flag_mismatch": true,
+      "keys_present": 0,
+      "keys_missing": 5
+    },
+    {
+      "id": 61313,
+      "slug": "cl0a0158-6149167d",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 62593,
+      "slug": "cl0a9204-6c586bd7",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 2,
+      "keys_missing": 3
+    },
+    {
+      "id": 14459,
+      "slug": "2022-06-25-11-23-48-waterfalls-in-costa-rica-11077",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 69208,
+      "slug": "dji-0162-40dacb28",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": false,
+      "flag_mismatch": true,
+      "keys_present": 0,
+      "keys_missing": 5
+    },
+    {
+      "id": 22628,
+      "slug": "dji0101",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 11639,
+      "slug": "dji-0119-punta-cacique-guancaste-8257",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 2513,
+      "slug": "img-9812-1504",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 29038,
+      "slug": "dji-0517-caa78cf4",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 52551,
+      "slug": "isla-tortuga-dji-0050",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 62704,
+      "slug": "img_8488-80100907",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 1,
+      "keys_missing": 4
+    },
+    {
+      "id": 66853,
+      "slug": "cl0a3734-ddc6b0c5",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": false,
+      "flag_mismatch": true,
+      "keys_present": 0,
+      "keys_missing": 5
+    },
+    {
+      "id": 20495,
+      "slug": "peninsula-papagayo-b6ce7cb2",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 65434,
+      "slug": "dji-0137-3cd5494b",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 13714,
+      "slug": "2024-12-28-17-25-03-tambor-nicoya-peninsula-costa-rica-10332",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 14819,
+      "slug": "img-2404",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": false,
+      "flag_mismatch": true,
+      "keys_present": 0,
+      "keys_missing": 1
+    },
+    {
+      "id": 62158,
+      "slug": "cl0a4363-a88406b2",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 62153,
+      "slug": "cl0a4314-c7e8c293",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 36307,
+      "slug": "2023-12-27-073203jpg",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 53481,
+      "slug": "isla-tortuga-dji-0928",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 49204,
+      "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-DJI_0718",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 12121,
+      "slug": "dji-0552-puntarenas-costa-rica-8739",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 24614,
+      "slug": "2021-10-23-09-36-49-7d779753",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 68944,
+      "slug": "pano00071-a5ef4eb1",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": false,
+      "flag_mismatch": true,
+      "keys_present": 0,
+      "keys_missing": 5
+    },
+    {
+      "id": 14026,
+      "slug": "dji-0437-tambor-nicoya-peninsula-costa-rica-10644",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 42172,
+      "slug": "industrial-costa-rica-2021-10-09-06-38-24",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 64403,
+      "slug": "20250425-171651-f660721d",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 11159,
+      "slug": "cl0a8284-playa-hermosa-jaco-garabito-7777",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 6244,
+      "slug": "dji-0199-cartago-2862",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 49790,
+      "slug": "wildlife-2023-04-12-11-15-55",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": false,
+      "flag_mismatch": true,
+      "keys_present": 0,
+      "keys_missing": 5
+    },
+    {
+      "id": 12941,
+      "slug": "dji-0706-santa-teresa-malpais-9559",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 34992,
+      "slug": "peninsula-papagayo-cl0a6045-6c2dd2b2",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 48935,
+      "slug": "costa-rica-gallery-jaco-beach-dji-0846",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 20919,
+      "slug": "DJI_0127-4f76c8f1",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": false,
+      "flag_mismatch": true,
+      "keys_present": 0,
+      "keys_missing": 1
+    },
+    {
+      "id": 64345,
+      "slug": "dji-0135-1db023a6",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 29918,
+      "slug": "img1177",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 51409,
+      "slug": "tambor-new-years-2025-cl0a2651",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 30320,
+      "slug": "img1765",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 40953,
+      "slug": "tamarindo-guanacaste-costa-rica-dji-0026",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 35578,
+      "slug": "santateresa-dji-0054-471be48f",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 21445,
+      "slug": "dji-0323-21445",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 22217,
+      "slug": "dji-0389-beaches-1242",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 78348,
+      "slug": "cl0a6110",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": false,
+      "flag_mismatch": true,
+      "keys_present": 0,
+      "keys_missing": 5
+    },
+    {
+      "id": 77170,
+      "slug": "2023-10-15-06.52.53",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": false,
+      "flag_mismatch": true,
+      "keys_present": 0,
+      "keys_missing": 5
+    },
+    {
+      "id": 54058,
+      "slug": "food-2025-03-08-06-50-55",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 25395,
+      "slug": "dji-0088-122c8a7d",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 1,
+      "keys_missing": 4
+    },
+    {
+      "id": 62831,
+      "slug": "img_6540-001-d8d47615",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 1,
+      "keys_missing": 4
+    },
+    {
+      "id": 13091,
+      "slug": "20241201-170831-sunrise-sunset-9709",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 64288,
+      "slug": "dji-0019-f4ff2ca5",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 92511,
+      "slug": "dji-0510-3956",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 72589,
+      "slug": "dji-0790-1",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 26969,
+      "slug": "photo-125-DJI-0535",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": false,
+      "flag_mismatch": true,
+      "keys_present": 0,
+      "keys_missing": 1
+    },
+    {
+      "id": 53434,
+      "slug": "isla-tortuga-dji-0833",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 36735,
+      "slug": "tambor-img-0949-6-f8bf9529",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 24798,
+      "slug": "cl0a0789-b78a8f6c",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 3786,
+      "slug": "dji-0318-best-of-costa-rica-1625",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 62741,
+      "slug": "img_1891-8fa104ee",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 4779,
+      "slug": "cl0a4714-birds-2079",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 25584,
+      "slug": "img-9789-05b6df8e",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 74635,
+      "slug": "punta-leona-5f93cb50",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 68113,
+      "slug": "dji-0226-c07162ea",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": false,
+      "flag_mismatch": true,
+      "keys_present": 0,
+      "keys_missing": 5
+    },
+    {
+      "id": 7092,
+      "slug": "20241018-134259-flora-fauna-3710",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": false,
+      "flag_mismatch": true,
+      "keys_present": 0,
+      "keys_missing": 1
+    },
+    {
+      "id": 70502,
+      "slug": "img-2156-c792de17",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": false,
+      "flag_mismatch": true,
+      "keys_present": 0,
+      "keys_missing": 5
+    },
+    {
+      "id": 77158,
+      "slug": "2022-09-11-12.59.34",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": false,
+      "flag_mismatch": true,
+      "keys_present": 0,
+      "keys_missing": 5
+    },
+    {
+      "id": 37640,
+      "slug": "china-img-7631-1-645191",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 71253,
+      "slug": "IMG_5146-5c8f09",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": false,
+      "flag_mismatch": true,
+      "keys_present": 0,
+      "keys_missing": 5
+    },
+    {
+      "id": 78679,
+      "slug": "2023-11-04-15.18.39",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": false,
+      "flag_mismatch": true,
+      "keys_present": 0,
+      "keys_missing": 5
+    },
+    {
+      "id": 21760,
+      "slug": "dji0792",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 23751,
+      "slug": "south-america-peru-b0dfa481",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 29608,
+      "slug": "dji0183-2",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 68847,
+      "slug": "cl0a5367-873725bc",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": false,
+      "flag_mismatch": true,
+      "keys_present": 0,
+      "keys_missing": 5
+    },
+    {
+      "id": 7633,
+      "slug": "2025-03-08-07-09-11-food--4251",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 72433,
+      "slug": "freedom-lies-in-being-bold",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 64517,
+      "slug": "dji-0762-0b6cea31",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 16604,
+      "slug": "tambor-nicoya-peninsula-costa-rica-a34a099d",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 61962,
+      "slug": "dji_0944-ed1dcabb",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 13095,
+      "slug": "20241202-170746-sunrise-sunset-9713",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 5622,
+      "slug": "img-2335-11304",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 17733,
+      "slug": "jaco-beach-091d864d",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 61502,
+      "slug": "2015-12-06-12.51.12---copy-19503382",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 19354,
+      "slug": "img-7398-best-of-costa-rica-1296",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 24728,
+      "slug": "dji-0736-91617015",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 52525,
+      "slug": "isla-tortuga-cl0a7357-1",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 70179,
+      "slug": "cl0a6553-a0fc0fa8",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": false,
+      "flag_mismatch": true,
+      "keys_present": 0,
+      "keys_missing": 5
+    },
+    {
+      "id": 76763,
+      "slug": "cl0a0678",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": false,
+      "flag_mismatch": true,
+      "keys_present": 0,
+      "keys_missing": 5
+    },
+    {
+      "id": 75823,
+      "slug": "papagayo-bahia-culebra-a6008ac8",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 19389,
+      "slug": "img-9077-best-of-costa-rica-1312",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 52101,
+      "slug": "costa-rica-gallery-jaco-beach-dji-0007",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 14844,
+      "slug": "2019-03-27-120130-1",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 20514,
+      "slug": "costa-rica-cuisine-28",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 73249,
+      "slug": "hyperlapse-0550-1",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 2,
+      "keys_missing": 3
+    },
+    {
+      "id": 31906,
+      "slug": "isla-tortuga-c56135390c87d059",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 67127,
+      "slug": "dji-0174-24b71a37",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": false,
+      "flag_mismatch": true,
+      "keys_present": 0,
+      "keys_missing": 5
+    },
+    {
+      "id": 53873,
+      "slug": "beaches-img-6834",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 38509,
+      "slug": "punta-leona-dji-0283-jpg",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 93548,
+      "slug": "2022-02-18-16-32-38",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 61230,
+      "slug": "dji_0490-8661ec09",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 74642,
+      "slug": "punta-leona-699960ca",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 16547,
+      "slug": "tambor-nicoya-peninsula-costa-rica-4f692f66",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 72476,
+      "slug": "dji-0448-1",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 22977,
+      "slug": "playas-del-coco-march-12-2022-5",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 16633,
+      "slug": "tambor-nicoya-peninsula-costa-rica-ee9ed6ed",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
+    },
+    {
+      "id": 14064,
+      "slug": "dji-0517-tambor-nicoya-peninsula-costa-rica-10682",
+      "derivatives_complete": true,
+      "actual_derivatives_exist": true,
+      "flag_mismatch": true,
+      "keys_present": 4,
+      "keys_missing": 1
     }
-  ],
-  "missing_key_list": [
-    "derivatives/thumb/b51b5db6cb04eeffb51e8a71174154c346ac535ad967e22ab5a156e2a286f4b9.jpg",
-    "derivatives/large/fbb3e63752621893e16d5ec83d51b85ddec5bf7c2efc028ecf5e1c483acf3e37.jpg",
-    "derivatives/large/e7a62522c01623f217314f6ef9a4b2c3ec83a4275085de0abf0266c7469a8d94.jpg",
-    "derivatives/thumb/b5502e9df72eb292471639564d86d998ff903a68ec601b58754b21a1990c5754.jpg",
-    "derivatives/7210/DJI_0022_thumb.JPG",
-    "derivatives/small/6aa3967d97859ee4d63b8d0f90cec1aae90ce0e56d71e877eba3e97f6bdcd2ee.jpg",
-    "derivatives/small/bc65cbef58e77b3b93d2631d4fa7497a4ef66bd6615ad2f2c6b8047ef60d553b.jpg",
-    "derivatives/large/91b78334ef5e0ea5c32f21da6d863ec801ff489e9bb9e7cd32b2e6019bef1afc.jpg",
-    "derivatives/smalls/2022-06-25-11-32-55-waterfalls-in-costa-rica-11081-small.jpg",
-    "derivatives/2159/CL0A7808_thumb.jpg",
-    "thumbs/three-thumb.jpg",
-    "derivatives/small/b51b5db6cb04eeffb51e8a71174154c346ac535ad967e22ab5a156e2a286f4b9.jpg",
-    "derivatives/large/a09878a1574f732c91061e954842321a41d6aac77a811633a10015c8835bed3a.jpg",
-    "derivatives/thumb/91b78334ef5e0ea5c32f21da6d863ec801ff489e9bb9e7cd32b2e6019bef1afc.jpg",
-    "derivatives/large/d0b1d3af8358edf7d800e2464d6b327a33943830d0576a1d4c92e4dfd9b03e96.jpg",
-    "derivatives/large/b51b5db6cb04eeffb51e8a71174154c346ac535ad967e22ab5a156e2a286f4b9.jpg",
-    "derivatives/small/c43627eb824757695f7684ffae999de99913951a48193efaa8a016c08095d9a6.jpg",
-    "derivatives/large/497c9e1431f8eec1780e585982599eb86f6985a660370218b4b88841e5b7d64b.jpg",
-    "derivatives/small/e7a62522c01623f217314f6ef9a4b2c3ec83a4275085de0abf0266c7469a8d94.jpg",
-    "derivatives/thumb/fbb3e63752621893e16d5ec83d51b85ddec5bf7c2efc028ecf5e1c483acf3e37.jpg",
-    "derivatives/thumb/15a01c735110ecdc761c8efaefb38aa13fd2d3d546312cb5c0af5da2afc4edfa.jpg",
-    "derivatives/large/da0a5e532541c1a9883cd77ff1368fdfa2f904f3b44c12fda0d6596fa75a718d.jpg",
-    "derivatives/large/a840ae99e7f3a035bb5cf0f294709fd4ab7cc053adb4fc7e7521f69029d85136.jpg",
-    "derivatives/thumb/da0a5e532541c1a9883cd77ff1368fdfa2f904f3b44c12fda0d6596fa75a718d.jpg",
-    "derivatives/2159/CL0A7808_large.jpg",
-    "derivatives/thumb/03f61c4f1e842cd85a6a910321dd37e405375f0b0beec2093db401048b3eab37.jpg",
-    "derivatives/thumb/d0b1d3af8358edf7d800e2464d6b327a33943830d0576a1d4c92e4dfd9b03e96.jpg",
-    "derivatives/7290/DJI_0328_thumb.JPG",
-    "derivatives/thumb/e7a62522c01623f217314f6ef9a4b2c3ec83a4275085de0abf0266c7469a8d94.jpg",
-    "derivatives/small/a09878a1574f732c91061e954842321a41d6aac77a811633a10015c8835bed3a.jpg",
-    "derivatives/small/80488b5594d864eb1b4e24a36d9bb233e879bdca04eaa9804e08ce86707fe2cb.jpg",
-    "derivatives/small/5c80d6e36de75c2451b1435a4b8c6e119d374e990f60a4aa80d3ace2f04a5728.jpg",
-    "derivatives/thumb/80488b5594d864eb1b4e24a36d9bb233e879bdca04eaa9804e08ce86707fe2cb.jpg",
-    "derivatives/small/03f61c4f1e842cd85a6a910321dd37e405375f0b0beec2093db401048b3eab37.jpg",
-    "derivatives/large/bc65cbef58e77b3b93d2631d4fa7497a4ef66bd6615ad2f2c6b8047ef60d553b.jpg",
-    "derivatives/large/15a01c735110ecdc761c8efaefb38aa13fd2d3d546312cb5c0af5da2afc4edfa.jpg",
-    "derivatives/7260/DJI_0244_thumb.JPG",
-    "derivatives/thumb/1c5a1521dbd2c5fb858d6cb5b7ade33ba0bec2fae9a72dcc2a91e98a203dfaa8.jpg",
-    "derivatives/small/1c5a1521dbd2c5fb858d6cb5b7ade33ba0bec2fae9a72dcc2a91e98a203dfaa8.jpg",
-    "derivatives/thumb/a09878a1574f732c91061e954842321a41d6aac77a811633a10015c8835bed3a.jpg",
-    "derivatives/larges/2022-06-25-11-32-55-waterfalls-in-costa-rica-11081-large.jpg",
-    "derivatives/thumb/497c9e1431f8eec1780e585982599eb86f6985a660370218b4b88841e5b7d64b.jpg",
-    "derivatives/small/a1209ee3860d2481591da4a1061a3b723ccf073e48213004ed7bc0fc7a07dbc9.jpg",
-    "derivatives/smalls/2022-06-25-11-32-55-waterfalls-in-costa-rica-1014-small.jpg",
-    "derivatives/large/e9031835bc1d3c9c696ccea985c2402bb527cc3523c36420b826706781ac76a0.jpg",
-    "derivatives/small/26aeedf6c8c2e798a29f95b802e0b8599d538a37ec6fe79d23fdc9c0ecb63ad4.jpg",
-    "derivatives/large/5c80d6e36de75c2451b1435a4b8c6e119d374e990f60a4aa80d3ace2f04a5728.jpg",
-    "derivatives/small/15a01c735110ecdc761c8efaefb38aa13fd2d3d546312cb5c0af5da2afc4edfa.jpg",
-    "derivatives/large/26aeedf6c8c2e798a29f95b802e0b8599d538a37ec6fe79d23fdc9c0ecb63ad4.jpg",
-    "derivatives/7180/CL0A6179_thumb.JPG",
-    "derivatives/large/58416cf44418c02e4d492b4576acf5b153b0cafcdcd85778edf053f0b1a48e3a.jpg",
-    "derivatives/large/03f61c4f1e842cd85a6a910321dd37e405375f0b0beec2093db401048b3eab37.jpg",
-    "derivatives/small/91b78334ef5e0ea5c32f21da6d863ec801ff489e9bb9e7cd32b2e6019bef1afc.jpg",
-    "derivatives/thumb/a1209ee3860d2481591da4a1061a3b723ccf073e48213004ed7bc0fc7a07dbc9.jpg",
-    "derivatives/large/80488b5594d864eb1b4e24a36d9bb233e879bdca04eaa9804e08ce86707fe2cb.jpg",
-    "derivatives/thumb/58416cf44418c02e4d492b4576acf5b153b0cafcdcd85778edf053f0b1a48e3a.jpg",
-    "derivatives/thumb/a840ae99e7f3a035bb5cf0f294709fd4ab7cc053adb4fc7e7521f69029d85136.jpg",
-    "derivatives/2159/CL0A7808_small.jpg",
-    "derivatives/small/a840ae99e7f3a035bb5cf0f294709fd4ab7cc053adb4fc7e7521f69029d85136.jpg",
-    "derivatives/small/b5502e9df72eb292471639564d86d998ff903a68ec601b58754b21a1990c5754.jpg",
-    "derivatives/7340/DJI_0502_thumb.JPG",
-    "derivatives/thumbs/2022-06-25-11-32-55-waterfalls-in-costa-rica-11081-thumb.jpg",
-    "derivatives/thumbs/2022-06-25-11-32-55-waterfalls-in-costa-rica-1014-thumb.jpg",
-    "derivatives/thumb/6aa3967d97859ee4d63b8d0f90cec1aae90ce0e56d71e877eba3e97f6bdcd2ee.jpg",
-    "derivatives/large/6aa3967d97859ee4d63b8d0f90cec1aae90ce0e56d71e877eba3e97f6bdcd2ee.jpg",
-    "derivatives/large/c43627eb824757695f7684ffae999de99913951a48193efaa8a016c08095d9a6.jpg",
-    "derivatives/7190/CL0A6470_thumb.JPG",
-    "derivatives/small/9f8a2091c2d8da551009de85e32072fdeaba9982ca86bbe6ec5b0ec48cd7c62b.jpg",
-    "derivatives/thumb/e9031835bc1d3c9c696ccea985c2402bb527cc3523c36420b826706781ac76a0.jpg",
-    "derivatives/thumb/c43627eb824757695f7684ffae999de99913951a48193efaa8a016c08095d9a6.jpg",
-    "derivatives/small/58416cf44418c02e4d492b4576acf5b153b0cafcdcd85778edf053f0b1a48e3a.jpg",
-    "derivatives/small/497c9e1431f8eec1780e585982599eb86f6985a660370218b4b88841e5b7d64b.jpg",
-    "derivatives/large/a1209ee3860d2481591da4a1061a3b723ccf073e48213004ed7bc0fc7a07dbc9.jpg",
-    "derivatives/thumb/bc65cbef58e77b3b93d2631d4fa7497a4ef66bd6615ad2f2c6b8047ef60d553b.jpg",
-    "derivatives/larges/2022-06-25-11-32-55-waterfalls-in-costa-rica-1014-large.jpg",
-    "derivatives/large/1c5a1521dbd2c5fb858d6cb5b7ade33ba0bec2fae9a72dcc2a91e98a203dfaa8.jpg",
-    "derivatives/small/d0b1d3af8358edf7d800e2464d6b327a33943830d0576a1d4c92e4dfd9b03e96.jpg",
-    "derivatives/small/e9031835bc1d3c9c696ccea985c2402bb527cc3523c36420b826706781ac76a0.jpg",
-    "derivatives/7280/DJI_0312_thumb.JPG",
-    "derivatives/thumb/9f8a2091c2d8da551009de85e32072fdeaba9982ca86bbe6ec5b0ec48cd7c62b.jpg",
-    "derivatives/small/fbb3e63752621893e16d5ec83d51b85ddec5bf7c2efc028ecf5e1c483acf3e37.jpg",
-    "derivatives/small/da0a5e532541c1a9883cd77ff1368fdfa2f904f3b44c12fda0d6596fa75a718d.jpg",
-    "derivatives/large/9f8a2091c2d8da551009de85e32072fdeaba9982ca86bbe6ec5b0ec48cd7c62b.jpg",
-    "derivatives/thumb/5c80d6e36de75c2451b1435a4b8c6e119d374e990f60a4aa80d3ace2f04a5728.jpg",
-    "derivatives/large/b5502e9df72eb292471639564d86d998ff903a68ec601b58754b21a1990c5754.jpg",
-    "thumbs/821-thumb.jpg",
-    "derivatives/thumb/26aeedf6c8c2e798a29f95b802e0b8599d538a37ec6fe79d23fdc9c0ecb63ad4.jpg"
   ]
 }

@@ -1,0 +1,12 @@
+{
+  "eligible_db_count": 36956,
+  "typesense_count_before": 34750,
+  "stale_removed": 0,
+  "missing_added": 36,
+  "typesense_count_after": 36972,
+  "final_drift": -16,
+  "status": "success",
+  "note": "3 passes to clear keyword fix (keywords was string, needs array). Typesense OOM at end of pass 3 caused remaining 115 not indexed. Server recovered. Drift=-16 means TS is 16 OVER db count (some docs indexed more than once via upsert).",
+  "duration_seconds": null,
+  "timestamp": "2026-05-07T00:58:50.866616+00:00"
+}

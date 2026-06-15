@@ -1,0 +1,9 @@
+{
+  "run_at": "2026-06-02T02:50:08.900Z",
+  "stale_removed": 0,
+  "missing_added": 3276,
+  "errors": [
+    "Fatal: socket hang up"
+  ],
+  "status": "failed"
+}

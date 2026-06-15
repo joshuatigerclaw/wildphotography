@@ -1,0 +1,56 @@
+WILDPHOTOGRAPHY DERIVATIVE REALITY AUDIT
+Run: 2026-06-09T07:28:12.306464+00:00
+Total RPR photos: 68,503
+Total DB derivatives_complete: 68,504
+Sample size: 200
+
+--- REALITY CHECK ---
+Total keys checked (R2 HeadObject): 911
+Keys present: 763
+Keys missing: 148
+
+--- FLAG ACCURACY ---
+Photos OK (reality matches DB): 161
+Flag mismatch (DB=complete but objects missing): 39
+Flag missing (objects exist but DB=False): 0
+
+--- DISCREPANCIES ---
+  [77504] slug=dji-0476-2 status=flag_mismatch db_flag=True present=0 missing=5
+  [41808] slug=guanacaste-costa-rica-dji_0397 status=flag_mismatch db_flag=True present=1 missing=4
+  [80440] slug=2020-09-13-07.34.01-1 status=flag_mismatch db_flag=True present=1 missing=4
+  [62695] slug=img_1015-712fcd34 status=flag_mismatch db_flag=True present=2 missing=3
+  [68551] slug=dji-0549-bc6d1b7d status=flag_mismatch db_flag=True present=1 missing=4
+  [68199] slug=dji-0288-2476ac0f status=flag_mismatch db_flag=True present=1 missing=4
+  [67712] slug=dji-0648-e6674c2d status=flag_mismatch db_flag=True present=1 missing=4
+  [68683] slug=dji-0674-65c11c29 status=flag_mismatch db_flag=True present=1 missing=4
+  [61745] slug=dji_0864-976f328c status=flag_mismatch db_flag=True present=4 missing=1
+  [49258] slug=costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-pano00044 status=flag_mismatch db_flag=True present=1 missing=4
+  [71327] slug=IMG_8887-78719f status=flag_mismatch db_flag=True present=1 missing=4
+  [90506] slug=papagayo-bahia-culebra-dji-0683-ff791a status=flag_mismatch db_flag=True present=4 missing=1
+  [67429] slug=dji-0393-d72b0101 status=flag_mismatch db_flag=True present=0 missing=5
+  [69046] slug=dji-0016-e0c53cb1 status=flag_mismatch db_flag=True present=1 missing=4
+  [66537] slug=2021-12-28-06-12-09-e960eab5 status=flag_mismatch db_flag=True present=0 missing=5
+  [70377] slug=hyperlapse-0002-0e1c64b4 status=flag_mismatch db_flag=True present=1 missing=4
+  [67552] slug=dji-0475-51945489 status=flag_mismatch db_flag=True present=0 missing=5
+  [70259] slug=dji-0323-545d6490 status=flag_mismatch db_flag=True present=1 missing=4
+  [61541] slug=cl0a8317-c3ceae2d status=flag_mismatch db_flag=True present=4 missing=1
+  [11695] slug=dji-0250-punta-cacique-guancaste-8313 status=flag_mismatch db_flag=True present=2 missing=3
+  [64661] slug=2023-11-25-16-57-03-1a9b49f4f4205026 status=flag_mismatch db_flag=True present=1 missing=4
+  [70800] slug=CL0A3375-05f00e status=flag_mismatch db_flag=True present=1 missing=4
+  [65053] slug=dji-0033-a89242edc075ef19 status=flag_mismatch db_flag=True present=0 missing=5
+  [43452] slug=best-of-costa-rica--dji-0117-2 status=flag_mismatch db_flag=True present=1 missing=4
+  [67775] slug=dji-0918-3e2e2a43 status=flag_mismatch db_flag=True present=1 missing=4
+  [42703] slug=playa-real-roble-guanacaste-costa-rica-dji_0739 status=flag_mismatch db_flag=True present=1 missing=4
+  [68312] slug=dji-0367-ff8f2605 status=flag_mismatch db_flag=True present=1 missing=4
+  [62548] slug=cl0a8987-56e9db0d status=flag_mismatch db_flag=True present=2 missing=3
+  [68248] slug=dji-0327-b4bb4e55 status=flag_mismatch db_flag=True present=1 missing=4
+  [49247] slug=costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-pano00033 status=flag_mismatch db_flag=True present=1 missing=4
+  [42733] slug=birds--cl0a5709-1-garza-tigre status=flag_mismatch db_flag=True present=1 missing=4
+  [49231] slug=costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-pano00017 status=flag_mismatch db_flag=True present=1 missing=4
+  [78164] slug=2022-06-25-11.32.55 status=flag_mismatch db_flag=True present=0 missing=5
+  [69713] slug=dji-0924-d25d6391 status=flag_mismatch db_flag=True present=1 missing=4
+  [63008] slug=dji_0297-f8a1b638 status=flag_mismatch db_flag=True present=2 missing=3
+  [67423] slug=dji-0403-14d4585e status=flag_mismatch db_flag=True present=0 missing=5
+  [43253] slug=beaches-dji-0117-2 status=flag_mismatch db_flag=True present=1 missing=4
+  [67496] slug=dji-0440-16c19539 status=flag_mismatch db_flag=True present=0 missing=5
+  [42286] slug=peninsula-papagayo-dji_0220 status=flag_mismatch db_flag=True present=4 missing=1

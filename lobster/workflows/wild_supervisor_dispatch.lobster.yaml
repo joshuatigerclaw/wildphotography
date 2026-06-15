@@ -1,0 +1,93 @@
+name: wild_supervisor_dispatch
+description: >
+  WildPhotography Supervisor Dispatch — evaluates system health metrics and triggers
+  required workflows when thresholds are exceeded. Reads the latest dispatch heartbeat,
+  logs decisions, and returns a structured dispatch summary. This is the top-level
+  orchestrator that runs on a 5-minute cron schedule.
+
+inputs: {}
+
+steps:
+  - name: load_heartbeat
+    description: >
+      Read the latest dispatch heartbeat to get current system metrics without
+      hitting the database directly. The heartbeat is written by the no-LLM
+      dispatch script after every metrics snapshot.
+    tool: file_read
+    args:
+      path: runtime/dispatch_heartbeat.json
+      parse: json
+
+  - name: load_dispatch_log
+    description: >
+      Read the tail of the dispatch log to get context on recent runs.
+    tool: file_tail
+    args:
+      path: runtime/dispatch_log.txt
+      lines: 30
+
+  - name: evaluate_rules
+    description: >
+      Evaluate each Supervisor dispatch rule against the heartbeat metrics.
+      Returns a list of dispatch decisions with trigger/skip reason per workflow.
+    tool: agent_run
+    args:
+      agent: wild_supervisor_agent
+      prompt_file: null
+      context:
+        heartbeat: "{{ steps.load_heartbeat.data }}"
+        dispatch_log_tail: "{{ steps.load_dispatch_log.lines }}"
+      output_schema:
+        - workflow
+          metric
+          threshold
+          current_value
+          decision
+          reason
+          priority
+
+  - name: dispatch_triggered
+    description: >
+      For each workflow flagged as TRIGGER, fire the appropriate action.
+      Scripts are run directly; Lobster workflows are called by name.
+    tool: tool_dispatch
+    args:
+      items: "{{ steps.evaluate_rules.triggered }}"
+      on_failure: log_and_continue
+
+  - name: write_dispatch_entry
+    description: >
+      Append a dispatch summary entry to the dispatch log with timestamp,
+      metrics snapshot, and triggered/skipped list.
+    tool: file_append
+    args:
+      path: runtime/dispatch_log.txt
+      content: |
+        [{{ now() }}] SUPERVISOR DISPATCH RUN
+        Metrics: {{ steps.load_heartbeat.data.metrics | json }}
+        Triggered: {{ steps.evaluate_rules.triggered | map('workflow') }}
+        Skipped:   {{ steps.evaluate_rules.skipped | map('workflow') }}
+        === DONE ===
+
+  - name: summary
+    description: >
+      Emit a concise dispatch summary with all decisions, metrics, and next actions.
+    tool: result_emit
+    args:
+      fields:
+        ran_at: "{{ steps.load_heartbeat.data.ran_at }}"
+        total_photos: "{{ steps.load_heartbeat.data.metrics.total_photos }}"
+        derivatives_complete: "{{ steps.load_heartbeat.data.metrics.derivatives_complete }}"
+        ready_for_public_render: "{{ steps.load_heartbeat.data.metrics.ready_for_public_render }}"
+        search_ready: "{{ steps.load_heartbeat.data.metrics.search_ready }}"
+        repair_backlog: "{{ steps.load_heartbeat.data.metrics.repair_backlog }}"
+        validation_queue: "{{ steps.load_heartbeat.data.metrics.validation_queue }}"
+        true_orphans: "{{ steps.load_heartbeat.data.metrics.true_orphans }}"
+        galleries_missing_cover: "{{ steps.load_heartbeat.data.metrics.galleries_missing_cover }}"
+        stale_drift: "{{ steps.load_heartbeat.data.metrics.stale_drift }}"
+        autoscale_target_workers: "{{ steps.load_heartbeat.data.metrics.autoscale_target_workers }}"
+        workflows_triggered: "{{ steps.evaluate_rules.triggered | map('workflow') }}"
+        workflows_skipped: "{{ steps.evaluate_rules.skipped | map('workflow') }}"
+        dispatch_count: "{{ steps.evaluate_rules.triggered | length }}"
+        skip_count: "{{ steps.evaluate_rules.skipped | length }}"
+        system_status: "{{ steps.load_heartbeat.data.status }}"

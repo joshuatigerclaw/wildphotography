@@ -1,0 +1,390 @@
+{
+  "run_at": "2026-04-26T22:21:17.864379+00:00",
+  "total_search_ready_photos": 34530,
+  "sample_size": 300,
+  "total_url_checks": 600,
+  "summary": {
+    "photos_ok": 280,
+    "photos_broken": 20,
+    "photos_missing_field": 0,
+    "ok_rate_pct": 93.33
+  },
+  "by_url_type": {
+    "og_image_url": {
+      "total": 300,
+      "accessible": 280,
+      "broken": 20,
+      "empty": 0
+    },
+    "thumb_url": {
+      "total": 300,
+      "accessible": 299,
+      "broken": 1,
+      "empty": 0
+    }
+  },
+  "broken_photos": {
+    "27266": {
+      "slug": "photo-127-DJI-0963",
+      "title": "Montezuma Photography",
+      "gallery_slug": "costa-rica-gallery-montezuma-costa-rica",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "27184": {
+      "slug": "photo-127-DJI-0669-001",
+      "title": "Montezuma Photography",
+      "gallery_slug": "costa-rica-gallery-montezuma-costa-rica",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "37221": {
+      "slug": "2023-03-10-17-53-12-3a7502bd",
+      "title": "Overcast Morning at Jaco Beach, Costa Rica",
+      "gallery_slug": "jaco-beach",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "35498": {
+      "slug": "peninsula-de-osa-dji-0938-d0b8338c",
+      "title": "Peninsula de Osa Aerial View",
+      "gallery_slug": "peninsula-de-osa",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        },
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        }
+      ]
+    },
+    "27257": {
+      "slug": "photo-127-pano00002",
+      "title": "Costa rica gallery montezuma costa rica | Costa Rica Wildlife Photography by Joshua ten Brink",
+      "gallery_slug": "costa-rica-gallery-montezuma-costa-rica",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        },
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        }
+      ]
+    },
+    "35504": {
+      "slug": "playa-hermosa-guanacaste-20240817-174036-8acd4375",
+      "title": "Playa Hermosa, Costa Rica | Wildphotography",
+      "gallery_slug": "playa-hermosa-guanacaste",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "27256": {
+      "slug": "photo-127-pano00004",
+      "title": "Costa rica gallery montezuma costa rica | Costa Rica Wildlife Photography by Joshua ten Brink",
+      "gallery_slug": "costa-rica-gallery-montezuma-costa-rica",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "34774": {
+      "slug": "dji-0704-e3ba60ee",
+      "title": "Peninsula de Osa Aerial View",
+      "gallery_slug": "peninsula-de-osa",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "35105": {
+      "slug": "montezuma-costa-rica-dji-0470-64f9d791",
+      "title": "Montezuma Aerial View",
+      "gallery_slug": "montezuma-costa-rica",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        },
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        }
+      ]
+    },
+    "35061": {
+      "slug": "peninsula-papagayo-dji-0960-cb8e1ed8",
+      "title": "Peninsula Papagayo Aerial View",
+      "gallery_slug": "peninsula-papagayo",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        },
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        }
+      ]
+    },
+    "32730": {
+      "slug": "dji-0929-2cc0cf98",
+      "title": "Isla Tortuga Aerial View",
+      "gallery_slug": "isla-tortuga",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "7275": {
+      "slug": "cl0a1953-flowers-plants-trees-3893",
+      "title": "Flowers plants trees | Costa Rica Wildlife Photography by Joshua ten Brink",
+      "gallery_slug": "flowers-plants-trees",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "27075": {
+      "slug": "photo-125-DJI-0914",
+      "title": "Forested Coastal Headland Aerial, Peninsula Papagayo, Costa Rica",
+      "gallery_slug": "costa-rica-gallery-peninsula-papagayo",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "33803": {
+      "slug": "dji-0545-7b55f0cb",
+      "title": "Aerial Photography, Costa Rica (DJI 0545)",
+      "gallery_slug": "best-of-costa-rica",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "35184": {
+      "slug": "peninsula-papagayo-dji-0217-3941ed9e",
+      "title": "Peninsula Papagayo Aerial View",
+      "gallery_slug": "peninsula-papagayo",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "38285": {
+      "slug": "2019-03-31-06-30-13-49bfd4fa",
+      "title": "Title: Pink flower\nKeywords: flower; pink; blossom; spring; nature; cherry; tree; flowers; bloom; plant; branch; blooming; garden; white; flora; beauty; closeup; floral; petal; beautiful; blossoms; sakura; macro; natural; leaf",
+      "gallery_slug": "flora-fauna",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": false,
+          "error": "InvalidURL"
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "InvalidURL"
+        }
+      ]
+    },
+    "8857": {
+      "slug": "dji-0918-jaco-beach-5475",
+      "title": "Jaco beach | Costa Rica Wildlife Photography by Joshua ten Brink",
+      "gallery_slug": "jaco-beach",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        },
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        }
+      ]
+    },
+    "27245": {
+      "slug": "photo-127-DJI-0509",
+      "title": "Montezuma Photography",
+      "gallery_slug": "costa-rica-gallery-montezuma-costa-rica",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "35368": {
+      "slug": "costa-rica-gallery-rio-savagre-costa-rica-cl0a1056",
+      "title": "Rio Savegre Costa Rica Photo",
+      "gallery_slug": "rio-savagre-costa-rica",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "22875": {
+      "slug": "asia-china-2019-03-26-17-10-40-1",
+      "title": "China Flag",
+      "gallery_slug": "china",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    }
+  },
+  "empty_url_photos": {},
+  "status": "success"
+}

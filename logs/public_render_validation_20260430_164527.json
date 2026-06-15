@@ -1,0 +1,405 @@
+{
+  "run_at": "2026-04-30T22:45:27.421779+00:00",
+  "total_photos": 37955,
+  "render_ready_total": 37039,
+  "photos_with_issues": 229,
+  "all_clear": false,
+  "checks": {
+    "missing_thumb_url": {
+      "count": 0,
+      "sample": []
+    },
+    "missing_slug": {
+      "count": 0,
+      "sample": []
+    },
+    "missing_title": {
+      "count": 0,
+      "sample": []
+    },
+    "missing_gallery_slug": {
+      "count": 1271,
+      "sample": [
+        {
+          "id": 242,
+          "slug": "hermosa-beach-1",
+          "title": "Hermosa Beach Sunset",
+          "status": "archived"
+        },
+        {
+          "id": 14905,
+          "slug": "resplendent-quetzal",
+          "title": "Resplendent Quetzal \u2014 #14905 | WildPhotography",
+          "status": "archived"
+        },
+        {
+          "id": 41302,
+          "slug": "sunrise-sunset-2016-07-31-17-59-49",
+          "title": "Pacific Coast Sunrise, Guanacaste 2016",
+          "status": "published"
+        },
+        {
+          "id": 41303,
+          "slug": "sunrise-sunset-2017-07-15-18-57-45",
+          "title": "Tropical Sunset, Guanacaste 2017",
+          "status": "published"
+        },
+        {
+          "id": 41304,
+          "slug": "sunrise-sunset-2018-03-29-18-22-12",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41304 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41305,
+          "slug": "sunrise-sunset-2018-08-21-17-53-04",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41305 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41306,
+          "slug": "sunrise-sunset-2018-08-21-17-55-57",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41306 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41307,
+          "slug": "sunrise-sunset-2018-08-21-18-01-08",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41307 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41308,
+          "slug": "sunrise-sunset-2018-08-21-18-02-56",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41308 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41309,
+          "slug": "sunrise-sunset-2018-08-21-18-09-15",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41309 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41310,
+          "slug": "sunrise-sunset-2018-08-24-17-55-36",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41310 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41311,
+          "slug": "sunrise-sunset-2019-july-19-hyperlapse-0311",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41311 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41312,
+          "slug": "sunrise-sunset-2019-03-31-05-46-08",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41312 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41313,
+          "slug": "sunrise-sunset-2019-11-08-17-16-08",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41313 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41314,
+          "slug": "sunrise-sunset-2020-06-06-17-38-31",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41314 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41315,
+          "slug": "sunrise-sunset-2020-06-07-17-57-31",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41315 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41316,
+          "slug": "sunrise-sunset-2020-06-07-17-58-30",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41316 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41317,
+          "slug": "sunrise-sunset-2020-06-07-18-00-38",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41317 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41318,
+          "slug": "sunrise-sunset-2020-07-17-05-10-04",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41318 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41319,
+          "slug": "sunrise-sunset-2020-07-17-05-18-15",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41319 | WildPhotography",
+          "status": "published"
+        }
+      ]
+    },
+    "search_not_ready": {
+      "count": 0,
+      "sample": []
+    },
+    "derivatives_incomplete": {
+      "count": 0,
+      "sample": []
+    },
+    "missing_description": {
+      "count": 29,
+      "sample": [
+        {
+          "id": 44550,
+          "slug": "20250425-171959-molxgy5f",
+          "title": "20250425 171959",
+          "status": "active"
+        },
+        {
+          "id": 44551,
+          "slug": "20250425-172018-molxh1pg",
+          "title": "20250425 172018",
+          "status": "active"
+        },
+        {
+          "id": 44552,
+          "slug": "20250425-172110-molxh4vb",
+          "title": "20250425 172110",
+          "status": "active"
+        },
+        {
+          "id": 44553,
+          "slug": "20250425-172116-molxh8ai",
+          "title": "20250425 172116",
+          "status": "active"
+        },
+        {
+          "id": 44554,
+          "slug": "20250425-172158-molxhbo1",
+          "title": "20250425 172158",
+          "status": "active"
+        },
+        {
+          "id": 44555,
+          "slug": "20250425-172209-molxhezl",
+          "title": "20250425 172209",
+          "status": "active"
+        },
+        {
+          "id": 44556,
+          "slug": "20250425-172849-molxhij8",
+          "title": "20250425 172849",
+          "status": "active"
+        },
+        {
+          "id": 44557,
+          "slug": "20250425-172851-molxhnrq",
+          "title": "20250425 172851",
+          "status": "active"
+        },
+        {
+          "id": 44558,
+          "slug": "20250425-172920-molxhrv0",
+          "title": "20250425 172920",
+          "status": "active"
+        },
+        {
+          "id": 44559,
+          "slug": "20250425-172930-molxhw0i",
+          "title": "20250425 172930",
+          "status": "active"
+        },
+        {
+          "id": 44560,
+          "slug": "20250425-172943-molxi08k",
+          "title": "20250425 172943",
+          "status": "active"
+        },
+        {
+          "id": 44561,
+          "slug": "20250425-172945-molxi410",
+          "title": "20250425 172945",
+          "status": "active"
+        },
+        {
+          "id": 44562,
+          "slug": "20250425-173255-molxi848",
+          "title": "20250425 173255",
+          "status": "active"
+        },
+        {
+          "id": 44563,
+          "slug": "20250425-173413-molxibrs",
+          "title": "20250425 173413",
+          "status": "active"
+        },
+        {
+          "id": 44564,
+          "slug": "20250426-103159-0--molxifri",
+          "title": "20250426 103159(0)",
+          "status": "active"
+        },
+        {
+          "id": 44565,
+          "slug": "dji-0256-molxik3k",
+          "title": "DJI 0256",
+          "status": "active"
+        },
+        {
+          "id": 44566,
+          "slug": "dji-0275-molxiued",
+          "title": "DJI 0275",
+          "status": "active"
+        },
+        {
+          "id": 44567,
+          "slug": "dji-0279-molxiy99",
+          "title": "DJI 0279",
+          "status": "active"
+        },
+        {
+          "id": 44568,
+          "slug": "dji-0280-molxj3ar",
+          "title": "DJI 0280",
+          "status": "active"
+        },
+        {
+          "id": 44569,
+          "slug": "dji-0281-molxjdc6",
+          "title": "DJI 0281",
+          "status": "active"
+        }
+      ]
+    },
+    "missing_keywords": {
+      "count": 29,
+      "sample": [
+        {
+          "id": 44550,
+          "slug": "20250425-171959-molxgy5f",
+          "title": "20250425 171959",
+          "status": "active"
+        },
+        {
+          "id": 44551,
+          "slug": "20250425-172018-molxh1pg",
+          "title": "20250425 172018",
+          "status": "active"
+        },
+        {
+          "id": 44552,
+          "slug": "20250425-172110-molxh4vb",
+          "title": "20250425 172110",
+          "status": "active"
+        },
+        {
+          "id": 44553,
+          "slug": "20250425-172116-molxh8ai",
+          "title": "20250425 172116",
+          "status": "active"
+        },
+        {
+          "id": 44554,
+          "slug": "20250425-172158-molxhbo1",
+          "title": "20250425 172158",
+          "status": "active"
+        },
+        {
+          "id": 44555,
+          "slug": "20250425-172209-molxhezl",
+          "title": "20250425 172209",
+          "status": "active"
+        },
+        {
+          "id": 44556,
+          "slug": "20250425-172849-molxhij8",
+          "title": "20250425 172849",
+          "status": "active"
+        },
+        {
+          "id": 44557,
+          "slug": "20250425-172851-molxhnrq",
+          "title": "20250425 172851",
+          "status": "active"
+        },
+        {
+          "id": 44558,
+          "slug": "20250425-172920-molxhrv0",
+          "title": "20250425 172920",
+          "status": "active"
+        },
+        {
+          "id": 44559,
+          "slug": "20250425-172930-molxhw0i",
+          "title": "20250425 172930",
+          "status": "active"
+        },
+        {
+          "id": 44560,
+          "slug": "20250425-172943-molxi08k",
+          "title": "20250425 172943",
+          "status": "active"
+        },
+        {
+          "id": 44561,
+          "slug": "20250425-172945-molxi410",
+          "title": "20250425 172945",
+          "status": "active"
+        },
+        {
+          "id": 44562,
+          "slug": "20250425-173255-molxi848",
+          "title": "20250425 173255",
+          "status": "active"
+        },
+        {
+          "id": 44563,
+          "slug": "20250425-173413-molxibrs",
+          "title": "20250425 173413",
+          "status": "active"
+        },
+        {
+          "id": 44564,
+          "slug": "20250426-103159-0--molxifri",
+          "title": "20250426 103159(0)",
+          "status": "active"
+        },
+        {
+          "id": 44565,
+          "slug": "dji-0256-molxik3k",
+          "title": "DJI 0256",
+          "status": "active"
+        },
+        {
+          "id": 44566,
+          "slug": "dji-0275-molxiued",
+          "title": "DJI 0275",
+          "status": "active"
+        },
+        {
+          "id": 44567,
+          "slug": "dji-0279-molxiy99",
+          "title": "DJI 0279",
+          "status": "active"
+        },
+        {
+          "id": 44568,
+          "slug": "dji-0280-molxj3ar",
+          "title": "DJI 0280",
+          "status": "active"
+        },
+        {
+          "id": 44569,
+          "slug": "dji-0281-molxjdc6",
+          "title": "DJI 0281",
+          "status": "active"
+        }
+      ]
+    }
+  },
+  "status": "success"
+}

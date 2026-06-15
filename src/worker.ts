@@ -23,6 +23,9 @@ import { handleSmugMugMetadataCrawl } from './routes/stage1-metadata';
 import { handleSmugMugDownload } from './routes/stage2-download';
 import { handleDerivativeGeneration } from './routes/stage3-derivative';
 import { handleTypesenseIndex } from './routes/stage4-typesense';
+import { handleHealth } from './routes/health';
+import { handleDailyRandomFeed } from './routes/feed-daily-random';
+import { handleAllFeed } from './routes/feed-all';
 
 // Repair mode
 import { handleRepairMode } from './routes/repair';
@@ -44,6 +47,8 @@ import { renderGYGRedirect } from './pages/affiliate-gyg';
 import { renderViatorRedirect } from './pages/affiliate-viator';
 import { renderTripadvisorRedirect } from './pages/affiliate-tripadvisor';
 import { render404, render403 } from './pages/errors';
+import { renderApiAccess } from './pages/api-access';
+import { renderAccountApi } from './pages/account-api';
 import { handleDailyRandomFeed } from './routes/feed-daily-random';
 import { handleAllFeed } from './routes/feed-all';
 
@@ -66,7 +71,90 @@ export default {
         return handleHealth();
       }
 
+      // === MEMBER API v1 (authenticated) ===
+      if (path === 'api/v1/search') {
+        try {
+          const { handleApiSearch } = await import('./routes/api-v1');
+          return await handleApiSearch(request);
+        } catch(e: any) {
+          console.error('[search] error:', e.message, e.stack?.split('\n')[0]);
+          return Response.json({ error: 'api_error', message: e.message }, { status: 500 });
+        }
+      }
+      if (path === 'api/v1/plans') {
+        try {
+          const { handleApiPlans } = await import('./routes/api-v1');
+          return await handleApiPlans(request);
+        } catch(e: any) {
+          console.error('[plans] error:', e.message, e.stack);
+          return Response.json({ error: 'api_error', message: e.message }, { status: 500 });
+        }
+      }
+      if (path === 'api/v1/waitlist') {
+        const { handleApiWaitlist, handleApiWaitlistForm } = await import('./routes/api-v1');
+        if (request.method === 'GET') return handleApiWaitlistForm(request);
+        return handleApiWaitlist(request);
+      }
+      if (path === 'api/v1/usage') {
+        const { handleApiUsage } = await import('./routes/api-v1');
+        return handleApiUsage(request);
+      }
+      if (path.startsWith('api/v1/photos/')) {
+        const slug = path.replace('api/v1/photos/', '');
+        const { handleApiPhoto } = await import('./routes/api-v1');
+        return handleApiPhoto(request, slug);
+      }
+      if (path.startsWith('api/v1/galleries/')) {
+        const slug = path.replace('api/v1/galleries/', '');
+        const { handleApiGallery } = await import('./routes/api-v1');
+        return handleApiGallery(request, slug);
+      }
+      if (path.startsWith('api/v1/species/')) {
+        const slug = path.replace('api/v1/species/', '');
+        const { handleApiSpecies } = await import('./routes/api-v1');
+        return handleApiSpecies(request, slug);
+      }
+      if (path.startsWith('api/v1/locations/')) {
+        const slug = path.replace('api/v1/locations/', '');
+        const { handleApiLocation } = await import('./routes/api-v1');
+        return handleApiLocation(request, slug);
+      }
+      if (path === 'api/v1/nearby') {
+        const { handleApiNearby } = await import('./routes/api-v1');
+        return handleApiNearby(request);
+      }
+      if (path === 'api/v1/random') {
+        const { handleApiRandom } = await import('./routes/api-v1');
+        return handleApiRandom(request);
+      }
+
       // Debug: check Neon token
+
+      // Account key management
+      if (path === 'api/v1/account/key') {
+        const { handleAccountKeyCreate } = await import('./routes/api-v1');
+        return handleAccountKeyCreate(request);
+      }
+      if (path.startsWith('api/v1/account/key/')) {
+        const keyId = parseInt(path.replace('api/v1/account/key/', ''), 10);
+        const { handleAccountKeyRevoke } = await import('./routes/api-v1');
+        return handleAccountKeyRevoke(request, keyId);
+      }
+      // Account usage & key management (v1)
+      if (path === 'api/v1/account/usage') {
+        const { handleAccountUsage } = await import('./routes/api-v1');
+        return handleAccountUsage(request);
+      }
+      if (path === 'api/v1/account/keys') {
+        const { handleAccountKeysCreate, handleAccountKeysList } = await import('./routes/api-v1');
+        if (request.method === 'POST') return handleAccountKeysCreate(request);
+        return handleAccountKeysList(request);
+      }
+      if (path.startsWith('api/v1/account/keys/')) {
+        const keyId = parseInt(path.replace('api/v1/account/keys/', ''), 10);
+        const { handleAccountKeysRevoke } = await import('./routes/api-v1');
+        return handleAccountKeysRevoke(request, keyId);
+      }
       if (path === 'api/v1/debug') {
         const token = (env as any).NEON_TOKEN;
         return Response.json({ 
@@ -487,7 +575,26 @@ export default {
         return render403();
       }
 
-      // Page routes
+      // GET /api-access (public landing page)
+      if (path === 'api-access') {
+        return renderApiAccess(env);
+      }
+      
+      // GET /account/api (dashboard — simplified auth via ?email= param for now)
+      if (path === 'account/api') {
+        try {
+          const email = url.searchParams.get('email');
+          if (!email) {
+            return new Response(null, { status: 302, headers: { Location: '/api-access' } });
+          }
+          return await renderAccountApi(email, env);
+        } catch(e: any) {
+          console.error('[/account/api] error:', e.message);
+          return Response.json({ error: 'server_error', message: e.message }, { status: 500 });
+        }
+      }
+      
+      // === PAGE ROUTES ===
       const routes: Record<string, (env: Env, url: URL) => Promise<Response>> = {
         '': renderHome,
         'index': renderHome,
@@ -506,7 +613,7 @@ export default {
             if (body) {
               const text = await body.text();
               const response = new Response(text, { headers: { 'Content-Type': 'application/xml' } });
-              response.headers.set('Cache-Control', 'public, max-age=3600, s-maxage=86400');
+              response.headers.set('Cache-Control', 'public, max-age=21600, s-maxage=86400, stale-while-revalidate=3600');
               response.headers.set('X-Sitemap-Source', 'r2');
               return response;
             }
@@ -520,7 +627,7 @@ export default {
         xml += '  <sitemap><loc>https://wildphotography.com/sitemaps/photos.xml</loc></sitemap>\n';
         xml += '</sitemapindex>';
         const response = new Response(xml, { headers: { 'Content-Type': 'application/xml' } });
-        response.headers.set('Cache-Control', 'public, max-age=3600, s-maxage=86400');
+        response.headers.set('Cache-Control', 'public, max-age=21600, s-maxage=86400, stale-while-revalidate=3600');
         return response;
       }
 

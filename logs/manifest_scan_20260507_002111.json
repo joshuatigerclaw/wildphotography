@@ -1,0 +1,77 @@
+{
+  "run_at": "2026-05-07T06:21:11.711770+00:00",
+  "summary": {
+    "total_runs": 22,
+    "successful": 0,
+    "failed": 0,
+    "other": 22,
+    "total_imported": 835,
+    "total_failed_rows": 0,
+    "earliest_run": "2026-03-21T18:21:54.248382+00:00",
+    "latest_run": "2026-05-01T08:23:08.779052+00:00"
+  },
+  "activity": {
+    "last_24h": 0,
+    "last_7d": 4
+  },
+  "recent_runs": [
+    {
+      "id": 23,
+      "batch_id": "may2026_batch_cont_1777623689407",
+      "source_folder": "[\"Food--\",\"Escazu-Costa-Rica\",\"Conchal-Guanacaste\",\"Puntarenas-Costa-Rica\",\"Waterfalls-in-Costa-Rica\"]",
+      "status": "complete",
+      "imported_new": 61,
+      "rows_failed": 0,
+      "started_at": "2026-05-01T08:23:08.779052+00:00",
+      "completed_at": "2026-05-01T08:23:08.779052+00:00",
+      "error_message": null
+    },
+    {
+      "id": 22,
+      "batch_id": "may2026_cont_1777622891813",
+      "source_folder": "[\"Flora-Fauna\",\"Industrial-Costa-Rica\",\"Costa-Rica-Buildings\"]",
+      "status": "complete",
+      "imported_new": 35,
+      "rows_failed": 0,
+      "started_at": "2026-05-01T08:08:59.020413+00:00",
+      "completed_at": "2026-05-01T08:08:59.020413+00:00",
+      "error_message": null
+    },
+    {
+      "id": 20,
+      "batch_id": "may2026_batch1_cron",
+      "source_folder": "[\"Costa-Rica-Gallery/Nauyaca-Waterfalls\",\"New-Uploads\",\"Costa-Rica-Gallery/Guanacaste-Costa-Rica-Travel-and-Tourism\",\"Costa-Rica-Gallery/Punta-Cacique-Guancaste\"]",
+      "status": "complete",
+      "imported_new": 22,
+      "rows_failed": 0,
+      "started_at": "2026-04-30T20:23:37.561469+00:00",
+      "completed_at": "2026-04-30T20:23:37.561469+00:00",
+      "error_message": null
+    },
+    {
+      "id": 21,
+      "batch_id": "may2026_batch2_cron",
+      "source_folder": "[\"Costa-Rica-Gallery/Flamingo-Beach\",\"Costa-Rica-Gallery/Arenal-Volcano\",\"Costa-Rica-Gallery/Jaco-Beach\",\"Costa-Rica-Gallery/Playa-Hermosa-Guanacaste\"]",
+      "status": "complete",
+      "imported_new": 100,
+      "rows_failed": 0,
+      "started_at": "2026-04-30T20:23:37.561469+00:00",
+      "completed_at": "2026-04-30T20:23:37.561469+00:00",
+      "error_message": null
+    },
+    {
+      "id": 18,
+      "batch_id": "may2026_batch5_cron",
+      "source_folder": "[\"San-Jose-Costa-Rica\",\"Escazu-Costa-Rica\",\"Peninsula-de-Nicoya\",\"People-Watching\",\"San-Rafael-de-Alajuela\"]",
+      "status": "complete",
+      "imported_new": 229,
+      "rows_failed": 0,
+      "started_at": "2026-04-30T02:43:04+00:00",
+      "completed_at": "2026-04-30T02:44:01+00:00",
+      "error_message": null
+    }
+  ],
+  "failed_runs": [],
+  "status": "success",
+  "health": "ok"
+}

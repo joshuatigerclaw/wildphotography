@@ -1,0 +1,190 @@
+=== WildPhotography Typesense Reconciliation ===
+
+[1/4] Fetching Typesense slugs...
+  Typesense has 27,808 slugs indexed
+
+[2/4] Counting Neon search-ready records...
+  Neon has 37,281 search-ready records
+
+[3/4] Finding missing slugs...
+  Checked 1,000 / 37,281 — missing so far: 368
+  Checked 2,000 / 37,281 — missing so far: 686
+  Checked 3,000 / 37,281 — missing so far: 1,083
+  Checked 4,000 / 37,281 — missing so far: 1,171
+  Checked 5,000 / 37,281 — missing so far: 1,416
+  Checked 6,000 / 37,281 — missing so far: 1,721
+  Checked 7,000 / 37,281 — missing so far: 2,252
+  Checked 8,000 / 37,281 — missing so far: 2,645
+  Checked 9,000 / 37,281 — missing so far: 2,948
+  Checked 10,000 / 37,281 — missing so far: 3,271
+  Checked 11,000 / 37,281 — missing so far: 3,468
+  Checked 12,000 / 37,281 — missing so far: 3,540
+  Checked 13,000 / 37,281 — missing so far: 3,743
+  Checked 14,000 / 37,281 — missing so far: 3,899
+  Checked 15,000 / 37,281 — missing so far: 4,021
+  Checked 16,000 / 37,281 — missing so far: 4,326
+  Checked 17,000 / 37,281 — missing so far: 4,385
+  Checked 18,000 / 37,281 — missing so far: 4,621
+  Checked 19,000 / 37,281 — missing so far: 4,621
+  Checked 20,000 / 37,281 — missing so far: 4,820
+  Checked 21,000 / 37,281 — missing so far: 4,960
+  Checked 22,000 / 37,281 — missing so far: 5,071
+  Checked 23,000 / 37,281 — missing so far: 5,141
+  Checked 24,000 / 37,281 — missing so far: 5,302
+  Checked 25,000 / 37,281 — missing so far: 5,614
+  Checked 26,000 / 37,281 — missing so far: 5,619
+  Checked 27,000 / 37,281 — missing so far: 5,863
+  Checked 28,000 / 37,281 — missing so far: 5,892
+  Checked 29,000 / 37,281 — missing so far: 6,115
+  Checked 30,000 / 37,281 — missing so far: 6,171
+  Checked 31,000 / 37,281 — missing so far: 6,205
+  Checked 32,000 / 37,281 — missing so far: 6,274
+  Checked 33,000 / 37,281 — missing so far: 6,484
+  Checked 34,000 / 37,281 — missing so far: 6,484
+  Checked 35,000 / 37,281 — missing so far: 6,492
+  Checked 36,000 / 37,281 — missing so far: 6,492
+  Checked 37,000 / 37,281 — missing so far: 6,492
+  Checked 37,281 / 37,281 — missing so far: 6,492
+
+  MISSING from Typesense: 6,492 records
+
+[4/4] Indexing 6,492 missing records...
+  Batch 1: indexed 50 (50/6,492)
+  Batch 2: indexed 50 (100/6,492)
+  Batch 3: indexed 50 (150/6,492)
+  Batch 4: indexed 50 (200/6,492)
+  Batch 5: indexed 50 (250/6,492)
+  Batch 6: indexed 50 (300/6,492)
+  Batch 7: indexed 50 (350/6,492)
+  Batch 8: indexed 50 (400/6,492)
+  Batch 9: indexed 50 (450/6,492)
+  Batch 10: indexed 50 (500/6,492)
+  Batch 11: indexed 50 (550/6,492)
+  Batch 12: indexed 50 (600/6,492)
+  Batch 13: indexed 50 (650/6,492)
+  Batch 14: indexed 50 (700/6,492)
+  Batch 15: indexed 50 (750/6,492)
+  Batch 16: indexed 50 (800/6,492)
+  Batch 17: indexed 50 (850/6,492)
+  Batch 18: indexed 50 (900/6,492)
+  Batch 19: indexed 50 (950/6,492)
+  Batch 20: indexed 50 (1,000/6,492)
+  Batch 21: indexed 50 (1,050/6,492)
+  Batch 22: indexed 50 (1,100/6,492)
+  Batch 23: indexed 50 (1,150/6,492)
+  Batch 24: indexed 50 (1,200/6,492)
+  Batch 25: indexed 50 (1,250/6,492)
+  Batch 26: indexed 50 (1,300/6,492)
+  Batch 27: indexed 50 (1,350/6,492)
+  Batch 28: indexed 50 (1,400/6,492)
+  Batch 29: indexed 50 (1,450/6,492)
+  Batch 30: indexed 50 (1,500/6,492)
+  Batch 31: indexed 50 (1,550/6,492)
+  Batch 32: indexed 50 (1,600/6,492)
+  Batch 33: indexed 50 (1,650/6,492)
+  Batch 34: indexed 50 (1,700/6,492)
+  Batch 35: indexed 50 (1,750/6,492)
+  Batch 36: indexed 50 (1,800/6,492)
+  Batch 37: indexed 50 (1,850/6,492)
+  Batch 38: indexed 50 (1,900/6,492)
+  Import error: HTTP Error 422: Unprocessable Entity
+  Batch 39: FAILED — retrying once...
+  Import error: HTTP Error 422: Unprocessable Entity
+  Retry FAILED
+  Import error: HTTP Error 422: Unprocessable Entity
+  Batch 40: FAILED — retrying once...
+  Retry ok: +50
+  Batch 41: indexed 50 (2,000/6,492)
+  Batch 42: indexed 50 (2,050/6,492)
+  Batch 43: indexed 50 (2,100/6,492)
+  Batch 44: indexed 50 (2,150/6,492)
+  Batch 45: indexed 50 (2,200/6,492)
+  Batch 46: indexed 50 (2,250/6,492)
+  Batch 47: indexed 50 (2,300/6,492)
+  Batch 48: indexed 50 (2,350/6,492)
+  Batch 49: indexed 50 (2,400/6,492)
+  Batch 50: indexed 50 (2,450/6,492)
+  Batch 51: indexed 50 (2,500/6,492)
+  Batch 52: indexed 50 (2,550/6,492)
+  Batch 53: indexed 50 (2,600/6,492)
+  Batch 54: indexed 50 (2,650/6,492)
+  Batch 55: indexed 50 (2,700/6,492)
+  Batch 56: indexed 50 (2,750/6,492)
+  Batch 57: indexed 50 (2,800/6,492)
+  Batch 58: indexed 50 (2,850/6,492)
+  Batch 59: indexed 50 (2,900/6,492)
+  Batch 60: indexed 50 (2,950/6,492)
+  Batch 61: indexed 50 (3,000/6,492)
+  Batch 62: indexed 50 (3,050/6,492)
+  Batch 63: indexed 50 (3,100/6,492)
+  Batch 64: indexed 50 (3,150/6,492)
+  Batch 65: indexed 50 (3,200/6,492)
+  Batch 66: indexed 50 (3,250/6,492)
+  Batch 67: indexed 50 (3,300/6,492)
+  Batch 68: indexed 50 (3,350/6,492)
+  Batch 69: indexed 50 (3,400/6,492)
+  Batch 70: indexed 50 (3,450/6,492)
+  Batch 71: indexed 50 (3,500/6,492)
+  Batch 72: indexed 50 (3,550/6,492)
+  Batch 73: indexed 50 (3,600/6,492)
+  Batch 74: indexed 50 (3,650/6,492)
+  Batch 75: indexed 50 (3,700/6,492)
+  Batch 76: indexed 50 (3,750/6,492)
+  Batch 77: indexed 50 (3,800/6,492)
+  Batch 78: indexed 50 (3,850/6,492)
+  Batch 79: indexed 50 (3,900/6,492)
+  Batch 80: indexed 50 (3,950/6,492)
+  Batch 81: indexed 50 (4,000/6,492)
+  Batch 82: indexed 50 (4,050/6,492)
+  Batch 83: indexed 50 (4,100/6,492)
+  Batch 84: indexed 50 (4,150/6,492)
+  Batch 85: indexed 50 (4,200/6,492)
+  Batch 86: indexed 50 (4,250/6,492)
+  Batch 87: indexed 50 (4,300/6,492)
+  Batch 88: indexed 50 (4,350/6,492)
+  Batch 89: indexed 50 (4,400/6,492)
+  Batch 90: indexed 50 (4,450/6,492)
+  Batch 91: indexed 50 (4,500/6,492)
+  Batch 92: indexed 50 (4,550/6,492)
+  Batch 93: indexed 50 (4,600/6,492)
+  Batch 94: indexed 50 (4,650/6,492)
+  Batch 95: indexed 50 (4,700/6,492)
+  Batch 96: indexed 50 (4,750/6,492)
+  Batch 97: indexed 50 (4,800/6,492)
+  Batch 98: indexed 50 (4,850/6,492)
+  Batch 99: indexed 50 (4,900/6,492)
+  Batch 100: indexed 50 (4,950/6,492)
+  Batch 101: indexed 50 (5,000/6,492)
+  Batch 102: indexed 50 (5,050/6,492)
+  Batch 103: indexed 50 (5,100/6,492)
+  Batch 104: indexed 50 (5,150/6,492)
+  Batch 105: indexed 50 (5,200/6,492)
+  Batch 106: indexed 50 (5,250/6,492)
+  Batch 107: indexed 50 (5,300/6,492)
+  Batch 108: indexed 50 (5,350/6,492)
+  Batch 109: indexed 50 (5,400/6,492)
+  Batch 110: indexed 50 (5,450/6,492)
+  Batch 111: indexed 50 (5,500/6,492)
+  Batch 112: indexed 50 (5,550/6,492)
+  Batch 113: indexed 50 (5,600/6,492)
+  Batch 114: indexed 50 (5,650/6,492)
+  Batch 115: indexed 50 (5,700/6,492)
+  Batch 116: indexed 50 (5,750/6,492)
+  Batch 117: indexed 50 (5,800/6,492)
+  Batch 118: indexed 50 (5,850/6,492)
+  Batch 119: indexed 50 (5,900/6,492)
+  Batch 120: indexed 50 (5,950/6,492)
+  Batch 121: indexed 50 (6,000/6,492)
+  Batch 122: indexed 50 (6,050/6,492)
+  Batch 123: indexed 50 (6,100/6,492)
+  Batch 124: indexed 50 (6,150/6,492)
+  Batch 125: indexed 50 (6,200/6,492)
+  Batch 126: indexed 50 (6,250/6,492)
+  Batch 127: indexed 50 (6,300/6,492)
+  Batch 128: indexed 50 (6,350/6,492)
+  Batch 129: indexed 50 (6,400/6,492)
+  Batch 130: indexed 42 (6,442/6,492)
+
+=== DONE ===
+  Total indexed: 6,442
+  Typesense now at: ~34,250 documents

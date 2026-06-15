@@ -1,0 +1,55 @@
+[ts_repair_dispatch] 2026-06-03 10:17 CST — WildPhotography Typesense Repair Agent started
+[ts_repair] PID 53286 (ts_reconcile_v6.py) killed
+[ts_repair] Typesense health: {"ok":true,"resource_error":"OUT_OF_MEMORY"} — server is overloaded
+[ts_repair] Log analysis: 271 missing docs identified, 22 attempted before OOM crash
+[ts_repair] Missing IDs from log (22 attempted): 6678, 78250-78271
+[ts_repair] TS photos collection: 55841 docs | TS wildphoto_photos collection: 61735 docs | Neon eligible: 64093
+[ts_repair] Strategy: Wait 60s, then attempt individual upserts with 5s delay[ts_repair] 2026-06-03 10:18:39 — === Starting Typesense OOM Repair ===
+[ts_repair] 2026-06-03 10:18:39 — Step 1: Waiting for Typesense OOM recovery...
+[ts_repair] 2026-06-03 10:18:39 — TS health check 1: {'ok': True, 'resource_error': 'OUT_OF_MEMORY'}
+[ts_repair] 2026-06-03 10:18:49 — TS health check 2: {'ok': True, 'resource_error': 'OUT_OF_MEMORY'}
+[ts_repair] 2026-06-03 10:19:00 — TS health check 3: {'ok': True, 'resource_error': 'OUT_OF_MEMORY'}
+[ts_repair] 2026-06-03 10:19:10 — TS health check 4: {'ok': True, 'resource_error': 'OUT_OF_MEMORY'}
+[ts_repair] 2026-06-03 10:19:20 — TS health check 5: {'ok': True, 'resource_error': 'OUT_OF_MEMORY'}
+[ts_repair] 2026-06-03 10:19:30 — TS health check 6: {'ok': True, 'resource_error': 'OUT_OF_MEMORY'}
+[ts_repair] 2026-06-03 10:19:41 — TS health check 7: {'ok': True, 'resource_error': 'OUT_OF_MEMORY'}
+[ts_repair] 2026-06-03 10:19:51 — TS health check 8: {'ok': True, 'resource_error': 'OUT_OF_MEMORY'}
+[ts_repair] 2026-06-03 10:20:02 — TS health check 9: {'ok': True, 'resource_error': 'OUT_OF_MEMORY'}
+[ts_repair] 2026-06-03 10:20:12 — TS health check 10: {'ok': True, 'resource_error': 'OUT_OF_MEMORY'}
+[ts_repair] 2026-06-03 10:20:22 — TS health check 11: {'ok': True, 'resource_error': 'OUT_OF_MEMORY'}
+[ts_repair] 2026-06-03 10:20:32 — TS health check 12: {'ok': True, 'resource_error': 'OUT_OF_MEMORY'}
+[ts_repair] 2026-06-03 10:20:42 — Typesense still showing OUT_OF_MEMORY after 2 minutes
+[ts_repair] 2026-06-03 10:20:42 — WARNING: Typesense still OOM, proceeding anyway with caution
+[ts_repair] 2026-06-03 10:20:52 — Exporting Typesense photo IDs...
+[ts_repair] 2026-06-03 10:20:53 — Export failed at offset 0: 404 { "message": "Not Found"}
+[ts_repair] 2026-06-03 10:20:53 — Typesense has 0 photo document IDs
+[ts_repair] 2026-06-03 10:20:53 — Querying Neon for missing photos...
+[ts_repair] 2026-06-03 10:22:31 — === Starting Typesense OOM Repair v2 ===
+[ts_repair] 2026-06-03 10:22:31 — Waiting for Typesense OOM recovery...
+[ts_repair] 2026-06-03 10:22:31 —   Still OOM... 10s elapsed, health={'ok': True, 'resource_error': 'OUT_OF_MEMORY'}
+[ts_repair] 2026-06-03 10:23:33 —   Still OOM... 70s elapsed, health={'ok': True, 'resource_error': 'OUT_OF_MEMORY'}
+[ts_repair] 2026-06-03 10:24:35 —   Still OOM... 130s elapsed, health={'ok': True, 'resource_error': 'OUT_OF_MEMORY'}
+[ts_repair] 2026-06-03 10:25:37 —   Still OOM... 190s elapsed, health={'ok': True, 'resource_error': 'OUT_OF_MEMORY'}
+[ts_repair] 2026-06-03 10:26:57 — === Starting Typesense OOM Repair v3 ===
+[ts_repair] 2026-06-03 10:26:57 — Waiting up to 900s for Typesense OOM recovery...
+[ts_repair] 2026-06-03 10:26:57 —   Still OOM... 15s elapsed, health={'ok': True, 'resource_error': 'OUT_OF_MEMORY'}
+[ts_repair] 2026-06-03 10:27:59 —   Still OOM... 75s elapsed, health={'ok': True, 'resource_error': 'OUT_OF_MEMORY'}
+[ts_repair] 2026-06-03 10:29:00 —   Still OOM... 135s elapsed, health={'ok': True, 'resource_error': 'OUT_OF_MEMORY'}
+[ts_repair] 2026-06-03 10:30:01 —   Still OOM... 195s elapsed, health={'ok': True, 'resource_error': 'OUT_OF_MEMORY'}
+[ts_repair] 2026-06-03 10:31:03 —   Still OOM... 255s elapsed, health={'ok': True, 'resource_error': 'OUT_OF_MEMORY'}
+[ts_repair] 2026-06-03 10:32:04 —   Still OOM... 315s elapsed, health={'ok': True, 'resource_error': 'OUT_OF_MEMORY'}
+[ts_repair] 2026-06-03 10:33:05 —   Still OOM... 375s elapsed, health={'ok': True, 'resource_error': 'OUT_OF_MEMORY'}
+[ts_repair] 2026-06-03 10:34:07 —   Still OOM... 435s elapsed, health={'ok': True, 'resource_error': 'OUT_OF_MEMORY'}
+[ts_repair] 2026-06-03 10:35:08 —   Still OOM... 495s elapsed, health={'ok': True, 'resource_error': 'OUT_OF_MEMORY'}
+[ts_repair] 2026-06-03 10:36:09 —   Still OOM... 555s elapsed, health={'ok': True, 'resource_error': 'OUT_OF_MEMORY'}
+[ts_repair] 2026-06-03 10:37:11 —   Still OOM... 615s elapsed, health={'ok': True, 'resource_error': 'OUT_OF_MEMORY'}
+[ts_recovery] 2026-06-03 10:41:01 — === Starting TS OOM Recovery Dispatcher ===
+[ts_recovery] 2026-06-03 10:41:01 — Monitoring TS health until memory recovers...
+[ts_recovery] 2026-06-03 10:41:01 —   Check 30s: {'ok': True, 'resource_error': 'OUT_OF_MEMORY'}
+[ts_recovery] 2026-06-03 10:41:31 —   Check 60s: {'ok': True, 'resource_error': 'OUT_OF_MEMORY'}
+[ts_recovery] 2026-06-03 10:42:02 —   Check 90s: {'ok': True, 'resource_error': 'OUT_OF_MEMORY'}
+[ts_recovery] 2026-06-03 10:42:32 —   Check 120s: {'ok': True, 'resource_error': 'OUT_OF_MEMORY'}
+[ts_recovery] 2026-06-03 10:43:02 —   Check 150s: {'ok': True, 'resource_error': 'OUT_OF_MEMORY'}
+[ts_recovery] 2026-06-03 10:43:32 —   Check 180s: {'ok': True, 'resource_error': 'OUT_OF_MEMORY'}
+[ts_recovery] 2026-06-03 10:44:03 —   Check 210s: {'ok': True, 'resource_error': 'OUT_OF_MEMORY'}
+[ts_recovery] 2026-06-03 10:44:33 —   Check 240s: {'ok': True, 'resource_error': 'OUT_OF_MEMORY'}

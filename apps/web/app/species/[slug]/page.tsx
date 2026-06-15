@@ -204,7 +204,9 @@ export default async function SpeciesDetailPage({ params }: { params: Promise<{ 
       {photos.length > 0 && (
         <section style={{marginBottom:'var(--gutter)'}}>
           <h2 style={{fontFamily:'var(--font-mono)',fontSize:'11px',fontWeight:500,textTransform:'uppercase',letterSpacing:'.12em',color:'var(--accent)',margin:'0 0 20px 0'}}>Featured Photos</h2>
-          <VirtualizedGallery photos={photos.slice(0, 8)} columns={4} />
+          <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fill,minmax(180px,1fr))',gap:'12px',marginTop:'12px'}}>
+            {photos.slice(0,8).map((p)=>(<Link key={p.id} href={`/photo/${p.slug}`} style={{display:'block',textDecoration:'none'}}><div style={{aspectRatio:'1/1',background:'var(--bg-inset)',borderRadius:'var(--r-md)',overflow:'hidden',border:'1px solid var(--rule)'}}>{p.thumbUrl?<img src={p.thumbUrl} alt={p.title} loading="lazy" style={{width:'100%',height:'100%',objectFit:'cover',display:'block'}}/>:<div style={{display:'flex',alignItems:'center',justifyContent:'center',height:'100%',color:'var(--ink-dim)',fontSize:'24px'}}>📷</div>}</div><p style={{fontFamily:'var(--font-display)',fontSize:'12px',fontWeight:500,color:'var(--ink)',margin:'6px 0 0 0',overflow:'hidden',textOverflow:'ellipsis',whiteSpace:'nowrap'}}>{p.title}</p></Link>))}
+          </div>
         </section>
       )}
 
@@ -218,8 +220,7 @@ export default async function SpeciesDetailPage({ params }: { params: Promise<{ 
                 key={loc.id}
                 href={`/location/${loc.slug}`}
                 style={{display:'block',padding:'18px',border:'1px solid var(--rule)',borderRadius:'var(--r-md)',textDecoration:'none',transition:'border-color var(--t-fast)'}}
-                onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.borderColor = 'var(--accent)'; }}
-                onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.borderColor = 'var(--rule)'; }}
+                className="location-card"
               >
                 <h3 style={{fontFamily:'var(--font-display)',fontSize:'15px',fontWeight:500,color:'var(--ink)',margin:'0 0 4px 0'}}>{loc.name}</h3>
                 {loc.region && <p style={{fontFamily:'var(--font-mono)',fontSize:'10px',textTransform:'uppercase',letterSpacing:'.1em',color:'var(--ink-dim)',margin:'0 0 8px 0'}}>{loc.region} region</p>}
@@ -240,8 +241,7 @@ export default async function SpeciesDetailPage({ params }: { params: Promise<{ 
                 key={g.id}
                 href={`/gallery/${g.slug}`}
                 style={{display:'block',padding:'18px',border:'1px solid var(--rule)',borderRadius:'var(--r-md)',textDecoration:'none',transition:'border-color var(--t-fast)'}}
-                onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.borderColor = 'var(--accent)'; }}
-                onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.borderColor = 'var(--rule)'; }}
+                className="gallery-card"
               >
                 <h3 style={{fontFamily:'var(--font-display)',fontSize:'15px',fontWeight:500,color:'var(--ink)',margin:'0 0 4px 0'}}>{g.name}</h3>
                 {g.description && <p style={{fontSize:'13px',color:'var(--ink-dim)',margin:0,lineHeight:1.4,display:'-webkit-box',WebkitLineClamp:2,WebkitBoxOrient:'vertical',overflow:'hidden'}}>{g.description}</p>}
@@ -261,8 +261,7 @@ export default async function SpeciesDetailPage({ params }: { params: Promise<{ 
                 key={rs.id}
                 href={`/species/${rs.slug}`}
                 style={{display:'inline-flex',alignItems:'center',padding:'8px 16px',border:'1px solid var(--rule)',borderRadius:'var(--r-sm)',fontFamily:'var(--font-serif)',fontSize:'14px',color:'var(--ink-muted)',textDecoration:'none',transition:'border-color var(--t-fast), color var(--t-fast)'}}
-                onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.borderColor = 'var(--accent)'; (e.currentTarget as HTMLAnchorElement).style.color = 'var(--accent)'; }}
-                onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.borderColor = 'var(--rule)'; (e.currentTarget as HTMLAnchorElement).style.color = 'var(--ink-muted)'; }}
+                className="species-link"
               >
                 {rs.common_name}
               </Link>
@@ -281,8 +280,7 @@ export default async function SpeciesDetailPage({ params }: { params: Promise<{ 
                 key={art.id}
                 href={`/article/${art.slug}`}
                 style={{display:'block',padding:'18px',border:'1px solid var(--rule)',borderRadius:'var(--r-md)',textDecoration:'none',transition:'border-color var(--t-fast)'}}
-                onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.borderColor = 'var(--accent)'; }}
-                onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.borderColor = 'var(--rule)'; }}
+                className="article-card-link"
               >
                 <h3 style={{fontFamily:'var(--font-display)',fontSize:'16px',fontWeight:500,color:'var(--ink)',margin:'0 0 6px 0'}}>{art.title}</h3>
                 {art.excerpt && <p style={{fontSize:'13px',color:'var(--ink-dim)',margin:0,lineHeight:1.4,display:'-webkit-box',WebkitLineClamp:2,WebkitBoxOrient:'vertical',overflow:'hidden'}}>{art.excerpt}</p>}
@@ -314,7 +312,9 @@ export default async function SpeciesDetailPage({ params }: { params: Promise<{ 
       {photos.length > 8 && (
         <section>
           <h2 style={{fontFamily:'var(--font-mono)',fontSize:'11px',fontWeight:500,textTransform:'uppercase',letterSpacing:'.12em',color:'var(--accent)',margin:'0 0 20px 0'}}>All {species.common_name} Photos ({photos.length})</h2>
-          <VirtualizedGallery photos={photos} columns={4} />
+          <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fill,minmax(180px,1fr))',gap:'12px'}}>
+            {photos.slice(8).map((p)=>(<Link key={p.id} href={`/photo/${p.slug}`} style={{display:'block',textDecoration:'none'}}><div style={{aspectRatio:'1/1',background:'var(--bg-inset)',borderRadius:'var(--r-md)',overflow:'hidden',border:'1px solid var(--rule)'}}>{p.thumbUrl?<img src={p.thumbUrl} alt={p.title} loading="lazy" style={{width:'100%',height:'100%',objectFit:'cover',display:'block'}}/>:<div style={{display:'flex',alignItems:'center',justifyContent:'center',height:'100%',color:'var(--ink-dim)',fontSize:'24px'}}>📷</div>}</div><p style={{fontFamily:'var(--font-display)',fontSize:'12px',fontWeight:500,color:'var(--ink)',margin:'6px 0 0 0',overflow:'hidden',textOverflow:'ellipsis',whiteSpace:'nowrap'}}>{p.title}</p></Link>))}
+          </div>
         </section>
       )}
     </div>

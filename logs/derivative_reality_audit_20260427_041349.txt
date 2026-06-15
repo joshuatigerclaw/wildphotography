@@ -1,0 +1,18 @@
+WILDPHOTOGRAPHY DERIVATIVE REALITY AUDIT
+Run: 2026-04-27T10:13:49.573557+00:00
+Total RPR photos: 34,609
+Total DB derivatives_complete: 34,710
+Sample size: 300
+
+--- REALITY CHECK ---
+Total keys checked (R2 HeadObject): 1400
+Keys present: 1400
+Keys missing: 0
+
+--- FLAG ACCURACY ---
+Photos OK (reality matches DB): 300
+Flag mismatch (DB=complete but objects missing): 0
+Flag missing (objects exist but DB=False): 0
+
+--- DISCREPANCIES ---
+  No discrepancies found.

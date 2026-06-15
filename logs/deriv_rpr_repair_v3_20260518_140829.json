@@ -1,0 +1,147 @@
+{
+  "timestamp": "2026-05-18T20:08:29.510619+00:00",
+  "batch_size": 450,
+  "total_fixed": 177,
+  "remaining": 100,
+  "good_thumbs_flag_only": 72,
+  "derivatives_path_fixed": 24,
+  "smugmug_net_fixed": 0,
+  "r2_cf_fixed": 81,
+  "pub_r2_cf_fixed": 0,
+  "originals_path_fixed": 0,
+  "no_key_rebuild": 100,
+  "errors": 0,
+  "samples": {
+    "good_thumbs": [
+      [
+        49600,
+        "https://images.wildphotography.com/thumbs/124/d474cd33_DJI_0659.jpg"
+      ],
+      [
+        49604,
+        "https://images.wildphotography.com/thumbs/124/28ddb991_DJI_0678-2.jpg"
+      ],
+      [
+        49612,
+        "https://images.wildphotography.com/thumbs/124/954aa20e_DJI_0732.jpg"
+      ],
+      [
+        49613,
+        "https://images.wildphotography.com/thumbs/124/70021a61_DJI_0733.jpg"
+      ],
+      [
+        49614,
+        "https://images.wildphotography.com/thumbs/124/121a1841_DJI_0735.jpg"
+      ]
+    ],
+    "derivatives_path": [
+      [
+        49598,
+        "https://images.wildphotography.com/derivatives/thumb/costa-rica-gallery-sunrise-",
+        "https://images.wildphotography.com/thumbs/124/9e36571d_DJI_0650.jpg"
+      ],
+      [
+        49599,
+        "https://images.wildphotography.com/derivatives/thumb/costa-rica-gallery-sunrise-",
+        "https://images.wildphotography.com/thumbs/124/0a959398_DJI_0658.jpg"
+      ],
+      [
+        49601,
+        "https://images.wildphotography.com/derivatives/thumb/costa-rica-gallery-sunrise-",
+        "https://images.wildphotography.com/thumbs/124/2f3c525a_DJI_0665.jpg"
+      ],
+      [
+        49602,
+        "https://images.wildphotography.com/derivatives/thumb/costa-rica-gallery-sunrise-",
+        "https://images.wildphotography.com/thumbs/124/c2c55b0b_DJI_0666.jpg"
+      ],
+      [
+        49603,
+        "https://images.wildphotography.com/derivatives/thumb/costa-rica-gallery-sunrise-",
+        "https://images.wildphotography.com/thumbs/124/7ef65edf_DJI_0675.jpg"
+      ]
+    ],
+    "smugmug_net": [],
+    "r2_cf": [
+      [
+        49632,
+        "https://pub-3ec62f93675c404fe4a9a4949e38e5e5.wildphoto-storage.r2.cloudflarestor",
+        "https://images.wildphotography.com/derivatives/thumb/f6e8787556f628446fbafa2de1d"
+      ],
+      [
+        49633,
+        "https://pub-3ec62f93675c404fe4a9a4949e38e5e5.wildphoto-storage.r2.cloudflarestor",
+        "https://images.wildphotography.com/derivatives/thumb/eaa53dbc7da29bd20a11ba9ab12"
+      ],
+      [
+        49634,
+        "https://pub-3ec62f93675c404fe4a9a4949e38e5e5.wildphoto-storage.r2.cloudflarestor",
+        "https://images.wildphotography.com/derivatives/thumb/650ea3a5c3f74badcf3e61d494f"
+      ],
+      [
+        49635,
+        "https://pub-3ec62f93675c404fe4a9a4949e38e5e5.wildphoto-storage.r2.cloudflarestor",
+        "https://images.wildphotography.com/derivatives/thumb/18a82bcc54b04ff90eff6b32aed"
+      ],
+      [
+        49636,
+        "https://pub-3ec62f93675c404fe4a9a4949e38e5e5.wildphoto-storage.r2.cloudflarestor",
+        "https://images.wildphotography.com/derivatives/thumb/be927832d032fb6fb707c8cfcb9"
+      ]
+    ],
+    "pub_r2_cf": [],
+    "no_key_rebuild": [
+      [
+        49637,
+        "https://pub-3ec62f93675c404fe4a9a4949e38e5e5.wildphoto-storage.r2.cloudflarestorage.com/photos/derivatives/thumb/costa-rica-gallery-la-sabana-estadio-nacional-costa-rica-san-jose-dpano0021-jpg.jpg",
+        "https://pub-3ec62f93675c404fe4a9a4949e38e5e5.wildphoto-storage.r2.cloudflarestorage.com/photos/originals/costa-rica-gallery-la-sabana-estadio-nacional-costa-rica-san-jose/costa-rica-gallery-la-sabana-estadio-nacional-costa-rica-san-jose-dpano0021-jpg.jpg"
+      ],
+      [
+        49638,
+        "https://pub-3ec62f93675c404fe4a9a4949e38e5e5.wildphoto-storage.r2.cloudflarestorage.com/photos/derivatives/thumb/costa-rica-gallery-la-sabana-estadio-nacional-costa-rica-san-jose-epano0001-jpg.jpg",
+        "https://pub-3ec62f93675c404fe4a9a4949e38e5e5.wildphoto-storage.r2.cloudflarestorage.com/photos/originals/costa-rica-gallery-la-sabana-estadio-nacional-costa-rica-san-jose/costa-rica-gallery-la-sabana-estadio-nacional-costa-rica-san-jose-epano0001-jpg.jpg"
+      ],
+      [
+        49639,
+        "https://pub-3ec62f93675c404fe4a9a4949e38e5e5.wildphoto-storage.r2.cloudflarestorage.com/photos/derivatives/thumb/costa-rica-gallery-la-sabana-estadio-nacional-costa-rica-san-jose-epano0002-jpg.jpg",
+        "https://pub-3ec62f93675c404fe4a9a4949e38e5e5.wildphoto-storage.r2.cloudflarestorage.com/photos/originals/costa-rica-gallery-la-sabana-estadio-nacional-costa-rica-san-jose/costa-rica-gallery-la-sabana-estadio-nacional-costa-rica-san-jose-epano0002-jpg.jpg"
+      ],
+      [
+        49640,
+        "https://pub-3ec62f93675c404fe4a9a4949e38e5e5.wildphoto-storage.r2.cloudflarestorage.com/photos/derivatives/thumb/costa-rica-gallery-la-sabana-estadio-nacional-costa-rica-san-jose-fpano0001-jpg.jpg",
+        "https://pub-3ec62f93675c404fe4a9a4949e38e5e5.wildphoto-storage.r2.cloudflarestorage.com/photos/originals/costa-rica-gallery-la-sabana-estadio-nacional-costa-rica-san-jose/costa-rica-gallery-la-sabana-estadio-nacional-costa-rica-san-jose-fpano0001-jpg.jpg"
+      ],
+      [
+        49641,
+        "https://pub-3ec62f93675c404fe4a9a4949e38e5e5.wildphoto-storage.r2.cloudflarestorage.com/photos/derivatives/thumb/costa-rica-gallery-la-sabana-estadio-nacional-costa-rica-san-jose-fpano0002-jpg.jpg",
+        "https://pub-3ec62f93675c404fe4a9a4949e38e5e5.wildphoto-storage.r2.cloudflarestorage.com/photos/originals/costa-rica-gallery-la-sabana-estadio-nacional-costa-rica-san-jose/costa-rica-gallery-la-sabana-estadio-nacional-costa-rica-san-jose-fpano0002-jpg.jpg"
+      ],
+      [
+        49642,
+        "https://pub-3ec62f93675c404fe4a9a4949e38e5e5.wildphoto-storage.r2.cloudflarestorage.com/photos/derivatives/thumb/costa-rica-gallery-la-sabana-estadio-nacional-costa-rica-san-jose-fpano0003-jpg.jpg",
+        "https://pub-3ec62f93675c404fe4a9a4949e38e5e5.wildphoto-storage.r2.cloudflarestorage.com/photos/originals/costa-rica-gallery-la-sabana-estadio-nacional-costa-rica-san-jose/costa-rica-gallery-la-sabana-estadio-nacional-costa-rica-san-jose-fpano0003-jpg.jpg"
+      ],
+      [
+        49643,
+        "https://pub-3ec62f93675c404fe4a9a4949e38e5e5.wildphoto-storage.r2.cloudflarestorage.com/photos/derivatives/thumb/costa-rica-gallery-la-sabana-estadio-nacional-costa-rica-san-jose-fpano0004-jpg.jpg",
+        "https://pub-3ec62f93675c404fe4a9a4949e38e5e5.wildphoto-storage.r2.cloudflarestorage.com/photos/originals/costa-rica-gallery-la-sabana-estadio-nacional-costa-rica-san-jose/costa-rica-gallery-la-sabana-estadio-nacional-costa-rica-san-jose-fpano0004-jpg.jpg"
+      ],
+      [
+        49644,
+        "https://pub-3ec62f93675c404fe4a9a4949e38e5e5.wildphoto-storage.r2.cloudflarestorage.com/photos/derivatives/thumb/costa-rica-gallery-la-sabana-estadio-nacional-costa-rica-san-jose-fpano0006-jpg.jpg",
+        "https://pub-3ec62f93675c404fe4a9a4949e38e5e5.wildphoto-storage.r2.cloudflarestorage.com/photos/originals/costa-rica-gallery-la-sabana-estadio-nacional-costa-rica-san-jose/costa-rica-gallery-la-sabana-estadio-nacional-costa-rica-san-jose-fpano0006-jpg.jpg"
+      ],
+      [
+        49645,
+        "https://pub-3ec62f93675c404fe4a9a4949e38e5e5.wildphoto-storage.r2.cloudflarestorage.com/photos/derivatives/thumb/costa-rica-gallery-la-sabana-estadio-nacional-costa-rica-san-jose-fpano0008-jpg.jpg",
+        "https://pub-3ec62f93675c404fe4a9a4949e38e5e5.wildphoto-storage.r2.cloudflarestorage.com/photos/originals/costa-rica-gallery-la-sabana-estadio-nacional-costa-rica-san-jose/costa-rica-gallery-la-sabana-estadio-nacional-costa-rica-san-jose-fpano0008-jpg.jpg"
+      ],
+      [
+        49646,
+        "https://pub-3ec62f93675c404fe4a9a4949e38e5e5.wildphoto-storage.r2.cloudflarestorage.com/photos/derivatives/thumb/costa-rica-gallery-la-sabana-estadio-nacional-costa-rica-san-jose-fpano0010-jpg.jpg",
+        "https://pub-3ec62f93675c404fe4a9a4949e38e5e5.wildphoto-storage.r2.cloudflarestorage.com/photos/originals/costa-rica-gallery-la-sabana-estadio-nacional-costa-rica-san-jose/costa-rica-gallery-la-sabana-estadio-nacional-costa-rica-san-jose-fpano0010-jpg.jpg"
+      ]
+    ]
+  },
+  "error_samples": []
+}

@@ -1,0 +1,163 @@
+{
+  "run_at": "2026-06-07T16:35:32.024285+00:00",
+  "total_photos": 68808,
+  "render_ready_total": 67882,
+  "photos_with_issues": 200,
+  "all_clear": false,
+  "checks": {
+    "missing_thumb_url": {
+      "count": 0,
+      "sample": []
+    },
+    "missing_slug": {
+      "count": 0,
+      "sample": []
+    },
+    "missing_title": {
+      "count": 0,
+      "sample": []
+    },
+    "missing_gallery_slug": {
+      "count": 380,
+      "sample": [
+        {
+          "id": 92426,
+          "slug": "cl0a1824-921569d6",
+          "title": "Costa Rica Ocean Aerial View",
+          "status": "published"
+        },
+        {
+          "id": 92427,
+          "slug": "cl0a1831-21f65e7c",
+          "title": "Guanacaste Coast Aerial Photography",
+          "status": "published"
+        },
+        {
+          "id": 92428,
+          "slug": "cl0a1872-6752dc9f",
+          "title": "Pacific Waters of Costa Rica",
+          "status": "published"
+        },
+        {
+          "id": 92429,
+          "slug": "cl0a1953-0fde8fc2",
+          "title": "Costa Rica Coastal Aerial View",
+          "status": "published"
+        },
+        {
+          "id": 92430,
+          "slug": "cl0a2088-b71f5e4f",
+          "title": "Aerial Pacific Coastline Costa Rica",
+          "status": "published"
+        },
+        {
+          "id": 92431,
+          "slug": "cl0a2092-fc2916b5",
+          "title": "Costa Rica Ocean Aerial View",
+          "status": "published"
+        },
+        {
+          "id": 92432,
+          "slug": "cl0a2881-1a1a6437",
+          "title": "Guanacaste Coast Aerial Photography",
+          "status": "published"
+        },
+        {
+          "id": 92433,
+          "slug": "cl0a2886-3540258b",
+          "title": "Pacific Waters of Costa Rica",
+          "status": "published"
+        },
+        {
+          "id": 92434,
+          "slug": "cl0a7488-79044abc",
+          "title": "Costa Rica Coastal Aerial View",
+          "status": "published"
+        },
+        {
+          "id": 92435,
+          "slug": "cl0a7611-a5be6fc2",
+          "title": "Aerial Pacific Coastline Costa Rica",
+          "status": "published"
+        },
+        {
+          "id": 92436,
+          "slug": "dji-0848-3fa63094",
+          "title": "Costa Rica Ocean Aerial View",
+          "status": "published"
+        },
+        {
+          "id": 92437,
+          "slug": "img-1284-32c05906",
+          "title": "Guanacaste Coast Aerial Photography",
+          "status": "published"
+        },
+        {
+          "id": 92438,
+          "slug": "img-7606-417e22bd",
+          "title": "Pacific Waters of Costa Rica",
+          "status": "published"
+        },
+        {
+          "id": 92439,
+          "slug": "img-7638-9114846d",
+          "title": "Costa Rica Coastal Aerial View",
+          "status": "published"
+        },
+        {
+          "id": 92440,
+          "slug": "img-7671-eacb4342",
+          "title": "Aerial Pacific Coastline Costa Rica",
+          "status": "published"
+        },
+        {
+          "id": 92441,
+          "slug": "img-7759-0e0f4fb9",
+          "title": "Costa Rica Ocean Aerial View",
+          "status": "published"
+        },
+        {
+          "id": 92442,
+          "slug": "img-7957-81d27760",
+          "title": "Guanacaste Coast Aerial Photography",
+          "status": "published"
+        },
+        {
+          "id": 92443,
+          "slug": "cl0a3702-729bffa1",
+          "title": "Industrial Port Costa Rica",
+          "status": "published"
+        },
+        {
+          "id": 92444,
+          "slug": "cl0a3704-f5bca35c",
+          "title": "Power Plant Sector Costa Rica",
+          "status": "published"
+        },
+        {
+          "id": 92445,
+          "slug": "cl0a7954-ce3be54b",
+          "title": "Costa Rica Factory Infrastructure",
+          "status": "published"
+        }
+      ]
+    },
+    "search_not_ready": {
+      "count": 0,
+      "sample": []
+    },
+    "derivatives_incomplete": {
+      "count": 0,
+      "sample": []
+    },
+    "missing_description": {
+      "count": 0,
+      "sample": []
+    },
+    "missing_keywords": {
+      "count": 0,
+      "sample": []
+    }
+  },
+  "status": "success"
+}

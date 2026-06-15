@@ -1,0 +1,29 @@
+main = ".open-next/worker.js"
+name = "web"
+compatibility_date = "2025-01-01"
+compatibility_flags = ["nodejs_compat", "global_fetch_strictly_public"]
+workers_dev = false
+memory_size_mb = 256
+
+# Route all traffic on wildphotography.com to this Worker
+[[routes]]
+pattern = "wildphotography.com/*"
+zone_name = "wildphotography.com"
+
+[vars]
+NEXTJS_ENV = "production"
+
+# Static assets binding - critical for serving pages
+[assets]
+binding = "ASSETS"
+directory = ".open-next/assets"
+
+# Self-reference for ISR/incremental cache
+[[services]]
+binding = "WORKER_SELF_REFERENCE"
+service = "web"
+
+# R2 bucket for incremental cache (optional but recommended)
+[[r2_buckets]]
+binding = "NEXT_INC_CACHE_R2_BUCKET"
+bucket_name = "web-opennext-cache"

@@ -1,0 +1,63 @@
+WILDPHOTOGRAPHY DERIVATIVE REALITY AUDIT
+Run: 2026-04-19T16:06:11.011928+00:00
+Total RPR photos: 21,006
+Total DB derivatives_complete: 20,555
+Sample size: 300
+
+--- REALITY CHECK ---
+Total keys checked (R2 HeadObject): 1427
+Keys present: 1381
+Keys missing: 46
+
+--- FLAG ACCURACY ---
+Photos OK (reality matches DB): 254
+Flag mismatch (DB=complete but objects missing): 39
+Flag missing (objects exist but DB=False): 7
+
+--- DISCREPANCIES ---
+  [27156] slug=photo-125-DJI-0050 status=flag_mismatch db_flag=True present=0 missing=1
+  [21228] slug=2020-11-26-15-02-31-21228 status=flag_mismatch db_flag=True present=4 missing=1
+  [33778] slug=20070520-2268-a12dc261 status=flag_mismatch db_flag=True present=4 missing=1
+  [26898] slug=dji-0999-efcc80d3 status=flag_mismatch db_flag=True present=4 missing=1
+  [38344] slug=img-4698-9b83d9a25362d880bf6783ed00de8f0789dc2a29ba8ce76b78d9acd752c44772 status=flag_missing db_flag=False present=4 missing=0
+  [21465] slug=dji-0365-21465 status=flag_mismatch db_flag=True present=4 missing=1
+  [35488] slug=rio-savagre-costa-rica-20241019-111032-ed0d28b6 status=flag_mismatch db_flag=True present=4 missing=1
+  [15142] slug=img_8682 status=flag_missing db_flag=False present=5 missing=0
+  [21360] slug=dji-0018-21360 status=flag_mismatch db_flag=True present=4 missing=1
+  [6607] slug=img-0676-costa-rica-3225 status=flag_mismatch db_flag=True present=4 missing=1
+  [35191] slug=peninsula-papagayo-dji-0238-c7948d5d status=flag_mismatch db_flag=True present=4 missing=1
+  [36556] slug=img-3595-b2f4ccea status=flag_mismatch db_flag=True present=4 missing=1
+  [27033] slug=photo-125-DJI-0861 status=flag_mismatch db_flag=True present=0 missing=1
+  [35460] slug=rio-savagre-costa-rica-cl0a3013-4f61c9bc status=flag_mismatch db_flag=True present=4 missing=1
+  [15149] slug=img_3436 status=flag_missing db_flag=False present=5 missing=0
+  [27708] slug=photo-127-DJI-0262 status=flag_mismatch db_flag=True present=0 missing=1
+  [27085] slug=photo-125-DJI-0932 status=flag_mismatch db_flag=True present=0 missing=1
+  [21538] slug=dji-0766-21538 status=flag_mismatch db_flag=True present=4 missing=1
+  [35638] slug=santateresa-dji-0692-d61082ec status=flag_mismatch db_flag=True present=0 missing=5
+  [34660] slug=pano00013-83dbdb73 status=flag_mismatch db_flag=True present=4 missing=1
+  [36561] slug=img-8486-cf63cab6 status=flag_mismatch db_flag=True present=4 missing=1
+  [25743] slug=dji-0149-b55ebc61 status=flag_mismatch db_flag=True present=4 missing=1
+  [21509] slug=dji-0598-001-21509 status=flag_mismatch db_flag=True present=4 missing=1
+  [27416] slug=photo-54-DJI-0753 status=flag_mismatch db_flag=True present=0 missing=1
+  [336] slug=dji-0521-mp4-55H7t2 status=flag_missing db_flag=False present=5 missing=0
+  [21595] slug=img-1001-21595 status=flag_mismatch db_flag=True present=4 missing=1
+  [347] slug=cl0a8638-VLLScb status=flag_missing db_flag=False present=5 missing=0
+  [35353] slug=montezuma-costa-rica-dji-0033-6da86da1 status=flag_mismatch db_flag=True present=4 missing=1
+  [34867] slug=dji-0851-52ca6a35 status=flag_mismatch db_flag=True present=4 missing=1
+  [27716] slug=photo-127-DJI-0996 status=flag_mismatch db_flag=True present=0 missing=1
+  [21564] slug=dji-0916-21564 status=flag_mismatch db_flag=True present=4 missing=1
+  [34879] slug=dji-0866-54f322b4 status=flag_mismatch db_flag=True present=4 missing=1
+  [35298] slug=montezuma-costa-rica-dji-0195-0bf1173c status=flag_mismatch db_flag=True present=4 missing=1
+  [37081] slug=dji-0750-1ea5563c status=flag_mismatch db_flag=True present=1 missing=4
+  [25422] slug=dji0448 status=flag_mismatch db_flag=True present=4 missing=1
+  [35300] slug=montezuma-costa-rica-dji-0201-c7cdd0f2 status=flag_mismatch db_flag=True present=4 missing=1
+  [351] slug=2021-04-11-08-32-55-XJC7q9 status=flag_missing db_flag=False present=5 missing=0
+  [21660] slug=p4162121-21660 status=flag_mismatch db_flag=True present=4 missing=1
+  [528] slug=cl0a3727-5cKzPb status=flag_missing db_flag=False present=5 missing=0
+  [33810] slug=dji-0597-92cc3734 status=flag_mismatch db_flag=True present=4 missing=1
+  [27237] slug=photo-127-2021-03-28 11-37-41 status=flag_mismatch db_flag=True present=0 missing=1
+  [34881] slug=dji-0870-21b0755f status=flag_mismatch db_flag=True present=4 missing=1
+  [27176] slug=photo-125-DJI-0180 status=flag_mismatch db_flag=True present=0 missing=1
+  [27706] slug=photo-127-DJI-0256 status=flag_mismatch db_flag=True present=0 missing=1
+  [34769] slug=dji-0683-a6e02075 status=flag_mismatch db_flag=True present=4 missing=1
+  [21207] slug=2018-08-03-17-26-23-21207 status=flag_mismatch db_flag=True present=4 missing=1

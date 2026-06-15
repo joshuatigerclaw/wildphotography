@@ -1,0 +1,1350 @@
+{
+  "run_at": "2026-05-26T21:40:58.034626+00:00",
+  "total_photos": 47431,
+  "distinct_affected_photos": 1423,
+  "all_clear": false,
+  "issues": {
+    "missing_original_r2_key": {
+      "description": "Missing original R2 storage key \u2014 cannot rebuild derivatives",
+      "count": 26,
+      "sample": [
+        {
+          "id": 41204,
+          "slug": "test-slug-debug",
+          "status": "draft",
+          "updated_at": "2026-05-24T18:38:39.315289"
+        },
+        {
+          "id": 51679,
+          "slug": "2017-10-27-15-00-5c09",
+          "status": "draft",
+          "updated_at": "2026-05-25T15:39:39.930557"
+        },
+        {
+          "id": 51680,
+          "slug": "2017-10-27-15-51-aadd",
+          "status": "draft",
+          "updated_at": "2026-05-25T15:39:39.930557"
+        },
+        {
+          "id": 51681,
+          "slug": "2017-10-27-15-51-963f",
+          "status": "draft",
+          "updated_at": "2026-05-25T15:39:39.930557"
+        },
+        {
+          "id": 51682,
+          "slug": "2017-10-28-13-30-10f1",
+          "status": "draft",
+          "updated_at": "2026-05-25T15:39:39.930557"
+        },
+        {
+          "id": 51683,
+          "slug": "2017-10-28-18-22-f03b",
+          "status": "draft",
+          "updated_at": "2026-05-25T15:39:39.930557"
+        },
+        {
+          "id": 51684,
+          "slug": "2017-10-29-14-44-d260",
+          "status": "draft",
+          "updated_at": "2026-05-25T15:39:39.930557"
+        },
+        {
+          "id": 51685,
+          "slug": "2017-10-29-16-23-8893",
+          "status": "draft",
+          "updated_at": "2026-05-25T15:39:39.930557"
+        },
+        {
+          "id": 51686,
+          "slug": "2017-10-29-16-29-87e4",
+          "status": "draft",
+          "updated_at": "2026-05-25T15:39:39.930557"
+        },
+        {
+          "id": 51687,
+          "slug": "2017-10-29-17-21-c581",
+          "status": "draft",
+          "updated_at": "2026-05-25T15:39:39.930557"
+        },
+        {
+          "id": 51688,
+          "slug": "2017-10-29-17-22-413f",
+          "status": "draft",
+          "updated_at": "2026-05-25T15:39:39.930557"
+        },
+        {
+          "id": 51689,
+          "slug": "2017-10-30-16-19-5985",
+          "status": "draft",
+          "updated_at": "2026-05-25T15:39:39.930557"
+        },
+        {
+          "id": 51690,
+          "slug": "2017-11-04-15-08-8424",
+          "status": "draft",
+          "updated_at": "2026-05-25T15:39:39.930557"
+        },
+        {
+          "id": 51691,
+          "slug": "-2f75",
+          "status": "draft",
+          "updated_at": "2026-05-25T15:39:39.930557"
+        },
+        {
+          "id": 51692,
+          "slug": "-de15",
+          "status": "draft",
+          "updated_at": "2026-05-25T15:39:39.930557"
+        },
+        {
+          "id": 51693,
+          "slug": "-03fc",
+          "status": "draft",
+          "updated_at": "2026-05-25T15:39:39.930557"
+        },
+        {
+          "id": 51694,
+          "slug": "-3c45",
+          "status": "draft",
+          "updated_at": "2026-05-25T15:39:39.930557"
+        },
+        {
+          "id": 51695,
+          "slug": "-d3bf",
+          "status": "draft",
+          "updated_at": "2026-05-25T15:39:39.930557"
+        },
+        {
+          "id": 51696,
+          "slug": "-137c",
+          "status": "draft",
+          "updated_at": "2026-05-25T15:39:39.930557"
+        },
+        {
+          "id": 51697,
+          "slug": "-64a4",
+          "status": "draft",
+          "updated_at": "2026-05-25T15:39:39.930557"
+        },
+        {
+          "id": 51698,
+          "slug": "-1fda",
+          "status": "draft",
+          "updated_at": "2026-05-25T15:39:39.930557"
+        },
+        {
+          "id": 51699,
+          "slug": "-3dc0",
+          "status": "draft",
+          "updated_at": "2026-05-25T15:39:39.930557"
+        },
+        {
+          "id": 51700,
+          "slug": "-31a5",
+          "status": "draft",
+          "updated_at": "2026-05-25T15:39:39.930557"
+        },
+        {
+          "id": 51701,
+          "slug": "-78ea",
+          "status": "draft",
+          "updated_at": "2026-05-25T15:39:39.930557"
+        },
+        {
+          "id": 51702,
+          "slug": "-683c",
+          "status": "draft",
+          "updated_at": "2026-05-25T15:39:39.930557"
+        },
+        {
+          "id": 51703,
+          "slug": "-5f13",
+          "status": "draft",
+          "updated_at": "2026-05-25T15:39:39.930557"
+        }
+      ]
+    },
+    "pending_derivatives_with_r2": {
+      "description": "Has R2 original but derivatives_complete=false \u2014 needs rebuild dispatch",
+      "count": 330,
+      "sample": [
+        {
+          "id": 52506,
+          "slug": "test-slug-2026-05-25 11:16:31.193678+00",
+          "status": "local_pipeline",
+          "original_r2_key": "test/key.jpg"
+        },
+        {
+          "id": 54817,
+          "slug": "south-america-peru-9e12c4d5",
+          "status": "draft",
+          "original_r2_key": "originals/9e12c4d5b6ec493cb4f041c3b1afdc06.jpg"
+        },
+        {
+          "id": 54818,
+          "slug": "south-america-peru-7d4c71fa",
+          "status": "draft",
+          "original_r2_key": "originals/7d4c71faf78d1f94bec7a83c3c3e5140.jpg"
+        },
+        {
+          "id": 54819,
+          "slug": "south-america-peru-1cd599be",
+          "status": "draft",
+          "original_r2_key": "originals/1cd599be25f40e02c46f7ec9aa32b2c3.jpg"
+        },
+        {
+          "id": 54820,
+          "slug": "south-america-peru-80cefc46",
+          "status": "draft",
+          "original_r2_key": "originals/80cefc46d89d137e7f9afec3b35c980b.jpg"
+        },
+        {
+          "id": 54821,
+          "slug": "south-america-peru-4121ec2a",
+          "status": "draft",
+          "original_r2_key": "originals/4121ec2a618ab8ff87d86a49e9b38462.jpg"
+        },
+        {
+          "id": 54822,
+          "slug": "south-america-peru-ac6a78da",
+          "status": "draft",
+          "original_r2_key": "originals/ac6a78da83a6c8381c84f6a8adfa862f.jpg"
+        },
+        {
+          "id": 54823,
+          "slug": "south-america-peru-3c83c42b",
+          "status": "draft",
+          "original_r2_key": "originals/3c83c42b6419caa58d21be2c9aebee7e.jpg"
+        },
+        {
+          "id": 54824,
+          "slug": "south-america-peru-c72fa03d",
+          "status": "draft",
+          "original_r2_key": "originals/c72fa03da572054f29bc3153a85b1e4d.jpg"
+        },
+        {
+          "id": 54825,
+          "slug": "south-america-peru-f5655cc0",
+          "status": "draft",
+          "original_r2_key": "originals/f5655cc0b5d7ceb00dfc766420314609.jpg"
+        },
+        {
+          "id": 54826,
+          "slug": "south-america-peru-23ad072f",
+          "status": "draft",
+          "original_r2_key": "originals/23ad072f79bfaff117bc5b69aa073df9.jpg"
+        },
+        {
+          "id": 54827,
+          "slug": "south-america-peru-33303e46",
+          "status": "draft",
+          "original_r2_key": "originals/33303e46605308c6edb5690dafa84abf.jpg"
+        },
+        {
+          "id": 54828,
+          "slug": "south-america-peru-a20cacba",
+          "status": "draft",
+          "original_r2_key": "originals/a20cacba9e60fd04559739936903d0f7.jpg"
+        },
+        {
+          "id": 54829,
+          "slug": "south-america-peru-b83f2089",
+          "status": "draft",
+          "original_r2_key": "originals/b83f2089e29200ff03c9b36c58d9b760.jpg"
+        },
+        {
+          "id": 54830,
+          "slug": "south-america-peru-f0a47596",
+          "status": "draft",
+          "original_r2_key": "originals/f0a475965a4e54cff8e24c3a43cdb6b9.jpg"
+        },
+        {
+          "id": 54831,
+          "slug": "south-america-peru-aa6d1de9",
+          "status": "draft",
+          "original_r2_key": "originals/aa6d1de9cf84799ac5edadb71a47f2df.jpg"
+        },
+        {
+          "id": 54832,
+          "slug": "south-america-peru-c2096cef",
+          "status": "draft",
+          "original_r2_key": "originals/c2096cefe05e6cbf7bf105e008edf7df.jpg"
+        },
+        {
+          "id": 54833,
+          "slug": "south-america-peru-1f9da0b0",
+          "status": "draft",
+          "original_r2_key": "originals/1f9da0b0fcaee811676935bfc8c580e4.jpg"
+        },
+        {
+          "id": 54834,
+          "slug": "south-america-peru-9569eaca",
+          "status": "draft",
+          "original_r2_key": "originals/9569eacacb4a9c4b0c5e682aecedefb7.jpg"
+        },
+        {
+          "id": 54835,
+          "slug": "south-america-peru-abd12a31",
+          "status": "draft",
+          "original_r2_key": "originals/abd12a3103f0e485a899f440dab006cf.jpg"
+        },
+        {
+          "id": 54836,
+          "slug": "south-america-peru-003d5c27",
+          "status": "draft",
+          "original_r2_key": "originals/003d5c274f7a2e3ae7df3addced3d7ad.jpg"
+        },
+        {
+          "id": 54837,
+          "slug": "south-america-peru-8845211a",
+          "status": "draft",
+          "original_r2_key": "originals/8845211acfc0947cc19a05cbaf5a99a9.jpg"
+        },
+        {
+          "id": 54838,
+          "slug": "south-america-peru-b5be69a6",
+          "status": "draft",
+          "original_r2_key": "originals/b5be69a683090179dbb48dc2471a5879.jpg"
+        },
+        {
+          "id": 54839,
+          "slug": "south-america-peru-2a99f019",
+          "status": "draft",
+          "original_r2_key": "originals/2a99f019585eaecf4b88a018fb93d609.jpg"
+        },
+        {
+          "id": 54840,
+          "slug": "south-america-peru-9f3c1b2b",
+          "status": "draft",
+          "original_r2_key": "originals/9f3c1b2b29efc88f497b1016aa7c7688.jpg"
+        },
+        {
+          "id": 54841,
+          "slug": "south-america-peru-e908fbc5",
+          "status": "draft",
+          "original_r2_key": "originals/e908fbc59639438aff5a4e1e0dae7264.jpg"
+        },
+        {
+          "id": 54842,
+          "slug": "south-america-peru-2cc3474f",
+          "status": "draft",
+          "original_r2_key": "originals/2cc3474fb2ef21851f3212501616cd4b.jpg"
+        },
+        {
+          "id": 54843,
+          "slug": "south-america-peru-d7674d51",
+          "status": "draft",
+          "original_r2_key": "originals/d7674d51cc928e16e91ce2927ea95261.jpg"
+        },
+        {
+          "id": 54844,
+          "slug": "south-america-peru-70c6fb65",
+          "status": "draft",
+          "original_r2_key": "originals/70c6fb6578e799f100a7cad1afbb5eef.jpg"
+        },
+        {
+          "id": 54845,
+          "slug": "south-america-peru-ce346645",
+          "status": "draft",
+          "original_r2_key": "originals/ce3466456f82909fa7f7b40883e77ea6.jpg"
+        },
+        {
+          "id": 54846,
+          "slug": "south-america-peru-7fd22314",
+          "status": "draft",
+          "original_r2_key": "originals/7fd223141271a7ba629d844f849d6f93.jpg"
+        },
+        {
+          "id": 54847,
+          "slug": "south-america-peru-e1709860",
+          "status": "draft",
+          "original_r2_key": "originals/e17098602fd5f03f95e6db920ebeafc6.jpg"
+        },
+        {
+          "id": 54848,
+          "slug": "south-america-peru-a0f9a993",
+          "status": "draft",
+          "original_r2_key": "originals/a0f9a9930b757542417f2cc8871c745b.jpg"
+        },
+        {
+          "id": 54849,
+          "slug": "south-america-peru-456c0ac9",
+          "status": "draft",
+          "original_r2_key": "originals/456c0ac9356c433c54f4cd8c3a4ebfe9.jpg"
+        },
+        {
+          "id": 54850,
+          "slug": "south-america-peru-2d7c6908",
+          "status": "draft",
+          "original_r2_key": "originals/2d7c690823962f468a8d47a7419f1d89.jpg"
+        },
+        {
+          "id": 54851,
+          "slug": "south-america-peru-a22443c6",
+          "status": "draft",
+          "original_r2_key": "originals/a22443c688f76e7d0e603a460fcc289e.jpg"
+        },
+        {
+          "id": 54852,
+          "slug": "south-america-peru-0b43f145",
+          "status": "draft",
+          "original_r2_key": "originals/0b43f14501b1424fa1401716a22cb568.jpg"
+        },
+        {
+          "id": 54853,
+          "slug": "south-america-peru-04424a86",
+          "status": "draft",
+          "original_r2_key": "originals/04424a8696f7beae1a316e9a458e94e1.jpg"
+        },
+        {
+          "id": 54854,
+          "slug": "south-america-peru-b4cb0e29",
+          "status": "draft",
+          "original_r2_key": "originals/b4cb0e29f89d33f1ba2ca09550472a50.jpg"
+        },
+        {
+          "id": 54855,
+          "slug": "south-america-peru-c0631fb8",
+          "status": "draft",
+          "original_r2_key": "originals/c0631fb866831a736cb0a14445fa25ff.jpg"
+        },
+        {
+          "id": 54856,
+          "slug": "south-america-peru-e37b07a6",
+          "status": "draft",
+          "original_r2_key": "originals/e37b07a6d812ba945ae585931a48ed35.jpg"
+        },
+        {
+          "id": 54857,
+          "slug": "south-america-peru-c28013b8",
+          "status": "draft",
+          "original_r2_key": "originals/c28013b8796d4b527f03615927304bf1.jpg"
+        },
+        {
+          "id": 54858,
+          "slug": "south-america-peru-2cbdbe20",
+          "status": "draft",
+          "original_r2_key": "originals/2cbdbe2078b97c51ad85642e0be0f89e.jpg"
+        },
+        {
+          "id": 54859,
+          "slug": "south-america-peru-c3155780",
+          "status": "draft",
+          "original_r2_key": "originals/c31557804e1171afd47b28e18e0022b2.jpg"
+        },
+        {
+          "id": 54860,
+          "slug": "south-america-peru-f0ce2599",
+          "status": "draft",
+          "original_r2_key": "originals/f0ce25992cd84edd8ccf400b2d136d0f.jpg"
+        },
+        {
+          "id": 54861,
+          "slug": "south-america-peru-9ab5a7be",
+          "status": "draft",
+          "original_r2_key": "originals/9ab5a7bee7bc2127ec71c7a28787cc71.jpg"
+        },
+        {
+          "id": 54862,
+          "slug": "south-america-peru-7ebfaa18",
+          "status": "draft",
+          "original_r2_key": "originals/7ebfaa181ab04391ff4c658c4efc09c5.jpg"
+        },
+        {
+          "id": 54863,
+          "slug": "south-america-peru-ba1a5ef5",
+          "status": "draft",
+          "original_r2_key": "originals/ba1a5ef544ece3c459b4fbca98025294.jpg"
+        },
+        {
+          "id": 54864,
+          "slug": "south-america-peru-94343776",
+          "status": "draft",
+          "original_r2_key": "originals/94343776d2ab698582bcc2b0a6a8034a.jpg"
+        },
+        {
+          "id": 54865,
+          "slug": "south-america-peru-6b37ca72",
+          "status": "draft",
+          "original_r2_key": "originals/6b37ca723a25888581b1b4eb8a198d60.jpg"
+        }
+      ]
+    },
+    "render_ready_not_search_ready": {
+      "description": "ready_for_public_render=true but search_ready=false \u2014 blocked from Typesense",
+      "count": 44504,
+      "sample": [
+        {
+          "id": 16,
+          "slug": "scarlet-macaw",
+          "status": "published",
+          "thumb_url": "https://images.wildphotography.com/derivatives/thumb/scarlet-macaw-thumb.jpg"
+        },
+        {
+          "id": 17,
+          "slug": "quetzal",
+          "status": "published",
+          "thumb_url": "https://images.wildphotography.com/derivatives/17/1707ee732dc7a626a896f51bd74ba3634073e3e4a9210ee0a023ed5f8896b6d1/thumb.jpg"
+        },
+        {
+          "id": 19,
+          "slug": "three-toed-sloth",
+          "status": "published",
+          "thumb_url": "https://images.wildphotography.com/derivatives/thumb/three-toed-sloth-thumb.jpg"
+        },
+        {
+          "id": 21,
+          "slug": "green-iguana",
+          "status": "published",
+          "thumb_url": "https://images.wildphotography.com/derivatives/21/2100489762d9f8ed2c5dbe163228a284ca39480a3ecb32ddf42af231760bc9c8/thumb.jpg"
+        },
+        {
+          "id": 23,
+          "slug": "spectacled-owl",
+          "status": "published",
+          "thumb_url": "https://images.wildphotography.com/derivatives/thumb/spectacled-owl-thumb.jpg"
+        },
+        {
+          "id": 24,
+          "slug": "toucan-barbet",
+          "status": "published",
+          "thumb_url": "https://images.wildphotography.com/derivatives/thumb/toucan-barbet-thumb.jpg"
+        },
+        {
+          "id": 27,
+          "slug": "collared-aracari",
+          "status": "published",
+          "thumb_url": "https://images.wildphotography.com/derivatives/27/277b9136ad437505a51680cdc4f959dbde4d882240dec48bdb9d56b6b0daee1f/thumb.jpg"
+        },
+        {
+          "id": 29,
+          "slug": "boat-billed-heron",
+          "status": "published",
+          "thumb_url": "https://images.wildphotography.com/derivatives/29/29cb9889e80230df6a9156f1a7cc04e2e629d6dd197097dec77162bc53390480/thumb.jpg"
+        },
+        {
+          "id": 30,
+          "slug": "fiery-hummingbird",
+          "status": "published",
+          "thumb_url": "https://images.wildphotography.com/derivatives/thumb/fiery-hummingbird-thumb.jpg"
+        },
+        {
+          "id": 31,
+          "slug": "montezuma-oropendola",
+          "status": "published",
+          "thumb_url": "https://images.wildphotography.com/derivatives/31/31381e1dbe686f7330d5c4a469f1beedbfc4025db9e9885e0b2e9309568e0816/thumb.jpg"
+        },
+        {
+          "id": 32,
+          "slug": "volcano-view",
+          "status": "published",
+          "thumb_url": "https://images.wildphotography.com/derivatives/thumb/volcano-view-thumb.jpg"
+        },
+        {
+          "id": 33,
+          "slug": "pacific-sunset",
+          "status": "published",
+          "thumb_url": "https://images.wildphotography.com/derivatives/thumb/pacific-sunset-thumb.jpg"
+        },
+        {
+          "id": 35,
+          "slug": "rainforest-waterfall",
+          "status": "published",
+          "thumb_url": "https://images.wildphotography.com/derivatives/thumb/rainforest-waterfall-thumb.jpg"
+        },
+        {
+          "id": 40,
+          "slug": "img-9768-jpg-GRp89W",
+          "status": "published",
+          "thumb_url": "https://images.wildphotography.com/derivatives/40/thumb.webp"
+        },
+        {
+          "id": 42,
+          "slug": "paddleboarding-adventure-on-a-tropical-coast-9kLkq4",
+          "status": "published",
+          "thumb_url": "https://images.wildphotography.com/derivatives/thumb/paddleboarding-adventure-on-a-tropical-coast-9kLkq4-thumb.jpg"
+        },
+        {
+          "id": 43,
+          "slug": "wading-angler-quiet-water-fishing-scene-dWHshx",
+          "status": "published",
+          "thumb_url": "https://images.wildphotography.com/derivatives/43/43515c5559f3968cfa68100e7fbbdc7f4afcbb150f7e3dc0182dee66573a675d/thumb.jpg"
+        },
+        {
+          "id": 44,
+          "slug": "img-9761-jpg-McvJMD",
+          "status": "published",
+          "thumb_url": "https://images.wildphotography.com/derivatives/thumb/img-9761-jpg-McvJMD-thumb.jpg"
+        },
+        {
+          "id": 45,
+          "slug": "img-9867-jpg-ggnxV4",
+          "status": "published",
+          "thumb_url": "https://images.wildphotography.com/derivatives/thumb/img-9867-jpg-ggnxV4-thumb.jpg"
+        },
+        {
+          "id": 46,
+          "slug": "img-0133-jpg-t25Tbt",
+          "status": "published",
+          "thumb_url": "https://images.wildphotography.com/derivatives/thumb/img-0133-jpg-t25Tbt-thumb.jpg"
+        },
+        {
+          "id": 47,
+          "slug": "img-0148-jpg-WgXJsL",
+          "status": "published",
+          "thumb_url": "https://images.wildphotography.com/derivatives/thumb/img-0148-jpg-WgXJsL-thumb.jpg"
+        },
+        {
+          "id": 48,
+          "slug": "img-0135-jpg-x8LCKP",
+          "status": "published",
+          "thumb_url": "https://images.wildphotography.com/derivatives/thumb/img-0135-jpg-x8LCKP-thumb.jpg"
+        },
+        {
+          "id": 49,
+          "slug": "img-0154-jpg-P4g3jH",
+          "status": "published",
+          "thumb_url": "https://images.wildphotography.com/derivatives/thumb/img-0154-jpg-P4g3jH-thumb.jpg"
+        },
+        {
+          "id": 50,
+          "slug": "costa-rica-billabong-surf-2009-5QgMNB",
+          "status": "published",
+          "thumb_url": "https://images.wildphotography.com/derivatives/thumb/costa-rica-billabong-surf-2009-5QgMNB-thumb.jpg"
+        },
+        {
+          "id": 51,
+          "slug": "img-0280-jpg-WR6t7s",
+          "status": "published",
+          "thumb_url": "https://images.wildphotography.com/derivatives/thumb/img-0280-jpg-WR6t7s-thumb.jpg"
+        },
+        {
+          "id": 52,
+          "slug": "costa-rica-billabong-surf-2009-PSWCnj",
+          "status": "published",
+          "thumb_url": "https://images.wildphotography.com/derivatives/thumb/costa-rica-billabong-surf-2009-PSWCnj-thumb.jpg"
+        },
+        {
+          "id": 53,
+          "slug": "img-9578-jpg-CWp24N",
+          "status": "published",
+          "thumb_url": "https://images.wildphotography.com/derivatives/thumb/img-9578-jpg-CWp24N-thumb.jpg"
+        },
+        {
+          "id": 54,
+          "slug": "img-9644-jpg-HCxCGn",
+          "status": "published",
+          "thumb_url": "https://images.wildphotography.com/derivatives/thumb/img-9644-jpg-HCxCGn-thumb.jpg"
+        },
+        {
+          "id": 55,
+          "slug": "img-3491-jpg-jHd5JG",
+          "status": "published",
+          "thumb_url": "https://images.wildphotography.com/derivatives/thumb/img-3491-jpg-jHd5JG-thumb.jpg"
+        },
+        {
+          "id": 56,
+          "slug": "img-6629-jpg-dqMnVs",
+          "status": "published",
+          "thumb_url": "https://images.wildphotography.com/derivatives/thumb/img-6629-jpg-dqMnVs-thumb.jpg"
+        },
+        {
+          "id": 57,
+          "slug": "img-0332-jpg-rSSd5X",
+          "status": "published",
+          "thumb_url": "https://images.wildphotography.com/derivatives/thumb/img-0332-jpg-rSSd5X-thumb.jpg"
+        },
+        {
+          "id": 58,
+          "slug": "img-6632-jpg-sTd7RM",
+          "status": "published",
+          "thumb_url": "https://images.wildphotography.com/derivatives/thumb/img-6632-jpg-sTd7RM-thumb.jpg"
+        },
+        {
+          "id": 59,
+          "slug": "img-0341-jpg-kZ3chM",
+          "status": "published",
+          "thumb_url": "https://images.wildphotography.com/derivatives/thumb/img-0341-jpg-kZ3chM-thumb.jpg"
+        },
+        {
+          "id": 60,
+          "slug": "img-9672-jpg-HSKLKj",
+          "status": "published",
+          "thumb_url": "https://images.wildphotography.com/derivatives/thumb/img-9672-jpg-HSKLKj-thumb.jpg"
+        },
+        {
+          "id": 61,
+          "slug": "img-9584-jpg-F3ffkg",
+          "status": "published",
+          "thumb_url": "https://images.wildphotography.com/derivatives/thumb/img-9584-jpg-F3ffkg-thumb.jpg"
+        },
+        {
+          "id": 62,
+          "slug": "img-9468-jpg-pQpxCC",
+          "status": "published",
+          "thumb_url": "https://images.wildphotography.com/derivatives/thumb/img-9468-jpg-pQpxCC-thumb.jpg"
+        },
+        {
+          "id": 63,
+          "slug": "img-9572-jpg-TC4cZc",
+          "status": "published",
+          "thumb_url": "https://images.wildphotography.com/derivatives/thumb/img-9572-jpg-TC4cZc-thumb.jpg"
+        },
+        {
+          "id": 64,
+          "slug": "img-9600-jpg-ZsctXJ",
+          "status": "published",
+          "thumb_url": "https://images.wildphotography.com/derivatives/thumb/img-9600-jpg-ZsctXJ-thumb.jpg"
+        },
+        {
+          "id": 65,
+          "slug": "img-9717-jpg-7ZKCZv",
+          "status": "published",
+          "thumb_url": "https://images.wildphotography.com/derivatives/thumb/img-9717-jpg-7ZKCZv-thumb.jpg"
+        },
+        {
+          "id": 66,
+          "slug": "img-9723-jpg-qsxkCW",
+          "status": "published",
+          "thumb_url": "https://images.wildphotography.com/derivatives/thumb/img-9723-jpg-qsxkCW-thumb.jpg"
+        },
+        {
+          "id": 67,
+          "slug": "img-9890-jpg-zBSPgj",
+          "status": "published",
+          "thumb_url": "https://images.wildphotography.com/derivatives/thumb/img-9890-jpg-zBSPgj-thumb.jpg"
+        },
+        {
+          "id": 68,
+          "slug": "img-9902-jpg-JwSZbr",
+          "status": "published",
+          "thumb_url": "https://images.wildphotography.com/derivatives/thumb/img-9902-jpg-JwSZbr-thumb.jpg"
+        },
+        {
+          "id": 69,
+          "slug": "img-9843-jpg-hxpDkp",
+          "status": "published",
+          "thumb_url": "https://images.wildphotography.com/derivatives/thumb/img-9843-jpg-hxpDkp-thumb.jpg"
+        },
+        {
+          "id": 71,
+          "slug": "img-9919-jpg-DXrP87",
+          "status": "published",
+          "thumb_url": "https://images.wildphotography.com/derivatives/thumb/img-9919-jpg-DXrP87-thumb.jpg"
+        },
+        {
+          "id": 72,
+          "slug": "img-0021-jpg-GkKRzD",
+          "status": "published",
+          "thumb_url": "https://images.wildphotography.com/derivatives/thumb/img-0021-jpg-GkKRzD-thumb.jpg"
+        },
+        {
+          "id": 73,
+          "slug": "img-0235-jpg-9sPXtp",
+          "status": "published",
+          "thumb_url": "https://images.wildphotography.com/derivatives/thumb/img-0235-jpg-9sPXtp-thumb.jpg"
+        },
+        {
+          "id": 74,
+          "slug": "img-0236-jpg-S2T7WR",
+          "status": "published",
+          "thumb_url": "https://images.wildphotography.com/derivatives/thumb/img-0236-jpg-S2T7WR-thumb.jpg"
+        },
+        {
+          "id": 75,
+          "slug": "img-0238-jpg-ZGvNtp",
+          "status": "published",
+          "thumb_url": "https://images.wildphotography.com/derivatives/thumb/img-0238-jpg-ZGvNtp-thumb.jpg"
+        },
+        {
+          "id": 76,
+          "slug": "img-0277-jpg-qt4QV8",
+          "status": "published",
+          "thumb_url": "https://images.wildphotography.com/derivatives/thumb/img-0277-jpg-qt4QV8-thumb.jpg"
+        },
+        {
+          "id": 77,
+          "slug": "img-0325-jpg-fmv7Qf",
+          "status": "published",
+          "thumb_url": "https://images.wildphotography.com/derivatives/thumb/img-0325-jpg-fmv7Qf-thumb.jpg"
+        },
+        {
+          "id": 78,
+          "slug": "img-3493-jpg-gG4vff",
+          "status": "published",
+          "thumb_url": "https://images.wildphotography.com/derivatives/thumb/img-3493-jpg-gG4vff-thumb.jpg"
+        }
+      ]
+    },
+    "missing_content_hash": {
+      "description": "No content_hash \u2014 cannot detect duplicates or verify integrity",
+      "count": 15851,
+      "sample": [
+        {
+          "id": 16,
+          "slug": "scarlet-macaw",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 17,
+          "slug": "quetzal",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 19,
+          "slug": "three-toed-sloth",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 21,
+          "slug": "green-iguana",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 23,
+          "slug": "spectacled-owl",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 24,
+          "slug": "toucan-barbet",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 27,
+          "slug": "collared-aracari",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 29,
+          "slug": "boat-billed-heron",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 30,
+          "slug": "fiery-hummingbird",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 31,
+          "slug": "montezuma-oropendola",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 32,
+          "slug": "volcano-view",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 33,
+          "slug": "pacific-sunset",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 35,
+          "slug": "rainforest-waterfall",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 42,
+          "slug": "paddleboarding-adventure-on-a-tropical-coast-9kLkq4",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 43,
+          "slug": "wading-angler-quiet-water-fishing-scene-dWHshx",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 44,
+          "slug": "img-9761-jpg-McvJMD",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 45,
+          "slug": "img-9867-jpg-ggnxV4",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 46,
+          "slug": "img-0133-jpg-t25Tbt",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 47,
+          "slug": "img-0148-jpg-WgXJsL",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 48,
+          "slug": "img-0135-jpg-x8LCKP",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 49,
+          "slug": "img-0154-jpg-P4g3jH",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 50,
+          "slug": "costa-rica-billabong-surf-2009-5QgMNB",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 51,
+          "slug": "img-0280-jpg-WR6t7s",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 52,
+          "slug": "costa-rica-billabong-surf-2009-PSWCnj",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 53,
+          "slug": "img-9578-jpg-CWp24N",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 54,
+          "slug": "img-9644-jpg-HCxCGn",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 55,
+          "slug": "img-3491-jpg-jHd5JG",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 56,
+          "slug": "img-6629-jpg-dqMnVs",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 57,
+          "slug": "img-0332-jpg-rSSd5X",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 58,
+          "slug": "img-6632-jpg-sTd7RM",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 59,
+          "slug": "img-0341-jpg-kZ3chM",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 60,
+          "slug": "img-9672-jpg-HSKLKj",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 61,
+          "slug": "img-9584-jpg-F3ffkg",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 62,
+          "slug": "img-9468-jpg-pQpxCC",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 63,
+          "slug": "img-9572-jpg-TC4cZc",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 64,
+          "slug": "img-9600-jpg-ZsctXJ",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 65,
+          "slug": "img-9717-jpg-7ZKCZv",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 66,
+          "slug": "img-9723-jpg-qsxkCW",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 67,
+          "slug": "img-9890-jpg-zBSPgj",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 68,
+          "slug": "img-9902-jpg-JwSZbr",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 69,
+          "slug": "img-9843-jpg-hxpDkp",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 71,
+          "slug": "img-9919-jpg-DXrP87",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 72,
+          "slug": "img-0021-jpg-GkKRzD",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 73,
+          "slug": "img-0235-jpg-9sPXtp",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 74,
+          "slug": "img-0236-jpg-S2T7WR",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 75,
+          "slug": "img-0238-jpg-ZGvNtp",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 76,
+          "slug": "img-0277-jpg-qt4QV8",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 77,
+          "slug": "img-0325-jpg-fmv7Qf",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 78,
+          "slug": "img-3493-jpg-gG4vff",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 79,
+          "slug": "img-5305-jpg-R4sG6V",
+          "status": "published",
+          "has_r2": true
+        }
+      ]
+    },
+    "missing_slug": {
+      "description": "Null or empty slug \u2014 cannot build public URL",
+      "count": 0,
+      "sample": []
+    },
+    "missing_gallery_slug": {
+      "description": "ready_for_public_render=true but gallery_slug is null \u2014 no gallery association",
+      "count": 7014,
+      "sample": [
+        {
+          "id": 242,
+          "slug": "hermosa-beach-1",
+          "status": "published"
+        },
+        {
+          "id": 14905,
+          "slug": "resplendent-quetzal",
+          "status": "archived"
+        },
+        {
+          "id": 36571,
+          "slug": "121619-hyperlapse-0051-caa78cf4",
+          "status": "archived_unrecoverable"
+        },
+        {
+          "id": 41302,
+          "slug": "sunrise-sunset-2016-07-31-17-59-49",
+          "status": "published"
+        },
+        {
+          "id": 41303,
+          "slug": "sunrise-sunset-2017-07-15-18-57-45",
+          "status": "published"
+        },
+        {
+          "id": 41304,
+          "slug": "sunrise-sunset-2018-03-29-18-22-12",
+          "status": "published"
+        },
+        {
+          "id": 41305,
+          "slug": "sunrise-sunset-2018-08-21-17-53-04",
+          "status": "published"
+        },
+        {
+          "id": 41306,
+          "slug": "sunrise-sunset-2018-08-21-17-55-57",
+          "status": "published"
+        },
+        {
+          "id": 41307,
+          "slug": "sunrise-sunset-2018-08-21-18-01-08",
+          "status": "published"
+        },
+        {
+          "id": 41308,
+          "slug": "sunrise-sunset-2018-08-21-18-02-56",
+          "status": "published"
+        },
+        {
+          "id": 41309,
+          "slug": "sunrise-sunset-2018-08-21-18-09-15",
+          "status": "published"
+        },
+        {
+          "id": 41310,
+          "slug": "sunrise-sunset-2018-08-24-17-55-36",
+          "status": "published"
+        },
+        {
+          "id": 41311,
+          "slug": "sunrise-sunset-2019-july-19-hyperlapse-0311",
+          "status": "published"
+        },
+        {
+          "id": 41312,
+          "slug": "sunrise-sunset-2019-03-31-05-46-08",
+          "status": "published"
+        },
+        {
+          "id": 41313,
+          "slug": "sunrise-sunset-2019-11-08-17-16-08",
+          "status": "published"
+        },
+        {
+          "id": 41314,
+          "slug": "sunrise-sunset-2020-06-06-17-38-31",
+          "status": "published"
+        },
+        {
+          "id": 41315,
+          "slug": "sunrise-sunset-2020-06-07-17-57-31",
+          "status": "published"
+        },
+        {
+          "id": 41316,
+          "slug": "sunrise-sunset-2020-06-07-17-58-30",
+          "status": "published"
+        },
+        {
+          "id": 41317,
+          "slug": "sunrise-sunset-2020-06-07-18-00-38",
+          "status": "published"
+        },
+        {
+          "id": 41318,
+          "slug": "sunrise-sunset-2020-07-17-05-10-04",
+          "status": "published"
+        },
+        {
+          "id": 41319,
+          "slug": "sunrise-sunset-2020-07-17-05-18-15",
+          "status": "published"
+        },
+        {
+          "id": 41320,
+          "slug": "sunrise-sunset-2020-07-19-05-07-34",
+          "status": "published"
+        },
+        {
+          "id": 41321,
+          "slug": "sunrise-sunset-2020-07-19-05-19-48",
+          "status": "published"
+        },
+        {
+          "id": 41322,
+          "slug": "limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2021-05-01-08-24-07",
+          "status": "published"
+        },
+        {
+          "id": 41323,
+          "slug": "limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2021-05-01-11-09-45",
+          "status": "published"
+        },
+        {
+          "id": 41324,
+          "slug": "limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2021-05-01-11-11-08",
+          "status": "published"
+        },
+        {
+          "id": 41325,
+          "slug": "limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2021-05-02-09-43-23",
+          "status": "published"
+        },
+        {
+          "id": 41326,
+          "slug": "limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2021-05-02-14-32-01",
+          "status": "published"
+        },
+        {
+          "id": 41327,
+          "slug": "limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2021-05-02-14-33-07",
+          "status": "published"
+        },
+        {
+          "id": 41328,
+          "slug": "limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2023-10-12-16-46-01",
+          "status": "published"
+        },
+        {
+          "id": 41329,
+          "slug": "limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2023-10-12-17-26-45",
+          "status": "published"
+        },
+        {
+          "id": 41330,
+          "slug": "limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2023-10-12-17-26-50",
+          "status": "published"
+        },
+        {
+          "id": 41331,
+          "slug": "limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2023-10-12-17-29-35",
+          "status": "published"
+        },
+        {
+          "id": 41332,
+          "slug": "limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2023-10-12-17-29-38",
+          "status": "published"
+        },
+        {
+          "id": 41333,
+          "slug": "limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2023-10-12-17-29-49",
+          "status": "published"
+        },
+        {
+          "id": 41334,
+          "slug": "limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2023-10-13-07-06-41",
+          "status": "published"
+        },
+        {
+          "id": 41335,
+          "slug": "limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2023-10-13-07-06-43",
+          "status": "published"
+        },
+        {
+          "id": 41336,
+          "slug": "limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2023-10-13-07-06-55",
+          "status": "published"
+        },
+        {
+          "id": 41337,
+          "slug": "limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2023-10-13-08-39-12",
+          "status": "published"
+        },
+        {
+          "id": 41338,
+          "slug": "limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2023-10-13-08-39-17",
+          "status": "published"
+        },
+        {
+          "id": 41339,
+          "slug": "limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2023-10-13-09-17-18",
+          "status": "published"
+        },
+        {
+          "id": 41340,
+          "slug": "limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2023-10-13-09-19-00",
+          "status": "published"
+        },
+        {
+          "id": 41341,
+          "slug": "limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2023-10-13-09-30-17",
+          "status": "published"
+        },
+        {
+          "id": 41342,
+          "slug": "costa-rica-20070520-2268",
+          "status": "published"
+        },
+        {
+          "id": 41343,
+          "slug": "costa-rica-2014-09-14-14-14-46-copy",
+          "status": "published"
+        },
+        {
+          "id": 41344,
+          "slug": "costa-rica-2014-09-20-16-02-57-copy",
+          "status": "published"
+        },
+        {
+          "id": 41345,
+          "slug": "costa-rica-2014-09-20-16-03-17-copy",
+          "status": "published"
+        },
+        {
+          "id": 41346,
+          "slug": "costa-rica-2014-12-07-10-49-29-copy",
+          "status": "published"
+        },
+        {
+          "id": 41347,
+          "slug": "costa-rica-2015-03-29-12-28-24-copy",
+          "status": "published"
+        },
+        {
+          "id": 41348,
+          "slug": "costa-rica-2015-04-01-14-20-11-copy",
+          "status": "published"
+        }
+      ]
+    }
+  },
+  "status": "success"
+}

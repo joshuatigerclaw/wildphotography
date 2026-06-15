@@ -1,0 +1,460 @@
+[03:47:14] === Finding photos with ready_for_public_render=true but missing originals ===
+[03:47:14]   Found 43 records to process
+[03:47:14] 
+  [20] slug=capuchin-monkey
+[03:47:15]     not found: originals/capuchin-monkey/capuchin-monkey.jpg
+[03:47:15]     not found: originals/monkeys/capuchin-monkey/capuchin-monkey.jpg
+[03:47:15]     No original found in R2 → clearing ready_for_public_render
+[03:47:15] 
+  [83961] slug=cl0a6101-edited-1
+[03:47:15]     not found: originals/cl0a6101-edited-1-thumb.jpg/cl0a6101-edited-1-thumb.jpg.jpg
+[03:47:15]     not found: originals/cl0a6101-edited-1-thumb.jpg/cl0a6101-edited-1.jpg
+[03:47:15]     No original found in R2 → clearing ready_for_public_render
+[03:47:15] 
+  [90000] slug=tambor-nicoya-peninsula-costa--2021-05-21-15-17-12-fc2834
+[03:47:15]     not found: originals/derivatives/derivatives.jpg
+[03:47:15]     not found: originals/derivatives/tambor-nicoya-peninsula-costa--2021-05-21-15-17-12-fc2834.jpg
+[03:47:15]     not found: originals/tambor/-2021-05-21-15-17-12-fc2834.jpg
+[03:47:16]     not found: originals/nicoya/-2021-05-21-15-17-12-fc2834.jpg
+[03:47:16]     not found: originals/tambor-nicoya/-2021-05-21-15-17-12-fc2834.jpg
+[03:47:16]     not found: originals/-2021-05-21-15-17-12-fc2834.jpg
+[03:47:16]     No original found in R2 → clearing ready_for_public_render
+[03:47:16] 
+  [90001] slug=tambor-nicoya-peninsula-costa--2021-05-21-15-30-16-7b9fb0
+[03:47:16]     not found: originals/derivatives/derivatives.jpg
+[03:47:16]     not found: originals/derivatives/tambor-nicoya-peninsula-costa--2021-05-21-15-30-16-7b9fb0.jpg
+[03:47:16]     not found: originals/tambor/-2021-05-21-15-30-16-7b9fb0.jpg
+[03:47:16]     not found: originals/nicoya/-2021-05-21-15-30-16-7b9fb0.jpg
+[03:47:17]     not found: originals/tambor-nicoya/-2021-05-21-15-30-16-7b9fb0.jpg
+[03:47:17]     not found: originals/-2021-05-21-15-30-16-7b9fb0.jpg
+[03:47:17]     No original found in R2 → clearing ready_for_public_render
+[03:47:17] 
+  [90003] slug=tambor-nicoya-peninsula-costa--2021-12-28-06-12-09-f8665e
+[03:47:17]     not found: originals/derivatives/derivatives.jpg
+[03:47:17]     not found: originals/derivatives/tambor-nicoya-peninsula-costa--2021-12-28-06-12-09-f8665e.jpg
+[03:47:17]     not found: originals/tambor/-2021-12-28-06-12-09-f8665e.jpg
+[03:47:17]     not found: originals/nicoya/-2021-12-28-06-12-09-f8665e.jpg
+[03:47:17]     not found: originals/tambor-nicoya/-2021-12-28-06-12-09-f8665e.jpg
+[03:47:17]     not found: originals/-2021-12-28-06-12-09-f8665e.jpg
+[03:47:17]     No original found in R2 → clearing ready_for_public_render
+[03:47:18] 
+  [90006] slug=tambor-nicoya-peninsula-costa--2021-12-30-06-04-09-101804
+[03:47:18]     not found: originals/derivatives/derivatives.jpg
+[03:47:18]     not found: originals/derivatives/tambor-nicoya-peninsula-costa--2021-12-30-06-04-09-101804.jpg
+[03:47:18]     not found: originals/tambor/-2021-12-30-06-04-09-101804.jpg
+[03:47:18]     not found: originals/nicoya/-2021-12-30-06-04-09-101804.jpg
+[03:47:18]     not found: originals/tambor-nicoya/-2021-12-30-06-04-09-101804.jpg
+[03:47:18]     not found: originals/-2021-12-30-06-04-09-101804.jpg
+[03:47:18]     No original found in R2 → clearing ready_for_public_render
+[03:47:18] 
+  [90007] slug=tambor-nicoya-peninsula-costa--2021-12-31-17-01-48-8dd777
+[03:47:18]     not found: originals/derivatives/derivatives.jpg
+[03:47:19]     not found: originals/derivatives/tambor-nicoya-peninsula-costa--2021-12-31-17-01-48-8dd777.jpg
+[03:47:19]     not found: originals/tambor/-2021-12-31-17-01-48-8dd777.jpg
+[03:47:19]     not found: originals/nicoya/-2021-12-31-17-01-48-8dd777.jpg
+[03:47:19]     not found: originals/tambor-nicoya/-2021-12-31-17-01-48-8dd777.jpg
+[03:47:19]     not found: originals/-2021-12-31-17-01-48-8dd777.jpg
+[03:47:19]     No original found in R2 → clearing ready_for_public_render
+[03:47:19] 
+  [90010] slug=tambor-nicoya-peninsula-costa--2022-01-04-16-20-34-95187f
+[03:47:19]     not found: originals/derivatives/derivatives.jpg
+[03:47:19]     not found: originals/derivatives/tambor-nicoya-peninsula-costa--2022-01-04-16-20-34-95187f.jpg
+[03:47:20]     not found: originals/tambor/-2022-01-04-16-20-34-95187f.jpg
+[03:47:20]     not found: originals/nicoya/-2022-01-04-16-20-34-95187f.jpg
+[03:47:20]     not found: originals/tambor-nicoya/-2022-01-04-16-20-34-95187f.jpg
+[03:47:20]     not found: originals/-2022-01-04-16-20-34-95187f.jpg
+[03:47:20]     No original found in R2 → clearing ready_for_public_render
+[03:47:20] 
+  [90014] slug=tambor-nicoya-peninsula-costa--2022-02-19-08-28-02-aa2cb2
+[03:47:20]     not found: originals/derivatives/derivatives.jpg
+[03:47:20]     not found: originals/derivatives/tambor-nicoya-peninsula-costa--2022-02-19-08-28-02-aa2cb2.jpg
+[03:47:20]     not found: originals/tambor/-2022-02-19-08-28-02-aa2cb2.jpg
+[03:47:20]     not found: originals/nicoya/-2022-02-19-08-28-02-aa2cb2.jpg
+[03:47:21]     not found: originals/tambor-nicoya/-2022-02-19-08-28-02-aa2cb2.jpg
+[03:47:21]     not found: originals/-2022-02-19-08-28-02-aa2cb2.jpg
+[03:47:21]     No original found in R2 → clearing ready_for_public_render
+[03:47:21] 
+  [90016] slug=tambor-nicoya-peninsula-costa--2022-02-19-09-06-20-3f17a0
+[03:47:21]     not found: originals/derivatives/derivatives.jpg
+[03:47:21]     not found: originals/derivatives/tambor-nicoya-peninsula-costa--2022-02-19-09-06-20-3f17a0.jpg
+[03:47:21]     not found: originals/tambor/-2022-02-19-09-06-20-3f17a0.jpg
+[03:47:21]     not found: originals/nicoya/-2022-02-19-09-06-20-3f17a0.jpg
+[03:47:21]     not found: originals/tambor-nicoya/-2022-02-19-09-06-20-3f17a0.jpg
+[03:47:21]     not found: originals/-2022-02-19-09-06-20-3f17a0.jpg
+[03:47:21]     No original found in R2 → clearing ready_for_public_render
+[03:47:22] 
+  [90025] slug=tambor-nicoya-peninsula-costa--2024-12-27-15-12-37-056fd3
+[03:47:22]     not found: originals/derivatives/derivatives.jpg
+[03:47:22]     not found: originals/derivatives/tambor-nicoya-peninsula-costa--2024-12-27-15-12-37-056fd3.jpg
+[03:47:22]     not found: originals/tambor/-2024-12-27-15-12-37-056fd3.jpg
+[03:47:22]     not found: originals/nicoya/-2024-12-27-15-12-37-056fd3.jpg
+[03:47:22]     not found: originals/tambor-nicoya/-2024-12-27-15-12-37-056fd3.jpg
+[03:47:22]     not found: originals/-2024-12-27-15-12-37-056fd3.jpg
+[03:47:22]     No original found in R2 → clearing ready_for_public_render
+[03:47:22] 
+  [90026] slug=tambor-nicoya-peninsula-costa--2024-12-27-15-21-06-991967
+[03:47:22]     not found: originals/derivatives/derivatives.jpg
+[03:47:23]     not found: originals/derivatives/tambor-nicoya-peninsula-costa--2024-12-27-15-21-06-991967.jpg
+[03:47:23]     not found: originals/tambor/-2024-12-27-15-21-06-991967.jpg
+[03:47:23]     not found: originals/nicoya/-2024-12-27-15-21-06-991967.jpg
+[03:47:23]     not found: originals/tambor-nicoya/-2024-12-27-15-21-06-991967.jpg
+[03:47:23]     not found: originals/-2024-12-27-15-21-06-991967.jpg
+[03:47:23]     No original found in R2 → clearing ready_for_public_render
+[03:47:23] 
+  [90030] slug=tambor-nicoya-peninsula-costa--2024-12-28-07-33-50-f40458
+[03:47:23]     not found: originals/derivatives/derivatives.jpg
+[03:47:23]     not found: originals/derivatives/tambor-nicoya-peninsula-costa--2024-12-28-07-33-50-f40458.jpg
+[03:47:24]     not found: originals/tambor/-2024-12-28-07-33-50-f40458.jpg
+[03:47:24]     not found: originals/nicoya/-2024-12-28-07-33-50-f40458.jpg
+[03:47:24]     not found: originals/tambor-nicoya/-2024-12-28-07-33-50-f40458.jpg
+[03:47:24]     not found: originals/-2024-12-28-07-33-50-f40458.jpg
+[03:47:24]     No original found in R2 → clearing ready_for_public_render
+[03:47:24] 
+  [90031] slug=tambor-nicoya-peninsula-costa--2024-12-28-07-46-14-82b412
+[03:47:24]     not found: originals/derivatives/derivatives.jpg
+[03:47:24]     not found: originals/derivatives/tambor-nicoya-peninsula-costa--2024-12-28-07-46-14-82b412.jpg
+[03:47:24]     not found: originals/tambor/-2024-12-28-07-46-14-82b412.jpg
+[03:47:24]     not found: originals/nicoya/-2024-12-28-07-46-14-82b412.jpg
+[03:47:25]     not found: originals/tambor-nicoya/-2024-12-28-07-46-14-82b412.jpg
+[03:47:25]     not found: originals/-2024-12-28-07-46-14-82b412.jpg
+[03:47:25]     No original found in R2 → clearing ready_for_public_render
+[03:47:25] 
+  [90032] slug=tambor-nicoya-peninsula-costa--2024-12-28-12-39-23-89b905
+[03:47:25]     not found: originals/derivatives/derivatives.jpg
+[03:47:25]     not found: originals/derivatives/tambor-nicoya-peninsula-costa--2024-12-28-12-39-23-89b905.jpg
+[03:47:25]     not found: originals/tambor/-2024-12-28-12-39-23-89b905.jpg
+[03:47:25]     not found: originals/nicoya/-2024-12-28-12-39-23-89b905.jpg
+[03:47:25]     not found: originals/tambor-nicoya/-2024-12-28-12-39-23-89b905.jpg
+[03:47:25]     not found: originals/-2024-12-28-12-39-23-89b905.jpg
+[03:47:25]     No original found in R2 → clearing ready_for_public_render
+[03:47:26] 
+  [90034] slug=tambor-nicoya-peninsula-costa--2024-12-28-17-25-03-1c6890
+[03:47:26]     not found: originals/derivatives/derivatives.jpg
+[03:47:26]     not found: originals/derivatives/tambor-nicoya-peninsula-costa--2024-12-28-17-25-03-1c6890.jpg
+[03:47:26]     not found: originals/tambor/-2024-12-28-17-25-03-1c6890.jpg
+[03:47:26]     not found: originals/nicoya/-2024-12-28-17-25-03-1c6890.jpg
+[03:47:26]     not found: originals/tambor-nicoya/-2024-12-28-17-25-03-1c6890.jpg
+[03:47:26]     not found: originals/-2024-12-28-17-25-03-1c6890.jpg
+[03:47:26]     No original found in R2 → clearing ready_for_public_render
+[03:47:26] 
+  [90038] slug=tambor-nicoya-peninsula-costa--2024-12-29-15-37-11-1fa959
+[03:47:26]     not found: originals/derivatives/derivatives.jpg
+[03:47:27]     not found: originals/derivatives/tambor-nicoya-peninsula-costa--2024-12-29-15-37-11-1fa959.jpg
+[03:47:27]     not found: originals/tambor/-2024-12-29-15-37-11-1fa959.jpg
+[03:47:27]     not found: originals/nicoya/-2024-12-29-15-37-11-1fa959.jpg
+[03:47:27]     not found: originals/tambor-nicoya/-2024-12-29-15-37-11-1fa959.jpg
+[03:47:27]     not found: originals/-2024-12-29-15-37-11-1fa959.jpg
+[03:47:27]     No original found in R2 → clearing ready_for_public_render
+[03:47:27] 
+  [90116] slug=isla-tortuga-dji-0020-c0de4b
+[03:47:27]     not found: originals/90116/90116.jpg
+[03:47:27]     not found: originals/90116/isla-tortuga-dji-0020-c0de4b.jpg
+[03:47:28]     not found: originals/isla-tortuga/dji-0020-c0de4b.jpg
+[03:47:28]     not found: originals/isla-tortuga/isla-tortuga-dji-0020-c0de4b.jpg
+[03:47:28]     not found: originals/isla-tortuga/0020-c0de4b.jpg
+[03:47:28]     not found: originals/dji-isla-tortuga/isla-tortuga-dji-0020-c0de4b.jpg
+[03:47:28]     not found: originals/isla-tortuga/originals/dji-0020-c0de4b.jpg
+[03:47:28]     No original found in R2 → clearing ready_for_public_render
+[03:47:28] 
+  [90118] slug=isla-tortuga-dji-0025-671b45
+[03:47:28]     not found: originals/90118/90118.jpg
+[03:47:28]     not found: originals/90118/isla-tortuga-dji-0025-671b45.jpg
+[03:47:28]     not found: originals/isla-tortuga/dji-0025-671b45.jpg
+[03:47:29]     not found: originals/isla-tortuga/isla-tortuga-dji-0025-671b45.jpg
+[03:47:29]     not found: originals/isla-tortuga/0025-671b45.jpg
+[03:47:29]     not found: originals/dji-isla-tortuga/isla-tortuga-dji-0025-671b45.jpg
+[03:47:29]     not found: originals/isla-tortuga/originals/dji-0025-671b45.jpg
+[03:47:29]     No original found in R2 → clearing ready_for_public_render
+[03:47:29] 
+  [90123] slug=isla-tortuga-dji-0036-3797fd
+[03:47:29]     not found: originals/90123/90123.jpg
+[03:47:29]     not found: originals/90123/isla-tortuga-dji-0036-3797fd.jpg
+[03:47:29]     not found: originals/isla-tortuga/dji-0036-3797fd.jpg
+[03:47:29]     not found: originals/isla-tortuga/isla-tortuga-dji-0036-3797fd.jpg
+[03:47:30]     not found: originals/isla-tortuga/0036-3797fd.jpg
+[03:47:30]     not found: originals/dji-isla-tortuga/isla-tortuga-dji-0036-3797fd.jpg
+[03:47:30]     not found: originals/isla-tortuga/originals/dji-0036-3797fd.jpg
+[03:47:30]     No original found in R2 → clearing ready_for_public_render
+[03:47:30] 
+  [90125] slug=isla-tortuga-dji-0038-d99e0f
+[03:47:30]     not found: originals/isla-tortuga-dji-0038-d99e0f/isla-tortuga-dji-0038-d99e0f.jpg
+[03:47:30]     not found: originals/isla-tortuga-dji-0038-d99e0f/isla-tortuga-dji-0038-d99e0f.jpg
+[03:47:30]     not found: originals/isla-tortuga/dji-0038-d99e0f.jpg
+[03:47:30]     not found: originals/isla-tortuga/isla-tortuga-dji-0038-d99e0f.jpg
+[03:47:31]     not found: originals/isla-tortuga/0038-d99e0f.jpg
+[03:47:31]     not found: originals/dji-isla-tortuga/isla-tortuga-dji-0038-d99e0f.jpg
+[03:47:31]     not found: originals/isla-tortuga/originals/dji-0038-d99e0f.jpg
+[03:47:31]     No original found in R2 → clearing ready_for_public_render
+[03:47:31] 
+  [90126] slug=isla-tortuga-dji-0039-47dc0d
+[03:47:31]     not found: originals/isla-tortuga-dji-0039-47dc0d/isla-tortuga-dji-0039-47dc0d.jpg
+[03:47:31]     not found: originals/isla-tortuga-dji-0039-47dc0d/isla-tortuga-dji-0039-47dc0d.jpg
+[03:47:31]     not found: originals/isla-tortuga/dji-0039-47dc0d.jpg
+[03:47:31]     not found: originals/isla-tortuga/isla-tortuga-dji-0039-47dc0d.jpg
+[03:47:31]     not found: originals/isla-tortuga/0039-47dc0d.jpg
+[03:47:32]     not found: originals/dji-isla-tortuga/isla-tortuga-dji-0039-47dc0d.jpg
+[03:47:32]     not found: originals/isla-tortuga/originals/dji-0039-47dc0d.jpg
+[03:47:32]     No original found in R2 → clearing ready_for_public_render
+[03:47:32] 
+  [90127] slug=isla-tortuga-dji-0040-eb474d
+[03:47:32]     not found: originals/isla-tortuga-dji-0040-eb474d/isla-tortuga-dji-0040-eb474d.jpg
+[03:47:32]     not found: originals/isla-tortuga-dji-0040-eb474d/isla-tortuga-dji-0040-eb474d.jpg
+[03:47:32]     not found: originals/isla-tortuga/dji-0040-eb474d.jpg
+[03:47:32]     not found: originals/isla-tortuga/isla-tortuga-dji-0040-eb474d.jpg
+[03:47:32]     not found: originals/isla-tortuga/0040-eb474d.jpg
+[03:47:32]     not found: originals/dji-isla-tortuga/isla-tortuga-dji-0040-eb474d.jpg
+[03:47:33]     not found: originals/isla-tortuga/originals/dji-0040-eb474d.jpg
+[03:47:33]     No original found in R2 → clearing ready_for_public_render
+[03:47:33] 
+  [90131] slug=isla-tortuga-dji-0047-87dd00
+[03:47:33]     not found: originals/isla-tortuga-dji-0047-87dd00/isla-tortuga-dji-0047-87dd00.jpg
+[03:47:33]     not found: originals/isla-tortuga-dji-0047-87dd00/isla-tortuga-dji-0047-87dd00.jpg
+[03:47:33]     not found: originals/isla-tortuga/dji-0047-87dd00.jpg
+[03:47:33]     not found: originals/isla-tortuga/isla-tortuga-dji-0047-87dd00.jpg
+[03:47:33]     not found: originals/isla-tortuga/0047-87dd00.jpg
+[03:47:33]     not found: originals/dji-isla-tortuga/isla-tortuga-dji-0047-87dd00.jpg
+[03:47:34]     not found: originals/isla-tortuga/originals/dji-0047-87dd00.jpg
+[03:47:34]     No original found in R2 → clearing ready_for_public_render
+[03:47:34] 
+  [90132] slug=isla-tortuga-dji-0048-0b5cc8
+[03:47:34]     not found: originals/isla-tortuga-dji-0048-0b5cc8/isla-tortuga-dji-0048-0b5cc8.jpg
+[03:47:34]     not found: originals/isla-tortuga-dji-0048-0b5cc8/isla-tortuga-dji-0048-0b5cc8.jpg
+[03:47:34]     not found: originals/isla-tortuga/dji-0048-0b5cc8.jpg
+[03:47:34]     not found: originals/isla-tortuga/isla-tortuga-dji-0048-0b5cc8.jpg
+[03:47:34]     not found: originals/isla-tortuga/0048-0b5cc8.jpg
+[03:47:34]     not found: originals/dji-isla-tortuga/isla-tortuga-dji-0048-0b5cc8.jpg
+[03:47:34]     not found: originals/isla-tortuga/originals/dji-0048-0b5cc8.jpg
+[03:47:34]     No original found in R2 → clearing ready_for_public_render
+[03:47:35] 
+  [90136] slug=isla-tortuga-dji-0054-41b7ab
+[03:47:35]     not found: originals/isla-tortuga-dji-0054-41b7ab/isla-tortuga-dji-0054-41b7ab.jpg
+[03:47:35]     not found: originals/isla-tortuga-dji-0054-41b7ab/isla-tortuga-dji-0054-41b7ab.jpg
+[03:47:35]     not found: originals/isla-tortuga/dji-0054-41b7ab.jpg
+[03:47:35]     not found: originals/isla-tortuga/isla-tortuga-dji-0054-41b7ab.jpg
+[03:47:35]     not found: originals/isla-tortuga/0054-41b7ab.jpg
+[03:47:35]     not found: originals/dji-isla-tortuga/isla-tortuga-dji-0054-41b7ab.jpg
+[03:47:35]     not found: originals/isla-tortuga/originals/dji-0054-41b7ab.jpg
+[03:47:35]     No original found in R2 → clearing ready_for_public_render
+[03:47:35] 
+  [90142] slug=isla-tortuga-dji-0067-d04dd9
+[03:47:36]     not found: originals/isla-tortuga-dji-0067-d04dd9/isla-tortuga-dji-0067-d04dd9.jpg
+[03:47:36]     not found: originals/isla-tortuga-dji-0067-d04dd9/isla-tortuga-dji-0067-d04dd9.jpg
+[03:47:36]     not found: originals/isla-tortuga/dji-0067-d04dd9.jpg
+[03:47:36]     not found: originals/isla-tortuga/isla-tortuga-dji-0067-d04dd9.jpg
+[03:47:36]     not found: originals/isla-tortuga/0067-d04dd9.jpg
+[03:47:36]     not found: originals/dji-isla-tortuga/isla-tortuga-dji-0067-d04dd9.jpg
+[03:47:36]     not found: originals/isla-tortuga/originals/dji-0067-d04dd9.jpg
+[03:47:36]     No original found in R2 → clearing ready_for_public_render
+[03:47:36] 
+  [90145] slug=isla-tortuga-dji-0070-393195
+[03:47:37]     not found: originals/isla-tortuga-dji-0070-393195/isla-tortuga-dji-0070-393195.jpg
+[03:47:37]     not found: originals/isla-tortuga-dji-0070-393195/isla-tortuga-dji-0070-393195.jpg
+[03:47:37]     not found: originals/isla-tortuga/dji-0070-393195.jpg
+[03:47:37]     not found: originals/isla-tortuga/isla-tortuga-dji-0070-393195.jpg
+[03:47:37]     not found: originals/isla-tortuga/0070-393195.jpg
+[03:47:37]     not found: originals/dji-isla-tortuga/isla-tortuga-dji-0070-393195.jpg
+[03:47:37]     not found: originals/isla-tortuga/originals/dji-0070-393195.jpg
+[03:47:37]     No original found in R2 → clearing ready_for_public_render
+[03:47:37] 
+  [90149] slug=isla-tortuga-dji-0074-7414aa
+[03:47:37]     not found: originals/isla-tortuga-dji-0074-7414aa/isla-tortuga-dji-0074-7414aa.jpg
+[03:47:38]     not found: originals/isla-tortuga-dji-0074-7414aa/isla-tortuga-dji-0074-7414aa.jpg
+[03:47:38]     not found: originals/isla-tortuga/dji-0074-7414aa.jpg
+[03:47:38]     not found: originals/isla-tortuga/isla-tortuga-dji-0074-7414aa.jpg
+[03:47:38]     not found: originals/isla-tortuga/0074-7414aa.jpg
+[03:47:38]     not found: originals/dji-isla-tortuga/isla-tortuga-dji-0074-7414aa.jpg
+[03:47:38]     not found: originals/isla-tortuga/originals/dji-0074-7414aa.jpg
+[03:47:38]     No original found in R2 → clearing ready_for_public_render
+[03:47:38] 
+  [90155] slug=isla-tortuga-dji-0084-b74a39
+[03:47:38]     not found: originals/isla-tortuga-dji-0084-b74a39/isla-tortuga-dji-0084-b74a39.jpg
+[03:47:38]     not found: originals/isla-tortuga-dji-0084-b74a39/isla-tortuga-dji-0084-b74a39.jpg
+[03:47:39]     not found: originals/isla-tortuga/dji-0084-b74a39.jpg
+[03:47:39]     not found: originals/isla-tortuga/isla-tortuga-dji-0084-b74a39.jpg
+[03:47:39]     not found: originals/isla-tortuga/0084-b74a39.jpg
+[03:47:39]     not found: originals/dji-isla-tortuga/isla-tortuga-dji-0084-b74a39.jpg
+[03:47:39]     not found: originals/isla-tortuga/originals/dji-0084-b74a39.jpg
+[03:47:39]     No original found in R2 → clearing ready_for_public_render
+[03:47:39] 
+  [90161] slug=isla-tortuga-dji-0091-1e3c8e
+[03:47:39]     not found: originals/isla-tortuga-dji-0091-1e3c8e/isla-tortuga-dji-0091-1e3c8e.jpg
+[03:47:39]     not found: originals/isla-tortuga-dji-0091-1e3c8e/isla-tortuga-dji-0091-1e3c8e.jpg
+[03:47:40]     not found: originals/isla-tortuga/dji-0091-1e3c8e.jpg
+[03:47:40]     not found: originals/isla-tortuga/isla-tortuga-dji-0091-1e3c8e.jpg
+[03:47:40]     not found: originals/isla-tortuga/0091-1e3c8e.jpg
+[03:47:40]     not found: originals/dji-isla-tortuga/isla-tortuga-dji-0091-1e3c8e.jpg
+[03:47:40]     not found: originals/isla-tortuga/originals/dji-0091-1e3c8e.jpg
+[03:47:40]     No original found in R2 → clearing ready_for_public_render
+[03:47:40] 
+  [90164] slug=isla-tortuga-dji-0094-e04797
+[03:47:40]     not found: originals/isla-tortuga-dji-0094-e04797/isla-tortuga-dji-0094-e04797.jpg
+[03:47:40]     not found: originals/isla-tortuga-dji-0094-e04797/isla-tortuga-dji-0094-e04797.jpg
+[03:47:40]     not found: originals/isla-tortuga/dji-0094-e04797.jpg
+[03:47:41]     not found: originals/isla-tortuga/isla-tortuga-dji-0094-e04797.jpg
+[03:47:41]     not found: originals/isla-tortuga/0094-e04797.jpg
+[03:47:41]     not found: originals/dji-isla-tortuga/isla-tortuga-dji-0094-e04797.jpg
+[03:47:41]     not found: originals/isla-tortuga/originals/dji-0094-e04797.jpg
+[03:47:41]     No original found in R2 → clearing ready_for_public_render
+[03:47:41] 
+  [90165] slug=isla-tortuga-dji-0095-5601a7
+[03:47:41]     not found: originals/isla-tortuga-dji-0095-5601a7/isla-tortuga-dji-0095-5601a7.jpg
+[03:47:41]     not found: originals/isla-tortuga-dji-0095-5601a7/isla-tortuga-dji-0095-5601a7.jpg
+[03:47:41]     not found: originals/isla-tortuga/dji-0095-5601a7.jpg
+[03:47:41]     not found: originals/isla-tortuga/isla-tortuga-dji-0095-5601a7.jpg
+[03:47:42]     not found: originals/isla-tortuga/0095-5601a7.jpg
+[03:47:42]     not found: originals/dji-isla-tortuga/isla-tortuga-dji-0095-5601a7.jpg
+[03:47:42]     not found: originals/isla-tortuga/originals/dji-0095-5601a7.jpg
+[03:47:42]     No original found in R2 → clearing ready_for_public_render
+[03:47:42] 
+  [90168] slug=isla-tortuga-dji-0100-a7f256
+[03:47:42]     not found: originals/isla-tortuga-dji-0100-a7f256/isla-tortuga-dji-0100-a7f256.jpg
+[03:47:42]     not found: originals/isla-tortuga-dji-0100-a7f256/isla-tortuga-dji-0100-a7f256.jpg
+[03:47:42]     not found: originals/isla-tortuga/dji-0100-a7f256.jpg
+[03:47:42]     not found: originals/isla-tortuga/isla-tortuga-dji-0100-a7f256.jpg
+[03:47:43]     not found: originals/isla-tortuga/0100-a7f256.jpg
+[03:47:43]     not found: originals/dji-isla-tortuga/isla-tortuga-dji-0100-a7f256.jpg
+[03:47:43]     not found: originals/isla-tortuga/originals/dji-0100-a7f256.jpg
+[03:47:43]     No original found in R2 → clearing ready_for_public_render
+[03:47:43] 
+  [90169] slug=isla-tortuga-dji-0103-c625a0
+[03:47:43]     not found: originals/isla-tortuga-dji-0103-c625a0/isla-tortuga-dji-0103-c625a0.jpg
+[03:47:43]     not found: originals/isla-tortuga-dji-0103-c625a0/isla-tortuga-dji-0103-c625a0.jpg
+[03:47:43]     not found: originals/isla-tortuga/dji-0103-c625a0.jpg
+[03:47:43]     not found: originals/isla-tortuga/isla-tortuga-dji-0103-c625a0.jpg
+[03:47:43]     not found: originals/isla-tortuga/0103-c625a0.jpg
+[03:47:44]     not found: originals/dji-isla-tortuga/isla-tortuga-dji-0103-c625a0.jpg
+[03:47:44]     not found: originals/isla-tortuga/originals/dji-0103-c625a0.jpg
+[03:47:44]     No original found in R2 → clearing ready_for_public_render
+[03:47:44] 
+  [90172] slug=isla-tortuga-dji-0107-c0877d
+[03:47:44]     not found: originals/isla-tortuga-dji-0107-c0877d/isla-tortuga-dji-0107-c0877d.jpg
+[03:47:44]     not found: originals/isla-tortuga-dji-0107-c0877d/isla-tortuga-dji-0107-c0877d.jpg
+[03:47:44]     not found: originals/isla-tortuga/dji-0107-c0877d.jpg
+[03:47:44]     not found: originals/isla-tortuga/isla-tortuga-dji-0107-c0877d.jpg
+[03:47:44]     not found: originals/isla-tortuga/0107-c0877d.jpg
+[03:47:44]     not found: originals/dji-isla-tortuga/isla-tortuga-dji-0107-c0877d.jpg
+[03:47:45]     not found: originals/isla-tortuga/originals/dji-0107-c0877d.jpg
+[03:47:45]     No original found in R2 → clearing ready_for_public_render
+[03:47:45] 
+  [90173] slug=isla-tortuga-dji-0108-038bf5
+[03:47:45]     not found: originals/isla-tortuga-dji-0108-038bf5/isla-tortuga-dji-0108-038bf5.jpg
+[03:47:45]     not found: originals/isla-tortuga-dji-0108-038bf5/isla-tortuga-dji-0108-038bf5.jpg
+[03:47:45]     not found: originals/isla-tortuga/dji-0108-038bf5.jpg
+[03:47:45]     not found: originals/isla-tortuga/isla-tortuga-dji-0108-038bf5.jpg
+[03:47:45]     not found: originals/isla-tortuga/0108-038bf5.jpg
+[03:47:45]     not found: originals/dji-isla-tortuga/isla-tortuga-dji-0108-038bf5.jpg
+[03:47:45]     not found: originals/isla-tortuga/originals/dji-0108-038bf5.jpg
+[03:47:45]     No original found in R2 → clearing ready_for_public_render
+[03:47:46] 
+  [90177] slug=isla-tortuga-dji-0115-88019c
+[03:47:46]     not found: originals/isla-tortuga-dji-0115-88019c/isla-tortuga-dji-0115-88019c.jpg
+[03:47:46]     not found: originals/isla-tortuga-dji-0115-88019c/isla-tortuga-dji-0115-88019c.jpg
+[03:47:46]     not found: originals/isla-tortuga/dji-0115-88019c.jpg
+[03:47:46]     not found: originals/isla-tortuga/isla-tortuga-dji-0115-88019c.jpg
+[03:47:46]     not found: originals/isla-tortuga/0115-88019c.jpg
+[03:47:46]     not found: originals/dji-isla-tortuga/isla-tortuga-dji-0115-88019c.jpg
+[03:47:46]     not found: originals/isla-tortuga/originals/dji-0115-88019c.jpg
+[03:47:46]     No original found in R2 → clearing ready_for_public_render
+[03:47:46] 
+  [90179] slug=isla-tortuga-dji-0118-c3c0c1
+[03:47:47]     not found: originals/isla-tortuga-dji-0118-c3c0c1/isla-tortuga-dji-0118-c3c0c1.jpg
+[03:47:47]     not found: originals/isla-tortuga-dji-0118-c3c0c1/isla-tortuga-dji-0118-c3c0c1.jpg
+[03:47:47]     not found: originals/isla-tortuga/dji-0118-c3c0c1.jpg
+[03:47:47]     not found: originals/isla-tortuga/isla-tortuga-dji-0118-c3c0c1.jpg
+[03:47:47]     not found: originals/isla-tortuga/0118-c3c0c1.jpg
+[03:47:47]     not found: originals/dji-isla-tortuga/isla-tortuga-dji-0118-c3c0c1.jpg
+[03:47:47]     not found: originals/isla-tortuga/originals/dji-0118-c3c0c1.jpg
+[03:47:47]     No original found in R2 → clearing ready_for_public_render
+[03:47:47] 
+  [90184] slug=isla-tortuga-dji-0124-46e1b8
+[03:47:48]     not found: originals/isla-tortuga-dji-0124-46e1b8/isla-tortuga-dji-0124-46e1b8.jpg
+[03:47:48]     not found: originals/isla-tortuga-dji-0124-46e1b8/isla-tortuga-dji-0124-46e1b8.jpg
+[03:47:48]     not found: originals/isla-tortuga/dji-0124-46e1b8.jpg
+[03:47:48]     not found: originals/isla-tortuga/isla-tortuga-dji-0124-46e1b8.jpg
+[03:47:48]     not found: originals/isla-tortuga/0124-46e1b8.jpg
+[03:47:48]     not found: originals/dji-isla-tortuga/isla-tortuga-dji-0124-46e1b8.jpg
+[03:47:48]     not found: originals/isla-tortuga/originals/dji-0124-46e1b8.jpg
+[03:47:48]     No original found in R2 → clearing ready_for_public_render
+[03:47:48] 
+  [90185] slug=isla-tortuga-dji-0126-e8cd2f
+[03:47:48]     not found: originals/isla-tortuga-dji-0126-e8cd2f/isla-tortuga-dji-0126-e8cd2f.jpg
+[03:47:49]     not found: originals/isla-tortuga-dji-0126-e8cd2f/isla-tortuga-dji-0126-e8cd2f.jpg
+[03:47:49]     not found: originals/isla-tortuga/dji-0126-e8cd2f.jpg
+[03:47:49]     not found: originals/isla-tortuga/isla-tortuga-dji-0126-e8cd2f.jpg
+[03:47:49]     not found: originals/isla-tortuga/0126-e8cd2f.jpg
+[03:47:49]     not found: originals/dji-isla-tortuga/isla-tortuga-dji-0126-e8cd2f.jpg
+[03:47:49]     not found: originals/isla-tortuga/originals/dji-0126-e8cd2f.jpg
+[03:47:49]     No original found in R2 → clearing ready_for_public_render
+[03:47:49] 
+  [90188] slug=isla-tortuga-dji-0133-5c2da7
+[03:47:49]     not found: originals/isla-tortuga-dji-0133-5c2da7/isla-tortuga-dji-0133-5c2da7.jpg
+[03:47:50]     not found: originals/isla-tortuga-dji-0133-5c2da7/isla-tortuga-dji-0133-5c2da7.jpg
+[03:47:50]     not found: originals/isla-tortuga/dji-0133-5c2da7.jpg
+[03:47:50]     not found: originals/isla-tortuga/isla-tortuga-dji-0133-5c2da7.jpg
+[03:47:50]     not found: originals/isla-tortuga/0133-5c2da7.jpg
+[03:47:50]     not found: originals/dji-isla-tortuga/isla-tortuga-dji-0133-5c2da7.jpg
+[03:47:50]     not found: originals/isla-tortuga/originals/dji-0133-5c2da7.jpg
+[03:47:50]     No original found in R2 → clearing ready_for_public_render
+[03:47:50] 
+  [90191] slug=isla-tortuga-dji-0139-d1330f
+[03:47:50]     not found: originals/isla-tortuga-dji-0139-d1330f/isla-tortuga-dji-0139-d1330f.jpg
+[03:47:50]     not found: originals/isla-tortuga-dji-0139-d1330f/isla-tortuga-dji-0139-d1330f.jpg
+[03:47:51]     not found: originals/isla-tortuga/dji-0139-d1330f.jpg
+[03:47:51]     not found: originals/isla-tortuga/isla-tortuga-dji-0139-d1330f.jpg
+[03:47:51]     not found: originals/isla-tortuga/0139-d1330f.jpg
+[03:47:51]     not found: originals/dji-isla-tortuga/isla-tortuga-dji-0139-d1330f.jpg
+[03:47:51]     not found: originals/isla-tortuga/originals/dji-0139-d1330f.jpg
+[03:47:51]     No original found in R2 → clearing ready_for_public_render
+[03:47:51] 
+=== RESULTS ===
+[03:47:51]   Total processed: 43
+[03:47:51]   Repaired (original_r2_key found & populated): 0
+[03:47:51]   Cleared flags (no original found): 43
+[03:47:51]   Still broken: 0
+[03:47:51] 
+  Cleared flags (ready_for_public_render=false):
+[03:47:51]     id=20 slug=capuchin-monkey status=archived_unrecoverable
+[03:47:51]     id=83961 slug=cl0a6101-edited-1 status=duplicate_skip
+[03:47:51]     id=90000 slug=tambor-nicoya-peninsula-costa--2021-05-21-15-17-12-fc2834 status=archived_unrecoverable
+[03:47:51]     id=90001 slug=tambor-nicoya-peninsula-costa--2021-05-21-15-30-16-7b9fb0 status=archived_unrecoverable
+[03:47:51]     id=90003 slug=tambor-nicoya-peninsula-costa--2021-12-28-06-12-09-f8665e status=archived_unrecoverable
+[03:47:51]     id=90006 slug=tambor-nicoya-peninsula-costa--2021-12-30-06-04-09-101804 status=archived_unrecoverable
+[03:47:51]     id=90007 slug=tambor-nicoya-peninsula-costa--2021-12-31-17-01-48-8dd777 status=archived_unrecoverable
+[03:47:51]     id=90010 slug=tambor-nicoya-peninsula-costa--2022-01-04-16-20-34-95187f status=archived_unrecoverable
+[03:47:51]     id=90014 slug=tambor-nicoya-peninsula-costa--2022-02-19-08-28-02-aa2cb2 status=archived_unrecoverable
+[03:47:51]     id=90016 slug=tambor-nicoya-peninsula-costa--2022-02-19-09-06-20-3f17a0 status=archived_unrecoverable
+[03:47:51]     id=90025 slug=tambor-nicoya-peninsula-costa--2024-12-27-15-12-37-056fd3 status=archived_unrecoverable
+[03:47:51]     id=90026 slug=tambor-nicoya-peninsula-costa--2024-12-27-15-21-06-991967 status=archived_unrecoverable
+[03:47:51]     id=90030 slug=tambor-nicoya-peninsula-costa--2024-12-28-07-33-50-f40458 status=archived_unrecoverable
+[03:47:51]     id=90031 slug=tambor-nicoya-peninsula-costa--2024-12-28-07-46-14-82b412 status=archived_unrecoverable
+[03:47:51]     id=90032 slug=tambor-nicoya-peninsula-costa--2024-12-28-12-39-23-89b905 status=archived_unrecoverable
+[03:47:51]     id=90034 slug=tambor-nicoya-peninsula-costa--2024-12-28-17-25-03-1c6890 status=archived_unrecoverable
+[03:47:51]     id=90038 slug=tambor-nicoya-peninsula-costa--2024-12-29-15-37-11-1fa959 status=archived_unrecoverable
+[03:47:51]     id=90116 slug=isla-tortuga-dji-0020-c0de4b status=archived_unrecoverable
+[03:47:51]     id=90118 slug=isla-tortuga-dji-0025-671b45 status=archived_unrecoverable
+[03:47:51]     id=90123 slug=isla-tortuga-dji-0036-3797fd status=archived_unrecoverable
+[03:47:51]     id=90125 slug=isla-tortuga-dji-0038-d99e0f status=archived_unrecoverable
+[03:47:51]     id=90126 slug=isla-tortuga-dji-0039-47dc0d status=archived_unrecoverable
+[03:47:51]     id=90127 slug=isla-tortuga-dji-0040-eb474d status=archived_unrecoverable
+[03:47:51]     id=90131 slug=isla-tortuga-dji-0047-87dd00 status=archived_unrecoverable
+[03:47:51]     id=90132 slug=isla-tortuga-dji-0048-0b5cc8 status=archived_unrecoverable
+[03:47:51]     id=90136 slug=isla-tortuga-dji-0054-41b7ab status=archived_unrecoverable
+[03:47:51]     id=90142 slug=isla-tortuga-dji-0067-d04dd9 status=archived_unrecoverable
+[03:47:51]     id=90145 slug=isla-tortuga-dji-0070-393195 status=archived_unrecoverable
+[03:47:51]     id=90149 slug=isla-tortuga-dji-0074-7414aa status=archived_unrecoverable
+[03:47:51]     id=90155 slug=isla-tortuga-dji-0084-b74a39 status=archived_unrecoverable
+[03:47:51]     id=90161 slug=isla-tortuga-dji-0091-1e3c8e status=archived_unrecoverable
+[03:47:51]     id=90164 slug=isla-tortuga-dji-0094-e04797 status=archived_unrecoverable
+[03:47:51]     id=90165 slug=isla-tortuga-dji-0095-5601a7 status=archived_unrecoverable
+[03:47:51]     id=90168 slug=isla-tortuga-dji-0100-a7f256 status=archived_unrecoverable
+[03:47:51]     id=90169 slug=isla-tortuga-dji-0103-c625a0 status=archived_unrecoverable
+[03:47:51]     id=90172 slug=isla-tortuga-dji-0107-c0877d status=archived_unrecoverable
+[03:47:51]     id=90173 slug=isla-tortuga-dji-0108-038bf5 status=archived_unrecoverable
+[03:47:51]     id=90177 slug=isla-tortuga-dji-0115-88019c status=archived_unrecoverable
+[03:47:51]     id=90179 slug=isla-tortuga-dji-0118-c3c0c1 status=archived_unrecoverable
+[03:47:51]     id=90184 slug=isla-tortuga-dji-0124-46e1b8 status=archived_unrecoverable
+[03:47:51]     id=90185 slug=isla-tortuga-dji-0126-e8cd2f status=archived_unrecoverable
+[03:47:51]     id=90188 slug=isla-tortuga-dji-0133-5c2da7 status=archived_unrecoverable
+[03:47:51]     id=90191 slug=isla-tortuga-dji-0139-d1330f status=archived_unrecoverable
+[03:47:51] 
+  Log: /Users/joshuatenbrink/.openclaw/workspace/wildphotography/logs/rpr_clear_20260607_034714.log

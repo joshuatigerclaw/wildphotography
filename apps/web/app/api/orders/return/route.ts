@@ -16,7 +16,9 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ ok: false, error: "Order not found" }, { status: 404 });
     }
 
-    if (String(order.paypal_returned) !== "true" && order.paypal_returned !== true) {
+    const alreadyReturned = String(order.paypal_returned) === "true" || order.paypal_returned === true;
+
+    if (!alreadyReturned) {
       await updateOrderRowByRef(orderRef, {
         paypal_returned: true,
         paypal_payment_status: "returned_pending_manual_verification",
@@ -24,13 +26,23 @@ export async function POST(req: NextRequest) {
 
       const refreshed = await getOrderByRef(orderRef);
       if (refreshed) {
-        await sendOrderReturnedEmail(refreshed);
+        try {
+          await sendOrderReturnedEmail(refreshed);
+        } catch (emailError) {
+          console.error("Return email failed:", String(emailError));
+        }
       }
     }
 
-    return NextResponse.json({ ok: true });
+    return NextResponse.json({
+      ok: true,
+      orderRef,
+      alreadyReturned,
+      photoTitle: order.photo_title,
+      buyerEmail: order.buyer_email,
+    });
   } catch (error) {
-    console.error(error);
+    console.error("Order return error:", String(error));
     return NextResponse.json({ ok: false, error: "Server error" }, { status: 500 });
   }
 }

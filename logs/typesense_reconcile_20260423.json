@@ -1,0 +1,11 @@
+{
+  "run_at": "2026-04-23T12:15:00Z",
+  "eligible_db_count": 33863,
+  "typesense_count_before": 33890,
+  "stale_removed": 59,
+  "missing_added": 33,
+  "typesense_count_after": 33863,
+  "final_drift": 0,
+  "status": "aligned",
+  "notes": "59 stale removed (IDs 42-34343, 14801-14905), 33 missing added in 3 batches (1=6 docs, 2=27 docs) with 2s delays to avoid OOM. Fixed schema: added medium_url, large_url, lat, lon, date_taken fields."
+}

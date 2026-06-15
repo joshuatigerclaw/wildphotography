@@ -1,0 +1,182 @@
+{
+  "timestamp": "2026-06-14T03:48:13.579600+00:00",
+  "batch_size": 450,
+  "total_fixed": 383,
+  "remaining": 73,
+  "good_thumbs_flag_only": 27,
+  "derivatives_path_fixed": 356,
+  "smugmug_net_fixed": 0,
+  "r2_cf_fixed": 0,
+  "pub_r2_cf_fixed": 0,
+  "originals_path_fixed": 0,
+  "no_key_rebuild": 18,
+  "errors": 49,
+  "samples": {
+    "good_thumbs": [
+      [
+        83749,
+        "https://images.wildphotography.com/thumbs/cl0a1031-thumb.jpg"
+      ],
+      [
+        83751,
+        "https://images.wildphotography.com/thumbs/cl0a1056-thumb.jpg"
+      ],
+      [
+        83752,
+        "https://images.wildphotography.com/thumbs/cl0a1079-thumb.jpg"
+      ],
+      [
+        83754,
+        "https://images.wildphotography.com/thumbs/cl0a1105-thumb.jpg"
+      ],
+      [
+        83755,
+        "https://images.wildphotography.com/thumbs/cl0a1109-thumb.jpg"
+      ]
+    ],
+    "derivatives_path": [
+      [
+        20,
+        "https://images.wildphotography.com/derivatives/20/05ff00ba0f397906873c76b261589a",
+        "https://images.wildphotography.com/derivatives/20/05ff00ba0f397906873c76b261589a"
+      ],
+      [
+        25,
+        "https://images.wildphotography.com/derivatives/25/021d369d201ad0ed881d602d3b1f28",
+        "https://images.wildphotography.com/derivatives/25/021d369d201ad0ed881d602d3b1f28"
+      ],
+      [
+        34,
+        "https://images.wildphotography.com/derivatives/34/34a41786774cf007af8d3212116423",
+        "https://images.wildphotography.com/derivatives/34/34a41786774cf007af8d3212116423"
+      ],
+      [
+        139,
+        "https://images.wildphotography.com/derivatives/139/default-QDVfNk-thumb.jpg",
+        "https://images.wildphotography.com/derivatives/139/default-QDVfNk-thumb.jpg"
+      ],
+      [
+        738,
+        "https://images.wildphotography.com/derivatives/738/2021-04-11-08-34-03-jpg-thumb",
+        "https://images.wildphotography.com/derivatives/738/2021-04-11-08-34-03-jpg-thumb"
+      ]
+    ],
+    "smugmug_net": [],
+    "r2_cf": [],
+    "pub_r2_cf": [],
+    "no_key_rebuild": [
+      [
+        90042,
+        "https://images.wildphotography.com/derivatives/tambor-photos/90042-thumb.jpg",
+        null
+      ],
+      [
+        90047,
+        "https://images.wildphotography.com/derivatives/tambor-photos/90047-thumb.jpg",
+        null
+      ],
+      [
+        90051,
+        "https://images.wildphotography.com/derivatives/tambor-photos/90051-thumb.jpg",
+        null
+      ],
+      [
+        90055,
+        "https://images.wildphotography.com/derivatives/tambor-photos/90055-thumb.jpg",
+        null
+      ],
+      [
+        90056,
+        "https://images.wildphotography.com/derivatives/tambor-photos/90056-thumb.jpg",
+        null
+      ],
+      [
+        90057,
+        "https://images.wildphotography.com/derivatives/tambor-photos/90057-thumb.jpg",
+        null
+      ],
+      [
+        90062,
+        "https://images.wildphotography.com/derivatives/tambor-photos/90062-thumb.jpg",
+        null
+      ],
+      [
+        90068,
+        "https://images.wildphotography.com/derivatives/tambor-photos/90068-thumb.jpg",
+        null
+      ],
+      [
+        90069,
+        "https://images.wildphotography.com/derivatives/tambor-photos/90069-thumb.jpg",
+        null
+      ],
+      [
+        90074,
+        "https://images.wildphotography.com/derivatives/tambor-photos/90074-thumb.jpg",
+        null
+      ]
+    ]
+  },
+  "error_samples": [
+    [
+      7198,
+      "other",
+      "https://images.wildphotography.com/photos/7198/thumb.webp",
+      "photos/7198/thumb.webp"
+    ],
+    [
+      7396,
+      "other",
+      "https://images.wildphotography.com/photos/7396/thumb.webp",
+      "photos/7396/thumb.webp"
+    ],
+    [
+      18357,
+      "other",
+      "https://images.wildphotography.com/photos/18357/thumb.webp",
+      "photos/18357/thumb.webp"
+    ],
+    [
+      34992,
+      "other",
+      "https://images.wildphotography.com/photos/peninsula-papagayo/peninsula-papagayo-cl0a6045-6c2dd2b2/thumb.jpg",
+      "photos/peninsula-papagayo/peninsula-papagayo-cl0a6045-6c2dd2b2/thumb.jpg"
+    ],
+    [
+      35012,
+      "other",
+      "https://images.wildphotography.com/photos/peninsula-papagayo/peninsula-papagayo-dji-0890-beef05de/thumb.jpg",
+      "photos/peninsula-papagayo/peninsula-papagayo-dji-0890-beef05de/thumb.jpg"
+    ],
+    [
+      35191,
+      "other",
+      "https://images.wildphotography.com/photos/peninsula-papagayo/peninsula-papagayo-dji-0238-c7948d5d/thumb.jpg",
+      "photos/peninsula-papagayo/peninsula-papagayo-dji-0238-c7948d5d/thumb.jpg"
+    ],
+    [
+      35231,
+      "other",
+      "https://images.wildphotography.com/photos/montezuma-costa-rica/montezuma-costa-rica-dji-0974-4ba43675/thumb.jpg",
+      "photos/montezuma-costa-rica/montezuma-costa-rica-dji-0974-4ba43675/thumb.jpg"
+    ],
+    [
+      90000,
+      "other",
+      "https://images.wildphotography.com/photos/derivatives/90000/thumb.jpg",
+      "photos/derivatives/90000/thumb.jpg"
+    ],
+    [
+      90001,
+      "other",
+      "https://images.wildphotography.com/photos/derivatives/90001/thumb.jpg",
+      "photos/derivatives/90001/thumb.jpg"
+    ],
+    [
+      90002,
+      "other",
+      "https://images.wildphotography.com/photos/derivatives/90002/thumb.jpg",
+      "photos/derivatives/90002/thumb.jpg"
+    ]
+  ]
+}

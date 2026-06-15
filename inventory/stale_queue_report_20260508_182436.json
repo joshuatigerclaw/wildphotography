@@ -1,0 +1,28 @@
+{
+  "run_at": "2026-05-09T00:22:00+00:00",
+  "batch_id": "batch23c",
+  "batch_type": "stale_queue_cleanup",
+  "folders_source": [
+    "Costa-Rica-Gallery/Peninsula-de-Osa",
+    "Costa-Rica-Gallery/Puerto-Caldera-Puntarenas-Port",
+    "Costa-Rica-Gallery/Samara-Playa-Carillo",
+    "Costa-Rica-Gallery/Rincon-de-La-Vieja",
+    "Costa-Rica-Gallery/Peninsula-de-Nicoya"
+  ],
+  "total_items_queued": 98,
+  "actionable_new_count": 0,
+  "duplicates_skipped": 98,
+  "filename_collisions_renamed": 0,
+  "originals_uploaded": 0,
+  "derivatives_generated": 0,
+  "seo_metadata_generated": 0,
+  "seo_titles_generated": 0,
+  "og_images_set": 0,
+  "skipped_existing_high_quality": 0,
+  "repaired_prior_collision_records": 0,
+  "ready_for_public_render_count": 0,
+  "search_ready_count": 0,
+  "failed_files_count": 0,
+  "failed_file_paths": [],
+  "note": "All 98 items were already present in the database (duplicates). Queue is clean for this folder set. No new photos to import in these galleries."
+}

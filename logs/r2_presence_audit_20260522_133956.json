@@ -1,0 +1,47 @@
+{
+  "run_at": "2026-05-22T19:39:56.568134+00:00",
+  "total_photos_with_r2_key": 43990,
+  "sample_size": 200,
+  "present_count": 194,
+  "missing_count": 6,
+  "missing_rate_pct": 3.0,
+  "missing": [
+    {
+      "photo_id": 41712,
+      "key": "originals/678dc907d575dd9ac510191b2aa49cccc0a863c556fb9a89b5a1c1c1d9a0278a.jpg",
+      "present": false,
+      "error": "404"
+    },
+    {
+      "photo_id": 41520,
+      "key": "originals/punta-cacique-guancaste/7e055a715d714619facc1822debb6e1cf0164c900b886271b0e7a4e067e9f572.jpg",
+      "present": false,
+      "error": "404"
+    },
+    {
+      "photo_id": 14785,
+      "key": "originals/favorites/23-img-5550-41177e0639ed.jpg",
+      "present": false,
+      "error": "404"
+    },
+    {
+      "photo_id": 20895,
+      "key": "originals/CL0A6565-0b43c971.jpg",
+      "present": false,
+      "error": "404"
+    },
+    {
+      "photo_id": 43541,
+      "key": "derivatives/43541/original.jpg",
+      "present": false,
+      "error": "404"
+    },
+    {
+      "photo_id": 20814,
+      "key": "originals/f972/DJI_0642.jpg",
+      "present": false,
+      "error": "404"
+    }
+  ],
+  "status": "success"
+}

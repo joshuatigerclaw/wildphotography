@@ -1,21 +1,21 @@
 {
-  "ran_at": "2026-03-30T00:37:55.609401+00:00",
+  "ran_at": "2026-06-15T13:07:31.320096+00:00",
   "metrics": {
-    "total_photos": 23077,
-    "derivatives_complete": 23077,
-    "ready_for_public_render": 23077,
-    "search_ready": 1162,
-    "typesense_sync_count": 22022,
+    "total_photos": 74177,
+    "derivatives_complete": 70343,
+    "ready_for_public_render": 70318,
+    "search_ready": 70142,
+    "typesense_sync_count": 70170,
     "stale_drift": 0,
-    "repair_backlog": 0,
-    "validation_queue": 0,
-    "true_orphans": 0,
-    "galleries_missing_cover": 3,
-    "total_galleries": 132,
+    "repair_backlog": 6,
+    "validation_queue": 2,
+    "true_orphans": 2485,
+    "galleries_missing_cover": 0,
+    "total_galleries": 166,
     "manual_review_count": 0,
     "photo_import_pending_queue": 0,
     "derivative_rebuild_queue_queue": 0,
-    "manual_review_queue": 28,
+    "manual_review_queue": 32,
     "autoscale_backlog_r2": 0,
     "autoscale_target_workers": 0
   },
@@ -29,22 +29,22 @@
     "wild_repair_incomplete_legacy": {
       "triggered": false,
       "metric": "repair_backlog",
-      "value": 0,
+      "value": 6,
       "threshold": 100
     },
     "wild_production_validation_v2": {
-      "triggered": false,
+      "triggered": true,
       "metric": "validation_queue",
-      "value": 0,
-      "threshold": 0
+      "value": 2,
+      "threshold": 0,
+      "ok": true,
+      "error": ""
     },
     "wild_gallery_cover_assignment": {
-      "triggered": true,
+      "triggered": false,
       "metric": "galleries_missing_cover",
-      "value": 3,
-      "threshold": 0,
-      "ok": false,
-      "error": "[plugins] plugins.allow is empty; discovered non-bundled plugins may auto-load: lossless-claw (/Users/joshuatenbrink/.openclaw/extensions/lossless-claw/index.ts). Set plugins.allow to explicit trusted ids.\nerror: unknown command 'lobster'\n"
+      "value": 0,
+      "threshold": 0
     },
     "wild_import_batch": {
       "triggered": false,
@@ -57,10 +57,19 @@
       "metric": "autoscale_target_workers",
       "value": 0,
       "threshold": 0
+    },
+    "wild_rebuild_dispatcher": {
+      "triggered": true,
+      "script": true,
+      "metric": "repair_backlog",
+      "value": 6,
+      "ok": true,
+      "error": "(node:83893) Warning: SECURITY WARNING: The SSL modes 'prefer', 'require', and 'verify-ca' are treated as aliases for 'verify-full'.\nIn the next major version (pg-connection-string v3.0.0 and pg v9.0.0), these modes will adopt standard libpq semantics, which have weaker security guarantees.\n\nTo prepare for this change:\n- If you want the current behavior, explicitly use 'sslmode=verify-full'\n- If you want libpq compatibility now, use 'uselibpqcompat=true&sslmode=require'\n\nSee https://www.postgres"
     }
   },
   "triggered": [
-    "wild_gallery_cover_assignment"
+    "wild_production_validation_v2",
+    "wild_rebuild_dispatcher"
   ],
   "status": "ok",
   "dry_run": false

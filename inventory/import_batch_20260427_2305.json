@@ -1,0 +1,47 @@
+{
+  "run_at": "2026-04-28T05:29:08.652721+00:00",
+  "source": "google_drive_import",
+  "folders_processed": ["2025 Tambor New Years/R6 Selected", "2025 Tambor New Years/Drone Selected/Selected"],
+  "folders_seen": 2,
+  "folders_with_existing_gallery_match": 2,
+  "folders_skipped_no_existing_gallery": 0,
+  "folders_skipped_ambiguous_mapping": 0,
+  "photos_processed": 24,
+  "duplicates_skipped": 509,
+  "filename_collisions_renamed": 0,
+  "originals_uploaded": 24,
+  "derivatives_generated": 120,
+  "seo_metadata_generated": 24,
+  "seo_titles_generated": 24,
+  "og_images_set": 24,
+  "skipped_existing_high_quality": 0,
+  "repaired_prior_collision_records": 0,
+  "ready_for_public_render_count": 24,
+  "search_ready_count": 24,
+  "failed_files_count": 0,
+  "failed_file_paths": [],
+  "gallery_id": 95,
+  "gallery_slug": "tambor-nicoya-peninsula-costa-rica",
+  "photo_ids_imported": [42063, 42064, 42065, 42066, 42067, 42068, 42069, 42070, 42071, 42072, 42073, 42074, 42075, 42076, 42077, 42078, 42079, 42080, 42081, 42082, 42083, 42084, 42085, 42086],
+  "source_paths_verified": 24,
+  "sample_seo_outputs": [
+    {
+      "photo_id": 42063,
+      "seo_title": "Cl0A4417 | WildPhotography",
+      "meta_description": "Tambor Nicoya Peninsula Costa Rica wildlife photography by Joshua ten Brink.",
+      "og_image_url": "https://pub-7d412c6efb5943b5bc587e695e22001e.r2.dev/derivatives/96652a36e04caa44_medium.jpg"
+    },
+    {
+      "photo_id": 42073,
+      "seo_title": "Cl0A4737 | WildPhotography",
+      "meta_description": "Tambor Nicoya Peninsula Costa Rica wildlife photography by Joshua ten Brink.",
+      "og_image_url": "https://pub-7d412c6efb5943b5bc587e695e22001e.r2.dev/derivatives/1a9addf105f7e27a6bfa0173e52f73019c7db787f795a590800446a7879adc9a_medium.jpg"
+    },
+    {
+      "photo_id": 42086,
+      "seo_title": "Cl0A7290 | WildPhotography",
+      "meta_description": "Tambor Nicoya Peninsula Costa Rica wildlife photography by Joshua ten Brink.",
+      "og_image_url": "https://pub-7d412c6efb5943b5bc587e695e22001e.r2.dev/derivatives/cc3460b7985ee8f2_medium.jpg"
+    }
+  ]
+}

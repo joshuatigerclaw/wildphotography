@@ -1,0 +1,11 @@
+{
+  "eligible_db_count": 63841,
+  "typesense_count_before": 0,
+  "stale_removed": 0,
+  "missing_added": 0,
+  "typesense_count_after": 0,
+  "final_drift": 63841,
+  "status": "success",
+  "duration_seconds": 20993.33,
+  "timestamp": "2026-06-08T04:15:55.597737+00:00"
+}

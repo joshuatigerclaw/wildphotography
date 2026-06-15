@@ -1,0 +1,163 @@
+{
+  "run_at": "2026-05-08T03:24:56.142575+00:00",
+  "total_photos": 40027,
+  "render_ready_total": 38042,
+  "photos_with_issues": 200,
+  "all_clear": false,
+  "checks": {
+    "missing_thumb_url": {
+      "count": 0,
+      "sample": []
+    },
+    "missing_slug": {
+      "count": 0,
+      "sample": []
+    },
+    "missing_title": {
+      "count": 0,
+      "sample": []
+    },
+    "missing_gallery_slug": {
+      "count": 1777,
+      "sample": [
+        {
+          "id": 242,
+          "slug": "hermosa-beach-1",
+          "title": "Hermosa Beach Sunset",
+          "status": "archived"
+        },
+        {
+          "id": 14905,
+          "slug": "resplendent-quetzal",
+          "title": "Resplendent Quetzal \u2014 #14905 | WildPhotography",
+          "status": "archived"
+        },
+        {
+          "id": 41302,
+          "slug": "sunrise-sunset-2016-07-31-17-59-49",
+          "title": "Pacific Coast Sunrise, Guanacaste 2016",
+          "status": "published"
+        },
+        {
+          "id": 41304,
+          "slug": "sunrise-sunset-2018-03-29-18-22-12",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41304 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41310,
+          "slug": "sunrise-sunset-2018-08-24-17-55-36",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41310 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41314,
+          "slug": "sunrise-sunset-2020-06-06-17-38-31",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41314 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41315,
+          "slug": "sunrise-sunset-2020-06-07-17-57-31",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41315 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41318,
+          "slug": "sunrise-sunset-2020-07-17-05-10-04",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41318 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41319,
+          "slug": "sunrise-sunset-2020-07-17-05-18-15",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41319 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41320,
+          "slug": "sunrise-sunset-2020-07-19-05-07-34",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41320 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41321,
+          "slug": "sunrise-sunset-2020-07-19-05-19-48",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41321 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41327,
+          "slug": "limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2021-05-02-14-33-07",
+          "title": "Costa Rica \u2014 Puerto Viejo de Talamanca \u2014 #41327 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41333,
+          "slug": "limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2023-10-12-17-29-49",
+          "title": "Costa Rica \u2014 Puerto Viejo de Talamanca \u2014 #41333 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41342,
+          "slug": "costa-rica-20070520-2268",
+          "title": "Costa Rica 2007",
+          "status": "published"
+        },
+        {
+          "id": 41343,
+          "slug": "costa-rica-2014-09-14-14-14-46-copy",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41343 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41344,
+          "slug": "costa-rica-2014-09-20-16-02-57-copy",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41344 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41345,
+          "slug": "costa-rica-2014-09-20-16-03-17-copy",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41345 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41346,
+          "slug": "costa-rica-2014-12-07-10-49-29-copy",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41346 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41347,
+          "slug": "costa-rica-2015-03-29-12-28-24-copy",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41347 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41348,
+          "slug": "costa-rica-2015-04-01-14-20-11-copy",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41348 | WildPhotography",
+          "status": "published"
+        }
+      ]
+    },
+    "search_not_ready": {
+      "count": 0,
+      "sample": []
+    },
+    "derivatives_incomplete": {
+      "count": 0,
+      "sample": []
+    },
+    "missing_description": {
+      "count": 0,
+      "sample": []
+    },
+    "missing_keywords": {
+      "count": 0,
+      "sample": []
+    }
+  },
+  "status": "success"
+}

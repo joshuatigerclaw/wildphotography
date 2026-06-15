@@ -1,0 +1,598 @@
+{
+  "run_at": "2026-05-24T08:47:31.021386+00:00",
+  "total_photos": 44281,
+  "distinct_affected_photos": 700,
+  "all_clear": false,
+  "issues": {
+    "missing_original_r2_key": {
+      "description": "Missing original R2 storage key \u2014 cannot rebuild derivatives",
+      "count": 0,
+      "sample": []
+    },
+    "pending_derivatives_with_r2": {
+      "description": "Has R2 original but derivatives_complete=false \u2014 needs rebuild dispatch",
+      "count": 0,
+      "sample": []
+    },
+    "render_ready_not_search_ready": {
+      "description": "ready_for_public_render=true but search_ready=false \u2014 blocked from Typesense",
+      "count": 1,
+      "sample": [
+        {
+          "id": 51138,
+          "slug": "beaches--2016-01-13-12-58-06",
+          "status": "archived_unrecoverable",
+          "thumb_url": null
+        }
+      ]
+    },
+    "missing_content_hash": {
+      "description": "No content_hash \u2014 cannot detect duplicates or verify integrity",
+      "count": 15528,
+      "sample": [
+        {
+          "id": 16,
+          "slug": "scarlet-macaw",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 17,
+          "slug": "quetzal",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 19,
+          "slug": "three-toed-sloth",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 21,
+          "slug": "green-iguana",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 23,
+          "slug": "spectacled-owl",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 24,
+          "slug": "toucan-barbet",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 27,
+          "slug": "collared-aracari",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 29,
+          "slug": "boat-billed-heron",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 30,
+          "slug": "fiery-hummingbird",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 31,
+          "slug": "montezuma-oropendola",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 32,
+          "slug": "volcano-view",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 33,
+          "slug": "pacific-sunset",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 35,
+          "slug": "rainforest-waterfall",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 42,
+          "slug": "paddleboarding-adventure-on-a-tropical-coast-9kLkq4",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 43,
+          "slug": "wading-angler-quiet-water-fishing-scene-dWHshx",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 44,
+          "slug": "img-9761-jpg-McvJMD",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 45,
+          "slug": "img-9867-jpg-ggnxV4",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 46,
+          "slug": "img-0133-jpg-t25Tbt",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 47,
+          "slug": "img-0148-jpg-WgXJsL",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 48,
+          "slug": "img-0135-jpg-x8LCKP",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 49,
+          "slug": "img-0154-jpg-P4g3jH",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 50,
+          "slug": "costa-rica-billabong-surf-2009-5QgMNB",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 51,
+          "slug": "img-0280-jpg-WR6t7s",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 52,
+          "slug": "costa-rica-billabong-surf-2009-PSWCnj",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 53,
+          "slug": "img-9578-jpg-CWp24N",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 54,
+          "slug": "img-9644-jpg-HCxCGn",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 55,
+          "slug": "img-3491-jpg-jHd5JG",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 56,
+          "slug": "img-6629-jpg-dqMnVs",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 57,
+          "slug": "img-0332-jpg-rSSd5X",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 58,
+          "slug": "img-6632-jpg-sTd7RM",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 59,
+          "slug": "img-0341-jpg-kZ3chM",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 60,
+          "slug": "img-9672-jpg-HSKLKj",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 61,
+          "slug": "img-9584-jpg-F3ffkg",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 62,
+          "slug": "img-9468-jpg-pQpxCC",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 63,
+          "slug": "img-9572-jpg-TC4cZc",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 64,
+          "slug": "img-9600-jpg-ZsctXJ",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 65,
+          "slug": "img-9717-jpg-7ZKCZv",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 66,
+          "slug": "img-9723-jpg-qsxkCW",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 67,
+          "slug": "img-9890-jpg-zBSPgj",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 68,
+          "slug": "img-9902-jpg-JwSZbr",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 69,
+          "slug": "img-9843-jpg-hxpDkp",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 71,
+          "slug": "img-9919-jpg-DXrP87",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 72,
+          "slug": "img-0021-jpg-GkKRzD",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 73,
+          "slug": "img-0235-jpg-9sPXtp",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 74,
+          "slug": "img-0236-jpg-S2T7WR",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 75,
+          "slug": "img-0238-jpg-ZGvNtp",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 76,
+          "slug": "img-0277-jpg-qt4QV8",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 77,
+          "slug": "img-0325-jpg-fmv7Qf",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 78,
+          "slug": "img-3493-jpg-gG4vff",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 79,
+          "slug": "img-5305-jpg-R4sG6V",
+          "status": "published",
+          "has_r2": true
+        }
+      ]
+    },
+    "missing_slug": {
+      "description": "Null or empty slug \u2014 cannot build public URL",
+      "count": 0,
+      "sample": []
+    },
+    "missing_gallery_slug": {
+      "description": "ready_for_public_render=true but gallery_slug is null \u2014 no gallery association",
+      "count": 5317,
+      "sample": [
+        {
+          "id": 242,
+          "slug": "hermosa-beach-1",
+          "status": "published"
+        },
+        {
+          "id": 14905,
+          "slug": "resplendent-quetzal",
+          "status": "archived"
+        },
+        {
+          "id": 36571,
+          "slug": "121619-hyperlapse-0051-caa78cf4",
+          "status": "archived_unrecoverable"
+        },
+        {
+          "id": 41302,
+          "slug": "sunrise-sunset-2016-07-31-17-59-49",
+          "status": "published"
+        },
+        {
+          "id": 41303,
+          "slug": "sunrise-sunset-2017-07-15-18-57-45",
+          "status": "published"
+        },
+        {
+          "id": 41304,
+          "slug": "sunrise-sunset-2018-03-29-18-22-12",
+          "status": "published"
+        },
+        {
+          "id": 41305,
+          "slug": "sunrise-sunset-2018-08-21-17-53-04",
+          "status": "published"
+        },
+        {
+          "id": 41306,
+          "slug": "sunrise-sunset-2018-08-21-17-55-57",
+          "status": "published"
+        },
+        {
+          "id": 41307,
+          "slug": "sunrise-sunset-2018-08-21-18-01-08",
+          "status": "published"
+        },
+        {
+          "id": 41308,
+          "slug": "sunrise-sunset-2018-08-21-18-02-56",
+          "status": "published"
+        },
+        {
+          "id": 41309,
+          "slug": "sunrise-sunset-2018-08-21-18-09-15",
+          "status": "published"
+        },
+        {
+          "id": 41310,
+          "slug": "sunrise-sunset-2018-08-24-17-55-36",
+          "status": "published"
+        },
+        {
+          "id": 41311,
+          "slug": "sunrise-sunset-2019-july-19-hyperlapse-0311",
+          "status": "published"
+        },
+        {
+          "id": 41312,
+          "slug": "sunrise-sunset-2019-03-31-05-46-08",
+          "status": "published"
+        },
+        {
+          "id": 41313,
+          "slug": "sunrise-sunset-2019-11-08-17-16-08",
+          "status": "published"
+        },
+        {
+          "id": 41314,
+          "slug": "sunrise-sunset-2020-06-06-17-38-31",
+          "status": "published"
+        },
+        {
+          "id": 41315,
+          "slug": "sunrise-sunset-2020-06-07-17-57-31",
+          "status": "published"
+        },
+        {
+          "id": 41316,
+          "slug": "sunrise-sunset-2020-06-07-17-58-30",
+          "status": "published"
+        },
+        {
+          "id": 41317,
+          "slug": "sunrise-sunset-2020-06-07-18-00-38",
+          "status": "published"
+        },
+        {
+          "id": 41318,
+          "slug": "sunrise-sunset-2020-07-17-05-10-04",
+          "status": "published"
+        },
+        {
+          "id": 41319,
+          "slug": "sunrise-sunset-2020-07-17-05-18-15",
+          "status": "published"
+        },
+        {
+          "id": 41320,
+          "slug": "sunrise-sunset-2020-07-19-05-07-34",
+          "status": "published"
+        },
+        {
+          "id": 41321,
+          "slug": "sunrise-sunset-2020-07-19-05-19-48",
+          "status": "published"
+        },
+        {
+          "id": 41322,
+          "slug": "limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2021-05-01-08-24-07",
+          "status": "published"
+        },
+        {
+          "id": 41323,
+          "slug": "limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2021-05-01-11-09-45",
+          "status": "published"
+        },
+        {
+          "id": 41324,
+          "slug": "limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2021-05-01-11-11-08",
+          "status": "published"
+        },
+        {
+          "id": 41325,
+          "slug": "limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2021-05-02-09-43-23",
+          "status": "published"
+        },
+        {
+          "id": 41326,
+          "slug": "limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2021-05-02-14-32-01",
+          "status": "published"
+        },
+        {
+          "id": 41327,
+          "slug": "limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2021-05-02-14-33-07",
+          "status": "published"
+        },
+        {
+          "id": 41328,
+          "slug": "limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2023-10-12-16-46-01",
+          "status": "published"
+        },
+        {
+          "id": 41329,
+          "slug": "limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2023-10-12-17-26-45",
+          "status": "published"
+        },
+        {
+          "id": 41330,
+          "slug": "limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2023-10-12-17-26-50",
+          "status": "published"
+        },
+        {
+          "id": 41331,
+          "slug": "limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2023-10-12-17-29-35",
+          "status": "published"
+        },
+        {
+          "id": 41332,
+          "slug": "limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2023-10-12-17-29-38",
+          "status": "published"
+        },
+        {
+          "id": 41333,
+          "slug": "limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2023-10-12-17-29-49",
+          "status": "published"
+        },
+        {
+          "id": 41334,
+          "slug": "limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2023-10-13-07-06-41",
+          "status": "published"
+        },
+        {
+          "id": 41335,
+          "slug": "limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2023-10-13-07-06-43",
+          "status": "published"
+        },
+        {
+          "id": 41336,
+          "slug": "limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2023-10-13-07-06-55",
+          "status": "published"
+        },
+        {
+          "id": 41337,
+          "slug": "limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2023-10-13-08-39-12",
+          "status": "published"
+        },
+        {
+          "id": 41338,
+          "slug": "limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2023-10-13-08-39-17",
+          "status": "published"
+        },
+        {
+          "id": 41339,
+          "slug": "limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2023-10-13-09-17-18",
+          "status": "published"
+        },
+        {
+          "id": 41340,
+          "slug": "limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2023-10-13-09-19-00",
+          "status": "published"
+        },
+        {
+          "id": 41341,
+          "slug": "limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2023-10-13-09-30-17",
+          "status": "published"
+        },
+        {
+          "id": 41342,
+          "slug": "costa-rica-20070520-2268",
+          "status": "published"
+        },
+        {
+          "id": 41343,
+          "slug": "costa-rica-2014-09-14-14-14-46-copy",
+          "status": "published"
+        },
+        {
+          "id": 41344,
+          "slug": "costa-rica-2014-09-20-16-02-57-copy",
+          "status": "published"
+        },
+        {
+          "id": 41345,
+          "slug": "costa-rica-2014-09-20-16-03-17-copy",
+          "status": "published"
+        },
+        {
+          "id": 41346,
+          "slug": "costa-rica-2014-12-07-10-49-29-copy",
+          "status": "published"
+        },
+        {
+          "id": 41347,
+          "slug": "costa-rica-2015-03-29-12-28-24-copy",
+          "status": "published"
+        },
+        {
+          "id": 41348,
+          "slug": "costa-rica-2015-04-01-14-20-11-copy",
+          "status": "published"
+        }
+      ]
+    }
+  },
+  "status": "success"
+}

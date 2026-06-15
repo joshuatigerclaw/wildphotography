@@ -14,7 +14,7 @@ const REGIONS = [
     habitat: 'Tropical dry forest, mangroves, Pacific beaches'
   },
   {
-    slug: 'punta-renas',
+    slug: 'puntarenas',
     name: 'Puntarenas',
     description: 'Pacific coast from Jacó to the Osa Peninsula, including the Nicoya Peninsula',
     highlights: 'Scarlet Macaw, Red-crowned Woodpecker, Brown Pelican',

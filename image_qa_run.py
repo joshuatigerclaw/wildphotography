@@ -85,7 +85,7 @@ def main():
         SELECT g.id, g.slug, g.name, g.cover_photo_id, g.parent_gallery_id,
                p.slug as cover_photo_slug, p.thumb_url as cover_thumb_url
         FROM galleries g
-        LEFT JOIN photos p ON g.cover_photo_id = p.id
+        LEFT JOIN photos p ON g.cover_photo_id::int = p.id
         WHERE g.is_active = true
         LIMIT %s
     """

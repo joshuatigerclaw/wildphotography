@@ -1,0 +1,278 @@
+{
+  "run_at": "2026-05-12T12:12:22.428682+00:00",
+  "workflow": "wild_import_queue_cleanup",
+  "source": "photo_import_pending_queue.json + Lobster queue files",
+  "status": "CLEANUP_COMPLETE",
+  "classification": {
+    "total_items_in_primary_queue": 15,
+    "photo_import_entries": 0,
+    "pinterest_pin_entries": 15,
+    "photo_import_pending_actionable": 0,
+    "photo_import_duplicate_entries": 0,
+    "photo_import_pending_duplicates": 0,
+    "photo_import_pending_status_pending": 0
+  },
+  "aux_queue_file_status": {
+    "working_batch_queue.json": {
+      "exists": true,
+      "item_count": 0,
+      "status": "EXHAUSTED"
+    },
+    "birds_import_queue.json": {
+      "exists": false
+    },
+    "batch_clean_import_queue.json": {
+      "exists": false
+    },
+    "batch_Tamb_Limo_Jaco_Sunr_Peni_import_queue.json": {
+      "exists": false
+    },
+    "batch_new_folders_queue.json": {
+      "exists": false
+    },
+    "batch_Bajo_La-G_Time_Cost_Play_import_queue.json": {
+      "exists": false
+    }
+  },
+  "recent_import_batch_summary": [
+    {
+      "file": "import_report_may2026_batch66_2026-05-12T11-57-43-507Z.json",
+      "gallery_slug": "tambor-nicoya-peninsula-costa-rica",
+      "photos_processed": 0,
+      "duplicates_skipped": 92,
+      "new_imported": 0
+    },
+    {
+      "file": "import_report_may2026_batch62_20260512_102323.json",
+      "gallery_slug": null,
+      "photos_processed": 0,
+      "duplicates_skipped": 0,
+      "new_imported": 0
+    },
+    {
+      "file": "import_report_may2026_batch61_20260512_101954.json",
+      "gallery_slug": null,
+      "photos_processed": 0,
+      "duplicates_skipped": 0,
+      "new_imported": 0
+    },
+    {
+      "file": "import_report_may2026_batch60_20260512_054017.json",
+      "gallery_slug": null,
+      "photos_processed": 0,
+      "duplicates_skipped": 0,
+      "new_imported": 0
+    },
+    {
+      "file": "import_report_may2026_batch60_20260512_053347.json",
+      "gallery_slug": null,
+      "photos_processed": 0,
+      "duplicates_skipped": 0,
+      "new_imported": 0
+    },
+    {
+      "file": "import_report_may2026_batch60_20260512_052106.json",
+      "gallery_slug": null,
+      "photos_processed": 0,
+      "duplicates_skipped": 0,
+      "new_imported": 0
+    },
+    {
+      "file": "import_report_may2026_batch60_20260512_051930.json",
+      "gallery_slug": null,
+      "photos_processed": 0,
+      "duplicates_skipped": 0,
+      "new_imported": 0
+    },
+    {
+      "file": "import_report_may2026_batch60_20260512_051457.json",
+      "gallery_slug": null,
+      "photos_processed": 0,
+      "duplicates_skipped": 0,
+      "new_imported": 0
+    },
+    {
+      "file": "import_report_may2026_batch64_partial_20260512.json",
+      "gallery_slug": null,
+      "photos_processed": 0,
+      "duplicates_skipped": 0,
+      "new_imported": 0
+    },
+    {
+      "file": "import_report_may2026_batch61_1778542892073.json",
+      "gallery_slug": null,
+      "photos_processed": 0,
+      "duplicates_skipped": 0,
+      "new_imported": 0
+    }
+  ],
+  "pinterest_entries_in_queue": [
+    {
+      "pin_id": "wp_bf_001",
+      "gallery_id": 5,
+      "gallery_slug": "birds",
+      "title": "The Resplendent Quetzal Is Easier to Spot in Costa Rica Than Anywhere Else on Earth",
+      "description": "Costa Rica's cloud forests harbor one of the world's most sought-after birds. The iridescent quetzal feeds on wild avocados in places like Monteverde and Santa Elena \u2014 and you don't need a guide to find them if you know when to look. See the full guide to spotting Costa Rica's most iconic bird.",
+      "destination_url": "https://www.wildphotography.com/gallery/birds",
+      "image_url": "https://media.wildphotography.com/derivatives/17/1707ee732dc7a626a896f51bd74ba3634073e3e4a9210ee0a023ed5f8896b6d1/thumb.jpg",
+      "board": "Costa Rica Wildlife",
+      "status": "pending"
+    },
+    {
+      "pin_id": "wp_bf_002",
+      "gallery_id": 5,
+      "gallery_slug": "birds",
+      "title": "Scarlet Macaws Congregate at Carara National Park Every Morning \u2014 Here's Why",
+      "description": "Carara sits at the intersection of dry forest and humid rainforest, drawing large macaw flocks year-round. Their loud squawks echo before sunrise as dozens of birds gather at traditional roosting trees along the Tarcoles River. See the full guide to macaw watching in Costa Rica.",
+      "destination_url": "https://www.wildphotography.com/gallery/birds",
+      "image_url": "https://media.wildphotography.com/derivatives/birds/thumb_CL0A1100.jpg",
+      "board": "Costa Rica Wildlife",
+      "status": "pending"
+    },
+    {
+      "pin_id": "wp_bf_003",
+      "gallery_id": 5,
+      "gallery_slug": "birds",
+      "title": "Tropical Tiger Herons Stand Completely Still for 30 Minutes Before Striking",
+      "description": "In Costa Rica's rivers and mangrove edges, tiger herons use a sit-and-wait strategy that makes them remarkably easy to observe. Spot one perched on a low branch near water and you might watch it stay frozen for half an hour before snatching a fish in a single dart. See the full guide to Costa Rica's birds.",
+      "destination_url": "https://www.wildphotography.com/gallery/birds",
+      "image_url": "https://media.wildphotography.com/derivatives/7d/7d9d77e31cf35eaf02762cfbd784190dbeba7e4e8330eaaa82dac4daf8ffe28d/thumb.jpg",
+      "board": "Costa Rica Wildlife",
+      "status": "pending"
+    },
+    {
+      "pin_id": "wp_tb_001",
+      "gallery_id": 95,
+      "gallery_slug": "tambor-nicoya-peninsula-costa-rica",
+      "title": "The Nicoya Peninsula Is One of the World's Official Blue Zones \u2014 Here's What That Means",
+      "description": "Nicoya is one of five confirmed Blue Zones on the planet, where people routinely live past 100 in active, engaged lives. The dry forests, empty beaches, and slow pace are what researchers point to when they explain why locals here outlive the rest of Costa Rica by years. See the full guide to the Nicoya Peninsula.",
+      "destination_url": "https://www.wildphotography.com/gallery/tambor-nicoya-peninsula-costa-rica",
+      "image_url": "https://media.wildphotography.com/derivatives/thumb/ar-img-1724-tambor-photos-10894-thumb.jpg",
+      "board": "Costa Rica Travel",
+      "status": "pending"
+    },
+    {
+      "pin_id": "wp_tb_002",
+      "gallery_id": 95,
+      "gallery_slug": "tambor-nicoya-peninsula-costa-rica",
+      "title": "Tambor's Beaches Have Near-Constant Offshore Breeze \u2014 Perfect for Sunset Photography",
+      "description": "The Pacific side of the Nicoya Peninsula catches steady evening winds that flatten the water into a mirror and paint the sky in orange and pink layers. Photographers time their arrivals for about 5:30 pm in the dry season to catch the most consistent light. See the full guide to Tambor and the Nicoya Peninsula.",
+      "destination_url": "https://www.wildphotography.com/gallery/tambor-nicoya-peninsula-costa-rica",
+      "image_url": "https://media.wildphotography.com/derivatives/thumbs/10545-thumb.jpg",
+      "board": "Costa Rica Travel",
+      "status": "pending"
+    },
+    {
+      "pin_id": "wp_tb_003",
+      "gallery_id": 95,
+      "gallery_slug": "tambor-nicoya-peninsula-costa-rica",
+      "title": "Howler Monkeys Move Through Tambor's Canopy in Groups of 10 to 30 Every Morning",
+      "description": "The Nicoya Peninsula's howler troupes are among the most vocal in Costa Rica, their deep roars carrying nearly half a kilometer through the trees. A morning walk along the coast road just after sunrise offers the best chance of encountering multiple groups close up. See the full guide to wildlife in the Nicoya Peninsula.",
+      "destination_url": "https://www.wildphotography.com/gallery/tambor-nicoya-peninsula-costa-rica",
+      "image_url": "https://media.wildphotography.com/derivatives/dji/dji-0222-tambor-nicoya-peninsula-costa-rica-10545-thumb.jpg",
+      "board": "Costa Rica Wildlife",
+      "status": "pending"
+    },
+    {
+      "pin_id": "wp_wf_001",
+      "gallery_id": 100,
+      "gallery_slug": "waterfalls-in-costa-rica",
+      "title": "Costa Rica's Waterfalls Are Tallest in the Central Valley \u2014 Within an Hour of San Jos\u00e9",
+      "description": "The waterfall circuit near San Jos\u00e9 \u2014 including Zurqu\u00ed, Cascade, and the waterfalls around Heredia \u2014 drops through cloud forest with vertical drops that rival anything in the Americas. The green moss, mist, and ferns make the surrounding jungle as compelling as the falls themselves. See the full guide to Costa Rica's waterfalls.",
+      "destination_url": "https://www.wildphotography.com/gallery/waterfalls-in-costa-rica",
+      "image_url": "https://media.wildphotography.com/derivatives/thumbs/4568-thumb.jpg",
+      "board": "Costa Rica Nature",
+      "status": "pending"
+    },
+    {
+      "pin_id": "wp_wf_002",
+      "gallery_id": 100,
+      "gallery_slug": "waterfalls-in-costa-rica",
+      "title": "The Falls Near La Paz Have Sloth Families That Pose Better Than the Waterfalls",
+      "description": "The La Paz Waterfall Gardens area shelters multiple sloth territories along the walking trails, with mothers and juveniles regularly spotted in the Cecropia trees just meters from the main viewing platforms. Combine waterfall viewing with sloth photography without leaving the same property. See the full guide to Costa Rica's waterfalls.",
+      "destination_url": "https://www.wildphotography.com/gallery/waterfalls-in-costa-rica",
+      "image_url": "https://media.wildphotography.com/derivatives/thumbs/10545-thumb.jpg",
+      "board": "Costa Rica Wildlife",
+      "status": "pending"
+    },
+    {
+      "pin_id": "wp_wf_003",
+      "gallery_id": 100,
+      "gallery_slug": "waterfalls-in-costa-rica",
+      "title": "Nobody Hikes the Full Waterfall Trail in Guanacaste in Dry Season \u2014 That's the Best Time",
+      "description": "The waterfall circuit in Guanacaste is at its most dramatic between December and April, when reduced water flow creates cleaner cascades and the surrounding forest stays a vivid deep green. Fewer hikers mean you can photograph the falls without anyone in the frame. See the full guide to Guanacaste's waterfalls.",
+      "destination_url": "https://www.wildphotography.com/gallery/waterfalls-in-costa-rica",
+      "image_url": "https://media.wildphotography.com/derivatives/4563/DJI_0495_thumb.JPG",
+      "board": "Costa Rica Nature",
+      "status": "pending"
+    },
+    {
+      "pin_id": "wp_cr_001",
+      "gallery_id": 25,
+      "gallery_slug": "costa-rica",
+      "title": "Costa Rica Produces More Scenic Aerial Photography Per Square Kilometer Than Most Countries",
+      "description": "The combination of volcanic peaks, coastal cliffs, cloud forest canopy, and river valleys creates visual density that few destinations can match. Aerial shots from drones over Arenal, the Gulf of Nicoya, and the Osa Peninsula consistently outperform static landscape images in engagement. See the full guide to Costa Rica photography.",
+      "destination_url": "https://www.wildphotography.com/gallery/costa-rica",
+      "image_url": "https://media.wildphotography.com/derivatives/31222/31222_thumb.jpg",
+      "board": "Costa Rica Travel",
+      "status": "pending"
+    },
+    {
+      "pin_id": "wp_cr_002",
+      "gallery_id": 25,
+      "gallery_slug": "costa-rica",
+      "title": "The Dry Season Landscape in Guanacaste Looks Like a Nature Documentary in Person",
+      "description": "Between January and April, Guanacaste's deciduous trees drop their leaves and the hills turn golden, creating sweeping vistas that look post-processed but are completely natural. The contrast between green river valleys and golden hillsides makes this one of the most photographed landscapes in Central America. See the full guide to Guanacaste.",
+      "destination_url": "https://www.wildphotography.com/gallery/costa-rica",
+      "image_url": "https://media.wildphotography.com/derivatives/7b26d67ac9dbb7c6_thumb.jpg",
+      "board": "Costa Rica Nature",
+      "status": "pending"
+    },
+    {
+      "pin_id": "wp_cr_003",
+      "gallery_id": 25,
+      "gallery_slug": "costa-rica",
+      "title": "The San Jos\u00e9 Skyline Looks Best at Golden Hour From the Hills Above Escaz\u00fa",
+      "description": "Escaz\u00fa hills offer a rare elevated perspective over Costa Rica's capital, with the city grid framed by mountain silhouettes at sunrise and sunset. Morning fog often settles below the viewpoint level, creating layered panoramic scenes that most visitors never see. See the full guide to photographing San Jos\u00e9.",
+      "destination_url": "https://www.wildphotography.com/gallery/costa-rica",
+      "image_url": "https://media.wildphotography.com/derivatives/thumbs/3517-thumb.jpg",
+      "board": "Costa Rica Travel",
+      "status": "pending"
+    },
+    {
+      "pin_id": "wp_jb_001",
+      "gallery_id": 48,
+      "gallery_slug": "jaco-beach",
+      "title": "Jaco Beach Is the Closest Surf Town to San Jos\u00e9 \u2014 Two Hours Door to Beach",
+      "description": "Jac\u00f3 sits roughly 100 kilometers from San Jos\u00e9, making it the most accessible Pacific beach break in Costa Rica. Consistent offshore winds keep the water clean most mornings, and the town has enough infrastructure that you can arrive with just a board and find everything else you need. See the full guide to Jac\u00f3 Beach.",
+      "destination_url": "https://www.wildphotography.com/gallery/jaco-beach",
+      "image_url": "https://media.wildphotography.com/derivatives/jaco-beach/6f88a00b3475_thumb.jpg",
+      "board": "Costa Rica Beaches",
+      "status": "pending"
+    },
+    {
+      "pin_id": "wp_jb_002",
+      "gallery_id": 48,
+      "gallery_slug": "jaco-beach",
+      "title": "The Sunset From Jaco's Beachfront Is a Daily Event \u2014 Tourists and Locals Alike Stop to Watch",
+      "description": "The Pacific coast orientation means Jac\u00f3 faces almost due west, placing the sunset directly over open ocean without obstruction. During the dry season months of December through March, the sky tends toward vivid orange and purple layers that photographers can capture without special equipment. See the full guide to Jac\u00f3 Beach.",
+      "destination_url": "https://www.wildphotography.com/gallery/jaco-beach",
+      "image_url": "https://media.wildphotography.com/derivatives/a318b90f2b7c5cca_thumb.jpg",
+      "board": "Costa Rica Beaches",
+      "status": "pending"
+    },
+    {
+      "pin_id": "wp_jb_003",
+      "gallery_id": 48,
+      "gallery_slug": "jaco-beach",
+      "title": "The Highland Ridge Above Jaco Catches Cloud Formations That Roll in From the Pacific",
+      "description": "On most mornings between June and November, low-altitude clouds drift through the hills behind Jac\u00f3, creating atmospheric layers that are especially dramatic in wide landscape shots. The transition from clear coast to misty ridge happens within an hour of sunrise and lasts until mid-morning. See the full guide to photographing Jac\u00f3's surrounding landscape.",
+      "destination_url": "https://www.wildphotography.com/gallery/jaco-beach",
+      "image_url": "https://media.wildphotography.com/derivatives/7c764b72ef679e34_thumb.jpg",
+      "board": "Costa Rica Nature",
+      "status": "pending"
+    }
+  ],
+  "actionable_photo_import_pending": [],
+  "note": "The 15 pending items in photo_import_pending_queue.json are Pinterest pin entries (wp_bf_*, wp_tb_*), NOT photo import entries. No true photo import items are pending. The Lobster workflow queue files (birds_import_queue.json, batch_clean_import_queue.json, etc.) do not exist. Recent import batches 60-66 found 0 new photos across all galleries \u2014 library is nearly fully imported."
+}

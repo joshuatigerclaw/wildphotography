@@ -1,0 +1,533 @@
+{
+  "run_at": "2026-04-19T18:24:20.786040+00:00",
+  "total_photos": 32261,
+  "render_ready_total": 20612,
+  "photos_with_issues": 133,
+  "all_clear": false,
+  "checks": {
+    "missing_thumb_url": {
+      "count": 1,
+      "sample": [
+        {
+          "id": 38028,
+          "slug": "DJI0184-d2e6e119",
+          "title": "DJI_0184.MP4",
+          "status": "draft"
+        }
+      ]
+    },
+    "missing_slug": {
+      "count": 0,
+      "sample": []
+    },
+    "missing_title": {
+      "count": 0,
+      "sample": []
+    },
+    "missing_gallery_slug": {
+      "count": 28,
+      "sample": [
+        {
+          "id": 14905,
+          "slug": "resplendent-quetzal",
+          "title": "Resplendent Quetzal",
+          "status": "archived"
+        },
+        {
+          "id": 38400,
+          "slug": "isla-tortuga-dji-0211-jpg",
+          "title": "DJI 0211",
+          "status": "active"
+        },
+        {
+          "id": 38402,
+          "slug": "isla-tortuga-dji-0227-jpg",
+          "title": "DJI 0227",
+          "status": "active"
+        },
+        {
+          "id": 38403,
+          "slug": "isla-tortuga-dji-0233-jpg",
+          "title": "DJI 0233",
+          "status": "active"
+        },
+        {
+          "id": 38404,
+          "slug": "isla-tortuga-dji-0235-jpg",
+          "title": "DJI 0235",
+          "status": "active"
+        },
+        {
+          "id": 38405,
+          "slug": "isla-tortuga-dji-0249-jpg",
+          "title": "DJI 0249",
+          "status": "active"
+        },
+        {
+          "id": 38407,
+          "slug": "isla-tortuga-dji-0267-jpg",
+          "title": "DJI 0267",
+          "status": "active"
+        },
+        {
+          "id": 38408,
+          "slug": "isla-tortuga-dji-0270-jpg",
+          "title": "DJI 0270",
+          "status": "active"
+        },
+        {
+          "id": 38410,
+          "slug": "isla-tortuga-dji-0272-jpg",
+          "title": "DJI 0272",
+          "status": "active"
+        },
+        {
+          "id": 38412,
+          "slug": "isla-tortuga-dji-0274-jpg",
+          "title": "DJI 0274",
+          "status": "active"
+        },
+        {
+          "id": 38413,
+          "slug": "isla-tortuga-dji-0276-jpg",
+          "title": "DJI 0276",
+          "status": "active"
+        },
+        {
+          "id": 38416,
+          "slug": "isla-tortuga-dji-0280-jpg",
+          "title": "DJI 0280",
+          "status": "active"
+        },
+        {
+          "id": 38417,
+          "slug": "isla-tortuga-dji-0287-jpg",
+          "title": "DJI 0287",
+          "status": "active"
+        },
+        {
+          "id": 38424,
+          "slug": "isla-tortuga-dji-0301-jpg",
+          "title": "DJI 0301",
+          "status": "active"
+        },
+        {
+          "id": 38433,
+          "slug": "isla-tortuga-dji-0510-jpg",
+          "title": "DJI 0510",
+          "status": "active"
+        },
+        {
+          "id": 38434,
+          "slug": "isla-tortuga-dji-0515-jpg",
+          "title": "DJI 0515",
+          "status": "active"
+        },
+        {
+          "id": 38435,
+          "slug": "isla-tortuga-dji-0524-2-jpg",
+          "title": "DJI 0524 2",
+          "status": "active"
+        },
+        {
+          "id": 38436,
+          "slug": "isla-tortuga-dji-0529-3-jpg",
+          "title": "DJI 0529 3",
+          "status": "active"
+        },
+        {
+          "id": 38440,
+          "slug": "punta-leona-dji-0205-jpg",
+          "title": "DJI 0205",
+          "status": "active"
+        },
+        {
+          "id": 38441,
+          "slug": "punta-leona-dji-0207-jpg",
+          "title": "DJI 0207",
+          "status": "active"
+        }
+      ]
+    },
+    "search_not_ready": {
+      "count": 92,
+      "sample": [
+        {
+          "id": 501,
+          "slug": "dji-0438-mp4-JbNP65",
+          "title": "Landscapes - Photo",
+          "status": "published"
+        },
+        {
+          "id": 14905,
+          "slug": "resplendent-quetzal",
+          "title": "Resplendent Quetzal",
+          "status": "archived"
+        },
+        {
+          "id": 15277,
+          "slug": "cl0a2693",
+          "title": "Birds | Costa Rica Wildlife Photography by Joshua ten Brink",
+          "status": "published"
+        },
+        {
+          "id": 15279,
+          "slug": "cl0a2719",
+          "title": "Birds | Costa Rica Wildlife Photography by Joshua ten Brink",
+          "status": "published"
+        },
+        {
+          "id": 15283,
+          "slug": "cl0a2774",
+          "title": "Birds | Costa Rica Wildlife Photography by Joshua ten Brink",
+          "status": "published"
+        },
+        {
+          "id": 15288,
+          "slug": "cl0a2996",
+          "title": "Birds | Costa Rica Wildlife Photography by Joshua ten Brink",
+          "status": "published"
+        },
+        {
+          "id": 15339,
+          "slug": "cl0a1359",
+          "title": "Birds | Costa Rica Wildlife Photography by Joshua ten Brink",
+          "status": "legacy_static"
+        },
+        {
+          "id": 15340,
+          "slug": "cl0a1360",
+          "title": "Birds | Costa Rica Wildlife Photography by Joshua ten Brink",
+          "status": "published"
+        },
+        {
+          "id": 15343,
+          "slug": "cl0a2139",
+          "title": "Birds | Costa Rica Wildlife Photography by Joshua ten Brink",
+          "status": "published"
+        },
+        {
+          "id": 15345,
+          "slug": "cl0a3569",
+          "title": "Birds | Costa Rica Wildlife Photography by Joshua ten Brink",
+          "status": "published"
+        },
+        {
+          "id": 15347,
+          "slug": "cl0a3605",
+          "title": "Birds | Costa Rica Wildlife Photography by Joshua ten Brink",
+          "status": "published"
+        },
+        {
+          "id": 15348,
+          "slug": "cl0a3611",
+          "title": "Birds | Costa Rica Wildlife Photography by Joshua ten Brink",
+          "status": "published"
+        },
+        {
+          "id": 15349,
+          "slug": "cl0a3616",
+          "title": "Birds | Costa Rica Wildlife Photography by Joshua ten Brink",
+          "status": "published"
+        },
+        {
+          "id": 15350,
+          "slug": "cl0a3637",
+          "title": "Birds | Costa Rica Wildlife Photography by Joshua ten Brink",
+          "status": "published"
+        },
+        {
+          "id": 15351,
+          "slug": "cl0a3665",
+          "title": "Birds | Costa Rica Wildlife Photography by Joshua ten Brink",
+          "status": "published"
+        },
+        {
+          "id": 15353,
+          "slug": "cl0a3678",
+          "title": "Birds | Costa Rica Wildlife Photography by Joshua ten Brink",
+          "status": "published"
+        },
+        {
+          "id": 15354,
+          "slug": "cl0a3684",
+          "title": "Birds | Costa Rica Wildlife Photography by Joshua ten Brink",
+          "status": "published"
+        },
+        {
+          "id": 15355,
+          "slug": "cl0a3723",
+          "title": "Birds | Costa Rica Wildlife Photography by Joshua ten Brink",
+          "status": "published"
+        },
+        {
+          "id": 15357,
+          "slug": "cl0a3751",
+          "title": "Birds | Costa Rica Wildlife Photography by Joshua ten Brink",
+          "status": "published"
+        },
+        {
+          "id": 15359,
+          "slug": "cl0a3890",
+          "title": "Birds | Costa Rica Wildlife Photography by Joshua ten Brink",
+          "status": "published"
+        }
+      ]
+    },
+    "derivatives_incomplete": {
+      "count": 0,
+      "sample": []
+    },
+    "missing_description": {
+      "count": 40,
+      "sample": [
+        {
+          "id": 38284,
+          "slug": "2019-03-31-06-14-48-fe35e0b8",
+          "title": "Title: Pink bud\nKeywords: flower; pink; tulip; spring; nature; flowers; garden; tulips; blossom; red; green; plant; beautiful; field; bloom; purple; flora; beauty; floral; bright; color; summer; petal; leaf; colorful",
+          "status": "draft"
+        },
+        {
+          "id": 38285,
+          "slug": "2019-03-31-06-30-13-49bfd4fa",
+          "title": "Title: Pink flower\nKeywords: flower; pink; blossom; spring; nature; cherry; tree; flowers; bloom; plant; branch; blooming; garden; white; flora; beauty; closeup; floral; petal; beautiful; blossoms; sakura; macro; natural; leaf",
+          "status": "draft"
+        },
+        {
+          "id": 38286,
+          "slug": "2020-10-04-11-45-29-6041ff6f",
+          "title": "Title: bunch of bananas on tree\nKeywords: 2020; 11.45.29; banana; fruit; tree; green; food; bunch; tropical; plant; nature; bananas; agriculture; healthy; fresh; farm; plantation; leaf; organic; yellow; raw; natural; ripe; branch; closeup; growth; growing",
+          "status": "draft"
+        },
+        {
+          "id": 38287,
+          "slug": "2020-10-09-15-57-34-1-a923ee83",
+          "title": "Keywords: 2020; 15.57.34",
+          "status": "draft"
+        },
+        {
+          "id": 38288,
+          "slug": "2020-10-10-08-32-09-511bb737",
+          "title": "Keywords: 2020; 08.32.09",
+          "status": "draft"
+        },
+        {
+          "id": 38289,
+          "slug": "2020-10-10-08-35-52-055c148e",
+          "title": "Title: tomato on a tree\nKeywords: 2020; 08.35.52; tomato; food; fruit; red; green; vegetable; ripe; agriculture; garden; plant; tree; nature; branch; fresh; leaf; organic; healthy; summer; crop; tomatoes; natural; growing; farm; grow; gardening",
+          "status": "draft"
+        },
+        {
+          "id": 38290,
+          "slug": "2020-10-10-08-54-18-339b23fd",
+          "title": "Keywords: 2020; 08.54.18",
+          "status": "draft"
+        },
+        {
+          "id": 38291,
+          "slug": "2020-10-10-09-18-30-891d0430",
+          "title": "Title: red and yellow flowers\nKeywords: 2020; 09.18.30; plant; flower; green; nature; garden; red; tree; leaves; leaf; flowers; spring; plants; tropical; yellow; blossom; pink; bud; flora; beautiful",
+          "status": "draft"
+        },
+        {
+          "id": 38292,
+          "slug": "2020-10-10-10-48-25-df984d4f",
+          "title": "Keywords: 2020; 10.48.25",
+          "status": "draft"
+        },
+        {
+          "id": 38302,
+          "slug": "img-0705-3671d5f7",
+          "title": "IMG_0705.JPG",
+          "status": "draft"
+        },
+        {
+          "id": 38306,
+          "slug": "2020-09-11-13-55-25-a905a59b",
+          "title": "2020-09-11 13.55.25.jpg",
+          "status": "draft"
+        },
+        {
+          "id": 38313,
+          "slug": "dji-0487-7568d17d",
+          "title": "Caption: default",
+          "status": "draft"
+        },
+        {
+          "id": 38323,
+          "slug": "dji-0507-39c63482",
+          "title": "Caption: default",
+          "status": "draft"
+        },
+        {
+          "id": 38400,
+          "slug": "isla-tortuga-dji-0211-jpg",
+          "title": "DJI 0211",
+          "status": "active"
+        },
+        {
+          "id": 38402,
+          "slug": "isla-tortuga-dji-0227-jpg",
+          "title": "DJI 0227",
+          "status": "active"
+        },
+        {
+          "id": 38403,
+          "slug": "isla-tortuga-dji-0233-jpg",
+          "title": "DJI 0233",
+          "status": "active"
+        },
+        {
+          "id": 38404,
+          "slug": "isla-tortuga-dji-0235-jpg",
+          "title": "DJI 0235",
+          "status": "active"
+        },
+        {
+          "id": 38405,
+          "slug": "isla-tortuga-dji-0249-jpg",
+          "title": "DJI 0249",
+          "status": "active"
+        },
+        {
+          "id": 38407,
+          "slug": "isla-tortuga-dji-0267-jpg",
+          "title": "DJI 0267",
+          "status": "active"
+        },
+        {
+          "id": 38408,
+          "slug": "isla-tortuga-dji-0270-jpg",
+          "title": "DJI 0270",
+          "status": "active"
+        }
+      ]
+    },
+    "missing_keywords": {
+      "count": 40,
+      "sample": [
+        {
+          "id": 38284,
+          "slug": "2019-03-31-06-14-48-fe35e0b8",
+          "title": "Title: Pink bud\nKeywords: flower; pink; tulip; spring; nature; flowers; garden; tulips; blossom; red; green; plant; beautiful; field; bloom; purple; flora; beauty; floral; bright; color; summer; petal; leaf; colorful",
+          "status": "draft"
+        },
+        {
+          "id": 38285,
+          "slug": "2019-03-31-06-30-13-49bfd4fa",
+          "title": "Title: Pink flower\nKeywords: flower; pink; blossom; spring; nature; cherry; tree; flowers; bloom; plant; branch; blooming; garden; white; flora; beauty; closeup; floral; petal; beautiful; blossoms; sakura; macro; natural; leaf",
+          "status": "draft"
+        },
+        {
+          "id": 38286,
+          "slug": "2020-10-04-11-45-29-6041ff6f",
+          "title": "Title: bunch of bananas on tree\nKeywords: 2020; 11.45.29; banana; fruit; tree; green; food; bunch; tropical; plant; nature; bananas; agriculture; healthy; fresh; farm; plantation; leaf; organic; yellow; raw; natural; ripe; branch; closeup; growth; growing",
+          "status": "draft"
+        },
+        {
+          "id": 38287,
+          "slug": "2020-10-09-15-57-34-1-a923ee83",
+          "title": "Keywords: 2020; 15.57.34",
+          "status": "draft"
+        },
+        {
+          "id": 38288,
+          "slug": "2020-10-10-08-32-09-511bb737",
+          "title": "Keywords: 2020; 08.32.09",
+          "status": "draft"
+        },
+        {
+          "id": 38289,
+          "slug": "2020-10-10-08-35-52-055c148e",
+          "title": "Title: tomato on a tree\nKeywords: 2020; 08.35.52; tomato; food; fruit; red; green; vegetable; ripe; agriculture; garden; plant; tree; nature; branch; fresh; leaf; organic; healthy; summer; crop; tomatoes; natural; growing; farm; grow; gardening",
+          "status": "draft"
+        },
+        {
+          "id": 38290,
+          "slug": "2020-10-10-08-54-18-339b23fd",
+          "title": "Keywords: 2020; 08.54.18",
+          "status": "draft"
+        },
+        {
+          "id": 38291,
+          "slug": "2020-10-10-09-18-30-891d0430",
+          "title": "Title: red and yellow flowers\nKeywords: 2020; 09.18.30; plant; flower; green; nature; garden; red; tree; leaves; leaf; flowers; spring; plants; tropical; yellow; blossom; pink; bud; flora; beautiful",
+          "status": "draft"
+        },
+        {
+          "id": 38292,
+          "slug": "2020-10-10-10-48-25-df984d4f",
+          "title": "Keywords: 2020; 10.48.25",
+          "status": "draft"
+        },
+        {
+          "id": 38302,
+          "slug": "img-0705-3671d5f7",
+          "title": "IMG_0705.JPG",
+          "status": "draft"
+        },
+        {
+          "id": 38306,
+          "slug": "2020-09-11-13-55-25-a905a59b",
+          "title": "2020-09-11 13.55.25.jpg",
+          "status": "draft"
+        },
+        {
+          "id": 38313,
+          "slug": "dji-0487-7568d17d",
+          "title": "Caption: default",
+          "status": "draft"
+        },
+        {
+          "id": 38323,
+          "slug": "dji-0507-39c63482",
+          "title": "Caption: default",
+          "status": "draft"
+        },
+        {
+          "id": 38400,
+          "slug": "isla-tortuga-dji-0211-jpg",
+          "title": "DJI 0211",
+          "status": "active"
+        },
+        {
+          "id": 38402,
+          "slug": "isla-tortuga-dji-0227-jpg",
+          "title": "DJI 0227",
+          "status": "active"
+        },
+        {
+          "id": 38403,
+          "slug": "isla-tortuga-dji-0233-jpg",
+          "title": "DJI 0233",
+          "status": "active"
+        },
+        {
+          "id": 38404,
+          "slug": "isla-tortuga-dji-0235-jpg",
+          "title": "DJI 0235",
+          "status": "active"
+        },
+        {
+          "id": 38405,
+          "slug": "isla-tortuga-dji-0249-jpg",
+          "title": "DJI 0249",
+          "status": "active"
+        },
+        {
+          "id": 38407,
+          "slug": "isla-tortuga-dji-0267-jpg",
+          "title": "DJI 0267",
+          "status": "active"
+        },
+        {
+          "id": 38408,
+          "slug": "isla-tortuga-dji-0270-jpg",
+          "title": "DJI 0270",
+          "status": "active"
+        }
+      ]
+    }
+  },
+  "status": "success"
+}

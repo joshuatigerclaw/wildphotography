@@ -1,0 +1,570 @@
+{
+  "run_at": "2026-05-05T14:58:23.140198+00:00",
+  "total_search_ready_photos": 37460,
+  "sample_size": 300,
+  "total_url_checks": 600,
+  "summary": {
+    "photos_ok": 270,
+    "photos_broken": 30,
+    "photos_missing_field": 0,
+    "ok_rate_pct": 90.0
+  },
+  "by_url_type": {
+    "thumb_url": {
+      "total": 300,
+      "accessible": 298,
+      "broken": 2,
+      "empty": 0
+    },
+    "og_image_url": {
+      "total": 300,
+      "accessible": 270,
+      "broken": 30,
+      "empty": 0
+    }
+  },
+  "broken_photos": {
+    "36183": {
+      "slug": "costa-rica-IMG_0647-9fae58",
+      "title": "Modern Commercial District Aerial View",
+      "gallery_slug": "costa-rica",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "35373": {
+      "slug": "rio-savagre-costa-rica-dji-0718-8644c50a",
+      "title": "landscape \u2014 Rio Savegre \u2014 DJI_0718 | WildPhotography",
+      "gallery_slug": "rio-savagre-costa-rica",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "9224": {
+      "slug": "2020-06-06-09-45-59-landscape-5842",
+      "title": "landscape \u2014 Guanacaste \u2014 #9224 | WildPhotography",
+      "gallery_slug": "landscape",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "36169": {
+      "slug": "costa-rica-DJI_0622-1-5a86aa",
+      "title": "White Boat and Jungle Coast Aerial",
+      "gallery_slug": "costa-rica",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        },
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        }
+      ]
+    },
+    "35275": {
+      "slug": "montezuma-costa-rica-dji-0137-9c97c42e",
+      "title": "landscape \u2014 Montezuma \u2014 DJI_0137 | WildPhotography",
+      "gallery_slug": "montezuma-costa-rica",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        },
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        }
+      ]
+    },
+    "9216": {
+      "slug": "2019-12-25-12-52-55-landscape-5834",
+      "title": "landscape \u2014 Guanacaste \u2014 #9216 | WildPhotography",
+      "gallery_slug": "landscape",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "35285": {
+      "slug": "montezuma-costa-rica-dji-0160-fbdeee68",
+      "title": "landscape \u2014 Montezuma \u2014 DJI_0160 | WildPhotography",
+      "gallery_slug": "montezuma-costa-rica",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "41362": {
+      "slug": "flowers-plants-trees-2019-03-31-06-14-48",
+      "title": "Costa Rica \u2014 Guanacaste \u2014 #41362 | WildPhotography",
+      "gallery_slug": null,
+      "status": "broken",
+      "checks": [
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "URL_ERROR_SSLError"
+        },
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        }
+      ]
+    },
+    "44487": {
+      "slug": "img-0854-molxal1j",
+      "title": "Costa Rica Wildlife Photography",
+      "gallery_slug": null,
+      "status": "broken",
+      "checks": [
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "URL_ERROR_SSLError"
+        },
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        }
+      ]
+    },
+    "35469": {
+      "slug": "rio-savagre-costa-rica-pano00001-2aafb800",
+      "title": "landscape \u2014 Rio Savegre \u2014 pano00001 | WildPhotography",
+      "gallery_slug": "rio-savagre-costa-rica",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        },
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        }
+      ]
+    },
+    "42229": {
+      "slug": "rivers-dji_0069",
+      "title": "Nature \u2014 Rivers \u2014 DJI_0069 | WildPhotography",
+      "gallery_slug": "rivers",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "URL_ERROR_gaierror"
+        },
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        }
+      ]
+    },
+    "45079": {
+      "slug": "tambor-photos-cl0a4271-2666de",
+      "title": "Tambor Beach, Nicoya Peninsula, Puntarenas Costa Rica",
+      "gallery_slug": "tambor-photos",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "37063": {
+      "slug": "dji-0706-69eb167b",
+      "title": "wildlife \u2014 Isla Tortuga \u2014 #37063 | WildPhotography",
+      "gallery_slug": "isla-tortuga",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "39111": {
+      "slug": "20250204-055317-a7aa1464",
+      "title": "Early Sunrise Cityscape, San Jose Central Valley, Costa Rica",
+      "gallery_slug": "costa-rica-gallery-sunrise-sunset",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "URL_ERROR_gaierror"
+        },
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        }
+      ]
+    },
+    "34789": {
+      "slug": "dji-0728-2-99c14ca3",
+      "title": "landscape \u2014 Peninsula de Osa \u2014 #34789 | WildPhotography",
+      "gallery_slug": "peninsula-de-osa",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "42540": {
+      "slug": "night-photography-dji_0981",
+      "title": "Costa Rica in Costa Rica \u2014 Photo #42540 | WildPhotography",
+      "gallery_slug": null,
+      "status": "broken",
+      "checks": [
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "URL_ERROR_SSLError"
+        },
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        }
+      ]
+    },
+    "36150": {
+      "slug": "montezuma-costa-rica-DJI_0080-e9d2d6",
+      "title": "Montezuma Luxury Beach Villa Aerial",
+      "gallery_slug": "montezuma-costa-rica",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        },
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        }
+      ]
+    },
+    "44548": {
+      "slug": "20250425-171924-molxgr6o",
+      "title": "20250425 171924",
+      "gallery_slug": null,
+      "status": "broken",
+      "checks": [
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "URL_ERROR_SSLError"
+        },
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        }
+      ]
+    },
+    "41315": {
+      "slug": "sunrise-sunset-2020-06-07-17-57-31",
+      "title": "Costa Rica \u2014 Guanacaste \u2014 #41315 | WildPhotography",
+      "gallery_slug": null,
+      "status": "broken",
+      "checks": [
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "URL_ERROR_SSLError"
+        },
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        }
+      ]
+    },
+    "45029": {
+      "slug": "tambor-photos-cl0a1819-01680c",
+      "title": "Tambor Beach, Nicoya Peninsula, Puntarenas Costa Rica",
+      "gallery_slug": "tambor-photos",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        },
+        {
+          "type": "thumb_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "42047": {
+      "slug": "tamarindo-guanacaste-costa-rica-dji_0895",
+      "title": "Costa Rica \u2014 Tamarindo, Guanacaste \u2014 #42047 | WildPhotography",
+      "gallery_slug": null,
+      "status": "broken",
+      "checks": [
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "URL_ERROR_SSLError"
+        },
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        }
+      ]
+    },
+    "35037": {
+      "slug": "peninsula-papagayo-dji-0926-ed932f8a",
+      "title": "Aerial View of a Secluded Bay in Costa Rica",
+      "gallery_slug": "peninsula-papagayo",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "26929": {
+      "slug": "dji-0939-3ad4e5d2",
+      "title": "landscape \u2014 Rio Savagre \u2014 DJI_0939 | WildPhotography",
+      "gallery_slug": "costa-rica-gallery-rio-savagre-costa-rica",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "37049": {
+      "slug": "dji-0572-bdee0661",
+      "title": "wildlife \u2014 Isla Tortuga \u2014 #37049 | WildPhotography",
+      "gallery_slug": "isla-tortuga",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "27005": {
+      "slug": "photo-125-DJI-0808",
+      "title": "landscape \u2014 Peninsula Papagayo \u2014 #27005 | WildPhotography",
+      "gallery_slug": "costa-rica-gallery-peninsula-papagayo",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        },
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        }
+      ]
+    },
+    "10046": {
+      "slug": "2021-03-25-12-10-33-montezuma-costa-rica-6664",
+      "title": "landscape \u2014 Montezuma \u2014 #10046 | WildPhotography",
+      "gallery_slug": "montezuma-costa-rica",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "41975": {
+      "slug": "la-sabana-estadio-nacional-costa-rica-san-jose-dji_0820",
+      "title": "Costa Rica \u2014 La Sabana, San Jose \u2014 #41975 | WildPhotography",
+      "gallery_slug": null,
+      "status": "broken",
+      "checks": [
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "URL_ERROR_SSLError"
+        },
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        }
+      ]
+    },
+    "34768": {
+      "slug": "rio-savagre-costa-rica-hyperlapse-0180-6fb1024b",
+      "title": "landscape \u2014 Rio Savagre \u2014 #34768 | WildPhotography",
+      "gallery_slug": "rio-savagre-costa-rica",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "2661": {
+      "slug": "cl0a0764-1887",
+      "title": "landscape \u2014 Birds \u2014 #2661 | WildPhotography",
+      "gallery_slug": "birds",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "35207": {
+      "slug": "peninsula-papagayo-dji-0269-2e28f227",
+      "title": "landscape \u2014 Peninsula Papagayo \u2014 #35207 | WildPhotography",
+      "gallery_slug": "peninsula-papagayo",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    }
+  },
+  "empty_url_photos": {},
+  "status": "success"
+}

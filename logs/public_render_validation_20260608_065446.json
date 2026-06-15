@@ -1,0 +1,284 @@
+{
+  "run_at": "2026-06-08T12:54:46.583373+00:00",
+  "total_photos": 68938,
+  "render_ready_total": 68150,
+  "photos_with_issues": 122,
+  "all_clear": false,
+  "checks": {
+    "missing_thumb_url": {
+      "count": 0,
+      "sample": []
+    },
+    "missing_slug": {
+      "count": 0,
+      "sample": []
+    },
+    "missing_title": {
+      "count": 0,
+      "sample": []
+    },
+    "missing_gallery_slug": {
+      "count": 105,
+      "sample": [
+        {
+          "id": 92814,
+          "slug": "2019-11-20-13.25.16",
+          "title": "Costa Rica Landscape Video November 2019",
+          "status": "active"
+        },
+        {
+          "id": 92815,
+          "slug": "2019-11-20-13.28.00",
+          "title": "Costa Rica Scenery Video November 2019",
+          "status": "active"
+        },
+        {
+          "id": 92816,
+          "slug": "amanecer-irazu-abr-25-2020-logo",
+          "title": "Volcano Irazu Sunrise Aerial Video",
+          "status": "active"
+        },
+        {
+          "id": 92819,
+          "slug": "dji-0115a-tortuga-boats-to-sand",
+          "title": "Turtle Beach Aerial Video Costa Rica",
+          "status": "active"
+        },
+        {
+          "id": 92820,
+          "slug": "dji-0199-mp4",
+          "title": "Costa Rica Aerial Landscape Video",
+          "status": "active"
+        },
+        {
+          "id": 93154,
+          "slug": "costa-rica-gallery-puntarenas-costa-rica-dji-0328-1780891602444",
+          "title": "DJI 0328",
+          "status": "complete"
+        },
+        {
+          "id": 93155,
+          "slug": "costa-rica-gallery-puntarenas-costa-rica-dji-0331-1780891602589",
+          "title": "DJI 0331",
+          "status": "complete"
+        },
+        {
+          "id": 93156,
+          "slug": "costa-rica-gallery-puntarenas-costa-rica-dji-0333-1780891602732",
+          "title": "DJI 0333",
+          "status": "complete"
+        },
+        {
+          "id": 93157,
+          "slug": "costa-rica-gallery-puntarenas-costa-rica-dji-0339-1780891602873",
+          "title": "DJI 0339",
+          "status": "complete"
+        },
+        {
+          "id": 93158,
+          "slug": "costa-rica-gallery-puntarenas-costa-rica-dji-0341-1780891603016",
+          "title": "DJI 0341",
+          "status": "complete"
+        },
+        {
+          "id": 93159,
+          "slug": "costa-rica-gallery-puntarenas-costa-rica-dji-0343-1780891603157",
+          "title": "DJI 0343",
+          "status": "complete"
+        },
+        {
+          "id": 93160,
+          "slug": "costa-rica-gallery-puntarenas-costa-rica-dji-0398-1780891603302",
+          "title": "DJI 0398",
+          "status": "complete"
+        },
+        {
+          "id": 93161,
+          "slug": "costa-rica-gallery-puntarenas-costa-rica-dji-0405-1780891603444",
+          "title": "DJI 0405",
+          "status": "complete"
+        },
+        {
+          "id": 93162,
+          "slug": "costa-rica-gallery-puntarenas-costa-rica-dji-0408-1780891603586",
+          "title": "DJI 0408",
+          "status": "complete"
+        },
+        {
+          "id": 93163,
+          "slug": "costa-rica-gallery-puntarenas-costa-rica-dji-0421-1780891603728",
+          "title": "DJI 0421",
+          "status": "complete"
+        },
+        {
+          "id": 93164,
+          "slug": "costa-rica-gallery-puntarenas-costa-rica-dji-0422-1780891603870",
+          "title": "DJI 0422",
+          "status": "complete"
+        },
+        {
+          "id": 93165,
+          "slug": "costa-rica-gallery-puntarenas-costa-rica-dji-0425-1780891604017",
+          "title": "DJI 0425",
+          "status": "complete"
+        },
+        {
+          "id": 93166,
+          "slug": "costa-rica-gallery-puntarenas-costa-rica-dji-0429-1780891604158",
+          "title": "DJI 0429",
+          "status": "complete"
+        },
+        {
+          "id": 93167,
+          "slug": "costa-rica-gallery-puntarenas-costa-rica-dji-0433-1780891604307",
+          "title": "DJI 0433",
+          "status": "complete"
+        },
+        {
+          "id": 93168,
+          "slug": "costa-rica-gallery-puntarenas-costa-rica-dji-0436-1780891604449",
+          "title": "DJI 0436",
+          "status": "complete"
+        }
+      ]
+    },
+    "search_not_ready": {
+      "count": 22,
+      "sample": [
+        {
+          "id": 20,
+          "slug": "capuchin-monkey",
+          "title": "Wildlife Photography \u2014 Costa Rica",
+          "status": "archived_unrecoverable"
+        },
+        {
+          "id": 25,
+          "slug": "rufous-hummingbird",
+          "title": "Rufous-tailed Hummingbird - Birds of Costa Rica, Costa Rica",
+          "status": "archived_unrecoverable"
+        },
+        {
+          "id": 26,
+          "slug": "magpie-jay",
+          "title": "Birds of Costa Rica Photography \u2014 Costa Rica",
+          "status": "archived_unrecoverable"
+        },
+        {
+          "id": 28,
+          "slug": "green-honeycreeper",
+          "title": "Green Honeycreeper - Birds of Costa Rica, Costa Rica",
+          "status": "archived_unrecoverable"
+        },
+        {
+          "id": 34,
+          "slug": "cloud-forest-mist",
+          "title": "Monteverde Cloud Forest - Puntarenas - Costa Rica",
+          "status": "archived_unrecoverable"
+        },
+        {
+          "id": 123,
+          "slug": "volcan-poas-crater-view-123",
+          "title": "Volc\u00e1n Po\u00e1s Photography \u2014 Costa Rica",
+          "status": "archived_unrecoverable"
+        },
+        {
+          "id": 143,
+          "slug": "volcan-poas-crater-view-143",
+          "title": "Volc\u00e1n Po\u00e1s Photography \u2014 Costa Rica",
+          "status": "archived_unrecoverable"
+        },
+        {
+          "id": 799,
+          "slug": "2018-04-30-11-56-46-1-799",
+          "title": "landscape \u2014 Arenal Volcano",
+          "status": "archived_unrecoverable"
+        },
+        {
+          "id": 890,
+          "slug": "2020-09-13-07-31-41-1-890",
+          "title": "landscape \u2014 Central Valley Beaches - 890",
+          "status": "archived_unrecoverable"
+        },
+        {
+          "id": 891,
+          "slug": "2020-10-30-06-17-00-1-891",
+          "title": "landscape \u2014 Central Valley Beaches - 891",
+          "status": "archived_unrecoverable"
+        },
+        {
+          "id": 901,
+          "slug": "20201129-061214-pano-901",
+          "title": "Coastal Beaches Beach Scene",
+          "status": "archived_unrecoverable"
+        },
+        {
+          "id": 35723,
+          "slug": "santateresa-pano00038-0669f479",
+          "title": "Drone Panorama: Sunset on Santa Teresa Beach, Costa Rica",
+          "status": "archived"
+        },
+        {
+          "id": 90046,
+          "slug": "tambor-nicoya-peninsula-costa--2024-12-30-12-12-53-ead75a",
+          "title": "2024 12 30 12 12 53",
+          "status": "archived_unrecoverable"
+        },
+        {
+          "id": 90066,
+          "slug": "tambor-nicoya-peninsula-costa--2024-12-31-16-27-02-d3d228",
+          "title": "2024 12 31 16 27 02",
+          "status": "archived_unrecoverable"
+        },
+        {
+          "id": 90084,
+          "slug": "tambor-nicoya-peninsula-costa--2025-01-03-16-31-18-4c51ff",
+          "title": "2025 01 03 16 31 18",
+          "status": "archived_unrecoverable"
+        },
+        {
+          "id": 90099,
+          "slug": "isla-tortuga-2023-12-31-10-00-31-6708cc",
+          "title": "2023 12 31 10 00 31",
+          "status": "archived_unrecoverable"
+        },
+        {
+          "id": 92456,
+          "slug": "wildlife-test-test12",
+          "title": "Wildlife Moment in Costa Rica",
+          "status": "archived_unrecoverable"
+        },
+        {
+          "id": 92814,
+          "slug": "2019-11-20-13.25.16",
+          "title": "Costa Rica Landscape Video November 2019",
+          "status": "active"
+        },
+        {
+          "id": 92815,
+          "slug": "2019-11-20-13.28.00",
+          "title": "Costa Rica Scenery Video November 2019",
+          "status": "active"
+        },
+        {
+          "id": 92816,
+          "slug": "amanecer-irazu-abr-25-2020-logo",
+          "title": "Volcano Irazu Sunrise Aerial Video",
+          "status": "active"
+        }
+      ]
+    },
+    "derivatives_incomplete": {
+      "count": 0,
+      "sample": []
+    },
+    "missing_description": {
+      "count": 0,
+      "sample": []
+    },
+    "missing_keywords": {
+      "count": 0,
+      "sample": []
+    }
+  },
+  "status": "success"
+}

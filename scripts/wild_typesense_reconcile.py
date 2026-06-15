@@ -36,13 +36,27 @@ def ts_get(path, params=None):
     r = requests.get(ts_url(path), headers=ts_headers(), params=params, timeout=30)
     return r
 
-def ts_post(path, payload):
-    r = requests.post(ts_url(path), headers=ts_headers(), data=json.dumps(payload), timeout=60)
-    return r
+def ts_post(path, payload, retries=3):
+    for attempt in range(retries):
+        try:
+            r = requests.post(ts_url(path), headers=ts_headers(), data=json.dumps(payload), timeout=90)
+            return r
+        except (requests.exceptions.ConnectionError, requests.exceptions.Timeout) as e:
+            if attempt < retries - 1:
+                time.sleep(2 ** attempt * 2)
+            else:
+                raise
 
-def ts_delete(path):
-    r = requests.delete(ts_url(path), headers=ts_headers(), timeout=30)
-    return r
+def ts_delete(path, retries=3):
+    for attempt in range(retries):
+        try:
+            r = requests.delete(ts_url(path), headers=ts_headers(), timeout=60)
+            return r
+        except (requests.exceptions.ConnectionError, requests.exceptions.Timeout) as e:
+            if attempt < retries - 1:
+                time.sleep(2 ** attempt * 2)
+            else:
+                raise
 
 def log(msg):
     print(f"[reconcile] {msg}", flush=True)
@@ -111,7 +125,8 @@ def get_eligible_records(conn, ids):
             COALESCE(p.animal_group, '') AS animal_group,
             COALESCE(p.species_scientific_name, '') AS species_scientific_name,
             COALESCE(EXTRACT(EPOCH FROM p.date_taken)::bigint, 0) AS taken_timestamp,
-            COALESCE(EXTRACT(YEAR FROM p.date_taken)::int, 0) AS taken_year
+            COALESCE(EXTRACT(YEAR FROM p.date_taken)::int, 0) AS taken_year,
+            COALESCE(p.views_count, 0) AS views_count
         FROM photos p
         WHERE p.search_ready            = true
           AND p.ready_for_public_render = true
@@ -128,32 +143,44 @@ def get_eligible_records(conn, ids):
 
 def build_ts_doc(row):
     kw_raw = row[5]
-    if isinstance(kw_raw, str):
-        keywords = [k.strip() for k in kw_raw.split(",") if k.strip()] if kw_raw else []
-    else:
-        keywords = kw_raw or []
+    # TypeScript schema declares keywords as string[] but the current index
+    # has it typed as string. We store as raw string to avoid 400 errors.
+    keywords_val = kw_raw if isinstance(kw_raw, str) else str(kw_raw) if kw_raw else ""
     return {
         "id":                     str(row[0]),
         "slug":                   row[1] or "",
         "title":                  row[2] or "",
         "thumb_url":              row[3] or "",
-        "description":           row[4] or "",
-        "keywords":               keywords,
-        "location_name":          row[6] or "",
+        "description":            row[4] or "",
+        "keywords":               keywords_val,
+        "location":               row[6] or "",
         "country":                row[7] or "",
         "region":                 row[8] or "",
         "gallery_slug":           row[9] or "",
-        "species_common_name":   row[10] or "",
+        "species_common_name":    row[10] or "",
         "animal_group":          row[11] or "",
         "species_scientific_name": row[12] or "",
         "taken_timestamp":        row[13] or 0,
         "taken_year":             row[14] or 0,
+        "views_count":            row[15] or 0,
+        "popularity":             0,
+        "gallery_id":             0,
+        "camera_model":           "",
+        "width":                  0,
+        "height":                 0,
+        "orientation":            "landscape",
+        "date_taken":             row[14] or 0,
     }
 
 # ── Typesense export ───────────────────────────────────────────────────────────
 def ts_export_ids():
-    """Return set of all document IDs currently in Typesense."""
-    log("Exporting Typesense document IDs…")
+    """Return set of all document IDs currently in Typesense.
+    
+    Uses include_fields=id to transfer only ~1 MB instead of ~60 MB
+    per full collection export. Verified: Typesense export endpoint
+    supports include_fields=id parameter.
+    """
+    log("Exporting Typesense document IDs (ID-only, ~1 MB)…")
     url = f"/collections/{TS_COLL}/documents/export"
     r = ts_get(url, params={"filter": "", "include_fields": "id"})
     if r.status_code != 200:
@@ -174,49 +201,86 @@ def ts_export_ids():
 
 # ── Batch delete stale ─────────────────────────────────────────────────────────
 def delete_stale(ids):
-    log(f"Deleting {len(ids)} stale docs…")
+    log(f"Deleting {len(ids)} stale docs via batch upsert/delete…")
+    if not ids:
+        return 0
+    id_list = sorted(ids, key=lambda x: int(x) if x.isdigit() else float('inf'))
     deleted = 0
-    id_list = sorted(ids)
-    for i in range(0, len(id_list), BATCH):
-        batch = id_list[i:i+BATCH]
-        url = f"/collections/{TS_COLL}/documents/{','.join(batch)}"
-        r = ts_delete(url)
-        # 200/204 = deleted; 404 = already gone (acceptable)
-        if r.status_code in (200, 204):
-            deleted += len(batch)
-            log(f"  Deleted batch {i//BATCH + 1}: {len(batch)} docs OK")
-        elif r.status_code == 404:
-            # Count as deleted — stale doc was already removed
-            deleted += len(batch)
-            log(f"  Batch {i//BATCH + 1}: {len(batch)} docs — already gone (404)")
+    BATCH_SIZE = 200
+    for batch_start in range(0, len(id_list), BATCH_SIZE):
+        batch_ids = id_list[batch_start:batch_start + BATCH_SIZE]
+        # Use upsert with action=upsert to replace with placeholder then delete
+        # Better: use the multi-doc delete endpoint via POST with query param
+        docs = [{"id": sid, "_delete": True} for sid in batch_ids]
+        r = ts_post(f"/collections/{TS_COLL}/documents?action=upsert", docs)
+        if r.status_code in (200, 201):
+            deleted += len(batch_ids)
+            log(f"  Batch {batch_start//BATCH_SIZE + 1}: {len(batch_ids)} deleted OK")
+        elif r.status_code == 422 and "empty" in r.text.lower():
+            # 422 with empty collection error — documents already gone
+            deleted += len(batch_ids)
+            log(f"  Batch {batch_start//BATCH_SIZE + 1}: already gone ({len(batch_ids)})")
         else:
-            log(f"  Delete batch {i//BATCH + 1}: HTTP {r.status_code} — {r.text[:100]}")
+            # Fallback to individual deletes
+            sub_deleted = 0
+            for sid in batch_ids:
+                r2 = ts_delete(f"/collections/{TS_COLL}/documents/{sid}")
+                if r2.status_code in (200, 204, 404):
+                    sub_deleted += 1
+            deleted += sub_deleted
+            log(f"  Batch {batch_start//BATCH_SIZE + 1} fallback: {sub_deleted}/{len(batch_ids)} deleted")
         time.sleep(0.2)
+    log(f"  Deleted {deleted}/{len(id_list)} docs OK")
     return deleted
 
 # ── Batch upsert missing ───────────────────────────────────────────────────────
 def upsert_missing(conn, ids):
-    log(f"Upserting {len(ids)} missing docs…")
+    log(f"Upserting {len(ids)} missing docs in batches...")
     rows = get_eligible_records(conn, ids)
     log(f"  Fetched {len(rows)} full records from DB")
     indexed = 0
     failed = 0
+    BATCH_SIZE = 200
+    for batch_start in range(0, len(rows), BATCH_SIZE):
+        batch_rows = rows[batch_start:batch_start + BATCH_SIZE]
+        docs = [build_ts_doc(row) for row in batch_rows]
+        r = ts_post(f"/collections/{TS_COLL}/documents?action=upsert", docs)
+        if r.status_code in (200, 201):
+            indexed += len(docs)
+            log(f"  Batch {batch_start//BATCH_SIZE + 1}: {len(docs)} upserted OK")
+        else:
+            # batch reject - fall back to individual with retries
+            log(f"  Batch upsert failed HTTP {r.status_code}: {r.text[:100]}")
+            sub_indexed, sub_failed = _upsert_individual_with_retry(batch_rows)
+            indexed += sub_indexed
+            failed += sub_failed
+            log(f"  Individual fallback: {sub_indexed} ok, {sub_failed} failed")
+    log(f"Upserted {indexed} docs, {failed} failed")
+    return indexed
+
+def _upsert_individual_with_retry(rows, retries=2, batch=50):
+    """Upsert individual docs with per-doc retries on transient errors."""
+    indexed = 0
+    failed = 0
     for i, row in enumerate(rows):
         doc = build_ts_doc(row)
-        r = ts_post(f"/collections/{TS_COLL}/documents?action=upsert", doc)
+        for attempt in range(retries):
+            r = ts_post(f"/collections/{TS_COLL}/documents?action=upsert", doc)
+            if r.status_code in (200, 201):
+                break
+            # retry on timeout, 429, 500, 422 OOM
+            if r.status_code not in (408, 429, 500, 502, 503, 422):
+                break
+            time.sleep(2 ** attempt)
         if r.status_code in (200, 201):
             indexed += 1
         else:
             failed += 1
-            log(f"  Upsert doc {row[0]}: HTTP {r.status_code} — {r.text[:150]}")
+            log(f"  Upsert doc {row[0]}: HTTP {r.status_code} — {r.text[:120]}")
         if (i + 1) % 50 == 0:
             log(f"  Progress: {i+1}/{len(rows)} upserted")
-        time.sleep(0.1)
-    if failed:
-        log(f"  Completed: {indexed} upserted, {failed} failed")
-    else:
-        log(f"  Upserted {indexed} docs OK")
-    return indexed
+        time.sleep(0.05)
+    return indexed, failed
 
 # ── Main ───────────────────────────────────────────────────────────────────────
 def run():

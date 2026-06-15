@@ -1,0 +1,714 @@
+{
+  "run_at": "2026-04-25T10:39:34.558438+00:00",
+  "total_search_ready_photos": 34339,
+  "sample_size": 300,
+  "total_url_checks": 600,
+  "summary": {
+    "photos_ok": 262,
+    "photos_broken": 38,
+    "photos_missing_field": 0,
+    "ok_rate_pct": 87.33
+  },
+  "by_url_type": {
+    "thumb_url": {
+      "total": 300,
+      "accessible": 290,
+      "broken": 10,
+      "empty": 0
+    },
+    "og_image_url": {
+      "total": 300,
+      "accessible": 263,
+      "broken": 37,
+      "empty": 0
+    }
+  },
+  "broken_photos": {
+    "35375": {
+      "slug": "rio-savagre-costa-rica-dji-0727-0957f12d",
+      "title": "Rio Savegre Aerial View",
+      "gallery_slug": "rio-savagre-costa-rica",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        },
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        }
+      ]
+    },
+    "35283": {
+      "slug": "montezuma-costa-rica-dji-0167-364279f3",
+      "title": "Montezuma Aerial View",
+      "gallery_slug": "montezuma-costa-rica",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "27044": {
+      "slug": "photo-125-CL0A6087",
+      "title": "Golden Sunset over Peninsula Papagayo, Costa Rica",
+      "gallery_slug": "costa-rica-gallery-peninsula-papagayo",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        },
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        }
+      ]
+    },
+    "25433": {
+      "slug": "dji0519",
+      "title": "Vertical Aerial Panorama of Calamachita Valley Morning Landscape",
+      "gallery_slug": "south-america-argentina",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "37312": {
+      "slug": "20240811-161259-f2687bc4",
+      "title": "Santa Teresa, Costa Rica",
+      "gallery_slug": "uncategorized",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "URL_ERROR_gaierror"
+        },
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        }
+      ]
+    },
+    "27193": {
+      "slug": "photo-127-2021-03-25 12-24-15",
+      "title": "Montezuma, Costa Rica | WildPhotography",
+      "gallery_slug": "costa-rica-gallery-montezuma-costa-rica",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": false,
+          "error": "InvalidURL"
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "39240": {
+      "slug": "sunrise-sunset-cl0a2077-jpg",
+      "title": "Sunrise and Sunset Photography - Costa Rica",
+      "gallery_slug": null,
+      "status": "broken",
+      "checks": [
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "URL_ERROR_SSLError"
+        },
+        {
+          "type": "thumb_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "34778": {
+      "slug": "dji-0705-697ab7e2",
+      "title": "Peninsula de Osa Aerial View",
+      "gallery_slug": "peninsula-de-osa",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "39154": {
+      "slug": "sunrise-sunset-20250321-174903-jpg",
+      "title": "Sunrise and Sunset Photography in Costa Rica",
+      "gallery_slug": "sunrise-sunset",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "og_image_url",
+          "accessible": true,
+          "error": null
+        },
+        {
+          "type": "thumb_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "35092": {
+      "slug": "montezuma-costa-rica-dji-0386-b02f3c3f",
+      "title": "Montezuma Aerial View",
+      "gallery_slug": "montezuma-costa-rica",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "39490": {
+      "slug": "sunrise-sunset-dji-0678-jpg",
+      "title": "Sunrise and Sunset Photography - Costa Rica",
+      "gallery_slug": null,
+      "status": "broken",
+      "checks": [
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "URL_ERROR_SSLError"
+        },
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        }
+      ]
+    },
+    "40012": {
+      "slug": "birds-img-0344-jpg",
+      "title": "Costa Rica Bird Photography - Birds of Costa Rica Gallery",
+      "gallery_slug": null,
+      "status": "broken",
+      "checks": [
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "URL_ERROR_SSLError"
+        },
+        {
+          "type": "thumb_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "35215": {
+      "slug": "peninsula-papagayo-cl0a6453-37c094c2",
+      "title": "Peninsula Papagayo Costa Rica Photo",
+      "gallery_slug": "peninsula-papagayo",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        },
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        }
+      ]
+    },
+    "35473": {
+      "slug": "rio-savagre-costa-rica-pano00004-c59c7708",
+      "title": "Rio Savegre Panoramic View",
+      "gallery_slug": "rio-savagre-costa-rica",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        },
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        }
+      ]
+    },
+    "27200": {
+      "slug": "photo-127-CL0A5932",
+      "title": "Montezuma Photography",
+      "gallery_slug": "costa-rica-gallery-montezuma-costa-rica",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        },
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        }
+      ]
+    },
+    "40214": {
+      "slug": "birds-macaws-lapas-20250413-061508",
+      "title": "Scarlet Macaw at Carara National Park, Costa Rica",
+      "gallery_slug": null,
+      "status": "broken",
+      "checks": [
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "URL_ERROR_SSLError"
+        },
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        }
+      ]
+    },
+    "35052": {
+      "slug": "peninsula-papagayo-dji-0948-7754e13c",
+      "title": "Peninsula Papagayo Aerial View",
+      "gallery_slug": "peninsula-papagayo",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "40745": {
+      "slug": "costa-rica-gallery-beaches-dji-0299",
+      "title": "Costa Rica Pacific Coast Beaches Photography",
+      "gallery_slug": null,
+      "status": "broken",
+      "checks": [
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "URL_ERROR_SSLError"
+        },
+        {
+          "type": "thumb_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "40301": {
+      "slug": "jaco-beach-cl0a8213",
+      "title": "Jaco Beach, Puntarenas, Costa Rica",
+      "gallery_slug": null,
+      "status": "broken",
+      "checks": [
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "URL_ERROR_SSLError"
+        },
+        {
+          "type": "thumb_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "40985": {
+      "slug": "las-catalinas-guanacaste-dji-0991",
+      "title": "DJI_0991",
+      "gallery_slug": null,
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": false,
+          "error": "URL_ERROR_SSLError"
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "URL_ERROR_SSLError"
+        }
+      ]
+    },
+    "31032": {
+      "slug": "img-2403-6d2c0241",
+      "title": "Crocodile Photography, Costa Rica",
+      "gallery_slug": "crocodiles",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "27183": {
+      "slug": "photo-125-DJI-0200",
+      "title": "Costa rica gallery peninsula papagayo | Costa Rica Wildlife Photography by Joshua ten Brink",
+      "gallery_slug": "costa-rica-gallery-peninsula-papagayo",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        },
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        }
+      ]
+    },
+    "40459": {
+      "slug": "jaco-beach-dji-0038",
+      "title": "Jaco Beach, Puntarenas, Costa Rica",
+      "gallery_slug": null,
+      "status": "broken",
+      "checks": [
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "URL_ERROR_SSLError"
+        },
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        }
+      ]
+    },
+    "40350": {
+      "slug": "costa-rica-gallery-beaches-2022-02-18-17-03-50",
+      "title": "Costa Rica Pacific Coast Beaches Photography",
+      "gallery_slug": null,
+      "status": "broken",
+      "checks": [
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "URL_ERROR_SSLError"
+        },
+        {
+          "type": "thumb_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "41085": {
+      "slug": "escazu-costa-rica-121619-hyperlapse-0051",
+      "title": "121619_HYPERLAPSE_0051",
+      "gallery_slug": null,
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": false,
+          "error": "URL_ERROR_SSLError"
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "URL_ERROR_SSLError"
+        }
+      ]
+    },
+    "40892": {
+      "slug": "birds-macaws-lapas-img-8493",
+      "title": "Scarlet Macaw at Carara National Park, Costa Rica",
+      "gallery_slug": null,
+      "status": "broken",
+      "checks": [
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "URL_ERROR_SSLError"
+        },
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        }
+      ]
+    },
+    "34749": {
+      "slug": "dji-0647-09fc9ecf",
+      "title": "Peninsula de Osa Aerial View",
+      "gallery_slug": "peninsula-de-osa",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        },
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        }
+      ]
+    },
+    "35045": {
+      "slug": "peninsula-papagayo-dji-0938-bf62ad0c",
+      "title": "Aerial View of Lush Costa Rican Peninsula",
+      "gallery_slug": "peninsula-papagayo",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        },
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        }
+      ]
+    },
+    "33801": {
+      "slug": "dji-0539-a1015079",
+      "title": "Aerial Photography, Costa Rica (DJI 0539)",
+      "gallery_slug": "best-of-costa-rica",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        },
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        }
+      ]
+    },
+    "40727": {
+      "slug": "birds-macaws-lapas-dji-0644",
+      "title": "Scarlet Macaw at Carara National Park, Costa Rica",
+      "gallery_slug": null,
+      "status": "broken",
+      "checks": [
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "URL_ERROR_SSLError"
+        },
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        }
+      ]
+    },
+    "35028": {
+      "slug": "peninsula-papagayo-dji-0910-b341276a",
+      "title": "Peninsula Papagayo Aerial View",
+      "gallery_slug": "peninsula-papagayo",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "37840": {
+      "slug": "dji-0085-6f46b59e",
+      "title": "Playa Hermosa Vista Costa Rica",
+      "gallery_slug": "punta-cacique-guancaste",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "URL_ERROR_gaierror"
+        },
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        }
+      ]
+    },
+    "34788": {
+      "slug": "peninsula-de-osa-dji-0706-5c2b61d1",
+      "title": "Peninsula de Osa Aerial View",
+      "gallery_slug": "peninsula-de-osa",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "35479": {
+      "slug": "rio-savagre-costa-rica-pano00029-3ab3bad9",
+      "title": "Rio Savegre Panoramic View",
+      "gallery_slug": "rio-savagre-costa-rica",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "35435": {
+      "slug": "rio-savagre-costa-rica-dji-0877-a536344c",
+      "title": "Rio Savegre Aerial View",
+      "gallery_slug": "rio-savagre-costa-rica",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "40401": {
+      "slug": "costa-rica-gallery-beaches-20250414-054812",
+      "title": "Costa Rica Pacific Coast Beaches Photography",
+      "gallery_slug": null,
+      "status": "broken",
+      "checks": [
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "URL_ERROR_SSLError"
+        },
+        {
+          "type": "thumb_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "25490": {
+      "slug": "img-0372-0b236388",
+      "title": "Costa rica gallery best of costa rica | Costa Rica Wildlife Photography by Joshua ten Brink",
+      "gallery_slug": "costa-rica-gallery-best-of-costa-rica",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "34776": {
+      "slug": "dji-0697-3-8a20fe4a",
+      "title": "Peninsula de Osa Aerial View",
+      "gallery_slug": "peninsula-de-osa",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        },
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        }
+      ]
+    }
+  },
+  "empty_url_photos": {},
+  "status": "success"
+}

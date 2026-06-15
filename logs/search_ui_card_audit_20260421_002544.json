@@ -1,0 +1,318 @@
+{
+  "run_at": "2026-04-21T06:25:44.326924+00:00",
+  "total_search_ready_photos": 32230,
+  "sample_size": 300,
+  "total_url_checks": 600,
+  "summary": {
+    "photos_ok": 284,
+    "photos_broken": 16,
+    "photos_missing_field": 0,
+    "ok_rate_pct": 94.67
+  },
+  "by_url_type": {
+    "og_image_url": {
+      "total": 300,
+      "accessible": 284,
+      "broken": 16,
+      "empty": 0
+    },
+    "thumb_url": {
+      "total": 300,
+      "accessible": 299,
+      "broken": 1,
+      "empty": 0
+    }
+  },
+  "broken_photos": {
+    "35380": {
+      "slug": "rio-savagre-costa-rica-dji-0737-b920b38e",
+      "title": "Rio Savegre Aerial View",
+      "gallery_slug": "rio-savagre-costa-rica",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "35058": {
+      "slug": "peninsula-papagayo-dji-0955-c2bb2748",
+      "title": "Aerial View of Luxury Resort on Peninsula Papagayo",
+      "gallery_slug": "peninsula-papagayo",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "27419": {
+      "slug": "photo-125-DJI-0231",
+      "title": "Costa rica gallery peninsula papagayo | Costa Rica Wildlife Photography by Joshua ten Brink",
+      "gallery_slug": "costa-rica-gallery-peninsula-papagayo",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "34868": {
+      "slug": "playa-hermosa-guanacaste-dji-0357-83e71f8f",
+      "title": "Playa Hermosa Aerial View",
+      "gallery_slug": "playa-hermosa-guanacaste",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        },
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        }
+      ]
+    },
+    "27704": {
+      "slug": "photo-127-DJI-0255",
+      "title": "Montezuma Photography",
+      "gallery_slug": "costa-rica-gallery-montezuma-costa-rica",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        },
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        }
+      ]
+    },
+    "2048": {
+      "slug": "dji-0433-1352",
+      "title": "Beaches | Costa Rica Wildlife Photography by Joshua ten Brink",
+      "gallery_slug": "beaches",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "25347": {
+      "slug": "dji-0524-416ae29c",
+      "title": "Costa rica gallery nauyaca waterfalls | Costa Rica Wildlife Photography by Joshua ten Brink",
+      "gallery_slug": "costa-rica-gallery-nauyaca-waterfalls",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "27162": {
+      "slug": "photo-125-DJI-0066",
+      "title": "Costa rica gallery peninsula papagayo | Costa Rica Wildlife Photography by Joshua ten Brink",
+      "gallery_slug": "costa-rica-gallery-peninsula-papagayo",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "36901": {
+      "slug": "dji-0279-c50e6847",
+      "title": "Isla Tortuga, Puntarenas, Costa Rica",
+      "gallery_slug": "isla-tortuga",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "19742": {
+      "slug": "dji-0534-tambor-nicoya-peninsula-costa-rica-1404",
+      "title": "Tambor nicoya peninsula costa rica | Costa Rica Wildlife Photography by Joshua ten Brink",
+      "gallery_slug": "tambor-nicoya-peninsula-costa-rica",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "38378": {
+      "slug": "2023-03-10-20-48-50-a9698115eaa4b3d019717bd2043607e3c8ffb6c3315ac813825959621fabab93",
+      "title": "Twilight Beach, Jaco Beach, Costa Rica",
+      "gallery_slug": "jaco-beach",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": false,
+          "error": "InvalidURL"
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "InvalidURL"
+        }
+      ]
+    },
+    "35343": {
+      "slug": "montezuma-costa-rica-dji-0999-41007589",
+      "title": "Montezuma Aerial View",
+      "gallery_slug": "montezuma-costa-rica",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "27243": {
+      "slug": "photo-127-DJI-0462",
+      "title": "Montezuma Photography",
+      "gallery_slug": "costa-rica-gallery-montezuma-costa-rica",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "27141": {
+      "slug": "photo-125-DJI-0002",
+      "title": "Costa rica gallery peninsula papagayo | Costa Rica Wildlife Photography by Joshua ten Brink",
+      "gallery_slug": "costa-rica-gallery-peninsula-papagayo",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "35375": {
+      "slug": "rio-savagre-costa-rica-dji-0727-0957f12d",
+      "title": "Rio Savegre Aerial View",
+      "gallery_slug": "rio-savagre-costa-rica",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        },
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        }
+      ]
+    },
+    "7472": {
+      "slug": "2023-12-31-12-30-51-food--4090",
+      "title": "Food | Costa Rica Wildlife Photography by Joshua ten Brink",
+      "gallery_slug": "food",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    }
+  },
+  "empty_url_photos": {},
+  "status": "success"
+}

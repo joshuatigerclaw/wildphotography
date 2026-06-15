@@ -1,0 +1,626 @@
+{
+  "run_at": "2026-05-06T11:07:10.939305+00:00",
+  "folders_processed": [
+    "Costa-Rica-Gallery/Jaco-Beach",
+    "Costa-Rica-Gallery/Turtles",
+    "Costa-Rica-Gallery/Butterflies",
+    "Costa-Rica-Gallery/Crocodiles",
+    "Costa-Rica-Gallery/Monkeys"
+  ],
+  "folders_with_existing_gallery_match": [
+    "Costa-Rica-Gallery/Jaco-Beach",
+    "Costa-Rica-Gallery/Turtles",
+    "Costa-Rica-Gallery/Butterflies",
+    "Costa-Rica-Gallery/Crocodiles",
+    "Costa-Rica-Gallery/Monkeys"
+  ],
+  "folders_skipped_no_existing_gallery": [],
+  "total_items_in_queue": 100,
+  "imported": 0,
+  "skipped_dup": 100,
+  "skipped_no_gallery": 0,
+  "failed": 0,
+  "results": [
+    {
+      "id": "ext_Costa-Rica-Gallery_Jaco-Beach_2e7ab80fac9b7879",
+      "filename": "2018-06-23 12.28.07-2.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "jaco-beach"
+    },
+    {
+      "id": "ext_Costa-Rica-Gallery_Jaco-Beach_0b886cf8cda88ca5",
+      "filename": "2018-06-23 13.08.42-2.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "jaco-beach"
+    },
+    {
+      "id": "ext_Costa-Rica-Gallery_Jaco-Beach_a86e21baadbd6dbc",
+      "filename": "2018-06-23 13.14.06.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "jaco-beach"
+    },
+    {
+      "id": "ext_Costa-Rica-Gallery_Jaco-Beach_b18e84e4a84749d2",
+      "filename": "2019-05-16 15.30.47.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "jaco-beach"
+    },
+    {
+      "id": "ext_Costa-Rica-Gallery_Jaco-Beach_273b7f71b9e3fe42",
+      "filename": "2022-09-11 10.54.57.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "jaco-beach"
+    },
+    {
+      "id": "ext_Costa-Rica-Gallery_Jaco-Beach_824149b6d89ff93c",
+      "filename": "2023-03-10 17.49.39.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "jaco-beach"
+    },
+    {
+      "id": "ext_Costa-Rica-Gallery_Jaco-Beach_cc9d06893345c0f4",
+      "filename": "2023-03-10 17.49.41.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "jaco-beach"
+    },
+    {
+      "id": "ext_Costa-Rica-Gallery_Jaco-Beach_ce2c58e171308a8f",
+      "filename": "2023-03-10 17.52.11.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "jaco-beach"
+    },
+    {
+      "id": "ext_Costa-Rica-Gallery_Jaco-Beach_3a7502bdbcf731b4",
+      "filename": "2023-03-10 17.53.12.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "jaco-beach"
+    },
+    {
+      "id": "ext_Costa-Rica-Gallery_Jaco-Beach_a9698115eaa4b3d0",
+      "filename": "2023-03-10 20.48.50.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "jaco-beach"
+    },
+    {
+      "id": "ext_Costa-Rica-Gallery_Jaco-Beach_b557e485b8b80eb4",
+      "filename": "2023-03-11 10.37.08.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "jaco-beach"
+    },
+    {
+      "id": "ext_Costa-Rica-Gallery_Jaco-Beach_87f6bdea47f49917",
+      "filename": "2023-03-11 12.38.25.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "jaco-beach"
+    },
+    {
+      "id": "ext_Costa-Rica-Gallery_Jaco-Beach_b69d2921d2664af6",
+      "filename": "2023-03-11 13.49.09.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "jaco-beach"
+    },
+    {
+      "id": "ext_Costa-Rica-Gallery_Jaco-Beach_d2a0f7361d07038d",
+      "filename": "2023-03-11 16.04.51.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "jaco-beach"
+    },
+    {
+      "id": "ext_Costa-Rica-Gallery_Jaco-Beach_89ecaab87d843365",
+      "filename": "2023-03-11 18.03.43.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "jaco-beach"
+    },
+    {
+      "id": "ext_Costa-Rica-Gallery_Jaco-Beach_0701dd225bf6f2c1",
+      "filename": "2023-03-11 18.04.05.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "jaco-beach"
+    },
+    {
+      "id": "ext_Costa-Rica-Gallery_Jaco-Beach_c61c0a7b072a2abe",
+      "filename": "2023-03-12 12.06.30.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "jaco-beach"
+    },
+    {
+      "id": "ext_Costa-Rica-Gallery_Jaco-Beach_09f450f63657e638",
+      "filename": "2023-03-12 12.06.31.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "jaco-beach"
+    },
+    {
+      "id": "ext_Costa-Rica-Gallery_Jaco-Beach_f828426f59db6568",
+      "filename": "2023-03-12 12.06.32.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "jaco-beach"
+    },
+    {
+      "id": "ext_Costa-Rica-Gallery_Jaco-Beach_8b27738288163d59",
+      "filename": "CL0A1050.JPG",
+      "status": "skipped_dup",
+      "gallery_slug": "jaco-beach"
+    },
+    {
+      "id": "ext_Costa-Rica-Gallery_Turtles_bbe5b312eb64a587",
+      "filename": "2021-10-09 08.55.06.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "turtles"
+    },
+    {
+      "id": "ext_Costa-Rica-Gallery_Turtles_62793486487f9255",
+      "filename": "2021-10-09 08.55.17.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "turtles"
+    },
+    {
+      "id": "ext_Costa-Rica-Gallery_Turtles_b2957a542e2788c6",
+      "filename": "2021-10-09 08.56.17.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "turtles"
+    },
+    {
+      "id": "ext_Costa-Rica-Gallery_Turtles_b87291cad05c1dba",
+      "filename": "2021-10-09 08.56.24.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "turtles"
+    },
+    {
+      "id": "ext_Costa-Rica-Gallery_Turtles_c3d3cb6f324a7554",
+      "filename": "20250412_084931.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "turtles"
+    },
+    {
+      "id": "ext_Costa-Rica-Gallery_Turtles_33422ba9efd4693b",
+      "filename": "20250414_121208.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "turtles"
+    },
+    {
+      "id": "ext_Costa-Rica-Gallery_Turtles_4d95823c6b8c3ad3",
+      "filename": "CL0A4353.JPG",
+      "status": "skipped_dup",
+      "gallery_slug": "turtles"
+    },
+    {
+      "id": "ext_Costa-Rica-Gallery_Turtles_0083fc99c0f117de",
+      "filename": "CL0A4486.JPG",
+      "status": "skipped_dup",
+      "gallery_slug": "turtles"
+    },
+    {
+      "id": "ext_Costa-Rica-Gallery_Turtles_8e8ed9e892bf1f06",
+      "filename": "CL0A8406.JPG",
+      "status": "skipped_dup",
+      "gallery_slug": "turtles"
+    },
+    {
+      "id": "ext_Costa-Rica-Gallery_Turtles_c41fc2cf34626da1",
+      "filename": "CL0A8416.JPG",
+      "status": "skipped_dup",
+      "gallery_slug": "turtles"
+    },
+    {
+      "id": "ext_Costa-Rica-Gallery_Turtles_9add967303b3f5c3",
+      "filename": "CL0A8424.JPG",
+      "status": "skipped_dup",
+      "gallery_slug": "turtles"
+    },
+    {
+      "id": "ext_Costa-Rica-Gallery_Turtles_55841efa9a24bd0c",
+      "filename": "CL0A8452.JPG",
+      "status": "skipped_dup",
+      "gallery_slug": "turtles"
+    },
+    {
+      "id": "ext_Costa-Rica-Gallery_Turtles_07f481c08c34c43a",
+      "filename": "CL0A8460.JPG",
+      "status": "skipped_dup",
+      "gallery_slug": "turtles"
+    },
+    {
+      "id": "ext_Costa-Rica-Gallery_Turtles_b5d63f7e22eeac1f",
+      "filename": "CL0A9619.JPG",
+      "status": "skipped_dup",
+      "gallery_slug": "turtles"
+    },
+    {
+      "id": "ext_Costa-Rica-Gallery_Turtles_da816ccdc21920b8",
+      "filename": "DJI_0189.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "turtles"
+    },
+    {
+      "id": "ext_Costa-Rica-Gallery_Turtles_6ea7c5e316c461b8",
+      "filename": "DJI_0199.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "turtles"
+    },
+    {
+      "id": "ext_Costa-Rica-Gallery_Turtles_5388a422877db875",
+      "filename": "DJI_0203.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "turtles"
+    },
+    {
+      "id": "ext_Costa-Rica-Gallery_Turtles_618f0e727dbf3e63",
+      "filename": "DJI_0221.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "turtles"
+    },
+    {
+      "id": "ext_Costa-Rica-Gallery_Turtles_06b809de66ceb7cb",
+      "filename": "DJI_0222.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "turtles"
+    },
+    {
+      "id": "ext_Costa-Rica-Gallery_Turtles_ae4cb5147b8579b0",
+      "filename": "IMG_4922.JPG",
+      "status": "skipped_dup",
+      "gallery_slug": "turtles"
+    },
+    {
+      "id": "ext_Costa-Rica-Gallery_Butterflies_20e9cb9378612bf1",
+      "filename": "2020-03-26 15.14.25.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "butterflies"
+    },
+    {
+      "id": "ext_Costa-Rica-Gallery_Butterflies_0515186a3f0d9a5f",
+      "filename": "2020-03-26 15.14.40.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "butterflies"
+    },
+    {
+      "id": "ext_Costa-Rica-Gallery_Butterflies_af2694fac3c0b838",
+      "filename": "20250406_125825.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "butterflies"
+    },
+    {
+      "id": "ext_Costa-Rica-Gallery_Butterflies_7dbe3769fac27385",
+      "filename": "20250410_082520(0).jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "butterflies"
+    },
+    {
+      "id": "ext_Costa-Rica-Gallery_Butterflies_14f317005abfa611",
+      "filename": "20250410_082636.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "butterflies"
+    },
+    {
+      "id": "ext_Costa-Rica-Gallery_Butterflies_df0cb3e530d89df3",
+      "filename": "IMG_0406.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "butterflies"
+    },
+    {
+      "id": "ext_Costa-Rica-Gallery_Butterflies_1d6cee21d6ff2a7a",
+      "filename": "IMG_0410.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "butterflies"
+    },
+    {
+      "id": "ext_Costa-Rica-Gallery_Butterflies_7bb029baac660aaa",
+      "filename": "IMG_0412.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "butterflies"
+    },
+    {
+      "id": "ext_Costa-Rica-Gallery_Butterflies_72f61c3fed4e1255",
+      "filename": "IMG_0888.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "butterflies"
+    },
+    {
+      "id": "ext_Costa-Rica-Gallery_Butterflies_5a6464844871887a",
+      "filename": "IMG_0899.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "butterflies"
+    },
+    {
+      "id": "ext_Costa-Rica-Gallery_Butterflies_3446413836bef210",
+      "filename": "IMG_1445.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "butterflies"
+    },
+    {
+      "id": "ext_Costa-Rica-Gallery_Butterflies_d8eea460baf9dc15",
+      "filename": "IMG_2475.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "butterflies"
+    },
+    {
+      "id": "ext_Costa-Rica-Gallery_Butterflies_4462a0cdfdd8c66a",
+      "filename": "IMG_3594.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "butterflies"
+    },
+    {
+      "id": "ext_Costa-Rica-Gallery_Butterflies_fb9c973ccb62e814",
+      "filename": "IMG_4592.JPG",
+      "status": "skipped_dup",
+      "gallery_slug": "butterflies"
+    },
+    {
+      "id": "ext_Costa-Rica-Gallery_Butterflies_40df247e05ff1d36",
+      "filename": "IMG_4712.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "butterflies"
+    },
+    {
+      "id": "ext_Costa-Rica-Gallery_Butterflies_bbba170d44a96e75",
+      "filename": "IMG_4734.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "butterflies"
+    },
+    {
+      "id": "ext_Costa-Rica-Gallery_Butterflies_0f6481405d446021",
+      "filename": "IMG_4757.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "butterflies"
+    },
+    {
+      "id": "ext_Costa-Rica-Gallery_Butterflies_9cf063b7b7f9ece5",
+      "filename": "IMG_4762.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "butterflies"
+    },
+    {
+      "id": "ext_Costa-Rica-Gallery_Butterflies_f47701f41ec35139",
+      "filename": "IMG_4838.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "butterflies"
+    },
+    {
+      "id": "ext_Costa-Rica-Gallery_Butterflies_c878768ccc703039",
+      "filename": "IMG_6675.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "butterflies"
+    },
+    {
+      "id": "ext_Costa-Rica-Gallery_Crocodiles_eb219be5fb306efe",
+      "filename": "2018-05-01 09.50.38.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "crocodiles"
+    },
+    {
+      "id": "ext_Costa-Rica-Gallery_Crocodiles_a2287ecf6b1c0f72",
+      "filename": "2023-03-10 16.04.50.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "crocodiles"
+    },
+    {
+      "id": "ext_Costa-Rica-Gallery_Crocodiles_319858f3754d1826",
+      "filename": "2023-03-10 16.04.52.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "crocodiles"
+    },
+    {
+      "id": "ext_Costa-Rica-Gallery_Crocodiles_5246875e8513dcc9",
+      "filename": "2023-03-10 16.04.56.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "crocodiles"
+    },
+    {
+      "id": "ext_Costa-Rica-Gallery_Crocodiles_3ec3dc0217938d1e",
+      "filename": "2023-03-10 16.05.00.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "crocodiles"
+    },
+    {
+      "id": "ext_Costa-Rica-Gallery_Crocodiles_b83b2d39b782a010",
+      "filename": "CL0A8317.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "crocodiles"
+    },
+    {
+      "id": "ext_Costa-Rica-Gallery_Crocodiles_62b9980ddf76bf60",
+      "filename": "CL0A8363.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "crocodiles"
+    },
+    {
+      "id": "ext_Costa-Rica-Gallery_Crocodiles_e441be0715429ab2",
+      "filename": "DJI_0233.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "crocodiles"
+    },
+    {
+      "id": "ext_Costa-Rica-Gallery_Crocodiles_ac8b9515681ea2ef",
+      "filename": "DJI_0238.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "crocodiles"
+    },
+    {
+      "id": "ext_Costa-Rica-Gallery_Crocodiles_7a8975c9175c3f5e",
+      "filename": "DJI_0262.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "crocodiles"
+    },
+    {
+      "id": "ext_Costa-Rica-Gallery_Crocodiles_15561f7289d95e5c",
+      "filename": "DJI_0264.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "crocodiles"
+    },
+    {
+      "id": "ext_Costa-Rica-Gallery_Crocodiles_7cd1a358eecc047f",
+      "filename": "DJI_0272.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "crocodiles"
+    },
+    {
+      "id": "ext_Costa-Rica-Gallery_Crocodiles_0653c5ec1d73e16e",
+      "filename": "DJI_0278.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "crocodiles"
+    },
+    {
+      "id": "ext_Costa-Rica-Gallery_Crocodiles_e7b32a21e6ff892a",
+      "filename": "DJI_0280.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "crocodiles"
+    },
+    {
+      "id": "ext_Costa-Rica-Gallery_Crocodiles_cc33e0ec1fd128fa",
+      "filename": "DJI_0282.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "crocodiles"
+    },
+    {
+      "id": "ext_Costa-Rica-Gallery_Crocodiles_f767a5eed200f7f3",
+      "filename": "DJI_0283 Croc and Nedleefish.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "crocodiles"
+    },
+    {
+      "id": "ext_Costa-Rica-Gallery_Crocodiles_bf8525f9e640d725",
+      "filename": "DJI_0292.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "crocodiles"
+    },
+    {
+      "id": "ext_Costa-Rica-Gallery_Crocodiles_a04c48492261e519",
+      "filename": "DJI_0293.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "crocodiles"
+    },
+    {
+      "id": "ext_Costa-Rica-Gallery_Crocodiles_f66663fcd9776a92",
+      "filename": "DJI_0294.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "crocodiles"
+    },
+    {
+      "id": "ext_Costa-Rica-Gallery_Crocodiles_c959462dca125622",
+      "filename": "DJI_0296.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "crocodiles"
+    },
+    {
+      "id": "ext_Costa-Rica-Gallery_Monkeys_bf711efa2821bf2f",
+      "filename": "20250425_170234.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "monkeys"
+    },
+    {
+      "id": "ext_Costa-Rica-Gallery_Monkeys_4d1f0d0ecc4bb5ea",
+      "filename": "20250425_172527.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "monkeys"
+    },
+    {
+      "id": "ext_Costa-Rica-Gallery_Monkeys_9455b63d907dd233",
+      "filename": "CL0A7077.JPG",
+      "status": "skipped_dup",
+      "gallery_slug": "monkeys"
+    },
+    {
+      "id": "ext_Costa-Rica-Gallery_Monkeys_620c6fc6cdfa1f0e",
+      "filename": "CL0A7081.JPG",
+      "status": "skipped_dup",
+      "gallery_slug": "monkeys"
+    },
+    {
+      "id": "ext_Costa-Rica-Gallery_Monkeys_c6e21aa8cd526de9",
+      "filename": "CL0A7094.JPG",
+      "status": "skipped_dup",
+      "gallery_slug": "monkeys"
+    },
+    {
+      "id": "ext_Costa-Rica-Gallery_Monkeys_8712dbc08ac8761d",
+      "filename": "CL0A7105.JPG",
+      "status": "skipped_dup",
+      "gallery_slug": "monkeys"
+    },
+    {
+      "id": "ext_Costa-Rica-Gallery_Monkeys_87a78e2e9bb77dcc",
+      "filename": "CL0A7111.JPG",
+      "status": "skipped_dup",
+      "gallery_slug": "monkeys"
+    },
+    {
+      "id": "ext_Costa-Rica-Gallery_Monkeys_0d23cf1183f4bd60",
+      "filename": "CL0A7118.JPG",
+      "status": "skipped_dup",
+      "gallery_slug": "monkeys"
+    },
+    {
+      "id": "ext_Costa-Rica-Gallery_Monkeys_75d67559b98d051d",
+      "filename": "CL0A7119.JPG",
+      "status": "skipped_dup",
+      "gallery_slug": "monkeys"
+    },
+    {
+      "id": "ext_Costa-Rica-Gallery_Monkeys_c1f8f56391c8a137",
+      "filename": "CL0A7120.JPG",
+      "status": "skipped_dup",
+      "gallery_slug": "monkeys"
+    },
+    {
+      "id": "ext_Costa-Rica-Gallery_Monkeys_c79206452b43f9f2",
+      "filename": "CL0A7125.JPG",
+      "status": "skipped_dup",
+      "gallery_slug": "monkeys"
+    },
+    {
+      "id": "ext_Costa-Rica-Gallery_Monkeys_9871e81faa25cde8",
+      "filename": "CL0A7126.JPG",
+      "status": "skipped_dup",
+      "gallery_slug": "monkeys"
+    },
+    {
+      "id": "ext_Costa-Rica-Gallery_Monkeys_190d755a97f0b8bc",
+      "filename": "CL0A7135.JPG",
+      "status": "skipped_dup",
+      "gallery_slug": "monkeys"
+    },
+    {
+      "id": "ext_Costa-Rica-Gallery_Monkeys_30fb867d1b0f8adf",
+      "filename": "CL0A7143.JPG",
+      "status": "skipped_dup",
+      "gallery_slug": "monkeys"
+    },
+    {
+      "id": "ext_Costa-Rica-Gallery_Monkeys_d4fcf91a300ae285",
+      "filename": "CL0A7152.JPG",
+      "status": "skipped_dup",
+      "gallery_slug": "monkeys"
+    },
+    {
+      "id": "ext_Costa-Rica-Gallery_Monkeys_ea2e42547e462ead",
+      "filename": "CL0A7190.JPG",
+      "status": "skipped_dup",
+      "gallery_slug": "monkeys"
+    },
+    {
+      "id": "ext_Costa-Rica-Gallery_Monkeys_4ff94d179c2cacb0",
+      "filename": "CL0A7195.JPG",
+      "status": "skipped_dup",
+      "gallery_slug": "monkeys"
+    },
+    {
+      "id": "ext_Costa-Rica-Gallery_Monkeys_f46ab8f21ff9ddb3",
+      "filename": "CL0A7196.JPG",
+      "status": "skipped_dup",
+      "gallery_slug": "monkeys"
+    },
+    {
+      "id": "ext_Costa-Rica-Gallery_Monkeys_3b9026406158bf9d",
+      "filename": "CL0A7205.JPG",
+      "status": "skipped_dup",
+      "gallery_slug": "monkeys"
+    },
+    {
+      "id": "ext_Costa-Rica-Gallery_Monkeys_3c324a76b32cee31",
+      "filename": "CL0A7213.JPG",
+      "status": "skipped_dup",
+      "gallery_slug": "monkeys"
+    }
+  ],
+  "failure_log": []
+}

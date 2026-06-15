@@ -67,8 +67,7 @@ export default async function SpeciesPage() {
                 key={letter}
                 href={`#letter-${letter}`}
                 style={{display:'flex',alignItems:'center',justifyContent:'center',width:'34px',height:'34px',borderRadius:'50%',border:'1px solid var(--rule)',fontFamily:'var(--font-mono)',fontSize:'13px',fontWeight:500,color:'var(--ink-muted)',textDecoration:'none',transition:'border-color var(--t-fast), color var(--t-fast)'}}
-                onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.borderColor = 'var(--accent)'; (e.currentTarget as HTMLAnchorElement).style.color = 'var(--accent)'; }}
-                onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.borderColor = 'var(--rule)'; (e.currentTarget as HTMLAnchorElement).style.color = 'var(--ink-muted)'; }}
+                className="letter-nav-link"
               >
                 {letter}
               </a>
@@ -96,16 +95,15 @@ export default async function SpeciesPage() {
                           <img
                             src={s.sampleThumb}
                             alt={s.name}
-                            style={{width:'100%',height:'100%',objectFit:'cover',display:'block',transition:'transform var(--t-med)'}}
+                            style={{width:'100%',height:'100%',objectFit:'cover',display:'block'}}
                             loading="lazy"
-                            onMouseEnter={(e) => { (e.currentTarget as HTMLImageElement).style.transform = 'scale(1.05)'; }}
-                            onMouseLeave={(e) => { (e.currentTarget as HTMLImageElement).style.transform = 'scale(1)'; }}
+                            className="species-thumb"
                           />
                         ) : (
                           <div style={{width:'100%',height:'100%',display:'flex',alignItems:'center',justifyContent:'center',color:'var(--ink-dim)',fontSize:'28px'}}>🦜</div>
                         )}
                       </div>
-                      <h3 style={{fontFamily:'var(--font-display)',fontSize:'14px',fontWeight:500,color:'var(--ink)',margin:'0 0 3px 0',transition:'color var(--t-fast)'}}>
+                      <h3 style={{fontFamily:'var(--font-display)',fontSize:'14px',fontWeight:500,color:'var(--ink)',margin:'0 0 3px 0'}} className="species-name">
                         {s.name}
                       </h3>
                       {s.scientificName && (

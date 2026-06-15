@@ -1,7 +1,42 @@
 import { createRequire as topLevelCreateRequire } from 'module';const require = topLevelCreateRequire(import.meta.url);import bannerUrl from 'url';const __dirname = bannerUrl.fileURLToPath(new URL('.', import.meta.url));
 
 // open-next.config.ts
-var config = {
+var resolver = {
+  name: "cloudflare-asset-resolver",
+  async maybeGetAssetResult(event, env) {
+    if (!event.rawPath.startsWith("/_next/static")) {
+      return void 0;
+    }
+    const assets = env?.ASSETS;
+    if (!assets) {
+      console.log("ASSETS binding not found in env");
+      return void 0;
+    }
+    const { method, headers } = event;
+    if (method !== "GET" && method !== "HEAD") {
+      return void 0;
+    }
+    const url = new URL(event.rawPath, "https://assets.local");
+    try {
+      const response = await assets.fetch(url, { headers, method });
+      if (response.status === 404) {
+        await response.body?.cancel();
+        return void 0;
+      }
+      return {
+        type: "core",
+        statusCode: response.status,
+        headers: Object.fromEntries(response.headers.entries()),
+        body: response.body,
+        isBase64Encoded: false
+      };
+    } catch (e) {
+      console.log("ASSETS fetch error:", e.message);
+      return void 0;
+    }
+  }
+};
+var open_next_config_default = {
   default: {
     override: {
       wrapper: "cloudflare-node",
@@ -22,10 +57,10 @@ var config = {
       incrementalCache: "dummy",
       tagCache: "dummy",
       queue: "dummy"
-    }
+    },
+    assetResolver: () => resolver
   }
 };
-var open_next_config_default = config;
 export {
   open_next_config_default as default
 };

@@ -40,7 +40,7 @@ export default async function GalleriesPage() {
       </nav>
 
       <header style={{marginBottom:'var(--gutter)',paddingBottom:'var(--gutter)',borderBottom:'1px solid var(--rule)'}}>
-        <h1 style={{fontFamily:'var(--font-display)',fontSize:'clamp(2rem,5vw,3rem)',fontWeight:500,color:'var(--ink)',lineHeight:1.1,margin:'0 0 14px 0'}}>
+        <h1 style={{fontFamily:'var(--font-display)',fontSize:'clamp(2rem,5vw,3rem)',fontWeight:500,color:'var(--ink-strong)',lineHeight:1.1,margin:'0 0 14px 0'}}>
           Photo Galleries
         </h1>
         <p style={{color:'var(--ink-muted)',fontSize:'17px',maxWidth:'560px',margin:0,lineHeight:1.55}}>
@@ -65,16 +65,15 @@ export default async function GalleriesPage() {
                   <img
                     src={gallery.coverPhotoUrl}
                     alt={gallery.name}
-                    style={{width:'100%',height:'100%',objectFit:'cover',display:'block',transition:'transform var(--t-med)'}}
+                    style={{width:'100%',height:'100%',objectFit:'cover',display:'block'}}
                     loading="lazy"
-                    onMouseEnter={(e) => { (e.currentTarget as HTMLImageElement).style.transform = 'scale(1.04)'; }}
-                    onMouseLeave={(e) => { (e.currentTarget as HTMLImageElement).style.transform = 'scale(1)'; }}
+                    className="gallery-cover-img"
                   />
                 ) : (
                   <div style={{width:'100%',height:'100%',display:'flex',alignItems:'center',justifyContent:'center',color:'var(--ink-dim)',fontSize:'32px'}}>📷</div>
                 )}
               </div>
-              <h3 style={{fontFamily:'var(--font-display)',fontSize:'15px',fontWeight:500,color:'var(--ink)',margin:'0 0 4px 0',transition:'color var(--t-fast)'}}>
+              <h3 style={{fontFamily:'var(--font-display)',fontSize:'15px',fontWeight:500,color:'var(--ink)',margin:'0 0 4px 0'}} className="gallery-title">
                 {gallery.name}
               </h3>
               <p style={{fontFamily:'var(--font-mono)',fontSize:'11px',textTransform:'uppercase',letterSpacing:'.1em',color:'var(--ink-dim)',margin:0}}>

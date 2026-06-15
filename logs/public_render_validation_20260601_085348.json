@@ -1,0 +1,284 @@
+{
+  "run_at": "2026-06-01T14:53:48.408578+00:00",
+  "total_photos": 62321,
+  "render_ready_total": 62243,
+  "photos_with_issues": 226,
+  "all_clear": false,
+  "checks": {
+    "missing_thumb_url": {
+      "count": 0,
+      "sample": []
+    },
+    "missing_slug": {
+      "count": 0,
+      "sample": []
+    },
+    "missing_title": {
+      "count": 0,
+      "sample": []
+    },
+    "missing_gallery_slug": {
+      "count": 1279,
+      "sample": [
+        {
+          "id": 64650,
+          "slug": "2021-06-11-09-12-03-3061a04992c91bea",
+          "title": "Landscape in Punta Leona",
+          "status": "published"
+        },
+        {
+          "id": 64651,
+          "slug": "2021-06-11-09-32-26-b608996063393250",
+          "title": "Landscape in Punta Leona",
+          "status": "published"
+        },
+        {
+          "id": 64652,
+          "slug": "2021-06-11-09-36-42-eaf97aa40d0326d1",
+          "title": "Landscape in Punta Leona",
+          "status": "published"
+        },
+        {
+          "id": 64653,
+          "slug": "2021-06-11-09-43-23-6a6c8c2964c1ded4",
+          "title": "Landscape in Punta Leona",
+          "status": "published"
+        },
+        {
+          "id": 64654,
+          "slug": "2021-06-11-10-53-14-3af746832cb230af",
+          "title": "Landscape in Punta Leona",
+          "status": "published"
+        },
+        {
+          "id": 64655,
+          "slug": "2021-06-11-12-01-24-fa6ca8e5a1451b89",
+          "title": "Landscape in Punta Leona",
+          "status": "published"
+        },
+        {
+          "id": 64656,
+          "slug": "2023-11-24-15-19-14-072f98d9848653cd",
+          "title": "Landscape in Punta Leona",
+          "status": "published"
+        },
+        {
+          "id": 64657,
+          "slug": "2023-11-24-16-24-57-d95820f58587f98f",
+          "title": "Landscape in Punta Leona",
+          "status": "published"
+        },
+        {
+          "id": 64658,
+          "slug": "2023-11-24-16-25-13-5316e242df468a9c",
+          "title": "Landscape in Punta Leona",
+          "status": "published"
+        },
+        {
+          "id": 64659,
+          "slug": "2023-11-24-17-31-46-4a3c98a7f91db268",
+          "title": "Landscape in Punta Leona",
+          "status": "published"
+        },
+        {
+          "id": 64660,
+          "slug": "2023-11-24-17-33-18-7005576bc772d56e",
+          "title": "Landscape in Punta Leona",
+          "status": "published"
+        },
+        {
+          "id": 64661,
+          "slug": "2023-11-25-16-57-03-1a9b49f4f4205026",
+          "title": "Landscape in Punta Leona",
+          "status": "published"
+        },
+        {
+          "id": 64662,
+          "slug": "2023-11-25-17-04-40-c212e8521e32f0bc",
+          "title": "Landscape in Punta Leona",
+          "status": "published"
+        },
+        {
+          "id": 64663,
+          "slug": "2023-11-25-17-04-42-10975510871aad55",
+          "title": "Landscape in Punta Leona",
+          "status": "published"
+        },
+        {
+          "id": 64664,
+          "slug": "2023-11-26-11-31-14-21f3effb268e10ad",
+          "title": "Landscape in Punta Leona",
+          "status": "published"
+        },
+        {
+          "id": 64665,
+          "slug": "2023-11-26-11-31-15-c13467695d6763bc",
+          "title": "Landscape in Punta Leona",
+          "status": "published"
+        },
+        {
+          "id": 64666,
+          "slug": "2023-11-26-11-34-13-04b199df11a1f97c",
+          "title": "Landscape in Punta Leona",
+          "status": "published"
+        },
+        {
+          "id": 64667,
+          "slug": "2023-11-26-12-52-25-663bcf02bed317be",
+          "title": "Landscape in Punta Leona",
+          "status": "published"
+        },
+        {
+          "id": 64668,
+          "slug": "2023-11-26-12-52-28-161f46463993052f",
+          "title": "Landscape in Punta Leona",
+          "status": "published"
+        },
+        {
+          "id": 64669,
+          "slug": "2023-11-26-13-54-44-5028f02935f17fd4",
+          "title": "Landscape in Punta Leona",
+          "status": "published"
+        }
+      ]
+    },
+    "search_not_ready": {
+      "count": 0,
+      "sample": []
+    },
+    "derivatives_incomplete": {
+      "count": 26,
+      "sample": [
+        {
+          "id": 20,
+          "slug": "capuchin-monkey",
+          "title": "Wildlife Photography \u2014 Costa Rica",
+          "status": "archived_unrecoverable"
+        },
+        {
+          "id": 22,
+          "slug": "blue-morpho",
+          "title": "Blue Morpho in Costa Rica, Costa Rica",
+          "status": "archived_unrecoverable"
+        },
+        {
+          "id": 25,
+          "slug": "rufous-hummingbird",
+          "title": "Rufous-tailed Hummingbird - Birds of Costa Rica, Costa Rica",
+          "status": "archived_unrecoverable"
+        },
+        {
+          "id": 26,
+          "slug": "magpie-jay",
+          "title": "Birds of Costa Rica Photography \u2014 Costa Rica",
+          "status": "archived_unrecoverable"
+        },
+        {
+          "id": 28,
+          "slug": "green-honeycreeper",
+          "title": "Green Honeycreeper - Birds of Costa Rica, Costa Rica",
+          "status": "archived_unrecoverable"
+        },
+        {
+          "id": 34,
+          "slug": "cloud-forest-mist",
+          "title": "Monteverde Cloud Forest - Puntarenas - Costa Rica",
+          "status": "archived_unrecoverable"
+        },
+        {
+          "id": 41,
+          "slug": "img-9967-2-jpg-J88LxN",
+          "title": "Water Sports and Surfing Photography \u2014 Costa Rica",
+          "status": "archived_unrecoverable"
+        },
+        {
+          "id": 70,
+          "slug": "img-9919-1-jpg-gMdJDM",
+          "title": "Guanacaste Surf Photography",
+          "status": "archived_unrecoverable"
+        },
+        {
+          "id": 123,
+          "slug": "volcan-poas-crater-view-123",
+          "title": "Volc\u00e1n Po\u00e1s Photography \u2014 Costa Rica",
+          "status": "archived_unrecoverable"
+        },
+        {
+          "id": 738,
+          "slug": "2021-04-11-08-34-03-jpg",
+          "title": "landscape \u2014 Volc\u00e1n Iraz\u00fa \u2014 #738 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 739,
+          "slug": "2021-04-11-08-38-14-jpg",
+          "title": "landscape \u2014 Volc\u00e1n Iraz\u00fa \u2014 #739 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 740,
+          "slug": "2021-04-11-08-39-39-jpg",
+          "title": "landscape \u2014 Volc\u00e1n Iraz\u00fa \u2014 #740 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 741,
+          "slug": "2021-04-11-08-40-34-jpg",
+          "title": "landscape \u2014 Volc\u00e1n Iraz\u00fa \u2014 #741 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 742,
+          "slug": "2021-04-11-08-43-38-jpg",
+          "title": "landscape \u2014 Volc\u00e1n Iraz\u00fa \u2014 #742 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 744,
+          "slug": "2021-04-11-09-08-29-jpg",
+          "title": "landscape \u2014 Volc\u00e1n Iraz\u00fa \u2014 #744 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 745,
+          "slug": "2021-04-11-09-08-40-jpg",
+          "title": "landscape \u2014 Volc\u00e1n Iraz\u00fa \u2014 #745 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 746,
+          "slug": "2021-04-11-09-08-58-jpg",
+          "title": "landscape \u2014 Volc\u00e1n Iraz\u00fa \u2014 #746 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 747,
+          "slug": "2021-04-11-09-14-09-jpg",
+          "title": "landscape \u2014 Volc\u00e1n Iraz\u00fa \u2014 #747 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 748,
+          "slug": "2021-04-11-09-35-11-jpg",
+          "title": "landscape \u2014 Volc\u00e1n Iraz\u00fa \u2014 #748 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 750,
+          "slug": "2021-04-11-09-35-29-jpg",
+          "title": "landscape \u2014 Volc\u00e1n Iraz\u00fa \u2014 #750 | WildPhotography",
+          "status": "published"
+        }
+      ]
+    },
+    "missing_description": {
+      "count": 0,
+      "sample": []
+    },
+    "missing_keywords": {
+      "count": 0,
+      "sample": []
+    }
+  },
+  "status": "success"
+}

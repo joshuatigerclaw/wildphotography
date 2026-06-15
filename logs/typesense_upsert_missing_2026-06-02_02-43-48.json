@@ -1,0 +1,16 @@
+{
+  "run_at": "2026-06-02T02:43:48.821Z",
+  "stale_removed": 0,
+  "missing_added": 3276,
+  "errors": [
+    "Batch 23 failed: 500 records",
+    "Batch 25 failed: 500 records",
+    "Batch 27 failed: 500 records",
+    "Batch 29 failed: 500 records",
+    "Batch 31 failed: 500 records"
+  ],
+  "status": "completed",
+  "neon_eligible": 16276,
+  "typesense_count": 0,
+  "final_drift": 16276
+}

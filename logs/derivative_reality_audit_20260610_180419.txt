@@ -1,0 +1,67 @@
+WILDPHOTOGRAPHY DERIVATIVE REALITY AUDIT
+Run: 2026-06-11T00:04:19.396148+00:00
+Total RPR photos: 69,062
+Total DB derivatives_complete: 69,090
+Sample size: 500
+
+--- REALITY CHECK ---
+Total keys checked (R2 HeadObject): 2375
+Keys present: 1690
+Keys missing: 685
+
+--- FLAG ACCURACY ---
+Photos OK (reality matches DB): 70
+Flag mismatch (DB=complete but objects missing): 430
+Flag missing (objects exist but DB=False): 0
+
+--- DISCREPANCIES ---
+  [28769] slug=landscape-2018-03-28-08-12-11 status=flag_mismatch db_flag=True present=4 missing=1
+  [12124] slug=dji-0556-puntarenas-costa-rica-8742 status=flag_mismatch db_flag=True present=4 missing=1
+  [42679] slug=playa-real-roble-guanacaste-costa-rica-dji_0598 status=flag_mismatch db_flag=True present=0 missing=5
+  [6867] slug=dji-0594-dominical-and-uvita-3485 status=flag_mismatch db_flag=True present=4 missing=1
+  [8328] slug=dji-0710-isla-tortuga-4946 status=flag_mismatch db_flag=True present=4 missing=1
+  [42867] slug=sunrise-sunset--cl0a1843 status=flag_mismatch db_flag=True present=4 missing=1
+  [51037] slug=cl0a1146-8cf3 status=flag_mismatch db_flag=True present=4 missing=1
+  [12789] slug=img-6229-san-jose-costa-rica-9407 status=flag_mismatch db_flag=True present=4 missing=1
+  [38847] slug=puenta-de-la-amistad-tempisque-dji-0248 status=flag_mismatch db_flag=True present=4 missing=1
+  [32382] slug=pano00024-14508a25 status=flag_mismatch db_flag=True present=4 missing=1
+  [31684] slug=2020-03-29-12-42-50 status=flag_mismatch db_flag=True present=4 missing=1
+  [66584] slug=2024-12-27-15-21-06-ab624107 status=flag_mismatch db_flag=True present=0 missing=5
+  [46129] slug=costa-rica-gallery-tambor-nicoya-peninsula-costa-rica-2024-12-31-17-54-03 status=flag_mismatch db_flag=True present=1 missing=4
+  [35954] slug=golfo-de-nicoya-pano00065-f8c8aa status=flag_mismatch db_flag=True present=4 missing=1
+  [44675] slug=20241018-114312-jpg status=flag_mismatch db_flag=True present=0 missing=1
+  [42440] slug=wildlife-2021-01-31-12.35.36 status=flag_mismatch db_flag=True present=4 missing=1
+  [73404] slug=2020-11-15-10-53-27 status=flag_mismatch db_flag=True present=4 missing=1
+  [50248] slug=cl0a2933-2f58 status=flag_mismatch db_flag=True present=4 missing=1
+  [26869] slug=dji-0938-bf62ad0c status=flag_mismatch db_flag=True present=4 missing=1
+  [43179] slug=beaches--2019-11-27-130419 status=flag_mismatch db_flag=True present=4 missing=1
+  [68615] slug=dji-0617-ff1c09d2 status=flag_mismatch db_flag=True present=0 missing=5
+  [84426] slug=2023-02-13-05.41.44 status=flag_mismatch db_flag=True present=4 missing=1
+  [11077] slug=20250425-155545-0-playa-hermosa-guanacaste-7695 status=flag_mismatch db_flag=True present=1 missing=4
+  [39877] slug=birds-cl0a8422-jpg status=flag_mismatch db_flag=True present=4 missing=1
+  [90170] slug=isla-tortuga-dji-0105-a38199 status=flag_mismatch db_flag=True present=4 missing=1
+  [68189] slug=dji-0282-2091e5df status=flag_mismatch db_flag=True present=0 missing=5
+  [55306] slug=2025-12-02-12-53-28 status=flag_mismatch db_flag=True present=4 missing=1
+  [36097] slug=papagayo-bahia-culebra-DJI_0824-090faa status=flag_mismatch db_flag=True present=4 missing=1
+  [69848] slug=2018-08-24-17-55-36-8cf85038 status=flag_mismatch db_flag=True present=0 missing=5
+  [15733] slug=2024-12-30-121309 status=flag_mismatch db_flag=True present=4 missing=1
+  [75861] slug=papagayo-bahia-culebra-6b6ea14e status=flag_mismatch db_flag=True present=4 missing=1
+  [15051] slug=img_2276 status=flag_mismatch db_flag=True present=4 missing=1
+  [88579] slug=dji-0271-3da055ef status=flag_mismatch db_flag=True present=4 missing=1
+  [30151] slug=dji0959-f1cd9fbf status=flag_mismatch db_flag=True present=4 missing=1
+  [8212] slug=dji-0094-isla-tortuga-4830 status=flag_mismatch db_flag=True present=0 missing=1
+  [74425] slug=food-309e37c5 status=flag_mismatch db_flag=True present=4 missing=1
+  [66499] slug=apano0011-cab4a33120306c18 status=flag_mismatch db_flag=True present=1 missing=4
+  [9635] slug=dji-0405-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-6253 status=flag_mismatch db_flag=True present=4 missing=1
+  [61564] slug=dji_0337-76832c00 status=flag_mismatch db_flag=True present=4 missing=1
+  [17530] slug=jaco-beach-78e34dd2 status=flag_mismatch db_flag=True present=4 missing=1
+  [26842] slug=cl0a6179-037f8fe2 status=flag_mismatch db_flag=True present=4 missing=1
+  [84576] slug=dji-0034 status=flag_mismatch db_flag=True present=4 missing=1
+  [24989] slug=20250425-171631-525b8824 status=flag_mismatch db_flag=True present=4 missing=1
+  [17192] slug=limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-ffa2462d status=flag_mismatch db_flag=True present=4 missing=1
+  [24993] slug=20250425-171719-81e3a441 status=flag_mismatch db_flag=True present=4 missing=1
+  [36133] slug=papagayo-bahia-culebra-DJI_0974-1f3b4e status=flag_mismatch db_flag=True present=4 missing=1
+  [36340] slug=cl0a6816jpg status=flag_mismatch db_flag=True present=4 missing=1
+  [2983] slug=cl0a3674-2005 status=flag_mismatch db_flag=True present=4 missing=1
+  [27730] slug=photo-129-CL0A2722 status=flag_mismatch db_flag=True present=0 missing=1
+  [53325] slug=isla-tortuga-dji-0271 status=flag_mismatch db_flag=True present=4 missing=1

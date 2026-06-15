@@ -1,0 +1,405 @@
+{
+  "run_at": "2026-05-16T00:45:24.177975+00:00",
+  "total_photos": 42619,
+  "render_ready_total": 42427,
+  "photos_with_issues": 275,
+  "all_clear": false,
+  "checks": {
+    "missing_thumb_url": {
+      "count": 0,
+      "sample": []
+    },
+    "missing_slug": {
+      "count": 0,
+      "sample": []
+    },
+    "missing_title": {
+      "count": 0,
+      "sample": []
+    },
+    "missing_gallery_slug": {
+      "count": 4974,
+      "sample": [
+        {
+          "id": 242,
+          "slug": "hermosa-beach-1",
+          "title": "Hermosa Beach Sunset",
+          "status": "archived"
+        },
+        {
+          "id": 14905,
+          "slug": "resplendent-quetzal",
+          "title": "Resplendent Quetzal \u2014 #14905 | WildPhotography",
+          "status": "archived"
+        },
+        {
+          "id": 36571,
+          "slug": "121619-hyperlapse-0051-caa78cf4",
+          "title": ". 121619 HYPERLAPSE 0051",
+          "status": "archived_unrecoverable"
+        },
+        {
+          "id": 41302,
+          "slug": "sunrise-sunset-2016-07-31-17-59-49",
+          "title": "Pacific Coast Sunrise, Guanacaste 2016",
+          "status": "published"
+        },
+        {
+          "id": 41303,
+          "slug": "sunrise-sunset-2017-07-15-18-57-45",
+          "title": "Tropical Sunset, Guanacaste 2017",
+          "status": "published"
+        },
+        {
+          "id": 41304,
+          "slug": "sunrise-sunset-2018-03-29-18-22-12",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41304 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41305,
+          "slug": "sunrise-sunset-2018-08-21-17-53-04",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41305 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41306,
+          "slug": "sunrise-sunset-2018-08-21-17-55-57",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41306 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41307,
+          "slug": "sunrise-sunset-2018-08-21-18-01-08",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41307 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41308,
+          "slug": "sunrise-sunset-2018-08-21-18-02-56",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41308 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41309,
+          "slug": "sunrise-sunset-2018-08-21-18-09-15",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41309 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41310,
+          "slug": "sunrise-sunset-2018-08-24-17-55-36",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41310 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41311,
+          "slug": "sunrise-sunset-2019-july-19-hyperlapse-0311",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41311 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41312,
+          "slug": "sunrise-sunset-2019-03-31-05-46-08",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41312 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41313,
+          "slug": "sunrise-sunset-2019-11-08-17-16-08",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41313 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41314,
+          "slug": "sunrise-sunset-2020-06-06-17-38-31",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41314 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41315,
+          "slug": "sunrise-sunset-2020-06-07-17-57-31",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41315 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41316,
+          "slug": "sunrise-sunset-2020-06-07-17-58-30",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41316 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41317,
+          "slug": "sunrise-sunset-2020-06-07-18-00-38",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41317 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41318,
+          "slug": "sunrise-sunset-2020-07-17-05-10-04",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41318 | WildPhotography",
+          "status": "published"
+        }
+      ]
+    },
+    "search_not_ready": {
+      "count": 51,
+      "sample": [
+        {
+          "id": 49844,
+          "slug": "wildlife-cl0a6177",
+          "title": "Costa Rica Wildlife - Wood Stork in Flight",
+          "status": "draft"
+        },
+        {
+          "id": 49845,
+          "slug": "wildlife-cl0a6209",
+          "title": "Costa Rica Wildlife - White Ibis Feeding",
+          "status": "draft"
+        },
+        {
+          "id": 49846,
+          "slug": "wildlife-cl0a6373",
+          "title": "Costa Rica Wildlife - Rose-Throated Becard",
+          "status": "draft"
+        },
+        {
+          "id": 49847,
+          "slug": "wildlife-cl0a6375",
+          "title": "Costa Rica Wildlife - Blue Crowned Motmot",
+          "status": "draft"
+        },
+        {
+          "id": 49848,
+          "slug": "wildlife-cl0a6381",
+          "title": "Costa Rica Wildlife - Rufous-Tailed Hummingbird",
+          "status": "draft"
+        },
+        {
+          "id": 49849,
+          "slug": "wildlife-cl0a6389",
+          "title": "Costa Rica Wildlife - Violet Saberwing Hummingbird",
+          "status": "draft"
+        },
+        {
+          "id": 49850,
+          "slug": "wildlife-cl0a6396",
+          "title": "Costa Rica Wildlife - White-Collared Manakin",
+          "status": "draft"
+        },
+        {
+          "id": 49851,
+          "slug": "wildlife-cl0a6399",
+          "title": "Costa Rica Wildlife - Red-Legged Honeycreeper",
+          "status": "draft"
+        },
+        {
+          "id": 49852,
+          "slug": "wildlife-cl0a6416",
+          "title": "Costa Rica Wildlife - Silver-Throated Tanager",
+          "status": "draft"
+        },
+        {
+          "id": 49853,
+          "slug": "wildlife-cl0a6417",
+          "title": "Costa Rica Wildlife - Great Curassow in Forest",
+          "status": "draft"
+        },
+        {
+          "id": 49854,
+          "slug": "wildlife-cl0a6418",
+          "title": "Costa Rica Wildlife - Crested Owl in Tree Cavity",
+          "status": "draft"
+        },
+        {
+          "id": 49855,
+          "slug": "wildlife-cl0a6419",
+          "title": "Costa Rica Wildlife - Black-and-White Owl",
+          "status": "draft"
+        },
+        {
+          "id": 49856,
+          "slug": "wildlife-cl0a6420",
+          "title": "Costa Rica Wildlife - Pygmy Kingfisher in Branches",
+          "status": "draft"
+        },
+        {
+          "id": 49857,
+          "slug": "wildlife-cl0a6450",
+          "title": "Costa Rica Wildlife - Golden-Handed Tamarin",
+          "status": "draft"
+        },
+        {
+          "id": 49858,
+          "slug": "wildlife-cl0a6587",
+          "title": "Costa Rica Wildlife - White-Nosed Coati Searching",
+          "status": "draft"
+        },
+        {
+          "id": 49859,
+          "slug": "wildlife-cl0a6717",
+          "title": "Costa Rica Wildlife - Nine-Banded Armadillo",
+          "status": "draft"
+        },
+        {
+          "id": 49860,
+          "slug": "wildlife-cl0a6800",
+          "title": "Costa Rica Wildlife - Tropical Wildlife Scene",
+          "status": "draft"
+        },
+        {
+          "id": 49861,
+          "slug": "marine-life-of-costa-rica-cl0a6216",
+          "title": "Costa Rica Marine Life - Aerial View of Coastline",
+          "status": "draft"
+        },
+        {
+          "id": 49862,
+          "slug": "marine-life-of-costa-rica-cl0a6219",
+          "title": "Costa Rica Marine Life - Coral Reef Underwater Scene",
+          "status": "draft"
+        },
+        {
+          "id": 49863,
+          "slug": "marine-life-of-costa-rica-cl0a6234",
+          "title": "Costa Rica Marine Life - Sea Turtle Swimming",
+          "status": "draft"
+        }
+      ]
+    },
+    "derivatives_incomplete": {
+      "count": 0,
+      "sample": []
+    },
+    "missing_description": {
+      "count": 0,
+      "sample": []
+    },
+    "missing_keywords": {
+      "count": 75,
+      "sample": [
+        {
+          "id": 49820,
+          "slug": "wildlife-cl0a1896",
+          "title": "Costa Rica Wildlife - Scarlet Macaw in Rainforest",
+          "status": "draft"
+        },
+        {
+          "id": 49821,
+          "slug": "wildlife-cl0a1897",
+          "title": "Costa Rica Wildlife - Toucan in Flight",
+          "status": "draft"
+        },
+        {
+          "id": 49822,
+          "slug": "wildlife-cl0a3380",
+          "title": "Costa Rica Wildlife - Two-Toed Sloth in Canopy",
+          "status": "draft"
+        },
+        {
+          "id": 49823,
+          "slug": "wildlife-cl0a3386",
+          "title": "Costa Rica Wildlife - Keel-Billed Toucan Portrait",
+          "status": "draft"
+        },
+        {
+          "id": 49824,
+          "slug": "wildlife-cl0a3461",
+          "title": "Costa Rica Wildlife - White-Faced Capuchin Monkey",
+          "status": "draft"
+        },
+        {
+          "id": 49825,
+          "slug": "wildlife-cl0a3469",
+          "title": "Costa Rica Wildlife - Green Iguana on Tree",
+          "status": "draft"
+        },
+        {
+          "id": 49826,
+          "slug": "wildlife-cl0a3718",
+          "title": "Costa Rica Wildlife - Morpho Butterfly Blue Wings",
+          "status": "draft"
+        },
+        {
+          "id": 49827,
+          "slug": "wildlife-cl0a3720",
+          "title": "Costa Rica Wildlife - Howler Monkey Resting",
+          "status": "draft"
+        },
+        {
+          "id": 49828,
+          "slug": "wildlife-cl0a3727",
+          "title": "Costa Rica Wildlife - Hummingbird in Flight",
+          "status": "draft"
+        },
+        {
+          "id": 49829,
+          "slug": "wildlife-cl0a3731",
+          "title": "Costa Rica Wildlife - Coati in Forest",
+          "status": "draft"
+        },
+        {
+          "id": 49830,
+          "slug": "wildlife-cl0a3735",
+          "title": "Costa Rica Wildlife - Jesus Christ Lizard Running",
+          "status": "draft"
+        },
+        {
+          "id": 49831,
+          "slug": "wildlife-cl0a5249",
+          "title": "Costa Rica Wildlife - Tapir in Undergrowth",
+          "status": "draft"
+        },
+        {
+          "id": 49832,
+          "slug": "wildlife-cl0a5667",
+          "title": "Costa Rica Wildlife - Peccary in Clearing",
+          "status": "draft"
+        },
+        {
+          "id": 49833,
+          "slug": "wildlife-cl0a5682",
+          "title": "Costa Rica Wildlife - Spider Monkey in Trees",
+          "status": "draft"
+        },
+        {
+          "id": 49834,
+          "slug": "wildlife-cl0a5692",
+          "title": "Costa Rica Wildlife - Collared Aracari Toucan",
+          "status": "draft"
+        },
+        {
+          "id": 49835,
+          "slug": "wildlife-cl0a5696",
+          "title": "Costa Rica Wildlife - Opossum in Night Forest",
+          "status": "draft"
+        },
+        {
+          "id": 49836,
+          "slug": "wildlife-cl0a5708",
+          "title": "Costa Rica Wildlife - Agouti in Underbrush",
+          "status": "draft"
+        },
+        {
+          "id": 49837,
+          "slug": "wildlife-cl0a5712",
+          "title": "Costa Rica Wildlife - Crested Guan in Branches",
+          "status": "draft"
+        },
+        {
+          "id": 49838,
+          "slug": "wildlife-cl0a5744",
+          "title": "Costa Rica Wildlife - Olmec Snake Bird",
+          "status": "draft"
+        },
+        {
+          "id": 49839,
+          "slug": "wildlife-cl0a5754",
+          "title": "Costa Rica Wildlife - Amazon Kingfisher",
+          "status": "draft"
+        }
+      ]
+    }
+  },
+  "status": "success"
+}

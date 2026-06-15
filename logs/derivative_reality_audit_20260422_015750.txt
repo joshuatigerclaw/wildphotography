@@ -1,0 +1,45 @@
+WILDPHOTOGRAPHY DERIVATIVE REALITY AUDIT
+Run: 2026-04-22T07:57:50.691899+00:00
+Total RPR photos: 30,684
+Total DB derivatives_complete: 32,209
+Sample size: 300
+
+--- REALITY CHECK ---
+Total keys checked (R2 HeadObject): 1451
+Keys present: 1411
+Keys missing: 40
+
+--- FLAG ACCURACY ---
+Photos OK (reality matches DB): 272
+Flag mismatch (DB=complete but objects missing): 28
+Flag missing (objects exist but DB=False): 0
+
+--- DISCREPANCIES ---
+  [27037] slug=photo-125-CL0A6049 status=flag_mismatch db_flag=True present=0 missing=1
+  [27459] slug=photo-54-DJI-0569 status=flag_mismatch db_flag=True present=0 missing=1
+  [34771] slug=dji-0682-48f15e64 status=flag_mismatch db_flag=True present=4 missing=1
+  [9147] slug=2024-01-13-14-51-35-landmarks-5765 status=flag_mismatch db_flag=True present=4 missing=1
+  [27080] slug=photo-125-DJI-0926 status=flag_mismatch db_flag=True present=0 missing=1
+  [21410] slug=dji-0161-21410 status=flag_mismatch db_flag=True present=4 missing=1
+  [21600] slug=img-1200-21600 status=flag_mismatch db_flag=True present=4 missing=1
+  [21315] slug=cl0a0832-21315 status=flag_mismatch db_flag=True present=4 missing=1
+  [12537] slug=cl0a0386-rural-costa-rica-9155 status=flag_mismatch db_flag=True present=4 missing=1
+  [27102] slug=photo-125-DJI-0959 status=flag_mismatch db_flag=True present=0 missing=1
+  [37085] slug=dji-0754-24b83184 status=flag_mismatch db_flag=True present=1 missing=4
+  [34776] slug=dji-0697-3-8a20fe4a status=flag_mismatch db_flag=True present=4 missing=1
+  [36914] slug=dji-0324-9067ca25 status=flag_mismatch db_flag=True present=1 missing=4
+  [35423] slug=rio-savagre-costa-rica-cl0a2677-a99e654c status=flag_mismatch db_flag=True present=4 missing=1
+  [34900] slug=dji-0932-e1fd7979 status=flag_mismatch db_flag=True present=4 missing=1
+  [31555] slug=2025-03-08-07-07-16-6839d081 status=flag_mismatch db_flag=True present=0 missing=1
+  [25743] slug=dji-0149-b55ebc61 status=flag_mismatch db_flag=True present=4 missing=1
+  [14870] slug=dji-0444-14870 status=flag_mismatch db_flag=True present=4 missing=1
+  [31520] slug=2025-03-08-07-03-54-e5caeabb status=flag_mismatch db_flag=True present=0 missing=1
+  [29324] slug=2023-11-04-15-18-39-fdbce644 status=flag_mismatch db_flag=True present=4 missing=1
+  [37058] slug=dji-0694-d72e3794 status=flag_mismatch db_flag=True present=1 missing=4
+  [35492] slug=rio-savagre-costa-rica-20241019-111856-84b60b72 status=flag_mismatch db_flag=True present=4 missing=1
+  [27126] slug=photo-125-DJI-0966 status=flag_mismatch db_flag=True present=0 missing=1
+  [35017] slug=peninsula-papagayo-dji-0894-0c2598d3 status=flag_mismatch db_flag=True present=4 missing=1
+  [21646] slug=img-9789-21646 status=flag_mismatch db_flag=True present=4 missing=1
+  [27253] slug=photo-127-pano00020 status=flag_mismatch db_flag=True present=0 missing=1
+  [27092] slug=photo-125-DJI-0942 status=flag_mismatch db_flag=True present=0 missing=1
+  [37117] slug=dji-0822-08f6c339 status=flag_mismatch db_flag=True present=1 missing=4

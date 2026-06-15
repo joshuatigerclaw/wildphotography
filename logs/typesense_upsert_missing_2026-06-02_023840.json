@@ -1,0 +1,32 @@
+{
+  "run_at": "2026-06-02T02:38:40.000Z",
+  "stale_removed": 0,
+  "missing_added": 3276,
+  "errors": [
+    "Batch 22 (offset 10500): 500 records - OUT_OF_MEMORY",
+    "Batch 23 (offset 11000): 500 records - OUT_OF_MEMORY",
+    "Batch 24 (offset 11500): 500 records - OUT_OF_MEMORY",
+    "Batch 25 (offset 12000): 500 records - OUT_OF_MEMORY",
+    "Batch 26 (offset 12500): 500 records - OUT_OF_MEMORY",
+    "Batch 27 (offset 13000): 500 records - OUT_OF_MEMORY",
+    "Batch 28 (offset 13500): 500 records - OUT_OF_MEMORY",
+    "Batch 29 (offset 14000): 500 records - OUT_OF_MEMORY",
+    "Batch 30 (offset 14500): 500 records - OUT_OF_MEMORY",
+    "Batch 31 (offset 15000): 500 records - OUT_OF_MEMORY",
+    "Batch 32 (offset 15500): 500 records - OUT_OF_MEMORY",
+    "Batch 33 (offset 16000): 276 records - OUT_OF_MEMORY",
+    "Retry operations: All single-doc upserts blocked by OUT_OF_MEMORY"
+  ],
+  "status": "blocked",
+  "neon_eligible": 16276,
+  "typesense_count": 60498,
+  "final_drift": 44222,
+  "findings": {
+    "ts_server_state": "OUT_OF_MEMORY - all write operations rejected, search/read working",
+    "ts_id_format": "numeric (49143, 696) vs expected 'photo_' prefix",
+    "ts_has_excess": "TS has 44k MORE records than Neon eligible set - stale removal would help",
+    "completed_upserts": "3,276 records successfully upserted before OOM hit"
+  },
+  "blocking_issue": "Typesense server memory exhaustion prevents remaining ~13,000 records from being upserted. Server needs memory relief (delete stale TS records, compact, or upgrade RAM) before writes can resume.",
+  "recommendation": "Delete stale TS records first (44k excess) to reclaim memory, then retry remaining Neon upserts"
+}

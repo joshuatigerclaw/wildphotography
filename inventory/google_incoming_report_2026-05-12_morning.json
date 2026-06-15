@@ -1,0 +1,22 @@
+{
+  "workflow": "wild_google_incoming_supervisor",
+  "run_time": "2026-05-12T14:44:00Z",
+  "status": "no_new_files",
+  "scan_result": {
+    "files_found": 0,
+    "new_files": [],
+    "total_in_incoming": 193,
+    "manifest_total": 386,
+    "eligible_before_hash": 193,
+    "hashed": 193
+  },
+  "batch_result": {
+    "batch_ready": false,
+    "batch_size": 0
+  },
+  "import_result": {
+    "imported_count": 0,
+    "failed_count": 0
+  },
+  "notes": "No new files detected - all incoming files already in manifest. Google Drive may still be syncing new additions."
+}

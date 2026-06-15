@@ -1,0 +1,76 @@
+{
+  "timestamp": "2026-05-18T20:06:32.261631+00:00",
+  "batch_size": 250,
+  "flag_only_fixed": 1,
+  "url_fixed": 248,
+  "no_key_needs_rebuild": 0,
+  "errors": 1,
+  "remaining_stuck": 277,
+  "flag_only_samples": [
+    [
+      49584,
+      "https://images.wildphotography.com/thumbs/124/dedd9efa_DJI_0538.jpg"
+    ]
+  ],
+  "url_fixed_samples": [
+    [
+      41496,
+      "https://images.wildphotography.com/derivatives/thumb/41496_thumb.jpg",
+      "https://images.wildphotography.com/derivatives/thumb/41496_thumb.jpg"
+    ],
+    [
+      41534,
+      "https://images.wildphotography.com/originals/rural-costa-rica/23ea068cde0266491e",
+      "https://images.wildphotography.com/https://wildphoto-storage.r2.cloudflarestorag"
+    ],
+    [
+      41539,
+      "https://images.wildphotography.com/derivatives/thumb/41539_thumb.jpg",
+      "https://images.wildphotography.com/derivatives/thumb/41539_thumb.jpg"
+    ],
+    [
+      49209,
+      "https://images.wildphotography.com/derivatives/thumb/costa-rica-gallery-limon-pu",
+      "https://images.wildphotography.com/derivatives/thumb/4245fee1ef34450af0199572ae2"
+    ],
+    [
+      49210,
+      "https://images.wildphotography.com/derivatives/thumb/costa-rica-gallery-limon-pu",
+      "https://images.wildphotography.com/derivatives/thumb/810d1fe1f88d6cf9e42eb94dfd9"
+    ],
+    [
+      49211,
+      "https://wildphotography.net/photos/49211/thumb.jpg",
+      "https://images.wildphotography.com/derivatives/thumb/1ccdb2707b68ed881cfd9fdc698"
+    ],
+    [
+      49212,
+      "https://images.wildphotography.com/derivatives/thumb/costa-rica-gallery-limon-pu",
+      "https://images.wildphotography.com/derivatives/thumb/44c5ec6cfcf9e6736e28382143d"
+    ],
+    [
+      49213,
+      "https://images.wildphotography.com/derivatives/thumb/costa-rica-gallery-limon-pu",
+      "https://images.wildphotography.com/derivatives/thumb/3792b97d6fa205d9174f4aab0f7"
+    ],
+    [
+      49214,
+      "https://wildphotography.net/photos/49214/thumb.jpg",
+      "https://images.wildphotography.com/derivatives/thumb/266d340ea869e30c0cfa972e470"
+    ],
+    [
+      49215,
+      "https://wildphotography.net/photos/49215/thumb.jpg",
+      "https://images.wildphotography.com/derivatives/thumb/09e6a46fc5a97b7e32ad9248b9f"
+    ]
+  ],
+  "no_key_samples": [],
+  "error_samples": [
+    [
+      49288,
+      "test placeholder",
+      "https://pub-xxx.r2.dev/thumb.jpg",
+      null
+    ]
+  ]
+}

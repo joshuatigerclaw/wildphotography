@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "ts_collection": "photos",
+  "ts_before": 37470,
+  "ts_after": 37565,
+  "neon_search_ready": 37594,
+  "missing_before_sync": 95,
+  "indexed": 95,
+  "final_drift": 29,
+  "drift_detail": "29 Neon records have no thumb_url or are not search_ready but counted \u2014 not indexed",
+  "ran_at": "2026-05-04T08:37:29.227441Z",
+  "script_version": "collection name fixed: photos_v3 -> photos"
+}

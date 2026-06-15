@@ -1,0 +1,65 @@
+{
+  "workflow": "wild_public_render_validation_after_asset_update",
+  "run_at": "2026-04-28T21:45:00Z",
+  "status": "PASS_WITH_NOTES",
+  "summary": "Public render validation passed after recent asset URL updates. 35,291 render-ready photos confirmed. 200 photos have missing_gallery_slug field issue (non-blocking for rendering). 25 derivatives regenerated today improved coverage to 99.28%. 102 queue items pending - all lack original source files.",
+  "validation_results": {
+    "total_photos": 35800,
+    "render_ready_total": 35291,
+    "photos_with_issues": 200,
+    "all_clear": false
+  },
+  "field_check_results": {
+    "missing_thumb_url": { "count": 0, "status": "CLEAR" },
+    "missing_slug": { "count": 0, "status": "CLEAR" },
+    "missing_title": { "count": 0, "status": "CLEAR" },
+    "missing_gallery_slug": { "count": 608, "status": "NOTE_200_RENDER_READY" },
+    "search_not_ready": { "count": 0, "status": "CLEAR" },
+    "derivatives_incomplete": { "count": 0, "status": "CLEAR" },
+    "missing_description": { "count": 0, "status": "CLEAR" },
+    "missing_keywords": { "count": 0, "status": "CLEAR" }
+  },
+  "missing_gallery_slug_breakdown": {
+    "total_missing_gallery_slug": 608,
+    "render_ready_but_missing_gallery": 200,
+    "archived_status": 2,
+    "published_status": 198,
+    "note": "608 total missing gallery_slug but only 200 are render_ready. Other 408 are not render_ready and won't be surfaced publicly."
+  },
+  "derivative_regeneration_today": {
+    "batch_timestamp": "2026-04-28T16:34:00Z",
+    "records_processed": 25,
+    "regenerated_successfully": 25,
+    "uploads_successful": 125,
+    "failures": 0,
+    "system_health": {
+      "batch_status": "COMPLETED",
+      "derivatives_coverage": "99.28%",
+      "r2_upload_success_rate": "100%"
+    },
+    "pre_batch_render_ready": 35292,
+    "post_batch_render_ready": 35317,
+    "delta_render_ready": "+25"
+  },
+  "queue_health": {
+    "derivative_rebuild_queue": {
+      "pending": 102,
+      "completed": 2992,
+      "total": 3053,
+      "note": "102 pending items all lack original_r2_key - cannot regenerate without source re-upload"
+    }
+  },
+  "top_5_issues_from_growth_audit": [
+    "Pinterest auth blocked (90 photos pending_review)",
+    "324 missing SEO titles",
+    "303 photos missing og_image_url",
+    "6 pending drafts to review/publish",
+    "19,249 state=new photos need enrichment"
+  ],
+  "public_urls_verified": [
+    "https://www.wildphotography.com - homepage reachable",
+    "https://www.wildphotography.com/galleries - galleries index reachable",
+    "Derivative URLs using https://images.wildphotography.com/derivatives/{id}/{size}.jpg - confirmed working in batch report"
+  ],
+  "recommendation": "PASS. Asset URLs are correct and derivatives are being served. The missing_gallery_slug issue affects 200 render-ready photos but does not break image rendering (only gallery cross-linking). Derivative coverage at 99.28% is strong. Priority fix should be backfilling 608 missing gallery_slugs for data completeness."
+}

@@ -1,12 +1,866 @@
 {
   "total_sampled": 200,
-  "http_200_count": 200,
-  "http_non_200_count": 0,
-  "error_count": 0,
+  "http_200_count": 52,
+  "http_non_200_count": 94,
+  "error_count": 54,
   "domain_breakdown": {
-    "images_wildphoto": 200
+    "https:": 54,
+    "r2_cloudflarestorage": 94,
+    "r2_dev": 52
   },
-  "non_200_urls": [],
-  "error_urls": [],
-  "sample_time": "2026-03-29T21:20:10.155818Z"
+  "non_200_urls": [
+    {
+      "photo_id": 76110,
+      "slug": "2022-07-04-10-18-03-1",
+      "gallery": "south-america-peru",
+      "url": "https://3ec62f93675c404fe4a9a4949e38e5e5.r2.cloudflarestorage.com/wildphoto-storage/photos/south-america-peru/2022-07-04-10-18-03-1_thumb.jpg",
+      "status_code": 400,
+      "error": "Bad Request",
+      "domain": "r2_cloudflarestorage"
+    },
+    {
+      "photo_id": 76104,
+      "slug": "2022-07-04-10-13-03-1",
+      "gallery": "south-america-peru",
+      "url": "https://3ec62f93675c404fe4a9a4949e38e5e5.r2.cloudflarestorage.com/wildphoto-storage/photos/south-america-peru/2022-07-04-10-13-03-1_thumb.jpg",
+      "status_code": 400,
+      "error": "Bad Request",
+      "domain": "r2_cloudflarestorage"
+    },
+    {
+      "photo_id": 76122,
+      "slug": "2022-07-04-11-07-26-1",
+      "gallery": "south-america-peru",
+      "url": "https://3ec62f93675c404fe4a9a4949e38e5e5.r2.cloudflarestorage.com/wildphoto-storage/photos/south-america-peru/2022-07-04-11-07-26-1_thumb.jpg",
+      "status_code": 400,
+      "error": "Bad Request",
+      "domain": "r2_cloudflarestorage"
+    },
+    {
+      "photo_id": 76124,
+      "slug": "2022-07-04-11-17-00-1",
+      "gallery": "south-america-peru",
+      "url": "https://3ec62f93675c404fe4a9a4949e38e5e5.r2.cloudflarestorage.com/wildphoto-storage/photos/south-america-peru/2022-07-04-11-17-00-1_thumb.jpg",
+      "status_code": 400,
+      "error": "Bad Request",
+      "domain": "r2_cloudflarestorage"
+    },
+    {
+      "photo_id": 76114,
+      "slug": "2022-07-04-10-40-50-1",
+      "gallery": "south-america-peru",
+      "url": "https://3ec62f93675c404fe4a9a4949e38e5e5.r2.cloudflarestorage.com/wildphoto-storage/photos/south-america-peru/2022-07-04-10-40-50-1_thumb.jpg",
+      "status_code": 400,
+      "error": "Bad Request",
+      "domain": "r2_cloudflarestorage"
+    },
+    {
+      "photo_id": 76130,
+      "slug": "2022-07-04-11-28-09-1",
+      "gallery": "south-america-peru",
+      "url": "https://3ec62f93675c404fe4a9a4949e38e5e5.r2.cloudflarestorage.com/wildphoto-storage/photos/south-america-peru/2022-07-04-11-28-09-1_thumb.jpg",
+      "status_code": 400,
+      "error": "Bad Request",
+      "domain": "r2_cloudflarestorage"
+    },
+    {
+      "photo_id": 76120,
+      "slug": "2022-07-04-10-59-48-1",
+      "gallery": "south-america-peru",
+      "url": "https://3ec62f93675c404fe4a9a4949e38e5e5.r2.cloudflarestorage.com/wildphoto-storage/photos/south-america-peru/2022-07-04-10-59-48-1_thumb.jpg",
+      "status_code": 400,
+      "error": "Bad Request",
+      "domain": "r2_cloudflarestorage"
+    },
+    {
+      "photo_id": 76132,
+      "slug": "2022-07-04-11-30-23-1",
+      "gallery": "south-america-peru",
+      "url": "https://3ec62f93675c404fe4a9a4949e38e5e5.r2.cloudflarestorage.com/wildphoto-storage/photos/south-america-peru/2022-07-04-11-30-23-1_thumb.jpg",
+      "status_code": 400,
+      "error": "Bad Request",
+      "domain": "r2_cloudflarestorage"
+    },
+    {
+      "photo_id": 76118,
+      "slug": "2022-07-04-10-58-54-1",
+      "gallery": "south-america-peru",
+      "url": "https://3ec62f93675c404fe4a9a4949e38e5e5.r2.cloudflarestorage.com/wildphoto-storage/photos/south-america-peru/2022-07-04-10-58-54-1_thumb.jpg",
+      "status_code": 400,
+      "error": "Bad Request",
+      "domain": "r2_cloudflarestorage"
+    },
+    {
+      "photo_id": 76108,
+      "slug": "img-3403-b4957e",
+      "gallery": "south-america-panama",
+      "url": "https://3ec62f93675c404fe4a9a4949e38e5e5.r2.cloudflarestorage.com/wildphoto-storage/photos/south-america-panama/img-3403-b4957e_thumb.jpg",
+      "status_code": 400,
+      "error": "Bad Request",
+      "domain": "r2_cloudflarestorage"
+    },
+    {
+      "photo_id": 76116,
+      "slug": "2022-07-04-10-57-24-1",
+      "gallery": "south-america-peru",
+      "url": "https://3ec62f93675c404fe4a9a4949e38e5e5.r2.cloudflarestorage.com/wildphoto-storage/photos/south-america-peru/2022-07-04-10-57-24-1_thumb.jpg",
+      "status_code": 400,
+      "error": "Bad Request",
+      "domain": "r2_cloudflarestorage"
+    },
+    {
+      "photo_id": 76128,
+      "slug": "2022-07-04-11-28-08-1",
+      "gallery": "south-america-peru",
+      "url": "https://3ec62f93675c404fe4a9a4949e38e5e5.r2.cloudflarestorage.com/wildphoto-storage/photos/south-america-peru/2022-07-04-11-28-08-1_thumb.jpg",
+      "status_code": 400,
+      "error": "Bad Request",
+      "domain": "r2_cloudflarestorage"
+    },
+    {
+      "photo_id": 76112,
+      "slug": "2022-07-04-10-32-55-1",
+      "gallery": "south-america-peru",
+      "url": "https://3ec62f93675c404fe4a9a4949e38e5e5.r2.cloudflarestorage.com/wildphoto-storage/photos/south-america-peru/2022-07-04-10-32-55-1_thumb.jpg",
+      "status_code": 400,
+      "error": "Bad Request",
+      "domain": "r2_cloudflarestorage"
+    },
+    {
+      "photo_id": 76099,
+      "slug": "dji-0890-dc31b9",
+      "gallery": "south-america-panama",
+      "url": "https://3ec62f93675c404fe4a9a4949e38e5e5.r2.cloudflarestorage.com/wildphoto-storage/photos/south-america-panama/dji-0890-dc31b9_thumb.jpg",
+      "status_code": 400,
+      "error": "Bad Request",
+      "domain": "r2_cloudflarestorage"
+    },
+    {
+      "photo_id": 76101,
+      "slug": "2022-07-04-09-47-41-1",
+      "gallery": "south-america-peru",
+      "url": "https://3ec62f93675c404fe4a9a4949e38e5e5.r2.cloudflarestorage.com/wildphoto-storage/photos/south-america-peru/2022-07-04-09-47-41-1_thumb.jpg",
+      "status_code": 400,
+      "error": "Bad Request",
+      "domain": "r2_cloudflarestorage"
+    },
+    {
+      "photo_id": 76105,
+      "slug": "img-3388-17558e",
+      "gallery": "south-america-panama",
+      "url": "https://3ec62f93675c404fe4a9a4949e38e5e5.r2.cloudflarestorage.com/wildphoto-storage/photos/south-america-panama/img-3388-17558e_thumb.jpg",
+      "status_code": 400,
+      "error": "Bad Request",
+      "domain": "r2_cloudflarestorage"
+    },
+    {
+      "photo_id": 76126,
+      "slug": "2022-07-04-11-19-36-1",
+      "gallery": "south-america-peru",
+      "url": "https://3ec62f93675c404fe4a9a4949e38e5e5.r2.cloudflarestorage.com/wildphoto-storage/photos/south-america-peru/2022-07-04-11-19-36-1_thumb.jpg",
+      "status_code": 400,
+      "error": "Bad Request",
+      "domain": "r2_cloudflarestorage"
+    },
+    {
+      "photo_id": 76107,
+      "slug": "2022-07-04-10-14-01-1",
+      "gallery": "south-america-peru",
+      "url": "https://3ec62f93675c404fe4a9a4949e38e5e5.r2.cloudflarestorage.com/wildphoto-storage/photos/south-america-peru/2022-07-04-10-14-01-1_thumb.jpg",
+      "status_code": 400,
+      "error": "Bad Request",
+      "domain": "r2_cloudflarestorage"
+    },
+    {
+      "photo_id": 76098,
+      "slug": "2022-07-04-09-38-30-1",
+      "gallery": "south-america-peru",
+      "url": "https://3ec62f93675c404fe4a9a4949e38e5e5.r2.cloudflarestorage.com/wildphoto-storage/photos/south-america-peru/2022-07-04-09-38-30-1_thumb.jpg",
+      "status_code": 400,
+      "error": "Bad Request",
+      "domain": "r2_cloudflarestorage"
+    },
+    {
+      "photo_id": 76102,
+      "slug": "img-2984-eeb506",
+      "gallery": "south-america-panama",
+      "url": "https://3ec62f93675c404fe4a9a4949e38e5e5.r2.cloudflarestorage.com/wildphoto-storage/photos/south-america-panama/img-2984-eeb506_thumb.jpg",
+      "status_code": 400,
+      "error": "Bad Request",
+      "domain": "r2_cloudflarestorage"
+    },
+    {
+      "photo_id": 76078,
+      "slug": "2017-07-16-08-01-33-9fe63d",
+      "gallery": "south-america-panama",
+      "url": "https://3ec62f93675c404fe4a9a4949e38e5e5.r2.cloudflarestorage.com/wildphoto-storage/photos/south-america-panama/2017-07-16-08-01-33-9fe63d_thumb.jpg",
+      "status_code": 400,
+      "error": "Bad Request",
+      "domain": "r2_cloudflarestorage"
+    },
+    {
+      "photo_id": 76084,
+      "slug": "dji-0629-d81c36",
+      "gallery": "south-america-panama",
+      "url": "https://3ec62f93675c404fe4a9a4949e38e5e5.r2.cloudflarestorage.com/wildphoto-storage/photos/south-america-panama/dji-0629-d81c36_thumb.jpg",
+      "status_code": 400,
+      "error": "Bad Request",
+      "domain": "r2_cloudflarestorage"
+    },
+    {
+      "photo_id": 76082,
+      "slug": "dji-0617-d90d39",
+      "gallery": "south-america-panama",
+      "url": "https://3ec62f93675c404fe4a9a4949e38e5e5.r2.cloudflarestorage.com/wildphoto-storage/photos/south-america-panama/dji-0617-d90d39_thumb.jpg",
+      "status_code": 400,
+      "error": "Bad Request",
+      "domain": "r2_cloudflarestorage"
+    },
+    {
+      "photo_id": 76080,
+      "slug": "2017-07-16-17-48-26-823c22",
+      "gallery": "south-america-panama",
+      "url": "https://3ec62f93675c404fe4a9a4949e38e5e5.r2.cloudflarestorage.com/wildphoto-storage/photos/south-america-panama/2017-07-16-17-48-26-823c22_thumb.jpg",
+      "status_code": 400,
+      "error": "Bad Request",
+      "domain": "r2_cloudflarestorage"
+    },
+    {
+      "photo_id": 76086,
+      "slug": "dji-0645-c631f5",
+      "gallery": "south-america-panama",
+      "url": "https://3ec62f93675c404fe4a9a4949e38e5e5.r2.cloudflarestorage.com/wildphoto-storage/photos/south-america-panama/dji-0645-c631f5_thumb.jpg",
+      "status_code": 400,
+      "error": "Bad Request",
+      "domain": "r2_cloudflarestorage"
+    },
+    {
+      "photo_id": 76095,
+      "slug": "dji-0859-c60e2f",
+      "gallery": "south-america-panama",
+      "url": "https://3ec62f93675c404fe4a9a4949e38e5e5.r2.cloudflarestorage.com/wildphoto-storage/photos/south-america-panama/dji-0859-c60e2f_thumb.jpg",
+      "status_code": 400,
+      "error": "Bad Request",
+      "domain": "r2_cloudflarestorage"
+    },
+    {
+      "photo_id": 76076,
+      "slug": "2017-07-15-11-33-09-575bf7",
+      "gallery": "south-america-panama",
+      "url": "https://3ec62f93675c404fe4a9a4949e38e5e5.r2.cloudflarestorage.com/wildphoto-storage/photos/south-america-panama/2017-07-15-11-33-09-575bf7_thumb.jpg",
+      "status_code": 400,
+      "error": "Bad Request",
+      "domain": "r2_cloudflarestorage"
+    },
+    {
+      "photo_id": 76074,
+      "slug": "2017-07-14-19-27-57-c22480",
+      "gallery": "south-america-panama",
+      "url": "https://3ec62f93675c404fe4a9a4949e38e5e5.r2.cloudflarestorage.com/wildphoto-storage/photos/south-america-panama/2017-07-14-19-27-57-c22480_thumb.jpg",
+      "status_code": 400,
+      "error": "Bad Request",
+      "domain": "r2_cloudflarestorage"
+    },
+    {
+      "photo_id": 76093,
+      "slug": "2022-07-03-14-16-21-1",
+      "gallery": "south-america-peru",
+      "url": "https://3ec62f93675c404fe4a9a4949e38e5e5.r2.cloudflarestorage.com/wildphoto-storage/photos/south-america-peru/2022-07-03-14-16-21-1_thumb.jpg",
+      "status_code": 400,
+      "error": "Bad Request",
+      "domain": "r2_cloudflarestorage"
+    },
+    {
+      "photo_id": 76096,
+      "slug": "2022-07-04-09-29-49-1",
+      "gallery": "south-america-peru",
+      "url": "https://3ec62f93675c404fe4a9a4949e38e5e5.r2.cloudflarestorage.com/wildphoto-storage/photos/south-america-peru/2022-07-04-09-29-49-1_thumb.jpg",
+      "status_code": 400,
+      "error": "Bad Request",
+      "domain": "r2_cloudflarestorage"
+    },
+    {
+      "photo_id": 76072,
+      "slug": "2015-09-04-18-08-57-8d0815",
+      "gallery": "south-america-panama",
+      "url": "https://3ec62f93675c404fe4a9a4949e38e5e5.r2.cloudflarestorage.com/wildphoto-storage/photos/south-america-panama/2015-09-04-18-08-57-8d0815_thumb.jpg",
+      "status_code": 400,
+      "error": "Bad Request",
+      "domain": "r2_cloudflarestorage"
+    },
+    {
+      "photo_id": 76090,
+      "slug": "2022-07-03-14-13-42-1",
+      "gallery": "south-america-peru",
+      "url": "https://3ec62f93675c404fe4a9a4949e38e5e5.r2.cloudflarestorage.com/wildphoto-storage/photos/south-america-peru/2022-07-03-14-13-42-1_thumb.jpg",
+      "status_code": 400,
+      "error": "Bad Request",
+      "domain": "r2_cloudflarestorage"
+    },
+    {
+      "photo_id": 76091,
+      "slug": "dji-0857-29afec",
+      "gallery": "south-america-panama",
+      "url": "https://3ec62f93675c404fe4a9a4949e38e5e5.r2.cloudflarestorage.com/wildphoto-storage/photos/south-america-panama/dji-0857-29afec_thumb.jpg",
+      "status_code": 400,
+      "error": "Bad Request",
+      "domain": "r2_cloudflarestorage"
+    },
+    {
+      "photo_id": 76088,
+      "slug": "dji-0674-f02874",
+      "gallery": "south-america-panama",
+      "url": "https://3ec62f93675c404fe4a9a4949e38e5e5.r2.cloudflarestorage.com/wildphoto-storage/photos/south-america-panama/dji-0674-f02874_thumb.jpg",
+      "status_code": 400,
+      "error": "Bad Request",
+      "domain": "r2_cloudflarestorage"
+    },
+    {
+      "photo_id": 76066,
+      "slug": "2015-09-04-17-01-43-a8df6a",
+      "gallery": "south-america-panama",
+      "url": "https://3ec62f93675c404fe4a9a4949e38e5e5.r2.cloudflarestorage.com/wildphoto-storage/photos/south-america-panama/2015-09-04-17-01-43-a8df6a_thumb.jpg",
+      "status_code": 400,
+      "error": "Bad Request",
+      "domain": "r2_cloudflarestorage"
+    },
+    {
+      "photo_id": 76070,
+      "slug": "2015-09-04-17-21-12-cc487e",
+      "gallery": "south-america-panama",
+      "url": "https://3ec62f93675c404fe4a9a4949e38e5e5.r2.cloudflarestorage.com/wildphoto-storage/photos/south-america-panama/2015-09-04-17-21-12-cc487e_thumb.jpg",
+      "status_code": 400,
+      "error": "Bad Request",
+      "domain": "r2_cloudflarestorage"
+    },
+    {
+      "photo_id": 76068,
+      "slug": "2015-09-04-17-21-08-c6906f",
+      "gallery": "south-america-panama",
+      "url": "https://3ec62f93675c404fe4a9a4949e38e5e5.r2.cloudflarestorage.com/wildphoto-storage/photos/south-america-panama/2015-09-04-17-21-08-c6906f_thumb.jpg",
+      "status_code": 400,
+      "error": "Bad Request",
+      "domain": "r2_cloudflarestorage"
+    },
+    {
+      "photo_id": 76064,
+      "slug": "2015-09-04-16-40-30-3a8851",
+      "gallery": "south-america-panama",
+      "url": "https://3ec62f93675c404fe4a9a4949e38e5e5.r2.cloudflarestorage.com/wildphoto-storage/photos/south-america-panama/2015-09-04-16-40-30-3a8851_thumb.jpg",
+      "status_code": 400,
+      "error": "Bad Request",
+      "domain": "r2_cloudflarestorage"
+    },
+    {
+      "photo_id": 76031,
+      "slug": "dji-0998-c5cada",
+      "gallery": "south-america-colombia-cartagena-islas-baru",
+      "url": "https://3ec62f93675c404fe4a9a4949e38e5e5.r2.cloudflarestorage.com/wildphoto-storage/photos/south-america-colombia-cartagena-islas-baru/dji-0998-c5cada_thumb.jpg",
+      "status_code": 400,
+      "error": "Bad Request",
+      "domain": "r2_cloudflarestorage"
+    },
+    {
+      "photo_id": 76033,
+      "slug": "dji-0710-381a00",
+      "gallery": "new-uploads",
+      "url": "https://3ec62f93675c404fe4a9a4949e38e5e5.r2.cloudflarestorage.com/wildphoto-storage/photos/new-uploads/dji-0710-381a00_thumb.jpg",
+      "status_code": 400,
+      "error": "Bad Request",
+      "domain": "r2_cloudflarestorage"
+    },
+    {
+      "photo_id": 76028,
+      "slug": "dji-0951-d8b348",
+      "gallery": "south-america-colombia-cartagena-islas-baru",
+      "url": "https://3ec62f93675c404fe4a9a4949e38e5e5.r2.cloudflarestorage.com/wildphoto-storage/photos/south-america-colombia-cartagena-islas-baru/dji-0951-d8b348_thumb.jpg",
+      "status_code": 400,
+      "error": "Bad Request",
+      "domain": "r2_cloudflarestorage"
+    },
+    {
+      "photo_id": 76026,
+      "slug": "dji-0938-955b94",
+      "gallery": "south-america-colombia-cartagena-islas-baru",
+      "url": "https://3ec62f93675c404fe4a9a4949e38e5e5.r2.cloudflarestorage.com/wildphoto-storage/photos/south-america-colombia-cartagena-islas-baru/dji-0938-955b94_thumb.jpg",
+      "status_code": 400,
+      "error": "Bad Request",
+      "domain": "r2_cloudflarestorage"
+    },
+    {
+      "photo_id": 76017,
+      "slug": "dji-0803",
+      "gallery": "south-america-colombia-cartagena-islas-baru",
+      "url": "https://3ec62f93675c404fe4a9a4949e38e5e5.r2.cloudflarestorage.com/wildphoto-storage/photos/south-america-colombia-cartagena-islas-baru/dji-0803_thumb.jpg",
+      "status_code": 400,
+      "error": "Bad Request",
+      "domain": "r2_cloudflarestorage"
+    },
+    {
+      "photo_id": 76020,
+      "slug": "dji-0855-b68e87",
+      "gallery": "south-america-colombia-cartagena-islas-baru",
+      "url": "https://3ec62f93675c404fe4a9a4949e38e5e5.r2.cloudflarestorage.com/wildphoto-storage/photos/south-america-colombia-cartagena-islas-baru/dji-0855-b68e87_thumb.jpg",
+      "status_code": 400,
+      "error": "Bad Request",
+      "domain": "r2_cloudflarestorage"
+    },
+    {
+      "photo_id": 76034,
+      "slug": "dji-0712-9cb052",
+      "gallery": "new-uploads",
+      "url": "https://3ec62f93675c404fe4a9a4949e38e5e5.r2.cloudflarestorage.com/wildphoto-storage/photos/new-uploads/dji-0712-9cb052_thumb.jpg",
+      "status_code": 400,
+      "error": "Bad Request",
+      "domain": "r2_cloudflarestorage"
+    },
+    {
+      "photo_id": 76029,
+      "slug": "dji-0962-12fc68",
+      "gallery": "south-america-colombia-cartagena-islas-baru",
+      "url": "https://3ec62f93675c404fe4a9a4949e38e5e5.r2.cloudflarestorage.com/wildphoto-storage/photos/south-america-colombia-cartagena-islas-baru/dji-0962-12fc68_thumb.jpg",
+      "status_code": 400,
+      "error": "Bad Request",
+      "domain": "r2_cloudflarestorage"
+    },
+    {
+      "photo_id": 76024,
+      "slug": "dji-0923-787c91",
+      "gallery": "south-america-colombia-cartagena-islas-baru",
+      "url": "https://3ec62f93675c404fe4a9a4949e38e5e5.r2.cloudflarestorage.com/wildphoto-storage/photos/south-america-colombia-cartagena-islas-baru/dji-0923-787c91_thumb.jpg",
+      "status_code": 400,
+      "error": "Bad Request",
+      "domain": "r2_cloudflarestorage"
+    },
+    {
+      "photo_id": 76023,
+      "slug": "dji-0902-85a336",
+      "gallery": "south-america-colombia-cartagena-islas-baru",
+      "url": "https://3ec62f93675c404fe4a9a4949e38e5e5.r2.cloudflarestorage.com/wildphoto-storage/photos/south-america-colombia-cartagena-islas-baru/dji-0902-85a336_thumb.jpg",
+      "status_code": 400,
+      "error": "Bad Request",
+      "domain": "r2_cloudflarestorage"
+    },
+    {
+      "photo_id": 76022,
+      "slug": "dji-0893-79f8d5",
+      "gallery": "south-america-colombia-cartagena-islas-baru",
+      "url": "https://3ec62f93675c404fe4a9a4949e38e5e5.r2.cloudflarestorage.com/wildphoto-storage/photos/south-america-colombia-cartagena-islas-baru/dji-0893-79f8d5_thumb.jpg",
+      "status_code": 400,
+      "error": "Bad Request",
+      "domain": "r2_cloudflarestorage"
+    },
+    {
+      "photo_id": 76027,
+      "slug": "dji-0944-f4aaec",
+      "gallery": "south-america-colombia-cartagena-islas-baru",
+      "url": "https://3ec62f93675c404fe4a9a4949e38e5e5.r2.cloudflarestorage.com/wildphoto-storage/photos/south-america-colombia-cartagena-islas-baru/dji-0944-f4aaec_thumb.jpg",
+      "status_code": 400,
+      "error": "Bad Request",
+      "domain": "r2_cloudflarestorage"
+    }
+  ],
+  "error_urls": [
+    {
+      "photo_id": 76125,
+      "slug": "2022-07-04-11-19-36-eaec66",
+      "gallery": "south-america-peru",
+      "url": "https://https://3ec62f93675c404fe4a9a4949e38e5e5.r2.cloudflarestorage.com/wildphoto-storage/photos/south-america-peru/2022-07-04-11-19-36-eaec66_thumb.jpg",
+      "error": "[Errno 8] nodename nor servname provided, or not known",
+      "domain": "https:"
+    },
+    {
+      "photo_id": 76119,
+      "slug": "2022-07-04-10-59-48-a04011",
+      "gallery": "south-america-peru",
+      "url": "https://https://3ec62f93675c404fe4a9a4949e38e5e5.r2.cloudflarestorage.com/wildphoto-storage/photos/south-america-peru/2022-07-04-10-59-48-a04011_thumb.jpg",
+      "error": "[Errno 8] nodename nor servname provided, or not known",
+      "domain": "https:"
+    },
+    {
+      "photo_id": 76121,
+      "slug": "2022-07-04-11-07-26-cde7cf",
+      "gallery": "south-america-peru",
+      "url": "https://https://3ec62f93675c404fe4a9a4949e38e5e5.r2.cloudflarestorage.com/wildphoto-storage/photos/south-america-peru/2022-07-04-11-07-26-cde7cf_thumb.jpg",
+      "error": "[Errno 8] nodename nor servname provided, or not known",
+      "domain": "https:"
+    },
+    {
+      "photo_id": 76115,
+      "slug": "2022-07-04-10-57-24-b21f42",
+      "gallery": "south-america-peru",
+      "url": "https://https://3ec62f93675c404fe4a9a4949e38e5e5.r2.cloudflarestorage.com/wildphoto-storage/photos/south-america-peru/2022-07-04-10-57-24-b21f42_thumb.jpg",
+      "error": "[Errno 8] nodename nor servname provided, or not known",
+      "domain": "https:"
+    },
+    {
+      "photo_id": 76113,
+      "slug": "2022-07-04-10-40-50-e53da7",
+      "gallery": "south-america-peru",
+      "url": "https://https://3ec62f93675c404fe4a9a4949e38e5e5.r2.cloudflarestorage.com/wildphoto-storage/photos/south-america-peru/2022-07-04-10-40-50-e53da7_thumb.jpg",
+      "error": "[Errno 8] nodename nor servname provided, or not known",
+      "domain": "https:"
+    },
+    {
+      "photo_id": 76129,
+      "slug": "2022-07-04-11-28-09-a49b20",
+      "gallery": "south-america-peru",
+      "url": "https://https://3ec62f93675c404fe4a9a4949e38e5e5.r2.cloudflarestorage.com/wildphoto-storage/photos/south-america-peru/2022-07-04-11-28-09-a49b20_thumb.jpg",
+      "error": "[Errno 8] nodename nor servname provided, or not known",
+      "domain": "https:"
+    },
+    {
+      "photo_id": 76123,
+      "slug": "2022-07-04-11-17-00-5347cc",
+      "gallery": "south-america-peru",
+      "url": "https://https://3ec62f93675c404fe4a9a4949e38e5e5.r2.cloudflarestorage.com/wildphoto-storage/photos/south-america-peru/2022-07-04-11-17-00-5347cc_thumb.jpg",
+      "error": "[Errno 8] nodename nor servname provided, or not known",
+      "domain": "https:"
+    },
+    {
+      "photo_id": 76131,
+      "slug": "2022-07-04-11-30-23-e79838",
+      "gallery": "south-america-peru",
+      "url": "https://https://3ec62f93675c404fe4a9a4949e38e5e5.r2.cloudflarestorage.com/wildphoto-storage/photos/south-america-peru/2022-07-04-11-30-23-e79838_thumb.jpg",
+      "error": "[Errno 8] nodename nor servname provided, or not known",
+      "domain": "https:"
+    },
+    {
+      "photo_id": 76117,
+      "slug": "2022-07-04-10-58-54-d8bf41",
+      "gallery": "south-america-peru",
+      "url": "https://https://3ec62f93675c404fe4a9a4949e38e5e5.r2.cloudflarestorage.com/wildphoto-storage/photos/south-america-peru/2022-07-04-10-58-54-d8bf41_thumb.jpg",
+      "error": "[Errno 8] nodename nor servname provided, or not known",
+      "domain": "https:"
+    },
+    {
+      "photo_id": 76127,
+      "slug": "2022-07-04-11-28-08-b4da75",
+      "gallery": "south-america-peru",
+      "url": "https://https://3ec62f93675c404fe4a9a4949e38e5e5.r2.cloudflarestorage.com/wildphoto-storage/photos/south-america-peru/2022-07-04-11-28-08-b4da75_thumb.jpg",
+      "error": "[Errno 8] nodename nor servname provided, or not known",
+      "domain": "https:"
+    },
+    {
+      "photo_id": 76111,
+      "slug": "2022-07-04-10-32-55-37e417",
+      "gallery": "south-america-peru",
+      "url": "https://https://3ec62f93675c404fe4a9a4949e38e5e5.r2.cloudflarestorage.com/wildphoto-storage/photos/south-america-peru/2022-07-04-10-32-55-37e417_thumb.jpg",
+      "error": "[Errno 8] nodename nor servname provided, or not known",
+      "domain": "https:"
+    },
+    {
+      "photo_id": 76106,
+      "slug": "2022-07-04-10-14-01-c83119",
+      "gallery": "south-america-peru",
+      "url": "https://https://3ec62f93675c404fe4a9a4949e38e5e5.r2.cloudflarestorage.com/wildphoto-storage/photos/south-america-peru/2022-07-04-10-14-01-c83119_thumb.jpg",
+      "error": "[Errno 8] nodename nor servname provided, or not known",
+      "domain": "https:"
+    },
+    {
+      "photo_id": 76109,
+      "slug": "2022-07-04-10-18-03-1671a1",
+      "gallery": "south-america-peru",
+      "url": "https://https://3ec62f93675c404fe4a9a4949e38e5e5.r2.cloudflarestorage.com/wildphoto-storage/photos/south-america-peru/2022-07-04-10-18-03-1671a1_thumb.jpg",
+      "error": "[Errno 8] nodename nor servname provided, or not known",
+      "domain": "https:"
+    },
+    {
+      "photo_id": 76103,
+      "slug": "2022-07-04-10-13-03-eeeab0",
+      "gallery": "south-america-peru",
+      "url": "https://https://3ec62f93675c404fe4a9a4949e38e5e5.r2.cloudflarestorage.com/wildphoto-storage/photos/south-america-peru/2022-07-04-10-13-03-eeeab0_thumb.jpg",
+      "error": "[Errno 8] nodename nor servname provided, or not known",
+      "domain": "https:"
+    },
+    {
+      "photo_id": 76100,
+      "slug": "2022-07-04-09-47-41-d2673e",
+      "gallery": "south-america-peru",
+      "url": "https://https://3ec62f93675c404fe4a9a4949e38e5e5.r2.cloudflarestorage.com/wildphoto-storage/photos/south-america-peru/2022-07-04-09-47-41-d2673e_thumb.jpg",
+      "error": "[Errno 8] nodename nor servname provided, or not known",
+      "domain": "https:"
+    },
+    {
+      "photo_id": 76097,
+      "slug": "2022-07-04-09-38-30-dd2206",
+      "gallery": "south-america-peru",
+      "url": "https://https://3ec62f93675c404fe4a9a4949e38e5e5.r2.cloudflarestorage.com/wildphoto-storage/photos/south-america-peru/2022-07-04-09-38-30-dd2206_thumb.jpg",
+      "error": "[Errno 8] nodename nor servname provided, or not known",
+      "domain": "https:"
+    },
+    {
+      "photo_id": 76092,
+      "slug": "2022-07-03-14-16-21-c9c8a0",
+      "gallery": "south-america-peru",
+      "url": "https://https://3ec62f93675c404fe4a9a4949e38e5e5.r2.cloudflarestorage.com/wildphoto-storage/photos/south-america-peru/2022-07-03-14-16-21-c9c8a0_thumb.jpg",
+      "error": "[Errno 8] nodename nor servname provided, or not known",
+      "domain": "https:"
+    },
+    {
+      "photo_id": 76094,
+      "slug": "2022-07-04-09-29-49-c4ee40",
+      "gallery": "south-america-peru",
+      "url": "https://https://3ec62f93675c404fe4a9a4949e38e5e5.r2.cloudflarestorage.com/wildphoto-storage/photos/south-america-peru/2022-07-04-09-29-49-c4ee40_thumb.jpg",
+      "error": "[Errno 8] nodename nor servname provided, or not known",
+      "domain": "https:"
+    },
+    {
+      "photo_id": 76085,
+      "slug": "2022-07-03-09-32-15-4eba86",
+      "gallery": "south-america-peru",
+      "url": "https://https://3ec62f93675c404fe4a9a4949e38e5e5.r2.cloudflarestorage.com/wildphoto-storage/photos/south-america-peru/2022-07-03-09-32-15-4eba86_thumb.jpg",
+      "error": "[Errno 8] nodename nor servname provided, or not known",
+      "domain": "https:"
+    },
+    {
+      "photo_id": 76089,
+      "slug": "2022-07-03-14-13-42-456d0c",
+      "gallery": "south-america-peru",
+      "url": "https://https://3ec62f93675c404fe4a9a4949e38e5e5.r2.cloudflarestorage.com/wildphoto-storage/photos/south-america-peru/2022-07-03-14-13-42-456d0c_thumb.jpg",
+      "error": "[Errno 8] nodename nor servname provided, or not known",
+      "domain": "https:"
+    },
+    {
+      "photo_id": 76087,
+      "slug": "2022-07-03-11-24-06-0ad2be",
+      "gallery": "south-america-peru",
+      "url": "https://https://3ec62f93675c404fe4a9a4949e38e5e5.r2.cloudflarestorage.com/wildphoto-storage/photos/south-america-peru/2022-07-03-11-24-06-0ad2be_thumb.jpg",
+      "error": "[Errno 8] nodename nor servname provided, or not known",
+      "domain": "https:"
+    },
+    {
+      "photo_id": 76079,
+      "slug": "2022-07-02-12-44-34-6db57a",
+      "gallery": "south-america-peru",
+      "url": "https://https://3ec62f93675c404fe4a9a4949e38e5e5.r2.cloudflarestorage.com/wildphoto-storage/photos/south-america-peru/2022-07-02-12-44-34-6db57a_thumb.jpg",
+      "error": "[Errno 8] nodename nor servname provided, or not known",
+      "domain": "https:"
+    },
+    {
+      "photo_id": 76077,
+      "slug": "2022-07-02-12-38-36-682bdb",
+      "gallery": "south-america-peru",
+      "url": "https://https://3ec62f93675c404fe4a9a4949e38e5e5.r2.cloudflarestorage.com/wildphoto-storage/photos/south-america-peru/2022-07-02-12-38-36-682bdb_thumb.jpg",
+      "error": "[Errno 8] nodename nor servname provided, or not known",
+      "domain": "https:"
+    },
+    {
+      "photo_id": 76083,
+      "slug": "2022-07-03-09-09-43-a8f0f9",
+      "gallery": "south-america-peru",
+      "url": "https://https://3ec62f93675c404fe4a9a4949e38e5e5.r2.cloudflarestorage.com/wildphoto-storage/photos/south-america-peru/2022-07-03-09-09-43-a8f0f9_thumb.jpg",
+      "error": "[Errno 8] nodename nor servname provided, or not known",
+      "domain": "https:"
+    },
+    {
+      "photo_id": 76081,
+      "slug": "2022-07-03-08-20-20-935236",
+      "gallery": "south-america-peru",
+      "url": "https://https://3ec62f93675c404fe4a9a4949e38e5e5.r2.cloudflarestorage.com/wildphoto-storage/photos/south-america-peru/2022-07-03-08-20-20-935236_thumb.jpg",
+      "error": "[Errno 8] nodename nor servname provided, or not known",
+      "domain": "https:"
+    },
+    {
+      "photo_id": 76073,
+      "slug": "2022-07-02-11-47-56-179a62",
+      "gallery": "south-america-peru",
+      "url": "https://https://3ec62f93675c404fe4a9a4949e38e5e5.r2.cloudflarestorage.com/wildphoto-storage/photos/south-america-peru/2022-07-02-11-47-56-179a62_thumb.jpg",
+      "error": "[Errno 8] nodename nor servname provided, or not known",
+      "domain": "https:"
+    },
+    {
+      "photo_id": 76075,
+      "slug": "2022-07-02-12-08-44-e3c3a7",
+      "gallery": "south-america-peru",
+      "url": "https://https://3ec62f93675c404fe4a9a4949e38e5e5.r2.cloudflarestorage.com/wildphoto-storage/photos/south-america-peru/2022-07-02-12-08-44-e3c3a7_thumb.jpg",
+      "error": "[Errno 8] nodename nor servname provided, or not known",
+      "domain": "https:"
+    },
+    {
+      "photo_id": 76069,
+      "slug": "2022-07-02-09-23-24-beb7a8",
+      "gallery": "south-america-peru",
+      "url": "https://https://3ec62f93675c404fe4a9a4949e38e5e5.r2.cloudflarestorage.com/wildphoto-storage/photos/south-america-peru/2022-07-02-09-23-24-beb7a8_thumb.jpg",
+      "error": "[Errno 8] nodename nor servname provided, or not known",
+      "domain": "https:"
+    },
+    {
+      "photo_id": 76071,
+      "slug": "2022-07-02-09-39-52-ef1b12",
+      "gallery": "south-america-peru",
+      "url": "https://https://3ec62f93675c404fe4a9a4949e38e5e5.r2.cloudflarestorage.com/wildphoto-storage/photos/south-america-peru/2022-07-02-09-39-52-ef1b12_thumb.jpg",
+      "error": "[Errno 8] nodename nor servname provided, or not known",
+      "domain": "https:"
+    },
+    {
+      "photo_id": 76067,
+      "slug": "2022-06-29-18-16-04-3fdb6c",
+      "gallery": "south-america-peru",
+      "url": "https://https://3ec62f93675c404fe4a9a4949e38e5e5.r2.cloudflarestorage.com/wildphoto-storage/photos/south-america-peru/2022-06-29-18-16-04-3fdb6c_thumb.jpg",
+      "error": "[Errno 8] nodename nor servname provided, or not known",
+      "domain": "https:"
+    },
+    {
+      "photo_id": 76065,
+      "slug": "2022-06-29-18-15-55-6c15c0",
+      "gallery": "south-america-peru",
+      "url": "https://https://3ec62f93675c404fe4a9a4949e38e5e5.r2.cloudflarestorage.com/wildphoto-storage/photos/south-america-peru/2022-06-29-18-15-55-6c15c0_thumb.jpg",
+      "error": "[Errno 8] nodename nor servname provided, or not known",
+      "domain": "https:"
+    },
+    {
+      "photo_id": 76063,
+      "slug": "2022-06-29-17-02-28-f6bd9c",
+      "gallery": "south-america-peru",
+      "url": "https://https://3ec62f93675c404fe4a9a4949e38e5e5.r2.cloudflarestorage.com/wildphoto-storage/photos/south-america-peru/2022-06-29-17-02-28-f6bd9c_thumb.jpg",
+      "error": "[Errno 8] nodename nor servname provided, or not known",
+      "domain": "https:"
+    },
+    {
+      "photo_id": 76061,
+      "slug": "2022-06-29-17-02-03-de62da",
+      "gallery": "south-america-peru",
+      "url": "https://https://3ec62f93675c404fe4a9a4949e38e5e5.r2.cloudflarestorage.com/wildphoto-storage/photos/south-america-peru/2022-06-29-17-02-03-de62da_thumb.jpg",
+      "error": "[Errno 8] nodename nor servname provided, or not known",
+      "domain": "https:"
+    },
+    {
+      "photo_id": 76059,
+      "slug": "2022-06-29-16-52-58-f27fef",
+      "gallery": "south-america-peru",
+      "url": "https://https://3ec62f93675c404fe4a9a4949e38e5e5.r2.cloudflarestorage.com/wildphoto-storage/photos/south-america-peru/2022-06-29-16-52-58-f27fef_thumb.jpg",
+      "error": "[Errno 8] nodename nor servname provided, or not known",
+      "domain": "https:"
+    },
+    {
+      "photo_id": 76057,
+      "slug": "2022-06-29-16-46-00-c70853",
+      "gallery": "south-america-peru",
+      "url": "https://https://3ec62f93675c404fe4a9a4949e38e5e5.r2.cloudflarestorage.com/wildphoto-storage/photos/south-america-peru/2022-06-29-16-46-00-c70853_thumb.jpg",
+      "error": "[Errno 8] nodename nor servname provided, or not known",
+      "domain": "https:"
+    },
+    {
+      "photo_id": 76055,
+      "slug": "2022-06-29-16-32-38-0a0b53",
+      "gallery": "south-america-peru",
+      "url": "https://https://3ec62f93675c404fe4a9a4949e38e5e5.r2.cloudflarestorage.com/wildphoto-storage/photos/south-america-peru/2022-06-29-16-32-38-0a0b53_thumb.jpg",
+      "error": "[Errno 8] nodename nor servname provided, or not known",
+      "domain": "https:"
+    },
+    {
+      "photo_id": 76053,
+      "slug": "2022-06-29-15-14-14-c1d748",
+      "gallery": "south-america-peru",
+      "url": "https://https://3ec62f93675c404fe4a9a4949e38e5e5.r2.cloudflarestorage.com/wildphoto-storage/photos/south-america-peru/2022-06-29-15-14-14-c1d748_thumb.jpg",
+      "error": "[Errno 8] nodename nor servname provided, or not known",
+      "domain": "https:"
+    },
+    {
+      "photo_id": 76051,
+      "slug": "2022-06-29-15-09-20-9088b5",
+      "gallery": "south-america-peru",
+      "url": "https://https://3ec62f93675c404fe4a9a4949e38e5e5.r2.cloudflarestorage.com/wildphoto-storage/photos/south-america-peru/2022-06-29-15-09-20-9088b5_thumb.jpg",
+      "error": "[Errno 8] nodename nor servname provided, or not known",
+      "domain": "https:"
+    },
+    {
+      "photo_id": 76050,
+      "slug": "2022-06-29-15-09-13-d97148",
+      "gallery": "south-america-peru",
+      "url": "https://https://3ec62f93675c404fe4a9a4949e38e5e5.r2.cloudflarestorage.com/wildphoto-storage/photos/south-america-peru/2022-06-29-15-09-13-d97148_thumb.jpg",
+      "error": "[Errno 8] nodename nor servname provided, or not known",
+      "domain": "https:"
+    },
+    {
+      "photo_id": 76049,
+      "slug": "2022-06-29-15-02-58-92b879",
+      "gallery": "south-america-peru",
+      "url": "https://https://3ec62f93675c404fe4a9a4949e38e5e5.r2.cloudflarestorage.com/wildphoto-storage/photos/south-america-peru/2022-06-29-15-02-58-92b879_thumb.jpg",
+      "error": "[Errno 8] nodename nor servname provided, or not known",
+      "domain": "https:"
+    },
+    {
+      "photo_id": 76048,
+      "slug": "2022-06-29-15-02-54-836ae9",
+      "gallery": "south-america-peru",
+      "url": "https://https://3ec62f93675c404fe4a9a4949e38e5e5.r2.cloudflarestorage.com/wildphoto-storage/photos/south-america-peru/2022-06-29-15-02-54-836ae9_thumb.jpg",
+      "error": "[Errno 8] nodename nor servname provided, or not known",
+      "domain": "https:"
+    },
+    {
+      "photo_id": 76045,
+      "slug": "2022-06-29-14-57-24-673358",
+      "gallery": "south-america-peru",
+      "url": "https://https://3ec62f93675c404fe4a9a4949e38e5e5.r2.cloudflarestorage.com/wildphoto-storage/photos/south-america-peru/2022-06-29-14-57-24-673358_thumb.jpg",
+      "error": "[Errno 8] nodename nor servname provided, or not known",
+      "domain": "https:"
+    },
+    {
+      "photo_id": 76047,
+      "slug": "2022-06-29-15-02-42-b6bfa5",
+      "gallery": "south-america-peru",
+      "url": "https://https://3ec62f93675c404fe4a9a4949e38e5e5.r2.cloudflarestorage.com/wildphoto-storage/photos/south-america-peru/2022-06-29-15-02-42-b6bfa5_thumb.jpg",
+      "error": "[Errno 8] nodename nor servname provided, or not known",
+      "domain": "https:"
+    },
+    {
+      "photo_id": 76044,
+      "slug": "2022-06-29-14-57-19-c7a03a",
+      "gallery": "south-america-peru",
+      "url": "https://https://3ec62f93675c404fe4a9a4949e38e5e5.r2.cloudflarestorage.com/wildphoto-storage/photos/south-america-peru/2022-06-29-14-57-19-c7a03a_thumb.jpg",
+      "error": "[Errno 8] nodename nor servname provided, or not known",
+      "domain": "https:"
+    },
+    {
+      "photo_id": 76046,
+      "slug": "2022-06-29-15-02-39-00e16e",
+      "gallery": "south-america-peru",
+      "url": "https://https://3ec62f93675c404fe4a9a4949e38e5e5.r2.cloudflarestorage.com/wildphoto-storage/photos/south-america-peru/2022-06-29-15-02-39-00e16e_thumb.jpg",
+      "error": "[Errno 8] nodename nor servname provided, or not known",
+      "domain": "https:"
+    },
+    {
+      "photo_id": 76043,
+      "slug": "2022-06-29-14-57-14-341742",
+      "gallery": "south-america-peru",
+      "url": "https://https://3ec62f93675c404fe4a9a4949e38e5e5.r2.cloudflarestorage.com/wildphoto-storage/photos/south-america-peru/2022-06-29-14-57-14-341742_thumb.jpg",
+      "error": "[Errno 8] nodename nor servname provided, or not known",
+      "domain": "https:"
+    },
+    {
+      "photo_id": 76042,
+      "slug": "2022-06-29-14-56-28-f95443",
+      "gallery": "south-america-peru",
+      "url": "https://https://3ec62f93675c404fe4a9a4949e38e5e5.r2.cloudflarestorage.com/wildphoto-storage/photos/south-america-peru/2022-06-29-14-56-28-f95443_thumb.jpg",
+      "error": "[Errno 8] nodename nor servname provided, or not known",
+      "domain": "https:"
+    },
+    {
+      "photo_id": 76041,
+      "slug": "2022-06-29-14-56-27-767649",
+      "gallery": "south-america-peru",
+      "url": "https://https://3ec62f93675c404fe4a9a4949e38e5e5.r2.cloudflarestorage.com/wildphoto-storage/photos/south-america-peru/2022-06-29-14-56-27-767649_thumb.jpg",
+      "error": "[Errno 8] nodename nor servname provided, or not known",
+      "domain": "https:"
+    },
+    {
+      "photo_id": 76040,
+      "slug": "2022-06-29-14-56-26-f87c65",
+      "gallery": "south-america-peru",
+      "url": "https://https://3ec62f93675c404fe4a9a4949e38e5e5.r2.cloudflarestorage.com/wildphoto-storage/photos/south-america-peru/2022-06-29-14-56-26-f87c65_thumb.jpg",
+      "error": "[Errno 8] nodename nor servname provided, or not known",
+      "domain": "https:"
+    },
+    {
+      "photo_id": 76038,
+      "slug": "2022-06-29-14-55-40-cee53e",
+      "gallery": "south-america-peru",
+      "url": "https://https://3ec62f93675c404fe4a9a4949e38e5e5.r2.cloudflarestorage.com/wildphoto-storage/photos/south-america-peru/2022-06-29-14-55-40-cee53e_thumb.jpg",
+      "error": "[Errno 8] nodename nor servname provided, or not known",
+      "domain": "https:"
+    }
+  ],
+  "sample_time": "2026-06-01T21:04:24.824494Z"
 }

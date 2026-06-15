@@ -1,0 +1,144 @@
+{
+  "workflow": "wild_legacy_orphan_review",
+  "status": "completed",
+  "completed_at": "2026-04-23T11:25:00.000000+00:00",
+  "db_total_photos": 34351,
+  "orphan_classification": {
+    "true_orphans_live": 0,
+    "true_orphans_archived": 71,
+    "legacy_static_excluded": 14415,
+    "archived_unrecoverable": 71,
+    "recoverable_missing_thumb": 49,
+    "recoverable_has_thumb": 34229
+  },
+  "render_ready": 34229,
+  "search_ready": 34226,
+  "cdn_status": {
+    "old_cdn_thumb_urls": 32459,
+    "r2_cdn_thumb_urls": 0,
+    "null_thumb_urls": 120,
+    "old_cdn_active_records": 32459
+  },
+  "records": {
+    "null_thumb_with_assets": [
+      {
+        "id": 14776,
+        "slug": "costa-rica-gallery-best-of-costa-rica-20070520-2268",
+        "title": "Favorites",
+        "gallery_id": 102,
+        "source_path": "originals/favorites/20070520-2268-a12dc2610e44.jpg",
+        "status": "archived",
+        "record_class": "active",
+        "issue": "has_source_path_and_r2_key_no_thumb"
+      }
+    ],
+    "null_thumb_archival_only": "120 records are archived legacy_static with null thumb, properly excluded"
+  },
+  "unrecoverable_records": [
+    {
+      "id": 17,
+      "slug": "quetzal",
+      "title": "Resplendent Quetzal",
+      "gallery_id": 5,
+      "reason": "placeholder_species_page_no_assets",
+      "record_class": "archived_unrecoverable"
+    },
+    {
+      "id": 21,
+      "slug": "green-iguana",
+      "title": "Green Iguana in Costa Rica",
+      "gallery_id": 6,
+      "reason": "placeholder_species_page_no_assets",
+      "record_class": "archived_unrecoverable"
+    },
+    {
+      "id": 25,
+      "slug": "rufous-hummingbird",
+      "title": "Rufous Hummingbird",
+      "gallery_id": 5,
+      "reason": "placeholder_species_page_no_assets",
+      "record_class": "archived_unrecoverable"
+    },
+    {
+      "id": 26,
+      "slug": "white-throated-magpie-jay",
+      "title": "White-throated Magpie-Jay",
+      "gallery_id": 5,
+      "reason": "placeholder_species_page_no_assets",
+      "record_class": "archived_unrecoverable"
+    },
+    {
+      "id": 27,
+      "slug": "collared-aracari",
+      "title": "Collared Aracari",
+      "gallery_id": 5,
+      "reason": "placeholder_species_page_no_assets",
+      "record_class": "archived_unrecoverable"
+    },
+    {
+      "id": 28,
+      "slug": "green-honeycreeper",
+      "title": "Green Honeycreeper",
+      "gallery_id": 5,
+      "reason": "placeholder_species_page_no_assets",
+      "record_class": "archived_unrecoverable"
+    },
+    {
+      "id": 29,
+      "slug": "boat-billed-heron",
+      "title": "Boat-billed Heron",
+      "gallery_id": 5,
+      "reason": "placeholder_species_page_no_assets",
+      "record_class": "archived_unrecoverable"
+    },
+    {
+      "id": 31,
+      "slug": "montezuma-oropendola",
+      "title": "Montezuma Oropendola",
+      "gallery_id": 5,
+      "reason": "placeholder_species_page_no_assets",
+      "record_class": "archived_unrecoverable"
+    },
+    {
+      "id": 34,
+      "slug": "cloud-forest-mist",
+      "title": "Cloud Forest Mist",
+      "gallery_id": 8,
+      "reason": "placeholder_location_page_no_assets",
+      "record_class": "archived_unrecoverable"
+    },
+    {
+      "id": 43,
+      "slug": "wading-angler-quiet-water-fishing-scene-dWHshx",
+      "title": "Wading Angler Quiet Water Fishing Scene",
+      "gallery_id": 9,
+      "reason": "placeholder_generic_no_assets",
+      "record_class": "archived_unrecoverable"
+    }
+  ],
+  "findings": {
+    "orphan_situation": "ZERO live true orphans. All 71 unrecoverable records are properly classified as archived_unrecoverable and excluded from repair/indexing workflows.",
+    "cdn_crisis": "CRITICAL - All 32,459 active records still have old images.wildphotography.com CDN URLs in thumb_url. This CDN is dead. All these records show as render_ready but are actually broken in production. Immediate action required.",
+    "null_thumb_gap": "120 archived records have null thumb_url (legacy_static), 49 active records have source_path and r2_original_key but no thumb_url generated (these are Favorites gallery imports from disk, need thumb generation)",
+    "legacy_static": "14,415 legacy_static records correctly excluded from orphan metrics. These have valid thumbs and are searchable/renderable.",
+    "recoverable": "34,229 records are render_ready with some form of asset reference."
+  },
+  "priorities": {
+    "priority_1_critical": {
+      "action": "cdn_migration_32459_records",
+      "description": "32,459 active records have dead images.wildphotography.com CDN URLs. Need bulk update of thumb_url and all derivative URLs to R2. This is the single biggest production issue.",
+      "affected_records": 32459
+    },
+    "priority_2_high": {
+      "action": "thumb_generation_49_records",
+      "description": "49 records in Favorites gallery (ids starting ~14776) have r2_original_key and source_path but missing thumb_url. Need derivative generation.",
+      "affected_records": 49
+    },
+    "priority_3_medium": {
+      "action": "monitoring_only",
+      "description": "71 archived_unrecoverable records are properly excluded. No action needed. 120 archived legacy_static records with null thumb are properly excluded.",
+      "affected_records": 71
+    }
+  },
+  "next_action": "Dispatch immediate CDN migration for 32,459 records. Run derivative rebuild for the 49 Favorites records missing thumbs."
+}

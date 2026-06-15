@@ -1,0 +1,49 @@
+2026-04-29 12:07:00,351 INFO === WildPhotography Typesense Reconciliation (FIXED) ===
+2026-04-29 12:07:00,352 INFO 
+2026-04-29 12:07:00,705 INFO [1] Typesense current doc count: 32712
+2026-04-29 12:07:00,705 INFO [2] Loading eligible Neon docs...
+2026-04-29 12:07:02,685 INFO     Eligible Neon docs: 35468
+2026-04-29 12:07:02,685 INFO [3] Drift before reconcile: 2756 (eligible=35468, TS=32712)
+2026-04-29 12:07:02,685 INFO [4] Exporting Typesense docs to identify stale...
+2026-04-29 12:07:04,950 INFO     TS docs: 32712, Stale: 328, Missing: 3084
+2026-04-29 12:07:04,950 INFO [5] Removing 328 stale docs by slug...
+2026-04-29 12:07:07,896 INFO     Stale removed: 329
+2026-04-29 12:07:07,896 INFO [6] Adding 3084 missing docs...
+2026-04-29 12:07:08,512 ERROR   Batch 1: HTTP 422 - {"message": "Rejecting write: running out of resource type: OUT_OF_MEMORY"}
+2026-04-29 12:07:09,422 ERROR   Batch 2: HTTP 422 - {"message": "Rejecting write: running out of resource type: OUT_OF_MEMORY"}
+2026-04-29 12:07:10,624 WARNING     Error batch 3: Field `orientation` has been declared in the schema, but is not found in the document.
+2026-04-29 12:07:10,624 WARNING     Error batch 3: Field `orientation` has been declared in the schema, but is not found in the document.
+2026-04-29 12:07:10,624 WARNING     Error batch 3: Field `orientation` has been declared in the schema, but is not found in the document.
+2026-04-29 12:07:10,624 INFO   Batch 3/8: 0 ok, 400 errors
+2026-04-29 12:07:11,848 WARNING     Error batch 4: Field `orientation` has been declared in the schema, but is not found in the document.
+2026-04-29 12:07:11,848 WARNING     Error batch 4: Field `orientation` has been declared in the schema, but is not found in the document.
+2026-04-29 12:07:11,849 WARNING     Error batch 4: Field `orientation` has been declared in the schema, but is not found in the document.
+2026-04-29 12:07:11,849 INFO   Batch 4/8: 0 ok, 400 errors
+2026-04-29 12:07:12,995 WARNING     Error batch 5: Field `orientation` has been declared in the schema, but is not found in the document.
+2026-04-29 12:07:12,995 WARNING     Error batch 5: Field `orientation` has been declared in the schema, but is not found in the document.
+2026-04-29 12:07:12,995 WARNING     Error batch 5: Field `orientation` has been declared in the schema, but is not found in the document.
+2026-04-29 12:07:12,995 INFO   Batch 5/8: 0 ok, 400 errors
+2026-04-29 12:07:14,176 WARNING     Error batch 6: Field `orientation` has been declared in the schema, but is not found in the document.
+2026-04-29 12:07:14,176 WARNING     Error batch 6: Field `orientation` has been declared in the schema, but is not found in the document.
+2026-04-29 12:07:14,176 WARNING     Error batch 6: Field `orientation` has been declared in the schema, but is not found in the document.
+2026-04-29 12:07:14,176 INFO   Batch 6/8: 0 ok, 400 errors
+2026-04-29 12:07:15,370 WARNING     Error batch 7: Field `orientation` has been declared in the schema, but is not found in the document.
+2026-04-29 12:07:15,371 WARNING     Error batch 7: Field `orientation` has been declared in the schema, but is not found in the document.
+2026-04-29 12:07:15,371 WARNING     Error batch 7: Field `orientation` has been declared in the schema, but is not found in the document.
+2026-04-29 12:07:15,371 INFO   Batch 7/8: 0 ok, 400 errors
+2026-04-29 12:07:16,348 WARNING     Error batch 8: Field `orientation` has been declared in the schema, but is not found in the document.
+2026-04-29 12:07:16,348 WARNING     Error batch 8: Field `orientation` has been declared in the schema, but is not found in the document.
+2026-04-29 12:07:16,349 WARNING     Error batch 8: Field `orientation` has been declared in the schema, but is not found in the document.
+2026-04-29 12:07:16,349 INFO   Batch 8/8: 0 ok, 284 errors
+2026-04-29 12:07:16,724 INFO     Missing added: 0, errors: 3084
+2026-04-29 12:07:19,191 INFO 
+2026-04-29 12:07:19,192 INFO === Reconciliation Complete ===
+2026-04-29 12:07:19,192 INFO   Eligible Neon:     35468
+2026-04-29 12:07:19,192 INFO   TS before:         32712
+2026-04-29 12:07:19,192 INFO   Stale removed:     329
+2026-04-29 12:07:19,192 INFO   Missing added:     0
+2026-04-29 12:07:19,192 INFO   TS after:          32383
+2026-04-29 12:07:19,192 INFO   Drift before:      2756
+2026-04-29 12:07:19,192 INFO   Drift after:       3085
+2026-04-29 12:07:19,192 INFO   Duration:          18.8s
+2026-04-29 12:07:19,194 INFO   Report: /Users/joshuatenbrink/.openclaw/workspace/wildphotography/logs/typesense_reconcile_20260429T180719Z.json

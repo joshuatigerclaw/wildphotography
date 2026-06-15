@@ -260,16 +260,16 @@ def run_validation():
     print(f"\nPage Rendering Checks:")
     page_results = {}
     
-    # Build page URLs
+    # Build page URLs (note: site uses singular forms /gallery/, /photo/, /region/)
     base = WILD_BASE_URL.rstrip('/')
     page_urls = {
         'homepage': f'{base}/',
         'galleries_index': f'{base}/galleries',
-        'gallery_detail': f'{base}/galleries/birds/toucan',
-        'photo_detail': f'{base}/photos/scarlet-macaw-costa-rica',
+        'gallery_detail': f'{base}/gallery/birds-macaws-lapas',
+        'photo_detail': f'{base}/photo/cl0a7068-birds-macaws-lapas-2631',
         'search_results': f'{base}/search?q=toucan',
         'species_detail': f'{base}/species/scarlet-macaw',
-        'regions': f'{base}/regions'
+        'regions': f'{base}/region/puntarenas'
     }
     
     for page_name in PAGES_TO_CHECK:

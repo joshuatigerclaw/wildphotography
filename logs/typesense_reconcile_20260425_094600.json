@@ -1,0 +1,13 @@
+{
+  "run_at": "2026-04-25T09:46:00Z",
+  "eligible_db_count": 34403,
+  "typesense_count_before": 34179,
+  "typesense_count_after": 34403,
+  "stale_removed": 0,
+  "missing_added": 224,
+  "final_drift": 0,
+  "status": "aligned",
+  "duration_seconds": 45,
+  "error": null,
+  "notes": "All 224 missing DB records upserted into TS photos_v3. Zero stale docs to remove. Drift reduced from 224 to 0."
+}

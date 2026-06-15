@@ -1,0 +1,40 @@
+{
+  "timestamp": "2026-06-04T15:41:29.486Z",
+  "results": [
+    {
+      "photo_id": 42063,
+      "status": "skipped",
+      "reason": "file_read_error",
+      "error": "Unknown system error -11: Unknown system error -11, read"
+    },
+    {
+      "photo_id": 42064,
+      "status": "ok",
+      "derivs_complete": true
+    },
+    {
+      "photo_id": 42065,
+      "status": "skipped",
+      "reason": "file_read_error",
+      "error": "Unknown system error -11: Unknown system error -11, read"
+    },
+    {
+      "photo_id": 42066,
+      "status": "ok",
+      "derivs_complete": true
+    },
+    {
+      "photo_id": 42067,
+      "status": "ok",
+      "derivs_complete": true
+    },
+    {
+      "photo_id": 42070,
+      "status": "ok",
+      "derivs_complete": true
+    }
+  ],
+  "ok": 4,
+  "fail": 0,
+  "skip": 2
+}

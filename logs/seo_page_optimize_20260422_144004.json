@@ -1,0 +1,759 @@
+{
+  "timestamp": "2026-04-22T14:40:04.576490",
+  "workflow": "wild_seo_optimize_pages",
+  "summary": {
+    "total_found": 83,
+    "updated": 83,
+    "errors": 0
+  },
+  "updated_articles": [
+    {
+      "id": 378,
+      "slug": "central-pacific-coast-costa-rica-photography-guide",
+      "title": "Central Pacific Coast, Costa Rica: Photography Guide to the Best Beaches",
+      "article_type": "location_guide",
+      "meta_title": "Central Pacific Coast, Costa Rica: Photography Guide to the Best Beaches | WildP...",
+      "meta_description": "Expert beach and coastal photography guide for Central Pacific Coast, Costa Rica...",
+      "canonical_url": "https://www.wildphotography.com/article/central-pacific-coast-costa-rica-photography-guide"
+    },
+    {
+      "id": 379,
+      "slug": "dominical-uvita-south-pacific-costa-rica",
+      "title": "Dominical and Uvita, Costa Rica South Pacific Coast: Photography Guide",
+      "article_type": "location_guide",
+      "meta_title": "Dominical and Uvita, Costa Rica South Pacific Coast: Photography Guide | WildPho...",
+      "meta_description": "Expert landscape and travel photography guide for Costa Rica South Pacific Coast...",
+      "canonical_url": "https://www.wildphotography.com/article/dominical-uvita-south-pacific-costa-rica"
+    },
+    {
+      "id": 380,
+      "slug": "cartago-central-valley-highlands-costa-rica",
+      "title": "Cartago and the Central Valley Highlands, Costa Rica: Photography Guide",
+      "article_type": "location_guide",
+      "meta_title": "Cartago and the Central Valley Highlands, Costa Rica: Photography Guide | WildPh...",
+      "meta_description": "Expert landscape and travel photography guide for Cartago and the Central Valley...",
+      "canonical_url": "https://www.wildphotography.com/article/cartago-central-valley-highlands-costa-rica"
+    },
+    {
+      "id": 381,
+      "slug": "bajos-del-toro-costa-rica-photography-guide",
+      "title": "Bajos del Toro, Costa Rica: The Complete Photography Guide to the Cloud Forest Waterfall Country",
+      "article_type": "location_guide",
+      "meta_title": "Bajos del Toro, Costa Rica: The Complete Photography Guide to the Cloud... | Wil...",
+      "meta_description": "Bajos del Toro photography guide covering the cloud forest area near the Barrett...",
+      "canonical_url": "https://www.wildphotography.com/article/bajos-del-toro-costa-rica-photography-guide"
+    },
+    {
+      "id": 382,
+      "slug": "san-jose-central-valley-costa-rica-photography-guide",
+      "title": "San Jose and the Central Valley, Costa Rica: The Complete Photography Guide",
+      "article_type": "location_guide",
+      "meta_title": "San Jose and the Central Valley, Costa Rica: The Complete Photography Guide | Wi...",
+      "meta_description": "San Jose and Central Valley photography guide covering Costa Rica's capital and ...",
+      "canonical_url": "https://www.wildphotography.com/article/san-jose-central-valley-costa-rica-photography-guide"
+    },
+    {
+      "id": 383,
+      "slug": "playas-del-coco-ocotal-guanacaste-costa-rica",
+      "title": "Playas del Coco and Ocotal, Guanacaste: The Complete Photography Guide to Costa Rica's Liveliest Beach Towns",
+      "article_type": "location_guide",
+      "meta_title": "Playas del Coco and Ocotal, Guanacaste: The Complete Photography Guide... | Wild...",
+      "meta_description": "Playas del Coco and Ocotal photography guide covering two of Guanacaste's most p...",
+      "canonical_url": "https://www.wildphotography.com/article/playas-del-coco-ocotal-guanacaste-costa-rica"
+    },
+    {
+      "id": 385,
+      "slug": "papagayo-peninsula-playa-penca-guanacaste-costa-rica",
+      "title": "Papagayo Peninsula and Playa Penca: The Complete Photography Guide to Guanacaste's Luxury Coast",
+      "article_type": "location_guide",
+      "meta_title": "Papagayo Peninsula and Playa Penca: The Complete Photography Guide to... | WildP...",
+      "meta_description": "Papagayo Peninsula and Playa Penca photography guide covering Guanacaste's most ...",
+      "canonical_url": "https://www.wildphotography.com/article/papagayo-peninsula-playa-penca-guanacaste-costa-rica"
+    },
+    {
+      "id": 386,
+      "slug": "puerto-viejo-de-talamanca-caribbean-costa-rica-photography-guide",
+      "title": "Puerto Viejo de Talamanca, Costa Rica: The Complete Photography Guide to the Caribbean Coast",
+      "article_type": "location_guide",
+      "meta_title": "Puerto Viejo de Talamanca, Costa Rica: The Complete Photography Guide... | WildP...",
+      "meta_description": "Puerto Viejo de Talamanca photography guide covering the laid-back Caribbean coa...",
+      "canonical_url": "https://www.wildphotography.com/article/puerto-viejo-de-talamanca-caribbean-costa-rica-photography-guide"
+    },
+    {
+      "id": 387,
+      "slug": "tortuguero-caribbean-costa-rica-photography-guide",
+      "title": "Tortuguero, Costa Rica: The Complete Photography Guide to the Caribbean Coast's Canal Frontier",
+      "article_type": "location_guide",
+      "meta_title": "Tortuguero, Costa Rica: The Complete Photography Guide to the Caribbean... | Wil...",
+      "meta_description": "Tortuguero photography guide covering the remote Caribbean coast accessible only...",
+      "canonical_url": "https://www.wildphotography.com/article/tortuguero-caribbean-costa-rica-photography-guide"
+    },
+    {
+      "id": 388,
+      "slug": "rio-savegre-accent-costa-rica-photography-guide",
+      "title": "Rio Savegre, Costa Rica: The Complete Photography Guide to the Sacred River Valley",
+      "article_type": "location_guide",
+      "meta_title": "Rio Savegre, Costa Rica: The Complete Photography Guide to the Sacred... | WildP...",
+      "meta_description": "Rio Savegre photography guide covering the mountain river valley south of San Jo...",
+      "canonical_url": "https://www.wildphotography.com/article/rio-savegre-accent-costa-rica-photography-guide"
+    },
+    {
+      "id": 390,
+      "slug": "isla-tortuga",
+      "title": "Isla Tortuga, Costa Rica: The Complete Photography Guide to the Pearl of the Pacific",
+      "article_type": "location_guide",
+      "meta_title": "Isla Tortuga, Costa Rica: The Complete Photography Guide to the Pearl... | WildP...",
+      "meta_description": "Isla Tortuga photography guide covering Costa Rica's most beautiful island \u2014 whi...",
+      "canonical_url": "https://www.wildphotography.com/article/isla-tortuga"
+    },
+    {
+      "id": 391,
+      "slug": "santa-teresa-malpais",
+      "title": "Santa Teresa Malpais, Costa Rica: The Complete Photography Guide",
+      "article_type": "location_guide",
+      "meta_title": "Santa Teresa Malpais, Costa Rica: The Complete Photography Guide | WildPhotograp...",
+      "meta_description": "Expert landscape and travel photography guide for Santa Teresa Malpais, Costa Ri...",
+      "canonical_url": "https://www.wildphotography.com/article/santa-teresa-malpais"
+    },
+    {
+      "id": 392,
+      "slug": "playas-del-coco",
+      "title": "Playas Del Coco, Costa Rica: The Complete Photography Guide",
+      "article_type": "location_guide",
+      "meta_title": "Playas Del Coco, Costa Rica: The Complete Photography Guide | WildPhotography",
+      "meta_description": "Pl.. photography in Playas Del Coco, Costa Rica \u2014 find the best viewpoints, opti...",
+      "canonical_url": "https://www.wildphotography.com/article/playas-del-coco"
+    },
+    {
+      "id": 393,
+      "slug": "conchal-guanacaste",
+      "title": "Conchal Guanacaste, Costa Rica: The Complete Photography Guide",
+      "article_type": "location_guide",
+      "meta_title": "Conchal Guanacaste, Costa Rica: The Complete Photography Guide | WildPhotography",
+      "meta_description": "C photography in Conchal Guanacaste, Costa Rica \u2014 find the best viewpoints, opti...",
+      "canonical_url": "https://www.wildphotography.com/article/conchal-guanacaste"
+    },
+    {
+      "id": 394,
+      "slug": "punta-leona",
+      "title": "Punta Leona, Puntarenas: The Complete Photography Guide to the Central Pacific's Hidden Gem",
+      "article_type": "location_guide",
+      "meta_title": "Punta Leona, Puntarenas: The Complete Photography Guide to the Central... | Wild...",
+      "meta_description": "Punta Leona photography guide covering the private reserve on the Central Pacifi...",
+      "canonical_url": "https://www.wildphotography.com/article/punta-leona"
+    },
+    {
+      "id": 395,
+      "slug": "golfo-de-nicoya",
+      "title": "Golfo De Nicoya, Costa Rica: The Complete Photography Guide",
+      "article_type": "location_guide",
+      "meta_title": "Golfo De Nicoya, Costa Rica: The Complete Photography Guide | WildPhotography",
+      "meta_description": "Go.. photography in Golfo De Nicoya, Costa Rica \u2014 find the best viewpoints, opti...",
+      "canonical_url": "https://www.wildphotography.com/article/golfo-de-nicoya"
+    },
+    {
+      "id": 396,
+      "slug": "samara-playa-carillo",
+      "title": "Samara Playa Carillo, Costa Rica: The Complete Photography Guide",
+      "article_type": "location_guide",
+      "meta_title": "Samara Playa Carillo, Costa Rica: The Complete Photography Guide | WildPhotograp...",
+      "meta_description": "Expert landscape and travel photography guide for Samara Playa Carillo, Costa Ri...",
+      "canonical_url": "https://www.wildphotography.com/article/samara-playa-carillo"
+    },
+    {
+      "id": 397,
+      "slug": "playa-hermosa-guanacaste",
+      "title": "Playa Hermosa Guanacaste, Costa Rica: The Complete Photography Guide",
+      "article_type": "location_guide",
+      "meta_title": "Playa Hermosa Guanacaste, Costa Rica: The Complete Photography Guide | WildPhoto...",
+      "meta_description": "Expert landscape and travel photography guide for Playa Hermosa Guanacaste, Cost...",
+      "canonical_url": "https://www.wildphotography.com/article/playa-hermosa-guanacaste"
+    },
+    {
+      "id": 398,
+      "slug": "las-catalinas-guanacaste",
+      "title": "Las Catalinas Guanacaste, Costa Rica: The Complete Photography Guide",
+      "article_type": "location_guide",
+      "meta_title": "Las Catalinas Guanacaste, Costa Rica: The Complete Photography Guide | WildPhoto...",
+      "meta_description": "Expert landscape and travel photography guide for Las Catalinas Guanacaste, Cost...",
+      "canonical_url": "https://www.wildphotography.com/article/las-catalinas-guanacaste"
+    },
+    {
+      "id": 399,
+      "slug": "rincon-de-la-vieja",
+      "title": "Rincon De La Vieja, Costa Rica: The Complete Photography Guide",
+      "article_type": "location_guide",
+      "meta_title": "Rincon De La Vieja, Costa Rica: The Complete Photography Guide | WildPhotography",
+      "meta_description": "R photography in Rincon De La Vieja, Costa Rica \u2014 find the best viewpoints, opti...",
+      "canonical_url": "https://www.wildphotography.com/article/rincon-de-la-vieja"
+    },
+    {
+      "id": 400,
+      "slug": "papagayo-bahia-culebra",
+      "title": "Papagayo Bahia Culebra, Costa Rica: The Complete Photography Guide",
+      "article_type": "location_guide",
+      "meta_title": "Papagayo Bahia Culebra, Costa Rica: The Complete Photography Guide | WildPhotogr...",
+      "meta_description": "Expert landscape and travel photography guide for Papagayo Bahia Culebra, Costa ...",
+      "canonical_url": "https://www.wildphotography.com/article/papagayo-bahia-culebra"
+    },
+    {
+      "id": 401,
+      "slug": "peninsula-de-osa",
+      "title": "Peninsula De Osa, Costa Rica: The Complete Photography Guide",
+      "article_type": "location_guide",
+      "meta_title": "Peninsula De Osa, Costa Rica: The Complete Photography Guide | WildPhotography",
+      "meta_description": "P.. photography in Peninsula De Osa, Costa Rica \u2014 find the best viewpoints, opti...",
+      "canonical_url": "https://www.wildphotography.com/article/peninsula-de-osa"
+    },
+    {
+      "id": 402,
+      "slug": "arenal-volcano",
+      "title": "Arenal Volcano, Costa Rica: The Complete Photography Guide for 2026",
+      "article_type": "location_guide",
+      "meta_title": "Arenal Volcano, Costa Rica: The Complete Photography Guide for 2026 | WildPhotog...",
+      "meta_description": "Arenal Volcano photography guide covering the best viewpoints, trail photography...",
+      "canonical_url": "https://www.wildphotography.com/article/arenal-volcano"
+    },
+    {
+      "id": 403,
+      "slug": "flamingo-beach",
+      "title": "Flamingo Beach, Costa Rica: The Complete Photography and Travel Guide",
+      "article_type": "location_guide",
+      "meta_title": "Flamingo Beach, Costa Rica: The Complete Photography and Travel Guide | WildPhot...",
+      "meta_description": "Flamingo Beach photography and travel guide covering the best times to shoot, wi...",
+      "canonical_url": "https://www.wildphotography.com/article/flamingo-beach"
+    },
+    {
+      "id": 404,
+      "slug": "puerto-caldera-puntarenas-port",
+      "title": "Puerto Caldera Puntarenas Port, Costa Rica: The Complete Photography Guide",
+      "article_type": "location_guide",
+      "meta_title": "Puerto Caldera Puntarenas Port, Costa Rica: The Complete Photography Guide | Wil...",
+      "meta_description": "Expert landscape and travel photography guide for Puerto Caldera Puntarenas Port...",
+      "canonical_url": "https://www.wildphotography.com/article/puerto-caldera-puntarenas-port"
+    },
+    {
+      "id": 405,
+      "slug": "inspirational-quotes",
+      "title": "Inspirational Quotes, Costa Rica: The Complete Photography Guide",
+      "article_type": "location_guide",
+      "meta_title": "Inspirational Quotes, Costa Rica: The Complete Photography Guide | WildPhotograp...",
+      "meta_description": "Expert landscape and travel photography guide for Inspirational Quotes, Costa Ri...",
+      "canonical_url": "https://www.wildphotography.com/article/inspirational-quotes"
+    },
+    {
+      "id": 406,
+      "slug": "crocodiles",
+      "title": "Crocodiles, Costa Rica: The Complete Photography Guide",
+      "article_type": "location_guide",
+      "meta_title": "Crocodiles, Costa Rica: The Complete Photography Guide | WildPhotography",
+      "meta_description": "Crocodi.. photography in Crocodiles, Costa Rica \u2014 find the best viewpoints, opti...",
+      "canonical_url": "https://www.wildphotography.com/article/crocodiles"
+    },
+    {
+      "id": 407,
+      "slug": "favorites",
+      "title": "Favorites, Costa Rica: The Complete Photography Guide",
+      "article_type": "location_guide",
+      "meta_title": "Favorites, Costa Rica: The Complete Photography Guide | WildPhotography",
+      "meta_description": "Favorites photography in Favorites, Costa Rica \u2014 find the best viewpoints, optim...",
+      "canonical_url": "https://www.wildphotography.com/article/favorites"
+    },
+    {
+      "id": 408,
+      "slug": "costa-rica",
+      "title": "Costa Rica, Costa Rica: The Complete Photography Guide",
+      "article_type": "location_guide",
+      "meta_title": "Costa Rica, Costa Rica: The Complete Photography Guide | WildPhotography",
+      "meta_description": "Costa R.. photography in Costa Rica, Costa Rica \u2014 find the best viewpoints, opti...",
+      "canonical_url": "https://www.wildphotography.com/article/costa-rica"
+    },
+    {
+      "id": 409,
+      "slug": "escazu-costa-rica",
+      "title": "Escazu Costa Rica, Costa Rica: The Complete Photography Guide",
+      "article_type": "location_guide",
+      "meta_title": "Escazu Costa Rica, Costa Rica: The Complete Photography Guide | WildPhotography",
+      "meta_description": "Es photography in Escazu Costa Rica, Costa Rica \u2014 find the best viewpoints, opti...",
+      "canonical_url": "https://www.wildphotography.com/article/escazu-costa-rica"
+    },
+    {
+      "id": 410,
+      "slug": "marine-life-of-costa-rica",
+      "title": "Marine Life Of Costa Rica, Costa Rica: The Complete Photography Guide",
+      "article_type": "location_guide",
+      "meta_title": "Marine Life Of Costa Rica, Costa Rica: The Complete Photography Guide | WildPhot...",
+      "meta_description": "Expert marine photography guide for Marine Life Of Costa Rica, Costa Rica. Inclu...",
+      "canonical_url": "https://www.wildphotography.com/article/marine-life-of-costa-rica"
+    },
+    {
+      "id": 412,
+      "slug": "san-jose-costa-rica",
+      "title": "San Jose Costa Rica, Costa Rica: The Complete Photography Guide",
+      "article_type": "location_guide",
+      "meta_title": "San Jose Costa Rica, Costa Rica: The Complete Photography Guide | WildPhotograph...",
+      "meta_description": "Discover San Jose Costa Rica through your lens. Expert urban photography guide w...",
+      "canonical_url": "https://www.wildphotography.com/article/san-jose-costa-rica"
+    },
+    {
+      "id": 413,
+      "slug": "playa-real-roble-guanacaste-costa-rica",
+      "title": "Playa Real Oak, Guanacaste: The Complete Photography Guide to Costa Rica's Most Secluded Beach",
+      "article_type": "location_guide",
+      "meta_title": "Playa Real Oak, Guanacaste: The Complete Photography Guide to Costa... | WildPho...",
+      "meta_description": "Playa Real photography guide covering the secluded Guanacaste beach near the Pan...",
+      "canonical_url": "https://www.wildphotography.com/article/playa-real-roble-guanacaste-costa-rica"
+    },
+    {
+      "id": 415,
+      "slug": "butterflies",
+      "title": "Butterflies, Costa Rica: The Complete Photography Guide",
+      "article_type": "location_guide",
+      "meta_title": "Butterflies, Costa Rica: The Complete Photography Guide | WildPhotography",
+      "meta_description": "Butter.. photography in Butterflies, Costa Rica \u2014 find the best viewpoints, opti...",
+      "canonical_url": "https://www.wildphotography.com/article/butterflies"
+    },
+    {
+      "id": 416,
+      "slug": "volcan-poas",
+      "title": "Volcan Poas, Costa Rica: The Complete Photography Guide",
+      "article_type": "location_guide",
+      "meta_title": "Volcan Poas, Costa Rica: The Complete Photography Guide | WildPhotography",
+      "meta_description": "Volcan.. photography in Volcan Poas, Costa Rica \u2014 find the best viewpoints, opti...",
+      "canonical_url": "https://www.wildphotography.com/article/volcan-poas"
+    },
+    {
+      "id": 417,
+      "slug": "dominical-and-uvita",
+      "title": "Dominical And Uvita, Costa Rica: The Complete Photography Guide",
+      "article_type": "location_guide",
+      "meta_title": "Dominical And Uvita, Costa Rica: The Complete Photography Guide | WildPhotograph...",
+      "meta_description": "Expert landscape and travel photography guide for Dominical And Uvita, Costa Ric...",
+      "canonical_url": "https://www.wildphotography.com/article/dominical-and-uvita"
+    },
+    {
+      "id": 418,
+      "slug": "costa-rica-travel-tourism",
+      "title": "Costa Rica Travel Tourism, Costa Rica: The Complete Photography Guide",
+      "article_type": "location_guide",
+      "meta_title": "Costa Rica Travel Tourism, Costa Rica: The Complete Photography Guide | WildPhot...",
+      "meta_description": "Expert landscape and travel photography guide for Costa Rica Travel Tourism, Cos...",
+      "canonical_url": "https://www.wildphotography.com/article/costa-rica-travel-tourism"
+    },
+    {
+      "id": 419,
+      "slug": "europe-france",
+      "title": "France, Costa Rica: The Complete Photography Guide",
+      "article_type": "location_guide",
+      "meta_title": "France, Costa Rica: The Complete Photography Guide | WildPhotography",
+      "meta_description": "Expert landscape and travel photography guide for France, Costa Rica. Includes t...",
+      "canonical_url": "https://www.wildphotography.com/article/europe-france"
+    },
+    {
+      "id": 420,
+      "slug": "rivers",
+      "title": "Rivers, Costa Rica: The Complete Photography Guide",
+      "article_type": "location_guide",
+      "meta_title": "Rivers, Costa Rica: The Complete Photography Guide | WildPhotography",
+      "meta_description": "Expert landscape and travel photography guide for Rivers, Costa Rica. Includes t...",
+      "canonical_url": "https://www.wildphotography.com/article/rivers"
+    },
+    {
+      "id": 421,
+      "slug": "nauyaca-waterfalls",
+      "title": "Nauyaca Waterfalls, Costa Rica: The Complete Photography Guide",
+      "article_type": "location_guide",
+      "meta_title": "Nauyaca Waterfalls, Costa Rica: The Complete Photography Guide | WildPhotography",
+      "meta_description": "Discover Nauyaca Waterfalls through your lens. Expert waterfall photography guid...",
+      "canonical_url": "https://www.wildphotography.com/article/nauyaca-waterfalls"
+    },
+    {
+      "id": 422,
+      "slug": "industrial-costa-rica",
+      "title": "Industrial Costa Rica, Costa Rica: The Complete Photography Guide",
+      "article_type": "location_guide",
+      "meta_title": "Industrial Costa Rica, Costa Rica: The Complete Photography Guide | WildPhotogra...",
+      "meta_description": "Expert landscape and travel photography guide for Industrial Costa Rica, Costa R...",
+      "canonical_url": "https://www.wildphotography.com/article/industrial-costa-rica"
+    },
+    {
+      "id": 423,
+      "slug": "monkeys",
+      "title": "Monkeys, Costa Rica: The Complete Photography Guide",
+      "article_type": "location_guide",
+      "meta_title": "Monkeys, Costa Rica: The Complete Photography Guide | WildPhotography",
+      "meta_description": "Expert landscape and travel photography guide for Monkeys, Costa Rica. Includes ...",
+      "canonical_url": "https://www.wildphotography.com/article/monkeys"
+    },
+    {
+      "id": 424,
+      "slug": "costa-rica-buildings",
+      "title": "Costa Rica Buildings, Costa Rica: The Complete Photography Guide",
+      "article_type": "location_guide",
+      "meta_title": "Costa Rica Buildings, Costa Rica: The Complete Photography Guide | WildPhotograp...",
+      "meta_description": "Expert landscape and travel photography guide for Costa Rica Buildings, Costa Ri...",
+      "canonical_url": "https://www.wildphotography.com/article/costa-rica-buildings"
+    },
+    {
+      "id": 425,
+      "slug": "boats-in-costa-rica",
+      "title": "Boats In Costa Rica, Costa Rica: The Complete Photography Guide",
+      "article_type": "location_guide",
+      "meta_title": "Boats In Costa Rica, Costa Rica: The Complete Photography Guide | WildPhotograph...",
+      "meta_description": "Expert landscape and travel photography guide for Boats In Costa Rica, Costa Ric...",
+      "canonical_url": "https://www.wildphotography.com/article/boats-in-costa-rica"
+    },
+    {
+      "id": 426,
+      "slug": "asia-china-shanghai",
+      "title": "China-Shanghai, Costa Rica: The Complete Photography Guide",
+      "article_type": "location_guide",
+      "meta_title": "China-Shanghai, Costa Rica: The Complete Photography Guide | WildPhotography",
+      "meta_description": "Chi.. photography in China-Shanghai, Costa Rica \u2014 find the best viewpoints, opti...",
+      "canonical_url": "https://www.wildphotography.com/article/asia-china-shanghai"
+    },
+    {
+      "id": 427,
+      "slug": "tambor-photos",
+      "title": "Tambor Photos, Costa Rica: The Complete Photography Guide",
+      "article_type": "location_guide",
+      "meta_title": "Tambor Photos, Costa Rica: The Complete Photography Guide | WildPhotography",
+      "meta_description": "Tamb.. photography in Tambor Photos, Costa Rica \u2014 find the best viewpoints, opti...",
+      "canonical_url": "https://www.wildphotography.com/article/tambor-photos"
+    },
+    {
+      "id": 428,
+      "slug": "tarcoles",
+      "title": "Tarcoles , Costa Rica: The Complete Photography Guide",
+      "article_type": "location_guide",
+      "meta_title": "Tarcoles , Costa Rica: The Complete Photography Guide | WildPhotography",
+      "meta_description": "Expert landscape and travel photography guide for Tarcoles, Costa Rica. Includes...",
+      "canonical_url": "https://www.wildphotography.com/article/tarcoles"
+    },
+    {
+      "id": 429,
+      "slug": "the-environment",
+      "title": "The Environment , Costa Rica: The Complete Photography Guide",
+      "article_type": "location_guide",
+      "meta_title": "The Environment , Costa Rica: The Complete Photography Guide | WildPhotography",
+      "meta_description": "T.. photography in The Environment, Costa Rica \u2014 find the best viewpoints, optim...",
+      "canonical_url": "https://www.wildphotography.com/article/the-environment"
+    },
+    {
+      "id": 430,
+      "slug": "cartago",
+      "title": "Cartago, Costa Rica: The Complete Photography Guide",
+      "article_type": "location_guide",
+      "meta_title": "Cartago, Costa Rica: The Complete Photography Guide | WildPhotography",
+      "meta_description": "Expert landscape and travel photography guide for Cartago, Costa Rica. Includes ...",
+      "canonical_url": "https://www.wildphotography.com/article/cartago"
+    },
+    {
+      "id": 432,
+      "slug": "guanacaste-north-coast-costa-rica-photography-guide",
+      "title": "Guanacaste's North Coast: A Complete Photography Guide to Playas del Coco, Hermosa, and Beyond",
+      "article_type": "location_guide",
+      "meta_title": "Guanacaste's North Coast: A Complete Photography Guide to Playas del... | WildPh...",
+      "meta_description": "Guanacaste north coast photography guide covering Playas del Coco, Playa Hermosa...",
+      "canonical_url": "https://www.wildphotography.com/article/guanacaste-north-coast-costa-rica-photography-guide"
+    },
+    {
+      "id": 433,
+      "slug": "corcovado-osa-peninsula-costa-rica-photography-guide",
+      "title": "Corcovado and the Osa Peninsula: The Complete Photography Guide to Costa Rica's Wildest Coast",
+      "article_type": "location_guide",
+      "meta_title": "Corcovado and the Osa Peninsula: The Complete Photography Guide to... | WildPhot...",
+      "meta_description": "Corcovado National Park and Osa Peninsula photography guide covering the most bi...",
+      "canonical_url": "https://www.wildphotography.com/article/corcovado-osa-peninsula-costa-rica-photography-guide"
+    },
+    {
+      "id": 434,
+      "slug": "guanacaste-inland-circuit-costa-rica-photography-guide",
+      "title": "Guanacaste's Inland Circuit: A Photography Guide to Liberia, Rincon de la Vieja, and the Dry Forest",
+      "article_type": "location_guide",
+      "meta_title": "Guanacaste's Inland Circuit: A Photography Guide to Liberia, Rincon de... | Wild...",
+      "meta_description": "Guanacaste inland photography guide covering Liberia, Rincon de la Vieja Volcano...",
+      "canonical_url": "https://www.wildphotography.com/article/guanacaste-inland-circuit-costa-rica-photography-guide"
+    },
+    {
+      "id": 435,
+      "slug": "costa-rica-waterfall-photography-guide",
+      "title": "Costa Rica Waterfall Photography: A Complete Guide to Capturing the Country's Most spectacular Cascades",
+      "article_type": "location_guide",
+      "meta_title": "Costa Rica Waterfall Photography: A Complete Guide to Capturing the... | WildPho...",
+      "meta_description": "Costa Rica waterfall photography guide covering the best waterfalls to photograp...",
+      "canonical_url": "https://www.wildphotography.com/article/costa-rica-waterfall-photography-guide"
+    },
+    {
+      "id": 436,
+      "slug": "costa-rica-sunrise-sunset-photography-guide",
+      "title": "Costa Rica Sunrise and Sunset Photography: A Complete Guide to the Country's Best Golden Hour Light",
+      "article_type": "location_guide",
+      "meta_title": "Costa Rica Sunrise and Sunset Photography: A Complete Guide to the... | WildPhot...",
+      "meta_description": "Costa Rica golden hour photography guide covering the best sunrise and sunset lo...",
+      "canonical_url": "https://www.wildphotography.com/article/costa-rica-sunrise-sunset-photography-guide"
+    },
+    {
+      "id": 437,
+      "slug": "jaco-beach-playa-hermosa-costa-rica-photography-guide",
+      "title": "Jaco Beach and Playa Hermosa: The Complete Photography Guide to Costa Rica's Central Pacific",
+      "article_type": "location_guide",
+      "meta_title": "Jaco Beach and Playa Hermosa: The Complete Photography Guide to Costa... | WildP...",
+      "meta_description": "Jaco Beach and Playa Hermosa photography guide covering the Central Pacific coas...",
+      "canonical_url": "https://www.wildphotography.com/article/jaco-beach-playa-hermosa-costa-rica-photography-guide"
+    },
+    {
+      "id": 438,
+      "slug": "osa-peninsula-drake-bay-costa-rica-photography-guide",
+      "title": "Osa Peninsula and Drake Bay: The Complete Photography Guide to Costa Rica's Remote Wild Coast",
+      "article_type": "location_guide",
+      "meta_title": "Osa Peninsula and Drake Bay: The Complete Photography Guide to Costa... | WildPh...",
+      "meta_description": "Osa Peninsula and Drake Bay photography guide covering Costa Rica's most remote ...",
+      "canonical_url": "https://www.wildphotography.com/article/osa-peninsula-drake-bay-costa-rica-photography-guide"
+    },
+    {
+      "id": 439,
+      "slug": "guanacaste-beaches-coastal-region-photography-guide",
+      "title": "Guanacaste's Coastal Region: A Complete Photography Guide to Costa Rica's Most Famous Beaches",
+      "article_type": "location_guide",
+      "meta_title": "Guanacaste's Coastal Region: A Complete Photography Guide to Costa... | WildPhot...",
+      "meta_description": "Guanacaste coastal photography guide covering the province's famous beaches \u2014 Ta...",
+      "canonical_url": "https://www.wildphotography.com/article/guanacaste-beaches-coastal-region-photography-guide"
+    },
+    {
+      "id": 440,
+      "slug": "dominical-uvita-south-pacific-costa-rica-photography-guide",
+      "title": "Dominical, Uvita & the South Pacific Coast, Costa Rica: Photography Guide",
+      "article_type": "location_guide",
+      "meta_title": "Dominical, Uvita & the South Pacific Coast, Costa Rica: Photography Guide | Wild...",
+      "meta_description": "Expert landscape and travel photography guide for Uvita & the South Pacific Coas...",
+      "canonical_url": "https://www.wildphotography.com/article/dominical-uvita-south-pacific-costa-rica-photography-guide"
+    },
+    {
+      "id": 442,
+      "slug": "lifestyle",
+      "title": "Lifestyle, Costa Rica: The Complete Photography Guide",
+      "article_type": "location_guide",
+      "meta_title": "Lifestyle, Costa Rica: The Complete Photography Guide | WildPhotography",
+      "meta_description": "Lifestyle photography in Lifestyle, Costa Rica \u2014 find the best viewpoints, optim...",
+      "canonical_url": "https://www.wildphotography.com/article/lifestyle"
+    },
+    {
+      "id": 443,
+      "slug": "landmarks",
+      "title": "Landmarks, Costa Rica: The Complete Photography Guide",
+      "article_type": "location_guide",
+      "meta_title": "Landmarks, Costa Rica: The Complete Photography Guide | WildPhotography",
+      "meta_description": "Landmarks photography in Landmarks, Costa Rica \u2014 find the best viewpoints, optim...",
+      "canonical_url": "https://www.wildphotography.com/article/landmarks"
+    },
+    {
+      "id": 444,
+      "slug": "night-photography",
+      "title": "Night Photography, Costa Rica: The Complete Photography Guide",
+      "article_type": "location_guide",
+      "meta_title": "Night Photography, Costa Rica: The Complete Photography Guide | WildPhotography",
+      "meta_description": "Discover Night Photography through your lens. Expert night photography guide wit...",
+      "canonical_url": "https://www.wildphotography.com/article/night-photography"
+    },
+    {
+      "id": 446,
+      "slug": "surfing-costa-rica",
+      "title": "Surfing Costa Rica, Costa Rica: The Complete Photography Guide",
+      "article_type": "location_guide",
+      "meta_title": "Surfing Costa Rica, Costa Rica: The Complete Photography Guide | WildPhotography",
+      "meta_description": "Discover Surfing Costa Rica through your lens. Expert surf photography guide wit...",
+      "canonical_url": "https://www.wildphotography.com/article/surfing-costa-rica"
+    },
+    {
+      "id": 447,
+      "slug": "power-of-nature",
+      "title": "Power Of Nature, Costa Rica: The Complete Photography Guide",
+      "article_type": "location_guide",
+      "meta_title": "Power Of Nature, Costa Rica: The Complete Photography Guide | WildPhotography",
+      "meta_description": "Po.. photography in Power Of Nature, Costa Rica \u2014 find the best viewpoints, opti...",
+      "canonical_url": "https://www.wildphotography.com/article/power-of-nature"
+    },
+    {
+      "id": 448,
+      "slug": "insects-and-butterflies",
+      "title": "Insects And Butterflies, Costa Rica: The Complete Photography Guide",
+      "article_type": "location_guide",
+      "meta_title": "Insects And Butterflies, Costa Rica: The Complete Photography Guide | WildPhotog...",
+      "meta_description": "Expert macro photography guide for Insects And Butterflies, Costa Rica. Includes...",
+      "canonical_url": "https://www.wildphotography.com/article/insects-and-butterflies"
+    },
+    {
+      "id": 449,
+      "slug": "bajos-del-toro-costa-rica",
+      "title": "Bajos Del Toro Costa Rica, Costa Rica: The Complete Photography Guide",
+      "article_type": "location_guide",
+      "meta_title": "Bajos Del Toro Costa Rica, Costa Rica: The Complete Photography Guide | WildPhot...",
+      "meta_description": "Expert landscape and travel photography guide for Bajos Del Toro Costa Rica, Cos...",
+      "canonical_url": "https://www.wildphotography.com/article/bajos-del-toro-costa-rica"
+    },
+    {
+      "id": 450,
+      "slug": "lakes",
+      "title": "Lakes, Costa Rica: The Complete Photography Guide",
+      "article_type": "location_guide",
+      "meta_title": "Lakes, Costa Rica: The Complete Photography Guide | WildPhotography",
+      "meta_description": "Expert landscape and travel photography guide for Lakes, Costa Rica. Includes th...",
+      "canonical_url": "https://www.wildphotography.com/article/lakes"
+    },
+    {
+      "id": 451,
+      "slug": "land-animals",
+      "title": "Land Animals, Costa Rica: The Complete Photography Guide",
+      "article_type": "location_guide",
+      "meta_title": "Land Animals, Costa Rica: The Complete Photography Guide | WildPhotography",
+      "meta_description": "Land .. photography in Land Animals, Costa Rica \u2014 find the best viewpoints, opti...",
+      "canonical_url": "https://www.wildphotography.com/article/land-animals"
+    },
+    {
+      "id": 453,
+      "slug": "las-catalinas-guanacaste-costa-rica-photography-guide",
+      "title": "Las Catalinas, Guanacaste: A Photography and Travel Guide to Costa Rica's Newest Beach Town",
+      "article_type": "location_guide",
+      "meta_title": "Las Catalinas, Guanacaste: A Photography and Travel Guide to Costa... | WildPhot...",
+      "meta_description": "Las Catalinas photography guide covering the beach town in Guanacaste, trail run...",
+      "canonical_url": "https://www.wildphotography.com/article/las-catalinas-guanacaste-costa-rica-photography-guide"
+    },
+    {
+      "id": 454,
+      "slug": "jaco-beach-playa-hermosa-central-pacific-photography-guide",
+      "title": "Jaco Beach and Playa Hermosa: The Complete Photography Guide to Costa Rica's Central Pacific Coast",
+      "article_type": "location_guide",
+      "meta_title": "Jaco Beach and Playa Hermosa: The Complete Photography Guide to Costa... | WildP...",
+      "meta_description": "Jaco Beach and Playa Hermosa photography guide covering the Central Pacific coas...",
+      "canonical_url": "https://www.wildphotography.com/article/jaco-beach-playa-hermosa-central-pacific-photography-guide"
+    },
+    {
+      "id": 455,
+      "slug": "guanacaste-inland-north-circuit-photography-guide",
+      "title": "Guanacaste's Inland Circuit: A Complete Photography Guide to Volcanoes, Hot Springs, and Dry Forest",
+      "article_type": "location_guide",
+      "meta_title": "Guanacaste's Inland Circuit: A Complete Photography Guide to Volcanoes,... | Wil...",
+      "meta_description": "Guanacaste inland circuit photography guide covering Rincon de la Vieja Volcano,...",
+      "canonical_url": "https://www.wildphotography.com/article/guanacaste-inland-north-circuit-photography-guide"
+    },
+    {
+      "id": 456,
+      "slug": "guanacaste-coast-photography-guide",
+      "title": "Guanacaste's Coast: The Complete Photography Guide to Costa Rica's Northwest Beach Region",
+      "article_type": "location_guide",
+      "meta_title": "Guanacaste's Coast: The Complete Photography Guide to Costa Rica's... | WildPhot...",
+      "meta_description": "Guanacaste coast photography guide covering the province's Pacific shoreline \u2014 b...",
+      "canonical_url": "https://www.wildphotography.com/article/guanacaste-coast-photography-guide"
+    },
+    {
+      "id": 457,
+      "slug": "playa-grande-guanacaste-costa-rica-photography-guide",
+      "title": "Playa Grande, Guanacaste: The Complete Photography Guide to Costa Rica's Turtle Beach",
+      "article_type": "location_guide",
+      "meta_title": "Playa Grande, Guanacaste: The Complete Photography Guide to Costa... | WildPhoto...",
+      "meta_description": "Playa Grande photography guide covering the Guanacaste beach famous for sea turt...",
+      "canonical_url": "https://www.wildphotography.com/article/playa-grande-guanacaste-costa-rica-photography-guide"
+    },
+    {
+      "id": 458,
+      "slug": "guanacaste-rivers-photography-guide",
+      "title": "Guanacaste's Rivers: A Complete Photography Guide to Cenas, Colorado, and the Tempisquito Floodplain",
+      "article_type": "location_guide",
+      "meta_title": "Guanacaste's Rivers: A Complete Photography Guide to Cenas, Colorado,... | WildP...",
+      "meta_description": "Guanacaste rivers photography guide covering the Cenas River, Colorado River flo...",
+      "canonical_url": "https://www.wildphotography.com/article/guanacaste-rivers-photography-guide"
+    },
+    {
+      "id": 459,
+      "slug": "la-sabana-estadio-nacional-san-jose-costa-rica-photography-guide",
+      "title": "La Sabana Park and Estadio Nacional, San Jose: A Photography Guide to Costa Rica's Urban Heart",
+      "article_type": "location_guide",
+      "meta_title": "La Sabana Park and Estadio Nacional, San Jose: A Photography Guide to... | WildP...",
+      "meta_description": "La Sabana Park and Estadio Nacional photography guide covering urban architectur...",
+      "canonical_url": "https://www.wildphotography.com/article/la-sabana-estadio-nacional-san-jose-costa-rica-photography-guide"
+    },
+    {
+      "id": 460,
+      "slug": "isla-tortuga-puntarenas-costa-rica-photography-guide",
+      "title": "Isla Tortuga, Puntarenas: The Complete Photography Guide to Costa Rica's Most Beautiful Island",
+      "article_type": "location_guide",
+      "meta_title": "Isla Tortuga, Puntarenas: The Complete Photography Guide to Costa... | WildPhoto...",
+      "meta_description": "Isla Tortuga photography guide covering Costa Rica's most popular island day tri...",
+      "canonical_url": "https://www.wildphotography.com/article/isla-tortuga-puntarenas-costa-rica-photography-guide"
+    },
+    {
+      "id": 461,
+      "slug": "santa-teresa-malpais-nicoya-peninsula-photography-guide",
+      "title": "Santa Teresa and Mal Pais, Nicoya Peninsula: The Complete Photography and Travel Guide",
+      "article_type": "location_guide",
+      "meta_title": "Santa Teresa and Mal Pais, Nicoya Peninsula: The Complete Photography... | WildP...",
+      "meta_description": "Santa Teresa and Mal Pais photography guide covering the surf lifestyle, beach p...",
+      "canonical_url": "https://www.wildphotography.com/article/santa-teresa-malpais-nicoya-peninsula-photography-guide"
+    },
+    {
+      "id": 462,
+      "slug": "water-sports-and-surfing",
+      "title": "Water Sports and Surfing, Costa Rica: The Complete Photography Guide",
+      "article_type": "location_guide",
+      "meta_title": "Water Sports and Surfing, Costa Rica: The Complete Photography Guide | WildPhoto...",
+      "meta_description": "Expert surf photography guide for Water Sports and Surfing, Costa Rica. Includes...",
+      "canonical_url": "https://www.wildphotography.com/article/water-sports-and-surfing"
+    },
+    {
+      "id": 463,
+      "slug": "turtles",
+      "title": "Turtles, Costa Rica: The Complete Photography Guide",
+      "article_type": "location_guide",
+      "meta_title": "Turtles, Costa Rica: The Complete Photography Guide | WildPhotography",
+      "meta_description": "Expert landscape and travel photography guide for Turtles, Costa Rica. Includes ...",
+      "canonical_url": "https://www.wildphotography.com/article/turtles"
+    },
+    {
+      "id": 464,
+      "slug": "the-ocean",
+      "title": "The Ocean, Costa Rica: The Complete Photography Guide",
+      "article_type": "location_guide",
+      "meta_title": "The Ocean, Costa Rica: The Complete Photography Guide | WildPhotography",
+      "meta_description": "Discover The Ocean through your lens. Expert marine photography guide with top s...",
+      "canonical_url": "https://www.wildphotography.com/article/the-ocean"
+    },
+    {
+      "id": 465,
+      "slug": "santa-ana-costa-rica",
+      "title": "Santa Ana Costa Rica, Costa Rica: The Complete Photography Guide",
+      "article_type": "location_guide",
+      "meta_title": "Santa Ana Costa Rica, Costa Rica: The Complete Photography Guide | WildPhotograp...",
+      "meta_description": "Santa Ana Costa Rica, Costa Rica: The Complete Photography Guide Santa Ana Costa...",
+      "canonical_url": "https://www.wildphotography.com/article/santa-ana-costa-rica"
+    },
+    {
+      "id": 466,
+      "slug": "costa-rica-hummingbird-photography-guide",
+      "title": "Costa Rica Hummingbird Photography Guide: How to Capture the World's Most Colorful Birds",
+      "article_type": "photography_guide",
+      "meta_title": "Costa Rica Hummingbird Photography Guide: How to Capture the World's... | WildPh...",
+      "meta_description": "Costa Rica hummingbird photography guide covering the best locations, camera set...",
+      "canonical_url": "https://www.wildphotography.com/article/costa-rica-hummingbird-photography-guide"
+    },
+    {
+      "id": 467,
+      "slug": "osa-peninsula-costa-rica-wildlife-photography-guide",
+      "title": "Osa Peninsula, Costa Rica: The Complete Wildlife Photography Guide",
+      "article_type": "location_guide",
+      "meta_title": "Osa Peninsula, Costa Rica: The Complete Wildlife Photography Guide | WildPhotogr...",
+      "meta_description": "The Osa Peninsula is Costa Rica's most biodiverse region, home to Corcovado Nati...",
+      "canonical_url": "https://www.wildphotography.com/article/osa-peninsula-costa-rica-wildlife-photography-guide"
+    },
+    {
+      "id": 468,
+      "slug": "keel-billed-toucan-costa-rica-photography-guide",
+      "title": "Keel-billed Toucan in Costa Rica: The Complete Photography and Wildlife Guide",
+      "article_type": "species_guide",
+      "meta_title": "Keel-billed Toucan in Costa Rica: The Complete Photography and Wildlife... | Wil...",
+      "meta_description": "Where to find and photograph the keel-billed toucan in Costa Rica. Expert guide ...",
+      "canonical_url": "https://www.wildphotography.com/article/keel-billed-toucan-costa-rica-photography-guide"
+    }
+  ],
+  "errors": []
+}

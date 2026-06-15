@@ -340,7 +340,9 @@ export default async function RegionDetailPage({ params }: { params: Promise<{ s
 
       {/* Photo Grid */}
       {photos.length > 0 ? (
-        <VirtualizedGallery photos={photos} columns={4} />
+        <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fill,minmax(180px,1fr))',gap:'12px'}}>
+          {photos.map((p)=>(<Link key={p.id} href={`/photo/${p.slug}`} style={{display:'block',textDecoration:'none'}}><div style={{aspectRatio:'1/1',background:'var(--bg-inset)',borderRadius:'var(--r-md)',overflow:'hidden',border:'1px solid var(--rule)'}}>{p.thumbUrl?<img src={p.thumbUrl} alt={p.title} loading="lazy" style={{width:'100%',height:'100%',objectFit:'cover',display:'block'}}/>:<div style={{display:'flex',alignItems:'center',justifyContent:'center',height:'100%',color:'var(--ink-dim)',fontSize:'24px'}}>📷</div>}</div><p style={{fontFamily:'var(--font-display)',fontSize:'12px',fontWeight:500,color:'var(--ink)',margin:'6px 0 0 0',overflow:'hidden',textOverflow:'ellipsis',whiteSpace:'nowrap'}}>{p.title}</p></Link>))}
+        </div>
       ) : (
         <div className="text-center py-16 text-gray-500">
           <p>No photos from this region yet.</p>

@@ -1,0 +1,33 @@
+{
+  "run_at": "2026-04-22T03:48:15.329567+00:00",
+  "total_issues": 11218,
+  "issues": {
+    "orphaned_gallery_photos_missing_photo": {
+      "count": 1,
+      "records": [
+        {
+          "gp_id": 12806,
+          "photo_id": 14774,
+          "gallery_id": 101
+        }
+      ]
+    },
+    "orphaned_gallery_photos_missing_gallery": {
+      "count": 0,
+      "records": []
+    },
+    "galleries_with_invalid_cover_photo": {
+      "count": 0,
+      "records": []
+    },
+    "photos_with_invalid_gallery_slug": {
+      "count": 0,
+      "records": []
+    },
+    "render_ready_photos_in_no_gallery": {
+      "count": 11217
+    }
+  },
+  "status": "success",
+  "action_required": true
+}

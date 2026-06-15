@@ -1,0 +1,12 @@
+name = "wildphoto-imageproxy"
+main = "src/index.ts"
+compatibility_date = "2024-01-01"
+workers_dev = true
+
+[[r2_buckets]]
+binding = "PHOTOS"
+bucket_name = "wildphoto-storage"
+
+[[routes]]
+pattern = "proxy.wildphotography.com"
+zone_name = "wildphotography.com"

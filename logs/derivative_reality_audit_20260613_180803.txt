@@ -1,0 +1,67 @@
+WILDPHOTOGRAPHY DERIVATIVE REALITY AUDIT
+Run: 2026-06-14T00:08:03.370259+00:00
+Total RPR photos: 69,201
+Total DB derivatives_complete: 69,530
+Sample size: 1000
+
+--- REALITY CHECK ---
+Total keys checked (R2 HeadObject): 4747
+Keys present: 3330
+Keys missing: 1417
+
+--- FLAG ACCURACY ---
+Photos OK (reality matches DB): 134
+Flag mismatch (DB=complete but objects missing): 866
+Flag missing (objects exist but DB=False): 0
+
+--- DISCREPANCIES ---
+  [47934] slug=china-shanghai-2019-04-02-21-10-00-1 status=flag_mismatch db_flag=True present=1 missing=4
+  [73362] slug=2020-10-10-08-33-26 status=flag_mismatch db_flag=True present=4 missing=1
+  [21460] slug=dji-0358-21460 status=flag_mismatch db_flag=True present=4 missing=1
+  [13502] slug=img-2084-surfing-costa-rica-10120 status=flag_mismatch db_flag=True present=4 missing=1
+  [19970] slug=costa-rica-gallery-best-of-costa-rica-2019-11-09-07-55-39 status=flag_mismatch db_flag=True present=4 missing=1
+  [66228] slug=p9122657 status=flag_mismatch db_flag=True present=1 missing=4
+  [72430] slug=each-new-day status=flag_mismatch db_flag=True present=4 missing=1
+  [51521] slug=2021-03-25-11-10-47-4929 status=flag_mismatch db_flag=True present=4 missing=1
+  [77391] slug=20241129-111652 status=flag_mismatch db_flag=True present=0 missing=5
+  [78713] slug=2024-01-29-09.05.07 status=flag_mismatch db_flag=True present=0 missing=5
+  [77875] slug=dji-0664 status=flag_mismatch db_flag=True present=0 missing=5
+  [10326] slug=dji-0512-nauyaca-waterfalls-6944 status=flag_mismatch db_flag=True present=4 missing=1
+  [7834] slug=dji-0786-golfo-de-nicoya-4452 status=flag_mismatch db_flag=True present=4 missing=1
+  [35231] slug=montezuma-costa-rica-dji-0974-4ba43675 status=flag_mismatch db_flag=True present=4 missing=1
+  [35191] slug=peninsula-papagayo-dji-0238-c7948d5d status=flag_mismatch db_flag=True present=4 missing=1
+  [22547] slug=2022-09-11-10-54-57 status=flag_mismatch db_flag=True present=4 missing=1
+  [55585] slug=cl0a4499-jpg status=flag_mismatch db_flag=True present=0 missing=1
+  [78907] slug=img-6097 status=flag_mismatch db_flag=True present=0 missing=5
+  [40904] slug=birds-macaws-lapas-img-9776 status=flag_mismatch db_flag=True present=4 missing=1
+  [23549] slug=south-america-peru-ddf34d80 status=flag_mismatch db_flag=True present=4 missing=1
+  [36259] slug=20250415_162822jpg status=flag_mismatch db_flag=True present=4 missing=1
+  [13592] slug=dji-0890-tamarindo-guanacaste-costa-rica-10210 status=flag_mismatch db_flag=True present=4 missing=1
+  [13076] slug=2022-02-26-18-14-20-sunrise-sunset-9694 status=flag_mismatch db_flag=True present=4 missing=1
+  [16513] slug=tambor-nicoya-peninsula-costa-rica-58d5ceac status=flag_mismatch db_flag=True present=4 missing=1
+  [41887] slug=isla-tortuga-dji_0917 status=flag_mismatch db_flag=True present=3 missing=2
+  [77208] slug=cl0a5708 status=flag_mismatch db_flag=True present=0 missing=5
+  [63069] slug=dji_0640-001-5c9be622 status=flag_mismatch db_flag=True present=4 missing=1
+  [70549] slug=img-3048-6c905dbe status=flag_mismatch db_flag=True present=0 missing=5
+  [63964] slug=dji-0215-8b9bd7e5 status=flag_mismatch db_flag=True present=4 missing=1
+  [75364] slug=peninsula-papagayo-47426c03 status=flag_mismatch db_flag=True present=4 missing=1
+  [30230] slug=dji0586-4badcecb status=flag_mismatch db_flag=True present=4 missing=1
+  [14970] slug=dji-0818-peninsula-de-nicoya-1003 status=flag_mismatch db_flag=True present=4 missing=1
+  [9170] slug=2024-02-15-10-41-26-landmarks-5788 status=flag_mismatch db_flag=True present=4 missing=1
+  [39801] slug=birds-cl0a7363-jpg status=flag_mismatch db_flag=True present=0 missing=1
+  [30669] slug=pano00048-3d89ef51 status=flag_mismatch db_flag=True present=4 missing=1
+  [65802] slug=dji-0093-best-of-costa-rica status=flag_mismatch db_flag=True present=0 missing=1
+  [64136] slug=dji-0063-2d1d4708 status=flag_mismatch db_flag=True present=4 missing=1
+  [50569] slug=2023-10-15-06-16-33-2d2c status=flag_mismatch db_flag=True present=4 missing=1
+  [35012] slug=peninsula-papagayo-dji-0890-beef05de status=flag_mismatch db_flag=True present=4 missing=1
+  [24825] slug=dji-0824-d00d1857 status=flag_mismatch db_flag=True present=4 missing=1
+  [74137] slug=isla-tortuga-c232e07e status=flag_mismatch db_flag=True present=4 missing=1
+  [43299] slug=costa-rica--2017-02-07-140230-copy status=flag_mismatch db_flag=True present=4 missing=1
+  [72992] slug=img-8851 status=flag_mismatch db_flag=True present=4 missing=1
+  [76019] slug=dji-0851-028800 status=flag_mismatch db_flag=True present=4 missing=1
+  [54921] slug=south-america-peru-5bfdd4af status=flag_mismatch db_flag=True present=4 missing=1
+  [74755] slug=punta-leona-e942575b status=flag_mismatch db_flag=True present=4 missing=1
+  [72409] slug=img-6053 status=flag_mismatch db_flag=True present=4 missing=1
+  [5006] slug=img-9867-10164 status=flag_mismatch db_flag=True present=4 missing=1
+  [72453] slug=dji-0467 status=flag_mismatch db_flag=True present=4 missing=1
+  [69220] slug=dji-0174-c5637867 status=flag_mismatch db_flag=True present=0 missing=5

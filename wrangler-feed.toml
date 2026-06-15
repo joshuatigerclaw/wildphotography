@@ -1,0 +1,10 @@
+main = "feed-worker.js"
+name = "wildphotography-feed"
+compatibility_date = "2025-01-01"
+compatibility_flags = ["nodejs_compat"]
+
+[vars]
+SITE_URL = "https://wildphotography.com"
+
+[dependencies]
+pg = "8.11.3"

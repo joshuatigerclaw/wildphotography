@@ -1,0 +1,647 @@
+{
+  "run_at": "2026-04-19T13:05:10.738270+00:00",
+  "total_photos": 31839,
+  "distinct_affected_photos": 685,
+  "all_clear": false,
+  "issues": {
+    "missing_original_r2_key": {
+      "description": "Missing original R2 storage key \u2014 cannot rebuild derivatives",
+      "count": 0,
+      "sample": []
+    },
+    "pending_derivatives_with_r2": {
+      "description": "Has R2 original but derivatives_complete=false \u2014 needs rebuild dispatch",
+      "count": 11982,
+      "sample": [
+        {
+          "id": 40,
+          "slug": "img-9768-jpg-GRp89W",
+          "status": "published",
+          "original_r2_key": "originals/36a7a575ad7d48ad858070d1bb90fff78720f1439a2c36dda506e1c7cbe5f97d.jpg"
+        },
+        {
+          "id": 42,
+          "slug": "paddleboarding-adventure-on-a-tropical-coast-9kLkq4",
+          "status": "legacy_static",
+          "original_r2_key": "originals/10042/IMG_4954.jpg"
+        },
+        {
+          "id": 124,
+          "slug": "hyperlapse-0001-jpg-spBCQf",
+          "status": "published",
+          "original_r2_key": "originals/9f8a2091c2d8da551009de85e32072fdeaba9982ca86bbe6ec5b0ec48cd7c62b.jpg"
+        },
+        {
+          "id": 125,
+          "slug": "hyperlapse-0188-jpg-jqvWWw",
+          "status": "published",
+          "original_r2_key": "originals/317d82be54b6a501a2ca4347b8f0e470f120d46c3ee522cbd70d04a4e13ec86f.jpg"
+        },
+        {
+          "id": 129,
+          "slug": "volcan-poas--M9fzwf",
+          "status": "legacy_static",
+          "original_r2_key": "originals/10129/IMG_3487.JPG"
+        },
+        {
+          "id": 135,
+          "slug": "volcan-poas--RTbDcG",
+          "status": "legacy_static",
+          "original_r2_key": "originals/10135/IMG_5284.JPG"
+        },
+        {
+          "id": 136,
+          "slug": "volcan-poas--dfxhV9",
+          "status": "legacy_static",
+          "original_r2_key": "originals/10136/IMG_5305.JPG"
+        },
+        {
+          "id": 138,
+          "slug": "hyperlapse-0200-jpeg-dQ3DB9",
+          "status": "published",
+          "original_r2_key": "originals/9d0a3b88775a70fa7119c0f795174f035270fbc3dd07b06454323f8955c1d061.jpg"
+        },
+        {
+          "id": 139,
+          "slug": "default-QDVfNk",
+          "status": "legacy_static",
+          "original_r2_key": "originals/10139/IMG_5311.JPG"
+        },
+        {
+          "id": 142,
+          "slug": "hyperlapse-0005-jpg-GsMJkQ",
+          "status": "published",
+          "original_r2_key": "originals/f09ea15e946090fac0da381085214beeea514ec6d4f556954e01e2ddf4452a7d.jpg"
+        },
+        {
+          "id": 148,
+          "slug": "volcan-poas--8PgbpD",
+          "status": "legacy_static",
+          "original_r2_key": "originals/10148/IMG_5426.JPG"
+        },
+        {
+          "id": 149,
+          "slug": "hyperlapse-0011-jpeg-ccSC6n",
+          "status": "published",
+          "original_r2_key": "originals/879fb26086d5c9cf5245f7fedac64b2bee608f68f039a8786acd52f1d57de910.jpg"
+        },
+        {
+          "id": 150,
+          "slug": "hyperlapse-0065-jpg-8X6p7V",
+          "status": "published",
+          "original_r2_key": "originals/0ab4b762c98b65678a639ffda171f8ba3b0cd209b6a4171b172f9d0c98e8fa1d.jpg"
+        },
+        {
+          "id": 151,
+          "slug": "volcan-poas--xsmHG5",
+          "status": "legacy_static",
+          "original_r2_key": "originals/10151/IMG_6632.JPG"
+        },
+        {
+          "id": 152,
+          "slug": "dji-0484-mp4-TN6Ctz",
+          "status": "published",
+          "original_r2_key": "originals/3e19c30dafcec872a7e1554429cdbb236bae6d72d2c7cdf76cc0d42524b7685d.jpg"
+        },
+        {
+          "id": 153,
+          "slug": "dji-0489-mp4-VxqVh5",
+          "status": "published",
+          "original_r2_key": "originals/8c27123f362bc9d1704741677edec751a5b34954984f1c1d57123d52c974afb6.jpg"
+        },
+        {
+          "id": 154,
+          "slug": "dji-0493-mp4-bWR9Bv",
+          "status": "published",
+          "original_r2_key": "originals/ed2d9a14d3dbb341e3786e03f8af4ab3c6eb5d979c24661b78db8d228439a8ec.jpg"
+        },
+        {
+          "id": 155,
+          "slug": "dji-0505-mp4-4wP3fs",
+          "status": "published",
+          "original_r2_key": "originals/27e760334733e89a8db047843260353b35cd14868c55b043dd93e704316607a3.jpg"
+        },
+        {
+          "id": 156,
+          "slug": "hyperlapse-0058-jpeg-sjSD9L",
+          "status": "published",
+          "original_r2_key": "originals/3abf911b41938f10492e482c61b9508c2fab64c4bf4d801c4fe362293e256e40.jpg"
+        },
+        {
+          "id": 157,
+          "slug": "img-4922-jpg-DJmLdh",
+          "status": "published",
+          "original_r2_key": "originals/ae4cb5147b8579b0f0d6a1374ad0225be44e00935b7877c8a8121e33f30eaa44.jpg"
+        },
+        {
+          "id": 158,
+          "slug": "turtles--SJ3f4j",
+          "status": "legacy_static",
+          "original_r2_key": "originals/10158/IMG_9644.JPG"
+        },
+        {
+          "id": 159,
+          "slug": "turtles--HgHXzS",
+          "status": "legacy_static",
+          "original_r2_key": "originals/10159/IMG_9672.JPG"
+        },
+        {
+          "id": 160,
+          "slug": "turtles--nn5TXm",
+          "status": "legacy_static",
+          "original_r2_key": "originals/10160/IMG_9717.JPG"
+        },
+        {
+          "id": 164,
+          "slug": "turtles--HFkCr5",
+          "status": "legacy_static",
+          "original_r2_key": "originals/10164/IMG_9867.JPG"
+        },
+        {
+          "id": 165,
+          "slug": "img-6253-jpg-2R9QPG",
+          "status": "published",
+          "original_r2_key": "originals/3ffc33e0ff7c1f3db9436c623175ef9a34719d92374ecbbeb356b8bc6162e66d.jpg"
+        },
+        {
+          "id": 166,
+          "slug": "2021-10-09-08-55-06-jpg-sTTBLC",
+          "status": "published",
+          "original_r2_key": "originals/bbe5b312eb64a587d1e350b70802f73b40403c84901dae381ddd6f697dd27569.jpg"
+        },
+        {
+          "id": 167,
+          "slug": "2021-10-09-08-55-17-jpg-vWTGZC",
+          "status": "published",
+          "original_r2_key": "originals/62793486487f9255ee146f8236fb2ba401fb8f5b1f1ab2c72cbb5c66811dd59e.jpg"
+        },
+        {
+          "id": 169,
+          "slug": "2021-10-09-08-56-24-jpg-xX7mzR",
+          "status": "published",
+          "original_r2_key": "originals/b87291cad05c1dba0015c3c9a2d2ed6c15fc4e2089bf3aeb18868e64e3f54efc.jpg"
+        },
+        {
+          "id": 171,
+          "slug": "baby-oliver-ridley-turtle-making-its-way-back-to-the-ocean-i-nqWP5p",
+          "status": "legacy_static",
+          "original_r2_key": "originals/10171/2022-04-21_15.20.11.jpg"
+        },
+        {
+          "id": 172,
+          "slug": "baby-oliver-ridley-turtle-making-its-way-back-to-the-ocean-i-pRjrSZ",
+          "status": "legacy_static",
+          "original_r2_key": "originals/10172/DJI_0001.JPG"
+        },
+        {
+          "id": 175,
+          "slug": "cl0a9619-jpg-xFndvR",
+          "status": "published",
+          "original_r2_key": "originals/b5d63f7e22eeac1f60bc9b71cc42aad009f4b9a9dd1b5e82e66ef56e19cf01ca.jpg"
+        },
+        {
+          "id": 176,
+          "slug": "cl0a4353-jpg-CH9Hgv",
+          "status": "published",
+          "original_r2_key": "originals/4d95823c6b8c3ad35e5df74b74a78ab87e126ce8e5dbbe43828ae6fd22c7ca26.jpg"
+        },
+        {
+          "id": 177,
+          "slug": "cl0a4486-jpg-nKZ4tB",
+          "status": "published",
+          "original_r2_key": "originals/0083fc99c0f117de7bf077b25943b9d337e036cbd284309b61a859e278d91651.jpg"
+        },
+        {
+          "id": 178,
+          "slug": "striped-turtles-basking-in-sunlight-on-log-nF2cSt",
+          "status": "published",
+          "original_r2_key": "originals/1780/IMG_3786.jpg"
+        },
+        {
+          "id": 179,
+          "slug": "olive-ridley-turtle-on-sandy-beach-with-barnacles-f7ZTcz",
+          "status": "legacy_static",
+          "original_r2_key": "originals/10179/DJI_0011.JPG"
+        },
+        {
+          "id": 185,
+          "slug": "img-3015-jpg-28Rg7g",
+          "status": "published",
+          "original_r2_key": "originals/12077efd115d1b0312461db500d98f8b5a43c56f071db729722e5ab81fe4cb45.jpg"
+        },
+        {
+          "id": 187,
+          "slug": "img-0967-jpg-hLXn54",
+          "status": "published",
+          "original_r2_key": "originals/21d9111d48b931115b883a158b4db35535a7b43ac60bcf8c6b5e6c16fe24bfc6.jpg"
+        },
+        {
+          "id": 192,
+          "slug": "rivers--KNMbS3",
+          "status": "legacy_static",
+          "original_r2_key": "originals/10192/DJI_0035.JPG"
+        },
+        {
+          "id": 193,
+          "slug": "rivers--8B3fk7",
+          "status": "legacy_static",
+          "original_r2_key": "originals/10193/DJI_0036.JPG"
+        },
+        {
+          "id": 196,
+          "slug": "img-6194-jpg-QRQGZ5",
+          "status": "published",
+          "original_r2_key": "originals/7d2a895658f7a7306ac7e405ad2bb8d8e0ac43f869e41db733436f428711ed2a.jpg"
+        },
+        {
+          "id": 197,
+          "slug": "img-6201-jpg-RG2gNv",
+          "status": "published",
+          "original_r2_key": "originals/db942e936e16df573604775f5954c7d52bfa81fc4629fcbd0af13ed9b585e709.jpg"
+        },
+        {
+          "id": 200,
+          "slug": "cl0a1009-jpg-Hn88H3",
+          "status": "published",
+          "original_r2_key": "originals/a2623643eba201d196579178535079f56d257fedadb2e7acdb9406d1b3b1d4d8.jpg"
+        },
+        {
+          "id": 201,
+          "slug": "dji-0789-mp4-mp4-n8RTJW",
+          "status": "published",
+          "original_r2_key": "originals/771fb5ef6e1805ac485f602860318a1cb3c9e61fde16f5484577bf897ab091c8.jpg"
+        },
+        {
+          "id": 202,
+          "slug": "p1101882-jpg-vbBFGp",
+          "status": "published",
+          "original_r2_key": "originals/09f8d104c0d56d25aace3834b13e62fdb1698cebfc05504a697d9212720a625b.jpg"
+        },
+        {
+          "id": 203,
+          "slug": "p1101990-jpg-H4MNZp",
+          "status": "published",
+          "original_r2_key": "originals/07d8fe3d932fc157aa2fdd362296127870b01855e7a5609baa6abba5579d9621.jpg"
+        },
+        {
+          "id": 204,
+          "slug": "p1112023-jpg-NQL7qC",
+          "status": "published",
+          "original_r2_key": "originals/256ea923c1c6d1faefcb5974bab8aef3ac76af7abcd0bc91d8fe425cd2e7ca07.jpg"
+        },
+        {
+          "id": 205,
+          "slug": "2021-03-26-17-09-57-jpg-6F7Qzf",
+          "status": "published",
+          "original_r2_key": "originals/621b740251aa98c5bc4967ededff898aed0447850757704987a94cb12e0d7b34.jpg"
+        },
+        {
+          "id": 206,
+          "slug": "cl0a5945-jpg-rvHpHL",
+          "status": "published",
+          "original_r2_key": "originals/4fd02b70c5cb836c7560ae87405d68be3ee62d9d169d439b40cc91998e6ab3e6.jpg"
+        },
+        {
+          "id": 207,
+          "slug": "2021-04-02-10-07-39-jpg-mjHnLz",
+          "status": "published",
+          "original_r2_key": "originals/62f4d57e719cd0c8fdb4eea753ae7cb39859c513348cdffd1c70b3fa95b98130.jpg"
+        },
+        {
+          "id": 208,
+          "slug": "2021-04-02-10-22-33-jpg-7QhcJC",
+          "status": "published",
+          "original_r2_key": "originals/a7241f7d56d1381529d1600dcdbe4e96fbcd36d626d0627ee8bb4edae00caf9c.jpg"
+        }
+      ]
+    },
+    "render_ready_not_search_ready": {
+      "description": "ready_for_public_render=true but search_ready=false \u2014 blocked from Typesense",
+      "count": 0,
+      "sample": []
+    },
+    "missing_content_hash": {
+      "description": "No content_hash \u2014 cannot detect duplicates or verify integrity",
+      "count": 15586,
+      "sample": [
+        {
+          "id": 42,
+          "slug": "paddleboarding-adventure-on-a-tropical-coast-9kLkq4",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 44,
+          "slug": "img-9761-jpg-McvJMD",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 45,
+          "slug": "img-9867-jpg-ggnxV4",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 46,
+          "slug": "img-0133-jpg-t25Tbt",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 47,
+          "slug": "img-0148-jpg-WgXJsL",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 48,
+          "slug": "img-0135-jpg-x8LCKP",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 49,
+          "slug": "img-0154-jpg-P4g3jH",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 50,
+          "slug": "costa-rica-billabong-surf-2009-5QgMNB",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 51,
+          "slug": "img-0280-jpg-WR6t7s",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 52,
+          "slug": "costa-rica-billabong-surf-2009-PSWCnj",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 53,
+          "slug": "img-9578-jpg-CWp24N",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 54,
+          "slug": "img-9644-jpg-HCxCGn",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 55,
+          "slug": "img-3491-jpg-jHd5JG",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 56,
+          "slug": "img-6629-jpg-dqMnVs",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 57,
+          "slug": "img-0332-jpg-rSSd5X",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 58,
+          "slug": "img-6632-jpg-sTd7RM",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 59,
+          "slug": "img-0341-jpg-kZ3chM",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 60,
+          "slug": "img-9672-jpg-HSKLKj",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 61,
+          "slug": "img-9584-jpg-F3ffkg",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 62,
+          "slug": "img-9468-jpg-pQpxCC",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 63,
+          "slug": "img-9572-jpg-TC4cZc",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 64,
+          "slug": "img-9600-jpg-ZsctXJ",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 65,
+          "slug": "img-9717-jpg-7ZKCZv",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 66,
+          "slug": "img-9723-jpg-qsxkCW",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 67,
+          "slug": "img-9890-jpg-zBSPgj",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 68,
+          "slug": "img-9902-jpg-JwSZbr",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 69,
+          "slug": "img-9843-jpg-hxpDkp",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 71,
+          "slug": "img-9919-jpg-DXrP87",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 72,
+          "slug": "img-0021-jpg-GkKRzD",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 73,
+          "slug": "img-0235-jpg-9sPXtp",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 74,
+          "slug": "img-0236-jpg-S2T7WR",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 75,
+          "slug": "img-0238-jpg-ZGvNtp",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 76,
+          "slug": "img-0277-jpg-qt4QV8",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 77,
+          "slug": "img-0325-jpg-fmv7Qf",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 78,
+          "slug": "img-3493-jpg-gG4vff",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 79,
+          "slug": "img-5305-jpg-R4sG6V",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 80,
+          "slug": "img-2089-jpg-pnr28M",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 81,
+          "slug": "img-3478-jpg-BWjWP9",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 82,
+          "slug": "img-2099-jpg-4gf3qq",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 83,
+          "slug": "img-5307-jpg-CrgJfq",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 84,
+          "slug": "img-5426-jpg-jmdgbW",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 85,
+          "slug": "img-5373-jpg-SZQs9D",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 86,
+          "slug": "20160903-141053-jpg-zLDgJD",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 87,
+          "slug": "img-2084-jpg-DRShDG",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 88,
+          "slug": "img-2110-jpg-TxcVfN",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 89,
+          "slug": "img-2088-jpg-49xTs2",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 90,
+          "slug": "img-2098-jpg-72bZT5",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 91,
+          "slug": "img-2175-jpg-qRTw8D",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 92,
+          "slug": "img-3437-jpg-PLSc2W",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 93,
+          "slug": "img-3495-jpg-sPk7r8",
+          "status": "legacy_static",
+          "has_r2": true
+        }
+      ]
+    },
+    "missing_slug": {
+      "description": "Null or empty slug \u2014 cannot build public URL",
+      "count": 0,
+      "sample": []
+    },
+    "missing_gallery_slug": {
+      "description": "ready_for_public_render=true but gallery_slug is null \u2014 no gallery association",
+      "count": 1,
+      "sample": [
+        {
+          "id": 38398,
+          "slug": "cl0a1050-8b27738288163d5981c53b61a9338806484810b8fae68b05e61fd794bea72d7a",
+          "status": "draft"
+        }
+      ]
+    }
+  },
+  "status": "success"
+}

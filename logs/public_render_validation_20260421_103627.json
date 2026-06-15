@@ -1,0 +1,526 @@
+{
+  "run_at": "2026-04-21T16:36:27.480630+00:00",
+  "total_photos": 32383,
+  "render_ready_total": 31779,
+  "photos_with_issues": 267,
+  "all_clear": false,
+  "checks": {
+    "missing_thumb_url": {
+      "count": 0,
+      "sample": []
+    },
+    "missing_slug": {
+      "count": 0,
+      "sample": []
+    },
+    "missing_title": {
+      "count": 49,
+      "sample": [
+        {
+          "id": 38894,
+          "slug": "landmarks-2024-01-29-090304-65c8ce",
+          "title": null,
+          "status": "import_pending"
+        },
+        {
+          "id": 38895,
+          "slug": "landmarks-2024-01-29-090306-90e0e7",
+          "title": null,
+          "status": "import_pending"
+        },
+        {
+          "id": 38896,
+          "slug": "landmarks-2024-01-29-090507-9fa450",
+          "title": null,
+          "status": "import_pending"
+        },
+        {
+          "id": 38897,
+          "slug": "landmarks-2024-02-15-102108-658b92",
+          "title": null,
+          "status": "import_pending"
+        },
+        {
+          "id": 38898,
+          "slug": "landmarks-2024-02-15-102220-212f6f",
+          "title": null,
+          "status": "import_pending"
+        },
+        {
+          "id": 38899,
+          "slug": "landmarks-2024-02-15-102315-9e9e59",
+          "title": null,
+          "status": "import_pending"
+        },
+        {
+          "id": 38900,
+          "slug": "landmarks-2024-02-15-102321-95dd9c",
+          "title": null,
+          "status": "import_pending"
+        },
+        {
+          "id": 38901,
+          "slug": "landmarks-2024-02-15-102334-eb3783",
+          "title": null,
+          "status": "import_pending"
+        },
+        {
+          "id": 38902,
+          "slug": "landmarks-2024-02-15-104014-00a4b3",
+          "title": null,
+          "status": "import_pending"
+        },
+        {
+          "id": 38903,
+          "slug": "landmarks-2024-02-15-104047-b870ab",
+          "title": null,
+          "status": "import_pending"
+        },
+        {
+          "id": 38904,
+          "slug": "landmarks-2024-02-15-104053-fad05e",
+          "title": null,
+          "status": "import_pending"
+        },
+        {
+          "id": 38905,
+          "slug": "landmarks-2024-02-15-104116-455907",
+          "title": null,
+          "status": "import_pending"
+        },
+        {
+          "id": 38906,
+          "slug": "landmarks-2024-02-15-104124-ca5426",
+          "title": null,
+          "status": "import_pending"
+        },
+        {
+          "id": 38907,
+          "slug": "landmarks-2024-02-15-104126-a926ea",
+          "title": null,
+          "status": "import_pending"
+        },
+        {
+          "id": 38908,
+          "slug": "landmarks-2024-02-15-104159-f435d6",
+          "title": null,
+          "status": "import_pending"
+        },
+        {
+          "id": 38909,
+          "slug": "landmarks-2024-02-15-104236-6d58d1",
+          "title": null,
+          "status": "import_pending"
+        },
+        {
+          "id": 38910,
+          "slug": "landmarks-2024-02-15-104239-22fe90",
+          "title": null,
+          "status": "import_pending"
+        },
+        {
+          "id": 38911,
+          "slug": "landmarks-2024-02-15-104240-4a4083",
+          "title": null,
+          "status": "import_pending"
+        },
+        {
+          "id": 38912,
+          "slug": "landmarks-2024-02-15-104242-c031f1",
+          "title": null,
+          "status": "import_pending"
+        },
+        {
+          "id": 38913,
+          "slug": "landmarks-2024-02-15-104250-f9a233",
+          "title": null,
+          "status": "import_pending"
+        }
+      ]
+    },
+    "missing_gallery_slug": {
+      "count": 348,
+      "sample": [
+        {
+          "id": 242,
+          "slug": "hermosa-beach-1",
+          "title": "Hermosa Beach Sunset",
+          "status": "archived"
+        },
+        {
+          "id": 38439,
+          "slug": "punta-leona-dji-0202-jpg",
+          "title": "DJI 0202",
+          "status": "active"
+        },
+        {
+          "id": 38440,
+          "slug": "punta-leona-dji-0205-jpg",
+          "title": "DJI 0205",
+          "status": "active"
+        },
+        {
+          "id": 38441,
+          "slug": "punta-leona-dji-0207-jpg",
+          "title": "DJI 0207",
+          "status": "active"
+        },
+        {
+          "id": 38442,
+          "slug": "punta-leona-dji-0213-jpg",
+          "title": "DJI 0213",
+          "status": "active"
+        },
+        {
+          "id": 38443,
+          "slug": "punta-leona-dji-0214-jpg",
+          "title": "DJI 0214",
+          "status": "active"
+        },
+        {
+          "id": 38444,
+          "slug": "punta-leona-dji-0216-jpg",
+          "title": "DJI 0216",
+          "status": "active"
+        },
+        {
+          "id": 38445,
+          "slug": "punta-leona-dji-0218-jpg",
+          "title": "DJI 0218",
+          "status": "active"
+        },
+        {
+          "id": 38446,
+          "slug": "punta-leona-dji-0219-jpg",
+          "title": "DJI 0219",
+          "status": "active"
+        },
+        {
+          "id": 38447,
+          "slug": "punta-leona-dji-0223-jpg",
+          "title": "DJI 0223",
+          "status": "active"
+        },
+        {
+          "id": 38448,
+          "slug": "punta-leona-dji-0226-jpg",
+          "title": "DJI 0226",
+          "status": "active"
+        },
+        {
+          "id": 38449,
+          "slug": "punta-leona-dji-0227-jpg",
+          "title": "DJI 0227",
+          "status": "active"
+        },
+        {
+          "id": 38450,
+          "slug": "punta-leona-dji-0228-jpg",
+          "title": "DJI 0228",
+          "status": "active"
+        },
+        {
+          "id": 38451,
+          "slug": "punta-leona-dji-0230-jpg",
+          "title": "DJI 0230",
+          "status": "active"
+        },
+        {
+          "id": 38452,
+          "slug": "punta-leona-dji-0231-jpg",
+          "title": "DJI 0231",
+          "status": "active"
+        },
+        {
+          "id": 38453,
+          "slug": "punta-leona-dji-0233-jpg",
+          "title": "DJI 0233",
+          "status": "active"
+        },
+        {
+          "id": 38454,
+          "slug": "punta-leona-dji-0234-jpg",
+          "title": "DJI 0234",
+          "status": "active"
+        },
+        {
+          "id": 38455,
+          "slug": "punta-leona-dji-0235-jpg",
+          "title": "DJI 0235",
+          "status": "active"
+        },
+        {
+          "id": 38456,
+          "slug": "punta-leona-dji-0237-2-jpg",
+          "title": "DJI 0237 2",
+          "status": "active"
+        },
+        {
+          "id": 38457,
+          "slug": "punta-leona-dji-0237-jpg",
+          "title": "DJI 0237",
+          "status": "active"
+        }
+      ]
+    },
+    "search_not_ready": {
+      "count": 0,
+      "sample": []
+    },
+    "derivatives_incomplete": {
+      "count": 0,
+      "sample": []
+    },
+    "missing_description": {
+      "count": 67,
+      "sample": [
+        {
+          "id": 38876,
+          "slug": "turtles-20250412-084931-c3d3cb6f",
+          "title": "20250412_084931.jpg",
+          "status": "imported"
+        },
+        {
+          "id": 38877,
+          "slug": "turtles-20250414-121208-33422ba9",
+          "title": "20250414_121208.jpg",
+          "status": "imported"
+        },
+        {
+          "id": 38878,
+          "slug": "turtles-cl0a8406-8e8ed9e8",
+          "title": "CL0A8406.JPG",
+          "status": "imported"
+        },
+        {
+          "id": 38879,
+          "slug": "turtles-cl0a8416-c41fc2cf",
+          "title": "CL0A8416.JPG",
+          "status": "imported"
+        },
+        {
+          "id": 38880,
+          "slug": "turtles-cl0a8424-9add9673",
+          "title": "CL0A8424.JPG",
+          "status": "imported"
+        },
+        {
+          "id": 38881,
+          "slug": "turtles-cl0a8452-55841efa",
+          "title": "CL0A8452.JPG",
+          "status": "imported"
+        },
+        {
+          "id": 38882,
+          "slug": "turtles-cl0a8460-07f481c0",
+          "title": "CL0A8460.JPG",
+          "status": "imported"
+        },
+        {
+          "id": 38883,
+          "slug": "turtles-dji-0189-da816ccd",
+          "title": "DJI_0189.jpg",
+          "status": "imported"
+        },
+        {
+          "id": 38884,
+          "slug": "turtles-dji-0199-6ea7c5e3",
+          "title": "DJI_0199.jpg",
+          "status": "imported"
+        },
+        {
+          "id": 38885,
+          "slug": "turtles-dji-0203-5388a422",
+          "title": "DJI_0203.jpg",
+          "status": "imported"
+        },
+        {
+          "id": 38886,
+          "slug": "turtles-dji-0221-618f0e72",
+          "title": "DJI_0221.jpg",
+          "status": "imported"
+        },
+        {
+          "id": 38887,
+          "slug": "turtles-dji-0222-06b809de",
+          "title": "DJI_0222.jpg",
+          "status": "imported"
+        },
+        {
+          "id": 38888,
+          "slug": "turtles-img-6116-21746d89",
+          "title": "IMG_6116.jpg",
+          "status": "imported"
+        },
+        {
+          "id": 38889,
+          "slug": "turtles-img-6159-eeac07fb",
+          "title": "IMG_6159.jpg",
+          "status": "imported"
+        },
+        {
+          "id": 38890,
+          "slug": "turtles-img-6181-bebf293a",
+          "title": "IMG_6181.jpg",
+          "status": "imported"
+        },
+        {
+          "id": 38891,
+          "slug": "turtles-img-6208-ed7fa717",
+          "title": "IMG_6208.jpg",
+          "status": "imported"
+        },
+        {
+          "id": 38892,
+          "slug": "turtles-img-6220-6d7b681a",
+          "title": "IMG_6220.jpg",
+          "status": "imported"
+        },
+        {
+          "id": 38893,
+          "slug": "turtles-img-6221-710f1971",
+          "title": "IMG_6221.jpg",
+          "status": "imported"
+        },
+        {
+          "id": 38894,
+          "slug": "landmarks-2024-01-29-090304-65c8ce",
+          "title": null,
+          "status": "import_pending"
+        },
+        {
+          "id": 38895,
+          "slug": "landmarks-2024-01-29-090306-90e0e7",
+          "title": null,
+          "status": "import_pending"
+        }
+      ]
+    },
+    "missing_keywords": {
+      "count": 67,
+      "sample": [
+        {
+          "id": 38876,
+          "slug": "turtles-20250412-084931-c3d3cb6f",
+          "title": "20250412_084931.jpg",
+          "status": "imported"
+        },
+        {
+          "id": 38877,
+          "slug": "turtles-20250414-121208-33422ba9",
+          "title": "20250414_121208.jpg",
+          "status": "imported"
+        },
+        {
+          "id": 38878,
+          "slug": "turtles-cl0a8406-8e8ed9e8",
+          "title": "CL0A8406.JPG",
+          "status": "imported"
+        },
+        {
+          "id": 38879,
+          "slug": "turtles-cl0a8416-c41fc2cf",
+          "title": "CL0A8416.JPG",
+          "status": "imported"
+        },
+        {
+          "id": 38880,
+          "slug": "turtles-cl0a8424-9add9673",
+          "title": "CL0A8424.JPG",
+          "status": "imported"
+        },
+        {
+          "id": 38881,
+          "slug": "turtles-cl0a8452-55841efa",
+          "title": "CL0A8452.JPG",
+          "status": "imported"
+        },
+        {
+          "id": 38882,
+          "slug": "turtles-cl0a8460-07f481c0",
+          "title": "CL0A8460.JPG",
+          "status": "imported"
+        },
+        {
+          "id": 38883,
+          "slug": "turtles-dji-0189-da816ccd",
+          "title": "DJI_0189.jpg",
+          "status": "imported"
+        },
+        {
+          "id": 38884,
+          "slug": "turtles-dji-0199-6ea7c5e3",
+          "title": "DJI_0199.jpg",
+          "status": "imported"
+        },
+        {
+          "id": 38885,
+          "slug": "turtles-dji-0203-5388a422",
+          "title": "DJI_0203.jpg",
+          "status": "imported"
+        },
+        {
+          "id": 38886,
+          "slug": "turtles-dji-0221-618f0e72",
+          "title": "DJI_0221.jpg",
+          "status": "imported"
+        },
+        {
+          "id": 38887,
+          "slug": "turtles-dji-0222-06b809de",
+          "title": "DJI_0222.jpg",
+          "status": "imported"
+        },
+        {
+          "id": 38888,
+          "slug": "turtles-img-6116-21746d89",
+          "title": "IMG_6116.jpg",
+          "status": "imported"
+        },
+        {
+          "id": 38889,
+          "slug": "turtles-img-6159-eeac07fb",
+          "title": "IMG_6159.jpg",
+          "status": "imported"
+        },
+        {
+          "id": 38890,
+          "slug": "turtles-img-6181-bebf293a",
+          "title": "IMG_6181.jpg",
+          "status": "imported"
+        },
+        {
+          "id": 38891,
+          "slug": "turtles-img-6208-ed7fa717",
+          "title": "IMG_6208.jpg",
+          "status": "imported"
+        },
+        {
+          "id": 38892,
+          "slug": "turtles-img-6220-6d7b681a",
+          "title": "IMG_6220.jpg",
+          "status": "imported"
+        },
+        {
+          "id": 38893,
+          "slug": "turtles-img-6221-710f1971",
+          "title": "IMG_6221.jpg",
+          "status": "imported"
+        },
+        {
+          "id": 38894,
+          "slug": "landmarks-2024-01-29-090304-65c8ce",
+          "title": null,
+          "status": "import_pending"
+        },
+        {
+          "id": 38895,
+          "slug": "landmarks-2024-01-29-090306-90e0e7",
+          "title": null,
+          "status": "import_pending"
+        }
+      ]
+    }
+  },
+  "status": "success"
+}

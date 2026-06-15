@@ -1,0 +1,163 @@
+{
+  "run_at": "2026-04-18T23:32:43.637071+00:00",
+  "total_photos": 31706,
+  "render_ready_total": 30049,
+  "photos_with_issues": 116,
+  "all_clear": false,
+  "checks": {
+    "missing_thumb_url": {
+      "count": 0,
+      "sample": []
+    },
+    "missing_slug": {
+      "count": 0,
+      "sample": []
+    },
+    "missing_title": {
+      "count": 0,
+      "sample": []
+    },
+    "missing_gallery_slug": {
+      "count": 116,
+      "sample": [
+        {
+          "id": 242,
+          "slug": "hermosa-beach-1",
+          "title": "Hermosa Beach Sunset",
+          "status": "archived"
+        },
+        {
+          "id": 37838,
+          "slug": "dji-0080-91f75a67",
+          "title": "Dji",
+          "status": "draft"
+        },
+        {
+          "id": 37839,
+          "slug": "dji-0084-1f644f8e",
+          "title": "Dji",
+          "status": "draft"
+        },
+        {
+          "id": 37840,
+          "slug": "dji-0085-6f46b59e",
+          "title": "Dji",
+          "status": "draft"
+        },
+        {
+          "id": 37841,
+          "slug": "dji-0086-d9458343",
+          "title": "Dji",
+          "status": "draft"
+        },
+        {
+          "id": 37842,
+          "slug": "dji-0089-dfa1f11e",
+          "title": "Dji",
+          "status": "draft"
+        },
+        {
+          "id": 37843,
+          "slug": "dji-0090-0f8dcb34",
+          "title": "Dji",
+          "status": "draft"
+        },
+        {
+          "id": 37844,
+          "slug": "dji-0091-61fd5dbb",
+          "title": "Dji",
+          "status": "draft"
+        },
+        {
+          "id": 37845,
+          "slug": "dji-0092-37ceacdb",
+          "title": "Dji",
+          "status": "draft"
+        },
+        {
+          "id": 37846,
+          "slug": "dji-0099-b33f3c30",
+          "title": "Dji",
+          "status": "draft"
+        },
+        {
+          "id": 37847,
+          "slug": "dji-0100-c233badd",
+          "title": "Dji",
+          "status": "draft"
+        },
+        {
+          "id": 37848,
+          "slug": "dji-0101-8f541f06",
+          "title": "Dji",
+          "status": "draft"
+        },
+        {
+          "id": 37849,
+          "slug": "dji-0108-951ce4bd",
+          "title": "Dji",
+          "status": "draft"
+        },
+        {
+          "id": 37850,
+          "slug": "dji-0110-162244d0",
+          "title": "Dji",
+          "status": "draft"
+        },
+        {
+          "id": 37851,
+          "slug": "dji-0112-9c765226",
+          "title": "Dji",
+          "status": "draft"
+        },
+        {
+          "id": 37852,
+          "slug": "dji-0113-407052bc",
+          "title": "Dji",
+          "status": "draft"
+        },
+        {
+          "id": 37853,
+          "slug": "dji-0114-4fadf358",
+          "title": "Dji",
+          "status": "draft"
+        },
+        {
+          "id": 37854,
+          "slug": "dji-0115-ede7e38e",
+          "title": "Dji",
+          "status": "draft"
+        },
+        {
+          "id": 37855,
+          "slug": "dji-0119-df06143b",
+          "title": "Dji",
+          "status": "draft"
+        },
+        {
+          "id": 37856,
+          "slug": "dji-0126-02a3ede0",
+          "title": "Dji",
+          "status": "draft"
+        }
+      ]
+    },
+    "search_not_ready": {
+      "count": 0,
+      "sample": []
+    },
+    "derivatives_incomplete": {
+      "count": 0,
+      "sample": []
+    },
+    "missing_description": {
+      "count": 0,
+      "sample": []
+    },
+    "missing_keywords": {
+      "count": 0,
+      "sample": []
+    }
+  },
+  "status": "success"
+}

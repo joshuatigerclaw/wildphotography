@@ -1,0 +1,12 @@
+{
+  "run_at": "2026-06-09T00:39:45.253829+00:00",
+  "db_eligible_count": 63502,
+  "typesense_count": 67289,
+  "drift": 3787,
+  "abs_drift": 3787,
+  "drift_threshold": 50,
+  "exceeds_threshold": true,
+  "drift_direction": "typesense_ahead",
+  "status": "success",
+  "recommendation": "Run wild_typesense_reconcile_no_llm to fix drift."
+}

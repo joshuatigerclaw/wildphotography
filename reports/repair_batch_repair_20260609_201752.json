@@ -1,0 +1,611 @@
+{
+  "batch_id": "repair_20260609_201752",
+  "jobs_processed": 25,
+  "repairs_completed": 75,
+  "failures": 0,
+  "items_requiring_approval": 25,
+  "approval_items": [
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 90040",
+      "slug": "tambor-nicoya-peninsula-costa--2024-12-30-06-53-05-2338da"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 90041",
+      "slug": "tambor-nicoya-peninsula-costa--2024-12-30-07-56-44-9dbc3d"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 90042",
+      "slug": "tambor-nicoya-peninsula-costa--2024-12-30-07-57-06-1fa55d"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 90043",
+      "slug": "tambor-nicoya-peninsula-costa--2024-12-30-08-31-15-e9d2e6"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 90044",
+      "slug": "tambor-nicoya-peninsula-costa--2024-12-30-09-07-52-a5cb86"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 90045",
+      "slug": "tambor-nicoya-peninsula-costa--2024-12-30-09-35-47-a0792e"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 90046",
+      "slug": "tambor-nicoya-peninsula-costa--2024-12-30-12-12-53-ead75a"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 90047",
+      "slug": "tambor-nicoya-peninsula-costa--2024-12-30-12-13-09-29166c"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 90048",
+      "slug": "tambor-nicoya-peninsula-costa--2024-12-30-12-13-29-a1a6b0"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 90049",
+      "slug": "tambor-nicoya-peninsula-costa--2024-12-30-12-13-38-c0df88"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 90050",
+      "slug": "tambor-nicoya-peninsula-costa--2024-12-30-12-46-11-ca3e16"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 90051",
+      "slug": "tambor-nicoya-peninsula-costa--2024-12-31-07-51-34-5d0962"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 90052",
+      "slug": "tambor-nicoya-peninsula-costa--2024-12-31-08-56-41-f6ce78"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 90053",
+      "slug": "tambor-nicoya-peninsula-costa--2024-12-31-09-01-49-e67d70"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 90054",
+      "slug": "tambor-nicoya-peninsula-costa--2024-12-31-09-01-52-1-89ccda"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 90055",
+      "slug": "tambor-nicoya-peninsula-costa--2024-12-31-09-02-24-658caf"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 90056",
+      "slug": "tambor-nicoya-peninsula-costa--2024-12-31-09-05-57-1-9d0101"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 90057",
+      "slug": "tambor-nicoya-peninsula-costa--2024-12-31-09-14-13-d5236d"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 90058",
+      "slug": "tambor-nicoya-peninsula-costa--2024-12-31-09-19-20-16b42b"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 90059",
+      "slug": "tambor-nicoya-peninsula-costa--2024-12-31-09-19-32-11567f"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 90060",
+      "slug": "tambor-nicoya-peninsula-costa--2024-12-31-09-27-39-36dfec"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 90061",
+      "slug": "tambor-nicoya-peninsula-costa--2024-12-31-09-45-46-577751"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 90062",
+      "slug": "tambor-nicoya-peninsula-costa--2024-12-31-09-56-25-1-323e92"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 90063",
+      "slug": "tambor-nicoya-peninsula-costa--2024-12-31-13-06-50-c0be54"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 90039",
+      "slug": "tambor-nicoya-peninsula-costa--2024-12-30-06-06-48-129175"
+    }
+  ],
+  "results": [
+    {
+      "queue_id": 90565,
+      "photo_id": 90040,
+      "slug": "tambor-nicoya-peninsula-costa--2024-12-30-06-53-05-2338da",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 90040",
+          "slug": "tambor-nicoya-peninsula-costa--2024-12-30-06-53-05-2338da"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 90566,
+      "photo_id": 90041,
+      "slug": "tambor-nicoya-peninsula-costa--2024-12-30-07-56-44-9dbc3d",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 90041",
+          "slug": "tambor-nicoya-peninsula-costa--2024-12-30-07-56-44-9dbc3d"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 90567,
+      "photo_id": 90042,
+      "slug": "tambor-nicoya-peninsula-costa--2024-12-30-07-57-06-1fa55d",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 90042",
+          "slug": "tambor-nicoya-peninsula-costa--2024-12-30-07-57-06-1fa55d"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 90568,
+      "photo_id": 90043,
+      "slug": "tambor-nicoya-peninsula-costa--2024-12-30-08-31-15-e9d2e6",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 90043",
+          "slug": "tambor-nicoya-peninsula-costa--2024-12-30-08-31-15-e9d2e6"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 90569,
+      "photo_id": 90044,
+      "slug": "tambor-nicoya-peninsula-costa--2024-12-30-09-07-52-a5cb86",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 90044",
+          "slug": "tambor-nicoya-peninsula-costa--2024-12-30-09-07-52-a5cb86"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 90570,
+      "photo_id": 90045,
+      "slug": "tambor-nicoya-peninsula-costa--2024-12-30-09-35-47-a0792e",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 90045",
+          "slug": "tambor-nicoya-peninsula-costa--2024-12-30-09-35-47-a0792e"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 90571,
+      "photo_id": 90046,
+      "slug": "tambor-nicoya-peninsula-costa--2024-12-30-12-12-53-ead75a",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 90046",
+          "slug": "tambor-nicoya-peninsula-costa--2024-12-30-12-12-53-ead75a"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 90572,
+      "photo_id": 90047,
+      "slug": "tambor-nicoya-peninsula-costa--2024-12-30-12-13-09-29166c",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 90047",
+          "slug": "tambor-nicoya-peninsula-costa--2024-12-30-12-13-09-29166c"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 90573,
+      "photo_id": 90048,
+      "slug": "tambor-nicoya-peninsula-costa--2024-12-30-12-13-29-a1a6b0",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 90048",
+          "slug": "tambor-nicoya-peninsula-costa--2024-12-30-12-13-29-a1a6b0"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 90574,
+      "photo_id": 90049,
+      "slug": "tambor-nicoya-peninsula-costa--2024-12-30-12-13-38-c0df88",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 90049",
+          "slug": "tambor-nicoya-peninsula-costa--2024-12-30-12-13-38-c0df88"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 90575,
+      "photo_id": 90050,
+      "slug": "tambor-nicoya-peninsula-costa--2024-12-30-12-46-11-ca3e16",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 90050",
+          "slug": "tambor-nicoya-peninsula-costa--2024-12-30-12-46-11-ca3e16"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 90576,
+      "photo_id": 90051,
+      "slug": "tambor-nicoya-peninsula-costa--2024-12-31-07-51-34-5d0962",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 90051",
+          "slug": "tambor-nicoya-peninsula-costa--2024-12-31-07-51-34-5d0962"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 90577,
+      "photo_id": 90052,
+      "slug": "tambor-nicoya-peninsula-costa--2024-12-31-08-56-41-f6ce78",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 90052",
+          "slug": "tambor-nicoya-peninsula-costa--2024-12-31-08-56-41-f6ce78"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 90578,
+      "photo_id": 90053,
+      "slug": "tambor-nicoya-peninsula-costa--2024-12-31-09-01-49-e67d70",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 90053",
+          "slug": "tambor-nicoya-peninsula-costa--2024-12-31-09-01-49-e67d70"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 90579,
+      "photo_id": 90054,
+      "slug": "tambor-nicoya-peninsula-costa--2024-12-31-09-01-52-1-89ccda",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 90054",
+          "slug": "tambor-nicoya-peninsula-costa--2024-12-31-09-01-52-1-89ccda"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 90580,
+      "photo_id": 90055,
+      "slug": "tambor-nicoya-peninsula-costa--2024-12-31-09-02-24-658caf",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 90055",
+          "slug": "tambor-nicoya-peninsula-costa--2024-12-31-09-02-24-658caf"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 90581,
+      "photo_id": 90056,
+      "slug": "tambor-nicoya-peninsula-costa--2024-12-31-09-05-57-1-9d0101",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 90056",
+          "slug": "tambor-nicoya-peninsula-costa--2024-12-31-09-05-57-1-9d0101"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 90582,
+      "photo_id": 90057,
+      "slug": "tambor-nicoya-peninsula-costa--2024-12-31-09-14-13-d5236d",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 90057",
+          "slug": "tambor-nicoya-peninsula-costa--2024-12-31-09-14-13-d5236d"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 90583,
+      "photo_id": 90058,
+      "slug": "tambor-nicoya-peninsula-costa--2024-12-31-09-19-20-16b42b",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 90058",
+          "slug": "tambor-nicoya-peninsula-costa--2024-12-31-09-19-20-16b42b"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 90584,
+      "photo_id": 90059,
+      "slug": "tambor-nicoya-peninsula-costa--2024-12-31-09-19-32-11567f",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 90059",
+          "slug": "tambor-nicoya-peninsula-costa--2024-12-31-09-19-32-11567f"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 90585,
+      "photo_id": 90060,
+      "slug": "tambor-nicoya-peninsula-costa--2024-12-31-09-27-39-36dfec",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 90060",
+          "slug": "tambor-nicoya-peninsula-costa--2024-12-31-09-27-39-36dfec"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 90586,
+      "photo_id": 90061,
+      "slug": "tambor-nicoya-peninsula-costa--2024-12-31-09-45-46-577751",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 90061",
+          "slug": "tambor-nicoya-peninsula-costa--2024-12-31-09-45-46-577751"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 90587,
+      "photo_id": 90062,
+      "slug": "tambor-nicoya-peninsula-costa--2024-12-31-09-56-25-1-323e92",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 90062",
+          "slug": "tambor-nicoya-peninsula-costa--2024-12-31-09-56-25-1-323e92"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 90588,
+      "photo_id": 90063,
+      "slug": "tambor-nicoya-peninsula-costa--2024-12-31-13-06-50-c0be54",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 90063",
+          "slug": "tambor-nicoya-peninsula-costa--2024-12-31-13-06-50-c0be54"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 90564,
+      "photo_id": 90039,
+      "slug": "tambor-nicoya-peninsula-costa--2024-12-30-06-06-48-129175",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 90039",
+          "slug": "tambor-nicoya-peninsula-costa--2024-12-30-06-06-48-129175"
+        }
+      ],
+      "status": "completed"
+    }
+  ]
+}

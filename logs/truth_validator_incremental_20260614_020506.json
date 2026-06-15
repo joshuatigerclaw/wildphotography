@@ -1,0 +1,822 @@
+{
+  "run_at": "2026-06-14T08:05:06.712476+00:00",
+  "scan_mode": "INCREMENTAL (last 48h)",
+  "recent_window_hours": 48,
+  "total_photos": 71139,
+  "total_recent_scanned": 70918,
+  "photos_with_issues": 1349,
+  "failure_types": {
+    "flagged_render_ready_but_no_thumb": 0,
+    "flagged_render_ready_but_no_original_r2": 151,
+    "flagged_render_ready_but_derivatives_false": 0,
+    "flagged_search_ready_but_not_render_ready": 0,
+    "derivatives_complete_but_no_original_r2": 151,
+    "missing_title_ready_for_render": 0,
+    "missing_description_ready_for_render": 0,
+    "missing_keywords_ready_for_render": 0,
+    "missing_gallery_slug_ready_for_render": 1111,
+    "search_ready_but_no_title": 0,
+    "search_ready_but_no_description": 0,
+    "orphan_no_original_no_thumb": 1356,
+    "status_manual_review_but_not_render_ready": 0,
+    "status_archived_still_render_ready": 199,
+    "status_archived_still_search_ready": 63
+  },
+  "category_summary": {
+    "render_asset_missing": 1658,
+    "render_flag_inconsistent": 0,
+    "metadata_missing": 1111,
+    "search_flag_inconsistent": 0,
+    "orphan_records": 1356,
+    "status_anomalies": 262
+  },
+  "checks": {
+    "flagged_render_ready_but_no_thumb": {
+      "count": 0,
+      "sample": []
+    },
+    "flagged_render_ready_but_no_original_r2": {
+      "count": 151,
+      "sample": [
+        {
+          "id": 20,
+          "slug": "capuchin-monkey",
+          "title": "Wildlife Photography \u2014 Costa Rica",
+          "status": "draft",
+          "ready_for_public_render": true,
+          "search_ready": false,
+          "derivatives_complete": true,
+          "thumb_url": "https://images.wildphotography.com/derivatives/20/05ff00ba0f397906873c76b261589ac0d8c1962d3546ec878ca9d7270d855670_thumb.jpg",
+          "original_r2_key": null,
+          "updated_at": "2026-06-13 14:16:49.224983"
+        },
+        {
+          "id": 25,
+          "slug": "rufous-hummingbird",
+          "title": "Rufous-tailed Hummingbird - Birds of Costa Rica, Costa Rica",
+          "status": "draft",
+          "ready_for_public_render": true,
+          "search_ready": false,
+          "derivatives_complete": true,
+          "thumb_url": "https://images.wildphotography.com/derivatives/25/021d369d201ad0ed881d602d3b1f28423969df91ec31c4d1ef1455529daa82b9.jpg_thumb.jpg",
+          "original_r2_key": null,
+          "updated_at": "2026-06-13 14:16:49.224983"
+        },
+        {
+          "id": 901,
+          "slug": "20201129-061214-pano-901",
+          "title": "Coastal Beaches Beach Scene",
+          "status": "published",
+          "ready_for_public_render": true,
+          "search_ready": false,
+          "derivatives_complete": true,
+          "thumb_url": "https://images.wildphotography.com/derivatives/901/20201129-061214-pano-901_thumb_250.webp",
+          "original_r2_key": null,
+          "updated_at": "2026-06-14 06:58:28.179655"
+        },
+        {
+          "id": 76217,
+          "slug": "best-of-costa-rica-cl0a1100",
+          "title": "Best of Costa Rica Photography Collection",
+          "status": "published",
+          "ready_for_public_render": true,
+          "search_ready": true,
+          "derivatives_complete": true,
+          "thumb_url": "https://images.wildphotography.com/derivatives/.-cl0a1100/thumb_key.jpg",
+          "original_r2_key": null,
+          "updated_at": "2026-06-14 06:58:28.179655"
+        },
+        {
+          "id": 83961,
+          "slug": "cl0a6101-edited-1",
+          "title": "Bird Photography in Costa Rica | WildPhotography",
+          "status": "archived",
+          "ready_for_public_render": true,
+          "search_ready": false,
+          "derivatives_complete": true,
+          "thumb_url": "https://images.wildphotography.com/thumbs/cl0a6101-edited-1-thumb.jpg",
+          "original_r2_key": null,
+          "updated_at": "2026-06-12 21:30:22.628721"
+        },
+        {
+          "id": 90000,
+          "slug": "tambor-nicoya-peninsula-costa--2021-05-21-15-17-12-fc2834",
+          "title": "Tambor Beach, Nicoya Peninsula, Costa Rica",
+          "status": "archived_unrecoverable",
+          "ready_for_public_render": true,
+          "search_ready": true,
+          "derivatives_complete": true,
+          "thumb_url": "https://images.wildphotography.com/photos/derivatives/90000/thumb.jpg",
+          "original_r2_key": null,
+          "updated_at": "2026-06-12 21:30:22.628721"
+        },
+        {
+          "id": 90001,
+          "slug": "tambor-nicoya-peninsula-costa--2021-05-21-15-30-16-7b9fb0",
+          "title": "Tambor Beach, Nicoya Peninsula, Costa Rica",
+          "status": "archived_unrecoverable",
+          "ready_for_public_render": true,
+          "search_ready": true,
+          "derivatives_complete": true,
+          "thumb_url": "https://images.wildphotography.com/photos/derivatives/90001/thumb.jpg",
+          "original_r2_key": null,
+          "updated_at": "2026-06-12 21:30:22.628721"
+        },
+        {
+          "id": 90002,
+          "slug": "tambor-nicoya-peninsula-costa--2021-10-09-06-39-14-377ce5",
+          "title": "Tambor Beach, Nicoya Peninsula, Costa Rica",
+          "status": "archived_unrecoverable",
+          "ready_for_public_render": true,
+          "search_ready": true,
+          "derivatives_complete": true,
+          "thumb_url": "https://images.wildphotography.com/photos/derivatives/90002/thumb.jpg",
+          "original_r2_key": null,
+          "updated_at": "2026-06-12 21:30:22.628721"
+        },
+        {
+          "id": 90003,
+          "slug": "tambor-nicoya-peninsula-costa--2021-12-28-06-12-09-f8665e",
+          "title": "Tambor Beach, Nicoya Peninsula, Costa Rica",
+          "status": "archived_unrecoverable",
+          "ready_for_public_render": true,
+          "search_ready": true,
+          "derivatives_complete": true,
+          "thumb_url": "https://images.wildphotography.com/photos/derivatives/90003/thumb.jpg",
+          "original_r2_key": null,
+          "updated_at": "2026-06-12 21:30:22.628721"
+        },
+        {
+          "id": 90004,
+          "slug": "tambor-nicoya-peninsula-costa--2021-12-28-06-54-26-28509a",
+          "title": "Tambor Beach, Nicoya Peninsula, Costa Rica",
+          "status": "archived_unrecoverable",
+          "ready_for_public_render": true,
+          "search_ready": true,
+          "derivatives_complete": true,
+          "thumb_url": "https://images.wildphotography.com/photos/derivatives/90004/thumb.jpg",
+          "original_r2_key": null,
+          "updated_at": "2026-06-12 21:30:22.628721"
+        }
+      ]
+    },
+    "flagged_render_ready_but_derivatives_false": {
+      "count": 0,
+      "sample": []
+    },
+    "flagged_search_ready_but_not_render_ready": {
+      "count": 0,
+      "sample": []
+    },
+    "derivatives_complete_but_no_original_r2": {
+      "count": 151,
+      "sample": [
+        {
+          "id": 20,
+          "slug": "capuchin-monkey",
+          "title": "Wildlife Photography \u2014 Costa Rica",
+          "status": "draft",
+          "ready_for_public_render": true,
+          "search_ready": false,
+          "derivatives_complete": true,
+          "thumb_url": "https://images.wildphotography.com/derivatives/20/05ff00ba0f397906873c76b261589ac0d8c1962d3546ec878ca9d7270d855670_thumb.jpg",
+          "original_r2_key": null,
+          "updated_at": "2026-06-13 14:16:49.224983"
+        },
+        {
+          "id": 25,
+          "slug": "rufous-hummingbird",
+          "title": "Rufous-tailed Hummingbird - Birds of Costa Rica, Costa Rica",
+          "status": "draft",
+          "ready_for_public_render": true,
+          "search_ready": false,
+          "derivatives_complete": true,
+          "thumb_url": "https://images.wildphotography.com/derivatives/25/021d369d201ad0ed881d602d3b1f28423969df91ec31c4d1ef1455529daa82b9.jpg_thumb.jpg",
+          "original_r2_key": null,
+          "updated_at": "2026-06-13 14:16:49.224983"
+        },
+        {
+          "id": 901,
+          "slug": "20201129-061214-pano-901",
+          "title": "Coastal Beaches Beach Scene",
+          "status": "published",
+          "ready_for_public_render": true,
+          "search_ready": false,
+          "derivatives_complete": true,
+          "thumb_url": "https://images.wildphotography.com/derivatives/901/20201129-061214-pano-901_thumb_250.webp",
+          "original_r2_key": null,
+          "updated_at": "2026-06-14 06:58:28.179655"
+        },
+        {
+          "id": 76217,
+          "slug": "best-of-costa-rica-cl0a1100",
+          "title": "Best of Costa Rica Photography Collection",
+          "status": "published",
+          "ready_for_public_render": true,
+          "search_ready": true,
+          "derivatives_complete": true,
+          "thumb_url": "https://images.wildphotography.com/derivatives/.-cl0a1100/thumb_key.jpg",
+          "original_r2_key": null,
+          "updated_at": "2026-06-14 06:58:28.179655"
+        },
+        {
+          "id": 83961,
+          "slug": "cl0a6101-edited-1",
+          "title": "Bird Photography in Costa Rica | WildPhotography",
+          "status": "archived",
+          "ready_for_public_render": true,
+          "search_ready": false,
+          "derivatives_complete": true,
+          "thumb_url": "https://images.wildphotography.com/thumbs/cl0a6101-edited-1-thumb.jpg",
+          "original_r2_key": null,
+          "updated_at": "2026-06-12 21:30:22.628721"
+        },
+        {
+          "id": 90000,
+          "slug": "tambor-nicoya-peninsula-costa--2021-05-21-15-17-12-fc2834",
+          "title": "Tambor Beach, Nicoya Peninsula, Costa Rica",
+          "status": "archived_unrecoverable",
+          "ready_for_public_render": true,
+          "search_ready": true,
+          "derivatives_complete": true,
+          "thumb_url": "https://images.wildphotography.com/photos/derivatives/90000/thumb.jpg",
+          "original_r2_key": null,
+          "updated_at": "2026-06-12 21:30:22.628721"
+        },
+        {
+          "id": 90001,
+          "slug": "tambor-nicoya-peninsula-costa--2021-05-21-15-30-16-7b9fb0",
+          "title": "Tambor Beach, Nicoya Peninsula, Costa Rica",
+          "status": "archived_unrecoverable",
+          "ready_for_public_render": true,
+          "search_ready": true,
+          "derivatives_complete": true,
+          "thumb_url": "https://images.wildphotography.com/photos/derivatives/90001/thumb.jpg",
+          "original_r2_key": null,
+          "updated_at": "2026-06-12 21:30:22.628721"
+        },
+        {
+          "id": 90002,
+          "slug": "tambor-nicoya-peninsula-costa--2021-10-09-06-39-14-377ce5",
+          "title": "Tambor Beach, Nicoya Peninsula, Costa Rica",
+          "status": "archived_unrecoverable",
+          "ready_for_public_render": true,
+          "search_ready": true,
+          "derivatives_complete": true,
+          "thumb_url": "https://images.wildphotography.com/photos/derivatives/90002/thumb.jpg",
+          "original_r2_key": null,
+          "updated_at": "2026-06-12 21:30:22.628721"
+        },
+        {
+          "id": 90003,
+          "slug": "tambor-nicoya-peninsula-costa--2021-12-28-06-12-09-f8665e",
+          "title": "Tambor Beach, Nicoya Peninsula, Costa Rica",
+          "status": "archived_unrecoverable",
+          "ready_for_public_render": true,
+          "search_ready": true,
+          "derivatives_complete": true,
+          "thumb_url": "https://images.wildphotography.com/photos/derivatives/90003/thumb.jpg",
+          "original_r2_key": null,
+          "updated_at": "2026-06-12 21:30:22.628721"
+        },
+        {
+          "id": 90004,
+          "slug": "tambor-nicoya-peninsula-costa--2021-12-28-06-54-26-28509a",
+          "title": "Tambor Beach, Nicoya Peninsula, Costa Rica",
+          "status": "archived_unrecoverable",
+          "ready_for_public_render": true,
+          "search_ready": true,
+          "derivatives_complete": true,
+          "thumb_url": "https://images.wildphotography.com/photos/derivatives/90004/thumb.jpg",
+          "original_r2_key": null,
+          "updated_at": "2026-06-12 21:30:22.628721"
+        }
+      ]
+    },
+    "missing_title_ready_for_render": {
+      "count": 0,
+      "sample": []
+    },
+    "missing_description_ready_for_render": {
+      "count": 0,
+      "sample": []
+    },
+    "missing_keywords_ready_for_render": {
+      "count": 0,
+      "sample": []
+    },
+    "missing_gallery_slug_ready_for_render": {
+      "count": 1111,
+      "sample": [
+        {
+          "id": 92814,
+          "slug": "2019-11-20-13.25.16",
+          "title": "Costa Rica Landscape Video November 2019",
+          "status": "active",
+          "ready_for_public_render": true,
+          "search_ready": true,
+          "derivatives_complete": true,
+          "thumb_url": "https://images.wildphotography.com/derivatives/92814/92814_thumb.jpg",
+          "original_r2_key": "originals/best-of-costa-rica/a617185b7870a8cc4b92b83cd6112d17e27ccd266367fdf2df83d12e5cae34b4.mp4",
+          "updated_at": "2026-06-12 11:24:14.942521"
+        },
+        {
+          "id": 92815,
+          "slug": "2019-11-20-13.28.00",
+          "title": "Costa Rica Scenery Video November 2019",
+          "status": "active",
+          "ready_for_public_render": true,
+          "search_ready": true,
+          "derivatives_complete": true,
+          "thumb_url": "https://images.wildphotography.com/derivatives/92815/92815_thumb.jpg",
+          "original_r2_key": "originals/best-of-costa-rica/63057bca629dd48514faadd06552f769dcf59bcc619980aa3e3b4bdeb8dfb176.mp4",
+          "updated_at": "2026-06-12 11:24:14.942521"
+        },
+        {
+          "id": 92816,
+          "slug": "amanecer-irazu-abr-25-2020-logo",
+          "title": "Volcano Irazu Sunrise Aerial Video",
+          "status": "active",
+          "ready_for_public_render": true,
+          "search_ready": true,
+          "derivatives_complete": true,
+          "thumb_url": "https://images.wildphotography.com/derivatives/92816/92816_thumb.jpg",
+          "original_r2_key": "originals/best-of-costa-rica/8a7bd74b312f84fa40d1d647cef6048aaea1601c2dd5d22bedd76bbdbf067c62.mp4",
+          "updated_at": "2026-06-12 11:24:14.942521"
+        },
+        {
+          "id": 92819,
+          "slug": "dji-0115a-tortuga-boats-to-sand",
+          "title": "Turtle Beach Aerial Video Costa Rica",
+          "status": "active",
+          "ready_for_public_render": true,
+          "search_ready": true,
+          "derivatives_complete": true,
+          "thumb_url": "https://images.wildphotography.com/derivatives/92819/92819_thumb.jpg",
+          "original_r2_key": "originals/best-of-costa-rica/f3ccfc51d00226b26ee5d0bf346b828a1687d6d903072142315743d0a343e737.mp4",
+          "updated_at": "2026-06-12 11:24:14.942521"
+        },
+        {
+          "id": 92820,
+          "slug": "dji-0199-mp4",
+          "title": "Costa Rica Aerial Landscape Video",
+          "status": "active",
+          "ready_for_public_render": true,
+          "search_ready": true,
+          "derivatives_complete": true,
+          "thumb_url": "https://images.wildphotography.com/derivatives/92820/92820_thumb.jpg",
+          "original_r2_key": "originals/best-of-costa-rica/621be9e363c4e8d7f16d797b618cbe33fe4149c7a8574d5c7ea092435357cae.mp4",
+          "updated_at": "2026-06-12 11:24:14.942521"
+        },
+        {
+          "id": 93154,
+          "slug": "costa-rica-gallery-puntarenas-costa-rica-dji-0328-1780891602444",
+          "title": "Puntarenas Costa Rica Aerial Drone Photo - Coastal Path Aerial View (DJI 0328)",
+          "status": "published",
+          "ready_for_public_render": true,
+          "search_ready": true,
+          "derivatives_complete": true,
+          "thumb_url": "https://images.wildphotography.com/derivatives/thumb/costa-rica-gallery-puntarenas-costa-rica-dji-0328-1780891602444-thumb.jpg",
+          "original_r2_key": "photos/originals/costa-rica-gallery-puntarenas-costa-rica/costa-rica-gallery-puntarenas-costa-rica-dji-0328-1780891491369.jpg",
+          "updated_at": "2026-06-12 21:30:35.747477"
+        },
+        {
+          "id": 93155,
+          "slug": "costa-rica-gallery-puntarenas-costa-rica-dji-0331-1780891602589",
+          "title": "Puntarenas Costa Rica Aerial Drone Photo - Tropical Beach Aerial View (DJI 0331)",
+          "status": "published",
+          "ready_for_public_render": true,
+          "search_ready": true,
+          "derivatives_complete": true,
+          "thumb_url": "https://images.wildphotography.com/derivatives/93155/costa-rica-gallery-puntarenas-costa-rica-dji-0331-_thumb.jpg",
+          "original_r2_key": "photos/originals/costa-rica-gallery-puntarenas-costa-rica/costa-rica-gallery-puntarenas-costa-rica-dji-0331-1780891492298.jpg",
+          "updated_at": "2026-06-12 21:30:35.747477"
+        },
+        {
+          "id": 93156,
+          "slug": "costa-rica-gallery-puntarenas-costa-rica-dji-0333-1780891602732",
+          "title": "Puntarenas Costa Rica Aerial Drone Photo - Sweeping Coastal Aerial Vista (DJI 0333)",
+          "status": "published",
+          "ready_for_public_render": true,
+          "search_ready": true,
+          "derivatives_complete": true,
+          "thumb_url": "https://images.wildphotography.com/derivatives/93156/costa-rica-gallery-puntarenas-costa-rica-dji-0333-_thumb.jpg",
+          "original_r2_key": "photos/originals/costa-rica-gallery-puntarenas-costa-rica/costa-rica-gallery-puntarenas-costa-rica-dji-0333-1780891494004.jpg",
+          "updated_at": "2026-06-12 21:30:35.747477"
+        },
+        {
+          "id": 93157,
+          "slug": "costa-rica-gallery-puntarenas-costa-rica-dji-0339-1780891602873",
+          "title": "Puntarenas Costa Rica Aerial Drone Photo - Golden Hour Aerial Glow (DJI 0339)",
+          "status": "published",
+          "ready_for_public_render": true,
+          "search_ready": true,
+          "derivatives_complete": true,
+          "thumb_url": "https://images.wildphotography.com/derivatives/93157/costa-rica-gallery-puntarenas-costa-rica-dji-0339-_thumb.jpg",
+          "original_r2_key": "photos/originals/costa-rica-gallery-puntarenas-costa-rica/costa-rica-gallery-puntarenas-costa-rica-dji-0339-1780891495907.jpg",
+          "updated_at": "2026-06-12 21:30:35.747477"
+        },
+        {
+          "id": 93158,
+          "slug": "costa-rica-gallery-puntarenas-costa-rica-dji-0341-1780891603016",
+          "title": "Puntarenas Costa Rica Aerial Drone Photo - Pacific Sunset Aerial (DJI 0341)",
+          "status": "published",
+          "ready_for_public_render": true,
+          "search_ready": true,
+          "derivatives_complete": true,
+          "thumb_url": "https://images.wildphotography.com/derivatives/93158/costa-rica-gallery-puntarenas-costa-rica-dji-0341-_thumb.jpg",
+          "original_r2_key": "photos/originals/costa-rica-gallery-puntarenas-costa-rica/costa-rica-gallery-puntarenas-costa-rica-dji-0341-1780891497573.jpg",
+          "updated_at": "2026-06-12 21:30:35.747477"
+        }
+      ]
+    },
+    "search_ready_but_no_title": {
+      "count": 0,
+      "sample": []
+    },
+    "search_ready_but_no_description": {
+      "count": 0,
+      "sample": []
+    },
+    "orphan_no_original_no_thumb": {
+      "count": 1356,
+      "sample": [
+        {
+          "id": 123,
+          "slug": "volcan-poas-crater-view-123",
+          "title": "Volc\u00e1n Po\u00e1s Photography \u2014 Costa Rica",
+          "status": "archived_unrecoverable",
+          "ready_for_public_render": false,
+          "search_ready": false,
+          "derivatives_complete": false,
+          "thumb_url": null,
+          "original_r2_key": null,
+          "updated_at": "2026-06-13 04:24:03.884479"
+        },
+        {
+          "id": 799,
+          "slug": "2018-04-30-11-56-46-1-799",
+          "title": "landscape \u2014 Arenal Volcano",
+          "status": "draft",
+          "ready_for_public_render": false,
+          "search_ready": false,
+          "derivatives_complete": false,
+          "thumb_url": null,
+          "original_r2_key": null,
+          "updated_at": "2026-06-12 11:24:14.942521"
+        },
+        {
+          "id": 890,
+          "slug": "2020-09-13-07-31-41-1-890",
+          "title": "landscape \u2014 Central Valley Beaches - 890",
+          "status": "draft",
+          "ready_for_public_render": false,
+          "search_ready": false,
+          "derivatives_complete": false,
+          "thumb_url": null,
+          "original_r2_key": null,
+          "updated_at": "2026-06-12 11:24:14.942521"
+        },
+        {
+          "id": 891,
+          "slug": "2020-10-30-06-17-00-1-891",
+          "title": "landscape \u2014 Central Valley Beaches - 891",
+          "status": "draft",
+          "ready_for_public_render": false,
+          "search_ready": false,
+          "derivatives_complete": false,
+          "thumb_url": null,
+          "original_r2_key": null,
+          "updated_at": "2026-06-12 11:24:14.942521"
+        },
+        {
+          "id": 87096,
+          "slug": "2022-07-04-11-36-36-1",
+          "title": "Nature Photography from Costa Rica",
+          "status": "rebuild_queued",
+          "ready_for_public_render": false,
+          "search_ready": false,
+          "derivatives_complete": false,
+          "thumb_url": "",
+          "original_r2_key": "",
+          "updated_at": "2026-06-14 06:16:37.333760"
+        },
+        {
+          "id": 87097,
+          "slug": "2022-07-05-08-54-18-1-1",
+          "title": "Nature Photography from Costa Rica",
+          "status": "rebuild_queued",
+          "ready_for_public_render": false,
+          "search_ready": false,
+          "derivatives_complete": false,
+          "thumb_url": "",
+          "original_r2_key": "",
+          "updated_at": "2026-06-14 06:16:37.333760"
+        },
+        {
+          "id": 87098,
+          "slug": "2022-07-05-09-06-43-1",
+          "title": "Nature Photography from Costa Rica",
+          "status": "rebuild_queued",
+          "ready_for_public_render": false,
+          "search_ready": false,
+          "derivatives_complete": false,
+          "thumb_url": "",
+          "original_r2_key": "",
+          "updated_at": "2026-06-14 06:16:37.333760"
+        },
+        {
+          "id": 87099,
+          "slug": "2022-07-05-09-38-00-1",
+          "title": "Nature Photography from Costa Rica",
+          "status": "rebuild_queued",
+          "ready_for_public_render": false,
+          "search_ready": false,
+          "derivatives_complete": false,
+          "thumb_url": "",
+          "original_r2_key": "",
+          "updated_at": "2026-06-14 06:16:37.333760"
+        },
+        {
+          "id": 87100,
+          "slug": "20220703-143416-pano-1",
+          "title": "Panoramic Landscape Photography",
+          "status": "rebuild_queued",
+          "ready_for_public_render": false,
+          "search_ready": false,
+          "derivatives_complete": false,
+          "thumb_url": "",
+          "original_r2_key": "",
+          "updated_at": "2026-06-14 06:16:37.333760"
+        },
+        {
+          "id": 87101,
+          "slug": "20220704-110237-pano-1",
+          "title": "Panoramic Landscape Photography",
+          "status": "rebuild_queued",
+          "ready_for_public_render": false,
+          "search_ready": false,
+          "derivatives_complete": false,
+          "thumb_url": "",
+          "original_r2_key": "",
+          "updated_at": "2026-06-14 06:16:37.333760"
+        }
+      ]
+    },
+    "status_manual_review_but_not_render_ready": {
+      "count": 0,
+      "sample": []
+    },
+    "status_archived_still_render_ready": {
+      "count": 199,
+      "sample": [
+        {
+          "id": 34,
+          "slug": "cloud-forest-mist",
+          "title": "Monteverde Cloud Forest - Puntarenas - Costa Rica",
+          "status": "archived",
+          "ready_for_public_render": true,
+          "search_ready": false,
+          "derivatives_complete": true,
+          "thumb_url": "https://images.wildphotography.com/derivatives/34/34a41786774cf007af8d3212116423c695410ae39a995b49613ad85a6aa39c83/34a41786774cf007af8d3212116423c695410ae39a995b49613ad85a6aa39c83_thumb.jpg",
+          "original_r2_key": "originals/34/3433b7bf23c7c4a6ba5faa0cd784e638cb79b8aaf83f55d79070ee2591c2b6e9.jpg",
+          "updated_at": "2026-06-13 12:44:31.465076"
+        },
+        {
+          "id": 70,
+          "slug": "img-9919-1-jpg-gMdJDM",
+          "title": "Guanacaste Surf Photography",
+          "status": "archived",
+          "ready_for_public_render": true,
+          "search_ready": true,
+          "derivatives_complete": true,
+          "thumb_url": "https://images.wildphotography.com/derivatives/uncategorized/img-9919-1-jpg-gMdJDM_thumb.jpg",
+          "original_r2_key": "originals/uncategorized/IMG_9919(1).JPG",
+          "updated_at": "2026-06-13 12:15:55.897322"
+        },
+        {
+          "id": 139,
+          "slug": "default-QDVfNk",
+          "title": "landscape \u2014 Volcan Poas \u2014 #139 | WildPhotography",
+          "status": "archived",
+          "ready_for_public_render": true,
+          "search_ready": false,
+          "derivatives_complete": true,
+          "thumb_url": "https://images.wildphotography.com/derivatives/139/default-QDVfNk-thumb.jpg",
+          "original_r2_key": "originals/10139/IMG_5311.JPG",
+          "updated_at": "2026-06-13 14:16:49.224983"
+        },
+        {
+          "id": 738,
+          "slug": "2021-04-11-08-34-03-jpg",
+          "title": "landscape \u2014 Volc\u00e1n Iraz\u00fa \u2014 #738 | WildPhotography",
+          "status": "archived",
+          "ready_for_public_render": true,
+          "search_ready": false,
+          "derivatives_complete": true,
+          "thumb_url": "https://images.wildphotography.com/derivatives/738/2021-04-11-08-34-03-jpg-thumb.jpg",
+          "original_r2_key": "originals/2021-04-11 08.34.03.jpg",
+          "updated_at": "2026-06-12 21:30:35.747477"
+        },
+        {
+          "id": 739,
+          "slug": "2021-04-11-08-38-14-jpg",
+          "title": "landscape \u2014 Volc\u00e1n Iraz\u00fa \u2014 #739 | WildPhotography",
+          "status": "archived",
+          "ready_for_public_render": true,
+          "search_ready": false,
+          "derivatives_complete": true,
+          "thumb_url": "https://images.wildphotography.com/derivatives/739/2021-04-11-08-38-14-jpg-thumb.jpg",
+          "original_r2_key": "originals/2021-04-11 08.38.14.jpg",
+          "updated_at": "2026-06-12 21:30:35.747477"
+        },
+        {
+          "id": 740,
+          "slug": "2021-04-11-08-39-39-jpg",
+          "title": "landscape \u2014 Volc\u00e1n Iraz\u00fa \u2014 #740 | WildPhotography",
+          "status": "archived",
+          "ready_for_public_render": true,
+          "search_ready": false,
+          "derivatives_complete": true,
+          "thumb_url": "https://images.wildphotography.com/derivatives/740/2021-04-11-08-39-39-jpg-thumb.jpg",
+          "original_r2_key": "originals/2021-04-11 08.39.39.jpg",
+          "updated_at": "2026-06-12 21:30:35.747477"
+        },
+        {
+          "id": 741,
+          "slug": "2021-04-11-08-40-34-jpg",
+          "title": "landscape \u2014 Volc\u00e1n Iraz\u00fa \u2014 #741 | WildPhotography",
+          "status": "archived",
+          "ready_for_public_render": true,
+          "search_ready": false,
+          "derivatives_complete": true,
+          "thumb_url": "https://images.wildphotography.com/derivatives/741/2021-04-11-08-40-34-jpg-thumb.jpg",
+          "original_r2_key": "originals/2021-04-11 08.40.34.jpg",
+          "updated_at": "2026-06-12 21:30:35.747477"
+        },
+        {
+          "id": 742,
+          "slug": "2021-04-11-08-43-38-jpg",
+          "title": "landscape \u2014 Volc\u00e1n Iraz\u00fa \u2014 #742 | WildPhotography",
+          "status": "archived",
+          "ready_for_public_render": true,
+          "search_ready": false,
+          "derivatives_complete": true,
+          "thumb_url": "https://images.wildphotography.com/derivatives/742/2021-04-11-08-43-38-jpg-thumb.jpg",
+          "original_r2_key": "originals/2021-04-11 08.43.38.jpg",
+          "updated_at": "2026-06-12 21:30:35.747477"
+        },
+        {
+          "id": 744,
+          "slug": "2021-04-11-09-08-29-jpg",
+          "title": "landscape \u2014 Volc\u00e1n Iraz\u00fa \u2014 #744 | WildPhotography",
+          "status": "archived",
+          "ready_for_public_render": true,
+          "search_ready": false,
+          "derivatives_complete": true,
+          "thumb_url": "https://images.wildphotography.com/derivatives/744/2021-04-11-09-08-29-jpg-thumb.jpg",
+          "original_r2_key": "originals/2021-04-11 09.08.29.jpg",
+          "updated_at": "2026-06-12 21:30:35.747477"
+        },
+        {
+          "id": 745,
+          "slug": "2021-04-11-09-08-40-jpg",
+          "title": "landscape \u2014 Volc\u00e1n Iraz\u00fa \u2014 #745 | WildPhotography",
+          "status": "archived",
+          "ready_for_public_render": true,
+          "search_ready": false,
+          "derivatives_complete": true,
+          "thumb_url": "https://images.wildphotography.com/derivatives/745/2021-04-11-09-08-40-jpg-thumb.jpg",
+          "original_r2_key": "originals/2021-04-11 09.08.40.jpg",
+          "updated_at": "2026-06-12 21:30:35.747477"
+        }
+      ]
+    },
+    "status_archived_still_search_ready": {
+      "count": 63,
+      "sample": [
+        {
+          "id": 70,
+          "slug": "img-9919-1-jpg-gMdJDM",
+          "title": "Guanacaste Surf Photography",
+          "status": "archived",
+          "ready_for_public_render": true,
+          "search_ready": true,
+          "derivatives_complete": true,
+          "thumb_url": "https://images.wildphotography.com/derivatives/uncategorized/img-9919-1-jpg-gMdJDM_thumb.jpg",
+          "original_r2_key": "originals/uncategorized/IMG_9919(1).JPG",
+          "updated_at": "2026-06-13 12:15:55.897322"
+        },
+        {
+          "id": 14910,
+          "slug": "scarlet-macaw-dji0726",
+          "title": "Scarlet Macaw in Costa Rica, Costa Rica",
+          "status": "archived",
+          "ready_for_public_render": true,
+          "search_ready": true,
+          "derivatives_complete": true,
+          "thumb_url": "https://images.wildphotography.com/derivatives/14910/scarlet-macaw-dji0726-thumb.jpg",
+          "original_r2_key": "photos/sc/ar/originals/scarlet-macaw-dji0726.jpg",
+          "updated_at": "2026-06-12 11:24:14.942521"
+        },
+        {
+          "id": 14911,
+          "slug": "scarlet-macaw-dji0727",
+          "title": "Scarlet Macaw \u2014 Uncategorized \u2014 #14911 | WildPhotography",
+          "status": "archived",
+          "ready_for_public_render": true,
+          "search_ready": true,
+          "derivatives_complete": true,
+          "thumb_url": "https://images.wildphotography.com/derivatives/14911/scarlet-macaw-dji0727-thumb.jpg",
+          "original_r2_key": "photos/sc/ar/originals/scarlet-macaw-dji0727.jpg",
+          "updated_at": "2026-06-12 11:24:14.942521"
+        },
+        {
+          "id": 14912,
+          "slug": "scarlet-macaw-img6713",
+          "title": "Scarlet Macaw \u2014 Uncategorized \u2014 #14912 | WildPhotography",
+          "status": "archived",
+          "ready_for_public_render": true,
+          "search_ready": true,
+          "derivatives_complete": true,
+          "thumb_url": "https://images.wildphotography.com/derivatives/14912/scarlet-macaw-img6713-thumb.jpg",
+          "original_r2_key": "photos/sc/ar/originals/scarlet-macaw-img6713.jpg",
+          "updated_at": "2026-06-12 11:24:14.942521"
+        },
+        {
+          "id": 14913,
+          "slug": "scarlet-macaw-img0495",
+          "title": "Scarlet Macaw \u2014 Uncategorized \u2014 #14913 | WildPhotography",
+          "status": "archived",
+          "ready_for_public_render": true,
+          "search_ready": true,
+          "derivatives_complete": true,
+          "thumb_url": "https://images.wildphotography.com/derivatives/14913/scarlet-macaw-img0495-thumb.jpg",
+          "original_r2_key": "photos/sc/ar/originals/scarlet-macaw-img0495.jpg",
+          "updated_at": "2026-06-12 11:24:14.942521"
+        },
+        {
+          "id": 14926,
+          "slug": "white-throated-magpie-jay-img8458",
+          "title": "White-throated Magpie-Jay \u2014 Uncategorized \u2014 #14926 | WildPhotography",
+          "status": "archived",
+          "ready_for_public_render": true,
+          "search_ready": true,
+          "derivatives_complete": true,
+          "thumb_url": "https://images.wildphotography.com/derivatives/14926/white-throated-magpie-jay-img8458-thumb.jpg",
+          "original_r2_key": "photos/wh/it/originals/white-throated-magpie-jay-img8458.jpg",
+          "updated_at": "2026-06-12 11:24:14.942521"
+        },
+        {
+          "id": 14927,
+          "slug": "keel-billed-toucan-img0311",
+          "title": "Keel-billed Toucan \u2014 Uncategorized \u2014 #14927 | WildPhotography",
+          "status": "archived",
+          "ready_for_public_render": true,
+          "search_ready": true,
+          "derivatives_complete": true,
+          "thumb_url": "https://images.wildphotography.com/derivatives/14927/keel-billed-toucan-img0311-thumb.jpg",
+          "original_r2_key": "photos/ke/el/originals/keel-billed-toucan-img0311.jpg",
+          "updated_at": "2026-06-12 11:24:14.942521"
+        },
+        {
+          "id": 14928,
+          "slug": "keel-billed-toucan-img0331",
+          "title": "Keel-billed Toucan \u2014 Uncategorized \u2014 #14928 | WildPhotography",
+          "status": "archived",
+          "ready_for_public_render": true,
+          "search_ready": true,
+          "derivatives_complete": true,
+          "thumb_url": "https://images.wildphotography.com/derivatives/14928/keel-billed-toucan-img0331-thumb.jpg",
+          "original_r2_key": "photos/ke/el/originals/keel-billed-toucan-img0331.jpg",
+          "updated_at": "2026-06-12 11:24:14.942521"
+        },
+        {
+          "id": 14929,
+          "slug": "keel-billed-toucan-img0359",
+          "title": "Keel-billed Toucan \u2014 Uncategorized \u2014 #14929 | WildPhotography",
+          "status": "archived",
+          "ready_for_public_render": true,
+          "search_ready": true,
+          "derivatives_complete": true,
+          "thumb_url": "https://images.wildphotography.com/derivatives/14929/keel-billed-toucan-img0359-thumb.jpg",
+          "original_r2_key": "photos/ke/el/originals/keel-billed-toucan-img0359.jpg",
+          "updated_at": "2026-06-12 11:24:14.942521"
+        },
+        {
+          "id": 14930,
+          "slug": "keel-billed-toucan-img0712",
+          "title": "Keel-billed Toucan \u2014 Uncategorized \u2014 #14930 | WildPhotography",
+          "status": "archived",
+          "ready_for_public_render": true,
+          "search_ready": true,
+          "derivatives_complete": true,
+          "thumb_url": "https://images.wildphotography.com/derivatives/14930/keel-billed-toucan-img0712-thumb.jpg",
+          "original_r2_key": "photos/ke/el/originals/keel-billed-toucan-img0712.jpg",
+          "updated_at": "2026-06-12 11:24:14.942521"
+        }
+      ]
+    }
+  },
+  "status": "success"
+}

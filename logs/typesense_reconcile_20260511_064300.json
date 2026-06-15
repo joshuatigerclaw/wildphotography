@@ -1,0 +1,14 @@
+{
+  "run_at": "2026-05-11T06:43:00Z",
+  "eligible_db_count": 41156,
+  "typesense_count_before": 16738,
+  "stale_removed": 0,
+  "missing_added": 0,
+  "typesense_count_after": 16738,
+  "final_drift": 24418,
+  "status": "blocked_oom",
+  "duration_seconds": 5,
+  "oom_active": true,
+  "health_response": {"ok":true,"resource_error":"OUT_OF_MEMORY"},
+  "note": "Cluster OOM - all writes rejected (422 OUT_OF_MEMORY). Cluster was already OOM at 16,738 docs when run started. Drift grew to 24,418 since last successful write pass. Reconcile blocked until cluster recovers."
+}

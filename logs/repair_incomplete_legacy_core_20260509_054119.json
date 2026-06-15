@@ -1,0 +1,1193 @@
+{
+  "run_at": "2026-05-09T11:41:19.203980+00:00",
+  "total_photos": 40395,
+  "distinct_affected_photos": 775,
+  "all_clear": false,
+  "issues": {
+    "missing_original_r2_key": {
+      "description": "Missing original R2 storage key \u2014 cannot rebuild derivatives",
+      "count": 60,
+      "sample": [
+        {
+          "id": 18,
+          "slug": "keel-billed-toucan",
+          "status": "ready",
+          "updated_at": "2026-05-07T20:28:40.366538"
+        },
+        {
+          "id": 20,
+          "slug": "capuchin-monkey",
+          "status": "legacy_static",
+          "updated_at": "2026-05-01T04:33:07.817987"
+        },
+        {
+          "id": 22,
+          "slug": "blue-morpho",
+          "status": "ready",
+          "updated_at": "2026-05-07T20:28:40.366538"
+        },
+        {
+          "id": 25,
+          "slug": "rufous-hummingbird",
+          "status": "repair",
+          "updated_at": "2026-05-07T20:12:14.226826"
+        },
+        {
+          "id": 26,
+          "slug": "magpie-jay",
+          "status": "ready",
+          "updated_at": "2026-05-07T20:28:40.366538"
+        },
+        {
+          "id": 28,
+          "slug": "green-honeycreeper",
+          "status": "ready",
+          "updated_at": "2026-05-07T20:28:40.366538"
+        },
+        {
+          "id": 34,
+          "slug": "cloud-forest-mist",
+          "status": "ready",
+          "updated_at": "2026-05-07T20:28:40.366538"
+        },
+        {
+          "id": 41,
+          "slug": "img-9967-2-jpg-J88LxN",
+          "status": "ready",
+          "updated_at": "2026-05-07T20:28:40.366538"
+        },
+        {
+          "id": 70,
+          "slug": "img-9919-1-jpg-gMdJDM",
+          "status": "superseded",
+          "updated_at": "2026-05-07T20:12:34.191572"
+        },
+        {
+          "id": 121,
+          "slug": "san-jose-costa-rica-volcanic-eruption-of-turrialba-volcano-o-qCMG8F",
+          "status": "repair",
+          "updated_at": "2026-05-09T06:59:54.035780"
+        },
+        {
+          "id": 122,
+          "slug": "sunrise-over-san-jose-with-turrialba-volcano-great-photos-an-VVrCpj",
+          "status": "repair",
+          "updated_at": "2026-05-09T06:59:54.109783"
+        },
+        {
+          "id": 123,
+          "slug": "volcan-poas-crater-view-123",
+          "status": "repair",
+          "updated_at": "2026-05-09T06:59:54.182049"
+        },
+        {
+          "id": 126,
+          "slug": "volcan-poas-aerial-view-126",
+          "status": "repair",
+          "updated_at": "2026-05-09T06:59:54.255853"
+        },
+        {
+          "id": 127,
+          "slug": "volcan-poas-aerial-view-127",
+          "status": "repair",
+          "updated_at": "2026-05-06T23:00:10.350770"
+        },
+        {
+          "id": 128,
+          "slug": "volcan-poas-aerial-view-128",
+          "status": "repair",
+          "updated_at": "2026-05-09T06:59:54.327322"
+        },
+        {
+          "id": 130,
+          "slug": "volcan-poas-crater-view-130",
+          "status": "repair",
+          "updated_at": "2026-05-09T06:59:54.401332"
+        },
+        {
+          "id": 131,
+          "slug": "default-8KMnRN",
+          "status": "repair",
+          "updated_at": "2026-05-09T06:59:54.472825"
+        },
+        {
+          "id": 132,
+          "slug": "volcan-poas-crater-view-132",
+          "status": "repair",
+          "updated_at": "2026-05-06T23:00:10.350770"
+        },
+        {
+          "id": 133,
+          "slug": "volcan-poas-crater-view-133",
+          "status": "repair",
+          "updated_at": "2026-05-09T06:59:54.546928"
+        },
+        {
+          "id": 134,
+          "slug": "volcan-poas-aerial-view-134",
+          "status": "repair",
+          "updated_at": "2026-05-09T06:59:54.619640"
+        },
+        {
+          "id": 137,
+          "slug": "volcan-poas-crater-view-137",
+          "status": "repair",
+          "updated_at": "2026-05-09T06:59:54.693324"
+        },
+        {
+          "id": 140,
+          "slug": "volcan-poas-crater-view-140",
+          "status": "repair",
+          "updated_at": "2026-05-09T06:59:54.765497"
+        },
+        {
+          "id": 141,
+          "slug": "volcan-poas-crater-view-141",
+          "status": "repair",
+          "updated_at": "2026-05-09T06:59:54.839310"
+        },
+        {
+          "id": 143,
+          "slug": "volcan-poas-crater-view-143",
+          "status": "repair",
+          "updated_at": "2026-05-09T06:59:54.911968"
+        },
+        {
+          "id": 144,
+          "slug": "volcan-poas-crater-view-144",
+          "status": "repair",
+          "updated_at": "2026-05-09T06:59:54.985117"
+        },
+        {
+          "id": 145,
+          "slug": "volcan-poas-aerial-view-145",
+          "status": "repair",
+          "updated_at": "2026-05-09T06:59:55.056831"
+        },
+        {
+          "id": 146,
+          "slug": "volcan-poas-aerial-view-146",
+          "status": "repair",
+          "updated_at": "2026-05-09T06:59:55.129835"
+        },
+        {
+          "id": 147,
+          "slug": "volcan-poas--3DPvwx",
+          "status": "repair",
+          "updated_at": "2026-05-09T06:59:55.201789"
+        },
+        {
+          "id": 161,
+          "slug": "turtles--7dhP5n",
+          "status": "repair",
+          "updated_at": "2026-05-07T20:12:14.226826"
+        },
+        {
+          "id": 162,
+          "slug": "turtles--wM9WsK",
+          "status": "repair",
+          "updated_at": "2026-05-07T20:12:14.226826"
+        },
+        {
+          "id": 163,
+          "slug": "turtles--TF4Hws",
+          "status": "repair",
+          "updated_at": "2026-05-07T20:12:14.226826"
+        },
+        {
+          "id": 170,
+          "slug": "baby-oliver-ridley-turtle-making-its-way-back-to-the-ocean-i-HxMLQ6",
+          "status": "manual_review_required",
+          "updated_at": "2026-05-08T09:12:00.047229"
+        },
+        {
+          "id": 173,
+          "slug": "baby-oliver-ridley-turtle-making-its-way-back-to-the-ocean-i-gp3VLc",
+          "status": "manual_review_required",
+          "updated_at": "2026-05-09T06:59:55.276270"
+        },
+        {
+          "id": 181,
+          "slug": "tracks-on-the-beach-with-the-sea-JPtCxd",
+          "status": "manual_review_required",
+          "updated_at": "2026-05-09T06:59:55.348316"
+        },
+        {
+          "id": 182,
+          "slug": "turtle-tracks-on-the-dark-sandy-beach-kCsnjf",
+          "status": "manual_review_required",
+          "updated_at": "2026-05-09T06:59:55.421295"
+        },
+        {
+          "id": 184,
+          "slug": "turtle-tracks-on-dark-sand-beach-at-dusk-37JPt2",
+          "status": "manual_review_required",
+          "updated_at": "2026-05-09T06:59:55.492810"
+        },
+        {
+          "id": 186,
+          "slug": "curu-wildlife-rerve-nicoya-peninsula-costa-rica-great-photos-spN5XN",
+          "status": "manual_review_required",
+          "updated_at": "2026-05-09T06:59:55.566876"
+        },
+        {
+          "id": 188,
+          "slug": "rivers--qv3CCQ",
+          "status": "manual_review_required",
+          "updated_at": "2026-05-09T06:59:55.639230"
+        },
+        {
+          "id": 189,
+          "slug": "rivers--tdzxKz",
+          "status": "manual_review_required",
+          "updated_at": "2026-05-09T06:59:55.711837"
+        },
+        {
+          "id": 190,
+          "slug": "rivers--qpGwvw",
+          "status": "manual_review_required",
+          "updated_at": "2026-05-09T06:59:55.783298"
+        },
+        {
+          "id": 191,
+          "slug": "rivers--tChW5N",
+          "status": "manual_review_required",
+          "updated_at": "2026-05-04T04:48:00.047655"
+        },
+        {
+          "id": 194,
+          "slug": "rivers--srmHmM",
+          "status": "manual_review_required",
+          "updated_at": "2026-05-09T06:59:55.856327"
+        },
+        {
+          "id": 195,
+          "slug": "rivers--h77XXD",
+          "status": "manual_review_required",
+          "updated_at": "2026-05-09T06:59:55.927386"
+        },
+        {
+          "id": 198,
+          "slug": "2020-09-13-07-34-01-1-jpg-6x5w3T",
+          "status": "manual_review_required",
+          "updated_at": "2026-05-06T23:00:10.350770"
+        },
+        {
+          "id": 199,
+          "slug": "2020-09-13-07-34-46-1-jpg-3VZfM5",
+          "status": "manual_review_required",
+          "updated_at": "2026-05-09T06:59:56.000667"
+        },
+        {
+          "id": 214,
+          "slug": "guanacaste-rivers-costa-rica-214",
+          "status": "manual_review_required",
+          "updated_at": "2026-05-09T06:59:56.071930"
+        },
+        {
+          "id": 215,
+          "slug": "guanacaste-rivers-costa-rica-215",
+          "status": "manual_review_required",
+          "updated_at": "2026-05-09T06:59:56.143702"
+        },
+        {
+          "id": 216,
+          "slug": "guanacaste-rivers-costa-rica-216",
+          "status": "manual_review_required",
+          "updated_at": "2026-05-06T23:00:10.350770"
+        },
+        {
+          "id": 237,
+          "slug": "lush-rainforest-river-verdant-beauty-tranquil-flow-Bj6C6s",
+          "status": "manual_review_required",
+          "updated_at": "2026-05-06T23:00:10.350770"
+        },
+        {
+          "id": 238,
+          "slug": "lush-rainforest-river-rapids-pristine-nature-6nLzd9",
+          "status": "manual_review_required",
+          "updated_at": "2026-05-09T06:59:56.216878"
+        }
+      ]
+    },
+    "pending_derivatives_with_r2": {
+      "description": "Has R2 original but derivatives_complete=false \u2014 needs rebuild dispatch",
+      "count": 72,
+      "sample": [
+        {
+          "id": 43880,
+          "slug": "peninsula-de-nicoya--_cl0a0969",
+          "status": "manual_review_required",
+          "original_r2_key": "originals/volcan-irazu/"
+        },
+        {
+          "id": 43899,
+          "slug": "people-watching--_2019-12-26-13-02-42",
+          "status": "manual_review_required",
+          "original_r2_key": "originals/volcan-irazu/"
+        },
+        {
+          "id": 43997,
+          "slug": "playas-del-coco--_2022-03-12-12-08-28",
+          "status": "manual_review_required",
+          "original_r2_key": "originals/volcan-irazu/"
+        },
+        {
+          "id": 43998,
+          "slug": "rio-savagre-costa-rica--_2020-06-05-11-37-07",
+          "status": "manual_review_required",
+          "original_r2_key": "originals/volcan-irazu/"
+        },
+        {
+          "id": 44218,
+          "slug": "peninsula-papagayo--_2020-11-26-14-11-13",
+          "status": "manual_review_required",
+          "original_r2_key": "originals/volcan-irazu/"
+        },
+        {
+          "id": 44311,
+          "slug": "punta-leona--_2021-06-11-09-12-03",
+          "status": "manual_review_required",
+          "original_r2_key": "originals/volcan-irazu/"
+        },
+        {
+          "id": 44312,
+          "slug": "montezuma-costa-rica--_2021-03-25-11-39-45",
+          "status": "manual_review_required",
+          "original_r2_key": "originals/volcan-irazu/"
+        },
+        {
+          "id": 44313,
+          "slug": "puntarenas-costa-rica--_2018-08-03-17-34-23",
+          "status": "manual_review_required",
+          "original_r2_key": "originals/volcan-irazu/"
+        },
+        {
+          "id": 47538,
+          "slug": "birds--_img_6540-001",
+          "status": "imported",
+          "original_r2_key": "originals/368055f7dfb8f4d71191c21bf9b0325d6cacb4d83cc55f66f529095e62b1e893.jpg"
+        },
+        {
+          "id": 47540,
+          "slug": "birds--_img_8458",
+          "status": "imported",
+          "original_r2_key": "originals/6ed2569d99ace25f956e0a3263cd35b2b6c056de40f9865fb5c9ec847b1a9973.jpg"
+        },
+        {
+          "id": 47542,
+          "slug": "birds--_img_7190",
+          "status": "imported",
+          "original_r2_key": "originals/93dcef2d7445d2eb5832bae40d23bf6eab4ed6fe3a862ba425ba973c3b877fdd.jpg"
+        },
+        {
+          "id": 47544,
+          "slug": "birds--_img_7447",
+          "status": "imported",
+          "original_r2_key": "originals/767f1775335fe77f877d54abbf586e94c49326737c55b9d5947f1bb2289ab954.jpg"
+        },
+        {
+          "id": 47546,
+          "slug": "birds--_img_7451",
+          "status": "imported",
+          "original_r2_key": "originals/fbdb29d5168bfd2adc72383a0b7a321b02b03d8513db0cdcdf82615241478576.jpg"
+        },
+        {
+          "id": 47548,
+          "slug": "birds--_img_1418",
+          "status": "imported",
+          "original_r2_key": "originals/278246cddc7c4a818f189450ccae0cba687b800ccd58f56f520d7bd770d39298.jpg"
+        },
+        {
+          "id": 47550,
+          "slug": "birds--_img_2326",
+          "status": "imported",
+          "original_r2_key": "originals/109f301f0916448207348b0d5e41c080b3dc74b9eaceedb14de71f683a4fcb32.jpg"
+        },
+        {
+          "id": 47552,
+          "slug": "birds--_ar_img_1724",
+          "status": "imported",
+          "original_r2_key": "originals/474aa64ed82206d4ca18f4aa5a5639767317170549b6d706a65bbc7e169b040f.jpg"
+        },
+        {
+          "id": 47554,
+          "slug": "birds--_img_5474",
+          "status": "imported",
+          "original_r2_key": "originals/7d1dd6250f506662b874df704b03c5d8fc70d2fb0f140a32948310e30a7e9cb4.jpg"
+        },
+        {
+          "id": 47556,
+          "slug": "birds--_img_6704",
+          "status": "imported",
+          "original_r2_key": "originals/a6b69af4397ad9a872899635ccfb7b366e5729a9c3b25a8dbd2395b3103008b0.jpg"
+        },
+        {
+          "id": 47558,
+          "slug": "birds--_img_7818",
+          "status": "imported",
+          "original_r2_key": "originals/fc489aaf73d31c3a306b9db87a66b006a0f72ad4d732fed80ef7a4298d505627.jpg"
+        },
+        {
+          "id": 47560,
+          "slug": "birds--_img_4340",
+          "status": "imported",
+          "original_r2_key": "originals/9d32975d29fbab0c7b051a433129c0389a9aa1194e0402004dd67f0cca1f7d1e.jpg"
+        },
+        {
+          "id": 47562,
+          "slug": "birds--_img_0712",
+          "status": "imported",
+          "original_r2_key": "originals/fd4df4a626b1124f7c2a91a4ec0bf545e743e86ef1e93caaab5859729e1d8c37.jpg"
+        },
+        {
+          "id": 47564,
+          "slug": "birds--_img_0495",
+          "status": "imported",
+          "original_r2_key": "originals/c8783a6612ac177932477ab31fce6a29ad6d69a15d34008a5b7410e7e0d86669.jpg"
+        },
+        {
+          "id": 47566,
+          "slug": "birds--_img_1015",
+          "status": "imported",
+          "original_r2_key": "originals/bba32fe6017d81f5ebaa49d5abe7d40304f15b8e19fb9fefc4218bee5b229df5.jpg"
+        },
+        {
+          "id": 47568,
+          "slug": "birds--_img_1025",
+          "status": "imported",
+          "original_r2_key": "originals/7db2d6a254037c3595f01232da94e883d855402723867178d2ec936793c83293.jpg"
+        },
+        {
+          "id": 47570,
+          "slug": "birds--_cl0a1521",
+          "status": "imported",
+          "original_r2_key": "originals/cdda187d97a9b64c6892ec7e4a2be569476324b4bf83999edccb51204d28635b.jpg"
+        },
+        {
+          "id": 47572,
+          "slug": "birds--_cl0a1659",
+          "status": "imported",
+          "original_r2_key": "originals/43515c5559f3968cfa68100e7fbbdc7f4afcbb150f7e3dc0182dee66573a675d.jpg"
+        },
+        {
+          "id": 47574,
+          "slug": "birds--_cl0a1660",
+          "status": "imported",
+          "original_r2_key": "originals/882a9800244c58b6117bf8cc6f4634a19b1087be454cc6ac7500044129eea7a9.jpg"
+        },
+        {
+          "id": 47576,
+          "slug": "birds--_cl0a2887",
+          "status": "imported",
+          "original_r2_key": "originals/dec757ca30434cf61e8f007edc18f0cf00021cd79609797786e630bb54057001.jpg"
+        },
+        {
+          "id": 47578,
+          "slug": "birds--_cl0a0992",
+          "status": "imported",
+          "original_r2_key": "originals/ef9f96be8a159ae2e0101cfe04c6a247cd184dcc435ec7208d54e84d79296fb1.jpg"
+        },
+        {
+          "id": 47580,
+          "slug": "birds--_cl0a1052",
+          "status": "imported",
+          "original_r2_key": "originals/f952dbdc2a9cad9a2e0fbc7f681c15384fe6a8fd5ee64e60e0098fc701851b20.jpg"
+        },
+        {
+          "id": 47582,
+          "slug": "birds--_cl0a1100",
+          "status": "imported",
+          "original_r2_key": "originals/01c217571b8c1c242ebabe07e4f1ffa00cb7b5b85dc3ac90cb6bb34b026a4dc6.jpg"
+        },
+        {
+          "id": 47588,
+          "slug": "birds--_img_5948",
+          "status": "imported",
+          "original_r2_key": "originals/c37eacddb295d67111354cd143049a214b25b3b52e91dce924d07aa3fba02900.jpg"
+        },
+        {
+          "id": 47592,
+          "slug": "birds--_img_0003-001",
+          "status": "imported",
+          "original_r2_key": "originals/c8b619ed8225ce0fea75a994ad6d0b455ee2a59cf053bb307a89cb99efa3e622.jpg"
+        },
+        {
+          "id": 47594,
+          "slug": "birds--_img_1236",
+          "status": "imported",
+          "original_r2_key": "originals/55f2c24953bbd9adaecbf606180929a0387a2a6c790265ffff4caa328d13da75.jpg"
+        },
+        {
+          "id": 47596,
+          "slug": "birds--_img_4270",
+          "status": "imported",
+          "original_r2_key": "originals/9c1d89b41624dd230f449644377272bb1652df3172bc96776ae5a097aacacda9.jpg"
+        },
+        {
+          "id": 47598,
+          "slug": "birds--_img_0237",
+          "status": "imported",
+          "original_r2_key": "originals/5dd40441f094f1d557d25a051ba6cc95e8a3f5cd304e6dda008ba9e711293f5c.jpg"
+        },
+        {
+          "id": 47601,
+          "slug": "birds--_img_3401",
+          "status": "imported",
+          "original_r2_key": "originals/3e28dc9041d2aae447c44e63dd05c741c0613a4613c8f2e0d038190b924ef1b9.jpg"
+        },
+        {
+          "id": 47604,
+          "slug": "birds--_img_3080",
+          "status": "imported",
+          "original_r2_key": "originals/0069c5f8a8296a895b059e9366b7a2a01f5604d82df3e098e8f550255c3f685c.jpg"
+        },
+        {
+          "id": 47605,
+          "slug": "birds-img_4465",
+          "status": "imported",
+          "original_r2_key": "originals/db99422c43512f25b6a8b26ef982e360fb403e99211c7c8a81daaef637d05027.jpg"
+        },
+        {
+          "id": 47606,
+          "slug": "birds-img_4623",
+          "status": "imported",
+          "original_r2_key": "originals/3cbbe6621cb9577163f3048ea157613048880f4bbadfab450c691f063bfbae01.jpg"
+        },
+        {
+          "id": 47607,
+          "slug": "birds-img_4549",
+          "status": "imported",
+          "original_r2_key": "originals/bda92c53f8c860e1697dc5f830cc7f95433f36e04817eacecc577081d50367e7.jpg"
+        },
+        {
+          "id": 47608,
+          "slug": "birds--_img_4549",
+          "status": "imported",
+          "original_r2_key": "originals/bda92c53f8c860e1697dc5f830cc7f95433f36e04817eacecc577081d50367e7.jpg"
+        },
+        {
+          "id": 47609,
+          "slug": "birds-img_4441",
+          "status": "imported",
+          "original_r2_key": "originals/04b981abff0d99506f87379513598a5aabc82cd2a2ea4b498d5378302c5de662.jpg"
+        },
+        {
+          "id": 47610,
+          "slug": "birds--_img_4441",
+          "status": "imported",
+          "original_r2_key": "originals/04b981abff0d99506f87379513598a5aabc82cd2a2ea4b498d5378302c5de662.jpg"
+        },
+        {
+          "id": 47611,
+          "slug": "birds-img_4716",
+          "status": "imported",
+          "original_r2_key": "originals/8d5fe191d0ee385ca6c5e653f3227fbf977be3b636240fdd3b6db40f9e41dac3.jpg"
+        },
+        {
+          "id": 47612,
+          "slug": "birds-img_4747",
+          "status": "imported",
+          "original_r2_key": "originals/db36fbb812b53b0165f71f99f970682b36820706cd08c2eaecb459abf43f62a0.jpg"
+        },
+        {
+          "id": 47613,
+          "slug": "birds-img_4808",
+          "status": "imported",
+          "original_r2_key": "originals/e78af7b94dc239f4616ed53ddf97713a425fb1b3e7204e5ab60691069391e8b1.jpg"
+        },
+        {
+          "id": 47614,
+          "slug": "birds--_img_4808",
+          "status": "imported",
+          "original_r2_key": "originals/e78af7b94dc239f4616ed53ddf97713a425fb1b3e7204e5ab60691069391e8b1.jpg"
+        },
+        {
+          "id": 47615,
+          "slug": "birds-img_4980",
+          "status": "imported",
+          "original_r2_key": "originals/d40408f3af312b7d9c7bd873ad8593e9da10051ff7f93337f646c6d0688571e7.jpg"
+        },
+        {
+          "id": 47616,
+          "slug": "birds-img_5021",
+          "status": "imported",
+          "original_r2_key": "originals/22c1d4f3a0f324eff5bd9fa38e26d89a3a27e219eedec59e6579c3c1b8b36922.jpg"
+        }
+      ]
+    },
+    "render_ready_not_search_ready": {
+      "description": "ready_for_public_render=true but search_ready=false \u2014 blocked from Typesense",
+      "count": 0,
+      "sample": []
+    },
+    "missing_content_hash": {
+      "description": "No content_hash \u2014 cannot detect duplicates or verify integrity",
+      "count": 15419,
+      "sample": [
+        {
+          "id": 16,
+          "slug": "scarlet-macaw",
+          "status": "ready",
+          "has_r2": true
+        },
+        {
+          "id": 17,
+          "slug": "quetzal",
+          "status": "ready",
+          "has_r2": true
+        },
+        {
+          "id": 18,
+          "slug": "keel-billed-toucan",
+          "status": "ready",
+          "has_r2": false
+        },
+        {
+          "id": 19,
+          "slug": "three-toed-sloth",
+          "status": "ready",
+          "has_r2": true
+        },
+        {
+          "id": 20,
+          "slug": "capuchin-monkey",
+          "status": "legacy_static",
+          "has_r2": false
+        },
+        {
+          "id": 21,
+          "slug": "green-iguana",
+          "status": "ready",
+          "has_r2": true
+        },
+        {
+          "id": 22,
+          "slug": "blue-morpho",
+          "status": "ready",
+          "has_r2": false
+        },
+        {
+          "id": 23,
+          "slug": "spectacled-owl",
+          "status": "ready",
+          "has_r2": true
+        },
+        {
+          "id": 24,
+          "slug": "toucan-barbet",
+          "status": "ready",
+          "has_r2": true
+        },
+        {
+          "id": 25,
+          "slug": "rufous-hummingbird",
+          "status": "repair",
+          "has_r2": false
+        },
+        {
+          "id": 26,
+          "slug": "magpie-jay",
+          "status": "ready",
+          "has_r2": false
+        },
+        {
+          "id": 27,
+          "slug": "collared-aracari",
+          "status": "ready",
+          "has_r2": true
+        },
+        {
+          "id": 28,
+          "slug": "green-honeycreeper",
+          "status": "ready",
+          "has_r2": false
+        },
+        {
+          "id": 29,
+          "slug": "boat-billed-heron",
+          "status": "ready",
+          "has_r2": true
+        },
+        {
+          "id": 30,
+          "slug": "fiery-hummingbird",
+          "status": "ready",
+          "has_r2": true
+        },
+        {
+          "id": 31,
+          "slug": "montezuma-oropendola",
+          "status": "ready",
+          "has_r2": true
+        },
+        {
+          "id": 32,
+          "slug": "volcano-view",
+          "status": "ready",
+          "has_r2": true
+        },
+        {
+          "id": 33,
+          "slug": "pacific-sunset",
+          "status": "ready",
+          "has_r2": true
+        },
+        {
+          "id": 34,
+          "slug": "cloud-forest-mist",
+          "status": "ready",
+          "has_r2": false
+        },
+        {
+          "id": 35,
+          "slug": "rainforest-waterfall",
+          "status": "ready",
+          "has_r2": true
+        },
+        {
+          "id": 41,
+          "slug": "img-9967-2-jpg-J88LxN",
+          "status": "ready",
+          "has_r2": false
+        },
+        {
+          "id": 42,
+          "slug": "paddleboarding-adventure-on-a-tropical-coast-9kLkq4",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 43,
+          "slug": "wading-angler-quiet-water-fishing-scene-dWHshx",
+          "status": "ready",
+          "has_r2": true
+        },
+        {
+          "id": 44,
+          "slug": "img-9761-jpg-McvJMD",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 45,
+          "slug": "img-9867-jpg-ggnxV4",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 46,
+          "slug": "img-0133-jpg-t25Tbt",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 47,
+          "slug": "img-0148-jpg-WgXJsL",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 48,
+          "slug": "img-0135-jpg-x8LCKP",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 49,
+          "slug": "img-0154-jpg-P4g3jH",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 50,
+          "slug": "costa-rica-billabong-surf-2009-5QgMNB",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 51,
+          "slug": "img-0280-jpg-WR6t7s",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 52,
+          "slug": "costa-rica-billabong-surf-2009-PSWCnj",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 53,
+          "slug": "img-9578-jpg-CWp24N",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 54,
+          "slug": "img-9644-jpg-HCxCGn",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 55,
+          "slug": "img-3491-jpg-jHd5JG",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 56,
+          "slug": "img-6629-jpg-dqMnVs",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 57,
+          "slug": "img-0332-jpg-rSSd5X",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 58,
+          "slug": "img-6632-jpg-sTd7RM",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 59,
+          "slug": "img-0341-jpg-kZ3chM",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 60,
+          "slug": "img-9672-jpg-HSKLKj",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 61,
+          "slug": "img-9584-jpg-F3ffkg",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 62,
+          "slug": "img-9468-jpg-pQpxCC",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 63,
+          "slug": "img-9572-jpg-TC4cZc",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 64,
+          "slug": "img-9600-jpg-ZsctXJ",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 65,
+          "slug": "img-9717-jpg-7ZKCZv",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 66,
+          "slug": "img-9723-jpg-qsxkCW",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 67,
+          "slug": "img-9890-jpg-zBSPgj",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 68,
+          "slug": "img-9902-jpg-JwSZbr",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 69,
+          "slug": "img-9843-jpg-hxpDkp",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 70,
+          "slug": "img-9919-1-jpg-gMdJDM",
+          "status": "superseded",
+          "has_r2": false
+        }
+      ]
+    },
+    "missing_slug": {
+      "description": "Null or empty slug \u2014 cannot build public URL",
+      "count": 0,
+      "sample": []
+    },
+    "missing_gallery_slug": {
+      "description": "ready_for_public_render=true but gallery_slug is null \u2014 no gallery association",
+      "count": 2903,
+      "sample": [
+        {
+          "id": 242,
+          "slug": "hermosa-beach-1",
+          "status": "archived"
+        },
+        {
+          "id": 14905,
+          "slug": "resplendent-quetzal",
+          "status": "archived"
+        },
+        {
+          "id": 41302,
+          "slug": "sunrise-sunset-2016-07-31-17-59-49",
+          "status": "published"
+        },
+        {
+          "id": 41303,
+          "slug": "sunrise-sunset-2017-07-15-18-57-45",
+          "status": "published"
+        },
+        {
+          "id": 41304,
+          "slug": "sunrise-sunset-2018-03-29-18-22-12",
+          "status": "published"
+        },
+        {
+          "id": 41305,
+          "slug": "sunrise-sunset-2018-08-21-17-53-04",
+          "status": "published"
+        },
+        {
+          "id": 41306,
+          "slug": "sunrise-sunset-2018-08-21-17-55-57",
+          "status": "published"
+        },
+        {
+          "id": 41307,
+          "slug": "sunrise-sunset-2018-08-21-18-01-08",
+          "status": "published"
+        },
+        {
+          "id": 41308,
+          "slug": "sunrise-sunset-2018-08-21-18-02-56",
+          "status": "published"
+        },
+        {
+          "id": 41309,
+          "slug": "sunrise-sunset-2018-08-21-18-09-15",
+          "status": "published"
+        },
+        {
+          "id": 41310,
+          "slug": "sunrise-sunset-2018-08-24-17-55-36",
+          "status": "published"
+        },
+        {
+          "id": 41311,
+          "slug": "sunrise-sunset-2019-july-19-hyperlapse-0311",
+          "status": "published"
+        },
+        {
+          "id": 41312,
+          "slug": "sunrise-sunset-2019-03-31-05-46-08",
+          "status": "published"
+        },
+        {
+          "id": 41313,
+          "slug": "sunrise-sunset-2019-11-08-17-16-08",
+          "status": "published"
+        },
+        {
+          "id": 41314,
+          "slug": "sunrise-sunset-2020-06-06-17-38-31",
+          "status": "published"
+        },
+        {
+          "id": 41315,
+          "slug": "sunrise-sunset-2020-06-07-17-57-31",
+          "status": "published"
+        },
+        {
+          "id": 41316,
+          "slug": "sunrise-sunset-2020-06-07-17-58-30",
+          "status": "published"
+        },
+        {
+          "id": 41317,
+          "slug": "sunrise-sunset-2020-06-07-18-00-38",
+          "status": "published"
+        },
+        {
+          "id": 41318,
+          "slug": "sunrise-sunset-2020-07-17-05-10-04",
+          "status": "published"
+        },
+        {
+          "id": 41319,
+          "slug": "sunrise-sunset-2020-07-17-05-18-15",
+          "status": "published"
+        },
+        {
+          "id": 41320,
+          "slug": "sunrise-sunset-2020-07-19-05-07-34",
+          "status": "published"
+        },
+        {
+          "id": 41321,
+          "slug": "sunrise-sunset-2020-07-19-05-19-48",
+          "status": "published"
+        },
+        {
+          "id": 41322,
+          "slug": "limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2021-05-01-08-24-07",
+          "status": "published"
+        },
+        {
+          "id": 41323,
+          "slug": "limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2021-05-01-11-09-45",
+          "status": "published"
+        },
+        {
+          "id": 41324,
+          "slug": "limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2021-05-01-11-11-08",
+          "status": "published"
+        },
+        {
+          "id": 41325,
+          "slug": "limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2021-05-02-09-43-23",
+          "status": "published"
+        },
+        {
+          "id": 41326,
+          "slug": "limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2021-05-02-14-32-01",
+          "status": "published"
+        },
+        {
+          "id": 41327,
+          "slug": "limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2021-05-02-14-33-07",
+          "status": "published"
+        },
+        {
+          "id": 41328,
+          "slug": "limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2023-10-12-16-46-01",
+          "status": "published"
+        },
+        {
+          "id": 41329,
+          "slug": "limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2023-10-12-17-26-45",
+          "status": "published"
+        },
+        {
+          "id": 41330,
+          "slug": "limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2023-10-12-17-26-50",
+          "status": "published"
+        },
+        {
+          "id": 41331,
+          "slug": "limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2023-10-12-17-29-35",
+          "status": "published"
+        },
+        {
+          "id": 41332,
+          "slug": "limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2023-10-12-17-29-38",
+          "status": "published"
+        },
+        {
+          "id": 41333,
+          "slug": "limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2023-10-12-17-29-49",
+          "status": "published"
+        },
+        {
+          "id": 41334,
+          "slug": "limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2023-10-13-07-06-41",
+          "status": "published"
+        },
+        {
+          "id": 41335,
+          "slug": "limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2023-10-13-07-06-43",
+          "status": "published"
+        },
+        {
+          "id": 41336,
+          "slug": "limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2023-10-13-07-06-55",
+          "status": "published"
+        },
+        {
+          "id": 41337,
+          "slug": "limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2023-10-13-08-39-12",
+          "status": "published"
+        },
+        {
+          "id": 41338,
+          "slug": "limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2023-10-13-08-39-17",
+          "status": "published"
+        },
+        {
+          "id": 41339,
+          "slug": "limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2023-10-13-09-17-18",
+          "status": "published"
+        },
+        {
+          "id": 41340,
+          "slug": "limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2023-10-13-09-19-00",
+          "status": "published"
+        },
+        {
+          "id": 41341,
+          "slug": "limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2023-10-13-09-30-17",
+          "status": "published"
+        },
+        {
+          "id": 41342,
+          "slug": "costa-rica-20070520-2268",
+          "status": "published"
+        },
+        {
+          "id": 41343,
+          "slug": "costa-rica-2014-09-14-14-14-46-copy",
+          "status": "published"
+        },
+        {
+          "id": 41344,
+          "slug": "costa-rica-2014-09-20-16-02-57-copy",
+          "status": "published"
+        },
+        {
+          "id": 41345,
+          "slug": "costa-rica-2014-09-20-16-03-17-copy",
+          "status": "published"
+        },
+        {
+          "id": 41346,
+          "slug": "costa-rica-2014-12-07-10-49-29-copy",
+          "status": "published"
+        },
+        {
+          "id": 41347,
+          "slug": "costa-rica-2015-03-29-12-28-24-copy",
+          "status": "published"
+        },
+        {
+          "id": 41348,
+          "slug": "costa-rica-2015-04-01-14-20-11-copy",
+          "status": "published"
+        },
+        {
+          "id": 41349,
+          "slug": "costa-rica-2015-06-14-10-48-18-copy",
+          "status": "published"
+        }
+      ]
+    }
+  },
+  "status": "success"
+}

@@ -1,0 +1,611 @@
+{
+  "batch_id": "repair_20260528_085707",
+  "jobs_processed": 25,
+  "repairs_completed": 75,
+  "failures": 0,
+  "items_requiring_approval": 25,
+  "approval_items": [
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 61784",
+      "slug": "dji_0294-6960cb6c"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 61785",
+      "slug": "dji_0296-15d54a51"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 61786",
+      "slug": "dji_0641-002-82d725a0"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 61787",
+      "slug": "2021-03-26-16.36.31-abddb3bb"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 61788",
+      "slug": "20241018_072001-894c78bc"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 61789",
+      "slug": "20241018_072005-0a3c0a4b"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 61790",
+      "slug": "20241019_100429-d3214c92"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 61791",
+      "slug": "20241128_160137-fc479177"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 61792",
+      "slug": "cl0a4344-3a593118"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 61793",
+      "slug": "pano00017-a0c813f1"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 61794",
+      "slug": "2019-04-14-11.37.37-314f5722"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 61795",
+      "slug": "2019-04-14-12.10.30-c4cc9993"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 61796",
+      "slug": "2019-04-14-12.50.28-1d6f74b3"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 61797",
+      "slug": "2019-04-14-13.07.36-b7a04bea"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 61798",
+      "slug": "2019-11-30-07.03.33-e02a6802"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 61799",
+      "slug": "2020-06-06-10.22.12-c475f9e0"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 61800",
+      "slug": "2020-10-10-11.48.35-10e22eab"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 61801",
+      "slug": "2020-10-11-08.14.14-21f16576"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 61802",
+      "slug": "2020-10-11-12.33.32-a2f0da33"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 61803",
+      "slug": "20241018_103041-fecdba08"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 61804",
+      "slug": "20241018_105713-2a106a89"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 61805",
+      "slug": "20241018_105730-37fc6a66"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 61806",
+      "slug": "20241018_110109-aa742351"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 61807",
+      "slug": "20241018_110725-91632547"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 61808",
+      "slug": "20241018_111233-f63c34fb"
+    }
+  ],
+  "results": [
+    {
+      "queue_id": 70201,
+      "photo_id": 61784,
+      "slug": "dji_0294-6960cb6c",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 61784",
+          "slug": "dji_0294-6960cb6c"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 70202,
+      "photo_id": 61785,
+      "slug": "dji_0296-15d54a51",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 61785",
+          "slug": "dji_0296-15d54a51"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 70203,
+      "photo_id": 61786,
+      "slug": "dji_0641-002-82d725a0",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 61786",
+          "slug": "dji_0641-002-82d725a0"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 70204,
+      "photo_id": 61787,
+      "slug": "2021-03-26-16.36.31-abddb3bb",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 61787",
+          "slug": "2021-03-26-16.36.31-abddb3bb"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 70205,
+      "photo_id": 61788,
+      "slug": "20241018_072001-894c78bc",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 61788",
+          "slug": "20241018_072001-894c78bc"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 70206,
+      "photo_id": 61789,
+      "slug": "20241018_072005-0a3c0a4b",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 61789",
+          "slug": "20241018_072005-0a3c0a4b"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 70207,
+      "photo_id": 61790,
+      "slug": "20241019_100429-d3214c92",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 61790",
+          "slug": "20241019_100429-d3214c92"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 70208,
+      "photo_id": 61791,
+      "slug": "20241128_160137-fc479177",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 61791",
+          "slug": "20241128_160137-fc479177"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 70209,
+      "photo_id": 61792,
+      "slug": "cl0a4344-3a593118",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 61792",
+          "slug": "cl0a4344-3a593118"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 70210,
+      "photo_id": 61793,
+      "slug": "pano00017-a0c813f1",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 61793",
+          "slug": "pano00017-a0c813f1"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 70211,
+      "photo_id": 61794,
+      "slug": "2019-04-14-11.37.37-314f5722",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 61794",
+          "slug": "2019-04-14-11.37.37-314f5722"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 70212,
+      "photo_id": 61795,
+      "slug": "2019-04-14-12.10.30-c4cc9993",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 61795",
+          "slug": "2019-04-14-12.10.30-c4cc9993"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 70213,
+      "photo_id": 61796,
+      "slug": "2019-04-14-12.50.28-1d6f74b3",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 61796",
+          "slug": "2019-04-14-12.50.28-1d6f74b3"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 70214,
+      "photo_id": 61797,
+      "slug": "2019-04-14-13.07.36-b7a04bea",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 61797",
+          "slug": "2019-04-14-13.07.36-b7a04bea"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 70215,
+      "photo_id": 61798,
+      "slug": "2019-11-30-07.03.33-e02a6802",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 61798",
+          "slug": "2019-11-30-07.03.33-e02a6802"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 70216,
+      "photo_id": 61799,
+      "slug": "2020-06-06-10.22.12-c475f9e0",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 61799",
+          "slug": "2020-06-06-10.22.12-c475f9e0"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 70217,
+      "photo_id": 61800,
+      "slug": "2020-10-10-11.48.35-10e22eab",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 61800",
+          "slug": "2020-10-10-11.48.35-10e22eab"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 70218,
+      "photo_id": 61801,
+      "slug": "2020-10-11-08.14.14-21f16576",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 61801",
+          "slug": "2020-10-11-08.14.14-21f16576"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 70219,
+      "photo_id": 61802,
+      "slug": "2020-10-11-12.33.32-a2f0da33",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 61802",
+          "slug": "2020-10-11-12.33.32-a2f0da33"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 70220,
+      "photo_id": 61803,
+      "slug": "20241018_103041-fecdba08",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 61803",
+          "slug": "20241018_103041-fecdba08"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 70221,
+      "photo_id": 61804,
+      "slug": "20241018_105713-2a106a89",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 61804",
+          "slug": "20241018_105713-2a106a89"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 70222,
+      "photo_id": 61805,
+      "slug": "20241018_105730-37fc6a66",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 61805",
+          "slug": "20241018_105730-37fc6a66"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 70223,
+      "photo_id": 61806,
+      "slug": "20241018_110109-aa742351",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 61806",
+          "slug": "20241018_110109-aa742351"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 70224,
+      "photo_id": 61807,
+      "slug": "20241018_110725-91632547",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 61807",
+          "slug": "20241018_110725-91632547"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 70225,
+      "photo_id": 61808,
+      "slug": "20241018_111233-f63c34fb",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 61808",
+          "slug": "20241018_111233-f63c34fb"
+        }
+      ],
+      "status": "completed"
+    }
+  ]
+}

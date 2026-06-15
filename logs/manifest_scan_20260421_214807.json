@@ -1,0 +1,77 @@
+{
+  "run_at": "2026-04-22T03:48:07.213903+00:00",
+  "summary": {
+    "total_runs": 10,
+    "successful": 0,
+    "failed": 0,
+    "other": 10,
+    "total_imported": 211,
+    "total_failed_rows": 0,
+    "earliest_run": "2026-03-21T18:21:54.248382+00:00",
+    "latest_run": "2026-04-20T04:08:54.410655+00:00"
+  },
+  "activity": {
+    "last_24h": 0,
+    "last_7d": 7
+  },
+  "recent_runs": [
+    {
+      "id": 10,
+      "batch_id": "batch_apr20_cr_gaps",
+      "source_folder": "Guanacaste-CR-Travel(67gap), Random-Places(36new), Isla-San-Lucas(22new), Puenta-Amistad(18new), Perez-Zeledon(20new)",
+      "status": "complete",
+      "imported_new": 11,
+      "rows_failed": 0,
+      "started_at": "2026-04-20T04:08:54.410655+00:00",
+      "completed_at": "2026-04-20T04:19:10.552590+00:00",
+      "error_message": null
+    },
+    {
+      "id": 9,
+      "batch_id": "batch_apr20_international1",
+      "source_folder": "South-America/Peru, South-America/Panama, Asia/China-Shanghai, Asia/China, Mexico",
+      "status": "complete",
+      "imported_new": 0,
+      "rows_failed": 0,
+      "started_at": "2026-04-20T04:06:22.476361+00:00",
+      "completed_at": "2026-04-20T04:19:16.591683+00:00",
+      "error_message": null
+    },
+    {
+      "id": 6,
+      "batch_id": "batch_apr19_largegaps",
+      "source_folder": "Jaco-Beach",
+      "status": "complete",
+      "imported_new": 0,
+      "rows_failed": 0,
+      "started_at": "2026-04-19T02:53:04.900356+00:00",
+      "completed_at": "2026-04-20T03:56:30.633582+00:00",
+      "error_message": null
+    },
+    {
+      "id": 5,
+      "batch_id": "batch_apr19_largegaps",
+      "source_folder": "Jaco-Beach",
+      "status": "complete",
+      "imported_new": 0,
+      "rows_failed": 0,
+      "started_at": "2026-04-19T02:52:11.139767+00:00",
+      "completed_at": "2026-04-20T03:56:30.633582+00:00",
+      "error_message": null
+    },
+    {
+      "id": 8,
+      "batch_id": "batch_apr19_newcontent",
+      "source_folder": "['Waterfalls-in-Costa-Rica', 'Marine-Life-of-Costa-Rica', 'Poas-Volcano-Costa-Rica', 'Night-Photography', 'Moon']",
+      "status": "complete",
+      "imported_new": 0,
+      "rows_failed": 0,
+      "started_at": "2026-04-19T02:05:51.380951+00:00",
+      "completed_at": "2026-04-19T04:05:51.380951+00:00",
+      "error_message": null
+    }
+  ],
+  "failed_runs": [],
+  "status": "success",
+  "health": "ok"
+}

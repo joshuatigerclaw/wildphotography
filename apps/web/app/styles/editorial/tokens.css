@@ -15,6 +15,7 @@
   --bg-raised: oklch(0.20 0.010 60);
   --bg-inset: oklch(0.13 0.008 60);
   --paper: oklch(0.94 0.012 75);
+  --ink-strong: oklch(0.88 0.008 80);  /* warm cream for headings - darker for contrast against dark bg */
   --ink: oklch(0.96 0.012 80);
   --ink-muted: oklch(0.78 0.012 75);
   --ink-dim: oklch(0.58 0.010 70);
@@ -312,6 +313,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   padding: 16px;
   opacity: 0;
   transition: opacity var(--t-med) var(--ease);
+  pointer-events: none;
 }
 
 .m-cell:hover .hover-card { opacity: 1; }

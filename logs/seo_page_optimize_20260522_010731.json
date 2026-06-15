@@ -1,0 +1,371 @@
+{
+  "timestamp": "2026-05-22T07:07:31.461333+00:00",
+  "workflow": "wild_seo_optimize_pages",
+  "summary": {
+    "total_found": 36,
+    "updated": 36,
+    "errors": 0
+  },
+  "updated_articles": [
+    {
+      "id": 332,
+      "slug": "heredia-costa-rica",
+      "title": "Heredia, Costa Rica: The Complete Photography Guide to Costa Rica's Coffee Country",
+      "article_type": "location_guide",
+      "old_meta_title": "Heredia, Costa Rica | WildPhotography",
+      "new_meta_title": "Heredia, Costa Rica: Photography Guide | WildPhotography",
+      "old_meta_desc_len": 261,
+      "new_meta_desc_len": 160
+    },
+    {
+      "id": 240,
+      "slug": "golfo-de-nicoya-photography-collection",
+      "title": "Golfo De Nicoya Photography Collection",
+      "article_type": "cluster",
+      "old_meta_title": "Golfo de Nicoya Photography Collection",
+      "new_meta_title": "Golfo De Nicoya Photography Collection | WildPhotography ...",
+      "old_meta_desc_len": 145,
+      "new_meta_desc_len": 160
+    },
+    {
+      "id": 330,
+      "slug": "tamarindo-guanacaste-beach-guide",
+      "title": "Tamarindo, Guanacaste: Costa Rica Beach and Surf Photography Guide for 2026",
+      "article_type": "location_guide",
+      "old_meta_title": "Tamarindo, Costa Rica | WildPhotography",
+      "new_meta_title": "Tamarindo, Costa Rica: Photography Guide | WildPhotography",
+      "old_meta_desc_len": 137,
+      "new_meta_desc_len": 160
+    },
+    {
+      "id": 328,
+      "slug": "la-fortuna-travel-photography-guide",
+      "title": "La Fortuna, Costa Rica: Complete Travel and Photography Guide for 2026",
+      "article_type": "location_guide",
+      "old_meta_title": "La Fortuna, Costa Rica | WildPhotography",
+      "new_meta_title": "La Fortuna, Costa Rica: Photography Guide | WildPhotography",
+      "old_meta_desc_len": 138,
+      "new_meta_desc_len": 160
+    },
+    {
+      "id": 483,
+      "slug": "escazu-costa-rica-photography-collection",
+      "title": "Escazu Costa Rica",
+      "article_type": "cluster",
+      "old_meta_title": "Escazu Costa Rica Photography Collection",
+      "new_meta_title": "Escazu Costa Rica | WildPhotography Collection",
+      "old_meta_desc_len": 145,
+      "new_meta_desc_len": 160
+    },
+    {
+      "id": 304,
+      "slug": "species-swainson",
+      "title": "Swainson in Costa Rica: The Complete Photography Guide",
+      "article_type": "species_guide",
+      "old_meta_title": "Swainson in Costa Rica | WildPhotography",
+      "new_meta_title": "Swainson, Costa Rica: Photography Guide | WildPhotography",
+      "old_meta_desc_len": 150,
+      "new_meta_desc_len": 160
+    },
+    {
+      "id": 311,
+      "slug": "puntarenas-costa-rica",
+      "title": "Puntarenas, Costa Rica: Pacific Port Photography Guide \u2014 Fishing Boats, Birds & Seascapes",
+      "article_type": "location_guide",
+      "old_meta_title": "Puntarenas, Costa Rica | WildPhotography",
+      "new_meta_title": "Puntarenas, Costa Rica: Photography Guide | WildPhotography",
+      "old_meta_desc_len": 160,
+      "new_meta_desc_len": 160
+    },
+    {
+      "id": 241,
+      "slug": "dominical-uvita-photography-collection",
+      "title": "Dominical & Uvita Photography Collection",
+      "article_type": "cluster",
+      "old_meta_title": "Dominical & Uvita Photography Collection",
+      "new_meta_title": "Dominical & Uvita Photography Collection | WildPhotograph...",
+      "old_meta_desc_len": 255,
+      "new_meta_desc_len": 160
+    },
+    {
+      "id": 297,
+      "slug": "rio-savegre-costa-rica-photography-guide",
+      "title": "Rio Savegre, Costa Rica: Mountain River Photography Guide \u2014 Birds, Rapids, and Forest",
+      "article_type": "location_guide",
+      "old_meta_title": "Rio Savegre, Costa Rica | WildPhotography",
+      "new_meta_title": "Rio Savegre, Costa Rica: Photography Guide | WildPhotography",
+      "old_meta_desc_len": 139,
+      "new_meta_desc_len": 160
+    },
+    {
+      "id": 479,
+      "slug": "best-of-costa-rica-photography-collection",
+      "title": "Best of Costa Rica",
+      "article_type": "cluster",
+      "old_meta_title": "Best of Costa Rica Photography Collection",
+      "new_meta_title": "Best of Costa Rica | WildPhotography Collection",
+      "old_meta_desc_len": 146,
+      "new_meta_desc_len": 160
+    },
+    {
+      "id": 481,
+      "slug": "surfing-costa-rica-photography-collection",
+      "title": "Surfing Costa Rica",
+      "article_type": "cluster",
+      "old_meta_title": "Surfing Costa Rica Photography Collection",
+      "new_meta_title": "Surfing Costa Rica | WildPhotography Collection",
+      "old_meta_desc_len": 146,
+      "new_meta_desc_len": 160
+    },
+    {
+      "id": 313,
+      "slug": "punta-leona-costa-rica",
+      "title": "Punta Leona, Costa Rica: Beach & Tropical Forest Photography Hideaway",
+      "article_type": "location_guide",
+      "old_meta_title": "Punta Leona, Costa Rica | WildPhotography",
+      "new_meta_title": "Punta Leona, Costa Rica: Photography Guide | WildPhotography",
+      "old_meta_desc_len": 153,
+      "new_meta_desc_len": 160
+    },
+    {
+      "id": 300,
+      "slug": "species-royal-tern",
+      "title": "Royal Tern in Costa Rica: The Complete Photography Guide",
+      "article_type": "species_guide",
+      "old_meta_title": "Royal Tern in Costa Rica | WildPhotography",
+      "new_meta_title": "Royal Tern, Costa Rica: Photography Guide | WildPhotography",
+      "old_meta_desc_len": 152,
+      "new_meta_desc_len": 160
+    },
+    {
+      "id": 303,
+      "slug": "species-snowy-egret",
+      "title": "Snowy Egret in Costa Rica: The Complete Photography Guide",
+      "article_type": "species_guide",
+      "old_meta_title": "Snowy Egret in Costa Rica | WildPhotography",
+      "new_meta_title": "Snowy Egret, Costa Rica: Photography Guide | WildPhotography",
+      "old_meta_desc_len": 153,
+      "new_meta_desc_len": 160
+    },
+    {
+      "id": 305,
+      "slug": "species-tiger-heron",
+      "title": "Tiger Heron in Costa Rica: The Complete Photography Guide",
+      "article_type": "species_guide",
+      "old_meta_title": "Tiger Heron in Costa Rica | WildPhotography",
+      "new_meta_title": "Tiger Heron, Costa Rica: Photography Guide | WildPhotography",
+      "old_meta_desc_len": 153,
+      "new_meta_desc_len": 160
+    },
+    {
+      "id": 333,
+      "slug": "species-blue-morpho",
+      "title": "Blue Morpho in Costa Rica: The Complete Photography Guide",
+      "article_type": "species_guide",
+      "old_meta_title": "Blue Morpho in Costa Rica | WildPhotography",
+      "new_meta_title": "Blue Morpho, Costa Rica: Photography Guide | WildPhotography",
+      "old_meta_desc_len": 153,
+      "new_meta_desc_len": 160
+    },
+    {
+      "id": 106,
+      "slug": "green-heron-costa-rica-photography-guide",
+      "title": "Green Heron in Costa Rica: The Complete Photography Guide",
+      "article_type": "species_guide",
+      "old_meta_title": "Green Heron in Costa Rica | WildPhotography",
+      "new_meta_title": "Green Heron, Costa Rica: Photography Guide | WildPhotography",
+      "old_meta_desc_len": 170,
+      "new_meta_desc_len": 160
+    },
+    {
+      "id": 338,
+      "slug": "species-green-iguana",
+      "title": "Green Iguana in Costa Rica: The Complete Photography Guide",
+      "article_type": "species_guide",
+      "old_meta_title": "Green Iguana in Costa Rica | WildPhotography",
+      "new_meta_title": "Green Iguana, Costa Rica: Photography Guide | WildPhotogr...",
+      "old_meta_desc_len": 154,
+      "new_meta_desc_len": 160
+    },
+    {
+      "id": 315,
+      "slug": "la-sabana-costa-rica",
+      "title": "La Sabana Park, San Jos\u00e9 Costa Rica: Urban Photography and Stadium Guide",
+      "article_type": "location_guide",
+      "old_meta_title": "La Sabana Park, Costa Rica | WildPhotography",
+      "new_meta_title": "La Sabana Park, San Jos\u00e9, Costa Rica: Photography Guide |...",
+      "old_meta_desc_len": 160,
+      "new_meta_desc_len": 160
+    },
+    {
+      "id": 661,
+      "slug": "food-photography-collection",
+      "title": "Food Photography Collection",
+      "article_type": "cluster",
+      "old_meta_title": "Food Photography Collection | WildPhotography",
+      "new_meta_title": "Food Photography Collection | WildPhotography Collection",
+      "old_meta_desc_len": 117,
+      "new_meta_desc_len": 160
+    },
+    {
+      "id": 666,
+      "slug": "beaches-photography-collection",
+      "title": "Beaches Photography Collection",
+      "article_type": "cluster",
+      "old_meta_title": "Beaches Photography Collection | WildPhotography",
+      "new_meta_title": "Beaches Photography Collection | WildPhotography Collection",
+      "old_meta_desc_len": 119,
+      "new_meta_desc_len": 160
+    },
+    {
+      "id": 312,
+      "slug": "puerto-viejo-costa-rica",
+      "title": "Puerto Viejo de Lim\u00f3n, Costa Rica: Caribbean Coast Photography Guide",
+      "article_type": "location_guide",
+      "old_meta_title": "Puerto Viejo de Lim\u00f3n, Costa Rica | WildPhotography",
+      "new_meta_title": "Puerto Viejo de Lim\u00f3n, Costa Rica: Photography Guide | Wi...",
+      "old_meta_desc_len": 117,
+      "new_meta_desc_len": 160
+    },
+    {
+      "id": 667,
+      "slug": "landscapes-photography-collection",
+      "title": "Landscapes Photography Collection",
+      "article_type": "cluster",
+      "old_meta_title": "Landscapes Photography Collection | WildPhotography",
+      "new_meta_title": "Landscapes Photography Collection | WildPhotography Colle...",
+      "old_meta_desc_len": 122,
+      "new_meta_desc_len": 146
+    },
+    {
+      "id": 660,
+      "slug": "jaco-beach-photography-collection",
+      "title": "Jaco Beach Photography Collection",
+      "article_type": "cluster",
+      "old_meta_title": "Jaco Beach Photography Collection | WildPhotography",
+      "new_meta_title": "Jaco Beach Photography Collection | WildPhotography Colle...",
+      "old_meta_desc_len": 123,
+      "new_meta_desc_len": 145
+    },
+    {
+      "id": 662,
+      "slug": "sunrise-sunset-photography-collection",
+      "title": "Sunrise Sunset Photography Collection",
+      "article_type": "cluster",
+      "old_meta_title": "Sunrise Sunset Photography Collection | WildPhotography",
+      "new_meta_title": "Sunrise Sunset Photography Collection | WildPhotography C...",
+      "old_meta_desc_len": 127,
+      "new_meta_desc_len": 150
+    },
+    {
+      "id": 547,
+      "slug": "volcan-irazu",
+      "title": "Volcan Irazu, Costa Rica: The Complete Photography Guide",
+      "article_type": "location_guide",
+      "old_meta_title": "Volcan Irazu Costa Rica: Volcano Crater Photography Guide",
+      "new_meta_title": "Volcan Irazu, Costa Rica: Photography Guide | WildPhotogr...",
+      "old_meta_desc_len": 127,
+      "new_meta_desc_len": 160
+    },
+    {
+      "id": 551,
+      "slug": "people-watching",
+      "title": "People Watching, Costa Rica: The Complete Photography Guide",
+      "article_type": "location_guide",
+      "old_meta_title": "People Watching, Costa Rica: The Complete Photography Guide",
+      "new_meta_title": "People Watching, Costa Rica: Photography Guide | WildPhot...",
+      "old_meta_desc_len": 129,
+      "new_meta_desc_len": 160
+    },
+    {
+      "id": 524,
+      "slug": "playas-del-coco-photography-guide",
+      "title": "Photography Guide to Playas del Coco, Guanacaste, Costa Rica",
+      "article_type": "location_guide",
+      "old_meta_title": "Photography Guide to Playas del Coco, Guanacaste, Costa Rica",
+      "new_meta_title": "Photography Guide to Playas del Coco, Guanacaste, Costa R...",
+      "old_meta_desc_len": 127,
+      "new_meta_desc_len": 160
+    },
+    {
+      "id": 552,
+      "slug": "peninsula-de-nicoya",
+      "title": "Peninsula De Nicoya, Costa Rica: The Complete Photography Guide",
+      "article_type": "location_guide",
+      "old_meta_title": "Peninsula De Nicoya, Costa Rica: The Complete Photography Guide",
+      "new_meta_title": "Peninsula De Nicoya, Costa Rica: Photography Guide | Wild...",
+      "old_meta_desc_len": 115,
+      "new_meta_desc_len": 160
+    },
+    {
+      "id": 538,
+      "slug": "san-jose",
+      "title": "San Jose, Costa Rica: The Complete Photography Guide",
+      "article_type": "location_guide",
+      "old_meta_title": "San Jose Costa Rica Urban Photography: Streets and Architecture",
+      "new_meta_title": "San Jose, Costa Rica: Photography Guide | WildPhotography",
+      "old_meta_desc_len": 127,
+      "new_meta_desc_len": 160
+    },
+    {
+      "id": 673,
+      "slug": "anhinga-costa-rica-photography-guide",
+      "title": "Anhinga in Costa Rica: The Complete Photography Guide to the Snakebird",
+      "article_type": "species_guide",
+      "old_meta_title": "(empty)",
+      "new_meta_title": "Anhinga, Costa Rica: Photography Guide | WildPhotography",
+      "old_meta_desc_len": 0,
+      "new_meta_desc_len": 160
+    },
+    {
+      "id": 674,
+      "slug": "brown-pelican-costa-rica-photography-guide",
+      "title": "Brown Pelican in Costa Rica: The Complete Photography Guide",
+      "article_type": "species_guide",
+      "old_meta_title": "(empty)",
+      "new_meta_title": "Brown Pelican, Costa Rica: Photography Guide | WildPhotog...",
+      "old_meta_desc_len": 155,
+      "new_meta_desc_len": 160
+    },
+    {
+      "id": 675,
+      "slug": "scarlet-macaw-costa-rica-photography-guide-2026",
+      "title": "Scarlet Macaw in Costa Rica: The Complete Photography Guide for 2026",
+      "article_type": "species_guide",
+      "old_meta_title": "(empty)",
+      "new_meta_title": "Scarlet Macaw, Costa Rica: Photography Guide | WildPhotog...",
+      "old_meta_desc_len": 155,
+      "new_meta_desc_len": 160
+    },
+    {
+      "id": 672,
+      "slug": "costa-rica-photography-guide",
+      "title": "Costa Rica Photography Guide: The Complete Field Manual for 2026",
+      "article_type": "photography_guide",
+      "old_meta_title": "(empty)",
+      "new_meta_title": "Photography Guide: Costa Rica Photography Guide: The Comp...",
+      "old_meta_desc_len": 156,
+      "new_meta_desc_len": 160
+    },
+    {
+      "id": 609,
+      "slug": "species-spotted-eagle-ray-costa-rica",
+      "title": "Spotted Eagle Ray in Costa Rica: The Complete Photography Guide",
+      "article_type": "species_guide",
+      "old_meta_title": "(empty)",
+      "new_meta_title": "Spotted Eagle Ray, Costa Rica: Photography Guide | WildPh...",
+      "old_meta_desc_len": 159,
+      "new_meta_desc_len": 160
+    },
+    {
+      "id": 610,
+      "slug": "species-yellow-headed-caracara-costa-rica",
+      "title": "Yellow-headed Caracara in Costa Rica: The Complete Photography Guide",
+      "article_type": "species_guide",
+      "old_meta_title": "(empty)",
+      "new_meta_title": "Yellow-headed Caracara, Costa Rica: Photography Guide | W...",
+      "old_meta_desc_len": 160,
+      "new_meta_desc_len": 160
+    }
+  ]
+}

@@ -1,0 +1,405 @@
+{
+  "run_at": "2026-05-20T23:10:18.376688+00:00",
+  "total_photos": 43831,
+  "render_ready_total": 43572,
+  "photos_with_issues": 235,
+  "all_clear": false,
+  "checks": {
+    "missing_thumb_url": {
+      "count": 0,
+      "sample": []
+    },
+    "missing_slug": {
+      "count": 0,
+      "sample": []
+    },
+    "missing_title": {
+      "count": 0,
+      "sample": []
+    },
+    "missing_gallery_slug": {
+      "count": 5017,
+      "sample": [
+        {
+          "id": 242,
+          "slug": "hermosa-beach-1",
+          "title": "Hermosa Beach Sunset",
+          "status": "archived"
+        },
+        {
+          "id": 14905,
+          "slug": "resplendent-quetzal",
+          "title": "Resplendent Quetzal \u2014 Costa Rica",
+          "status": "archived"
+        },
+        {
+          "id": 41302,
+          "slug": "sunrise-sunset-2016-07-31-17-59-49",
+          "title": "Pacific Coast Sunrise, Guanacaste 2016",
+          "status": "published"
+        },
+        {
+          "id": 41303,
+          "slug": "sunrise-sunset-2017-07-15-18-57-45",
+          "title": "Tropical Sunset, Guanacaste 2017",
+          "status": "published"
+        },
+        {
+          "id": 41304,
+          "slug": "sunrise-sunset-2018-03-29-18-22-12",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41304 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41305,
+          "slug": "sunrise-sunset-2018-08-21-17-53-04",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41305 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41306,
+          "slug": "sunrise-sunset-2018-08-21-17-55-57",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41306 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41307,
+          "slug": "sunrise-sunset-2018-08-21-18-01-08",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41307 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41308,
+          "slug": "sunrise-sunset-2018-08-21-18-02-56",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41308 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41309,
+          "slug": "sunrise-sunset-2018-08-21-18-09-15",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41309 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41310,
+          "slug": "sunrise-sunset-2018-08-24-17-55-36",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41310 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41311,
+          "slug": "sunrise-sunset-2019-july-19-hyperlapse-0311",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41311 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41312,
+          "slug": "sunrise-sunset-2019-03-31-05-46-08",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41312 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41313,
+          "slug": "sunrise-sunset-2019-11-08-17-16-08",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41313 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41314,
+          "slug": "sunrise-sunset-2020-06-06-17-38-31",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41314 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41315,
+          "slug": "sunrise-sunset-2020-06-07-17-57-31",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41315 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41316,
+          "slug": "sunrise-sunset-2020-06-07-17-58-30",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41316 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41317,
+          "slug": "sunrise-sunset-2020-06-07-18-00-38",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41317 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41318,
+          "slug": "sunrise-sunset-2020-07-17-05-10-04",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41318 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41319,
+          "slug": "sunrise-sunset-2020-07-17-05-18-15",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41319 | WildPhotography",
+          "status": "published"
+        }
+      ]
+    },
+    "search_not_ready": {
+      "count": 0,
+      "sample": []
+    },
+    "derivatives_incomplete": {
+      "count": 0,
+      "sample": []
+    },
+    "missing_description": {
+      "count": 35,
+      "sample": [
+        {
+          "id": 51063,
+          "slug": "2022-04-21-14-57-41-a751",
+          "title": "2022 04 21 14.57.41",
+          "status": "imported"
+        },
+        {
+          "id": 51064,
+          "slug": "dji-0001-2730",
+          "title": "DJI 0001",
+          "status": "imported"
+        },
+        {
+          "id": 51065,
+          "slug": "dji-0002-b35a",
+          "title": "DJI 0002",
+          "status": "imported"
+        },
+        {
+          "id": 51066,
+          "slug": "dji-0017-69c2",
+          "title": "DJI 0017",
+          "status": "imported"
+        },
+        {
+          "id": 51067,
+          "slug": "dji-0018-3153",
+          "title": "DJI 0018",
+          "status": "imported"
+        },
+        {
+          "id": 51068,
+          "slug": "dji-0022-55de",
+          "title": "DJI 0022",
+          "status": "imported"
+        },
+        {
+          "id": 51069,
+          "slug": "dji-0891-a693",
+          "title": "DJI 0891",
+          "status": "imported"
+        },
+        {
+          "id": 51070,
+          "slug": "dji-0900-a360",
+          "title": "DJI 0900",
+          "status": "imported"
+        },
+        {
+          "id": 51071,
+          "slug": "dji-0904-1c9c",
+          "title": "DJI 0904",
+          "status": "imported"
+        },
+        {
+          "id": 51072,
+          "slug": "dji-0906-29fd",
+          "title": "DJI 0906",
+          "status": "imported"
+        },
+        {
+          "id": 51073,
+          "slug": "dji-0908-2606",
+          "title": "DJI 0908",
+          "status": "imported"
+        },
+        {
+          "id": 51074,
+          "slug": "dji-0916-f936",
+          "title": "DJI 0916",
+          "status": "imported"
+        },
+        {
+          "id": 51075,
+          "slug": "dji-0918-c48f",
+          "title": "DJI 0918",
+          "status": "imported"
+        },
+        {
+          "id": 51076,
+          "slug": "dji-0920-10d2",
+          "title": "DJI 0920",
+          "status": "imported"
+        },
+        {
+          "id": 51077,
+          "slug": "dji-0923-3ceb",
+          "title": "DJI 0923",
+          "status": "imported"
+        },
+        {
+          "id": 51078,
+          "slug": "dji-0925-c06f",
+          "title": "DJI 0925",
+          "status": "imported"
+        },
+        {
+          "id": 51079,
+          "slug": "dji-0927-db5e",
+          "title": "DJI 0927",
+          "status": "imported"
+        },
+        {
+          "id": 51080,
+          "slug": "dji-0934-f1d0",
+          "title": "DJI 0934",
+          "status": "imported"
+        },
+        {
+          "id": 51081,
+          "slug": "dji-0940-7788",
+          "title": "DJI 0940",
+          "status": "imported"
+        },
+        {
+          "id": 51082,
+          "slug": "dji-0941-3f62",
+          "title": "DJI 0941",
+          "status": "imported"
+        }
+      ]
+    },
+    "missing_keywords": {
+      "count": 35,
+      "sample": [
+        {
+          "id": 51063,
+          "slug": "2022-04-21-14-57-41-a751",
+          "title": "2022 04 21 14.57.41",
+          "status": "imported"
+        },
+        {
+          "id": 51064,
+          "slug": "dji-0001-2730",
+          "title": "DJI 0001",
+          "status": "imported"
+        },
+        {
+          "id": 51065,
+          "slug": "dji-0002-b35a",
+          "title": "DJI 0002",
+          "status": "imported"
+        },
+        {
+          "id": 51066,
+          "slug": "dji-0017-69c2",
+          "title": "DJI 0017",
+          "status": "imported"
+        },
+        {
+          "id": 51067,
+          "slug": "dji-0018-3153",
+          "title": "DJI 0018",
+          "status": "imported"
+        },
+        {
+          "id": 51068,
+          "slug": "dji-0022-55de",
+          "title": "DJI 0022",
+          "status": "imported"
+        },
+        {
+          "id": 51069,
+          "slug": "dji-0891-a693",
+          "title": "DJI 0891",
+          "status": "imported"
+        },
+        {
+          "id": 51070,
+          "slug": "dji-0900-a360",
+          "title": "DJI 0900",
+          "status": "imported"
+        },
+        {
+          "id": 51071,
+          "slug": "dji-0904-1c9c",
+          "title": "DJI 0904",
+          "status": "imported"
+        },
+        {
+          "id": 51072,
+          "slug": "dji-0906-29fd",
+          "title": "DJI 0906",
+          "status": "imported"
+        },
+        {
+          "id": 51073,
+          "slug": "dji-0908-2606",
+          "title": "DJI 0908",
+          "status": "imported"
+        },
+        {
+          "id": 51074,
+          "slug": "dji-0916-f936",
+          "title": "DJI 0916",
+          "status": "imported"
+        },
+        {
+          "id": 51075,
+          "slug": "dji-0918-c48f",
+          "title": "DJI 0918",
+          "status": "imported"
+        },
+        {
+          "id": 51076,
+          "slug": "dji-0920-10d2",
+          "title": "DJI 0920",
+          "status": "imported"
+        },
+        {
+          "id": 51077,
+          "slug": "dji-0923-3ceb",
+          "title": "DJI 0923",
+          "status": "imported"
+        },
+        {
+          "id": 51078,
+          "slug": "dji-0925-c06f",
+          "title": "DJI 0925",
+          "status": "imported"
+        },
+        {
+          "id": 51079,
+          "slug": "dji-0927-db5e",
+          "title": "DJI 0927",
+          "status": "imported"
+        },
+        {
+          "id": 51080,
+          "slug": "dji-0934-f1d0",
+          "title": "DJI 0934",
+          "status": "imported"
+        },
+        {
+          "id": 51081,
+          "slug": "dji-0940-7788",
+          "title": "DJI 0940",
+          "status": "imported"
+        },
+        {
+          "id": 51082,
+          "slug": "dji-0941-3f62",
+          "title": "DJI 0941",
+          "status": "imported"
+        }
+      ]
+    }
+  },
+  "status": "success"
+}

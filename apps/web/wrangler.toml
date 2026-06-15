@@ -1,7 +1,7 @@
 name = "wildphotography-new"
 main = ".open-next/worker.js"
 compatibility_date = "2026-03-07"
-compatibility_flags = ["nodejs_compat"]
+compatibility_flags = ["nodejs_compat", "global_fetch_strictly_public"]
 workers_dev = false
 
 [vars]
@@ -15,8 +15,9 @@ GOOGLE_SHEET_ID = "1_l6ul1ze4O6JQCke3TH14r8TqxgzuArN09o4wjxS4Z4"
 GOOGLE_SHEET_TAB = "Orders"
 RESEND_FROM_EMAIL = "orders@wildphotography.com"
 
-[Observability]
-enabled = true
+[assets]
+binding = "ASSETS"
+directory = ".open-next/assets"
 
 [[r2_buckets]]
 binding = "PHOTOS_R2"
@@ -25,3 +26,7 @@ bucket_name = "wildphoto-storage"
 [[queues.producers]]
 binding = "DOQueue"
 queue = "do-queue"
+
+[[queues.producers]]
+binding = "VISIT_QUEUE"
+queue = "visit-queue"

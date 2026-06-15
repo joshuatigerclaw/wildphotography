@@ -1,0 +1,10 @@
+[repair_20260608_183505] Starting repair batch (limit=25)
+Fetched 0 jobs from queue
+
+=== REPAIR BATCH RESULTS ===
+jobs_processed: 0
+repairs_completed: 0
+failures: 0
+items_requiring_approval: 0
+
+Results saved to: /Users/joshuatenbrink/.openclaw/workspace/wildphotography/reports/repair_batch_repair_20260608_183505.json

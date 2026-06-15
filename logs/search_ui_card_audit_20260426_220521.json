@@ -1,0 +1,624 @@
+{
+  "run_at": "2026-04-27T04:05:21.751912+00:00",
+  "total_search_ready_photos": 34607,
+  "sample_size": 300,
+  "total_url_checks": 600,
+  "summary": {
+    "photos_ok": 267,
+    "photos_broken": 33,
+    "photos_missing_field": 0,
+    "ok_rate_pct": 89.0
+  },
+  "by_url_type": {
+    "og_image_url": {
+      "total": 300,
+      "accessible": 268,
+      "broken": 32,
+      "empty": 0
+    },
+    "thumb_url": {
+      "total": 300,
+      "accessible": 297,
+      "broken": 3,
+      "empty": 0
+    }
+  },
+  "broken_photos": {
+    "27209": {
+      "slug": "photo-127-CL0A5952",
+      "title": "Montezuma Photography",
+      "gallery_slug": "costa-rica-gallery-montezuma-costa-rica",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        },
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        }
+      ]
+    },
+    "27046": {
+      "slug": "photo-125-CL0A6091",
+      "title": "Costa rica gallery peninsula papagayo | Costa Rica Wildlife Photography by Joshua ten Brink",
+      "gallery_slug": "costa-rica-gallery-peninsula-papagayo",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        },
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        }
+      ]
+    },
+    "36207": {
+      "slug": "playa-hermosa-guanacaste-20250425_171247-8427ef",
+      "title": "Sunset Rocky Coast Sun Reflection",
+      "gallery_slug": "playa-hermosa-guanacaste",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "30700": {
+      "slug": "pano00015-6bd44cd5",
+      "title": "Punta Leona, Puntarenas, Costa Rica Panoramic View",
+      "gallery_slug": "punta-leona",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "35072": {
+      "slug": "peninsula-papagayo-cl0a6147-6ba7d959",
+      "title": "Peninsula Papagayo Costa Rica Photo",
+      "gallery_slug": "peninsula-papagayo",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "2199": {
+      "slug": "dji-0707-002-1401",
+      "title": "Guanacaste Beaches",
+      "gallery_slug": "beaches",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "ValueError"
+        },
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        }
+      ]
+    },
+    "35080": {
+      "slug": "peninsula-papagayo-cl0a6217-af1da9c1",
+      "title": "Peninsula Papagayo Costa Rica Photo",
+      "gallery_slug": "peninsula-papagayo",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "35239": {
+      "slug": "montezuma-costa-rica-dji-0008-afee09e5",
+      "title": "Montezuma Aerial View",
+      "gallery_slug": "montezuma-costa-rica",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "27142": {
+      "slug": "photo-125-DJI-0010",
+      "title": "Costa rica gallery peninsula papagayo | Costa Rica Wildlife Photography by Joshua ten Brink",
+      "gallery_slug": "costa-rica-gallery-peninsula-papagayo",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "27263": {
+      "slug": "photo-127-DJI-0956",
+      "title": "Montezuma Photography",
+      "gallery_slug": "costa-rica-gallery-montezuma-costa-rica",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "18776": {
+      "slug": "dji-0800-puerto-caldera-puntarenas-port-1057",
+      "title": "Puerto caldera puntarenas port | Costa Rica Wildlife Photography by Joshua ten Brink",
+      "gallery_slug": "puerto-caldera-puntarenas-port",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "35370": {
+      "slug": "rio-savagre-costa-rica-cl0a1421-e0de0940",
+      "title": "Rio Savegre Costa Rica Photo",
+      "gallery_slug": "rio-savagre-costa-rica",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "36206": {
+      "slug": "playa-hermosa-guanacaste-20250425_171200-059d13",
+      "title": "Rocky Coast with Tide Pools Aerial",
+      "gallery_slug": "playa-hermosa-guanacaste",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "27476": {
+      "slug": "photo-125-DJI-0302",
+      "title": "Peninsula Papagayo, Guanacaste, Costa Rica Photography",
+      "gallery_slug": "costa-rica-gallery-peninsula-papagayo",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        },
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        }
+      ]
+    },
+    "26909": {
+      "slug": "dji-0222-089bb876",
+      "title": "Costa rica gallery montezuma costa rica | Costa Rica Wildlife Photography by Joshua ten Brink",
+      "gallery_slug": "costa-rica-gallery-montezuma-costa-rica",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "1669": {
+      "slug": "cl0a3734-1228",
+      "title": "Beaches | Costa Rica Wildlife Photography by Joshua ten Brink",
+      "gallery_slug": "beaches",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "ValueError"
+        },
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        }
+      ]
+    },
+    "27421": {
+      "slug": "photo-125-DJI-0238",
+      "title": "Costa rica gallery peninsula papagayo | Costa Rica Wildlife Photography by Joshua ten Brink",
+      "gallery_slug": "costa-rica-gallery-peninsula-papagayo",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "12119": {
+      "slug": "dji-0550-puntarenas-costa-rica-8737",
+      "title": "Puntarenas costa rica | Costa Rica Wildlife Photography by Joshua ten Brink",
+      "gallery_slug": "puntarenas-costa-rica",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "25436": {
+      "slug": "dji0531_c3ffa45e",
+      "title": "Portrait Aerial of Hills and Farmland in Southern Calamachita Valley",
+      "gallery_slug": "south-america-argentina",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "35237": {
+      "slug": "montezuma-costa-rica-dji-0985-8662ba9c",
+      "title": "Montezuma Aerial View",
+      "gallery_slug": "montezuma-costa-rica",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "31041": {
+      "slug": "2016-01-13-12-58-06-c1e01364",
+      "title": "Costa Rica Beach Photography",
+      "gallery_slug": "flora-fauna",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": false,
+          "error": "InvalidURL"
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "InvalidURL"
+        }
+      ]
+    },
+    "31525": {
+      "slug": "2025-03-08-07-04-10-389fea94",
+      "title": "Costa Rica Food Photography, March 2025",
+      "gallery_slug": "food",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        },
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        }
+      ]
+    },
+    "14892": {
+      "slug": "img-0379",
+      "title": "Alajuela Province, Costa Rica",
+      "gallery_slug": "alajuela",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "2267": {
+      "slug": "dji-0821-1422",
+      "title": "Beaches | Costa Rica Wildlife Photography by Joshua ten Brink",
+      "gallery_slug": "beaches",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "ValueError"
+        },
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        }
+      ]
+    },
+    "27052": {
+      "slug": "photo-125-DJI-0883",
+      "title": "Costa rica gallery peninsula papagayo | Costa Rica Wildlife Photography by Joshua ten Brink",
+      "gallery_slug": "costa-rica-gallery-peninsula-papagayo",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "27262": {
+      "slug": "photo-127-DJI-0953",
+      "title": "Montezuma Photography",
+      "gallery_slug": "costa-rica-gallery-montezuma-costa-rica",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        },
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        }
+      ]
+    },
+    "35644": {
+      "slug": "santateresa-dji-0704-590fc658",
+      "title": "Santa Teresa, Costa Rica | WildPhotography",
+      "gallery_slug": "santa-teresa-malpais",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "9327": {
+      "slug": "img-4083-landscape-5945",
+      "title": "Landscape | Costa Rica Wildlife Photography by Joshua ten Brink",
+      "gallery_slug": "landscape",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "4975": {
+      "slug": "cl0a7808-birds-2159",
+      "title": "Birds | Costa Rica Wildlife Photography by Joshua ten Brink",
+      "gallery_slug": "birds",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        },
+        {
+          "type": "og_image_url",
+          "accessible": true,
+          "error": null
+        }
+      ]
+    },
+    "35639": {
+      "slug": "santateresa-dji-0695-64b994cf",
+      "title": "Santa Teresa, Costa Rica | WildPhotography",
+      "gallery_slug": "santa-teresa-malpais",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        },
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        }
+      ]
+    },
+    "37111": {
+      "slug": "dji-0807-40bbe805",
+      "title": "Aerial View of Isla Tortuga Beach, Costa Rica",
+      "gallery_slug": "isla-tortuga",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        },
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        }
+      ]
+    },
+    "33141": {
+      "slug": "dji-0033-6dfa356f",
+      "title": "Aerial View of Santa Teresa Beach, Nicoya Peninsula, Costa Rica",
+      "gallery_slug": "santa-teresa-malpais",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "27469": {
+      "slug": "photo-54-DJI-0491",
+      "title": "Guanacaste, Costa Rica Photography",
+      "gallery_slug": "landscape",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    }
+  },
+  "empty_url_photos": {},
+  "status": "success"
+}

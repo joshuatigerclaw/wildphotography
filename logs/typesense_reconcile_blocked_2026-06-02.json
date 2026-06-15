@@ -1,0 +1,45 @@
+{
+  "run_at": "2026-06-02T02:43:48.821Z",
+  "completed_at": "2026-06-02T03:04:00.000Z",
+  "status": "blocked",
+  "block_reason": "Typesense server returns OUT_OF_MEMORY on all write operations. Server resource exhaustion prevents any upsert or delete.",
+  "findings": {
+    "neon_eligible_count": 16276,
+    "neon_query": "search_ready = true AND typesense_indexable = true AND thumb_url IS NOT NULL AND thumb_url != ''",
+    "typesense_photos_count": 60498,
+    "typesense_searchable": 60551,
+    "estimated_drift": 44222,
+    "drift_direction": "TS has ~44k MORE records than Neon eligible set - TS has stale/excess records, not missing",
+    "typesense_id_format": "numeric string (e.g. '49143', '696') NOT prefixed with 'photo_'",
+    "ts_schema_fields": ["country","description","id","keywords","location_name","region","slug","small_url","thumb_url","title","uploaded_at"],
+    "ts_collection_growth": "growing - was 61098 before first upsert attempt, now 60498 (inconsistent, likely counting issue)"
+  },
+  "actions_taken": [
+    "Exported all TS photo IDs via export endpoint - found IDs use numeric format without prefix",
+    "Scanned all 16,276 Neon eligible records - all missing from TS by ID comparison",
+    "Successfully upserted ~3,276 records in first run (batches 1-21)",
+    "Batches 22-33 failed (5 batches) with OUT_OF_MEMORY",
+    "Retry operations confirmed: even single-document upserts return OUT_OF_MEMORY",
+    "Typesense search endpoint works (reads fine), all write operations blocked"
+  ],
+  "results": {
+    "stale_removed": 0,
+    "missing_added": 3276,
+    "upsert_failures": "batches 22-33 (5000+ records) + all retry attempts blocked by server OOM"
+  },
+  "recommendations": [
+    "Typesense server needs memory relief before writes can resume",
+    "Consider: delete stale TS records first to free memory, then retry upserts",
+    "Consider: compact TS collection to reclaim memory",
+    "Consider: upgrade Typesense server RAM or reduce document count",
+    "ts_photos collection may contain records not in Neon - these are candidates for removal to free memory"
+  ],
+  "errors": [
+    "Batch 23 failed: 500 records",
+    "Batch 25 failed: 500 records", 
+    "Batch 27 failed: 500 records",
+    "Batch 29 failed: 500 records",
+    "Batch 31 failed: 500 records",
+    "All retry attempts blocked: 'Rejecting write: running out of resource type: OUT_OF_MEMORY'"
+  ]
+}

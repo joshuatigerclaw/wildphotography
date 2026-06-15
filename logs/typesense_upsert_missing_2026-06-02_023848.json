@@ -1,0 +1,38 @@
+{
+  "run_at": "2026-06-02T02:38:40.000Z",
+  "completed_at": "2026-06-02T03:04:00.000Z",
+  "status": "blocked",
+  "block_reason": "Typesense server is in OUT_OF_MEMORY state - all write operations (upsert/delete) are rejected. Search/read operations work normally.",
+  "neon_eligible_count": 16276,
+  "typesense_photos_count": 60498,
+  "estimated_drift": 44222,
+  "drift_direction": "Typesense has ~44k MORE records than Neon says are eligible - TS contains stale/excess records",
+  "actions_completed": {
+    "neon_scan": "Scanned all 16,276 eligible Neon records - all confirmed missing from Typesense by ID comparison",
+    "ts_id_export": "Exported all 61,098 Typesense photo IDs - discovered IDs use numeric format (e.g. '49143', '696') NOT 'photo_' prefixed format",
+    "upsert_batch_1_to_21": "Successfully upserted 3,276 records (batches 1-21, 500 records each)",
+    "upsert_batch_22_to_33": "Failed - 5,500+ records blocked by server OOM"
+  },
+  "results": {
+    "stale_removed": 0,
+    "missing_added": 3276,
+    "upsert_failures": 5,
+    "error_detail": "All batches after batch 21 returned: 'Rejecting write: running out of resource type: OUT_OF_MEMORY'"
+  },
+  "ts_id_format_discovery": {
+    "expected_format": "photo_[neon_id] (e.g. photo_66232)",
+    "actual_format": "numeric string (e.g. 49143, 696, 66232)",
+    "note": "Upserted records used photo_ prefix format, existing TS records use numeric format"
+  },
+  "recommendations": [
+    "Typesense server memory must be freed before writes can resume",
+    "Option A: Delete stale TS records to reclaim memory (TS has 44k excess vs Neon eligible)",
+    "Option B: Compact TS collection to reclaim memory",
+    "Option C: Upgrade Typesense server RAM",
+    "Once memory available, remaining 13,000 Neon records can be upserted"
+  ],
+  "report_files": [
+    "/Users/joshuatenbrink/.openclaw/workspace/wildphotography/logs/typesense_upsert_missing_2026-06-02_02-43-48.json (initial run)",
+    "/Users/joshuatenbrink/.openclaw/workspace/wildphotography/logs/typesense_reconcile_blocked_2026-06-02.json (analysis)"
+  ]
+}

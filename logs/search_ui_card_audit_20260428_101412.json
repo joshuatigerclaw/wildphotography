@@ -1,0 +1,354 @@
+{
+  "run_at": "2026-04-28T16:14:12.968215+00:00",
+  "total_search_ready_photos": 35245,
+  "sample_size": 300,
+  "total_url_checks": 598,
+  "summary": {
+    "photos_ok": 282,
+    "photos_broken": 18,
+    "photos_missing_field": 0,
+    "ok_rate_pct": 94.0
+  },
+  "by_url_type": {
+    "og_image_url": {
+      "total": 298,
+      "accessible": 280,
+      "broken": 18,
+      "empty": 0
+    },
+    "thumb_url": {
+      "total": 300,
+      "accessible": 299,
+      "broken": 1,
+      "empty": 0
+    }
+  },
+  "broken_photos": {
+    "35263": {
+      "slug": "montezuma-costa-rica-dji-0101-3d0241fa",
+      "title": "Montezuma Aerial View",
+      "gallery_slug": "montezuma-costa-rica",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "27457": {
+      "slug": "photo-54-DJI-0424",
+      "title": "Guanacaste, Costa Rica Photography",
+      "gallery_slug": "landscape",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "41630": {
+      "slug": "flowers-plants-trees-2021-03-07-10-01-43",
+      "title": "Costa Rica Flower Photography - 2021-03-07 at 10:01",
+      "gallery_slug": null,
+      "status": "broken",
+      "checks": [
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "URL_ERROR_SSLError"
+        },
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        }
+      ]
+    },
+    "35071": {
+      "slug": "peninsula-papagayo-cl0a6132-de095a03",
+      "title": "Peninsula Papagayo Costa Rica Photo",
+      "gallery_slug": "peninsula-papagayo",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "37100": {
+      "slug": "dji-0782-bff9402b",
+      "title": "Aerial View of Isla Tortuga Pristine Coastline",
+      "gallery_slug": "isla-tortuga",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "33838": {
+      "slug": "dji-0751-2-3b340c1b",
+      "title": "Aerial Photography, Costa Rica (DJI 0751-2)",
+      "gallery_slug": "best-of-costa-rica",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "34876": {
+      "slug": "dji-0861-84f0324b",
+      "title": "Peninsula de Osa Aerial View",
+      "gallery_slug": "peninsula-de-osa",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "39114": {
+      "slug": "20250205-173031-9eb6cb48",
+      "title": "Evening Sun over San Jose Central Valley, Costa Rica",
+      "gallery_slug": "costa-rica-gallery-sunrise-sunset",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "URL_ERROR_gaierror"
+        },
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        }
+      ]
+    },
+    "41551": {
+      "slug": "limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-dji_0225",
+      "title": "Aerial Beach View at Puerto Viejo de Lim\u00f3n, Costa Rica - _0225 | WildPhotography",
+      "gallery_slug": null,
+      "status": "broken",
+      "checks": [
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "URL_ERROR_SSLError"
+        },
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        }
+      ]
+    },
+    "14742": {
+      "slug": "img-9728-wildlife-11360",
+      "title": "Wildlife | Costa Rica Wildlife Photography by Joshua ten Brink",
+      "gallery_slug": "wildlife",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        },
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        }
+      ]
+    },
+    "35038": {
+      "slug": "peninsula-papagayo-dji-0927-7a38c160",
+      "title": "Serene Forested Peninsula at Golden Hour",
+      "gallery_slug": "peninsula-papagayo",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "41321": {
+      "slug": "sunrise-sunset-2020-07-19-05-19-48",
+      "title": "Golden Hour Costa Rica, 2020",
+      "gallery_slug": null,
+      "status": "broken",
+      "checks": [
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "URL_ERROR_SSLError"
+        },
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        }
+      ]
+    },
+    "27128": {
+      "slug": "photo-125-DJI-0968",
+      "title": "Costa rica gallery peninsula papagayo | Costa Rica Wildlife Photography by Joshua ten Brink",
+      "gallery_slug": "costa-rica-gallery-peninsula-papagayo",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "42054": {
+      "slug": "tamarindo-guanacaste-costa-rica-dji_0906",
+      "title": "DJI_0906",
+      "gallery_slug": null,
+      "status": "broken",
+      "checks": [
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "URL_ERROR_SSLError"
+        },
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        }
+      ]
+    },
+    "34807": {
+      "slug": "dji-0732-5685fcaf",
+      "title": "Peninsula de Osa Aerial View",
+      "gallery_slug": "peninsula-de-osa",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        },
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        }
+      ]
+    },
+    "41778": {
+      "slug": "flamingo-beach-dji_0605",
+      "title": "DJI 0605",
+      "gallery_slug": "flamingo-beach",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": false,
+          "error": "HTTP_400"
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_400"
+        }
+      ]
+    },
+    "36905": {
+      "slug": "dji-0292-28d8c55f",
+      "title": "Isla Tortuga, Puntarenas, Costa Rica",
+      "gallery_slug": "isla-tortuga",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        },
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        }
+      ]
+    },
+    "29328": {
+      "slug": "2023-12-04-16-56-55-db2a3e9b",
+      "title": "San Jos\u00e9, Costa Rica | WildPhotography",
+      "gallery_slug": "san-jose-costa-rica",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        },
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        }
+      ]
+    }
+  },
+  "empty_url_photos": {},
+  "status": "success"
+}

@@ -32,9 +32,11 @@ export default function SiteFooter() {
             </ul>
           </div>
           <div className="footer-col">
-            <h4>About</h4>
+            <h4>Developer</h4>
             <ul>
+              <li><Link href="/api-access">API Access</Link></li>
               <li><Link href="/about">About</Link></li>
+              <li><Link href="/photography-featured">Press &amp; Features</Link></li>
               <li><a href="mailto:josh@wildphotography.com">Contact</a></li>
             </ul>
           </div>

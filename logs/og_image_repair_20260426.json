@@ -1,0 +1,21 @@
+{
+  "run_at": "2026-04-26T20:06:00+00:00",
+  "audit_source": "search_ui_card_audit_20260426_140546.json + search_ui_card_audit_20260426_162117.json",
+  "action": "clear broken og_image_url, enable thumb fallback",
+  "by_error_type": {
+    "HTTP_404": {"count": 38, "action": "og_image_url cleared"},
+    "URL_ERROR_SSLError": {"count": 25, "action": "og_image_url cleared"},
+    "URL_ERROR_gaierror": {"count": 4, "action": "og_image_url cleared"},
+    "InvalidURL": {"count": 2, "action": "og_image_url cleared"},
+    "ValueError": {"count": 1, "action": "og_image_url cleared"},
+    "deprecated_endpoint_sweep": {"count": 2243, "action": "og_image_url cleared for all records with old R2/S3/Cloudflare/legacy pub URLs"}
+  },
+  "first_batch_audit_photos_confirmed_fixed": 26,
+  "second_batch_repaired": 20,
+  "total_repaired": 2333,
+  "note": "Search display will now use thumb_url as fallback for all cleared og_image_url entries. thumb_url is 99.7% accessible in latest audit.",
+  "outstanding": [
+    {"photo_id": 35666, "slug": "santateresa-dji-0765-5439fa76", "issue": "thumb_url HTTP_404", "action": "requires derivative regeneration"},
+    {"photo_id": 38285, "slug": "2019-03-31-06-30-13-49bfd4fa", "issue": "both thumb_url and og_image_url InvalidURL", "action": "requires data repair and derivative rebuild"}
+  ]
+}

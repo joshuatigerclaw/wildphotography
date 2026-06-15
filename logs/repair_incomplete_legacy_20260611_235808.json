@@ -1,0 +1,22 @@
+{
+  "run_at": "2026-06-12T05:58:08.392583+00:00",
+  "run_type": "wild_repair_incomplete_legacy",
+  "before_state": {
+    "fixable_render": 9104,
+    "fixable_search": 160,
+    "needs_deriv_rebuild": 0,
+    "pending_deriv_gen": 0,
+    "legacy_static_cnt": 16442,
+    "no_original_key": 54
+  },
+  "flags_fixed": {
+    "ready_for_public_render": 9105,
+    "search_ready": 9265,
+    "derivatives_complete": 0
+  },
+  "total_fixed": 18370,
+  "post_state": {
+    "remaining_render": 4,
+    "remaining_search": 0
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "run_at": "2026-04-30T03:49:00+00:00",
+  "workflow": "wild_import_queue_cleanup",
+  "totals": {
+    "total_loaded": 1286,
+    "hash_collisions_removed": 14,
+    "unique_after_dedup": 1211,
+    "already_in_library": 1211,
+    "gallery_unresolved": 0,
+    "pending_hash_need_compute": 61,
+    "actionable_new": 0
+  },
+  "per_file": {
+    "fresh_import_queue.json": {
+      "loaded": 21
+    },
+    "batch_new_folders_queue.json": {
+      "loaded": 1000
+    },
+    "batch_new_discovery_queue.json": {
+      "loaded": 2
+    },
+    "new_uploads_queue.json": {
+      "loaded": 3
+    },
+    "working_import_queue.json": {
+      "loaded": 100
+    },
+    "import_batch_active.json": {
+      "loaded": 100
+    },
+    "batch_next_import.json": {
+      "loaded": 60
+    },
+    "working_batch_queue.json": {
+      "loaded": 0
+    }
+  },
+  "status": "success"
+}

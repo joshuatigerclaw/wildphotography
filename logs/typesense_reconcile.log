@@ -1,0 +1,11 @@
+
+[2026-06-11T16:55:00.000Z] === TYPESENSE RECONCILIATION (CRON) ===
+Drift detected: TS had 68655 docs vs Neon 68664 published (9 missing)
+Action: Indexed 9 missing docs to wildphotos collection
+Result: TS now has 68664 docs, matching Neon published count exactly
+Neon total photos: 70008
+Neon published: 68664
+Typesense wildphotos docs: 68664
+Stale drift: 0
+Missing drift: 0 (was 9)
+STATUS: CLEAN — Index in sync

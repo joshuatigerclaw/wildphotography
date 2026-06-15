@@ -1,0 +1,52 @@
+{
+  "workflow": "wild_legacy_orphan_review",
+  "status": "completed",
+  "started_at": "2026-04-26T00:44:00+00:00",
+  "completed_at": "2026-04-26T00:44:38+00:00",
+  "db_snapshot": {
+    "total_photos": 34623,
+    "render_ready": 34461,
+    "derivatives_complete": 34387,
+    "search_ready": 34387,
+    "legacy_static_excluded_from_orphans": 14484
+  },
+  "classification": {
+    "orphan_candidates_loaded": 75,
+    "bulk_recovered_has_r2_key": 73,
+    "true_orphans_unrecoverable": 1,
+    "remaining_orphan_candidates": 1
+  },
+  "recovered_records": [
+    "73 photos recovered — had valid original_r2_key but missing source_path, marked ready_for_public_render=true"
+  ],
+  "unrecoverable_records": [
+    {
+      "id": 37410,
+      "slug": "test-test1776",
+      "title": "Costa Rica Travel Photography",
+      "gallery_id": 19,
+      "reason": "no_source_path_no_original_r2_key",
+      "content_hash": "9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9",
+      "thumb_url": null,
+      "queued_to": "manual_review_queue"
+    }
+  ],
+  "manual_review_queue": {
+    "path": "/Users/joshuatenbrink/.openclaw/workspace/wildphotography/manual_review_queue.json",
+    "total_items": 1,
+    "new_items_this_run": 1
+  },
+  "recovery_notes": [
+    "AGENTS.md rule: legacy_static records (14484 photos) are excluded from orphan workflows and repair",
+    "True orphan definition: source_path empty AND original_r2_key empty AND content_hash empty AND thumb_url empty",
+    "The 1 unrecoverable record (id=37410) has content_hash populated but it is not usable (test slug)",
+    "Recovery strategy used: R2 key presence for bulk batch, no R2 lookup required",
+    "Remaining orphan candidate has content_hash but no usable original key — flagged for manual review"
+  ],
+  "next_actions": [
+    "id=37410 (test-test1776) queued for manual review — consider deletion if no recoverable asset found",
+    "System is at minimal orphan load — no further batch processing needed",
+    "Legacy orphan review can run weekly or on-demand"
+  ],
+  "classification_note": "73 photos were recoverable via original_r2_key presence. 1 true orphan remains unrecoverable and queued for manual review. legacy_static records correctly excluded per AGENTS.md rules."
+}

@@ -1,0 +1,65 @@
+{
+  "run_at": "2026-06-01T14:53:53.360827+00:00",
+  "total_photos_with_r2_key": 62236,
+  "sample_size": 200,
+  "present_count": 191,
+  "missing_count": 9,
+  "missing_rate_pct": 4.5,
+  "missing": [
+    {
+      "photo_id": 20862,
+      "key": "originals/fa12/2023-12-26 07.22.28.jpg",
+      "present": false,
+      "error": "404"
+    },
+    {
+      "photo_id": 42451,
+      "key": "originals/6/1777420275159-2022-09-11%2012.59.31.jpg",
+      "present": false,
+      "error": "404"
+    },
+    {
+      "photo_id": 20780,
+      "key": "originals/ad2a/DJI_0383.jpg",
+      "present": false,
+      "error": "404"
+    },
+    {
+      "photo_id": 47749,
+      "key": "originals/legacy/47749/original.jpg",
+      "present": false,
+      "error": "404"
+    },
+    {
+      "photo_id": 47263,
+      "key": "derivatives/47263/original.jpg",
+      "present": false,
+      "error": "404"
+    },
+    {
+      "photo_id": 44091,
+      "key": "originals/volcan-irazu/",
+      "present": false,
+      "error": "404"
+    },
+    {
+      "photo_id": 41482,
+      "key": "originals/tamarindo-guanacaste-costa-rica/03b0cd253d61f8b1472da22b49508f2d5940c755b32eb8dd95c62d0dbe6bec3e.jpg",
+      "present": false,
+      "error": "404"
+    },
+    {
+      "photo_id": 47685,
+      "key": "originals/lost/47685/original.jpg",
+      "present": false,
+      "error": "404"
+    },
+    {
+      "photo_id": 47355,
+      "key": "derivatives/47355/original.jpg",
+      "present": false,
+      "error": "404"
+    }
+  ],
+  "status": "success"
+}

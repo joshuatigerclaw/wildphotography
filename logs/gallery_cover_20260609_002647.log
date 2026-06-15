@@ -1,0 +1,14 @@
+[gallery_cover_assignment] Starting run at batch_limit=200
+[gallery_cover_assignment] Galleries needing cover work: 1
+  - missing cover: 1
+  - invalid cover: 0
+[gallery_cover_assignment] Galleries with eligible candidates: 0
+[gallery_cover_assignment] Can assign: 0, Need manual: 1
+[gallery_cover_assignment] Covers assigned: 0, Covers repaired: 0
+[gallery_cover_assignment] Queued for manual review: 1
+
+=== SUMMARY ===
+galleries_scanned: 1
+covers_assigned: 0
+covers_repaired: 0
+manual_review_required: 1

@@ -657,8 +657,14 @@ export default function PhotoPageClient({
             {/* Location / metadata row */}
             <MetadataBlock photo={photo} gallery={gallery} />
 
-            {/* Discovery links */}
-            <DiscoveryLinks photo={photo} gallery={gallery} clusters={photo.metadata?.keyword_clusters} />
+            {/* GetYourGuide widget — replaces Explore link */}
+            {(photo.locationName || photo.region) && (
+              <div
+                data-gyg-widget="auto"
+                data-gyg-partner-id="6ZV7KMH"
+                data-gyg-cmp="wildphotocr"
+              />
+            )}
 
             {/* Location map */}
             {hasLocation && (
@@ -678,14 +684,9 @@ export default function PhotoPageClient({
                 <h2 className="text-xs font-semibold text-gray-400 mb-3 uppercase tracking-wider">
                   More from {gallery?.name || 'this gallery'}
                 </h2>
-                <VirtualizedGallery
-                  photos={galleryPhotos.map(p => ({
-                    ...p,
-                    title: p.title || 'Photo',
-                    thumbUrl: p.smallUrl || p.thumbUrl,
-                  }))}
-                  columns={4}
-                />
+                <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fill,minmax(180px,1fr))',gap:'12px'}}>
+                  {galleryPhotos.map((p)=>(<Link key={p.id} href={`/photo/${p.slug}`} style={{display:'block',textDecoration:'none'}}><div style={{aspectRatio:'1/1',background:'var(--bg-inset)',borderRadius:'var(--r-md)',overflow:'hidden',border:'1px solid var(--rule)'}}>{p.smallUrl||p.thumbUrl?<img src={p.smallUrl||p.thumbUrl} alt={p.title||'Photo'} loading="lazy" style={{width:'100%',height:'100%',objectFit:'cover',display:'block'}}/>:<div style={{display:'flex',alignItems:'center',justifyContent:'center',height:'100%',color:'var(--ink-dim)',fontSize:'24px'}}>📷</div>}</div><p style={{fontFamily:'var(--font-display)',fontSize:'12px',fontWeight:500,color:'var(--ink)',margin:'6px 0 0 0',overflow:'hidden',textOverflow:'ellipsis',whiteSpace:'nowrap'}}>{p.title||'Photo'}</p></Link>))}
+                </div>
                 {gallery && (
                   <div className="mt-3">
                     <Link
@@ -703,14 +704,9 @@ export default function PhotoPageClient({
             {relatedPhotos.length > 0 && (
               <div>
                 <h2 className="text-xs font-semibold text-gray-400 mb-3 uppercase tracking-wider">Related Photos</h2>
-                <VirtualizedGallery
-                  photos={relatedPhotos.map(p => ({
-                    ...p,
-                    title: p.title || 'Photo',
-                    thumbUrl: p.smallUrl || p.thumbUrl,
-                  }))}
-                  columns={4}
-                />
+                <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fill,minmax(180px,1fr))',gap:'12px'}}>
+                  {relatedPhotos.map((p)=>(<Link key={p.id} href={`/photo/${p.slug}`} style={{display:'block',textDecoration:'none'}}><div style={{aspectRatio:'1/1',background:'var(--bg-inset)',borderRadius:'var(--r-md)',overflow:'hidden',border:'1px solid var(--rule)'}}>{p.smallUrl||p.thumbUrl?<img src={p.smallUrl||p.thumbUrl} alt={p.title||'Photo'} loading="lazy" style={{width:'100%',height:'100%',objectFit:'cover',display:'block'}}/>:<div style={{display:'flex',alignItems:'center',justifyContent:'center',height:'100%',color:'var(--ink-dim)',fontSize:'24px'}}>📷</div>}</div><p style={{fontFamily:'var(--font-display)',fontSize:'12px',fontWeight:500,color:'var(--ink)',margin:'6px 0 0 0',overflow:'hidden',textOverflow:'ellipsis',whiteSpace:'nowrap'}}>{p.title||'Photo'}</p></Link>))}
+                </div>
               </div>
             )}
 
@@ -720,14 +716,9 @@ export default function PhotoPageClient({
                 <h2 className="text-xs font-semibold text-gray-400 mb-3 uppercase tracking-wider">
                   More of {photo.species_common_name || 'this species'}
                 </h2>
-                <VirtualizedGallery
-                  photos={speciesPhotos.map(p => ({
-                    ...p,
-                    title: p.title || 'Photo',
-                    thumbUrl: p.smallUrl || p.thumbUrl,
-                  }))}
-                  columns={4}
-                />
+                <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fill,minmax(180px,1fr))',gap:'12px'}}>
+                  {speciesPhotos.map((p)=>(<Link key={p.id} href={`/photo/${p.slug}`} style={{display:'block',textDecoration:'none'}}><div style={{aspectRatio:'1/1',background:'var(--bg-inset)',borderRadius:'var(--r-md)',overflow:'hidden',border:'1px solid var(--rule)'}}>{p.smallUrl||p.thumbUrl?<img src={p.smallUrl||p.thumbUrl} alt={p.title||'Photo'} loading="lazy" style={{width:'100%',height:'100%',objectFit:'cover',display:'block'}}/>:<div style={{display:'flex',alignItems:'center',justifyContent:'center',height:'100%',color:'var(--ink-dim)',fontSize:'24px'}}>📷</div>}</div><p style={{fontFamily:'var(--font-display)',fontSize:'12px',fontWeight:500,color:'var(--ink)',margin:'6px 0 0 0',overflow:'hidden',textOverflow:'ellipsis',whiteSpace:'nowrap'}}>{p.title||'Photo'}</p></Link>))}
+                </div>
                 {photo.species_common_name && (
                   <div className="mt-3">
                     <Link
@@ -747,14 +738,9 @@ export default function PhotoPageClient({
                 <h2 className="text-xs font-semibold text-gray-400 mb-3 uppercase tracking-wider">
                   Seen in {photo.locationName || 'this location'}
                 </h2>
-                <VirtualizedGallery
-                  photos={locationPhotos.map(p => ({
-                    ...p,
-                    title: p.title || 'Photo',
-                    thumbUrl: p.smallUrl || p.thumbUrl,
-                  }))}
-                  columns={4}
-                />
+                <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fill,minmax(180px,1fr))',gap:'12px'}}>
+                  {locationPhotos.map((p)=>(<Link key={p.id} href={`/photo/${p.slug}`} style={{display:'block',textDecoration:'none'}}><div style={{aspectRatio:'1/1',background:'var(--bg-inset)',borderRadius:'var(--r-md)',overflow:'hidden',border:'1px solid var(--rule)'}}>{p.smallUrl||p.thumbUrl?<img src={p.smallUrl||p.thumbUrl} alt={p.title||'Photo'} loading="lazy" style={{width:'100%',height:'100%',objectFit:'cover',display:'block'}}/>:<div style={{display:'flex',alignItems:'center',justifyContent:'center',height:'100%',color:'var(--ink-dim)',fontSize:'24px'}}>📷</div>}</div><p style={{fontFamily:'var(--font-display)',fontSize:'12px',fontWeight:500,color:'var(--ink)',margin:'6px 0 0 0',overflow:'hidden',textOverflow:'ellipsis',whiteSpace:'nowrap'}}>{p.title||'Photo'}</p></Link>))}
+                </div>
               </div>
             )}
 

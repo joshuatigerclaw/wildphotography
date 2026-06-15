@@ -1,0 +1,12 @@
+{
+  "run_at": "2026-06-09T00:38:26.141Z",
+  "stale_removed": 0,
+  "missing_added": 0,
+  "errors": [
+    "Batch 1 failed: 500 records"
+  ],
+  "status": "completed",
+  "neon_eligible": 63025,
+  "typesense_count": 67618,
+  "final_drift": -4593
+}

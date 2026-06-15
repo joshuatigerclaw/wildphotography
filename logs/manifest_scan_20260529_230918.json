@@ -1,0 +1,77 @@
+{
+  "run_at": "2026-05-30T05:09:18.117325+00:00",
+  "summary": {
+    "total_runs": 59,
+    "successful": 0,
+    "failed": 0,
+    "other": 59,
+    "total_imported": 2215,
+    "total_failed_rows": 301,
+    "earliest_run": "2026-03-21T18:21:54.248382+00:00",
+    "latest_run": "2026-05-24T15:50:25.721000+00:00"
+  },
+  "activity": {
+    "last_24h": 0,
+    "last_7d": 33
+  },
+  "recent_runs": [
+    {
+      "id": 60,
+      "batch_id": "may2026_batch103",
+      "source_folder": "[\"Dominical-and-Uvita\",\"Perez-Zeledon-San-Isidro-del-General\"]",
+      "status": "complete",
+      "imported_new": 0,
+      "rows_failed": 0,
+      "started_at": "2026-05-24T15:50:25.721000+00:00",
+      "completed_at": "2026-05-24T15:50:32.860000+00:00",
+      "error_message": null
+    },
+    {
+      "id": 59,
+      "batch_id": "may2026_batch102",
+      "source_folder": "[\"Golfo-de-Nicoya\",\"Food-\",\"Industrial-Costa-Rica\",\"Playa-Hermosa-Guanacaste\",\"Playa-Real-Roble-Guanacaste-Costa-Rica\",\"Rural-Costa-Rica\"]",
+      "status": "complete",
+      "imported_new": 0,
+      "rows_failed": 0,
+      "started_at": "2026-05-24T15:49:56.305000+00:00",
+      "completed_at": "2026-05-24T15:50:09.770000+00:00",
+      "error_message": null
+    },
+    {
+      "id": 58,
+      "batch_id": "may2026_batch101",
+      "source_folder": "[\"La-Sabana-Estadio-Nacional-Costa-Rica-San-Jose\",\"Puerto-Caldera-Puntarenas-Port\",\"Isla-San-Lucas-Puntarenas-Costa-Rica\",\"Guanacaste-Costa-Rica-Travel-and-Tourism\",\"Peninsula-de-Nicoya\",\"Samara-Playa-Carillo\"]",
+      "status": "complete",
+      "imported_new": 0,
+      "rows_failed": 0,
+      "started_at": "2026-05-24T15:49:29.503000+00:00",
+      "completed_at": "2026-05-24T15:49:40.230000+00:00",
+      "error_message": null
+    },
+    {
+      "id": 57,
+      "batch_id": "may2026_batch109",
+      "source_folder": "[\"Best-of-Costa-Rica\",\"Flowers-plants-trees\",\"Conchal-Guanacaste\",\"Golfo-de-Nicoya\",\"Las-Catalinas-Guanacaste\",\"Peninsula-de-Osa\",\"Santa-Teresa-Malpais\",\"Playa-Hermosa-Guanacaste\",\"Flora-Fauna\",\"Waterfalls-in-Costa-Rica\",\"Arenal-Volcano\",\"Montezuma-Costa-Rica\",\"Nauyaca-Waterfalls\"]",
+      "status": "complete",
+      "imported_new": 0,
+      "rows_failed": 0,
+      "started_at": "2026-05-24T11:16:10.428000+00:00",
+      "completed_at": "2026-05-24T11:16:42.514000+00:00",
+      "error_message": null
+    },
+    {
+      "id": 56,
+      "batch_id": "may2026_batch108",
+      "source_folder": "[\"Birds-Macaws-Lapas\",\"Butterflies\",\"Crocodiles\",\"Dominical-and-Uvita\"]",
+      "status": "complete",
+      "imported_new": 0,
+      "rows_failed": 0,
+      "started_at": "2026-05-24T11:16:06.324000+00:00",
+      "completed_at": "2026-05-24T11:16:10.175000+00:00",
+      "error_message": null
+    }
+  ],
+  "failed_runs": [],
+  "status": "success",
+  "health": "ok"
+}

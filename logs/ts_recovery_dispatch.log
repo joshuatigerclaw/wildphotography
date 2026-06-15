@@ -1,0 +1,16 @@
+[ts_recovery] 2026-06-03 10:39:05 — === Starting TS OOM Recovery Dispatcher ===
+[ts_recovery] 2026-06-03 10:39:05 — Monitoring TS health until memory recovers...
+[ts_recovery] 2026-06-03 10:39:06 —   Check 30s: {'ok': True, 'resource_error': 'OUT_OF_MEMORY'}
+[ts_recovery] 2026-06-03 10:39:36 —   Check 60s: {'ok': True, 'resource_error': 'OUT_OF_MEMORY'}
+[ts_recovery] 2026-06-03 10:40:06 —   Check 90s: {'ok': True, 'resource_error': 'OUT_OF_MEMORY'}
+[ts_recovery] 2026-06-03 10:40:37 —   Check 120s: {'ok': True, 'resource_error': 'OUT_OF_MEMORY'}
+[ts_recovery] 2026-06-03 10:41:01 — === Starting TS OOM Recovery Dispatcher ===
+[ts_recovery] 2026-06-03 10:41:01 — Monitoring TS health until memory recovers...
+[ts_recovery] 2026-06-03 10:41:01 —   Check 30s: {'ok': True, 'resource_error': 'OUT_OF_MEMORY'}
+[ts_recovery] 2026-06-03 10:41:31 —   Check 60s: {'ok': True, 'resource_error': 'OUT_OF_MEMORY'}
+[ts_recovery] 2026-06-03 10:42:02 —   Check 90s: {'ok': True, 'resource_error': 'OUT_OF_MEMORY'}
+[ts_recovery] 2026-06-03 10:42:32 —   Check 120s: {'ok': True, 'resource_error': 'OUT_OF_MEMORY'}
+[ts_recovery] 2026-06-03 10:43:02 —   Check 150s: {'ok': True, 'resource_error': 'OUT_OF_MEMORY'}
+[ts_recovery] 2026-06-03 10:43:32 —   Check 180s: {'ok': True, 'resource_error': 'OUT_OF_MEMORY'}
+[ts_recovery] 2026-06-03 10:44:03 —   Check 210s: {'ok': True, 'resource_error': 'OUT_OF_MEMORY'}
+[ts_recovery] 2026-06-03 10:44:33 —   Check 240s: {'ok': True, 'resource_error': 'OUT_OF_MEMORY'}

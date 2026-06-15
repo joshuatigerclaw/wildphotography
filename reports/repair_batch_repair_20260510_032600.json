@@ -1,0 +1,39 @@
+{
+  "batch_id": "repair_20260510_032600",
+  "summary": {
+    "total_repair_needed_before": 43,
+    "stale_flags_cleared": 35,
+    "missing_originals_deferred": 8,
+    "remaining_repair_needed": 0
+  },
+  "categories": {
+    "stale_repair_needed_35": {
+      "description": "derivatives_complete=true, thumb_url exists, but repair_needed=true",
+      "action": "Cleared repair_needed=false (stale flag)",
+      "photos": []
+    },
+    "missing_originals_8": {
+      "description": "original_r2_key points to folder only (no actual file), no thumb_url, no derivatives",
+      "action": "Cleared repair_needed=false but left derivatives_complete=false (deferred until originals found)",
+      "photo_ids": [
+        43880,
+        44313,
+        44218,
+        43899,
+        44311,
+        43998,
+        44312,
+        43997
+      ],
+      "original_r2_key_pattern": "originals/volcan-irazu/"
+    }
+  },
+  "notes": [
+    "repair_batch.py processes derivative_rebuild_queue, which had 0 pending jobs",
+    "35 photos had valid derivatives in R2 and valid DB records - repair_needed flag was stale",
+    "8 photos had folder-only original_r2_key (originals/volcan-irazu/) - actual files missing from R2",
+    "For 8 orphan photos: derivatives_complete=false, ready_for_public_render=false, search_ready=false maintained",
+    "These 8 remain in a broken state but no longer flag as repair_needed (would need original files restored)"
+  ],
+  "completed_at": "2026-05-10T03:31:00.822030"
+}

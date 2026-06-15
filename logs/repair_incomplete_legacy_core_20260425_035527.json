@@ -1,0 +1,972 @@
+{
+  "run_at": "2026-04-25T09:55:27.315202+00:00",
+  "total_photos": 34523,
+  "distinct_affected_photos": 882,
+  "all_clear": false,
+  "issues": {
+    "missing_original_r2_key": {
+      "description": "Missing original R2 storage key \u2014 cannot rebuild derivatives",
+      "count": 2,
+      "sample": [
+        {
+          "id": 38874,
+          "slug": "water-sports-and-surfing-cl0a1930-788ab556",
+          "status": "draft",
+          "updated_at": "2026-04-21T08:44:09.610334"
+        },
+        {
+          "id": 38875,
+          "slug": "water-sports-and-surfing-img-9967-2-be35de8a",
+          "status": "draft",
+          "updated_at": "2026-04-21T08:44:09.386749"
+        }
+      ]
+    },
+    "pending_derivatives_with_r2": {
+      "description": "Has R2 original but derivatives_complete=false \u2014 needs rebuild dispatch",
+      "count": 11,
+      "sample": [
+        {
+          "id": 139,
+          "slug": "default-QDVfNk",
+          "status": "legacy_static",
+          "original_r2_key": "originals/10139/IMG_5311.JPG"
+        },
+        {
+          "id": 202,
+          "slug": "p1101882-jpg-vbBFGp",
+          "status": "published",
+          "original_r2_key": "originals/09f8d104c0d56d25aace3834b13e62fdb1698cebfc05504a697d9212720a625b.jpg"
+        },
+        {
+          "id": 203,
+          "slug": "p1101990-jpg-H4MNZp",
+          "status": "published",
+          "original_r2_key": "originals/07d8fe3d932fc157aa2fdd362296127870b01855e7a5609baa6abba5579d9621.jpg"
+        },
+        {
+          "id": 204,
+          "slug": "p1112023-jpg-NQL7qC",
+          "status": "published",
+          "original_r2_key": "originals/256ea923c1c6d1faefcb5974bab8aef3ac76af7abcd0bc91d8fe425cd2e7ca07.jpg"
+        },
+        {
+          "id": 217,
+          "slug": "default-jcBXc4",
+          "status": "legacy_static",
+          "original_r2_key": "originals/10217/DJI_0901.JPG"
+        },
+        {
+          "id": 218,
+          "slug": "default-T3rPKf",
+          "status": "legacy_static",
+          "original_r2_key": "originals/10218/DJI_0902.JPG"
+        },
+        {
+          "id": 219,
+          "slug": "default-H5wDrT",
+          "status": "legacy_static",
+          "original_r2_key": "originals/10219/DJI_0904.JPG"
+        },
+        {
+          "id": 221,
+          "slug": "pc262046-jpg-ssKkqq",
+          "status": "published",
+          "original_r2_key": "originals/c180a378fffdaf77d755cbe44e2b74e10567fb5c7f51ea59af81690ba33e5cb6.jpg"
+        },
+        {
+          "id": 236,
+          "slug": "lush-rainforest-stream-cascading-over-mossy-rocks-wK9XJL",
+          "status": "legacy_static",
+          "original_r2_key": "originals/10236/DJI_0938.JPG"
+        },
+        {
+          "id": 28484,
+          "slug": "2021-03-25-11-39-45-caa78cf4",
+          "status": "published",
+          "original_r2_key": "photos/costa-rica-gallery-montezuma-costa-rica/2021-03-25-11-39-45-9b011e9e/original.jpg"
+        },
+        {
+          "id": 38028,
+          "slug": "DJI0184-d2e6e119",
+          "status": "draft",
+          "original_r2_key": "lifestyle/originals/DJI0184_d2e6e119.mp4"
+        }
+      ]
+    },
+    "render_ready_not_search_ready": {
+      "description": "ready_for_public_render=true but search_ready=false \u2014 blocked from Typesense",
+      "count": 171,
+      "sample": [
+        {
+          "id": 40933,
+          "slug": "peninsula-de-nicoya-cl0a0969",
+          "status": "draft",
+          "thumb_url": "https://wildphoto-storage.r2.cloudflarestorage.com/originals/66/peninsula-de-nicoya-cl0a0969-1777049924948_thumb.JPG"
+        },
+        {
+          "id": 40934,
+          "slug": "tamarindo-guanacaste-costa-rica-2022-04-21-14-57-41",
+          "status": "draft",
+          "thumb_url": "https://wildphoto-storage.r2.cloudflarestorage.com/originals/94/tamarindo-guanacaste-costa-rica-2022-04-21-14-57-41-1777101798100_thumb.jpg"
+        },
+        {
+          "id": 40935,
+          "slug": "tamarindo-guanacaste-costa-rica-2022-04-21-15-20-09",
+          "status": "draft",
+          "thumb_url": "https://wildphoto-storage.r2.cloudflarestorage.com/originals/94/tamarindo-guanacaste-costa-rica-2022-04-21-15-20-09-1777101801802_thumb.jpg"
+        },
+        {
+          "id": 40936,
+          "slug": "tamarindo-guanacaste-costa-rica-2022-04-21-15-20-11",
+          "status": "draft",
+          "thumb_url": "https://wildphoto-storage.r2.cloudflarestorage.com/originals/94/tamarindo-guanacaste-costa-rica-2022-04-21-15-20-11-1777101804668_thumb.jpg"
+        },
+        {
+          "id": 40937,
+          "slug": "tamarindo-guanacaste-costa-rica-dji-0001",
+          "status": "draft",
+          "thumb_url": "https://wildphoto-storage.r2.cloudflarestorage.com/originals/94/tamarindo-guanacaste-costa-rica-dji-0001-1777101807945_thumb.jpg"
+        },
+        {
+          "id": 40938,
+          "slug": "tamarindo-guanacaste-costa-rica-dji-0002",
+          "status": "draft",
+          "thumb_url": "https://wildphoto-storage.r2.cloudflarestorage.com/originals/94/tamarindo-guanacaste-costa-rica-dji-0002-1777101811668_thumb.jpg"
+        },
+        {
+          "id": 40939,
+          "slug": "tamarindo-guanacaste-costa-rica-dji-0003",
+          "status": "draft",
+          "thumb_url": "https://wildphoto-storage.r2.cloudflarestorage.com/originals/94/tamarindo-guanacaste-costa-rica-dji-0003-1777101815299_thumb.jpg"
+        },
+        {
+          "id": 40940,
+          "slug": "tamarindo-guanacaste-costa-rica-dji-0004",
+          "status": "draft",
+          "thumb_url": "https://wildphoto-storage.r2.cloudflarestorage.com/originals/94/tamarindo-guanacaste-costa-rica-dji-0004-1777101819247_thumb.jpg"
+        },
+        {
+          "id": 40941,
+          "slug": "tamarindo-guanacaste-costa-rica-dji-0008",
+          "status": "draft",
+          "thumb_url": "https://wildphoto-storage.r2.cloudflarestorage.com/originals/94/tamarindo-guanacaste-costa-rica-dji-0008-1777101822633_thumb.jpg"
+        },
+        {
+          "id": 40942,
+          "slug": "tamarindo-guanacaste-costa-rica-dji-0009",
+          "status": "draft",
+          "thumb_url": "https://wildphoto-storage.r2.cloudflarestorage.com/originals/94/tamarindo-guanacaste-costa-rica-dji-0009-1777101826480_thumb.jpg"
+        },
+        {
+          "id": 40943,
+          "slug": "tamarindo-guanacaste-costa-rica-dji-0010",
+          "status": "draft",
+          "thumb_url": "https://wildphoto-storage.r2.cloudflarestorage.com/originals/94/tamarindo-guanacaste-costa-rica-dji-0010-1777101830919_thumb.jpg"
+        },
+        {
+          "id": 40944,
+          "slug": "tamarindo-guanacaste-costa-rica-dji-0011",
+          "status": "draft",
+          "thumb_url": "https://wildphoto-storage.r2.cloudflarestorage.com/originals/94/tamarindo-guanacaste-costa-rica-dji-0011-1777101834369_thumb.jpg"
+        },
+        {
+          "id": 40945,
+          "slug": "tamarindo-guanacaste-costa-rica-dji-0012",
+          "status": "draft",
+          "thumb_url": "https://wildphoto-storage.r2.cloudflarestorage.com/originals/94/tamarindo-guanacaste-costa-rica-dji-0012-1777101838359_thumb.jpg"
+        },
+        {
+          "id": 40946,
+          "slug": "tamarindo-guanacaste-costa-rica-dji-0013",
+          "status": "draft",
+          "thumb_url": "https://wildphoto-storage.r2.cloudflarestorage.com/originals/94/tamarindo-guanacaste-costa-rica-dji-0013-1777101843108_thumb.jpg"
+        },
+        {
+          "id": 40947,
+          "slug": "tamarindo-guanacaste-costa-rica-dji-0016",
+          "status": "draft",
+          "thumb_url": "https://wildphoto-storage.r2.cloudflarestorage.com/originals/94/tamarindo-guanacaste-costa-rica-dji-0016-1777101847054_thumb.jpg"
+        },
+        {
+          "id": 40948,
+          "slug": "tamarindo-guanacaste-costa-rica-dji-0017",
+          "status": "draft",
+          "thumb_url": "https://wildphoto-storage.r2.cloudflarestorage.com/originals/94/tamarindo-guanacaste-costa-rica-dji-0017-1777101850531_thumb.jpg"
+        },
+        {
+          "id": 40949,
+          "slug": "tamarindo-guanacaste-costa-rica-dji-0018",
+          "status": "draft",
+          "thumb_url": "https://wildphoto-storage.r2.cloudflarestorage.com/originals/94/tamarindo-guanacaste-costa-rica-dji-0018-1777101854228_thumb.jpg"
+        },
+        {
+          "id": 40950,
+          "slug": "tamarindo-guanacaste-costa-rica-dji-0019",
+          "status": "draft",
+          "thumb_url": "https://wildphoto-storage.r2.cloudflarestorage.com/originals/94/tamarindo-guanacaste-costa-rica-dji-0019-1777101857713_thumb.jpg"
+        },
+        {
+          "id": 40951,
+          "slug": "tamarindo-guanacaste-costa-rica-dji-0020",
+          "status": "draft",
+          "thumb_url": "https://wildphoto-storage.r2.cloudflarestorage.com/originals/94/tamarindo-guanacaste-costa-rica-dji-0020-1777101861246_thumb.jpg"
+        },
+        {
+          "id": 40952,
+          "slug": "tamarindo-guanacaste-costa-rica-dji-0022",
+          "status": "draft",
+          "thumb_url": "https://wildphoto-storage.r2.cloudflarestorage.com/originals/94/tamarindo-guanacaste-costa-rica-dji-0022-1777101864677_thumb.jpg"
+        },
+        {
+          "id": 40953,
+          "slug": "tamarindo-guanacaste-costa-rica-dji-0026",
+          "status": "draft",
+          "thumb_url": "https://wildphoto-storage.r2.cloudflarestorage.com/originals/94/tamarindo-guanacaste-costa-rica-dji-0026-1777101869018_thumb.jpg"
+        },
+        {
+          "id": 40954,
+          "slug": "flamingo-beach-dji-0619",
+          "status": "draft",
+          "thumb_url": "https://wildphoto-storage.r2.cloudflarestorage.com/originals/33/flamingo-beach-dji-0619-1777101872585_thumb.jpg"
+        },
+        {
+          "id": 40955,
+          "slug": "flamingo-beach-dji-0629",
+          "status": "draft",
+          "thumb_url": "https://wildphoto-storage.r2.cloudflarestorage.com/originals/33/flamingo-beach-dji-0629-1777101876353_thumb.jpg"
+        },
+        {
+          "id": 40956,
+          "slug": "flamingo-beach-dji-0644",
+          "status": "draft",
+          "thumb_url": "https://wildphoto-storage.r2.cloudflarestorage.com/originals/33/flamingo-beach-dji-0644-1777101880853_thumb.jpg"
+        },
+        {
+          "id": 40957,
+          "slug": "flamingo-beach-dji-0652",
+          "status": "draft",
+          "thumb_url": "https://wildphoto-storage.r2.cloudflarestorage.com/originals/33/flamingo-beach-dji-0652-1777101885235_thumb.jpg"
+        },
+        {
+          "id": 40958,
+          "slug": "flamingo-beach-dji-0671",
+          "status": "draft",
+          "thumb_url": "https://wildphoto-storage.r2.cloudflarestorage.com/originals/33/flamingo-beach-dji-0671-1777101888850_thumb.jpg"
+        },
+        {
+          "id": 40959,
+          "slug": "flamingo-beach-dji-0684",
+          "status": "draft",
+          "thumb_url": "https://wildphoto-storage.r2.cloudflarestorage.com/originals/33/flamingo-beach-dji-0684-1777101892594_thumb.jpg"
+        },
+        {
+          "id": 40960,
+          "slug": "flamingo-beach-dji-0710",
+          "status": "draft",
+          "thumb_url": "https://wildphoto-storage.r2.cloudflarestorage.com/originals/33/flamingo-beach-dji-0710-1777101896709_thumb.jpg"
+        },
+        {
+          "id": 40961,
+          "slug": "flamingo-beach-dji-0736",
+          "status": "draft",
+          "thumb_url": "https://wildphoto-storage.r2.cloudflarestorage.com/originals/33/flamingo-beach-dji-0736-1777101900390_thumb.jpg"
+        },
+        {
+          "id": 40962,
+          "slug": "flamingo-beach-dji-0751",
+          "status": "draft",
+          "thumb_url": "https://wildphoto-storage.r2.cloudflarestorage.com/originals/33/flamingo-beach-dji-0751-1777101904376_thumb.jpg"
+        },
+        {
+          "id": 40963,
+          "slug": "flamingo-beach-dji-0759",
+          "status": "draft",
+          "thumb_url": "https://wildphoto-storage.r2.cloudflarestorage.com/originals/33/flamingo-beach-dji-0759-1777101908620_thumb.jpg"
+        },
+        {
+          "id": 40964,
+          "slug": "flamingo-beach-dji-0768",
+          "status": "draft",
+          "thumb_url": "https://wildphoto-storage.r2.cloudflarestorage.com/originals/33/flamingo-beach-dji-0768-1777101913107_thumb.jpg"
+        },
+        {
+          "id": 40965,
+          "slug": "flamingo-beach-dji-0776",
+          "status": "draft",
+          "thumb_url": "https://wildphoto-storage.r2.cloudflarestorage.com/originals/33/flamingo-beach-dji-0776-1777101916686_thumb.jpg"
+        },
+        {
+          "id": 40966,
+          "slug": "flamingo-beach-dji-0799",
+          "status": "draft",
+          "thumb_url": "https://wildphoto-storage.r2.cloudflarestorage.com/originals/33/flamingo-beach-dji-0799-1777101921487_thumb.jpg"
+        },
+        {
+          "id": 40967,
+          "slug": "flamingo-beach-dji-0811",
+          "status": "draft",
+          "thumb_url": "https://wildphoto-storage.r2.cloudflarestorage.com/originals/33/flamingo-beach-dji-0811-1777101925672_thumb.jpg"
+        },
+        {
+          "id": 40968,
+          "slug": "flamingo-beach-dji-0817",
+          "status": "draft",
+          "thumb_url": "https://wildphoto-storage.r2.cloudflarestorage.com/originals/33/flamingo-beach-dji-0817-1777101930085_thumb.jpg"
+        },
+        {
+          "id": 40969,
+          "slug": "flamingo-beach-dji-0847",
+          "status": "draft",
+          "thumb_url": "https://wildphoto-storage.r2.cloudflarestorage.com/originals/33/flamingo-beach-dji-0847-1777101934203_thumb.jpg"
+        },
+        {
+          "id": 40970,
+          "slug": "flamingo-beach-dji-0853",
+          "status": "draft",
+          "thumb_url": "https://wildphoto-storage.r2.cloudflarestorage.com/originals/33/flamingo-beach-dji-0853-1777101937901_thumb.jpg"
+        },
+        {
+          "id": 40971,
+          "slug": "flamingo-beach-dji-0862",
+          "status": "draft",
+          "thumb_url": "https://wildphoto-storage.r2.cloudflarestorage.com/originals/33/flamingo-beach-dji-0862-1777101941782_thumb.jpg"
+        },
+        {
+          "id": 40972,
+          "slug": "flamingo-beach-dji-0864",
+          "status": "draft",
+          "thumb_url": "https://wildphoto-storage.r2.cloudflarestorage.com/originals/33/flamingo-beach-dji-0864-1777101945940_thumb.jpg"
+        },
+        {
+          "id": 40973,
+          "slug": "flamingo-beach-dji-0878",
+          "status": "draft",
+          "thumb_url": "https://wildphoto-storage.r2.cloudflarestorage.com/originals/33/flamingo-beach-dji-0878-1777101950004_thumb.jpg"
+        },
+        {
+          "id": 40974,
+          "slug": "las-catalinas-guanacaste-dji-0968",
+          "status": "draft",
+          "thumb_url": "https://wildphoto-storage.r2.cloudflarestorage.com/originals/55/las-catalinas-guanacaste-dji-0968-1777101953666_thumb.jpg"
+        },
+        {
+          "id": 40975,
+          "slug": "las-catalinas-guanacaste-dji-0969",
+          "status": "draft",
+          "thumb_url": "https://wildphoto-storage.r2.cloudflarestorage.com/originals/55/las-catalinas-guanacaste-dji-0969-1777101956890_thumb.jpg"
+        },
+        {
+          "id": 40976,
+          "slug": "las-catalinas-guanacaste-dji-0970",
+          "status": "draft",
+          "thumb_url": "https://wildphoto-storage.r2.cloudflarestorage.com/originals/55/las-catalinas-guanacaste-dji-0970-1777101960212_thumb.jpg"
+        },
+        {
+          "id": 40977,
+          "slug": "las-catalinas-guanacaste-dji-0971",
+          "status": "draft",
+          "thumb_url": "https://wildphoto-storage.r2.cloudflarestorage.com/originals/55/las-catalinas-guanacaste-dji-0971-1777101963687_thumb.jpg"
+        },
+        {
+          "id": 40978,
+          "slug": "las-catalinas-guanacaste-dji-0973",
+          "status": "draft",
+          "thumb_url": "https://wildphoto-storage.r2.cloudflarestorage.com/originals/55/las-catalinas-guanacaste-dji-0973-1777101966975_thumb.jpg"
+        },
+        {
+          "id": 40979,
+          "slug": "las-catalinas-guanacaste-dji-0974",
+          "status": "draft",
+          "thumb_url": "https://wildphoto-storage.r2.cloudflarestorage.com/originals/55/las-catalinas-guanacaste-dji-0974-1777101969904_thumb.jpg"
+        },
+        {
+          "id": 40980,
+          "slug": "las-catalinas-guanacaste-dji-0976",
+          "status": "draft",
+          "thumb_url": "https://wildphoto-storage.r2.cloudflarestorage.com/originals/55/las-catalinas-guanacaste-dji-0976-1777101977719_thumb.jpg"
+        },
+        {
+          "id": 40981,
+          "slug": "las-catalinas-guanacaste-dji-0979",
+          "status": "draft",
+          "thumb_url": "https://wildphoto-storage.r2.cloudflarestorage.com/originals/55/las-catalinas-guanacaste-dji-0979-1777101980716_thumb.jpg"
+        },
+        {
+          "id": 40982,
+          "slug": "las-catalinas-guanacaste-dji-0981",
+          "status": "draft",
+          "thumb_url": "https://wildphoto-storage.r2.cloudflarestorage.com/originals/55/las-catalinas-guanacaste-dji-0981-1777101983810_thumb.jpg"
+        }
+      ]
+    },
+    "missing_content_hash": {
+      "description": "No content_hash \u2014 cannot detect duplicates or verify integrity",
+      "count": 15586,
+      "sample": [
+        {
+          "id": 42,
+          "slug": "paddleboarding-adventure-on-a-tropical-coast-9kLkq4",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 44,
+          "slug": "img-9761-jpg-McvJMD",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 45,
+          "slug": "img-9867-jpg-ggnxV4",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 46,
+          "slug": "img-0133-jpg-t25Tbt",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 47,
+          "slug": "img-0148-jpg-WgXJsL",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 48,
+          "slug": "img-0135-jpg-x8LCKP",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 49,
+          "slug": "img-0154-jpg-P4g3jH",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 50,
+          "slug": "costa-rica-billabong-surf-2009-5QgMNB",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 51,
+          "slug": "img-0280-jpg-WR6t7s",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 52,
+          "slug": "costa-rica-billabong-surf-2009-PSWCnj",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 53,
+          "slug": "img-9578-jpg-CWp24N",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 54,
+          "slug": "img-9644-jpg-HCxCGn",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 55,
+          "slug": "img-3491-jpg-jHd5JG",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 56,
+          "slug": "img-6629-jpg-dqMnVs",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 57,
+          "slug": "img-0332-jpg-rSSd5X",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 58,
+          "slug": "img-6632-jpg-sTd7RM",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 59,
+          "slug": "img-0341-jpg-kZ3chM",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 60,
+          "slug": "img-9672-jpg-HSKLKj",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 61,
+          "slug": "img-9584-jpg-F3ffkg",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 62,
+          "slug": "img-9468-jpg-pQpxCC",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 63,
+          "slug": "img-9572-jpg-TC4cZc",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 64,
+          "slug": "img-9600-jpg-ZsctXJ",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 65,
+          "slug": "img-9717-jpg-7ZKCZv",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 66,
+          "slug": "img-9723-jpg-qsxkCW",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 67,
+          "slug": "img-9890-jpg-zBSPgj",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 68,
+          "slug": "img-9902-jpg-JwSZbr",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 69,
+          "slug": "img-9843-jpg-hxpDkp",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 71,
+          "slug": "img-9919-jpg-DXrP87",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 72,
+          "slug": "img-0021-jpg-GkKRzD",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 73,
+          "slug": "img-0235-jpg-9sPXtp",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 74,
+          "slug": "img-0236-jpg-S2T7WR",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 75,
+          "slug": "img-0238-jpg-ZGvNtp",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 76,
+          "slug": "img-0277-jpg-qt4QV8",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 77,
+          "slug": "img-0325-jpg-fmv7Qf",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 78,
+          "slug": "img-3493-jpg-gG4vff",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 79,
+          "slug": "img-5305-jpg-R4sG6V",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 80,
+          "slug": "img-2089-jpg-pnr28M",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 81,
+          "slug": "img-3478-jpg-BWjWP9",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 82,
+          "slug": "img-2099-jpg-4gf3qq",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 83,
+          "slug": "img-5307-jpg-CrgJfq",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 84,
+          "slug": "img-5426-jpg-jmdgbW",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 85,
+          "slug": "img-5373-jpg-SZQs9D",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 86,
+          "slug": "20160903-141053-jpg-zLDgJD",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 87,
+          "slug": "img-2084-jpg-DRShDG",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 88,
+          "slug": "img-2110-jpg-TxcVfN",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 89,
+          "slug": "img-2088-jpg-49xTs2",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 90,
+          "slug": "img-2098-jpg-72bZT5",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 91,
+          "slug": "img-2175-jpg-qRTw8D",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 92,
+          "slug": "img-3437-jpg-PLSc2W",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 93,
+          "slug": "img-3495-jpg-sPk7r8",
+          "status": "legacy_static",
+          "has_r2": true
+        }
+      ]
+    },
+    "missing_slug": {
+      "description": "Null or empty slug \u2014 cannot build public URL",
+      "count": 0,
+      "sample": []
+    },
+    "missing_gallery_slug": {
+      "description": "ready_for_public_render=true but gallery_slug is null \u2014 no gallery association",
+      "count": 2436,
+      "sample": [
+        {
+          "id": 242,
+          "slug": "hermosa-beach-1",
+          "status": "archived"
+        },
+        {
+          "id": 14905,
+          "slug": "resplendent-quetzal",
+          "status": "archived"
+        },
+        {
+          "id": 38439,
+          "slug": "punta-leona-dji-0202-jpg",
+          "status": "active"
+        },
+        {
+          "id": 38440,
+          "slug": "punta-leona-dji-0205-jpg",
+          "status": "active"
+        },
+        {
+          "id": 38441,
+          "slug": "punta-leona-dji-0207-jpg",
+          "status": "active"
+        },
+        {
+          "id": 38442,
+          "slug": "punta-leona-dji-0213-jpg",
+          "status": "active"
+        },
+        {
+          "id": 38443,
+          "slug": "punta-leona-dji-0214-jpg",
+          "status": "active"
+        },
+        {
+          "id": 38444,
+          "slug": "punta-leona-dji-0216-jpg",
+          "status": "active"
+        },
+        {
+          "id": 38445,
+          "slug": "punta-leona-dji-0218-jpg",
+          "status": "active"
+        },
+        {
+          "id": 38446,
+          "slug": "punta-leona-dji-0219-jpg",
+          "status": "active"
+        },
+        {
+          "id": 38447,
+          "slug": "punta-leona-dji-0223-jpg",
+          "status": "active"
+        },
+        {
+          "id": 38448,
+          "slug": "punta-leona-dji-0226-jpg",
+          "status": "active"
+        },
+        {
+          "id": 38449,
+          "slug": "punta-leona-dji-0227-jpg",
+          "status": "active"
+        },
+        {
+          "id": 38450,
+          "slug": "punta-leona-dji-0228-jpg",
+          "status": "active"
+        },
+        {
+          "id": 38451,
+          "slug": "punta-leona-dji-0230-jpg",
+          "status": "active"
+        },
+        {
+          "id": 38452,
+          "slug": "punta-leona-dji-0231-jpg",
+          "status": "active"
+        },
+        {
+          "id": 38453,
+          "slug": "punta-leona-dji-0233-jpg",
+          "status": "active"
+        },
+        {
+          "id": 38454,
+          "slug": "punta-leona-dji-0234-jpg",
+          "status": "active"
+        },
+        {
+          "id": 38455,
+          "slug": "punta-leona-dji-0235-jpg",
+          "status": "active"
+        },
+        {
+          "id": 38456,
+          "slug": "punta-leona-dji-0237-2-jpg",
+          "status": "active"
+        },
+        {
+          "id": 38457,
+          "slug": "punta-leona-dji-0237-jpg",
+          "status": "active"
+        },
+        {
+          "id": 38458,
+          "slug": "punta-leona-dji-0240-jpg",
+          "status": "active"
+        },
+        {
+          "id": 38459,
+          "slug": "santa-teresa-malpais-dji-0091-jpg",
+          "status": "active"
+        },
+        {
+          "id": 38460,
+          "slug": "santa-teresa-malpais-dji-0100-jpg",
+          "status": "active"
+        },
+        {
+          "id": 38461,
+          "slug": "santa-teresa-malpais-dji-0112-jpg",
+          "status": "active"
+        },
+        {
+          "id": 38462,
+          "slug": "santa-teresa-malpais-dji-0115-jpg",
+          "status": "active"
+        },
+        {
+          "id": 38463,
+          "slug": "santa-teresa-malpais-dji-0118b-jpg",
+          "status": "active"
+        },
+        {
+          "id": 38464,
+          "slug": "santa-teresa-malpais-dji-0128-jpg",
+          "status": "active"
+        },
+        {
+          "id": 38465,
+          "slug": "santa-teresa-malpais-dji-0377-jpg",
+          "status": "active"
+        },
+        {
+          "id": 38466,
+          "slug": "santa-teresa-malpais-dji-0388-jpg",
+          "status": "active"
+        },
+        {
+          "id": 38467,
+          "slug": "santa-teresa-malpais-dji-0431-jpg",
+          "status": "active"
+        },
+        {
+          "id": 38468,
+          "slug": "santa-teresa-malpais-dji-0449-jpg",
+          "status": "active"
+        },
+        {
+          "id": 38469,
+          "slug": "santa-teresa-malpais-dji-0486-jpg",
+          "status": "active"
+        },
+        {
+          "id": 38470,
+          "slug": "santa-teresa-malpais-dji-0503-jpg",
+          "status": "active"
+        },
+        {
+          "id": 38471,
+          "slug": "santa-teresa-malpais-dji-0536-jpg",
+          "status": "active"
+        },
+        {
+          "id": 38472,
+          "slug": "santa-teresa-malpais-dji-0548-jpg",
+          "status": "active"
+        },
+        {
+          "id": 38473,
+          "slug": "santa-teresa-malpais-dji-0549-jpg",
+          "status": "active"
+        },
+        {
+          "id": 38474,
+          "slug": "santa-teresa-malpais-dji-0577-jpg",
+          "status": "active"
+        },
+        {
+          "id": 38475,
+          "slug": "santa-teresa-malpais-dji-0578-jpg",
+          "status": "active"
+        },
+        {
+          "id": 38476,
+          "slug": "isla-tortuga-dji-0555-1-jpg",
+          "status": "active"
+        },
+        {
+          "id": 38477,
+          "slug": "isla-tortuga-dji-0561-2-jpg",
+          "status": "active"
+        },
+        {
+          "id": 38478,
+          "slug": "isla-tortuga-dji-0561-jpg",
+          "status": "active"
+        },
+        {
+          "id": 38479,
+          "slug": "isla-tortuga-dji-0563-jpg",
+          "status": "active"
+        },
+        {
+          "id": 38480,
+          "slug": "isla-tortuga-dji-0568-jpg",
+          "status": "active"
+        },
+        {
+          "id": 38481,
+          "slug": "isla-tortuga-dji-0572-jpg",
+          "status": "active"
+        },
+        {
+          "id": 38482,
+          "slug": "isla-tortuga-dji-0575-jpg",
+          "status": "active"
+        },
+        {
+          "id": 38483,
+          "slug": "isla-tortuga-dji-0578-jpg",
+          "status": "active"
+        },
+        {
+          "id": 38484,
+          "slug": "isla-tortuga-dji-0597-jpg",
+          "status": "active"
+        },
+        {
+          "id": 38485,
+          "slug": "isla-tortuga-dji-0601-jpg",
+          "status": "active"
+        },
+        {
+          "id": 38486,
+          "slug": "isla-tortuga-dji-0612-jpg",
+          "status": "active"
+        }
+      ]
+    }
+  },
+  "status": "success"
+}

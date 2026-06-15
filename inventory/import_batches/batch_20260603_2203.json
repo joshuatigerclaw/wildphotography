@@ -1,0 +1,25 @@
+{
+  "batch_id": "batch_20260603_2203",
+  "timestamp": "2026-06-03T22:03:00-06:00",
+  "script": "process_pending_import.js",
+  "results": {
+    "total_processed": 224,
+    "ok": 224,
+    "failed": 0,
+    "skipped": 0
+  },
+  "breakdown": [
+    { "limit": 5, "ok": 5 },
+    { "limit": 15, "ok": 15 },
+    { "limit": 30, "ok": 30 },
+    { "limit": 30, "ok": 30 },
+    { "limit": 30, "ok": 30 },
+    { "limit": 40, "ok": 40 },
+    { "limit": 40, "ok": 40 },
+    { "limit": 20, "ok": 14 }
+  ],
+  "pending_before": 224,
+  "pending_after": 0,
+  "photos_processed_ids": "90778-91448",
+  "note": "All pending_import photos cleared. 224 photos moved from pending_import to ready status with full derivatives uploaded to R2."
+}

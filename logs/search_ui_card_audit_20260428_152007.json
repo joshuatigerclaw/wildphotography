@@ -1,0 +1,318 @@
+{
+  "run_at": "2026-04-28T21:20:07.260993+00:00",
+  "total_search_ready_photos": 35291,
+  "sample_size": 300,
+  "total_url_checks": 600,
+  "summary": {
+    "photos_ok": 284,
+    "photos_broken": 16,
+    "photos_missing_field": 0,
+    "ok_rate_pct": 94.67
+  },
+  "by_url_type": {
+    "og_image_url": {
+      "total": 300,
+      "accessible": 285,
+      "broken": 15,
+      "empty": 0
+    },
+    "thumb_url": {
+      "total": 300,
+      "accessible": 298,
+      "broken": 2,
+      "empty": 0
+    }
+  },
+  "broken_photos": {
+    "9207": {
+      "slug": "2016-08-20-14-49-31-landscape-5825",
+      "title": "Landscape in Central Valley Beaches, Costa Rica",
+      "gallery_slug": "landscape",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "27749": {
+      "slug": "photo-129-DJI-0931",
+      "title": "Rio Savegre Aerial View",
+      "gallery_slug": "costa-rica-gallery-rio-savagre-costa-rica",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "32719": {
+      "slug": "dji-0850-9742b747",
+      "title": "Isla Tortuga Aerial View",
+      "gallery_slug": "isla-tortuga",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "7240": {
+      "slug": "20240817-095101-flowers-plants-trees-3858",
+      "title": "Flowers plants trees | Costa Rica Wildlife Photography by Joshua ten Brink",
+      "gallery_slug": "flowers-plants-trees",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        },
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        }
+      ]
+    },
+    "10398": {
+      "slug": "dji-0214-papagayo-bahia-culebra-7016",
+      "title": "Papagayo bahia culebra | Costa Rica Wildlife Photography by Joshua ten Brink",
+      "gallery_slug": "papagayo-bahia-culebra",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        },
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        }
+      ]
+    },
+    "1386": {
+      "slug": "img-0917-1092",
+      "title": "Arenal volcano | Costa Rica Wildlife Photography by Joshua ten Brink",
+      "gallery_slug": "arenal-volcano",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "ValueError"
+        },
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        }
+      ]
+    },
+    "8120": {
+      "slug": "dji-0807-isla-san-lucas-puntarenas-costa-rica-4738",
+      "title": "Isla San Lucas, Puntarenas, Costa Rica",
+      "gallery_slug": "isla-san-lucas-puntarenas-costa-rica",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "ValueError"
+        },
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        }
+      ]
+    },
+    "35133": {
+      "slug": "peninsula-papagayo-dji-0002-e28f4c59",
+      "title": "Peninsula Papagayo Aerial View",
+      "gallery_slug": "peninsula-papagayo",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        },
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        }
+      ]
+    },
+    "26993": {
+      "slug": "photo-125-DJI-0775",
+      "title": "Aerial Vista of Luxury Villas and Secluded Bays at Peninsula Papagayo",
+      "gallery_slug": "costa-rica-gallery-peninsula-papagayo",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "904": {
+      "slug": "2021-03-25-11-13-26-904",
+      "title": "beach chairs on the beach with palm trees",
+      "gallery_slug": "beaches",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "35698": {
+      "slug": "santa-teresa-malpais-dji-0976",
+      "title": "Santa Teresa, Costa Rica |",
+      "gallery_slug": "santa-teresa-malpais",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        },
+        {
+          "type": "og_image_url",
+          "accessible": true,
+          "error": null
+        }
+      ]
+    },
+    "27270": {
+      "slug": "photo-127-DJI-0974",
+      "title": "Montezuma Photography",
+      "gallery_slug": "costa-rica-gallery-montezuma-costa-rica",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "41964": {
+      "slug": "la-sabana-estadio-nacional-costa-rica-san-jose-dji_0797",
+      "title": "DJI_0797",
+      "gallery_slug": null,
+      "status": "broken",
+      "checks": [
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "URL_ERROR_SSLError"
+        },
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        }
+      ]
+    },
+    "41751": {
+      "slug": "guanacaste-costa-rica-dji_0308",
+      "title": "DJI 0308",
+      "gallery_slug": "guanacaste-costa-rica",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_400"
+        },
+        {
+          "type": "thumb_url",
+          "accessible": false,
+          "error": "HTTP_400"
+        }
+      ]
+    },
+    "7610": {
+      "slug": "2025-03-08-07-04-31-food--4228",
+      "title": "Food | Costa Rica Wildlife Photography by Joshua ten Brink",
+      "gallery_slug": "food",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "26927": {
+      "slug": "dji-0931-05bec09d",
+      "title": "Costa rica gallery rio savagre costa rica | Costa Rica Wildlife Photography by Joshua ten Brink",
+      "gallery_slug": "costa-rica-gallery-rio-savagre-costa-rica",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    }
+  },
+  "empty_url_photos": {},
+  "status": "success"
+}

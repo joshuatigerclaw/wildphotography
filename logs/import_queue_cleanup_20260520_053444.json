@@ -1,0 +1,69 @@
+# WildPhotography Import Queue Cleanup Report
+**Run:** 2026-05-20T05:34 UTC  
+**Trigger:** Cron job `wild_import_queue_cleanup`
+
+---
+
+## Cleanup Actions Taken
+
+### Stale Ingest Jobs / Runs Check
+- **ingest_jobs stale (pending/processing > 2h):** 0 cleaned
+- **ingest_runs stale (pending/running > 2h):** 0 cleaned
+
+### Duplicate-Only Import Log Archiving
+- **duplicate_only entries archived:** 10 entries (ids: 7,8,5,6,9,12,13,14,15,17)
+- **duplicate_with_failures archived:** 1 entry (id: 26, batch `may2026_batch69`)
+
+Total archived: **11 import log entries**  
+Total dupe photos skipped in archived entries: **1,080**  
+Total failed rows in archived entries: **281**
+
+### Schema Changes
+Added columns to `import_logs` for future cleanup tracking:
+- `archived BOOLEAN DEFAULT FALSE`
+- `archived_at TIMESTAMP WITH TIME ZONE`
+- `cleanup_reason VARCHAR(50)`
+
+---
+
+## Actionable Queue (after cleanup)
+
+| batch_id | source_folder | new | dupes | failed | started |
+|---|---|---|---|---|---|
+| may2026_batch31 | Rio-Savagre, Rincon-de-La-Vieja, Samara, Santa-Ana, Puntarenas | 27 | 540 | 0 | 2026-05-09 |
+| may2026_batch29_cron | Wildlife, Santa-Teresa, Peninsula-de-Osa, Land-Animals, Landmarks | 1260 | 0 | 0 | 2026-05-08 |
+| may2026_batch_cont | Food--, Escazu, Conchal, Puntarenas, Waterfalls | 61 | 99 | 0 | 2026-05-01 |
+| may2026_cont | Flora-Fauna, Industrial, Costa-Rica-Buildings | 35 | 0 | 0 | 2026-05-01 |
+| may2026_batch1_cron | Nauyaca-Waterfalls, New-Uploads, Guanacaste, Punta-Cacique | 22 | 342 | 0 | 2026-04-30 |
+| may2026_batch2_cron | Flamingo-Beach, Arenal, Jaco, Playa-Hermosa | 100 | 304 | 0 | 2026-04-30 |
+| may2026_batch5_cron | San-Jose, Escazu, Peninsula-de-Nicoya, People-Watching | 229 | 294 | 0 | 2026-04-30 |
+| apr27_cron_continuation | Sunrise-Sunset, Puerto-Viejo, Costa-Rica, Flowers, Playas-del-Coco | 100 | 0 | 0 | 2026-04-27 |
+| apr26_cron_batch | Tambor, Arenal, Montezuma, Peninsula-de-Osa, Papagayo | 77 | 23 | 0 | 2026-04-26 |
+| batch_apr20_cr_gaps | Guanacaste(67gap), Random, Isla-San-Lucas, Puenta-Amistad, Perez-Zeledon | 11 | 1 | 0 | 2026-04-20 |
+| batch_import_20260416_cron | 5 folders | 41 | 51 | 0 | 2026-04-17 |
+| batch_import_20260411_cron | Isla-Tortuga | 100 | 0 | 0 | 2026-04-11 |
+| batch_20260325_01 | Costa-Rica-Gallery | 38 | 62 | 0 | 2026-03-25 |
+| batch_20260321_01 | Alajuela | 21 | 0 | 0 | 2026-03-21 |
+
+**Actionable entries:** 14  
+**Total new imports in actionable queue:** 2,122  
+**Total duplicates skipped in actionable queue:** 1,716  
+**Total failures in actionable queue:** 0 ✅
+
+---
+
+## Queue Summary
+
+| Category | Entries | New Photos | Dupes Skipped | Failures |
+|---|---|---|---|---|
+| Actionable | 14 | 2,122 | 1,716 | 0 |
+| Archived (duplicate_only) | 10 | 0 | 1,080 | 0 |
+| Archived (duplicate_with_failures) | 1 | 0 | 1 | 281 |
+
+---
+
+## Notes
+- The `duplicate_only` entries are from batches that ran against folders already fully imported previously — these are expected churn, not errors.
+- The `duplicate_with_failures` entry (id 26, may2026_batch69) had 281 failures but only 1 dupe skipped. This batch needs investigation if the failed file paths are important. Failed paths not captured (the `failed_file_paths` array was likely empty due to how the import process records failures).
+- No stale pending jobs/runs were found — the ingest queue is clean.
+- Next run: scheduled automatically via cron.

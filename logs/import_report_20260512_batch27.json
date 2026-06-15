@@ -1,0 +1,39 @@
+{
+  "batch": "20260512_cron_batch27",
+  "timestamp": "2026-05-12T18:42:46.168675",
+  "folders_seen": [
+    "Forests-of-Costa-Rica",
+    "Random-Places-of-Costa-Rica",
+    "China-Shanghai"
+  ],
+  "folders_with_existing_gallery_match": [
+    "Forests-of-Costa-Rica",
+    "Random-Places-of-Costa-Rica",
+    "China-Shanghai"
+  ],
+  "folders_skipped_no_existing_gallery": [],
+  "folders_skipped_ambiguous_mapping": [],
+  "files_skipped_unmapped_gallery": 0,
+  "photos_processed": 81,
+  "photos_imported": 0,
+  "duplicates_skipped": 81,
+  "collisions_renamed": 0,
+  "originals_uploaded": 0,
+  "derivatives_generated": 0,
+  "seo_metadata_generated": 0,
+  "og_images_set": 0,
+  "seo_titles_generated": 0,
+  "skipped_existing_high_quality": 0,
+  "repaired_prior_collision_records": 0,
+  "ready_for_public_render_count": 0,
+  "search_ready_count": 0,
+  "failed_files_count": 0,
+  "failed_file_paths": [],
+  "existing_gallery_ids_used": [
+    104,
+    82,
+    38
+  ],
+  "new_photo_ids": [],
+  "seo_sample_outputs": []
+}

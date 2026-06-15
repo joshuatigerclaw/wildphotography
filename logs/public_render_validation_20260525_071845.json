@@ -1,0 +1,278 @@
+{
+  "run_at": "2026-05-25T13:18:45.839662+00:00",
+  "total_photos": 45050,
+  "render_ready_total": 42341,
+  "photos_with_issues": 219,
+  "all_clear": false,
+  "checks": {
+    "missing_thumb_url": {
+      "count": 0,
+      "sample": []
+    },
+    "missing_slug": {
+      "count": 0,
+      "sample": []
+    },
+    "missing_title": {
+      "count": 0,
+      "sample": []
+    },
+    "missing_gallery_slug": {
+      "count": 5305,
+      "sample": [
+        {
+          "id": 242,
+          "slug": "hermosa-beach-1",
+          "title": "Hermosa Beach Sunset",
+          "status": "published"
+        },
+        {
+          "id": 41302,
+          "slug": "sunrise-sunset-2016-07-31-17-59-49",
+          "title": "Pacific Coast Sunrise, Guanacaste 2016",
+          "status": "published"
+        },
+        {
+          "id": 41303,
+          "slug": "sunrise-sunset-2017-07-15-18-57-45",
+          "title": "Tropical Sunset, Guanacaste 2017",
+          "status": "published"
+        },
+        {
+          "id": 41304,
+          "slug": "sunrise-sunset-2018-03-29-18-22-12",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41304 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41305,
+          "slug": "sunrise-sunset-2018-08-21-17-53-04",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41305 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41306,
+          "slug": "sunrise-sunset-2018-08-21-17-55-57",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41306 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41307,
+          "slug": "sunrise-sunset-2018-08-21-18-01-08",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41307 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41308,
+          "slug": "sunrise-sunset-2018-08-21-18-02-56",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41308 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41309,
+          "slug": "sunrise-sunset-2018-08-21-18-09-15",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41309 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41310,
+          "slug": "sunrise-sunset-2018-08-24-17-55-36",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41310 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41311,
+          "slug": "sunrise-sunset-2019-july-19-hyperlapse-0311",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41311 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41312,
+          "slug": "sunrise-sunset-2019-03-31-05-46-08",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41312 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41313,
+          "slug": "sunrise-sunset-2019-11-08-17-16-08",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41313 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41314,
+          "slug": "sunrise-sunset-2020-06-06-17-38-31",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41314 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41315,
+          "slug": "sunrise-sunset-2020-06-07-17-57-31",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41315 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41316,
+          "slug": "sunrise-sunset-2020-06-07-17-58-30",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41316 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41317,
+          "slug": "sunrise-sunset-2020-06-07-18-00-38",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41317 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41318,
+          "slug": "sunrise-sunset-2020-07-17-05-10-04",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41318 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41319,
+          "slug": "sunrise-sunset-2020-07-17-05-18-15",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41319 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41320,
+          "slug": "sunrise-sunset-2020-07-19-05-07-34",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41320 | WildPhotography",
+          "status": "published"
+        }
+      ]
+    },
+    "search_not_ready": {
+      "count": 19,
+      "sample": [
+        {
+          "id": 43812,
+          "slug": "escazu-costa-rica-dji_0683-2",
+          "title": "Escazu - San Jos\u00e9 - Costa Rica",
+          "status": "superseded"
+        },
+        {
+          "id": 43940,
+          "slug": "tambor-nicoya-peninsula-costa-rica-2024-12-31-17-07-00",
+          "title": "Costa Rica \u2014 Tambor Nicoya Peninsula Costa Rica \u2014 #43940 | WildPhotography",
+          "status": "superseded"
+        },
+        {
+          "id": 51856,
+          "slug": "europe-france-img-0243",
+          "title": "Forested Valley Under Storm Clouds, European Landscape",
+          "status": "draft"
+        },
+        {
+          "id": 51857,
+          "slug": "europe-france-img-0475",
+          "title": "Lush Green Rolling Hills Under Overcast Sky, European Countryside",
+          "status": "draft"
+        },
+        {
+          "id": 51858,
+          "slug": "europe-france-img-0563",
+          "title": "Forested Valley and Rural Settlements Under Storm Sky, France",
+          "status": "draft"
+        },
+        {
+          "id": 51859,
+          "slug": "europe-france-img-1165",
+          "title": "Forested Valley and Rural Settlements Under Storm Sky, France",
+          "status": "draft"
+        },
+        {
+          "id": 51860,
+          "slug": "europe-france-img-1179",
+          "title": "Forested Valley and Rural Settlements Under Storm Sky, France",
+          "status": "draft"
+        },
+        {
+          "id": 51861,
+          "slug": "europe-france-img-8144",
+          "title": "Forested Valley and Rural Settlements Under Storm Sky, France",
+          "status": "draft"
+        },
+        {
+          "id": 51862,
+          "slug": "europe-france-img-8179",
+          "title": "Forested Valley and Rural Settlements Under Storm Sky, France",
+          "status": "draft"
+        },
+        {
+          "id": 51863,
+          "slug": "europe-france-img-8180",
+          "title": "Forested Valley and Rural Settlements Under Storm Sky, France",
+          "status": "draft"
+        },
+        {
+          "id": 51864,
+          "slug": "europe-france-img-8182",
+          "title": "Forested Valley and Rural Settlements Under Storm Sky, France",
+          "status": "draft"
+        },
+        {
+          "id": 51865,
+          "slug": "europe-france-img-8213-copy",
+          "title": "Forested Valley and Rural Settlements Under Storm Sky, France",
+          "status": "draft"
+        },
+        {
+          "id": 51866,
+          "slug": "europe-france-img-8213",
+          "title": "Lush Green Valley Under Heavy Storm Clouds, France",
+          "status": "draft"
+        },
+        {
+          "id": 51867,
+          "slug": "europe-france-img-8259",
+          "title": "Lush Green Valley Under Heavy Storm Clouds, France",
+          "status": "draft"
+        },
+        {
+          "id": 51868,
+          "slug": "europe-france-img-8391",
+          "title": "Lush Green Valley Under Heavy Storm Clouds, France",
+          "status": "draft"
+        },
+        {
+          "id": 51869,
+          "slug": "europe-france-img-8450",
+          "title": "Lush Green Valley Under Heavy Storm Clouds, France",
+          "status": "draft"
+        },
+        {
+          "id": 51870,
+          "slug": "europe-france-img-8830",
+          "title": "Lush Green Valley Under Heavy Storm Clouds, France",
+          "status": "draft"
+        },
+        {
+          "id": 51871,
+          "slug": "europe-france-img-8832",
+          "title": "Lush Green Valley Under Heavy Storm Clouds, France",
+          "status": "draft"
+        },
+        {
+          "id": 51872,
+          "slug": "europe-france-img-8843",
+          "title": "Lush Green Valley Under Heavy Storm Clouds, France",
+          "status": "draft"
+        }
+      ]
+    },
+    "derivatives_incomplete": {
+      "count": 0,
+      "sample": []
+    },
+    "missing_description": {
+      "count": 0,
+      "sample": []
+    },
+    "missing_keywords": {
+      "count": 0,
+      "sample": []
+    }
+  },
+  "status": "success"
+}

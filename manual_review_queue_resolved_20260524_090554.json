@@ -1,0 +1,9 @@
+{
+  "resolved_at": "20260524_090554",
+  "total_entries": 51,
+  "unique_photos": 42,
+  "false_alarms": 12,
+  "has_source_valid": 1,
+  "unrecoverable_cleared": 29,
+  "resolution": "search_ready=FALSE set for 29 unrecoverable photos"
+}

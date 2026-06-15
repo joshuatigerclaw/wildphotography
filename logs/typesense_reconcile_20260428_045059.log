@@ -1,0 +1,27 @@
+2026-04-28 04:50:59,679 INFO === WildPhotography Typesense Reconciliation (FIXED) ===
+2026-04-28 04:50:59,679 INFO 
+2026-04-28 04:50:59,991 INFO [1] Typesense current doc count: 34326
+2026-04-28 04:50:59,991 INFO [2] Loading eligible Neon docs...
+2026-04-28 04:51:01,884 INFO     Eligible Neon docs: 34393
+2026-04-28 04:51:01,884 INFO [3] Drift before reconcile: 67 (eligible=34393, TS=34326)
+2026-04-28 04:51:01,884 INFO [4] Exporting Typesense docs to identify stale...
+2026-04-28 04:51:04,226 INFO     TS docs: 34326, Stale: 2, Missing: 69
+2026-04-28 04:51:04,226 INFO [5] Removing 2 stale docs by slug...
+2026-04-28 04:51:04,982 INFO     Stale removed: 2
+2026-04-28 04:51:04,982 INFO [6] Adding 69 missing docs...
+2026-04-28 04:51:05,367 WARNING     Error batch 1: Field `popularity` has been declared as a default sorting field, but is not found in the document.
+2026-04-28 04:51:05,367 WARNING     Error batch 1: Field `popularity` has been declared as a default sorting field, but is not found in the document.
+2026-04-28 04:51:05,367 WARNING     Error batch 1: Field `popularity` has been declared as a default sorting field, but is not found in the document.
+2026-04-28 04:51:05,367 INFO   Batch 1/1: 0 ok, 69 errors
+2026-04-28 04:51:05,818 INFO     Missing added: 0, errors: 69
+2026-04-28 04:51:08,265 INFO 
+2026-04-28 04:51:08,265 INFO === Reconciliation Complete ===
+2026-04-28 04:51:08,265 INFO   Eligible Neon:     34393
+2026-04-28 04:51:08,265 INFO   TS before:         34326
+2026-04-28 04:51:08,265 INFO   Stale removed:     2
+2026-04-28 04:51:08,265 INFO   Missing added:     0
+2026-04-28 04:51:08,265 INFO   TS after:          34324
+2026-04-28 04:51:08,265 INFO   Drift before:      67
+2026-04-28 04:51:08,265 INFO   Drift after:       69
+2026-04-28 04:51:08,265 INFO   Duration:          8.6s
+2026-04-28 04:51:08,266 INFO   Report: /Users/joshuatenbrink/.openclaw/workspace/wildphotography/logs/typesense_reconcile_20260428T105108Z.json

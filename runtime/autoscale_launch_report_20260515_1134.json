@@ -1,0 +1,23 @@
+{
+  "workflow": "wild_derivative_autoscale_launcher",
+  "timestamp": "2026-05-15T11:34:00Z",
+  "cron_trigger": "true",
+  "launched": 2,
+  "target_workers": 2,
+  "queue_depth_before": 148,
+  "in_progress_before": 0,
+  "pending_before": 15,
+  "autoscale_state_ref": "wildphotography/runtime/autoscale_state.latest.json",
+  "state_file_ref": "/tmp/wild_autoscale/autoscale_state.json",
+  "computed_from_local_autoscale_check": true,
+  "note": "Lobster workflow could not invoke @clawdbot/lobster module; launched workers directly via autoscale_launcher.py",
+  "workers_spawned": 2,
+  "worker_pids": [],
+  "log_files": [
+    "/tmp/wild_autoscale/worker_1778845870_1.log",
+    "/tmp/wild_autoscale/worker_1778845870_2.log"
+  ],
+  "queue_depth_after_check": 148,
+  "pending_after_30s": 15,
+  "in_progress_after_30s": 0
+}

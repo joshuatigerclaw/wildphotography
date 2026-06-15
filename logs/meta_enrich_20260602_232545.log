@@ -1,0 +1,29 @@
+=== WildPhotography Metadata Quality Enrichment ===
+Timestamp: 2026-06-03T05:25:45.111827+00:00
+
+--- Fixing short/generic titles ---
+  Titles improved: 66
+    id=81759 'img 8966' -> '8966'
+    id=81760 'img 8978 1' -> '8978'
+    id=72371 'IMG 4845' -> 'Tambor Wildlife'
+    id=68624 'DJI 0625' -> 'Puerto Viejo, Limon Province Wildlife'
+    id=82198 'dji 0735' -> '0735'
+
+--- Filling missing keywords ---
+  Keywords improved: 0
+
+--- Fixing short descriptions ---
+  Descriptions improved: 100
+    id=74241 'Food photographed in Central America.' -> 'Professional wildlife photograph from Costa Rica, Costa Rica...'
+    id=74249 'Food photographed in Central America.' -> 'Professional wildlife photograph from Costa Rica, Costa Rica...'
+    id=74329 'Food photographed in Central America.' -> 'Professional wildlife photograph from Costa Rica, Costa Rica...'
+    id=74341 'Food photographed in Central America.' -> 'Professional wildlife photograph from Costa Rica, Costa Rica...'
+    id=74346 'Food photographed in Central America.' -> 'Professional wildlife photograph from Costa Rica, Costa Rica...'
+
+=== SUMMARY ===
+Total improvements: 166
+  Titles fixed: 66
+  Keywords filled: 0
+  Descriptions fixed: 100
+
+Results saved: /Users/joshuatenbrink/.openclaw/workspace/wildphotography/inventory/wild_metadata_quality_enrichment_result.json

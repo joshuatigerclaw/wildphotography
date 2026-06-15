@@ -1,0 +1,163 @@
+{
+  "run_at": "2026-04-24T06:39:29.955099+00:00",
+  "total_photos": 34351,
+  "render_ready_total": 34063,
+  "photos_with_issues": 200,
+  "all_clear": false,
+  "checks": {
+    "missing_thumb_url": {
+      "count": 0,
+      "sample": []
+    },
+    "missing_slug": {
+      "count": 0,
+      "sample": []
+    },
+    "missing_title": {
+      "count": 0,
+      "sample": []
+    },
+    "missing_gallery_slug": {
+      "count": 2179,
+      "sample": [
+        {
+          "id": 242,
+          "slug": "hermosa-beach-1",
+          "title": "Hermosa Beach Sunset",
+          "status": "archived"
+        },
+        {
+          "id": 14905,
+          "slug": "resplendent-quetzal",
+          "title": "Resplendent Quetzal",
+          "status": "archived"
+        },
+        {
+          "id": 38439,
+          "slug": "punta-leona-dji-0202-jpg",
+          "title": "Punta Leona Aerial View",
+          "status": "active"
+        },
+        {
+          "id": 38440,
+          "slug": "punta-leona-dji-0205-jpg",
+          "title": "Punta Leona Aerial View",
+          "status": "active"
+        },
+        {
+          "id": 38441,
+          "slug": "punta-leona-dji-0207-jpg",
+          "title": "Punta Leona Aerial View",
+          "status": "active"
+        },
+        {
+          "id": 38442,
+          "slug": "punta-leona-dji-0213-jpg",
+          "title": "Punta Leona Aerial View",
+          "status": "active"
+        },
+        {
+          "id": 38443,
+          "slug": "punta-leona-dji-0214-jpg",
+          "title": "Punta Leona Aerial View",
+          "status": "active"
+        },
+        {
+          "id": 38444,
+          "slug": "punta-leona-dji-0216-jpg",
+          "title": "Punta Leona Aerial View",
+          "status": "active"
+        },
+        {
+          "id": 38445,
+          "slug": "punta-leona-dji-0218-jpg",
+          "title": "Punta Leona Aerial View",
+          "status": "active"
+        },
+        {
+          "id": 38446,
+          "slug": "punta-leona-dji-0219-jpg",
+          "title": "Punta Leona Aerial View",
+          "status": "active"
+        },
+        {
+          "id": 38447,
+          "slug": "punta-leona-dji-0223-jpg",
+          "title": "Punta Leona Aerial View",
+          "status": "active"
+        },
+        {
+          "id": 38448,
+          "slug": "punta-leona-dji-0226-jpg",
+          "title": "Punta Leona Aerial View",
+          "status": "active"
+        },
+        {
+          "id": 38449,
+          "slug": "punta-leona-dji-0227-jpg",
+          "title": "Punta Leona Aerial View",
+          "status": "active"
+        },
+        {
+          "id": 38450,
+          "slug": "punta-leona-dji-0228-jpg",
+          "title": "Punta Leona Aerial View",
+          "status": "active"
+        },
+        {
+          "id": 38451,
+          "slug": "punta-leona-dji-0230-jpg",
+          "title": "Punta Leona Aerial View",
+          "status": "active"
+        },
+        {
+          "id": 38452,
+          "slug": "punta-leona-dji-0231-jpg",
+          "title": "Punta Leona Aerial View",
+          "status": "active"
+        },
+        {
+          "id": 38453,
+          "slug": "punta-leona-dji-0233-jpg",
+          "title": "Punta Leona Aerial View",
+          "status": "active"
+        },
+        {
+          "id": 38454,
+          "slug": "punta-leona-dji-0234-jpg",
+          "title": "Punta Leona Aerial View",
+          "status": "active"
+        },
+        {
+          "id": 38455,
+          "slug": "punta-leona-dji-0235-jpg",
+          "title": "Punta Leona Aerial View",
+          "status": "active"
+        },
+        {
+          "id": 38456,
+          "slug": "punta-leona-dji-0237-2-jpg",
+          "title": "Punta Leona Aerial View",
+          "status": "active"
+        }
+      ]
+    },
+    "search_not_ready": {
+      "count": 0,
+      "sample": []
+    },
+    "derivatives_incomplete": {
+      "count": 0,
+      "sample": []
+    },
+    "missing_description": {
+      "count": 0,
+      "sample": []
+    },
+    "missing_keywords": {
+      "count": 0,
+      "sample": []
+    }
+  },
+  "status": "success"
+}

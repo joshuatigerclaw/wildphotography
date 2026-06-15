@@ -1,0 +1,52 @@
+{
+  "run_at": "2026-05-22T11:37:46.610133+00:00",
+  "workflow": "wild_import_queue_cleanup",
+  "status": "success",
+  "totals": {
+    "total_loaded": 8741,
+    "photo_import_entries": 8741,
+    "pinterest_entries": 0,
+    "true_duplicates_removed": 0,
+    "unresolved_gallery_mapping": 8741,
+    "actionable_remaining": 0
+  },
+  "per_file": {
+    "working_batch_queue.json": {
+      "total": 0,
+      "photo_import": 0,
+      "pinterest": 0,
+      "status": "exists"
+    },
+    "birds_import_queue.json": {
+      "total": 563,
+      "photo_import": 563,
+      "pinterest": 0,
+      "status": "exists"
+    },
+    "batch_clean_import_queue.json": {
+      "total": 2602,
+      "photo_import": 2602,
+      "pinterest": 0,
+      "status": "exists"
+    },
+    "batch_Tamb_Limo_Jaco_Sunr_Peni_import_queue.json": {
+      "total": 4570,
+      "photo_import": 4570,
+      "pinterest": 0,
+      "status": "exists"
+    },
+    "batch_new_folders_queue.json": {
+      "total": 1000,
+      "photo_import": 1000,
+      "pinterest": 0,
+      "status": "exists"
+    },
+    "batch_Bajo_La-G_Time_Cost_Play_import_queue.json": {
+      "total": 6,
+      "photo_import": 6,
+      "pinterest": 0,
+      "status": "exists"
+    }
+  },
+  "files_summary": []
+}

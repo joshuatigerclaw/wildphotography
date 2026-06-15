@@ -1,0 +1,62 @@
+[
+  {
+    "id": "ext_Costa-Rica-Gallery_Waterfalls-in-Costa-Rica_2b66d6fe855b534b",
+    "type": "photo",
+    "source_path": "/Volumes/ADATA SC740/Smugmug Backup/Galleries/Costa-Rica-Gallery/Waterfalls-in-Costa-Rica/DJI_0507.JPG",
+    "gallery_folder": "Costa-Rica-Gallery/Waterfalls-in-Costa-Rica",
+    "gallery_id": 100,
+    "gallery_slug": "waterfalls-in-costa-rica",
+    "filename": "DJI_0507.JPG",
+    "content_hash": "2b66d6fe855b534be85872c628002cea",
+    "size": 21188266,
+    "approved": true,
+    "priority": 50,
+    "attempt_count": 0,
+    "status": "pending"
+  },
+  {
+    "id": "ext_Costa-Rica-Gallery_Waterfalls-in-Costa-Rica_d94f2ee0c2b6f6d0",
+    "type": "photo",
+    "source_path": "/Volumes/ADATA SC740/Smugmug Backup/Galleries/Costa-Rica-Gallery/Waterfalls-in-Costa-Rica/DJI_0509-1.JPG",
+    "gallery_folder": "Costa-Rica-Gallery/Waterfalls-in-Costa-Rica",
+    "gallery_id": 100,
+    "gallery_slug": "waterfalls-in-costa-rica",
+    "filename": "DJI_0509-1.JPG",
+    "content_hash": "d94f2ee0c2b6f6d0e9cf0dc1b2ecd53e",
+    "size": 43384832,
+    "approved": true,
+    "priority": 50,
+    "attempt_count": 0,
+    "status": "pending"
+  },
+  {
+    "id": "ext_Costa-Rica-Gallery_Waterfalls-in-Costa-Rica_56e9a4b66ced7ee6",
+    "type": "photo",
+    "source_path": "/Volumes/ADATA SC740/Smugmug Backup/Galleries/Costa-Rica-Gallery/Waterfalls-in-Costa-Rica/DJI_0510.JPG",
+    "gallery_folder": "Costa-Rica-Gallery/Waterfalls-in-Costa-Rica",
+    "gallery_id": 100,
+    "gallery_slug": "waterfalls-in-costa-rica",
+    "filename": "DJI_0510.JPG",
+    "content_hash": "56e9a4b66ced7ee6a3d6e39545cb32ef",
+    "size": 21475328,
+    "approved": true,
+    "priority": 50,
+    "attempt_count": 0,
+    "status": "pending"
+  },
+  {
+    "id": "ext_Costa-Rica-Gallery_Waterfalls-in-Costa-Rica_d474fa32847124e6",
+    "type": "photo",
+    "source_path": "/Volumes/ADATA SC740/Smugmug Backup/Galleries/Costa-Rica-Gallery/Waterfalls-in-Costa-Rica/DJI_0524.JPG",
+    "gallery_folder": "Costa-Rica-Gallery/Waterfalls-in-Costa-Rica",
+    "gallery_id": 100,
+    "gallery_slug": "waterfalls-in-costa-rica",
+    "filename": "DJI_0524.JPG",
+    "content_hash": "d474fa32847124e67b36256fe28f3813",
+    "size": 22581248,
+    "approved": true,
+    "priority": 50,
+    "attempt_count": 0,
+    "status": "pending"
+  }
+]

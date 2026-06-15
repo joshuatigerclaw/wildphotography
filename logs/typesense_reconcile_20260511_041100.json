@@ -1,0 +1,15 @@
+{
+  "run_at": "2026-05-11T04:11:00Z",
+  "eligible_db_count": 41158,
+  "typesense_count": 16738,
+  "stale_removed": 0,
+  "missing_added": 0,
+  "failed": "ALL - OOM BLOCK",
+  "typesense_count_after": 16738,
+  "final_drift": 24420,
+  "status": "blocked_oom",
+  "duration_seconds": 5,
+  "oom_active": true,
+  "health_response": {"ok":true,"resource_error":"OUT_OF_MEMORY"},
+  "note": "Cluster OOM - no writes possible. Read-only index has deflated from prior ~35k to 16,738. Will clear when cluster recovers."
+}

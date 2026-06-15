@@ -1,0 +1,64 @@
+{
+  "run_at": "2026-04-27T04:17:51.567Z",
+  "results": {
+    "group_a": [
+      1669,
+      2199,
+      2267
+    ],
+    "group_b": [
+      {
+        "id": 36207,
+        "new_url": "https://images.wildphotography.com/derivatives/36207/36207_medium.jpg"
+      },
+      {
+        "id": 30700,
+        "new_url": "https://images.wildphotography.com/derivatives/30700/30700_medium.jpg"
+      },
+      {
+        "id": 18776,
+        "new_url": "https://images.wildphotography.com/derivatives/18776/18776_medium.jpg"
+      },
+      {
+        "id": 36206,
+        "new_url": "https://images.wildphotography.com/derivatives/36206/36206_medium.jpg"
+      },
+      {
+        "id": 14892,
+        "new_url": "https://images.wildphotography.com/derivatives/14892/14892_medium.jpg"
+      },
+      {
+        "id": 35639,
+        "new_url": "https://images.wildphotography.com/derivatives/35639/35639_medium.jpg"
+      }
+    ],
+    "group_c": [
+      27209,
+      27046,
+      35072,
+      35080,
+      35239,
+      27142,
+      27263,
+      35370,
+      27476,
+      26909,
+      27421,
+      12119,
+      25436,
+      35237,
+      31525,
+      27052,
+      27262,
+      37111,
+      33141,
+      27469
+    ],
+    "group_d": [
+      31041,
+      35644,
+      4975
+    ],
+    "errors": []
+  }
+}

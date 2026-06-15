@@ -1,0 +1,1193 @@
+{
+  "run_at": "2026-06-02T06:32:48.899315+00:00",
+  "total_photos": 63419,
+  "distinct_affected_photos": 1700,
+  "all_clear": false,
+  "issues": {
+    "missing_original_r2_key": {
+      "description": "Missing original R2 storage key \u2014 cannot rebuild derivatives",
+      "count": 1099,
+      "sample": [
+        {
+          "id": 51740,
+          "slug": "2016-12-29-12-25-27-beaches",
+          "status": "legacy_static",
+          "updated_at": "2026-06-01T22:12:57.673858"
+        },
+        {
+          "id": 76201,
+          "slug": "2016-09-14-08.56.24",
+          "status": "imported",
+          "updated_at": "2026-06-02T05:25:09.861559"
+        },
+        {
+          "id": 76202,
+          "slug": "cl0a4963",
+          "status": "imported",
+          "updated_at": "2026-06-02T05:25:09.861559"
+        },
+        {
+          "id": 76203,
+          "slug": "cl0a4965",
+          "status": "imported",
+          "updated_at": "2026-06-02T05:25:09.861559"
+        },
+        {
+          "id": 76204,
+          "slug": "cl0a4968",
+          "status": "imported",
+          "updated_at": "2026-06-02T05:25:09.861559"
+        },
+        {
+          "id": 76205,
+          "slug": "cl0a4971",
+          "status": "imported",
+          "updated_at": "2026-06-02T05:25:09.861559"
+        },
+        {
+          "id": 76206,
+          "slug": "cl0a4973",
+          "status": "imported",
+          "updated_at": "2026-06-02T05:25:09.861559"
+        },
+        {
+          "id": 76207,
+          "slug": "cl0a4983",
+          "status": "imported",
+          "updated_at": "2026-06-02T05:25:09.861559"
+        },
+        {
+          "id": 76208,
+          "slug": "cl0a4994",
+          "status": "imported",
+          "updated_at": "2026-06-02T05:25:09.861559"
+        },
+        {
+          "id": 76209,
+          "slug": "cl0a5004",
+          "status": "imported",
+          "updated_at": "2026-06-02T05:25:09.861559"
+        },
+        {
+          "id": 76210,
+          "slug": "cl0a5006",
+          "status": "imported",
+          "updated_at": "2026-06-02T05:25:09.861559"
+        },
+        {
+          "id": 76211,
+          "slug": "cl0a5007",
+          "status": "imported",
+          "updated_at": "2026-06-02T05:25:09.861559"
+        },
+        {
+          "id": 76212,
+          "slug": "cl0a5011",
+          "status": "imported",
+          "updated_at": "2026-06-02T05:25:09.861559"
+        },
+        {
+          "id": 76213,
+          "slug": "cl0a5013",
+          "status": "imported",
+          "updated_at": "2026-06-02T05:25:09.861559"
+        },
+        {
+          "id": 76214,
+          "slug": "cl0a5016",
+          "status": "imported",
+          "updated_at": "2026-06-02T05:25:09.861559"
+        },
+        {
+          "id": 76215,
+          "slug": "cl0a5022",
+          "status": "imported",
+          "updated_at": "2026-06-02T05:25:09.861559"
+        },
+        {
+          "id": 76216,
+          "slug": "cl0a5023",
+          "status": "imported",
+          "updated_at": "2026-06-02T05:25:09.861559"
+        },
+        {
+          "id": 76217,
+          "slug": ".-cl0a1100",
+          "status": "pending_import",
+          "updated_at": "2026-06-02T01:43:41.489687"
+        },
+        {
+          "id": 76219,
+          "slug": "2019-06-23-18.30.36",
+          "status": "imported",
+          "updated_at": "2026-06-02T05:25:09.861559"
+        },
+        {
+          "id": 76220,
+          "slug": "2019-06-28-10.46.51",
+          "status": "imported",
+          "updated_at": "2026-06-02T05:25:09.861559"
+        },
+        {
+          "id": 76221,
+          "slug": "2020-03-26-15.14.25",
+          "status": "imported",
+          "updated_at": "2026-06-02T05:25:09.861559"
+        },
+        {
+          "id": 76222,
+          "slug": "2020-07-19-09.45.39",
+          "status": "imported",
+          "updated_at": "2026-06-02T05:25:09.861559"
+        },
+        {
+          "id": 76223,
+          "slug": "2020-07-19-09.46.40",
+          "status": "imported",
+          "updated_at": "2026-06-02T05:25:09.861559"
+        },
+        {
+          "id": 76224,
+          "slug": "2020-07-19-09.49.52",
+          "status": "imported",
+          "updated_at": "2026-06-02T05:25:09.861559"
+        },
+        {
+          "id": 76225,
+          "slug": "2021-03-10-16.25.17",
+          "status": "imported",
+          "updated_at": "2026-06-02T05:25:09.861559"
+        },
+        {
+          "id": 76226,
+          "slug": "cl0a1421",
+          "status": "imported",
+          "updated_at": "2026-06-02T05:25:09.861559"
+        },
+        {
+          "id": 76243,
+          "slug": "dji-0396",
+          "status": "imported",
+          "updated_at": "2026-06-02T05:25:09.861559"
+        },
+        {
+          "id": 76245,
+          "slug": "dji-0419",
+          "status": "imported",
+          "updated_at": "2026-06-02T05:25:09.861559"
+        },
+        {
+          "id": 76248,
+          "slug": "dji-0564",
+          "status": "imported",
+          "updated_at": "2026-06-02T05:25:09.861559"
+        },
+        {
+          "id": 76253,
+          "slug": "dji-0739",
+          "status": "imported",
+          "updated_at": "2026-06-02T05:25:09.861559"
+        },
+        {
+          "id": 76254,
+          "slug": "dji-0755",
+          "status": "imported",
+          "updated_at": "2026-06-02T05:25:09.861559"
+        },
+        {
+          "id": 76259,
+          "slug": "dji-0822",
+          "status": "imported",
+          "updated_at": "2026-06-02T05:25:09.861559"
+        },
+        {
+          "id": 76260,
+          "slug": "dji-0922",
+          "status": "imported",
+          "updated_at": "2026-06-02T05:25:09.861559"
+        },
+        {
+          "id": 76264,
+          "slug": "dji-0984",
+          "status": "imported",
+          "updated_at": "2026-06-02T05:25:09.861559"
+        },
+        {
+          "id": 76267,
+          "slug": "img-1271",
+          "status": "imported",
+          "updated_at": "2026-06-02T05:25:09.861559"
+        },
+        {
+          "id": 76272,
+          "slug": "img-4329",
+          "status": "imported",
+          "updated_at": "2026-06-02T05:25:09.861559"
+        },
+        {
+          "id": 76273,
+          "slug": "img-4693",
+          "status": "imported",
+          "updated_at": "2026-06-02T05:25:09.861559"
+        },
+        {
+          "id": 76277,
+          "slug": "img-5428-",
+          "status": "imported",
+          "updated_at": "2026-06-02T05:25:09.861559"
+        },
+        {
+          "id": 76278,
+          "slug": "img-5980",
+          "status": "imported",
+          "updated_at": "2026-06-02T05:25:09.861559"
+        },
+        {
+          "id": 76281,
+          "slug": "img-6608",
+          "status": "imported",
+          "updated_at": "2026-06-02T05:25:09.861559"
+        },
+        {
+          "id": 76282,
+          "slug": "img-6991",
+          "status": "imported",
+          "updated_at": "2026-06-02T05:25:09.861559"
+        },
+        {
+          "id": 76283,
+          "slug": "img-7068",
+          "status": "imported",
+          "updated_at": "2026-06-02T05:25:09.861559"
+        },
+        {
+          "id": 76285,
+          "slug": "img-9424",
+          "status": "imported",
+          "updated_at": "2026-06-02T05:25:09.861559"
+        },
+        {
+          "id": 76286,
+          "slug": "img-9467",
+          "status": "imported",
+          "updated_at": "2026-06-02T05:25:09.861559"
+        },
+        {
+          "id": 76287,
+          "slug": "img-9548",
+          "status": "imported",
+          "updated_at": "2026-06-02T05:25:09.861559"
+        },
+        {
+          "id": 76288,
+          "slug": "img-9577-1",
+          "status": "imported",
+          "updated_at": "2026-06-02T05:25:09.861559"
+        },
+        {
+          "id": 76290,
+          "slug": "img-9836",
+          "status": "imported",
+          "updated_at": "2026-06-02T05:25:09.861559"
+        },
+        {
+          "id": 76291,
+          "slug": "img-9856",
+          "status": "imported",
+          "updated_at": "2026-06-02T05:25:09.861559"
+        },
+        {
+          "id": 76292,
+          "slug": "img-9859",
+          "status": "imported",
+          "updated_at": "2026-06-02T05:25:09.861559"
+        },
+        {
+          "id": 76293,
+          "slug": "img-9869",
+          "status": "imported",
+          "updated_at": "2026-06-02T05:25:09.861559"
+        }
+      ]
+    },
+    "pending_derivatives_with_r2": {
+      "description": "Has R2 original but derivatives_complete=false \u2014 needs rebuild dispatch",
+      "count": 0,
+      "sample": []
+    },
+    "render_ready_not_search_ready": {
+      "description": "ready_for_public_render=true but search_ready=false \u2014 blocked from Typesense",
+      "count": 1408,
+      "sample": [
+        {
+          "id": 733,
+          "slug": "20210411-093458-pano-733",
+          "status": "archived",
+          "thumb_url": "https://images.wildphotography.com/derivatives/733/thumb.jpg"
+        },
+        {
+          "id": 5235,
+          "slug": "2021-05-01-10-08-14-11174",
+          "status": "legacy_static",
+          "thumb_url": "https://images.wildphotography.com/derivatives/11174/2021-05-01_10.08.14_thumb.jpg"
+        },
+        {
+          "id": 8845,
+          "slug": "dji-0899-jaco-beach-5463",
+          "status": "legacy_static",
+          "thumb_url": "https://images.wildphotography.com/derivatives/5463/DJI_0899_thumb.JPG"
+        },
+        {
+          "id": 9221,
+          "slug": "2020-01-01-00-13-46-landscape-5839",
+          "status": "legacy_static",
+          "thumb_url": "https://images.wildphotography.com/derivatives/5839/2020-01-01_00.13.46_thumb.jpg"
+        },
+        {
+          "id": 9247,
+          "slug": "cl0a0093-landscape-5865",
+          "status": "legacy_static",
+          "thumb_url": "https://images.wildphotography.com/derivatives/5865/CL0A0093_thumb.JPG"
+        },
+        {
+          "id": 9964,
+          "slug": "dji-0764-marine-life-of-costa-rica-6582",
+          "status": "legacy_static",
+          "thumb_url": "https://images.wildphotography.com/derivatives/6582/DJI_0764_thumb.JPG"
+        },
+        {
+          "id": 10211,
+          "slug": "dji-0283-montezuma-costa-rica-6829",
+          "status": "legacy_static",
+          "thumb_url": "https://images.wildphotography.com/derivatives/6829/DJI_0283_thumb.JPG"
+        },
+        {
+          "id": 10218,
+          "slug": "dji-0353-montezuma-costa-rica-6836",
+          "status": "legacy_static",
+          "thumb_url": "https://images.wildphotography.com/derivatives/6836/DJI_0353_thumb.JPG"
+        },
+        {
+          "id": 10219,
+          "slug": "dji-0375-montezuma-costa-rica-6837",
+          "status": "legacy_static",
+          "thumb_url": "https://images.wildphotography.com/derivatives/6837/DJI_0375_thumb.JPG"
+        },
+        {
+          "id": 10220,
+          "slug": "dji-0386-montezuma-costa-rica-6838",
+          "status": "legacy_static",
+          "thumb_url": "https://images.wildphotography.com/derivatives/6838/DJI_0386_thumb.JPG"
+        },
+        {
+          "id": 11763,
+          "slug": "dji-0182-punta-leona-8381",
+          "status": "legacy_static",
+          "thumb_url": "https://images.wildphotography.com/derivatives/8381/DJI_0182_thumb.JPG"
+        },
+        {
+          "id": 12392,
+          "slug": "dji-0946-rio-savagre-costa-rica-9010",
+          "status": "legacy_static",
+          "thumb_url": "https://images.wildphotography.com/derivatives/9010/DJI_0946_thumb.JPG"
+        },
+        {
+          "id": 12695,
+          "slug": "dji-0130-san-jose-costa-rica-9313",
+          "status": "legacy_static",
+          "thumb_url": "https://images.wildphotography.com/derivatives/9313/DJI_0130_thumb.JPG"
+        },
+        {
+          "id": 13291,
+          "slug": "dji-0678-sunrise-sunset-9909",
+          "status": "legacy_static",
+          "thumb_url": "https://images.wildphotography.com/derivatives/9909/DJI_0678_thumb.jpg"
+        },
+        {
+          "id": 14776,
+          "slug": "costa-rica-gallery-best-of-costa-rica-20070520-2268",
+          "status": "archived",
+          "thumb_url": "https://images.wildphotography.com/thumbs/20070520-2268-a12dc2610e44-thumb.jpg"
+        },
+        {
+          "id": 14777,
+          "slug": "20070521-2491",
+          "status": "archived",
+          "thumb_url": "https://images.wildphotography.com/thumbs/20070521-2491-b48c1914c887-thumb.jpg"
+        },
+        {
+          "id": 14778,
+          "slug": "2018-03-28-081211",
+          "status": "archived",
+          "thumb_url": "https://images.wildphotography.com/thumbs/2018-03-28-08-12-11-a69a55a05da7-thumb.jpg"
+        },
+        {
+          "id": 14779,
+          "slug": "2018-04-30-115646-1",
+          "status": "archived",
+          "thumb_url": "https://images.wildphotography.com/thumbs/2018-04-30-11-56-46-1-1bde89808e4e-thumb.jpg"
+        },
+        {
+          "id": 14780,
+          "slug": "2018-12-29-164058",
+          "status": "archived",
+          "thumb_url": "https://images.wildphotography.com/derivatives/14780/14780_thumb.jpg"
+        },
+        {
+          "id": 14781,
+          "slug": "asia-china-2019-03-26-18-06-31-1",
+          "status": "archived",
+          "thumb_url": "https://images.wildphotography.com/thumbs/2019-03-26-18-06-31-104bf79d0533-thumb.jpg"
+        },
+        {
+          "id": 14782,
+          "slug": "2019-03-31-061618-1",
+          "status": "archived",
+          "thumb_url": "https://images.wildphotography.com/thumbs/2019-03-31-06-16-18-1-a17ef3329683-thumb.jpg"
+        },
+        {
+          "id": 14783,
+          "slug": "2019-04-01-133826",
+          "status": "archived",
+          "thumb_url": "https://images.wildphotography.com/thumbs/2019-04-01-13-38-26-99d1a7270780-thumb.jpg"
+        },
+        {
+          "id": 14784,
+          "slug": "2019-04-16-103409",
+          "status": "archived",
+          "thumb_url": "https://images.wildphotography.com/thumbs/2019-04-16-10-34-09-84719680c751-thumb.jpg"
+        },
+        {
+          "id": 14785,
+          "slug": "23-img-5550",
+          "status": "archived",
+          "thumb_url": "https://images.wildphotography.com/thumbs/23-img-5550-41177e0639ed-thumb.jpg"
+        },
+        {
+          "id": 14786,
+          "slug": "32-img-5623",
+          "status": "archived",
+          "thumb_url": "https://images.wildphotography.com/thumbs/32-img-5623-f626667faf1f-thumb.jpg"
+        },
+        {
+          "id": 14787,
+          "slug": "china-shanghai-2019-04-02-191544",
+          "status": "archived",
+          "thumb_url": "https://images.wildphotography.com/thumbs/china-shanghai-2019-04-02-19-15-44-1e77fa76c0f9-thumb.jpg"
+        },
+        {
+          "id": 14788,
+          "slug": "dji-0130",
+          "status": "archived",
+          "thumb_url": "https://images.wildphotography.com/derivatives/14788/14788_thumb.jpg"
+        },
+        {
+          "id": 14789,
+          "slug": "dji-0136",
+          "status": "archived",
+          "thumb_url": "https://images.wildphotography.com/thumbs/dji-0136-24a5a15a94c9-thumb.jpg"
+        },
+        {
+          "id": 14790,
+          "slug": "dji-0301-001",
+          "status": "archived",
+          "thumb_url": "https://images.wildphotography.com/thumbs/dji-0301-001-d13d3113563a-thumb.jpg"
+        },
+        {
+          "id": 14791,
+          "slug": "dji-0322",
+          "status": "archived",
+          "thumb_url": "https://images.wildphotography.com/thumbs/dji-0322-f424af7855fe-thumb.jpg"
+        },
+        {
+          "id": 14793,
+          "slug": "dji-0433-2",
+          "status": "archived",
+          "thumb_url": "https://images.wildphotography.com/thumbs/dji-0433-2-bfb2e4f099a5-thumb.jpg"
+        },
+        {
+          "id": 14794,
+          "slug": "dji-0491",
+          "status": "archived",
+          "thumb_url": "https://images.wildphotography.com/thumbs/dji-0491-9ca08592f189-thumb.jpg"
+        },
+        {
+          "id": 14795,
+          "slug": "dji-0494",
+          "status": "archived",
+          "thumb_url": "https://images.wildphotography.com/thumbs/dji-0494-3c17a9624099-thumb.jpg"
+        },
+        {
+          "id": 14796,
+          "slug": "dji-0513",
+          "status": "archived",
+          "thumb_url": "https://images.wildphotography.com/thumbs/dji-0513-0cf2b5b93ee4-thumb.jpg"
+        },
+        {
+          "id": 14797,
+          "slug": "dji-0517",
+          "status": "archived",
+          "thumb_url": "https://images.wildphotography.com/thumbs/dji-0517-33372ba95e14-thumb.jpg"
+        },
+        {
+          "id": 14798,
+          "slug": "dji-0562-001",
+          "status": "archived",
+          "thumb_url": "https://images.wildphotography.com/thumbs/dji-0562-001-fac6f3ffd5bf-thumb.jpg"
+        },
+        {
+          "id": 14799,
+          "slug": "dji-0566",
+          "status": "archived",
+          "thumb_url": "https://images.wildphotography.com/thumbs/dji-0566-ca86409eacba-thumb.jpg"
+        },
+        {
+          "id": 14800,
+          "slug": "dji-0569",
+          "status": "archived",
+          "thumb_url": "https://images.wildphotography.com/thumbs/dji-0569-2b8960eea0d1-thumb.jpg"
+        },
+        {
+          "id": 14804,
+          "slug": "dji-0664-001",
+          "status": "archived",
+          "thumb_url": "https://images.wildphotography.com/thumbs/dji-0664-001-91c7c5bad3bb-thumb.jpg"
+        },
+        {
+          "id": 14805,
+          "slug": "dji-0671-001-14805",
+          "status": "archived",
+          "thumb_url": "https://images.wildphotography.com/thumbs/dji-0671-001-00c130957678-thumb.jpg"
+        },
+        {
+          "id": 14807,
+          "slug": "dji-0813",
+          "status": "archived",
+          "thumb_url": "https://images.wildphotography.com/thumbs/dji-0813-916569f293c1-thumb.jpg"
+        },
+        {
+          "id": 14808,
+          "slug": "dji-0900",
+          "status": "archived",
+          "thumb_url": "https://images.wildphotography.com/thumbs/dji-0900-bb61090a0b6a-thumb.jpg"
+        },
+        {
+          "id": 14809,
+          "slug": "dji-0918",
+          "status": "archived",
+          "thumb_url": "https://images.wildphotography.com/thumbs/dji-0918-5c2404b6d0fd-thumb.jpg"
+        },
+        {
+          "id": 14810,
+          "slug": "dji-0972",
+          "status": "archived",
+          "thumb_url": "https://images.wildphotography.com/thumbs/dji-0972-16fece21e902-thumb.jpg"
+        },
+        {
+          "id": 14812,
+          "slug": "hyperlapse-0340-bab892b6",
+          "status": "archived",
+          "thumb_url": "https://images.wildphotography.com/derivatives/14812/hyperlapse-0340-bab892b6_thumb.jpg"
+        },
+        {
+          "id": 14813,
+          "slug": "hyperlapse-0460",
+          "status": "archived",
+          "thumb_url": "https://images.wildphotography.com/derivatives/14813/hyperlapse-0460_thumb.jpg"
+        },
+        {
+          "id": 14814,
+          "slug": "hyperlapse-0600",
+          "status": "archived",
+          "thumb_url": "https://images.wildphotography.com/derivatives/14814/hyperlapse-0600_thumb.jpg"
+        },
+        {
+          "id": 14815,
+          "slug": "img-0899",
+          "status": "archived",
+          "thumb_url": "https://images.wildphotography.com/thumbs/img-0899-5a6464844871-thumb.jpg"
+        },
+        {
+          "id": 14816,
+          "slug": "img-2335",
+          "status": "archived",
+          "thumb_url": "https://images.wildphotography.com/thumbs/img-2335-b84a81ef147f-thumb.jpg"
+        },
+        {
+          "id": 14817,
+          "slug": "img-2377",
+          "status": "archived",
+          "thumb_url": "https://images.wildphotography.com/thumbs/img-2377-d4953da31371-thumb.jpg"
+        }
+      ]
+    },
+    "missing_content_hash": {
+      "description": "No content_hash \u2014 cannot detect duplicates or verify integrity",
+      "count": 17220,
+      "sample": [
+        {
+          "id": 16,
+          "slug": "scarlet-macaw",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 17,
+          "slug": "quetzal",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 19,
+          "slug": "three-toed-sloth",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 21,
+          "slug": "green-iguana",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 23,
+          "slug": "spectacled-owl",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 24,
+          "slug": "toucan-barbet",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 27,
+          "slug": "collared-aracari",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 29,
+          "slug": "boat-billed-heron",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 30,
+          "slug": "fiery-hummingbird",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 31,
+          "slug": "montezuma-oropendola",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 32,
+          "slug": "volcano-view",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 33,
+          "slug": "pacific-sunset",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 35,
+          "slug": "rainforest-waterfall",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 42,
+          "slug": "paddleboarding-adventure-on-a-tropical-coast-9kLkq4",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 43,
+          "slug": "wading-angler-quiet-water-fishing-scene-dWHshx",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 44,
+          "slug": "img-9761-jpg-McvJMD",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 45,
+          "slug": "img-9867-jpg-ggnxV4",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 46,
+          "slug": "img-0133-jpg-t25Tbt",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 47,
+          "slug": "img-0148-jpg-WgXJsL",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 48,
+          "slug": "img-0135-jpg-x8LCKP",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 49,
+          "slug": "img-0154-jpg-P4g3jH",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 50,
+          "slug": "costa-rica-billabong-surf-2009-5QgMNB",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 51,
+          "slug": "img-0280-jpg-WR6t7s",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 52,
+          "slug": "costa-rica-billabong-surf-2009-PSWCnj",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 53,
+          "slug": "img-9578-jpg-CWp24N",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 54,
+          "slug": "img-9644-jpg-HCxCGn",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 55,
+          "slug": "img-3491-jpg-jHd5JG",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 56,
+          "slug": "img-6629-jpg-dqMnVs",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 57,
+          "slug": "img-0332-jpg-rSSd5X",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 58,
+          "slug": "img-6632-jpg-sTd7RM",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 59,
+          "slug": "img-0341-jpg-kZ3chM",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 60,
+          "slug": "img-9672-jpg-HSKLKj",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 61,
+          "slug": "img-9584-jpg-F3ffkg",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 62,
+          "slug": "img-9468-jpg-pQpxCC",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 63,
+          "slug": "img-9572-jpg-TC4cZc",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 64,
+          "slug": "img-9600-jpg-ZsctXJ",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 65,
+          "slug": "img-9717-jpg-7ZKCZv",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 66,
+          "slug": "img-9723-jpg-qsxkCW",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 67,
+          "slug": "img-9890-jpg-zBSPgj",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 68,
+          "slug": "img-9902-jpg-JwSZbr",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 69,
+          "slug": "img-9843-jpg-hxpDkp",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 71,
+          "slug": "img-9919-jpg-DXrP87",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 72,
+          "slug": "img-0021-jpg-GkKRzD",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 73,
+          "slug": "img-0235-jpg-9sPXtp",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 74,
+          "slug": "img-0236-jpg-S2T7WR",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 75,
+          "slug": "img-0238-jpg-ZGvNtp",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 76,
+          "slug": "img-0277-jpg-qt4QV8",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 77,
+          "slug": "img-0325-jpg-fmv7Qf",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 78,
+          "slug": "img-3493-jpg-gG4vff",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 79,
+          "slug": "img-5305-jpg-R4sG6V",
+          "status": "published",
+          "has_r2": true
+        }
+      ]
+    },
+    "missing_slug": {
+      "description": "Null or empty slug \u2014 cannot build public URL",
+      "count": 0,
+      "sample": []
+    },
+    "missing_gallery_slug": {
+      "description": "ready_for_public_render=true but gallery_slug is null \u2014 no gallery association",
+      "count": 1279,
+      "sample": [
+        {
+          "id": 64650,
+          "slug": "2021-06-11-09-12-03-3061a04992c91bea",
+          "status": "published"
+        },
+        {
+          "id": 64651,
+          "slug": "2021-06-11-09-32-26-b608996063393250",
+          "status": "published"
+        },
+        {
+          "id": 64652,
+          "slug": "2021-06-11-09-36-42-eaf97aa40d0326d1",
+          "status": "published"
+        },
+        {
+          "id": 64653,
+          "slug": "2021-06-11-09-43-23-6a6c8c2964c1ded4",
+          "status": "published"
+        },
+        {
+          "id": 64654,
+          "slug": "2021-06-11-10-53-14-3af746832cb230af",
+          "status": "published"
+        },
+        {
+          "id": 64655,
+          "slug": "2021-06-11-12-01-24-fa6ca8e5a1451b89",
+          "status": "published"
+        },
+        {
+          "id": 64656,
+          "slug": "2023-11-24-15-19-14-072f98d9848653cd",
+          "status": "published"
+        },
+        {
+          "id": 64657,
+          "slug": "2023-11-24-16-24-57-d95820f58587f98f",
+          "status": "published"
+        },
+        {
+          "id": 64658,
+          "slug": "2023-11-24-16-25-13-5316e242df468a9c",
+          "status": "published"
+        },
+        {
+          "id": 64659,
+          "slug": "2023-11-24-17-31-46-4a3c98a7f91db268",
+          "status": "published"
+        },
+        {
+          "id": 64660,
+          "slug": "2023-11-24-17-33-18-7005576bc772d56e",
+          "status": "published"
+        },
+        {
+          "id": 64661,
+          "slug": "2023-11-25-16-57-03-1a9b49f4f4205026",
+          "status": "published"
+        },
+        {
+          "id": 64662,
+          "slug": "2023-11-25-17-04-40-c212e8521e32f0bc",
+          "status": "published"
+        },
+        {
+          "id": 64663,
+          "slug": "2023-11-25-17-04-42-10975510871aad55",
+          "status": "published"
+        },
+        {
+          "id": 64664,
+          "slug": "2023-11-26-11-31-14-21f3effb268e10ad",
+          "status": "published"
+        },
+        {
+          "id": 64665,
+          "slug": "2023-11-26-11-31-15-c13467695d6763bc",
+          "status": "published"
+        },
+        {
+          "id": 64666,
+          "slug": "2023-11-26-11-34-13-04b199df11a1f97c",
+          "status": "published"
+        },
+        {
+          "id": 64667,
+          "slug": "2023-11-26-12-52-25-663bcf02bed317be",
+          "status": "published"
+        },
+        {
+          "id": 64668,
+          "slug": "2023-11-26-12-52-28-161f46463993052f",
+          "status": "published"
+        },
+        {
+          "id": 64669,
+          "slug": "2023-11-26-13-54-44-5028f02935f17fd4",
+          "status": "published"
+        },
+        {
+          "id": 64670,
+          "slug": "20241128-070027-81de40a5772477d8",
+          "status": "published"
+        },
+        {
+          "id": 64671,
+          "slug": "20241128-070244-c9d3feaca05700ad",
+          "status": "published"
+        },
+        {
+          "id": 64672,
+          "slug": "20241128-071237-386b4d2fcedf3ad8",
+          "status": "published"
+        },
+        {
+          "id": 64673,
+          "slug": "20241128-125042-c64d18daeebc93db",
+          "status": "published"
+        },
+        {
+          "id": 64674,
+          "slug": "20241128-144527-003495705290a2a3",
+          "status": "published"
+        },
+        {
+          "id": 64675,
+          "slug": "20241128-144531-46ef05065b23d6be",
+          "status": "published"
+        },
+        {
+          "id": 64676,
+          "slug": "20241128-154419-620eb0cbdfc57f99",
+          "status": "published"
+        },
+        {
+          "id": 64677,
+          "slug": "20241128-165254-f20970871d77d6ff",
+          "status": "published"
+        },
+        {
+          "id": 64678,
+          "slug": "20241128-165503-a564a1f0bedc94f2",
+          "status": "published"
+        },
+        {
+          "id": 64679,
+          "slug": "20241129-111652-c2213e324f260058",
+          "status": "published"
+        },
+        {
+          "id": 64680,
+          "slug": "dji-0001-105c406445c7095e",
+          "status": "published"
+        },
+        {
+          "id": 64681,
+          "slug": "dji-0003-669fa42669949b08",
+          "status": "published"
+        },
+        {
+          "id": 64682,
+          "slug": "dji-0004-ae21a68664b297be",
+          "status": "published"
+        },
+        {
+          "id": 64683,
+          "slug": "dji-0005-7005ace8e8bc4677",
+          "status": "published"
+        },
+        {
+          "id": 64684,
+          "slug": "dji-0012-412801a0fd6aa938",
+          "status": "published"
+        },
+        {
+          "id": 64685,
+          "slug": "dji-0021-b79c7afe18de51e6",
+          "status": "published"
+        },
+        {
+          "id": 64686,
+          "slug": "dji-0025-1c95a7bf02717e3a",
+          "status": "published"
+        },
+        {
+          "id": 64687,
+          "slug": "dji-0037-4c011c8803de0f50",
+          "status": "published"
+        },
+        {
+          "id": 64688,
+          "slug": "dji-0039-7f0efd8d540c3d3d",
+          "status": "published"
+        },
+        {
+          "id": 64689,
+          "slug": "dji-0042-9d08d00090a0bb50",
+          "status": "published"
+        },
+        {
+          "id": 64690,
+          "slug": "dji-0047-38920b84a84a06d2",
+          "status": "published"
+        },
+        {
+          "id": 64691,
+          "slug": "dji-0124-0d909bfea5848444",
+          "status": "published"
+        },
+        {
+          "id": 64692,
+          "slug": "dji-0139-246cb1a6dad017ad",
+          "status": "published"
+        },
+        {
+          "id": 64693,
+          "slug": "dji-0149-62357a4b5dc6d370",
+          "status": "published"
+        },
+        {
+          "id": 64694,
+          "slug": "dji-0158-b1e47b8ec136fb36",
+          "status": "published"
+        },
+        {
+          "id": 64695,
+          "slug": "dji-0159-b3e3db3f52ddffd6",
+          "status": "published"
+        },
+        {
+          "id": 64696,
+          "slug": "dji-0161-1368d8ab318543ac",
+          "status": "published"
+        },
+        {
+          "id": 64697,
+          "slug": "dji-0162-4e7d57a23fe1a3c6",
+          "status": "published"
+        },
+        {
+          "id": 64698,
+          "slug": "dji-0163-5ee2909cbd36b770",
+          "status": "published"
+        },
+        {
+          "id": 64699,
+          "slug": "dji-0164-d982604ff7241fbd",
+          "status": "published"
+        }
+      ]
+    }
+  },
+  "status": "success"
+}

@@ -1,0 +1,72 @@
+{
+  "workflow": "wild_repair_incomplete_legacy",
+  "run_at": "2026-05-11T14:59:28+00:00",
+  "actions": [
+    {
+      "step": "repair_incomplete_legacy_dispatch.py",
+      "description": "Resolve pending repair items from dispatch queue",
+      "results": {
+        "photo_38028": "already in queue as done, skipped",
+        "photo_38874": "R2 key already existed, DB updated, original_r2_key set",
+        "photo_38875": "R2 key already existed, DB updated, original_r2_key set",
+        "photo_22885": "investigated — archived, original_r2_key present but source file missing",
+        "photo_22897": "investigated — archived, original_r2_key present but source file missing"
+      }
+    },
+    {
+      "step": "core_audit",
+      "description": "wild_repair_incomplete_legacy_core.py — scan all photos for incomplete core fields",
+      "results": {
+        "total_photos": 41257,
+        "distinct_affected": 700,
+        "needs_repair_batch": "identified 6 photos (18,22,26,28,34,41) with status=needs_repair but valid derivatives already present in R2",
+        "missing_original_r2_key": 7,
+        "missing_content_hash": 15367,
+        "missing_gallery_slug": 3835,
+        "pending_derivatives_with_r2": 0,
+        "render_ready_not_search_ready": 0,
+        "missing_slug": 0
+      }
+    },
+    {
+      "step": "repair_batch",
+      "description": "Repair identified needs_repair photos with valid derivatives",
+      "results": {
+        "photos_repaired": 6,
+        "photo_ids": [18, 22, 26, 28, 34, 41],
+        "action": "status: needs_repair → legacy_static, search_ready=true, ready_for_public_render=true",
+        "photo_70": "superseded → archived_unrecoverable (original lost, no R2 key)"
+      }
+    }
+  ],
+  "remaining_issues": {
+    "missing_original_r2_key": {
+      "count": 7,
+      "severity": "low — all are archived/superseded or legacy_static photos",
+      "photo_ids": [18, 22, 26, 28, 34, 41, 70],
+      "note": "originals lost but derivatives intact for 18-41; truly unrecoverable for 70"
+    },
+    "missing_content_hash": {
+      "count": 15367,
+      "severity": "informational — legacy photos never had hash computed; does not affect rendering",
+      "note": "content_hash is for duplicate detection; not required for public rendering or search indexing"
+    },
+    "missing_gallery_slug": {
+      "count": 3835,
+      "severity": "mixed — many are archived/low-priority; not all need gallery association"
+    }
+  },
+  "queue_status": {
+    "done": 2253,
+    "completed": 683,
+    "permanently_failed": 324,
+    "skipped": 53,
+    "superseded": 43,
+    "pending": 0
+  },
+  "next_recommended_actions": [
+    "No immediate repair needed for active inventory",
+    "Content hash computation for 15367 legacy photos can be done as a background batch",
+    "Gallery slug assignment for 3835 orphaned photos — deprioritize archived ones"
+  ]
+}

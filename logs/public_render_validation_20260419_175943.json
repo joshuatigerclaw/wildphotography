@@ -1,0 +1,248 @@
+{
+  "run_at": "2026-04-19T23:59:43.499687+00:00",
+  "total_photos": 32261,
+  "render_ready_total": 20661,
+  "photos_with_issues": 78,
+  "all_clear": false,
+  "checks": {
+    "missing_thumb_url": {
+      "count": 0,
+      "sample": []
+    },
+    "missing_slug": {
+      "count": 0,
+      "sample": []
+    },
+    "missing_title": {
+      "count": 0,
+      "sample": []
+    },
+    "missing_gallery_slug": {
+      "count": 78,
+      "sample": [
+        {
+          "id": 14905,
+          "slug": "resplendent-quetzal",
+          "title": "Resplendent Quetzal",
+          "status": "archived"
+        },
+        {
+          "id": 38399,
+          "slug": "isla-tortuga-dji-0209-jpg",
+          "title": "DJI 0209",
+          "status": "active"
+        },
+        {
+          "id": 38400,
+          "slug": "isla-tortuga-dji-0211-jpg",
+          "title": "DJI 0211",
+          "status": "active"
+        },
+        {
+          "id": 38401,
+          "slug": "isla-tortuga-dji-0215-jpg",
+          "title": "DJI 0215",
+          "status": "active"
+        },
+        {
+          "id": 38402,
+          "slug": "isla-tortuga-dji-0227-jpg",
+          "title": "DJI 0227",
+          "status": "active"
+        },
+        {
+          "id": 38403,
+          "slug": "isla-tortuga-dji-0233-jpg",
+          "title": "DJI 0233",
+          "status": "active"
+        },
+        {
+          "id": 38404,
+          "slug": "isla-tortuga-dji-0235-jpg",
+          "title": "DJI 0235",
+          "status": "active"
+        },
+        {
+          "id": 38405,
+          "slug": "isla-tortuga-dji-0249-jpg",
+          "title": "DJI 0249",
+          "status": "active"
+        },
+        {
+          "id": 38407,
+          "slug": "isla-tortuga-dji-0267-jpg",
+          "title": "DJI 0267",
+          "status": "active"
+        },
+        {
+          "id": 38408,
+          "slug": "isla-tortuga-dji-0270-jpg",
+          "title": "DJI 0270",
+          "status": "active"
+        },
+        {
+          "id": 38410,
+          "slug": "isla-tortuga-dji-0272-jpg",
+          "title": "DJI 0272",
+          "status": "active"
+        },
+        {
+          "id": 38412,
+          "slug": "isla-tortuga-dji-0274-jpg",
+          "title": "DJI 0274",
+          "status": "active"
+        },
+        {
+          "id": 38413,
+          "slug": "isla-tortuga-dji-0276-jpg",
+          "title": "DJI 0276",
+          "status": "active"
+        },
+        {
+          "id": 38416,
+          "slug": "isla-tortuga-dji-0280-jpg",
+          "title": "DJI 0280",
+          "status": "active"
+        },
+        {
+          "id": 38417,
+          "slug": "isla-tortuga-dji-0287-jpg",
+          "title": "DJI 0287",
+          "status": "active"
+        },
+        {
+          "id": 38420,
+          "slug": "isla-tortuga-dji-0293-jpg",
+          "title": "DJI 0293",
+          "status": "active"
+        },
+        {
+          "id": 38421,
+          "slug": "isla-tortuga-dji-0297-jpg",
+          "title": "DJI 0297",
+          "status": "active"
+        },
+        {
+          "id": 38424,
+          "slug": "isla-tortuga-dji-0301-jpg",
+          "title": "DJI 0301",
+          "status": "active"
+        },
+        {
+          "id": 38425,
+          "slug": "isla-tortuga-dji-0308-jpg",
+          "title": "DJI 0308",
+          "status": "active"
+        },
+        {
+          "id": 38427,
+          "slug": "isla-tortuga-dji-0314-jpg",
+          "title": "DJI 0314",
+          "status": "active"
+        }
+      ]
+    },
+    "search_not_ready": {
+      "count": 0,
+      "sample": []
+    },
+    "derivatives_incomplete": {
+      "count": 0,
+      "sample": []
+    },
+    "missing_description": {
+      "count": 0,
+      "sample": []
+    },
+    "missing_keywords": {
+      "count": 14,
+      "sample": [
+        {
+          "id": 38599,
+          "slug": "santa-teresa-malpais-dji-0696-jpg",
+          "title": "DJI 0696",
+          "status": "active"
+        },
+        {
+          "id": 38715,
+          "slug": "santa-teresa-malpais-dji-0768-jpg",
+          "title": "DJI 0768",
+          "status": "active"
+        },
+        {
+          "id": 38718,
+          "slug": "santa-teresa-malpais-dji-0777-jpg",
+          "title": "DJI 0777",
+          "status": "active"
+        },
+        {
+          "id": 38721,
+          "slug": "santa-teresa-malpais-dji-0791-jpg",
+          "title": "DJI 0791",
+          "status": "active"
+        },
+        {
+          "id": 38753,
+          "slug": "punta-leona-dji-0567-jpg",
+          "title": "DJI 0567",
+          "status": "active"
+        },
+        {
+          "id": 38755,
+          "slug": "punta-leona-dji-0569-jpg",
+          "title": "DJI 0569",
+          "status": "active"
+        },
+        {
+          "id": 38758,
+          "slug": "punta-leona-dji-0572-jpg",
+          "title": "DJI 0572",
+          "status": "active"
+        },
+        {
+          "id": 38773,
+          "slug": "santa-teresa-malpais-dji-0859-jpg",
+          "title": "DJI 0859",
+          "status": "active"
+        },
+        {
+          "id": 38775,
+          "slug": "santa-teresa-malpais-dji-0861-jpg",
+          "title": "DJI 0861",
+          "status": "active"
+        },
+        {
+          "id": 38780,
+          "slug": "santa-teresa-malpais-dji-0873-jpg",
+          "title": "DJI 0873",
+          "status": "active"
+        },
+        {
+          "id": 38782,
+          "slug": "costa-rica-gallery-beaches-2018-12-29-16-40-58-jpg",
+          "title": "2018 12 29 16.40.58",
+          "status": "active"
+        },
+        {
+          "id": 38783,
+          "slug": "costa-rica-gallery-beaches-2019-04-14-14-50-28-jpg",
+          "title": "2019 04 14 14.50.28",
+          "status": "active"
+        },
+        {
+          "id": 38784,
+          "slug": "costa-rica-gallery-beaches-2019-04-14-15-09-23-jpg",
+          "title": "2019 04 14 15.09.23",
+          "status": "active"
+        },
+        {
+          "id": 38820,
+          "slug": "birds-cl0a0213-jpg",
+          "title": "CL0A0213",
+          "status": "active"
+        }
+      ]
+    }
+  },
+  "status": "success"
+}

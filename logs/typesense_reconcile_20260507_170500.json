@@ -1,0 +1,16 @@
+{
+  "run_at": "2026-05-07T17:05:00+00:00",
+  "eligible_db_count": 36787,
+  "typesense_count_before": 35071,
+  "typesense_count_after": 35071,
+  "stale_removed": 0,
+  "missing_added": 0,
+  "missing_errors": 1716,
+  "drift": 1716,
+  "final_drift": 1716,
+  "status": "oom_blocked",
+  "duration_seconds": null,
+  "error": "OUT_OF_MEMORY - Typesense cluster rejecting all writes",
+  "single_upsert_test": "FAILED ObjectUnprocessable [Errno 422] Rejecting write: running out of resource type: OUT_OF_MEMORY",
+  "recovery_note": "Same OOM state as May 6. Morning report showed recovery by 06:36 UTC on May 7. Cluster likely needs time or scaling."
+}

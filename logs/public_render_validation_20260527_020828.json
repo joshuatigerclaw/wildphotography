@@ -1,0 +1,284 @@
+{
+  "run_at": "2026-05-27T08:08:28.277824+00:00",
+  "total_photos": 47943,
+  "render_ready_total": 47118,
+  "photos_with_issues": 400,
+  "all_clear": false,
+  "checks": {
+    "missing_thumb_url": {
+      "count": 0,
+      "sample": []
+    },
+    "missing_slug": {
+      "count": 0,
+      "sample": []
+    },
+    "missing_title": {
+      "count": 0,
+      "sample": []
+    },
+    "missing_gallery_slug": {
+      "count": 7000,
+      "sample": [
+        {
+          "id": 242,
+          "slug": "hermosa-beach-1",
+          "title": "Hermosa Beach Sunset",
+          "status": "published"
+        },
+        {
+          "id": 14905,
+          "slug": "resplendent-quetzal",
+          "title": "Resplendent Quetzal \u2014 Costa Rica",
+          "status": "archived"
+        },
+        {
+          "id": 36571,
+          "slug": "121619-hyperlapse-0051-caa78cf4",
+          "title": ". 121619 HYPERLAPSE 0051",
+          "status": "archived_unrecoverable"
+        },
+        {
+          "id": 41302,
+          "slug": "sunrise-sunset-2016-07-31-17-59-49",
+          "title": "Pacific Coast Sunrise, Guanacaste 2016",
+          "status": "published"
+        },
+        {
+          "id": 41303,
+          "slug": "sunrise-sunset-2017-07-15-18-57-45",
+          "title": "Tropical Sunset, Guanacaste 2017",
+          "status": "published"
+        },
+        {
+          "id": 41304,
+          "slug": "sunrise-sunset-2018-03-29-18-22-12",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41304 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41305,
+          "slug": "sunrise-sunset-2018-08-21-17-53-04",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41305 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41306,
+          "slug": "sunrise-sunset-2018-08-21-17-55-57",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41306 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41307,
+          "slug": "sunrise-sunset-2018-08-21-18-01-08",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41307 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41308,
+          "slug": "sunrise-sunset-2018-08-21-18-02-56",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41308 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41309,
+          "slug": "sunrise-sunset-2018-08-21-18-09-15",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41309 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41310,
+          "slug": "sunrise-sunset-2018-08-24-17-55-36",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41310 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41311,
+          "slug": "sunrise-sunset-2019-july-19-hyperlapse-0311",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41311 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41312,
+          "slug": "sunrise-sunset-2019-03-31-05-46-08",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41312 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41313,
+          "slug": "sunrise-sunset-2019-11-08-17-16-08",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41313 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41314,
+          "slug": "sunrise-sunset-2020-06-06-17-38-31",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41314 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41315,
+          "slug": "sunrise-sunset-2020-06-07-17-57-31",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41315 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41316,
+          "slug": "sunrise-sunset-2020-06-07-17-58-30",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41316 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41317,
+          "slug": "sunrise-sunset-2020-06-07-18-00-38",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41317 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41318,
+          "slug": "sunrise-sunset-2020-07-17-05-10-04",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41318 | WildPhotography",
+          "status": "published"
+        }
+      ]
+    },
+    "search_not_ready": {
+      "count": 2804,
+      "sample": [
+        {
+          "id": 43880,
+          "slug": "peninsula-de-nicoya--_cl0a0969",
+          "title": "Peninsula Nicoya Costa Rica Aerial Beach",
+          "status": "archived_unrecoverable"
+        },
+        {
+          "id": 43899,
+          "slug": "people-watching--_2019-12-26-13-02-42",
+          "title": "People Watching - Costa Rica",
+          "status": "archived_unrecoverable"
+        },
+        {
+          "id": 43997,
+          "slug": "playas-del-coco--_2022-03-12-12-08-28",
+          "title": "Playa Del Coco Guanacaste Costa Rica Beach Photo",
+          "status": "archived_unrecoverable"
+        },
+        {
+          "id": 43998,
+          "slug": "rio-savagre-costa-rica--_2020-06-05-11-37-07",
+          "title": "R\u00edo Savegre P\u00e9rez Zeled\u00f3n Costa Rica River Landscape",
+          "status": "archived_unrecoverable"
+        },
+        {
+          "id": 44218,
+          "slug": "peninsula-papagayo--_2020-11-26-14-11-13",
+          "title": "Peninsula Papagayo Guanacaste Aerial Drone",
+          "status": "archived_unrecoverable"
+        },
+        {
+          "id": 44311,
+          "slug": "punta-leona--_2021-06-11-09-12-03",
+          "title": "Punta Leona Puntarenas Costa Rica Beach Wildlife Photo",
+          "status": "archived_unrecoverable"
+        },
+        {
+          "id": 44312,
+          "slug": "montezuma-costa-rica--_2021-03-25-11-39-45",
+          "title": "Montezuma Nicoya Peninsula Costa Rica Beach Photo",
+          "status": "archived_unrecoverable"
+        },
+        {
+          "id": 44313,
+          "slug": "puntarenas-costa-rica--_2018-08-03-17-34-23",
+          "title": "Puntarenas Costa Rica Pacific Coast Aerial",
+          "status": "archived_unrecoverable"
+        },
+        {
+          "id": 51839,
+          "slug": "europe-france-2017-10-27-15-00-16",
+          "title": "Notre-Dame de Paris and River Seine, Paris, France",
+          "status": "draft"
+        },
+        {
+          "id": 51840,
+          "slug": "europe-france-2017-10-27-15-51-00",
+          "title": "River Seine Tour Boat, Paris, France",
+          "status": "draft"
+        },
+        {
+          "id": 51841,
+          "slug": "europe-france-2017-10-27-15-51-13",
+          "title": "Notre-Dame Cathedral and River Seine from Pont de l'Archev\u00each\u00e9, Paris",
+          "status": "draft"
+        },
+        {
+          "id": 51842,
+          "slug": "europe-france-2017-10-28-13-30-57",
+          "title": "Eiffel Tower, Paris, France",
+          "status": "draft"
+        },
+        {
+          "id": 51843,
+          "slug": "europe-france-2017-10-28-18-22-23",
+          "title": "Classic Parisian Street at Dusk, France",
+          "status": "draft"
+        },
+        {
+          "id": 51844,
+          "slug": "europe-france-2017-10-29-14-44-57",
+          "title": "Monument \u00e0 la R\u00e9publique, Paris, France",
+          "status": "draft"
+        },
+        {
+          "id": 51845,
+          "slug": "europe-france-2017-10-29-16-23-02",
+          "title": "Seagull in Flight Over Paris Canal",
+          "status": "draft"
+        },
+        {
+          "id": 51846,
+          "slug": "europe-france-2017-10-29-16-29-43",
+          "title": "Rotating Swing Bridge Over Canal Saint-Martin, Paris",
+          "status": "draft"
+        },
+        {
+          "id": 51847,
+          "slug": "europe-france-2017-10-29-17-21-56",
+          "title": "Landscaped Garden Walkway in Paris, France",
+          "status": "draft"
+        },
+        {
+          "id": 51848,
+          "slug": "europe-france-2017-10-29-17-22-04",
+          "title": "Evening Street Scene near Turbigo-R\u00e9publique, Paris",
+          "status": "draft"
+        },
+        {
+          "id": 51849,
+          "slug": "europe-france-2017-10-30-16-19-07",
+          "title": "Place de la Concorde at Sunset, Paris, France",
+          "status": "draft"
+        },
+        {
+          "id": 51850,
+          "slug": "europe-france-2017-11-04-15-08-19",
+          "title": "Haussmann Corner Building with Flower Roundabout, Paris",
+          "status": "draft"
+        }
+      ]
+    },
+    "derivatives_incomplete": {
+      "count": 0,
+      "sample": []
+    },
+    "missing_description": {
+      "count": 0,
+      "sample": []
+    },
+    "missing_keywords": {
+      "count": 0,
+      "sample": []
+    }
+  },
+  "status": "success"
+}

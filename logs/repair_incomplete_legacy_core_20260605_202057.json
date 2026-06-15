@@ -1,0 +1,749 @@
+{
+  "run_at": "2026-06-06T02:20:57.116761+00:00",
+  "total_photos": 68108,
+  "distinct_affected_photos": 616,
+  "all_clear": false,
+  "issues": {
+    "missing_original_r2_key": {
+      "description": "Missing original R2 storage key \u2014 cannot rebuild derivatives",
+      "count": 1,
+      "sample": [
+        {
+          "id": 83961,
+          "slug": "cl0a6101-edited-1",
+          "status": "duplicate_skip",
+          "updated_at": "2026-06-04T09:48:33.897242"
+        }
+      ]
+    },
+    "pending_derivatives_with_r2": {
+      "description": "Has R2 original but derivatives_complete=false \u2014 needs rebuild dispatch",
+      "count": 0,
+      "sample": []
+    },
+    "render_ready_not_search_ready": {
+      "description": "ready_for_public_render=true but search_ready=false \u2014 blocked from Typesense",
+      "count": 395,
+      "sample": [
+        {
+          "id": 51865,
+          "slug": "europe-france-img-8213-copy",
+          "status": "published",
+          "thumb_url": "https://images.wildphotography.com/derivatives/51865/europe-france-img-8213-copy_thumb.jpg"
+        },
+        {
+          "id": 51867,
+          "slug": "europe-france-img-8259",
+          "status": "published",
+          "thumb_url": "https://images.wildphotography.com/derivatives/51867/europe-france-img-8259_thumb.jpg"
+        },
+        {
+          "id": 51868,
+          "slug": "europe-france-img-8391",
+          "status": "published",
+          "thumb_url": "https://images.wildphotography.com/derivatives/51868/europe-france-img-8391_thumb.jpg"
+        },
+        {
+          "id": 51869,
+          "slug": "europe-france-img-8450",
+          "status": "published",
+          "thumb_url": "https://images.wildphotography.com/derivatives/51869/europe-france-img-8450_thumb.jpg"
+        },
+        {
+          "id": 51871,
+          "slug": "europe-france-img-8832",
+          "status": "published",
+          "thumb_url": "https://images.wildphotography.com/derivatives/51871/europe-france-img-8832_thumb.jpg"
+        },
+        {
+          "id": 51873,
+          "slug": "europe-france-img-8948",
+          "status": "published",
+          "thumb_url": "https://images.wildphotography.com/thumbs/europe-france-img-8948-thumb.jpg"
+        },
+        {
+          "id": 51875,
+          "slug": "europe-france-img-8984",
+          "status": "published",
+          "thumb_url": "https://images.wildphotography.com/thumbs/europe-france-img-8984-thumb.jpg"
+        },
+        {
+          "id": 51877,
+          "slug": "europe-france-img-9017",
+          "status": "published",
+          "thumb_url": "https://images.wildphotography.com/thumbs/europe-france-img-9017-thumb.jpg"
+        },
+        {
+          "id": 51879,
+          "slug": "europe-france-img-9950",
+          "status": "published",
+          "thumb_url": "https://images.wildphotography.com/thumbs/europe-france-img-9950-thumb.jpg"
+        },
+        {
+          "id": 51881,
+          "slug": "europe-france-2017-10-27-15-00-16-2",
+          "status": "published",
+          "thumb_url": "https://images.wildphotography.com/derivatives/51881/europe-france-2017-10-27-15-00-16-2_thumb.jpg"
+        },
+        {
+          "id": 51883,
+          "slug": "europe-france-2017-10-27-15-51-13-2",
+          "status": "published",
+          "thumb_url": "https://images.wildphotography.com/derivatives/51883/europe-france-2017-10-27-15-51-13-2_thumb.jpg"
+        },
+        {
+          "id": 51885,
+          "slug": "europe-france-2017-10-28-18-22-23-2",
+          "status": "published",
+          "thumb_url": "https://images.wildphotography.com/derivatives/51885/europe-france-2017-10-28-18-22-23-2_thumb.jpg"
+        },
+        {
+          "id": 51887,
+          "slug": "europe-france-2017-10-29-16-23-02-2",
+          "status": "published",
+          "thumb_url": "https://images.wildphotography.com/derivatives/51887/europe-france-2017-10-29-16-23-02-2_thumb.jpg"
+        },
+        {
+          "id": 51889,
+          "slug": "europe-france-2017-10-29-17-21-56-2",
+          "status": "published",
+          "thumb_url": "https://images.wildphotography.com/derivatives/51889/europe-france-2017-10-29-17-21-56-2_thumb.jpg"
+        },
+        {
+          "id": 51891,
+          "slug": "europe-france-2017-10-30-16-19-07-2",
+          "status": "published",
+          "thumb_url": "https://images.wildphotography.com/derivatives/51891/europe-france-2017-10-30-16-19-07-2_thumb.jpg"
+        },
+        {
+          "id": 51893,
+          "slug": "europe-france-img-0196-2",
+          "status": "published",
+          "thumb_url": "https://images.wildphotography.com/derivatives/51893/europe-france-img-0196-2_thumb.jpg"
+        },
+        {
+          "id": 51895,
+          "slug": "europe-france-img-0204-2",
+          "status": "published",
+          "thumb_url": "https://images.wildphotography.com/derivatives/51895/europe-france-img-0204-2_thumb.jpg"
+        },
+        {
+          "id": 51898,
+          "slug": "europe-france-img-0243-2",
+          "status": "published",
+          "thumb_url": "https://images.wildphotography.com/derivatives/51898/europe-france-img-0243-2_thumb.jpg"
+        },
+        {
+          "id": 51900,
+          "slug": "europe-france-img-0563-2",
+          "status": "published",
+          "thumb_url": "https://images.wildphotography.com/derivatives/preview/51900_europe-france_original_europe-france-img-0563-2_preview.webp"
+        },
+        {
+          "id": 51901,
+          "slug": "europe-france-img-1165-2",
+          "status": "published",
+          "thumb_url": "https://images.wildphotography.com/derivatives/51901/europe-france-img-1165-2_thumb.jpg"
+        },
+        {
+          "id": 51902,
+          "slug": "europe-france-img-1179-2",
+          "status": "published",
+          "thumb_url": "https://images.wildphotography.com/derivatives/51902/europe-france-img-1179-2_thumb.jpg"
+        },
+        {
+          "id": 51903,
+          "slug": "europe-france-img-8144-2",
+          "status": "published",
+          "thumb_url": "https://images.wildphotography.com/derivatives/51903/europe-france-img-8144-2_thumb.jpg"
+        },
+        {
+          "id": 51904,
+          "slug": "europe-france-img-8179-2",
+          "status": "published",
+          "thumb_url": "https://images.wildphotography.com/derivatives/51904/europe-france-img-8179-2_thumb.jpg"
+        },
+        {
+          "id": 51905,
+          "slug": "europe-france-img-8180-2",
+          "status": "published",
+          "thumb_url": "https://images.wildphotography.com/derivatives/51905/europe-france-img-8180-2_thumb.jpg"
+        },
+        {
+          "id": 51906,
+          "slug": "europe-france-img-8182-2",
+          "status": "published",
+          "thumb_url": "https://images.wildphotography.com/derivatives/51906/europe-france-img-8182-2_thumb.jpg"
+        },
+        {
+          "id": 51907,
+          "slug": "europe-france-img-8213-copy-2",
+          "status": "published",
+          "thumb_url": "https://images.wildphotography.com/derivatives/51907/europe-france-img-8213-copy-2_thumb.jpg"
+        },
+        {
+          "id": 51908,
+          "slug": "europe-france-img-8213-2",
+          "status": "published",
+          "thumb_url": "https://images.wildphotography.com/derivatives/51908/europe-france-img-8213-2_thumb.jpg"
+        },
+        {
+          "id": 51909,
+          "slug": "europe-france-img-8259-2",
+          "status": "published",
+          "thumb_url": "https://images.wildphotography.com/derivatives/51909/europe-france-img-8259-2_thumb.jpg"
+        },
+        {
+          "id": 51910,
+          "slug": "europe-france-img-8391-2",
+          "status": "published",
+          "thumb_url": "https://images.wildphotography.com/derivatives/51910/europe-france-img-8391-2_thumb.jpg"
+        },
+        {
+          "id": 51911,
+          "slug": "europe-france-img-8450-2",
+          "status": "published",
+          "thumb_url": "https://images.wildphotography.com/derivatives/51911/europe-france-img-8450-2_thumb.jpg"
+        },
+        {
+          "id": 51912,
+          "slug": "europe-france-img-8830-2",
+          "status": "published",
+          "thumb_url": "https://images.wildphotography.com/derivatives/51912/europe-france-img-8830-2_thumb.jpg"
+        },
+        {
+          "id": 51913,
+          "slug": "europe-france-img-8832-2",
+          "status": "published",
+          "thumb_url": "https://images.wildphotography.com/derivatives/51913/europe-france-img-8832-2_thumb.jpg"
+        },
+        {
+          "id": 51914,
+          "slug": "europe-france-img-8843-2",
+          "status": "published",
+          "thumb_url": "https://images.wildphotography.com/derivatives/preview/51914_europe-france_original_europe-france-img-8843-2_preview.webp"
+        },
+        {
+          "id": 51915,
+          "slug": "europe-france-img-8948-2",
+          "status": "published",
+          "thumb_url": "https://images.wildphotography.com/derivatives/51915/europe-france-img-8948-2_thumb.jpg"
+        },
+        {
+          "id": 51916,
+          "slug": "europe-france-img-8977-2",
+          "status": "published",
+          "thumb_url": "https://images.wildphotography.com/derivatives/51916/europe-france-img-8977-2_thumb.jpg"
+        },
+        {
+          "id": 51917,
+          "slug": "europe-france-img-8984-2",
+          "status": "published",
+          "thumb_url": "https://images.wildphotography.com/derivatives/51917/europe-france-img-8984-2_thumb.jpg"
+        },
+        {
+          "id": 51918,
+          "slug": "europe-france-img-9012-2",
+          "status": "published",
+          "thumb_url": "https://images.wildphotography.com/derivatives/51918/europe-france-img-9012-2_thumb.jpg"
+        },
+        {
+          "id": 51919,
+          "slug": "europe-france-img-9017-2",
+          "status": "published",
+          "thumb_url": "https://images.wildphotography.com/derivatives/51919/europe-france-img-9017-2_thumb.jpg"
+        },
+        {
+          "id": 51920,
+          "slug": "europe-france-img-9025-2",
+          "status": "published",
+          "thumb_url": "https://images.wildphotography.com/derivatives/51920/europe-france-img-9025-2_thumb.jpg"
+        },
+        {
+          "id": 51921,
+          "slug": "europe-france-img-9950-2",
+          "status": "published",
+          "thumb_url": "https://images.wildphotography.com/derivatives/51921/europe-france-img-9950-2_thumb.jpg"
+        },
+        {
+          "id": 51922,
+          "slug": "europe-france-img-9953-2",
+          "status": "published",
+          "thumb_url": "https://images.wildphotography.com/derivatives/51922/europe-france-img-9953-2_thumb.jpg"
+        },
+        {
+          "id": 51955,
+          "slug": "people-watching-p1101989-jpg",
+          "status": "published",
+          "thumb_url": "https://images.wildphotography.com/derivatives/51955/people-watching-p1101989-jpg_thumb.jpg"
+        },
+        {
+          "id": 54817,
+          "slug": "south-america-peru-9e12c4d5",
+          "status": "published",
+          "thumb_url": "https://images.wildphotography.com/derivatives/54817/south-america-peru-9e12c4d5_thumb.jpg"
+        },
+        {
+          "id": 54818,
+          "slug": "south-america-peru-7d4c71fa",
+          "status": "published",
+          "thumb_url": "https://images.wildphotography.com/derivatives/54818/south-america-peru-7d4c71fa_thumb.jpg"
+        },
+        {
+          "id": 54819,
+          "slug": "south-america-peru-1cd599be",
+          "status": "published",
+          "thumb_url": "https://images.wildphotography.com/derivatives/54819/south-america-peru-1cd599be_thumb.jpg"
+        },
+        {
+          "id": 54820,
+          "slug": "south-america-peru-80cefc46",
+          "status": "published",
+          "thumb_url": "https://images.wildphotography.com/derivatives/preview/54820_originals_80cefc46d89d137e7f9afec3b35c980b.jpg_preview.webp"
+        },
+        {
+          "id": 54821,
+          "slug": "south-america-peru-4121ec2a",
+          "status": "published",
+          "thumb_url": "https://images.wildphotography.com/derivatives/54821/south-america-peru-4121ec2a_thumb.jpg"
+        },
+        {
+          "id": 54822,
+          "slug": "south-america-peru-ac6a78da",
+          "status": "published",
+          "thumb_url": "https://images.wildphotography.com/derivatives/54822/south-america-peru-ac6a78da_thumb.jpg"
+        },
+        {
+          "id": 54823,
+          "slug": "south-america-peru-3c83c42b",
+          "status": "published",
+          "thumb_url": "https://images.wildphotography.com/derivatives/54823/south-america-peru-3c83c42b_thumb.jpg"
+        },
+        {
+          "id": 54824,
+          "slug": "south-america-peru-c72fa03d",
+          "status": "published",
+          "thumb_url": "https://images.wildphotography.com/derivatives/54824/south-america-peru-c72fa03d_thumb.jpg"
+        }
+      ]
+    },
+    "missing_content_hash": {
+      "description": "No content_hash \u2014 cannot detect duplicates or verify integrity",
+      "count": 17542,
+      "sample": [
+        {
+          "id": 16,
+          "slug": "scarlet-macaw",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 19,
+          "slug": "three-toed-sloth",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 23,
+          "slug": "spectacled-owl",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 24,
+          "slug": "toucan-barbet",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 30,
+          "slug": "fiery-hummingbird",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 32,
+          "slug": "volcano-view",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 33,
+          "slug": "pacific-sunset",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 35,
+          "slug": "rainforest-waterfall",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 42,
+          "slug": "paddleboarding-adventure-on-a-tropical-coast-9kLkq4",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 44,
+          "slug": "img-9761-jpg-McvJMD",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 45,
+          "slug": "img-9867-jpg-ggnxV4",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 46,
+          "slug": "img-0133-jpg-t25Tbt",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 47,
+          "slug": "img-0148-jpg-WgXJsL",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 48,
+          "slug": "img-0135-jpg-x8LCKP",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 49,
+          "slug": "img-0154-jpg-P4g3jH",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 50,
+          "slug": "costa-rica-billabong-surf-2009-5QgMNB",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 51,
+          "slug": "img-0280-jpg-WR6t7s",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 52,
+          "slug": "costa-rica-billabong-surf-2009-PSWCnj",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 53,
+          "slug": "img-9578-jpg-CWp24N",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 54,
+          "slug": "img-9644-jpg-HCxCGn",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 55,
+          "slug": "img-3491-jpg-jHd5JG",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 56,
+          "slug": "img-6629-jpg-dqMnVs",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 57,
+          "slug": "img-0332-jpg-rSSd5X",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 58,
+          "slug": "img-6632-jpg-sTd7RM",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 59,
+          "slug": "img-0341-jpg-kZ3chM",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 60,
+          "slug": "img-9672-jpg-HSKLKj",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 61,
+          "slug": "img-9584-jpg-F3ffkg",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 62,
+          "slug": "img-9468-jpg-pQpxCC",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 63,
+          "slug": "img-9572-jpg-TC4cZc",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 64,
+          "slug": "img-9600-jpg-ZsctXJ",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 65,
+          "slug": "img-9717-jpg-7ZKCZv",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 66,
+          "slug": "img-9723-jpg-qsxkCW",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 67,
+          "slug": "img-9890-jpg-zBSPgj",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 68,
+          "slug": "img-9902-jpg-JwSZbr",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 69,
+          "slug": "img-9843-jpg-hxpDkp",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 71,
+          "slug": "img-9919-jpg-DXrP87",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 72,
+          "slug": "img-0021-jpg-GkKRzD",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 73,
+          "slug": "img-0235-jpg-9sPXtp",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 74,
+          "slug": "img-0236-jpg-S2T7WR",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 75,
+          "slug": "img-0238-jpg-ZGvNtp",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 76,
+          "slug": "img-0277-jpg-qt4QV8",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 77,
+          "slug": "img-0325-jpg-fmv7Qf",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 78,
+          "slug": "img-3493-jpg-gG4vff",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 79,
+          "slug": "img-5305-jpg-R4sG6V",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 80,
+          "slug": "img-2089-jpg-pnr28M",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 81,
+          "slug": "img-3478-jpg-BWjWP9",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 82,
+          "slug": "img-2099-jpg-4gf3qq",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 83,
+          "slug": "img-5307-jpg-CrgJfq",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 84,
+          "slug": "img-5426-jpg-jmdgbW",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 85,
+          "slug": "img-5373-jpg-SZQs9D",
+          "status": "published",
+          "has_r2": true
+        }
+      ]
+    },
+    "missing_slug": {
+      "description": "Null or empty slug \u2014 cannot build public URL",
+      "count": 0,
+      "sample": []
+    },
+    "missing_gallery_slug": {
+      "description": "ready_for_public_render=true but gallery_slug is null \u2014 no gallery association",
+      "count": 20,
+      "sample": [
+        {
+          "id": 92384,
+          "slug": "birds-toucans-db1ca479",
+          "status": "published"
+        },
+        {
+          "id": 92385,
+          "slug": "birds-macaws-lapas-ccb69841",
+          "status": "published"
+        },
+        {
+          "id": 92386,
+          "slug": "birds-macaws-lapas-a9dbfaf4",
+          "status": "published"
+        },
+        {
+          "id": 92387,
+          "slug": "butterflies-fc5c54f8",
+          "status": "published"
+        },
+        {
+          "id": 92388,
+          "slug": "costa-rica-gallery-nauyaca-waterfalls-03734593",
+          "status": "published"
+        },
+        {
+          "id": 92389,
+          "slug": "birds-0efb64aa",
+          "status": "published"
+        },
+        {
+          "id": 92390,
+          "slug": "birds-40f36a4d",
+          "status": "published"
+        },
+        {
+          "id": 92391,
+          "slug": "birds-a4fd84b8",
+          "status": "published"
+        },
+        {
+          "id": 92392,
+          "slug": "birds-19789b22",
+          "status": "published"
+        },
+        {
+          "id": 92393,
+          "slug": "birds-3778637c",
+          "status": "published"
+        },
+        {
+          "id": 92394,
+          "slug": "santa-teresa-malpais-73ae9abf",
+          "status": "published"
+        },
+        {
+          "id": 92395,
+          "slug": "santa-teresa-malpais-db6447de",
+          "status": "published"
+        },
+        {
+          "id": 92396,
+          "slug": "santa-teresa-malpais-0202f185",
+          "status": "published"
+        },
+        {
+          "id": 92397,
+          "slug": "santa-teresa-malpais-ea1511d5",
+          "status": "published"
+        },
+        {
+          "id": 92398,
+          "slug": "santa-teresa-malpais-0be5939f",
+          "status": "published"
+        },
+        {
+          "id": 92399,
+          "slug": "santa-teresa-malpais-f740f8e6",
+          "status": "published"
+        },
+        {
+          "id": 92400,
+          "slug": "santa-teresa-malpais-9e87ec78",
+          "status": "published"
+        },
+        {
+          "id": 92401,
+          "slug": "santa-teresa-malpais-e68ca7cf",
+          "status": "published"
+        },
+        {
+          "id": 92402,
+          "slug": "santa-teresa-malpais-26b14deb",
+          "status": "published"
+        },
+        {
+          "id": 92405,
+          "slug": "new-uploads-04ada51a",
+          "status": "published"
+        }
+      ]
+    }
+  },
+  "status": "success"
+}

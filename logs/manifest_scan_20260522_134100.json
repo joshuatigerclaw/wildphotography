@@ -1,0 +1,77 @@
+{
+  "run_at": "2026-05-22T19:41:00.621707+00:00",
+  "summary": {
+    "total_runs": 26,
+    "successful": 0,
+    "failed": 0,
+    "other": 26,
+    "total_imported": 2122,
+    "total_failed_rows": 281,
+    "earliest_run": "2026-03-21T18:21:54.248382+00:00",
+    "latest_run": "2026-05-22T12:22:44+00:00"
+  },
+  "activity": {
+    "last_24h": 1,
+    "last_7d": 1
+  },
+  "recent_runs": [
+    {
+      "id": 27,
+      "batch_id": "may2026_batch_1779452564",
+      "source_folder": "[\"Land-Animals\",\"Landmarks\",\"Marine-Life-of-Costa-Rica\",\"Flora-Fauna\",\"Insects-and-Butterflies\"]",
+      "status": "complete",
+      "imported_new": 0,
+      "rows_failed": 0,
+      "started_at": "2026-05-22T12:22:44+00:00",
+      "completed_at": "2026-05-22T12:22:44+00:00",
+      "error_message": null
+    },
+    {
+      "id": 26,
+      "batch_id": "may2026_batch69",
+      "source_folder": "Coyol-de-Alajuela,Potrero-Beach-Guanacaste,Tambor-Photos,Las-Catalinas-Guanacaste,Punta-Cacique-Guancaste",
+      "status": "complete",
+      "imported_new": 0,
+      "rows_failed": 281,
+      "started_at": "2026-05-12T15:25:01.320234+00:00",
+      "completed_at": null,
+      "error_message": null
+    },
+    {
+      "id": 25,
+      "batch_id": "may2026_batch31",
+      "source_folder": "[\"Rio-Savagre-Costa-Rica\",\"Rincon-de-La-Vieja\",\"Samara-Playa-Carillo\",\"Santa-Ana-Costa-Rica\",\"Puntarenas-Costa-Rica\"]",
+      "status": "complete",
+      "imported_new": 27,
+      "rows_failed": 0,
+      "started_at": "2026-05-09T03:18:54.243136+00:00",
+      "completed_at": "2026-05-09T03:23:54.243136+00:00",
+      "error_message": null
+    },
+    {
+      "id": 24,
+      "batch_id": "may2026_batch29_cron_1778244552",
+      "source_folder": "[\"Wildlife\",\"Santa-Teresa-Malpais\",\"Peninsula-de-Osa\",\"Land-Animals\",\"Landmarks\"]",
+      "status": "complete",
+      "imported_new": 1260,
+      "rows_failed": 0,
+      "started_at": "2026-05-08T12:49:58.231867+00:00",
+      "completed_at": "2026-05-08T12:49:58.231867+00:00",
+      "error_message": null
+    },
+    {
+      "id": 23,
+      "batch_id": "may2026_batch_cont_1777623689407",
+      "source_folder": "[\"Food--\",\"Escazu-Costa-Rica\",\"Conchal-Guanacaste\",\"Puntarenas-Costa-Rica\",\"Waterfalls-in-Costa-Rica\"]",
+      "status": "complete",
+      "imported_new": 61,
+      "rows_failed": 0,
+      "started_at": "2026-05-01T08:23:08.779052+00:00",
+      "completed_at": "2026-05-01T08:23:08.779052+00:00",
+      "error_message": null
+    }
+  ],
+  "failed_runs": [],
+  "status": "success",
+  "health": "ok"
+}

@@ -1,4 +1,4 @@
-import { getPhotosBySpecies, getSpeciesList } from '../lib/db';
+import { getPhotosBySpecies, getSpeciesList, getGalleryBySlug, getRelatedGalleries } from '../lib/db';
 import type { Env } from '../types';
 
 // Hardcoded species definitions (for SEO structure)
@@ -12,7 +12,9 @@ const SPECIES: Record<string, any> = {
     regions: ["Central Valley", "Rainforests"],
     itinerary: { slug: "birds", label: "Costa Rica Birding Guide" },
     gear: { slug: "birds", label: "Bird Photography Gear Guide" },
-    ogImage: "https://images.wildphotography.com/derivatives/small/quetzal-CL0A1052-small.jpg"
+    ogImage: "https://images.wildphotography.com/derivatives/small/quetzal-CL0A1052-small.jpg",
+    relatedSpecies: ["turquoise-browed-motmot", "great-kiskadee"],
+    relatedArticle: "where-see-resplendent-quetzal",
   },
   "scarlet-macaw": {
     name: "Scarlet Macaw", scientific: "Ara macao", family: "Psittacidae",
@@ -22,7 +24,9 @@ const SPECIES: Record<string, any> = {
     regions: ["Pacific Coast"],
     itinerary: { slug: "birds", label: "Costa Rica Birding Guide" },
     gear: { slug: "birds", label: "Best Gear for Bird Photography" },
-    ogImage: "https://images.wildphotography.com/derivatives/small/dec757ca30434cf61e8f007edc18f0cf00021cd79609797786e630bb54057001.jpg"
+    ogImage: "https://images.wildphotography.com/derivatives/small/dec757ca30434cf61e8f007edc18f0cf00021cd79609797786e630bb54057001.jpg",
+    relatedSpecies: ["great-green-macaw", "white-throated-magpie-jay"],
+    relatedArticle: "scarlet-macaw-photography",
   },
   "great-green-macaw": {
     name: "Great Green Macaw", scientific: "Ara ambiguus", family: "Psittacidae",
@@ -32,6 +36,7 @@ const SPECIES: Record<string, any> = {
     regions: ["Caribbean", "Rainforests"],
     itinerary: { slug: "birds", label: "Costa Rica Birding Itinerary" },
     gear: { slug: "birds", label: "Bird Photography Gear" },
+    relatedSpecies: ["scarlet-macaw", "keel-billed-toucan"],
   },
   "keel-billed-toucan": {
     name: "Keel-billed Toucan", scientific: "Ramphastos sulfuratus", family: "Ramphastidae",
@@ -41,7 +46,8 @@ const SPECIES: Record<string, any> = {
     regions: ["Caribbean", "Rainforests"],
     itinerary: { slug: "birds", label: "Costa Rica Birding Guide" },
     gear: { slug: "birds", label: "Gear for Toucan Photography" },
-    ogImage: "https://images.wildphotography.com/derivatives/small/17cb9ac620874ca9d6137a1ad2fefaa5abc70843296bb5bac8ecf584a43881fc.jpg"
+    ogImage: "https://images.wildphotography.com/derivatives/small/17cb9ac620874ca9d6137a1ad2fefaa5abc70843296bb5bac8ecf584a43881fc.jpg",
+    relatedSpecies: ["yellow-throated-toucan", "rufous-tailed-hummingbird"],
   },
   "turquoise-browed-motmot": {
     name: "Turquoise-browed Motmot", scientific: "Eumomota superciliosa", family: "Momotidae",
@@ -51,6 +57,7 @@ const SPECIES: Record<string, any> = {
     regions: ["Guanacaste", "Northwest"],
     itinerary: { slug: "birds", label: "Guanacaste Birding Guide" },
     gear: { slug: "birds", label: "Photography Gear for Endemics" },
+    relatedSpecies: ["resplendent-quetzal", "white-throated-magpie-jay"],
   },
   "rufous-tailed-hummingbird": {
     name: "Rufous-tailed Hummingbird", scientific: "Amazilia tzacatl", family: "Trochilidae",
@@ -60,7 +67,9 @@ const SPECIES: Record<string, any> = {
     regions: ["All Regions"],
     itinerary: { slug: "birds", label: "Hummingbird Watching Itinerary" },
     gear: { slug: "birds", label: "Hummingbird Photography Gear" },
-    ogImage: "https://images.wildphotography.com/derivatives/small/77208ea8f186970b6c3de42a82bf421669d7113cc9dff8af4cfaf1e99bbcf948.jpg"
+    ogImage: "https://images.wildphotography.com/derivatives/small/77208ea8f186970b6c3de42a82bf421669d7113cc9dff8af4cfaf1e99bbcf948.jpg",
+    relatedSpecies: ["keel-billed-toucan", "great-kiskadee"],
+    relatedArticle: "hummingbirds-costa-rica",
   },
   "anhinga": {
     name: "Anhinga", scientific: "Anhinga anhinga", family: "Anhingidae",
@@ -79,6 +88,8 @@ const SPECIES: Record<string, any> = {
     regions: ["All Regions"],
     itinerary: { slug: "birds", label: "Costa Rica Birding Itinerary" },
     gear: { slug: "birds", label: "General Bird Photography Gear" },
+    relatedSpecies: ["turquoise-browed-motmot", "rufous-tailed-hummingbird"],
+    relatedArticle: "top-birds-costa-rica",
   },
   "green-heron": {
     name: "Green Heron", scientific: "Butorides virescens", family: "Ardeidae",
@@ -97,6 +108,7 @@ const SPECIES: Record<string, any> = {
     regions: ["Rainforests", "Highlands"],
     itinerary: { slug: "birds", label: "Toucan Watching Guide" },
     gear: { slug: "birds", label: "Gear for Toucan Photography" },
+    relatedSpecies: ["keel-billed-toucan", "resplendent-quetzal"],
   },
   "olive-ridley-turtle": {
     name: "Olive Ridley Turtle", scientific: "Lepidochelys olivacea", family: "Cheloniidae",
@@ -116,7 +128,9 @@ const SPECIES: Record<string, any> = {
     regions: ["Pacific Coast", "Caribbean Coast"],
     itinerary: { slug: "birds", label: "Coastal Birding Itinerary" },
     gear: { slug: "birds", label: "Coastal Bird Photography Gear" },
-    ogImage: "https://images.wildphotography.com/derivatives/small/22c1d4f3a0f324eff5bd9fa38e26d89a3a27e219eedec59e6579c3c1b8b36922.jpg"
+    ogImage: "https://images.wildphotography.com/derivatives/small/22c1d4f3a0f324eff5bd9fa38e26d89a3a27e219eedec59e6579c3c1b8b36922.jpg",
+    relatedSpecies: ["anhinga", "tricolored-heron"],
+    relatedArticle: "beaches",
   },
   "white-throated-magpie-jay": {
     name: "White-throated Magpie-Jay", scientific: "Calocitta formosa", family: "Corvidae",
@@ -126,7 +140,8 @@ const SPECIES: Record<string, any> = {
     regions: ["Guanacaste", "Northwest"],
     itinerary: { slug: "birds", label: "Guanacaste Birding Guide" },
     gear: { slug: "birds", label: "Bird Photography Gear" },
-    ogImage: "https://images.wildphotography.com/derivatives/small/4fda39e2bd20c522b56c9221813dd51abf2ed6e0b666f0129a00d08333bcf8dc.jpg"
+    ogImage: "https://images.wildphotography.com/derivatives/small/4fda39e2bd20c522b56c9221813dd51abf2ed6e0b666f0129a00d08333bcf8dc.jpg",
+    relatedSpecies: ["turquoise-browed-motmot", "scarlet-macaw"],
   },
   "tricolored-heron": {
     name: "Tricolored Heron", scientific: "Egretta tricolor", family: "Ardeidae",
@@ -355,6 +370,25 @@ export async function renderSpecies(slug: string, env: Env, url: URL): Promise<R
 
     <h3>View by Region</h3>
     <div>${s.regions.map((r: string) => `<a href="/region/${r.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/-+/g, '-').replace(/^-|-$/g, '')}" class="region-link">${r}</a>`).join('')}</div>
+    ${s.relatedSpecies && s.relatedSpecies.length > 0 ? `
+    <div class="card" style="margin-top: 1.5rem;">
+      <h2>You Might Also Like</h2>
+      <p style="margin-bottom: 0.8rem;">Other birds you may want to explore:</p>
+      <div style="display: flex; flex-wrap: wrap; gap: 0.6rem;">
+        ${s.relatedSpecies.map((relSlug: string) => {
+          const relS = SPECIES[relSlug];
+          if (!relS) return '';
+          return `<a href="/species/${relSlug}" class="cta-btn" style="background: #48bb78;">${relS.name} &rarr;</a>`;
+        }).join('')}
+      </div>
+    </div>
+    ` : ''}
+    ${s.relatedArticle ? `
+    <div class="card" style="margin-top: 1.5rem;">
+      <p style="margin-bottom: 0.5rem;">Dive deeper:</p>
+      <a href="/article/${s.relatedArticle}" class="cta-btn">Read the Full Guide &rarr;</a>
+    </div>
+    ` : ''}
     
     <div style="margin-top: 2rem;"><a href="/species" style="color: #2c7a7b;">View All Species</a></div>
   </div>

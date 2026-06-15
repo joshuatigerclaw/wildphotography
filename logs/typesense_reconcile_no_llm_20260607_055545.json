@@ -1,0 +1,32 @@
+{
+  "version": "no_llm",
+  "timestamp": "2026-06-07T05:55:45-06:00",
+  "neon_search_ready_count": 67384,
+  "typesense_accessible": false,
+  "typesense_doc_count": null,
+  "records_added_to_typesense": 0,
+  "records_removed_from_typesense": 0,
+  "batches_processed": 0,
+  "errors": [
+    {
+      "type": "ts_forbidden",
+      "code": 403,
+      "message": "Forbidden - if you are the admin, please visit your Typesense Cloud dashboard for additional information.",
+      "description": "Typesense Cloud cluster uibn03zvateqwdx2p-1.a1.typesense.net is returning 403 Forbidden for ALL API endpoints including health, search, export, and document operations. CloudFront is blocking requests.",
+      "affected_endpoints": [
+        "https://uibn03zvateqwdx2p-1.a1.typesense.net/health",
+        "https://uibn03zvateqwdx2p-1.a1.typesense.net/collections/photos",
+        "https://uibn03zvateqwdx2p-1.a1.typesense.net/collections/photos/documents/export",
+        "https://uibn03zvateqwdx2p-1.a1.typesense.net/collections/photos/documents/search"
+      ],
+      "api_key_status": "MPphr9zDlLzHRFQHDH4AyQb5hw2ugew7 (admin) - BLOCKED",
+      "search_only_key_status": "Hhg7V2CK3DsS94nZwgEkRzikLnEYiizE - also BLOCKED"
+    }
+  ],
+  "blocking_issue": "Typesense Cloud cluster is inaccessible. All API requests return HTTP 403 Forbidden via CloudFront. Cluster may be paused, suspended, billing lapsed, or API keys invalidated.",
+  "ts_cluster_url": "https://cloud.typesense.cloud",
+  "ts_host": "uibn03zvateqwdx2p-1.a1.typesense.net",
+  "action_required": "1) Log into Typesense Cloud dashboard to check cluster status, billing, and API key validity. 2) Resume cluster if paused. 3) Regenerate API keys if invalidated. 4) Check for IP whitelist restrictions.",
+  "drift_estimate": "CANNOT MEASURE - Typesense unreachable. Neon has 67,384 search_ready photos.",
+  "next_recommended_run": "After Typesense Cloud cluster is restored and API access is confirmed working."
+}

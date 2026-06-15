@@ -1,0 +1,11 @@
+{
+  "run_at": "2026-06-02T02:53:47.463Z",
+  "missing_added": 0,
+  "stale_removed": 0,
+  "errors": [],
+  "status": "completed",
+  "total_failed": 0,
+  "typesense_count": 60498,
+  "neon_eligible": 16276,
+  "final_drift": 44222
+}

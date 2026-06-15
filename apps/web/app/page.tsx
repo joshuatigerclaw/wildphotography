@@ -17,6 +17,7 @@ export const metadata: Metadata = {
   title: 'Wildphotography | Costa Rica Nature Photography',
   description: 'Professional wildlife, bird, and nature photography from Costa Rica. Explore our galleries, purchase prints, or book a photography tour.',
   metadataBase: new URL(SITE_URL),
+  alternates: { canonical: SITE_URL + '/' },
   openGraph: {
     title: 'Wildphotography | Costa Rica Nature Photography',
     description: 'Professional wildlife and nature photography from Costa Rica.',
@@ -35,19 +36,28 @@ const FEATURED_TOURS = [
   { id: 4, title: 'Carara & Pacific Coast Macaws', operator: 'Pacific Wings', location: 'Carara', days: 4, price_usd: 320, is_partner: false },
 ];
 
-export default async function Home() {
-  const [galleries, recentPhotos, randomPhotos, popularPhotos, species, articles] =
-    await Promise.all([
-      getGalleries(),
-      getAllPhotos(8),
-      getRandomPhotos(6),
-      getPopularPhotos(8),
-      getAllSpecies(),
-      getAllArticles(),
-    ]);
+// Sequential + cached fetches to avoid Neon connection pool exhaustion
+// Each fetch is staggered to give the connection pool time to breathe
+async function safeFetch<T>(fn: () => Promise<T>, fallback: T, label: string): Promise<T> {
+  try {
+    return await fn();
+  } catch (e: any) {
+    console.error(`[home] ${label} failed: ${e?.message?.slice(0, 120)}`);
+    return fallback;
+  }
+}
 
-  const featuredSpecies = species.slice(0, 12);
-  const featuredArticles = articles.slice(0, 3);
+export default async function Home() {
+  // Warm up the connection first with the cheapest query
+  const galleries = await safeFetch(getGalleries, [], 'galleries');
+  const allSpecies = await safeFetch(getAllSpecies, [], 'allSpecies');
+  const allArticles = await safeFetch(getAllArticles, [], 'allArticles');
+  const recentPhotos = await safeFetch(() => getAllPhotos(8), [], 'allPhotos');
+  const randomPhotos = await safeFetch(() => getRandomPhotos(6), [], 'randomPhotos');
+  const popularPhotos = await safeFetch(() => getPopularPhotos(8), [], 'popularPhotos');
+
+  const featuredSpecies = allSpecies.slice(0, 12);
+  const featuredArticles = allArticles.slice(0, 3);
   const mosaicPhotos = popularPhotos.slice(0, 6);
 
   const today = new Date();
@@ -58,8 +68,26 @@ export default async function Home() {
   });
   const issueNum = String(today.getDate()).padStart(2, '0');
 
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'WildPhotography',
+    url: SITE_URL + '/',
+    description: 'Professional wildlife and nature photography from Costa Rica. Explore galleries, purchase prints, or book a photography tour by Joshua ten Brink.',
+    image: SITE_URL + '/og-image.jpg',
+    author: { '@type': 'Person', name: 'Joshua ten Brink', url: SITE_URL },
+    publisher: { '@type': 'Person', name: 'Joshua ten Brink', url: SITE_URL },
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: { '@type': 'EntryPoint', urlTemplate: SITE_URL + '/search?q={search_term_string}' },
+      'query-input': 'required name=search_term_string',
+    },
+  };
+
   return (
-    <div>
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <div>
       {/* Notice bar */}
       <div className="noticebar">
         Limited 2026 Quetzal Print Edition — <Link href="/prints">Shop the release →</Link>
@@ -76,7 +104,7 @@ export default async function Home() {
             </div>
             <div className="hero-meta">
               <div>ISSUE {issueNum} · {dateStr.toUpperCase()}</div>
-              <div>{species.length} SPECIES · {galleries.length} REGIONS</div>
+              <div>{allSpecies.length} SPECIES · {galleries.length} REGIONS</div>
               <div style={{ color: 'var(--accent)' }}>— PHOTOGRAPH 284 HOURS THIS YEAR</div>
             </div>
           </div>
@@ -196,7 +224,7 @@ export default async function Home() {
             </div>
           </div>
           <div className="sec-right">
-            {species.length} total species
+            {allSpecies.length} total species
             <Link href="/species">Open the full index →</Link>
           </div>
         </div>
@@ -344,5 +372,6 @@ export default async function Home() {
         </div>
       )}
     </div>
+    </>
   );
 }

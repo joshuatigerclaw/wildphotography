@@ -1,0 +1,792 @@
+{
+  "run_at": "2026-04-19T16:06:11.011928+00:00",
+  "total_rpr_photos": 21006,
+  "total_derivatives_complete": 20555,
+  "sample_size": 300,
+  "keys_checked": 1427,
+  "keys_present": 1381,
+  "keys_missing": 46,
+  "photo_results": {
+    "ok": 254,
+    "flag_mismatch": 39,
+    "flag_missing": 7
+  },
+  "mismatches": [
+    {
+      "photo_id": 27156,
+      "slug": "photo-125-DJI-0050",
+      "status": "flag_mismatch",
+      "flag_problem": "DB says derivatives_complete but objects missing",
+      "derivatives_complete_db": true,
+      "keys_present": 0,
+      "keys_missing": 1,
+      "keys_checked": 1,
+      "missing_derivs": [
+        {
+          "field": "preview_url",
+          "key": "derivatives/galleries/costa-rica-gallery-peninsula-papagayo/print_DJI_0050.jpg",
+          "url": "derivatives/galleries/costa-rica-gallery-peninsula-papagayo/print_DJI_0050.jpg"
+        }
+      ]
+    },
+    {
+      "photo_id": 21228,
+      "slug": "2020-11-26-15-02-31-21228",
+      "status": "flag_mismatch",
+      "flag_problem": "DB says derivatives_complete but objects missing",
+      "derivatives_complete_db": true,
+      "keys_present": 4,
+      "keys_missing": 1,
+      "keys_checked": 5,
+      "missing_derivs": [
+        {
+          "field": "preview_url",
+          "key": "derivatives/previews/21228-preview.jpg",
+          "url": "derivatives/previews/21228-preview.jpg"
+        }
+      ]
+    },
+    {
+      "photo_id": 33778,
+      "slug": "20070520-2268-a12dc261",
+      "status": "flag_mismatch",
+      "flag_problem": "DB says derivatives_complete but objects missing",
+      "derivatives_complete_db": true,
+      "keys_present": 4,
+      "keys_missing": 1,
+      "keys_checked": 5,
+      "missing_derivs": [
+        {
+          "field": "preview_url",
+          "key": "derivatives/photos/best-of-costa-rica/20070520-2268-a12dc261/preview.jpg",
+          "url": "derivatives/photos/best-of-costa-rica/20070520-2268-a12dc261/preview.jpg"
+        }
+      ]
+    },
+    {
+      "photo_id": 26898,
+      "slug": "dji-0999-efcc80d3",
+      "status": "flag_mismatch",
+      "flag_problem": "DB says derivatives_complete but objects missing",
+      "derivatives_complete_db": true,
+      "keys_present": 4,
+      "keys_missing": 1,
+      "keys_checked": 5,
+      "missing_derivs": [
+        {
+          "field": "preview_url",
+          "key": "derivatives/derivatives/dji-0999-efcc80d3/dji-0999-efcc80d3_preview.jpg",
+          "url": "derivatives/derivatives/dji-0999-efcc80d3/dji-0999-efcc80d3_preview.jpg"
+        }
+      ]
+    },
+    {
+      "photo_id": 38344,
+      "slug": "img-4698-9b83d9a25362d880bf6783ed00de8f0789dc2a29ba8ce76b78d9acd752c44772",
+      "status": "flag_missing",
+      "flag_problem": "All derivatives exist but DB flag is False",
+      "derivatives_complete_db": false,
+      "keys_present": 4,
+      "keys_missing": 0,
+      "keys_checked": 4,
+      "missing_derivs": []
+    },
+    {
+      "photo_id": 21465,
+      "slug": "dji-0365-21465",
+      "status": "flag_mismatch",
+      "flag_problem": "DB says derivatives_complete but objects missing",
+      "derivatives_complete_db": true,
+      "keys_present": 4,
+      "keys_missing": 1,
+      "keys_checked": 5,
+      "missing_derivs": [
+        {
+          "field": "preview_url",
+          "key": "derivatives/previews/21465-preview.jpg",
+          "url": "derivatives/previews/21465-preview.jpg"
+        }
+      ]
+    },
+    {
+      "photo_id": 35488,
+      "slug": "rio-savagre-costa-rica-20241019-111032-ed0d28b6",
+      "status": "flag_mismatch",
+      "flag_problem": "DB says derivatives_complete but objects missing",
+      "derivatives_complete_db": true,
+      "keys_present": 4,
+      "keys_missing": 1,
+      "keys_checked": 5,
+      "missing_derivs": [
+        {
+          "field": "preview_url",
+          "key": "derivatives/photos/rio-savagre-costa-rica/rio-savagre-costa-rica-20241019-111032-ed0d28b6/preview.jpg",
+          "url": "derivatives/photos/rio-savagre-costa-rica/rio-savagre-costa-rica-20241019-111032-ed0d28b6/preview.jpg"
+        }
+      ]
+    },
+    {
+      "photo_id": 15142,
+      "slug": "img_8682",
+      "status": "flag_missing",
+      "flag_problem": "All derivatives exist but DB flag is False",
+      "derivatives_complete_db": false,
+      "keys_present": 5,
+      "keys_missing": 0,
+      "keys_checked": 5,
+      "missing_derivs": []
+    },
+    {
+      "photo_id": 21360,
+      "slug": "dji-0018-21360",
+      "status": "flag_mismatch",
+      "flag_problem": "DB says derivatives_complete but objects missing",
+      "derivatives_complete_db": true,
+      "keys_present": 4,
+      "keys_missing": 1,
+      "keys_checked": 5,
+      "missing_derivs": [
+        {
+          "field": "preview_url",
+          "key": "derivatives/previews/21360-preview.jpg",
+          "url": "derivatives/previews/21360-preview.jpg"
+        }
+      ]
+    },
+    {
+      "photo_id": 6607,
+      "slug": "img-0676-costa-rica-3225",
+      "status": "flag_mismatch",
+      "flag_problem": "DB says derivatives_complete but objects missing",
+      "derivatives_complete_db": true,
+      "keys_present": 4,
+      "keys_missing": 1,
+      "keys_checked": 5,
+      "missing_derivs": [
+        {
+          "field": "preview_url",
+          "key": "derivatives/preview/img-0676-costa-rica-3225-preview.jpg",
+          "url": "derivatives/preview/img-0676-costa-rica-3225-preview.jpg"
+        }
+      ]
+    },
+    {
+      "photo_id": 35191,
+      "slug": "peninsula-papagayo-dji-0238-c7948d5d",
+      "status": "flag_mismatch",
+      "flag_problem": "DB says derivatives_complete but objects missing",
+      "derivatives_complete_db": true,
+      "keys_present": 4,
+      "keys_missing": 1,
+      "keys_checked": 5,
+      "missing_derivs": [
+        {
+          "field": "preview_url",
+          "key": "derivatives/photos/peninsula-papagayo/peninsula-papagayo-dji-0238-c7948d5d/preview.jpg",
+          "url": "derivatives/photos/peninsula-papagayo/peninsula-papagayo-dji-0238-c7948d5d/preview.jpg"
+        }
+      ]
+    },
+    {
+      "photo_id": 36556,
+      "slug": "img-3595-b2f4ccea",
+      "status": "flag_mismatch",
+      "flag_problem": "DB says derivatives_complete but objects missing",
+      "derivatives_complete_db": true,
+      "keys_present": 4,
+      "keys_missing": 1,
+      "keys_checked": 5,
+      "missing_derivs": [
+        {
+          "field": "small_url",
+          "key": "derivatives/birds-macaws-lapas/b2f4ccea9e5e006ce60e6b9ea23d878b6a226f3a6445f42bb26d5d0dccaffc6a-small.jpg",
+          "url": "derivatives/birds-macaws-lapas/b2f4ccea9e5e006ce60e6b9ea23d878b6a226f3a6445f42bb26d5d0dccaffc6a-small.jpg"
+        }
+      ]
+    },
+    {
+      "photo_id": 27033,
+      "slug": "photo-125-DJI-0861",
+      "status": "flag_mismatch",
+      "flag_problem": "DB says derivatives_complete but objects missing",
+      "derivatives_complete_db": true,
+      "keys_present": 0,
+      "keys_missing": 1,
+      "keys_checked": 1,
+      "missing_derivs": [
+        {
+          "field": "preview_url",
+          "key": "derivatives/galleries/costa-rica-gallery-peninsula-papagayo/print_DJI_0861.jpg",
+          "url": "derivatives/galleries/costa-rica-gallery-peninsula-papagayo/print_DJI_0861.jpg"
+        }
+      ]
+    },
+    {
+      "photo_id": 35460,
+      "slug": "rio-savagre-costa-rica-cl0a3013-4f61c9bc",
+      "status": "flag_mismatch",
+      "flag_problem": "DB says derivatives_complete but objects missing",
+      "derivatives_complete_db": true,
+      "keys_present": 4,
+      "keys_missing": 1,
+      "keys_checked": 5,
+      "missing_derivs": [
+        {
+          "field": "preview_url",
+          "key": "derivatives/photos/rio-savagre-costa-rica/rio-savagre-costa-rica-cl0a3013-4f61c9bc/preview.jpg",
+          "url": "derivatives/photos/rio-savagre-costa-rica/rio-savagre-costa-rica-cl0a3013-4f61c9bc/preview.jpg"
+        }
+      ]
+    },
+    {
+      "photo_id": 15149,
+      "slug": "img_3436",
+      "status": "flag_missing",
+      "flag_problem": "All derivatives exist but DB flag is False",
+      "derivatives_complete_db": false,
+      "keys_present": 5,
+      "keys_missing": 0,
+      "keys_checked": 5,
+      "missing_derivs": []
+    },
+    {
+      "photo_id": 27708,
+      "slug": "photo-127-DJI-0262",
+      "status": "flag_mismatch",
+      "flag_problem": "DB says derivatives_complete but objects missing",
+      "derivatives_complete_db": true,
+      "keys_present": 0,
+      "keys_missing": 1,
+      "keys_checked": 1,
+      "missing_derivs": [
+        {
+          "field": "preview_url",
+          "key": "derivatives/galleries/costa-rica-gallery-montezuma-costa-rica/small_DJI_0262.jpg",
+          "url": "derivatives/galleries/costa-rica-gallery-montezuma-costa-rica/small_DJI_0262.jpg"
+        }
+      ]
+    },
+    {
+      "photo_id": 27085,
+      "slug": "photo-125-DJI-0932",
+      "status": "flag_mismatch",
+      "flag_problem": "DB says derivatives_complete but objects missing",
+      "derivatives_complete_db": true,
+      "keys_present": 0,
+      "keys_missing": 1,
+      "keys_checked": 1,
+      "missing_derivs": [
+        {
+          "field": "preview_url",
+          "key": "derivatives/galleries/costa-rica-gallery-peninsula-papagayo/print_DJI_0932.jpg",
+          "url": "derivatives/galleries/costa-rica-gallery-peninsula-papagayo/print_DJI_0932.jpg"
+        }
+      ]
+    },
+    {
+      "photo_id": 21538,
+      "slug": "dji-0766-21538",
+      "status": "flag_mismatch",
+      "flag_problem": "DB says derivatives_complete but objects missing",
+      "derivatives_complete_db": true,
+      "keys_present": 4,
+      "keys_missing": 1,
+      "keys_checked": 5,
+      "missing_derivs": [
+        {
+          "field": "preview_url",
+          "key": "derivatives/previews/21538-preview.jpg",
+          "url": "derivatives/previews/21538-preview.jpg"
+        }
+      ]
+    },
+    {
+      "photo_id": 35638,
+      "slug": "santateresa-dji-0692-d61082ec",
+      "status": "flag_mismatch",
+      "flag_problem": "DB says derivatives_complete but objects missing",
+      "derivatives_complete_db": true,
+      "keys_present": 0,
+      "keys_missing": 5,
+      "keys_checked": 5,
+      "missing_derivs": [
+        {
+          "field": "thumb_url",
+          "key": "photos/thumb/sa/santateresa-dji-0692-d61082ec.jpg",
+          "url": "photos/thumb/sa/santateresa-dji-0692-d61082ec.jpg"
+        },
+        {
+          "field": "small_url",
+          "key": "photos/small/sa/santateresa-dji-0692-d61082ec.jpg",
+          "url": "photos/small/sa/santateresa-dji-0692-d61082ec.jpg"
+        },
+        {
+          "field": "medium_url",
+          "key": "photos/large/sa/santateresa-dji-0692-d61082ec.jpg",
+          "url": "photos/large/sa/santateresa-dji-0692-d61082ec.jpg"
+        },
+        {
+          "field": "large_url",
+          "key": "photos/large/sa/santateresa-dji-0692-d61082ec.jpg",
+          "url": "photos/large/sa/santateresa-dji-0692-d61082ec.jpg"
+        },
+        {
+          "field": "preview_url",
+          "key": "derivatives/d61082ec/santateresa-dji-0692-d61082ec_preview.jpg",
+          "url": "derivatives/d61082ec/santateresa-dji-0692-d61082ec_preview.jpg"
+        }
+      ]
+    },
+    {
+      "photo_id": 34660,
+      "slug": "pano00013-83dbdb73",
+      "status": "flag_mismatch",
+      "flag_problem": "DB says derivatives_complete but objects missing",
+      "derivatives_complete_db": true,
+      "keys_present": 4,
+      "keys_missing": 1,
+      "keys_checked": 5,
+      "missing_derivs": [
+        {
+          "field": "preview_url",
+          "key": "derivatives/photos/rio-savagre-costa-rica/pano00013-83dbdb73/preview.jpg",
+          "url": "derivatives/photos/rio-savagre-costa-rica/pano00013-83dbdb73/preview.jpg"
+        }
+      ]
+    },
+    {
+      "photo_id": 36561,
+      "slug": "img-8486-cf63cab6",
+      "status": "flag_mismatch",
+      "flag_problem": "DB says derivatives_complete but objects missing",
+      "derivatives_complete_db": true,
+      "keys_present": 4,
+      "keys_missing": 1,
+      "keys_checked": 5,
+      "missing_derivs": [
+        {
+          "field": "small_url",
+          "key": "derivatives/birds-macaws-lapas/cf63cab6b9cb6fb00ed8830f32a04fe0ce1f1f840a5db7d19db5746a02f78fe9-small.jpg",
+          "url": "derivatives/birds-macaws-lapas/cf63cab6b9cb6fb00ed8830f32a04fe0ce1f1f840a5db7d19db5746a02f78fe9-small.jpg"
+        }
+      ]
+    },
+    {
+      "photo_id": 25743,
+      "slug": "dji-0149-b55ebc61",
+      "status": "flag_mismatch",
+      "flag_problem": "DB says derivatives_complete but objects missing",
+      "derivatives_complete_db": true,
+      "keys_present": 4,
+      "keys_missing": 1,
+      "keys_checked": 5,
+      "missing_derivs": [
+        {
+          "field": "preview_url",
+          "key": "derivatives/preview/dji-0149-b55ebc61-preview.jpg",
+          "url": "derivatives/preview/dji-0149-b55ebc61-preview.jpg"
+        }
+      ]
+    },
+    {
+      "photo_id": 21509,
+      "slug": "dji-0598-001-21509",
+      "status": "flag_mismatch",
+      "flag_problem": "DB says derivatives_complete but objects missing",
+      "derivatives_complete_db": true,
+      "keys_present": 4,
+      "keys_missing": 1,
+      "keys_checked": 5,
+      "missing_derivs": [
+        {
+          "field": "preview_url",
+          "key": "derivatives/previews/21509-preview.jpg",
+          "url": "derivatives/previews/21509-preview.jpg"
+        }
+      ]
+    },
+    {
+      "photo_id": 27416,
+      "slug": "photo-54-DJI-0753",
+      "status": "flag_mismatch",
+      "flag_problem": "DB says derivatives_complete but objects missing",
+      "derivatives_complete_db": true,
+      "keys_present": 0,
+      "keys_missing": 1,
+      "keys_checked": 1,
+      "missing_derivs": [
+        {
+          "field": "preview_url",
+          "key": "derivatives/galleries/landscape/small_DJI_0753.jpg",
+          "url": "derivatives/galleries/landscape/small_DJI_0753.jpg"
+        }
+      ]
+    },
+    {
+      "photo_id": 336,
+      "slug": "dji-0521-mp4-55H7t2",
+      "status": "flag_missing",
+      "flag_problem": "All derivatives exist but DB flag is False",
+      "derivatives_complete_db": false,
+      "keys_present": 5,
+      "keys_missing": 0,
+      "keys_checked": 5,
+      "missing_derivs": []
+    },
+    {
+      "photo_id": 21595,
+      "slug": "img-1001-21595",
+      "status": "flag_mismatch",
+      "flag_problem": "DB says derivatives_complete but objects missing",
+      "derivatives_complete_db": true,
+      "keys_present": 4,
+      "keys_missing": 1,
+      "keys_checked": 5,
+      "missing_derivs": [
+        {
+          "field": "preview_url",
+          "key": "derivatives/previews/21595-preview.jpg",
+          "url": "derivatives/previews/21595-preview.jpg"
+        }
+      ]
+    },
+    {
+      "photo_id": 347,
+      "slug": "cl0a8638-VLLScb",
+      "status": "flag_missing",
+      "flag_problem": "All derivatives exist but DB flag is False",
+      "derivatives_complete_db": false,
+      "keys_present": 5,
+      "keys_missing": 0,
+      "keys_checked": 5,
+      "missing_derivs": []
+    },
+    {
+      "photo_id": 35353,
+      "slug": "montezuma-costa-rica-dji-0033-6da86da1",
+      "status": "flag_mismatch",
+      "flag_problem": "DB says derivatives_complete but objects missing",
+      "derivatives_complete_db": true,
+      "keys_present": 4,
+      "keys_missing": 1,
+      "keys_checked": 5,
+      "missing_derivs": [
+        {
+          "field": "preview_url",
+          "key": "derivatives/photos/montezuma-costa-rica/montezuma-costa-rica-dji-0033-6da86da1/preview.jpg",
+          "url": "derivatives/photos/montezuma-costa-rica/montezuma-costa-rica-dji-0033-6da86da1/preview.jpg"
+        }
+      ]
+    },
+    {
+      "photo_id": 34867,
+      "slug": "dji-0851-52ca6a35",
+      "status": "flag_mismatch",
+      "flag_problem": "DB says derivatives_complete but objects missing",
+      "derivatives_complete_db": true,
+      "keys_present": 4,
+      "keys_missing": 1,
+      "keys_checked": 5,
+      "missing_derivs": [
+        {
+          "field": "preview_url",
+          "key": "derivatives/photos/peninsula-de-osa/dji-0851-52ca6a35/preview.jpg",
+          "url": "derivatives/photos/peninsula-de-osa/dji-0851-52ca6a35/preview.jpg"
+        }
+      ]
+    },
+    {
+      "photo_id": 27716,
+      "slug": "photo-127-DJI-0996",
+      "status": "flag_mismatch",
+      "flag_problem": "DB says derivatives_complete but objects missing",
+      "derivatives_complete_db": true,
+      "keys_present": 0,
+      "keys_missing": 1,
+      "keys_checked": 1,
+      "missing_derivs": [
+        {
+          "field": "preview_url",
+          "key": "derivatives/galleries/costa-rica-gallery-montezuma-costa-rica/small_DJI_0996.jpg",
+          "url": "derivatives/galleries/costa-rica-gallery-montezuma-costa-rica/small_DJI_0996.jpg"
+        }
+      ]
+    },
+    {
+      "photo_id": 21564,
+      "slug": "dji-0916-21564",
+      "status": "flag_mismatch",
+      "flag_problem": "DB says derivatives_complete but objects missing",
+      "derivatives_complete_db": true,
+      "keys_present": 4,
+      "keys_missing": 1,
+      "keys_checked": 5,
+      "missing_derivs": [
+        {
+          "field": "preview_url",
+          "key": "derivatives/previews/21564-preview.jpg",
+          "url": "derivatives/previews/21564-preview.jpg"
+        }
+      ]
+    },
+    {
+      "photo_id": 34879,
+      "slug": "dji-0866-54f322b4",
+      "status": "flag_mismatch",
+      "flag_problem": "DB says derivatives_complete but objects missing",
+      "derivatives_complete_db": true,
+      "keys_present": 4,
+      "keys_missing": 1,
+      "keys_checked": 5,
+      "missing_derivs": [
+        {
+          "field": "preview_url",
+          "key": "derivatives/photos/peninsula-de-osa/dji-0866-54f322b4/preview.jpg",
+          "url": "derivatives/photos/peninsula-de-osa/dji-0866-54f322b4/preview.jpg"
+        }
+      ]
+    },
+    {
+      "photo_id": 35298,
+      "slug": "montezuma-costa-rica-dji-0195-0bf1173c",
+      "status": "flag_mismatch",
+      "flag_problem": "DB says derivatives_complete but objects missing",
+      "derivatives_complete_db": true,
+      "keys_present": 4,
+      "keys_missing": 1,
+      "keys_checked": 5,
+      "missing_derivs": [
+        {
+          "field": "preview_url",
+          "key": "derivatives/photos/montezuma-costa-rica/montezuma-costa-rica-dji-0195-0bf1173c/preview.jpg",
+          "url": "derivatives/photos/montezuma-costa-rica/montezuma-costa-rica-dji-0195-0bf1173c/preview.jpg"
+        }
+      ]
+    },
+    {
+      "photo_id": 37081,
+      "slug": "dji-0750-1ea5563c",
+      "status": "flag_mismatch",
+      "flag_problem": "DB says derivatives_complete but objects missing",
+      "derivatives_complete_db": true,
+      "keys_present": 1,
+      "keys_missing": 4,
+      "keys_checked": 5,
+      "missing_derivs": [
+        {
+          "field": "small_url",
+          "key": "derivatives/photos/isla-tortuga/37081/small.jpg",
+          "url": "derivatives/photos/isla-tortuga/37081/small.jpg"
+        },
+        {
+          "field": "medium_url",
+          "key": "derivatives/photos/isla-tortuga/37081/medium.jpg",
+          "url": "derivatives/photos/isla-tortuga/37081/medium.jpg"
+        },
+        {
+          "field": "large_url",
+          "key": "derivatives/photos/isla-tortuga/37081/large.jpg",
+          "url": "derivatives/photos/isla-tortuga/37081/large.jpg"
+        },
+        {
+          "field": "preview_url",
+          "key": "derivatives/photos/isla-tortuga/37081/medium.jpg",
+          "url": "derivatives/photos/isla-tortuga/37081/medium.jpg"
+        }
+      ]
+    },
+    {
+      "photo_id": 25422,
+      "slug": "dji0448",
+      "status": "flag_mismatch",
+      "flag_problem": "DB says derivatives_complete but objects missing",
+      "derivatives_complete_db": true,
+      "keys_present": 4,
+      "keys_missing": 1,
+      "keys_checked": 5,
+      "missing_derivs": [
+        {
+          "field": "preview_url",
+          "key": "derivatives/preview/dji0448-preview.jpg",
+          "url": "derivatives/preview/dji0448-preview.jpg"
+        }
+      ]
+    },
+    {
+      "photo_id": 35300,
+      "slug": "montezuma-costa-rica-dji-0201-c7cdd0f2",
+      "status": "flag_mismatch",
+      "flag_problem": "DB says derivatives_complete but objects missing",
+      "derivatives_complete_db": true,
+      "keys_present": 4,
+      "keys_missing": 1,
+      "keys_checked": 5,
+      "missing_derivs": [
+        {
+          "field": "preview_url",
+          "key": "derivatives/photos/montezuma-costa-rica/montezuma-costa-rica-dji-0201-c7cdd0f2/preview.jpg",
+          "url": "derivatives/photos/montezuma-costa-rica/montezuma-costa-rica-dji-0201-c7cdd0f2/preview.jpg"
+        }
+      ]
+    },
+    {
+      "photo_id": 351,
+      "slug": "2021-04-11-08-32-55-XJC7q9",
+      "status": "flag_missing",
+      "flag_problem": "All derivatives exist but DB flag is False",
+      "derivatives_complete_db": false,
+      "keys_present": 5,
+      "keys_missing": 0,
+      "keys_checked": 5,
+      "missing_derivs": []
+    },
+    {
+      "photo_id": 21660,
+      "slug": "p4162121-21660",
+      "status": "flag_mismatch",
+      "flag_problem": "DB says derivatives_complete but objects missing",
+      "derivatives_complete_db": true,
+      "keys_present": 4,
+      "keys_missing": 1,
+      "keys_checked": 5,
+      "missing_derivs": [
+        {
+          "field": "preview_url",
+          "key": "derivatives/previews/21660-preview.jpg",
+          "url": "derivatives/previews/21660-preview.jpg"
+        }
+      ]
+    },
+    {
+      "photo_id": 528,
+      "slug": "cl0a3727-5cKzPb",
+      "status": "flag_missing",
+      "flag_problem": "All derivatives exist but DB flag is False",
+      "derivatives_complete_db": false,
+      "keys_present": 5,
+      "keys_missing": 0,
+      "keys_checked": 5,
+      "missing_derivs": []
+    },
+    {
+      "photo_id": 33810,
+      "slug": "dji-0597-92cc3734",
+      "status": "flag_mismatch",
+      "flag_problem": "DB says derivatives_complete but objects missing",
+      "derivatives_complete_db": true,
+      "keys_present": 4,
+      "keys_missing": 1,
+      "keys_checked": 5,
+      "missing_derivs": [
+        {
+          "field": "preview_url",
+          "key": "derivatives/photos/best-of-costa-rica/dji-0597-92cc3734/preview.jpg",
+          "url": "derivatives/photos/best-of-costa-rica/dji-0597-92cc3734/preview.jpg"
+        }
+      ]
+    },
+    {
+      "photo_id": 27237,
+      "slug": "photo-127-2021-03-28 11-37-41",
+      "status": "flag_mismatch",
+      "flag_problem": "DB says derivatives_complete but objects missing",
+      "derivatives_complete_db": true,
+      "keys_present": 0,
+      "keys_missing": 1,
+      "keys_checked": 1,
+      "missing_derivs": [
+        {
+          "field": "preview_url",
+          "key": "derivatives/galleries/costa-rica-gallery-montezuma-costa-rica/print_2021-03-28%2011.37.41.jpg",
+          "url": "derivatives/galleries/costa-rica-gallery-montezuma-costa-rica/print_2021-03-28%2011.37.41.jpg"
+        }
+      ]
+    },
+    {
+      "photo_id": 34881,
+      "slug": "dji-0870-21b0755f",
+      "status": "flag_mismatch",
+      "flag_problem": "DB says derivatives_complete but objects missing",
+      "derivatives_complete_db": true,
+      "keys_present": 4,
+      "keys_missing": 1,
+      "keys_checked": 5,
+      "missing_derivs": [
+        {
+          "field": "preview_url",
+          "key": "derivatives/photos/peninsula-de-osa/dji-0870-21b0755f/preview.jpg",
+          "url": "derivatives/photos/peninsula-de-osa/dji-0870-21b0755f/preview.jpg"
+        }
+      ]
+    },
+    {
+      "photo_id": 27176,
+      "slug": "photo-125-DJI-0180",
+      "status": "flag_mismatch",
+      "flag_problem": "DB says derivatives_complete but objects missing",
+      "derivatives_complete_db": true,
+      "keys_present": 0,
+      "keys_missing": 1,
+      "keys_checked": 1,
+      "missing_derivs": [
+        {
+          "field": "preview_url",
+          "key": "derivatives/galleries/costa-rica-gallery-peninsula-papagayo/print_DJI_0180.jpg",
+          "url": "derivatives/galleries/costa-rica-gallery-peninsula-papagayo/print_DJI_0180.jpg"
+        }
+      ]
+    },
+    {
+      "photo_id": 27706,
+      "slug": "photo-127-DJI-0256",
+      "status": "flag_mismatch",
+      "flag_problem": "DB says derivatives_complete but objects missing",
+      "derivatives_complete_db": true,
+      "keys_present": 0,
+      "keys_missing": 1,
+      "keys_checked": 1,
+      "missing_derivs": [
+        {
+          "field": "preview_url",
+          "key": "derivatives/galleries/costa-rica-gallery-montezuma-costa-rica/small_DJI_0256.jpg",
+          "url": "derivatives/galleries/costa-rica-gallery-montezuma-costa-rica/small_DJI_0256.jpg"
+        }
+      ]
+    },
+    {
+      "photo_id": 34769,
+      "slug": "dji-0683-a6e02075",
+      "status": "flag_mismatch",
+      "flag_problem": "DB says derivatives_complete but objects missing",
+      "derivatives_complete_db": true,
+      "keys_present": 4,
+      "keys_missing": 1,
+      "keys_checked": 5,
+      "missing_derivs": [
+        {
+          "field": "preview_url",
+          "key": "derivatives/photos/peninsula-de-osa/dji-0683-a6e02075/preview.jpg",
+          "url": "derivatives/photos/peninsula-de-osa/dji-0683-a6e02075/preview.jpg"
+        }
+      ]
+    },
+    {
+      "photo_id": 21207,
+      "slug": "2018-08-03-17-26-23-21207",
+      "status": "flag_mismatch",
+      "flag_problem": "DB says derivatives_complete but objects missing",
+      "derivatives_complete_db": true,
+      "keys_present": 4,
+      "keys_missing": 1,
+      "keys_checked": 5,
+      "missing_derivs": [
+        {
+          "field": "preview_url",
+          "key": "derivatives/previews/21207-preview.jpg",
+          "url": "derivatives/previews/21207-preview.jpg"
+        }
+      ]
+    }
+  ],
+  "status": "success"
+}

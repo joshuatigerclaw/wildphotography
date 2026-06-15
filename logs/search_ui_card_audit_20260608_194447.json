@@ -1,0 +1,624 @@
+{
+  "run_at": "2026-06-09T01:44:47.527342+00:00",
+  "total_search_ready_photos": 67827,
+  "sample_size": 300,
+  "total_url_checks": 600,
+  "summary": {
+    "photos_ok": 267,
+    "photos_broken": 33,
+    "photos_missing_field": 0,
+    "ok_rate_pct": 89.0
+  },
+  "by_url_type": {
+    "og_image_url": {
+      "total": 300,
+      "accessible": 268,
+      "broken": 32,
+      "empty": 0
+    },
+    "thumb_url": {
+      "total": 300,
+      "accessible": 277,
+      "broken": 23,
+      "empty": 0
+    }
+  },
+  "broken_photos": {
+    "91563": {
+      "slug": "best-of-costa-rica-fa99a4194112",
+      "title": "Best of Costa Rica \u2014 Fa99A4194112",
+      "gallery_slug": "best-of-costa-rica",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        },
+        {
+          "type": "og_image_url",
+          "accessible": true,
+          "error": null
+        }
+      ]
+    },
+    "67464": {
+      "slug": "dji-0417-50b4a366",
+      "title": "Tambor, Nicoya Peninsula \u2014 DJI_0417 #67464 | WildPhotography",
+      "gallery_slug": "costa-rica-gallery-tambor-nicoya-peninsula-costa-rica",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "6532": {
+      "slug": "dji-0586-costa-rica-3150",
+      "title": "landscape \u2014 Costa Rica \u2014 #6532 | WildPhotography",
+      "gallery_slug": "waterfalls-in-costa-rica",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "77241": {
+      "slug": "cl0a7928",
+      "title": "Landscape in Costa Rica",
+      "gallery_slug": "juan-santamaria-san-jose-airport-sjo-archived",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "54954": {
+      "slug": "south-america-peru-6160ea24",
+      "title": "Wildlife photography: Landscape in Peru",
+      "gallery_slug": "south-america-peru",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "80350": {
+      "slug": "best-of-costa-rica--img_9778-88633271",
+      "title": "Wild Costa Rica 9778 \u2014 Costa Rica",
+      "gallery_slug": "best-of-costa-rica",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "91757": {
+      "slug": "playas-del-coco-dji-0157-f7b6dd",
+      "title": "Playas del Coco \u2014 Playas \u2014 Del \u2014 Coco \u2014 0157",
+      "gallery_slug": "playas-del-coco",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "77634": {
+      "slug": "cl0a7198",
+      "title": "Landscape in Carara National Park",
+      "gallery_slug": "alajuela",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "67390": {
+      "slug": "dji-0358-d058cc0f",
+      "title": "Tambor, Nicoya Peninsula \u2014 DJI_0358 #67390 | WildPhotography",
+      "gallery_slug": "costa-rica-gallery-tambor-nicoya-peninsula-costa-rica",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        },
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        }
+      ]
+    },
+    "81997": {
+      "slug": "2022-06-29-14.55.08",
+      "title": "Wildlife photography: landscape in Peru",
+      "gallery_slug": "south-america-peru",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": false,
+          "error": "InvalidURL"
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "InvalidURL"
+        }
+      ]
+    },
+    "80462": {
+      "slug": "2023-12-27-15.08.41",
+      "title": "Landscape in Costa Rica",
+      "gallery_slug": "rivers",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "49511": {
+      "slug": "costa-rica-gallery-la-sabana-estadio-nacional-costa-rica-san-jose-dji-0795",
+      "title": "Aerial View at Costa Rica, Costa Rica - 0795",
+      "gallery_slug": "costa-rica-gallery-la-sabana-estadio-nacional-costa-rica-san-jose",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "87848": {
+      "slug": "img-a024d2e6",
+      "title": "Wildlife Photography from Costa Rica",
+      "gallery_slug": "asia-china-shanghai",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        },
+        {
+          "type": "thumb_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "42687": {
+      "slug": "playa-real-roble-guanacaste-costa-rica-dji_0636",
+      "title": "Nature \u2014 Playa Real Roble, Guanacaste \u2014 DJI_0636 | WildPhotography",
+      "gallery_slug": "playa-real-roble-guanacaste-costa-rica",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "66772": {
+      "slug": "2025-01-04-12-06-32-9b80a947",
+      "title": "Tambor, Nicoya Peninsula \u2014 2025-01-04 12.06.32 #66772 | WildPhotography",
+      "gallery_slug": "costa-rica-gallery-tambor-nicoya-peninsula-costa-rica",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        },
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        }
+      ]
+    },
+    "49105": {
+      "slug": "costa-rica-gallery-jaco-beach-dji-0981",
+      "title": "Jaco Beach Aerial Sunset Beach Panorama",
+      "gallery_slug": "costa-rica-gallery-jaco-beach",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "46348": {
+      "slug": "costa-rica-gallery-jaco-beach-dji_0035",
+      "title": "Jac\u00f3 Beach Aerial View - BEACH-26",
+      "gallery_slug": "costa-rica-gallery-jaco-beach",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "64767": {
+      "slug": "dji-0352-5dad2932bae97a05",
+      "title": "Landscape in Punta Leona",
+      "gallery_slug": "punta-leona",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "67155": {
+      "slug": "dji-0183-2-d592c54e",
+      "title": "Tambor, Nicoya Peninsula \u2014 DJI_0183-2 #67155 | WildPhotography",
+      "gallery_slug": "costa-rica-gallery-tambor-nicoya-peninsula-costa-rica",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "49831": {
+      "slug": "wildlife-cl0a5249",
+      "title": "Costa Rica Wildlife - Tapir in Undergrowth",
+      "gallery_slug": "wildlife",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "77213": {
+      "slug": "cl0a5767",
+      "title": "Landscape in Costa Rica",
+      "gallery_slug": "juan-santamaria-san-jose-airport-sjo-archived",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        },
+        {
+          "type": "thumb_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "88115": {
+      "slug": "img-a5f9b2d6",
+      "title": "Dji 0846",
+      "gallery_slug": "potrero-beach-guanacaste",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_400"
+        },
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        }
+      ]
+    },
+    "54966": {
+      "slug": "south-america-peru-53b498fc",
+      "title": "Wildlife photography: Landscape in Peru",
+      "gallery_slug": "south-america-peru",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        },
+        {
+          "type": "thumb_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "77177": {
+      "slug": "20231014-080041",
+      "title": "Landscape in Costa Rica",
+      "gallery_slug": "juan-santamaria-san-jose-airport-sjo-archived",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        },
+        {
+          "type": "thumb_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "49432": {
+      "slug": "costa-rica-gallery-tambor-nicoya-peninsula-costa-rica-dji-0198",
+      "title": "Aerial View at Costa Rica, Costa Rica - 0198",
+      "gallery_slug": "costa-rica-gallery-tambor-nicoya-peninsula-costa-rica",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "63021": {
+      "slug": "dji_0405-b4d6dd03",
+      "title": "Puntarenas-Costa-Rica Costa Rica Aerial Photography",
+      "gallery_slug": "costa-rica-gallery-puntarenas-costa-rica",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        },
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        }
+      ]
+    },
+    "37093": {
+      "slug": "dji-0767-02417f9d",
+      "title": "Aerial Perspective of Isla Tortuga, Costa Rica",
+      "gallery_slug": "playas-del-coco",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "55086": {
+      "slug": "south-america-peru-d9a6e845",
+      "title": "Wildlife photography: Landscape in Peru",
+      "gallery_slug": "south-america-peru",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "72007": {
+      "slug": "costa-rica-gallery-birds-macaws-lapas-tambor_img_1069_19",
+      "title": "Wildlife photography: Bird in Costa Rica",
+      "gallery_slug": "costa-rica-gallery-birds-macaws-lapas",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "78349": {
+      "slug": "cl0a6123",
+      "title": "Landscape in Peninsula Papagayo",
+      "gallery_slug": "playas-del-coco",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "87896": {
+      "slug": "img-2eeda1c1",
+      "title": "Wildlife Photography from Costa Rica",
+      "gallery_slug": "asia-china",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "44346": {
+      "slug": "nauyaca-waterfalls-dji-0490-1777567502272",
+      "title": "Nauyaca Waterfalls - Puntarenas - Costa Rica - 0490",
+      "gallery_slug": "nauyaca-waterfalls",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        },
+        {
+          "type": "thumb_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "87990": {
+      "slug": "img-dc7d2307",
+      "title": "Wildlife Photography from Costa Rica",
+      "gallery_slug": "lifestyle",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    }
+  },
+  "empty_url_photos": {},
+  "status": "success"
+}

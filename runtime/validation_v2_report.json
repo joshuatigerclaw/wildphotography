@@ -1,0 +1,16 @@
+{
+  "run_at": "2026-06-15T04:14:40.320759+00:00",
+  "total_candidates": 1,
+  "valid_promoted": 0,
+  "broken_demoted": 1,
+  "enqueued_for_repair": 1,
+  "broken_sample": [
+    {
+      "id": 70159,
+      "slug": "cl0a3811-0b2de824",
+      "url": "Not Found",
+      "status": "https://images.wildphotography.com/derivatives/70159/cl0a3811-0b2de824_thumb.jpg",
+      "error": 404
+    }
+  ]
+}

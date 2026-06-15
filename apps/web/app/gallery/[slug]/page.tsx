@@ -84,7 +84,7 @@ async function getPhotosByGallery(
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
-  const gallery = await getGalleryBySlug(slug);
+  const gallery = await getGalleryBySlug(slug.toLowerCase());
 
   if (!gallery) return { title: 'Gallery Not Found' };
 
@@ -112,11 +112,39 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   };
 }
 
-export default async function GalleryPage({ params }: { params: Promise<{ slug: string }> }) {
+export default function GalleryPage({ params }: { params: Promise<{ slug: string }> }) {
+  return <GalleryPageContent params={params} />;
+}
+
+async function GalleryPageContent({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const gallery = await getGalleryBySlug(slug);
+  const gallery = await getGalleryBySlug(slug.toLowerCase());
 
   if (!gallery) notFound();
+
+  const canonical = `${SITE_URL}/gallery/${gallery.slug}`;
+  const ogImage = gallery.coverPhotoUrl;
+  const description = (gallery.description && gallery.description.length > 80)
+    ? gallery.description
+    : `${gallery.name} photography collection from Costa Rica — ${gallery.photoCount || 0} professional wildlife and nature photos by Joshua ten Brink. Browse high-resolution images, purchase prints, or book a photography tour.`;
+
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: gallery.name,
+    description,
+    url: canonical,
+    image: ogImage || undefined,
+    breadcrumb: {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL + '/' },
+        { '@type': 'ListItem', position: 2, name: 'Galleries', item: SITE_URL + '/galleries' },
+        { '@type': 'ListItem', position: 3, name: gallery.name, item: canonical },
+      ],
+    },
+    creator: { '@type': 'Person', name: 'Joshua ten Brink', url: SITE_URL },
+  };
 
   const { photos, total } = await getPhotosByGallery(slug, 100, 0);
 
@@ -181,7 +209,12 @@ export default async function GalleryPage({ params }: { params: Promise<{ slug: 
   const relatedGalleries = relatedResult as any[];
 
   return (
-    <div className="container" style={{paddingTop: 'var(--gutter)', paddingBottom: 'calc(var(--gutter) * 2)'}}>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <div className="container" style={{paddingTop: 'var(--gutter)', paddingBottom: 'calc(var(--gutter) * 2)'}}>
       {/* Breadcrumb */}
       <nav aria-label="Breadcrumb" style={{marginBottom: 'var(--gutter)'}}>
         <ol style={{display:'flex',alignItems:'center',gap:'10px',listStyle:'none',margin:0,padding:0,fontSize:'13px',fontFamily:'var(--font-mono)',textTransform:'uppercase',letterSpacing:'.1em',color:'var(--ink-dim)'}}>
@@ -226,8 +259,7 @@ export default async function GalleryPage({ params }: { params: Promise<{ slug: 
                 key={s.id}
                 href={`/species/${s.slug}`}
                 style={{display:'inline-flex',alignItems:'center',gap:'8px',padding:'8px 16px',border:'1px solid var(--rule)',borderRadius:'var(--r-sm)',fontFamily:'var(--font-serif)',fontSize:'14px',color:'var(--ink-muted)',textDecoration:'none',transition:'border-color var(--t-fast), color var(--t-fast)'}}
-                onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.borderColor = 'var(--accent)'; (e.currentTarget as HTMLAnchorElement).style.color = 'var(--accent)'; }}
-                onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.borderColor = 'var(--rule)'; (e.currentTarget as HTMLAnchorElement).style.color = 'var(--ink-muted)'; }}
+                className="species-link"
               >
                 {s.common_name}
                 {s.scientific_name && (
@@ -251,8 +283,7 @@ export default async function GalleryPage({ params }: { params: Promise<{ slug: 
                     key={loc.id}
                     href={`/location/${loc.slug}`}
                     style={{display:'block',padding:'16px',border:'1px solid var(--rule)',borderRadius:'var(--r-md)',textDecoration:'none',transition:'border-color var(--t-fast)'}}
-                    onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.borderColor = 'var(--accent)'; }}
-                    onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.borderColor = 'var(--rule)'; }}
+                    className="location-card"
                   >
                     <span style={{fontFamily:'var(--font-display)',fontSize:'15px',fontWeight:500,color:'var(--ink)'}}>{loc.name}</span>
                     {loc.region && <span style={{display:'block',fontFamily:'var(--font-mono)',fontSize:'10px',textTransform:'uppercase',letterSpacing:'.1em',color:'var(--ink-dim)',marginTop:'4px'}}>{loc.region}</span>}
@@ -278,8 +309,7 @@ export default async function GalleryPage({ params }: { params: Promise<{ slug: 
                 key={g.id}
                 href={`/gallery/${g.slug}`}
                 style={{display:'block',padding:'20px',border:'1px solid var(--rule)',borderRadius:'var(--r-md)',textDecoration:'none',transition:'border-color var(--t-fast)'}}
-                onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.borderColor = 'var(--accent)'; }}
-                onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.borderColor = 'var(--rule)'; }}
+                className="gallery-card"
               >
                 <h3 style={{fontFamily:'var(--font-display)',fontSize:'16px',fontWeight:500,color:'var(--ink)',margin:'0 0 6px 0'}}>{g.name}</h3>
                 {g.description && (
@@ -327,5 +357,6 @@ export default async function GalleryPage({ params }: { params: Promise<{ slug: 
         </div>
       )}
     </div>
+    </>
   );
 }

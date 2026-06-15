@@ -1,0 +1,12 @@
+{
+  "run_at": "2026-06-02T12:00:03Z",
+  "status": "degraded",
+  "eligible_db_count": 43164,
+  "typesense_count_before": 20595,
+  "typesense_count_after": 16354,
+  "stale_removed": 4242,
+  "missing_added": 5400,
+  "final_drift": -26810,
+  "stale_errors": 210,
+  "missing_errors": 109
+}

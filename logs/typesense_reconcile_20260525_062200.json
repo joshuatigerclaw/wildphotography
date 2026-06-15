@@ -1,0 +1,16 @@
+{
+  "run_at": "2026-05-25T06:22:00.000000+00:00",
+  "workflow": "wild_typesense_reconcile_no_llm",
+  "eligible_db_count": 44407,
+  "typesense_count_before": 42324,
+  "stale_removed": 0,
+  "missing_added": 1751,
+  "upsert_errors": 0,
+  "typesense_count_after": 44075,
+  "final_drift": 332,
+  "drift_before": 2083,
+  "status": "success",
+  "duration_seconds": 240.0,
+  "error": null,
+  "notes": "Full reconcile: scanned all 44407 eligible records. 1751 missing upserted. Remaining 332 drift likely represents search_ready photos with empty thumb_url in TS or records missing gallery_slug."
+}

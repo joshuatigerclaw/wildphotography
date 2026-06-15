@@ -1,0 +1,546 @@
+{
+  "run_at": "2026-05-26T04:18:19.543051+00:00",
+  "total_rpr_photos": 46000,
+  "total_derivatives_complete": 46691,
+  "sample_size": 300,
+  "keys_checked": 1411,
+  "keys_present": 1346,
+  "keys_missing": 65,
+  "photo_results": {
+    "ok": 283,
+    "flag_mismatch": 17,
+    "flag_missing": 0
+  },
+  "mismatches": [
+    {
+      "photo_id": 51378,
+      "slug": "tambor-new-years-2025-cl0a1079",
+      "status": "flag_mismatch",
+      "flag_problem": "DB says derivatives_complete but objects missing",
+      "derivatives_complete_db": true,
+      "keys_present": 4,
+      "keys_missing": 1,
+      "keys_checked": 5,
+      "missing_derivs": [
+        {
+          "field": "preview_url",
+          "key": "derivatives/preview/2026-05-22-CL0A1079_preview.jpg",
+          "url": "derivatives/preview/2026-05-22-CL0A1079_preview.jpg"
+        }
+      ]
+    },
+    {
+      "photo_id": 49463,
+      "slug": "costa-rica-gallery-tambor-nicoya-peninsula-costa-rica-dji-0281",
+      "status": "flag_mismatch",
+      "flag_problem": "DB says derivatives_complete but objects missing",
+      "derivatives_complete_db": true,
+      "keys_present": 1,
+      "keys_missing": 4,
+      "keys_checked": 5,
+      "missing_derivs": [
+        {
+          "field": "thumb_url",
+          "key": "derivatives/49463/costa-rica-gallery-tambor-nicoya-peninsula-costa-rica-dji-0281_thumb.jpg",
+          "url": "derivatives/49463/costa-rica-gallery-tambor-nicoya-peninsula-costa-rica-dji-0281_thumb.jpg"
+        },
+        {
+          "field": "small_url",
+          "key": "derivatives/49463/costa-rica-gallery-tambor-nicoya-peninsula-costa-rica-dji-0281_small.jpg",
+          "url": "derivatives/49463/costa-rica-gallery-tambor-nicoya-peninsula-costa-rica-dji-0281_small.jpg"
+        },
+        {
+          "field": "medium_url",
+          "key": "derivatives/49463/costa-rica-gallery-tambor-nicoya-peninsula-costa-rica-dji-0281_large.jpg",
+          "url": "derivatives/49463/costa-rica-gallery-tambor-nicoya-peninsula-costa-rica-dji-0281_large.jpg"
+        },
+        {
+          "field": "large_url",
+          "key": "derivatives/49463/costa-rica-gallery-tambor-nicoya-peninsula-costa-rica-dji-0281_large.jpg",
+          "url": "derivatives/49463/costa-rica-gallery-tambor-nicoya-peninsula-costa-rica-dji-0281_large.jpg"
+        }
+      ]
+    },
+    {
+      "photo_id": 43220,
+      "slug": "beaches--img-0804",
+      "status": "flag_mismatch",
+      "flag_problem": "DB says derivatives_complete but objects missing",
+      "derivatives_complete_db": true,
+      "keys_present": 1,
+      "keys_missing": 4,
+      "keys_checked": 5,
+      "missing_derivs": [
+        {
+          "field": "thumb_url",
+          "key": "derivatives/43220/beaches--img-0804_thumb.jpg",
+          "url": "derivatives/43220/beaches--img-0804_thumb.jpg"
+        },
+        {
+          "field": "small_url",
+          "key": "derivatives/43220/beaches--img-0804_small.jpg",
+          "url": "derivatives/43220/beaches--img-0804_small.jpg"
+        },
+        {
+          "field": "medium_url",
+          "key": "derivatives/43220/beaches--img-0804_large.jpg",
+          "url": "derivatives/43220/beaches--img-0804_large.jpg"
+        },
+        {
+          "field": "large_url",
+          "key": "derivatives/43220/beaches--img-0804_large.jpg",
+          "url": "derivatives/43220/beaches--img-0804_large.jpg"
+        }
+      ]
+    },
+    {
+      "photo_id": 42985,
+      "slug": "sunrise-sunset--dji-0733",
+      "status": "flag_mismatch",
+      "flag_problem": "DB says derivatives_complete but objects missing",
+      "derivatives_complete_db": true,
+      "keys_present": 1,
+      "keys_missing": 4,
+      "keys_checked": 5,
+      "missing_derivs": [
+        {
+          "field": "thumb_url",
+          "key": "derivatives/42985/sunrise-sunset--dji-0733_thumb.jpg",
+          "url": "derivatives/42985/sunrise-sunset--dji-0733_thumb.jpg"
+        },
+        {
+          "field": "small_url",
+          "key": "derivatives/42985/sunrise-sunset--dji-0733_small.jpg",
+          "url": "derivatives/42985/sunrise-sunset--dji-0733_small.jpg"
+        },
+        {
+          "field": "medium_url",
+          "key": "derivatives/42985/sunrise-sunset--dji-0733_large.jpg",
+          "url": "derivatives/42985/sunrise-sunset--dji-0733_large.jpg"
+        },
+        {
+          "field": "large_url",
+          "key": "derivatives/42985/sunrise-sunset--dji-0733_large.jpg",
+          "url": "derivatives/42985/sunrise-sunset--dji-0733_large.jpg"
+        }
+      ]
+    },
+    {
+      "photo_id": 46562,
+      "slug": "costa-rica-gallery-wildlife-cl0a6389",
+      "status": "flag_mismatch",
+      "flag_problem": "DB says derivatives_complete but objects missing",
+      "derivatives_complete_db": true,
+      "keys_present": 1,
+      "keys_missing": 4,
+      "keys_checked": 5,
+      "missing_derivs": [
+        {
+          "field": "thumb_url",
+          "key": "derivatives/costa-rica/costa-rica-gallery-wildlife-cl0a6389_thumb.jpg",
+          "url": "derivatives/costa-rica/costa-rica-gallery-wildlife-cl0a6389_thumb.jpg"
+        },
+        {
+          "field": "small_url",
+          "key": "derivatives/costa-rica/costa-rica-gallery-wildlife-cl0a6389_small.jpg",
+          "url": "derivatives/costa-rica/costa-rica-gallery-wildlife-cl0a6389_small.jpg"
+        },
+        {
+          "field": "medium_url",
+          "key": "derivatives/costa-rica/costa-rica-gallery-wildlife-cl0a6389_large.jpg",
+          "url": "derivatives/costa-rica/costa-rica-gallery-wildlife-cl0a6389_large.jpg"
+        },
+        {
+          "field": "large_url",
+          "key": "derivatives/costa-rica/costa-rica-gallery-wildlife-cl0a6389_large.jpg",
+          "url": "derivatives/costa-rica/costa-rica-gallery-wildlife-cl0a6389_large.jpg"
+        }
+      ]
+    },
+    {
+      "photo_id": 46577,
+      "slug": "costa-rica-gallery-wildlife-cl0a7628",
+      "status": "flag_mismatch",
+      "flag_problem": "DB says derivatives_complete but objects missing",
+      "derivatives_complete_db": true,
+      "keys_present": 1,
+      "keys_missing": 4,
+      "keys_checked": 5,
+      "missing_derivs": [
+        {
+          "field": "thumb_url",
+          "key": "derivatives/costa-rica/costa-rica-gallery-wildlife-cl0a7628_thumb.jpg",
+          "url": "derivatives/costa-rica/costa-rica-gallery-wildlife-cl0a7628_thumb.jpg"
+        },
+        {
+          "field": "small_url",
+          "key": "derivatives/costa-rica/costa-rica-gallery-wildlife-cl0a7628_small.jpg",
+          "url": "derivatives/costa-rica/costa-rica-gallery-wildlife-cl0a7628_small.jpg"
+        },
+        {
+          "field": "medium_url",
+          "key": "derivatives/costa-rica/costa-rica-gallery-wildlife-cl0a7628_large.jpg",
+          "url": "derivatives/costa-rica/costa-rica-gallery-wildlife-cl0a7628_large.jpg"
+        },
+        {
+          "field": "large_url",
+          "key": "derivatives/costa-rica/costa-rica-gallery-wildlife-cl0a7628_large.jpg",
+          "url": "derivatives/costa-rica/costa-rica-gallery-wildlife-cl0a7628_large.jpg"
+        }
+      ]
+    },
+    {
+      "photo_id": 46519,
+      "slug": "costa-rica-gallery-wildlife-2023-10-15-06-54-51",
+      "status": "flag_mismatch",
+      "flag_problem": "DB says derivatives_complete but objects missing",
+      "derivatives_complete_db": true,
+      "keys_present": 1,
+      "keys_missing": 4,
+      "keys_checked": 5,
+      "missing_derivs": [
+        {
+          "field": "thumb_url",
+          "key": "derivatives/costa-rica/costa-rica-gallery-wildlife-2023-10-15-06-54-51_thumb.jpg",
+          "url": "derivatives/costa-rica/costa-rica-gallery-wildlife-2023-10-15-06-54-51_thumb.jpg"
+        },
+        {
+          "field": "small_url",
+          "key": "derivatives/costa-rica/costa-rica-gallery-wildlife-2023-10-15-06-54-51_small.jpg",
+          "url": "derivatives/costa-rica/costa-rica-gallery-wildlife-2023-10-15-06-54-51_small.jpg"
+        },
+        {
+          "field": "medium_url",
+          "key": "derivatives/costa-rica/costa-rica-gallery-wildlife-2023-10-15-06-54-51_large.jpg",
+          "url": "derivatives/costa-rica/costa-rica-gallery-wildlife-2023-10-15-06-54-51_large.jpg"
+        },
+        {
+          "field": "large_url",
+          "key": "derivatives/costa-rica/costa-rica-gallery-wildlife-2023-10-15-06-54-51_large.jpg",
+          "url": "derivatives/costa-rica/costa-rica-gallery-wildlife-2023-10-15-06-54-51_large.jpg"
+        }
+      ]
+    },
+    {
+      "photo_id": 46572,
+      "slug": "costa-rica-gallery-wildlife-cl0a6717",
+      "status": "flag_mismatch",
+      "flag_problem": "DB says derivatives_complete but objects missing",
+      "derivatives_complete_db": true,
+      "keys_present": 1,
+      "keys_missing": 4,
+      "keys_checked": 5,
+      "missing_derivs": [
+        {
+          "field": "thumb_url",
+          "key": "derivatives/costa-rica/costa-rica-gallery-wildlife-cl0a6717_thumb.jpg",
+          "url": "derivatives/costa-rica/costa-rica-gallery-wildlife-cl0a6717_thumb.jpg"
+        },
+        {
+          "field": "small_url",
+          "key": "derivatives/costa-rica/costa-rica-gallery-wildlife-cl0a6717_small.jpg",
+          "url": "derivatives/costa-rica/costa-rica-gallery-wildlife-cl0a6717_small.jpg"
+        },
+        {
+          "field": "medium_url",
+          "key": "derivatives/costa-rica/costa-rica-gallery-wildlife-cl0a6717_large.jpg",
+          "url": "derivatives/costa-rica/costa-rica-gallery-wildlife-cl0a6717_large.jpg"
+        },
+        {
+          "field": "large_url",
+          "key": "derivatives/costa-rica/costa-rica-gallery-wildlife-cl0a6717_large.jpg",
+          "url": "derivatives/costa-rica/costa-rica-gallery-wildlife-cl0a6717_large.jpg"
+        }
+      ]
+    },
+    {
+      "photo_id": 49270,
+      "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-pano00056",
+      "status": "flag_mismatch",
+      "flag_problem": "DB says derivatives_complete but objects missing",
+      "derivatives_complete_db": true,
+      "keys_present": 1,
+      "keys_missing": 4,
+      "keys_checked": 5,
+      "missing_derivs": [
+        {
+          "field": "thumb_url",
+          "key": "derivatives/49270/costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-pano00056_thumb.jpg",
+          "url": "derivatives/49270/costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-pano00056_thumb.jpg"
+        },
+        {
+          "field": "small_url",
+          "key": "derivatives/49270/costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-pano00056_small.jpg",
+          "url": "derivatives/49270/costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-pano00056_small.jpg"
+        },
+        {
+          "field": "medium_url",
+          "key": "derivatives/49270/costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-pano00056_large.jpg",
+          "url": "derivatives/49270/costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-pano00056_large.jpg"
+        },
+        {
+          "field": "large_url",
+          "key": "derivatives/49270/costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-pano00056_large.jpg",
+          "url": "derivatives/49270/costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-pano00056_large.jpg"
+        }
+      ]
+    },
+    {
+      "photo_id": 49167,
+      "slug": "costa-rica-gallery-jaco-beach-pano00025",
+      "status": "flag_mismatch",
+      "flag_problem": "DB says derivatives_complete but objects missing",
+      "derivatives_complete_db": true,
+      "keys_present": 1,
+      "keys_missing": 4,
+      "keys_checked": 5,
+      "missing_derivs": [
+        {
+          "field": "thumb_url",
+          "key": "derivatives/49167/costa-rica-gallery-jaco-beach-pano00025_thumb.jpg",
+          "url": "derivatives/49167/costa-rica-gallery-jaco-beach-pano00025_thumb.jpg"
+        },
+        {
+          "field": "small_url",
+          "key": "derivatives/49167/costa-rica-gallery-jaco-beach-pano00025_small.jpg",
+          "url": "derivatives/49167/costa-rica-gallery-jaco-beach-pano00025_small.jpg"
+        },
+        {
+          "field": "medium_url",
+          "key": "derivatives/49167/costa-rica-gallery-jaco-beach-pano00025_large.jpg",
+          "url": "derivatives/49167/costa-rica-gallery-jaco-beach-pano00025_large.jpg"
+        },
+        {
+          "field": "large_url",
+          "key": "derivatives/49167/costa-rica-gallery-jaco-beach-pano00025_large.jpg",
+          "url": "derivatives/49167/costa-rica-gallery-jaco-beach-pano00025_large.jpg"
+        }
+      ]
+    },
+    {
+      "photo_id": 46366,
+      "slug": "costa-rica-gallery-jaco-beach-dji_0084",
+      "status": "flag_mismatch",
+      "flag_problem": "DB says derivatives_complete but objects missing",
+      "derivatives_complete_db": true,
+      "keys_present": 1,
+      "keys_missing": 4,
+      "keys_checked": 5,
+      "missing_derivs": [
+        {
+          "field": "thumb_url",
+          "key": "derivatives/costa-rica/costa-rica-gallery-jaco-beach-dji_0084_thumb.jpg",
+          "url": "derivatives/costa-rica/costa-rica-gallery-jaco-beach-dji_0084_thumb.jpg"
+        },
+        {
+          "field": "small_url",
+          "key": "derivatives/costa-rica/costa-rica-gallery-jaco-beach-dji_0084_small.jpg",
+          "url": "derivatives/costa-rica/costa-rica-gallery-jaco-beach-dji_0084_small.jpg"
+        },
+        {
+          "field": "medium_url",
+          "key": "derivatives/costa-rica/costa-rica-gallery-jaco-beach-dji_0084_large.jpg",
+          "url": "derivatives/costa-rica/costa-rica-gallery-jaco-beach-dji_0084_large.jpg"
+        },
+        {
+          "field": "large_url",
+          "key": "derivatives/costa-rica/costa-rica-gallery-jaco-beach-dji_0084_large.jpg",
+          "url": "derivatives/costa-rica/costa-rica-gallery-jaco-beach-dji_0084_large.jpg"
+        }
+      ]
+    },
+    {
+      "photo_id": 25352,
+      "slug": "dji-0517-1b5113a7",
+      "status": "flag_mismatch",
+      "flag_problem": "DB says derivatives_complete but objects missing",
+      "derivatives_complete_db": true,
+      "keys_present": 2,
+      "keys_missing": 3,
+      "keys_checked": 5,
+      "missing_derivs": [
+        {
+          "field": "small_url",
+          "key": "derivatives/small/dji-0517-1b5113a7-small.jpg",
+          "url": "derivatives/small/dji-0517-1b5113a7-small.jpg"
+        },
+        {
+          "field": "medium_url",
+          "key": "derivatives/large/dji-0517-1b5113a7-large.jpg",
+          "url": "derivatives/large/dji-0517-1b5113a7-large.jpg"
+        },
+        {
+          "field": "large_url",
+          "key": "derivatives/large/dji-0517-1b5113a7-large.jpg",
+          "url": "derivatives/large/dji-0517-1b5113a7-large.jpg"
+        }
+      ]
+    },
+    {
+      "photo_id": 42897,
+      "slug": "sunrise-sunset--cl0a3820",
+      "status": "flag_mismatch",
+      "flag_problem": "DB says derivatives_complete but objects missing",
+      "derivatives_complete_db": true,
+      "keys_present": 1,
+      "keys_missing": 4,
+      "keys_checked": 5,
+      "missing_derivs": [
+        {
+          "field": "thumb_url",
+          "key": "derivatives/42897/sunrise-sunset--cl0a3820_thumb.jpg",
+          "url": "derivatives/42897/sunrise-sunset--cl0a3820_thumb.jpg"
+        },
+        {
+          "field": "small_url",
+          "key": "derivatives/42897/sunrise-sunset--cl0a3820_small.jpg",
+          "url": "derivatives/42897/sunrise-sunset--cl0a3820_small.jpg"
+        },
+        {
+          "field": "medium_url",
+          "key": "derivatives/42897/sunrise-sunset--cl0a3820_large.jpg",
+          "url": "derivatives/42897/sunrise-sunset--cl0a3820_large.jpg"
+        },
+        {
+          "field": "large_url",
+          "key": "derivatives/42897/sunrise-sunset--cl0a3820_large.jpg",
+          "url": "derivatives/42897/sunrise-sunset--cl0a3820_large.jpg"
+        }
+      ]
+    },
+    {
+      "photo_id": 43261,
+      "slug": "beaches-dji-0614-2",
+      "status": "flag_mismatch",
+      "flag_problem": "DB says derivatives_complete but objects missing",
+      "derivatives_complete_db": true,
+      "keys_present": 1,
+      "keys_missing": 4,
+      "keys_checked": 5,
+      "missing_derivs": [
+        {
+          "field": "thumb_url",
+          "key": "derivatives/43261/beaches-dji-0614-2_thumb.jpg",
+          "url": "derivatives/43261/beaches-dji-0614-2_thumb.jpg"
+        },
+        {
+          "field": "small_url",
+          "key": "derivatives/43261/beaches-dji-0614-2_small.jpg",
+          "url": "derivatives/43261/beaches-dji-0614-2_small.jpg"
+        },
+        {
+          "field": "medium_url",
+          "key": "derivatives/43261/beaches-dji-0614-2_large.jpg",
+          "url": "derivatives/43261/beaches-dji-0614-2_large.jpg"
+        },
+        {
+          "field": "large_url",
+          "key": "derivatives/43261/beaches-dji-0614-2_large.jpg",
+          "url": "derivatives/43261/beaches-dji-0614-2_large.jpg"
+        }
+      ]
+    },
+    {
+      "photo_id": 44668,
+      "slug": "cl0a9619",
+      "status": "flag_mismatch",
+      "flag_problem": "DB says derivatives_complete but objects missing",
+      "derivatives_complete_db": true,
+      "keys_present": 1,
+      "keys_missing": 4,
+      "keys_checked": 5,
+      "missing_derivs": [
+        {
+          "field": "thumb_url",
+          "key": "derivatives/44668/cl0a9619_thumb.jpg",
+          "url": "derivatives/44668/cl0a9619_thumb.jpg"
+        },
+        {
+          "field": "small_url",
+          "key": "derivatives/44668/cl0a9619_small.jpg",
+          "url": "derivatives/44668/cl0a9619_small.jpg"
+        },
+        {
+          "field": "medium_url",
+          "key": "derivatives/44668/cl0a9619_large.jpg",
+          "url": "derivatives/44668/cl0a9619_large.jpg"
+        },
+        {
+          "field": "large_url",
+          "key": "derivatives/44668/cl0a9619_large.jpg",
+          "url": "derivatives/44668/cl0a9619_large.jpg"
+        }
+      ]
+    },
+    {
+      "photo_id": 49555,
+      "slug": "costa-rica-gallery-la-sabana-estadio-nacional-costa-rica-san-jose-hyperlapse-0282-jpeg",
+      "status": "flag_mismatch",
+      "flag_problem": "DB says derivatives_complete but objects missing",
+      "derivatives_complete_db": true,
+      "keys_present": 1,
+      "keys_missing": 4,
+      "keys_checked": 5,
+      "missing_derivs": [
+        {
+          "field": "thumb_url",
+          "key": "derivatives/49555/costa-rica-gallery-la-sabana-estadio-nacional-costa-rica-san-jose-hyperlapse-0282-jpeg_thumb.jpg",
+          "url": "derivatives/49555/costa-rica-gallery-la-sabana-estadio-nacional-costa-rica-san-jose-hyperlapse-0282-jpeg_thumb.jpg"
+        },
+        {
+          "field": "small_url",
+          "key": "derivatives/49555/costa-rica-gallery-la-sabana-estadio-nacional-costa-rica-san-jose-hyperlapse-0282-jpeg_small.jpg",
+          "url": "derivatives/49555/costa-rica-gallery-la-sabana-estadio-nacional-costa-rica-san-jose-hyperlapse-0282-jpeg_small.jpg"
+        },
+        {
+          "field": "medium_url",
+          "key": "derivatives/49555/costa-rica-gallery-la-sabana-estadio-nacional-costa-rica-san-jose-hyperlapse-0282-jpeg_large.jpg",
+          "url": "derivatives/49555/costa-rica-gallery-la-sabana-estadio-nacional-costa-rica-san-jose-hyperlapse-0282-jpeg_large.jpg"
+        },
+        {
+          "field": "large_url",
+          "key": "derivatives/49555/costa-rica-gallery-la-sabana-estadio-nacional-costa-rica-san-jose-hyperlapse-0282-jpeg_large.jpg",
+          "url": "derivatives/49555/costa-rica-gallery-la-sabana-estadio-nacional-costa-rica-san-jose-hyperlapse-0282-jpeg_large.jpg"
+        }
+      ]
+    },
+    {
+      "photo_id": 47245,
+      "slug": "inspirational-quotes-2018-08-03-17-34-23",
+      "status": "flag_mismatch",
+      "flag_problem": "DB says derivatives_complete but objects missing",
+      "derivatives_complete_db": true,
+      "keys_present": 0,
+      "keys_missing": 5,
+      "keys_checked": 5,
+      "missing_derivs": [
+        {
+          "field": "thumb_url",
+          "key": "derivatives/inspirational-quotes/47245_2018-08-03%2017.34.23_thumb.jpg",
+          "url": "derivatives/inspirational-quotes/47245_2018-08-03%2017.34.23_thumb.jpg"
+        },
+        {
+          "field": "small_url",
+          "key": "derivatives/inspirational-quotes/47245_2018-08-03%2017.34.23_small.jpg",
+          "url": "derivatives/inspirational-quotes/47245_2018-08-03%2017.34.23_small.jpg"
+        },
+        {
+          "field": "medium_url",
+          "key": "derivatives/inspirational-quotes/47245_2018-08-03%2017.34.23_large.jpg",
+          "url": "derivatives/inspirational-quotes/47245_2018-08-03%2017.34.23_large.jpg"
+        },
+        {
+          "field": "large_url",
+          "key": "derivatives/inspirational-quotes/47245_2018-08-03%2017.34.23_large.jpg",
+          "url": "derivatives/inspirational-quotes/47245_2018-08-03%2017.34.23_large.jpg"
+        },
+        {
+          "field": "preview_url",
+          "key": "derivatives/inspirational-quotes/47245_2018-08-03%2017.34.23_preview.jpg",
+          "url": "derivatives/inspirational-quotes/47245_2018-08-03%2017.34.23_preview.jpg"
+        }
+      ]
+    }
+  ],
+  "status": "success"
+}

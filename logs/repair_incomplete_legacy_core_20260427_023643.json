@@ -1,0 +1,892 @@
+{
+  "run_at": "2026-04-27T08:36:43.990928+00:00",
+  "total_photos": 34821,
+  "distinct_affected_photos": 801,
+  "all_clear": false,
+  "issues": {
+    "missing_original_r2_key": {
+      "description": "Missing original R2 storage key \u2014 cannot rebuild derivatives",
+      "count": 0,
+      "sample": []
+    },
+    "pending_derivatives_with_r2": {
+      "description": "Has R2 original but derivatives_complete=false \u2014 needs rebuild dispatch",
+      "count": 101,
+      "sample": [
+        {
+          "id": 35644,
+          "slug": "santateresa-dji-0704-590fc658",
+          "status": "published",
+          "original_r2_key": "photos/original/sa/santateresa-dji-0704-590fc658.jpg"
+        },
+        {
+          "id": 41302,
+          "slug": "sunrise-sunset-2016-07-31-17-59-49",
+          "status": "draft",
+          "original_r2_key": "originals/93/sunrise-sunset-2016-07-31-17-59-49-1777276477458-5crrh6.jpg"
+        },
+        {
+          "id": 41303,
+          "slug": "sunrise-sunset-2017-07-15-18-57-45",
+          "status": "draft",
+          "original_r2_key": "originals/93/sunrise-sunset-2017-07-15-18-57-45-1777276480764-xeos9k.jpg"
+        },
+        {
+          "id": 41304,
+          "slug": "sunrise-sunset-2018-03-29-18-22-12",
+          "status": "draft",
+          "original_r2_key": "originals/93/sunrise-sunset-2018-03-29-18-22-12-1777276483995-bql9tz.jpg"
+        },
+        {
+          "id": 41305,
+          "slug": "sunrise-sunset-2018-08-21-17-53-04",
+          "status": "draft",
+          "original_r2_key": "originals/93/sunrise-sunset-2018-08-21-17-53-04-1777276488546-blxba0.jpg"
+        },
+        {
+          "id": 41306,
+          "slug": "sunrise-sunset-2018-08-21-17-55-57",
+          "status": "draft",
+          "original_r2_key": "originals/93/sunrise-sunset-2018-08-21-17-55-57-1777276490949-keocer.jpg"
+        },
+        {
+          "id": 41307,
+          "slug": "sunrise-sunset-2018-08-21-18-01-08",
+          "status": "draft",
+          "original_r2_key": "originals/93/sunrise-sunset-2018-08-21-18-01-08-1777276493871-a0wx29.jpg"
+        },
+        {
+          "id": 41308,
+          "slug": "sunrise-sunset-2018-08-21-18-02-56",
+          "status": "draft",
+          "original_r2_key": "originals/93/sunrise-sunset-2018-08-21-18-02-56-1777276496516-chv8am.jpg"
+        },
+        {
+          "id": 41309,
+          "slug": "sunrise-sunset-2018-08-21-18-09-15",
+          "status": "draft",
+          "original_r2_key": "originals/93/sunrise-sunset-2018-08-21-18-09-15-1777276499632-gnn2zt.jpg"
+        },
+        {
+          "id": 41310,
+          "slug": "sunrise-sunset-2018-08-24-17-55-36",
+          "status": "draft",
+          "original_r2_key": "originals/93/sunrise-sunset-2018-08-24-17-55-36-1777276501976-wcsi5z.jpg"
+        },
+        {
+          "id": 41311,
+          "slug": "sunrise-sunset-2019-july-19-hyperlapse-0311",
+          "status": "draft",
+          "original_r2_key": "originals/93/sunrise-sunset-2019-july-19-hyperlapse-0311-1777276505144-2ia4o1.jpg"
+        },
+        {
+          "id": 41312,
+          "slug": "sunrise-sunset-2019-03-31-05-46-08",
+          "status": "draft",
+          "original_r2_key": "originals/93/sunrise-sunset-2019-03-31-05-46-08-1777276509065-d199gl.jpg"
+        },
+        {
+          "id": 41313,
+          "slug": "sunrise-sunset-2019-11-08-17-16-08",
+          "status": "draft",
+          "original_r2_key": "originals/93/sunrise-sunset-2019-11-08-17-16-08-1777276511865-mspw97.jpg"
+        },
+        {
+          "id": 41314,
+          "slug": "sunrise-sunset-2020-06-06-17-38-31",
+          "status": "draft",
+          "original_r2_key": "originals/93/sunrise-sunset-2020-06-06-17-38-31-1777276514599-qvdaok.jpg"
+        },
+        {
+          "id": 41315,
+          "slug": "sunrise-sunset-2020-06-07-17-57-31",
+          "status": "draft",
+          "original_r2_key": "originals/93/sunrise-sunset-2020-06-07-17-57-31-1777276516704-c4cevj.jpg"
+        },
+        {
+          "id": 41316,
+          "slug": "sunrise-sunset-2020-06-07-17-58-30",
+          "status": "draft",
+          "original_r2_key": "originals/93/sunrise-sunset-2020-06-07-17-58-30-1777276519242-cib7kl.jpg"
+        },
+        {
+          "id": 41317,
+          "slug": "sunrise-sunset-2020-06-07-18-00-38",
+          "status": "draft",
+          "original_r2_key": "originals/93/sunrise-sunset-2020-06-07-18-00-38-1777276521877-j9whsx.jpg"
+        },
+        {
+          "id": 41318,
+          "slug": "sunrise-sunset-2020-07-17-05-10-04",
+          "status": "draft",
+          "original_r2_key": "originals/93/sunrise-sunset-2020-07-17-05-10-04-1777276524992-eoux6y.jpg"
+        },
+        {
+          "id": 41319,
+          "slug": "sunrise-sunset-2020-07-17-05-18-15",
+          "status": "draft",
+          "original_r2_key": "originals/93/sunrise-sunset-2020-07-17-05-18-15-1777276527802-k1hzq2.jpg"
+        },
+        {
+          "id": 41320,
+          "slug": "sunrise-sunset-2020-07-19-05-07-34",
+          "status": "draft",
+          "original_r2_key": "originals/93/sunrise-sunset-2020-07-19-05-07-34-1777276529790-0cssvz.jpg"
+        },
+        {
+          "id": 41321,
+          "slug": "sunrise-sunset-2020-07-19-05-19-48",
+          "status": "draft",
+          "original_r2_key": "originals/93/sunrise-sunset-2020-07-19-05-19-48-1777276532421-1me0nl.jpg"
+        },
+        {
+          "id": 41322,
+          "slug": "limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2021-05-01-08-24-07",
+          "status": "draft",
+          "original_r2_key": "originals/57/limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2021-05-01-08-24-07-1777276534951-yotpn5.jpg"
+        },
+        {
+          "id": 41323,
+          "slug": "limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2021-05-01-11-09-45",
+          "status": "draft",
+          "original_r2_key": "originals/57/limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2021-05-01-11-09-45-1777276537826-ag0v6s.jpg"
+        },
+        {
+          "id": 41324,
+          "slug": "limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2021-05-01-11-11-08",
+          "status": "draft",
+          "original_r2_key": "originals/57/limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2021-05-01-11-11-08-1777276540235-m0m6tc.jpg"
+        },
+        {
+          "id": 41325,
+          "slug": "limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2021-05-02-09-43-23",
+          "status": "draft",
+          "original_r2_key": "originals/57/limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2021-05-02-09-43-23-1777276543489-93x6ul.jpg"
+        },
+        {
+          "id": 41326,
+          "slug": "limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2021-05-02-14-32-01",
+          "status": "draft",
+          "original_r2_key": "originals/57/limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2021-05-02-14-32-01-1777276546056-ab7k4h.jpg"
+        },
+        {
+          "id": 41327,
+          "slug": "limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2021-05-02-14-33-07",
+          "status": "draft",
+          "original_r2_key": "originals/57/limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2021-05-02-14-33-07-1777276548336-tt0f80.jpg"
+        },
+        {
+          "id": 41328,
+          "slug": "limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2023-10-12-16-46-01",
+          "status": "draft",
+          "original_r2_key": "originals/57/limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2023-10-12-16-46-01-1777276551003-mehj2i.jpg"
+        },
+        {
+          "id": 41329,
+          "slug": "limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2023-10-12-17-26-45",
+          "status": "draft",
+          "original_r2_key": "originals/57/limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2023-10-12-17-26-45-1777276553115-ibmr5x.jpg"
+        },
+        {
+          "id": 41330,
+          "slug": "limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2023-10-12-17-26-50",
+          "status": "draft",
+          "original_r2_key": "originals/57/limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2023-10-12-17-26-50-1777276555568-z3kmku.jpg"
+        },
+        {
+          "id": 41331,
+          "slug": "limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2023-10-12-17-29-35",
+          "status": "draft",
+          "original_r2_key": "originals/57/limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2023-10-12-17-29-35-1777276557643-93ljb0.jpg"
+        },
+        {
+          "id": 41332,
+          "slug": "limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2023-10-12-17-29-38",
+          "status": "draft",
+          "original_r2_key": "originals/57/limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2023-10-12-17-29-38-1777276559761-roeus6.jpg"
+        },
+        {
+          "id": 41333,
+          "slug": "limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2023-10-12-17-29-49",
+          "status": "draft",
+          "original_r2_key": "originals/57/limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2023-10-12-17-29-49-1777276562270-soo6y4.jpg"
+        },
+        {
+          "id": 41334,
+          "slug": "limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2023-10-13-07-06-41",
+          "status": "draft",
+          "original_r2_key": "originals/57/limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2023-10-13-07-06-41-1777276564170-t345js.jpg"
+        },
+        {
+          "id": 41335,
+          "slug": "limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2023-10-13-07-06-43",
+          "status": "draft",
+          "original_r2_key": "originals/57/limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2023-10-13-07-06-43-1777276566250-dpfrjt.jpg"
+        },
+        {
+          "id": 41336,
+          "slug": "limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2023-10-13-07-06-55",
+          "status": "draft",
+          "original_r2_key": "originals/57/limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2023-10-13-07-06-55-1777276569074-3onz2a.jpg"
+        },
+        {
+          "id": 41337,
+          "slug": "limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2023-10-13-08-39-12",
+          "status": "draft",
+          "original_r2_key": "originals/57/limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2023-10-13-08-39-12-1777276572237-esi0dv.jpg"
+        },
+        {
+          "id": 41338,
+          "slug": "limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2023-10-13-08-39-17",
+          "status": "draft",
+          "original_r2_key": "originals/57/limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2023-10-13-08-39-17-1777276574501-6xzuvm.jpg"
+        },
+        {
+          "id": 41339,
+          "slug": "limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2023-10-13-09-17-18",
+          "status": "draft",
+          "original_r2_key": "originals/57/limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2023-10-13-09-17-18-1777276576818-6c6f85.jpg"
+        },
+        {
+          "id": 41340,
+          "slug": "limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2023-10-13-09-19-00",
+          "status": "draft",
+          "original_r2_key": "originals/57/limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2023-10-13-09-19-00-1777276579474-pt03om.jpg"
+        },
+        {
+          "id": 41341,
+          "slug": "limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2023-10-13-09-30-17",
+          "status": "draft",
+          "original_r2_key": "originals/57/limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2023-10-13-09-30-17-1777276581583-yqfegx.jpg"
+        },
+        {
+          "id": 41342,
+          "slug": "costa-rica-20070520-2268",
+          "status": "draft",
+          "original_r2_key": "originals/25/costa-rica-20070520-2268-1777276584219-vbecob.jpg"
+        },
+        {
+          "id": 41343,
+          "slug": "costa-rica-2014-09-14-14-14-46-copy",
+          "status": "draft",
+          "original_r2_key": "originals/25/costa-rica-2014-09-14-14-14-46-copy-1777276586180-zx9xzi.jpg"
+        },
+        {
+          "id": 41344,
+          "slug": "costa-rica-2014-09-20-16-02-57-copy",
+          "status": "draft",
+          "original_r2_key": "originals/25/costa-rica-2014-09-20-16-02-57-copy-1777276588688-jc9d2o.jpg"
+        },
+        {
+          "id": 41345,
+          "slug": "costa-rica-2014-09-20-16-03-17-copy",
+          "status": "draft",
+          "original_r2_key": "originals/25/costa-rica-2014-09-20-16-03-17-copy-1777276590491-vn199y.jpg"
+        },
+        {
+          "id": 41346,
+          "slug": "costa-rica-2014-12-07-10-49-29-copy",
+          "status": "draft",
+          "original_r2_key": "originals/25/costa-rica-2014-12-07-10-49-29-copy-1777276593353-l089zz.jpg"
+        },
+        {
+          "id": 41347,
+          "slug": "costa-rica-2015-03-29-12-28-24-copy",
+          "status": "draft",
+          "original_r2_key": "originals/25/costa-rica-2015-03-29-12-28-24-copy-1777276595267-8adclk.jpg"
+        },
+        {
+          "id": 41348,
+          "slug": "costa-rica-2015-04-01-14-20-11-copy",
+          "status": "draft",
+          "original_r2_key": "originals/25/costa-rica-2015-04-01-14-20-11-copy-1777276598429-3k960l.jpg"
+        },
+        {
+          "id": 41349,
+          "slug": "costa-rica-2015-06-14-10-48-18-copy",
+          "status": "draft",
+          "original_r2_key": "originals/25/costa-rica-2015-06-14-10-48-18-copy-1777276600669-lbmgsr.jpg"
+        },
+        {
+          "id": 41350,
+          "slug": "costa-rica-2015-06-14-10-48-44-copy",
+          "status": "draft",
+          "original_r2_key": "originals/25/costa-rica-2015-06-14-10-48-44-copy-1777276603165-35p1b7.jpg"
+        }
+      ]
+    },
+    "render_ready_not_search_ready": {
+      "description": "ready_for_public_render=true but search_ready=false \u2014 blocked from Typesense",
+      "count": 0,
+      "sample": []
+    },
+    "missing_content_hash": {
+      "description": "No content_hash \u2014 cannot detect duplicates or verify integrity",
+      "count": 15595,
+      "sample": [
+        {
+          "id": 42,
+          "slug": "paddleboarding-adventure-on-a-tropical-coast-9kLkq4",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 44,
+          "slug": "img-9761-jpg-McvJMD",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 45,
+          "slug": "img-9867-jpg-ggnxV4",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 46,
+          "slug": "img-0133-jpg-t25Tbt",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 47,
+          "slug": "img-0148-jpg-WgXJsL",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 48,
+          "slug": "img-0135-jpg-x8LCKP",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 49,
+          "slug": "img-0154-jpg-P4g3jH",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 50,
+          "slug": "costa-rica-billabong-surf-2009-5QgMNB",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 51,
+          "slug": "img-0280-jpg-WR6t7s",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 52,
+          "slug": "costa-rica-billabong-surf-2009-PSWCnj",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 53,
+          "slug": "img-9578-jpg-CWp24N",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 54,
+          "slug": "img-9644-jpg-HCxCGn",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 55,
+          "slug": "img-3491-jpg-jHd5JG",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 56,
+          "slug": "img-6629-jpg-dqMnVs",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 57,
+          "slug": "img-0332-jpg-rSSd5X",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 58,
+          "slug": "img-6632-jpg-sTd7RM",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 59,
+          "slug": "img-0341-jpg-kZ3chM",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 60,
+          "slug": "img-9672-jpg-HSKLKj",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 61,
+          "slug": "img-9584-jpg-F3ffkg",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 62,
+          "slug": "img-9468-jpg-pQpxCC",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 63,
+          "slug": "img-9572-jpg-TC4cZc",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 64,
+          "slug": "img-9600-jpg-ZsctXJ",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 65,
+          "slug": "img-9717-jpg-7ZKCZv",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 66,
+          "slug": "img-9723-jpg-qsxkCW",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 67,
+          "slug": "img-9890-jpg-zBSPgj",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 68,
+          "slug": "img-9902-jpg-JwSZbr",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 69,
+          "slug": "img-9843-jpg-hxpDkp",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 71,
+          "slug": "img-9919-jpg-DXrP87",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 72,
+          "slug": "img-0021-jpg-GkKRzD",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 73,
+          "slug": "img-0235-jpg-9sPXtp",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 74,
+          "slug": "img-0236-jpg-S2T7WR",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 75,
+          "slug": "img-0238-jpg-ZGvNtp",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 76,
+          "slug": "img-0277-jpg-qt4QV8",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 77,
+          "slug": "img-0325-jpg-fmv7Qf",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 78,
+          "slug": "img-3493-jpg-gG4vff",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 79,
+          "slug": "img-5305-jpg-R4sG6V",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 80,
+          "slug": "img-2089-jpg-pnr28M",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 81,
+          "slug": "img-3478-jpg-BWjWP9",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 82,
+          "slug": "img-2099-jpg-4gf3qq",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 83,
+          "slug": "img-5307-jpg-CrgJfq",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 84,
+          "slug": "img-5426-jpg-jmdgbW",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 85,
+          "slug": "img-5373-jpg-SZQs9D",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 86,
+          "slug": "20160903-141053-jpg-zLDgJD",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 87,
+          "slug": "img-2084-jpg-DRShDG",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 88,
+          "slug": "img-2110-jpg-TxcVfN",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 89,
+          "slug": "img-2088-jpg-49xTs2",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 90,
+          "slug": "img-2098-jpg-72bZT5",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 91,
+          "slug": "img-2175-jpg-qRTw8D",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 92,
+          "slug": "img-3437-jpg-PLSc2W",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 93,
+          "slug": "img-3495-jpg-sPk7r8",
+          "status": "legacy_static",
+          "has_r2": true
+        }
+      ]
+    },
+    "missing_slug": {
+      "description": "Null or empty slug \u2014 cannot build public URL",
+      "count": 0,
+      "sample": []
+    },
+    "missing_gallery_slug": {
+      "description": "ready_for_public_render=true but gallery_slug is null \u2014 no gallery association",
+      "count": 2011,
+      "sample": [
+        {
+          "id": 242,
+          "slug": "hermosa-beach-1",
+          "status": "archived"
+        },
+        {
+          "id": 14905,
+          "slug": "resplendent-quetzal",
+          "status": "archived"
+        },
+        {
+          "id": 38943,
+          "slug": "sunrise-sunset-2020-07-19-05-19-53-jpg",
+          "status": "draft"
+        },
+        {
+          "id": 38944,
+          "slug": "sunrise-sunset-2020-07-19-05-21-43-jpg",
+          "status": "draft"
+        },
+        {
+          "id": 38945,
+          "slug": "sunrise-sunset-2020-10-10-17-09-54-jpg",
+          "status": "draft"
+        },
+        {
+          "id": 38946,
+          "slug": "sunrise-sunset-2020-10-31-16-53-54-jpg",
+          "status": "draft"
+        },
+        {
+          "id": 38947,
+          "slug": "sunrise-sunset-2020-11-28-17-03-28-jpg",
+          "status": "draft"
+        },
+        {
+          "id": 38948,
+          "slug": "sunrise-sunset-2022-02-26-18-14-20-jpg",
+          "status": "draft"
+        },
+        {
+          "id": 38949,
+          "slug": "sunrise-sunset-2023-02-13-06-08-09-jpg",
+          "status": "draft"
+        },
+        {
+          "id": 38950,
+          "slug": "sunrise-sunset-2023-02-13-06-12-10-jpg",
+          "status": "draft"
+        },
+        {
+          "id": 38951,
+          "slug": "sunrise-sunset-2023-02-22-17-46-01-jpg",
+          "status": "draft"
+        },
+        {
+          "id": 38952,
+          "slug": "sunrise-sunset-20240819-052653-jpg",
+          "status": "draft"
+        },
+        {
+          "id": 38953,
+          "slug": "sunrise-sunset-20240819-053012-jpg",
+          "status": "draft"
+        },
+        {
+          "id": 38954,
+          "slug": "sunrise-sunset-20240820-181815-jpg",
+          "status": "draft"
+        },
+        {
+          "id": 38955,
+          "slug": "sunrise-sunset-20240824-175501-jpg",
+          "status": "draft"
+        },
+        {
+          "id": 38956,
+          "slug": "sunrise-sunset-20240908-175639-jpg",
+          "status": "draft"
+        },
+        {
+          "id": 38957,
+          "slug": "sunrise-sunset-20240909-174500-jpg",
+          "status": "draft"
+        },
+        {
+          "id": 38958,
+          "slug": "sunrise-sunset-20241124-170757-jpg",
+          "status": "draft"
+        },
+        {
+          "id": 38959,
+          "slug": "sunrise-sunset-20241124-170822-jpg",
+          "status": "draft"
+        },
+        {
+          "id": 38960,
+          "slug": "sunrise-sunset-20241124-170839-jpg",
+          "status": "draft"
+        },
+        {
+          "id": 38961,
+          "slug": "sunrise-sunset-20241124-173625-jpg",
+          "status": "draft"
+        },
+        {
+          "id": 38962,
+          "slug": "sunrise-sunset-20241124-174049-jpg",
+          "status": "draft"
+        },
+        {
+          "id": 38963,
+          "slug": "landmarks-2019-04-07-08-22-57-jpg",
+          "status": "draft"
+        },
+        {
+          "id": 38964,
+          "slug": "landmarks-2019-04-07-08-23-05-jpg",
+          "status": "draft"
+        },
+        {
+          "id": 38965,
+          "slug": "landmarks-2019-04-07-08-23-11-jpg",
+          "status": "draft"
+        },
+        {
+          "id": 38966,
+          "slug": "landmarks-2023-11-04-16-42-09-jpg",
+          "status": "draft"
+        },
+        {
+          "id": 38967,
+          "slug": "landmarks-2023-11-04-16-42-13-jpg",
+          "status": "draft"
+        },
+        {
+          "id": 38968,
+          "slug": "landmarks-2023-11-16-09-35-58-jpg",
+          "status": "draft"
+        },
+        {
+          "id": 38969,
+          "slug": "landmarks-2023-11-16-10-39-32-jpg",
+          "status": "draft"
+        },
+        {
+          "id": 38970,
+          "slug": "landmarks-2023-12-06-17-10-56-jpg",
+          "status": "draft"
+        },
+        {
+          "id": 38971,
+          "slug": "landmarks-2024-01-08-13-05-55-jpg",
+          "status": "draft"
+        },
+        {
+          "id": 38972,
+          "slug": "landmarks-2024-01-08-13-07-45-jpg",
+          "status": "draft"
+        },
+        {
+          "id": 38973,
+          "slug": "landmarks-2024-01-13-14-51-35-jpg",
+          "status": "draft"
+        },
+        {
+          "id": 38974,
+          "slug": "landmarks-2024-01-13-14-51-37-jpg",
+          "status": "draft"
+        },
+        {
+          "id": 38975,
+          "slug": "landmarks-2024-01-13-17-46-23-jpg",
+          "status": "draft"
+        },
+        {
+          "id": 38976,
+          "slug": "landmarks-2024-01-13-17-46-37-jpg",
+          "status": "draft"
+        },
+        {
+          "id": 38977,
+          "slug": "landmarks-2024-01-23-13-26-47-jpg",
+          "status": "draft"
+        },
+        {
+          "id": 38978,
+          "slug": "landmarks-2024-01-28-13-20-28-jpg",
+          "status": "draft"
+        },
+        {
+          "id": 38979,
+          "slug": "landmarks-2024-01-28-13-20-55-jpg",
+          "status": "draft"
+        },
+        {
+          "id": 38980,
+          "slug": "landmarks-2024-01-28-13-20-57-jpg",
+          "status": "draft"
+        },
+        {
+          "id": 38981,
+          "slug": "landmarks-2024-01-28-13-22-11-jpg",
+          "status": "draft"
+        },
+        {
+          "id": 38982,
+          "slug": "landmarks-2024-01-28-14-42-49-jpg",
+          "status": "draft"
+        },
+        {
+          "id": 38983,
+          "slug": "tambor-photos-2018-05-01-09-25-44-jpg",
+          "status": "draft"
+        },
+        {
+          "id": 38984,
+          "slug": "tambor-photos-2020-10-31-05-51-19-jpg",
+          "status": "draft"
+        },
+        {
+          "id": 38985,
+          "slug": "tambor-photos-2021-03-28-16-36-22-jpg",
+          "status": "draft"
+        },
+        {
+          "id": 38986,
+          "slug": "tambor-photos-2021-03-28-16-36-24-jpg",
+          "status": "draft"
+        },
+        {
+          "id": 38987,
+          "slug": "tambor-photos-2021-05-01-10-35-11-jpg",
+          "status": "draft"
+        },
+        {
+          "id": 38988,
+          "slug": "tambor-photos-2021-12-29-07-09-28-jpg",
+          "status": "draft"
+        },
+        {
+          "id": 38989,
+          "slug": "tambor-photos-2021-12-30-06-06-24-jpg",
+          "status": "draft"
+        },
+        {
+          "id": 38990,
+          "slug": "sunrise-sunset-20241201-170831-jpg",
+          "status": "draft"
+        }
+      ]
+    }
+  },
+  "status": "success"
+}

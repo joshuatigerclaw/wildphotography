@@ -1,0 +1,33 @@
+{
+  "version": "v8",
+  "timestamp": "2026-06-05T11:21:39-06:00",
+  "ts_before": -1,
+  "db_eligible": 62870,
+  "docs_parsed": 62768,
+  "parse_errors": 204,
+  "docs_added": 0,
+  "docs_removed": 0,
+  "final_ts_count": -1,
+  "final_drift": null,
+  "errors": [
+    {
+      "type": "ts_forbidden",
+      "code": 403,
+      "message": "Forbidden - if you are the admin, please visit your Typesense Cloud dashboard for additional information.",
+      "description": "Typesense Cloud cluster is returning 403 Forbidden for all API requests including health checks. The cluster is inaccessible via API.",
+      "affected_endpoint": "https://uibn03zvateqwdx2p-1.a1.typesense.net/collections/photos",
+      "api_key": "MPphr9zDlLzHRFQHDH4AyQb5hw2ugew7 (admin)"
+    },
+    {
+      "type": "ts_upsert_blocked",
+      "code": 403,
+      "count": "all",
+      "message": "All upsert attempts returned HTTP 403 Forbidden",
+      "description": "Every document upsert attempt was blocked by the 403 Forbidden response from Typesense Cloud."
+    }
+  ],
+  "blocking_issue": "Typesense Cloud cluster is inaccessible. All API requests return 403 Forbidden. The cluster may be paused, suspended, or API keys may have been invalidated.",
+  "action_required": "Check Typesense Cloud dashboard - cluster status, API key validity, and billing status. Resume cluster if paused.",
+  "ts_cluster_url": "https://cloud.typesense.cloud",
+  "ts_host": "uibn03zvateqwdx2p-1.a1.typesense.net"
+}

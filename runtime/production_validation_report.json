@@ -1,0 +1,31 @@
+{
+  "run_at": "2026-06-15T09:03:48.560758+00:00",
+  "queue_size": 1,
+  "validated": 0,
+  "skipped_incomplete": 1,
+  "requires_manual_review": 0,
+  "failed": 0,
+  "validated_records": [],
+  "skipped_records": [
+    {
+      "id": 70159,
+      "slug": "cl0a3811-0b2de824",
+      "missing": [
+        "thumb_url",
+        "small_url",
+        "medium_url",
+        "large_url",
+        "preview_url"
+      ],
+      "issues": [
+        "asset_404:thumb_url",
+        "asset_404:small_url",
+        "asset_404:medium_url",
+        "asset_404:large_url",
+        "asset_404:preview_url",
+        "seo_title_filename_based"
+      ]
+    }
+  ],
+  "manual_review_records": []
+}

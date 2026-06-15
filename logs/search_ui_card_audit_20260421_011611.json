@@ -1,0 +1,354 @@
+{
+  "run_at": "2026-04-21T07:16:11.776764+00:00",
+  "total_search_ready_photos": 32230,
+  "sample_size": 200,
+  "total_url_checks": 400,
+  "summary": {
+    "photos_ok": 182,
+    "photos_broken": 18,
+    "photos_missing_field": 0,
+    "ok_rate_pct": 91.0
+  },
+  "by_url_type": {
+    "og_image_url": {
+      "total": 200,
+      "accessible": 183,
+      "broken": 17,
+      "empty": 0
+    },
+    "thumb_url": {
+      "total": 200,
+      "accessible": 197,
+      "broken": 3,
+      "empty": 0
+    }
+  },
+  "broken_photos": {
+    "36907": {
+      "slug": "dji-0297-99eddb5d",
+      "title": "DJI 0297",
+      "gallery_slug": "isla-tortuga",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        },
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        }
+      ]
+    },
+    "35200": {
+      "slug": "peninsula-papagayo-dji-0260-49f5db88",
+      "title": "Peninsula Papagayo Aerial View",
+      "gallery_slug": "peninsula-papagayo",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "36563": {
+      "slug": "img-8493-20ed7cd2",
+      "title": "Scarlet Macaw in Flight Over Rainforest",
+      "gallery_slug": "birds-macaws-lapas",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_401"
+        },
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        }
+      ]
+    },
+    "35621": {
+      "slug": "santateresa-dji-0612-d2d37686",
+      "title": "Santa Teresa, Costa Rica | WildPhotography",
+      "gallery_slug": "santa-teresa-malpais",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        },
+        {
+          "type": "og_image_url",
+          "accessible": true,
+          "error": null
+        }
+      ]
+    },
+    "33780": {
+      "slug": "ar-hyperlapse-0135-a5280722",
+      "title": "Costa Rica Hyperlapse | WildPhotography",
+      "gallery_slug": "best-of-costa-rica",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "9019": {
+      "slug": "dji-0963-la-sabana-estadio-nacional-costa-rica-san-jose-5637",
+      "title": "La sabana estadio nacional costa rica san jose | Costa Rica Wildlife Photography by Joshua ten Brink",
+      "gallery_slug": "la-sabana-estadio-nacional-costa-rica-san-jose",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        },
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        }
+      ]
+    },
+    "35412": {
+      "slug": "rio-savagre-costa-rica-dji-0864-2ff93b7f",
+      "title": "Rio Savegre Aerial View",
+      "gallery_slug": "rio-savagre-costa-rica",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "34882": {
+      "slug": "dji-0872-b8d02cd8",
+      "title": "Peninsula de Osa Aerial View",
+      "gallery_slug": "peninsula-de-osa",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        },
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        }
+      ]
+    },
+    "9940": {
+      "slug": "dji-0157-marine-life-of-costa-rica-6558",
+      "title": "Marine life of costa rica | Costa Rica Wildlife Photography by Joshua ten Brink",
+      "gallery_slug": "marine-life-of-costa-rica",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        },
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        }
+      ]
+    },
+    "27194": {
+      "slug": "photo-127-2021-03-25 12-31-27",
+      "title": "Montezuma, Costa Rica | WildPhotography",
+      "gallery_slug": "costa-rica-gallery-montezuma-costa-rica",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": false,
+          "error": "InvalidURL"
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "37213": {
+      "slug": "2018-06-23-12-28-07-2-2e7ab80f",
+      "title": "Dark Sand Beach and Lush Forested Cliffs in Costa Rica",
+      "gallery_slug": "jaco-beach",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        },
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        }
+      ]
+    },
+    "35474": {
+      "slug": "rio-savagre-costa-rica-dji-0968-e3da0886",
+      "title": "Rio Savegre Aerial View",
+      "gallery_slug": "rio-savagre-costa-rica",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "36221": {
+      "slug": "wildlife-2023-04-06 06.53.28-912e56",
+      "title": "Variegated Squirrel Descending Tropical Palm",
+      "gallery_slug": "wildlife",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": false,
+          "error": "InvalidURL"
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "InvalidURL"
+        }
+      ]
+    },
+    "28342": {
+      "slug": "2020-06-05-11-37-07-caa78cf4",
+      "title": "._2020-06-05 11.37.07.jpg",
+      "gallery_slug": "costa-rica-gallery-rio-savagre-costa-rica",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "37072": {
+      "slug": "dji-0729-2683d566",
+      "title": "Isla Tortuga, Costa Rica",
+      "gallery_slug": "isla-tortuga",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "31010": {
+      "slug": "dji-0233-e441be07",
+      "title": "Crocodile Photography, Costa Rica",
+      "gallery_slug": "crocodiles",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "35493": {
+      "slug": "rio-savagre-costa-rica-20241019-112026-55318e6a",
+      "title": "Rio Savegre, Costa Rica | Wildphotography",
+      "gallery_slug": "rio-savagre-costa-rica",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "34785": {
+      "slug": "dji-0706-5c2b61d1",
+      "title": "Peninsula de Osa Aerial View",
+      "gallery_slug": "peninsula-de-osa",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        },
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        }
+      ]
+    }
+  },
+  "empty_url_photos": {},
+  "status": "success"
+}

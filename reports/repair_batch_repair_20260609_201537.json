@@ -1,0 +1,611 @@
+{
+  "batch_id": "repair_20260609_201537",
+  "jobs_processed": 25,
+  "repairs_completed": 75,
+  "failures": 0,
+  "items_requiring_approval": 25,
+  "approval_items": [
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 93419",
+      "slug": "dji-0298-2"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 93418",
+      "slug": "dji-0296-1"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 93417",
+      "slug": "dji-0279-1"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 93416",
+      "slug": "dji-0126-1"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 93415",
+      "slug": "dji-0101-1"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 93414",
+      "slug": "dji-0051-1"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 93413",
+      "slug": "2018-11-23-08-25-59-1"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 93412",
+      "slug": "cl0a2761"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 93411",
+      "slug": "cl0a2728"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 93410",
+      "slug": "cl0a2590"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 93409",
+      "slug": "cl0a1779"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 93408",
+      "slug": "cl0a1770"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 93407",
+      "slug": "cl0a1516"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 93406",
+      "slug": "cl0a1398"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 93405",
+      "slug": "cl0a1356-1"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 93404",
+      "slug": "cl0a1057"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 93403",
+      "slug": "cl0a1054-1"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 93402",
+      "slug": "cl0a1053"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 93401",
+      "slug": "cl0a1050-3"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 93400",
+      "slug": "cl0a0917"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 93399",
+      "slug": "cl0a0906-1"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 93398",
+      "slug": "cl0a0885"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 93397",
+      "slug": "cl0a0868"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 93396",
+      "slug": "ar-img-1605"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 93420",
+      "slug": "dji-0301-1"
+    }
+  ],
+  "results": [
+    {
+      "queue_id": 90540,
+      "photo_id": 93419,
+      "slug": "dji-0298-2",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: exists (5 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 93419",
+          "slug": "dji-0298-2"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 90541,
+      "photo_id": 93418,
+      "slug": "dji-0296-1",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: exists (5 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 93418",
+          "slug": "dji-0296-1"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 90542,
+      "photo_id": 93417,
+      "slug": "dji-0279-1",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: exists (5 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 93417",
+          "slug": "dji-0279-1"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 90543,
+      "photo_id": 93416,
+      "slug": "dji-0126-1",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: exists (5 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 93416",
+          "slug": "dji-0126-1"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 90544,
+      "photo_id": 93415,
+      "slug": "dji-0101-1",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: exists (5 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 93415",
+          "slug": "dji-0101-1"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 90545,
+      "photo_id": 93414,
+      "slug": "dji-0051-1",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: exists (5 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 93414",
+          "slug": "dji-0051-1"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 90546,
+      "photo_id": 93413,
+      "slug": "2018-11-23-08-25-59-1",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: exists (5 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 93413",
+          "slug": "2018-11-23-08-25-59-1"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 90547,
+      "photo_id": 93412,
+      "slug": "cl0a2761",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: exists (5 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 93412",
+          "slug": "cl0a2761"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 90548,
+      "photo_id": 93411,
+      "slug": "cl0a2728",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: exists (5 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 93411",
+          "slug": "cl0a2728"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 90549,
+      "photo_id": 93410,
+      "slug": "cl0a2590",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: exists (5 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 93410",
+          "slug": "cl0a2590"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 90550,
+      "photo_id": 93409,
+      "slug": "cl0a1779",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: exists (5 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 93409",
+          "slug": "cl0a1779"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 90551,
+      "photo_id": 93408,
+      "slug": "cl0a1770",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: exists (5 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 93408",
+          "slug": "cl0a1770"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 90552,
+      "photo_id": 93407,
+      "slug": "cl0a1516",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: exists (5 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 93407",
+          "slug": "cl0a1516"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 90553,
+      "photo_id": 93406,
+      "slug": "cl0a1398",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: exists (5 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 93406",
+          "slug": "cl0a1398"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 90554,
+      "photo_id": 93405,
+      "slug": "cl0a1356-1",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: exists (5 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 93405",
+          "slug": "cl0a1356-1"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 90555,
+      "photo_id": 93404,
+      "slug": "cl0a1057",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: exists (5 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 93404",
+          "slug": "cl0a1057"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 90556,
+      "photo_id": 93403,
+      "slug": "cl0a1054-1",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: exists (5 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 93403",
+          "slug": "cl0a1054-1"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 90557,
+      "photo_id": 93402,
+      "slug": "cl0a1053",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: exists (5 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 93402",
+          "slug": "cl0a1053"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 90558,
+      "photo_id": 93401,
+      "slug": "cl0a1050-3",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: exists (5 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 93401",
+          "slug": "cl0a1050-3"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 90559,
+      "photo_id": 93400,
+      "slug": "cl0a0917",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: exists (5 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 93400",
+          "slug": "cl0a0917"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 90560,
+      "photo_id": 93399,
+      "slug": "cl0a0906-1",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: exists (5 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 93399",
+          "slug": "cl0a0906-1"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 90561,
+      "photo_id": 93398,
+      "slug": "cl0a0885",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: exists (5 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 93398",
+          "slug": "cl0a0885"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 90562,
+      "photo_id": 93397,
+      "slug": "cl0a0868",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: exists (5 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 93397",
+          "slug": "cl0a0868"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 90563,
+      "photo_id": 93396,
+      "slug": "ar-img-1605",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: exists (5 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 93396",
+          "slug": "ar-img-1605"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 90539,
+      "photo_id": 93420,
+      "slug": "dji-0301-1",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: exists (5 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 93420",
+          "slug": "dji-0301-1"
+        }
+      ],
+      "status": "completed"
+    }
+  ]
+}

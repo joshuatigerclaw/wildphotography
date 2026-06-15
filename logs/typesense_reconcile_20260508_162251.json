@@ -1,0 +1,15 @@
+{
+  "eligible_db_count": 37056,
+  "typesense_count_before": 38690,
+  "stale_removed": 1736,
+  "missing_added": 101,
+  "failed": 1,
+  "failed_ids": [
+    "47292"
+  ],
+  "typesense_count_after": 38791,
+  "final_drift": 1735,
+  "status": "partial",
+  "duration_seconds": 110.1,
+  "timestamp": "2026-05-08T16:22:51.213468+00:00"
+}

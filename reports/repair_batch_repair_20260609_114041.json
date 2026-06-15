@@ -1,0 +1,611 @@
+{
+  "batch_id": "repair_20260609_114041",
+  "jobs_processed": 25,
+  "repairs_completed": 75,
+  "failures": 0,
+  "items_requiring_approval": 25,
+  "approval_items": [
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 87206",
+      "slug": "south-america-peru-bcf7ae98"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 14907",
+      "slug": "resplendent-quetzal-2"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 65915",
+      "slug": "dji-0205-beaches"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 87133",
+      "slug": "cl0a5327-1"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 87140",
+      "slug": "cl0a5520-1"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 87143",
+      "slug": "south-america-peru-2eb9a822"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 87146",
+      "slug": "cl0a6321-1"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 87195",
+      "slug": "south-america-peru-075bbdc1"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 88295",
+      "slug": "2019-04-03-12-01-21-020a5857"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 87214",
+      "slug": "south-america-peru-fe58ce41"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 243",
+      "slug": "hermosa-beach-2"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 87137",
+      "slug": "cl0a5445-1"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 87177",
+      "slug": "dji-0049-1"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 87130",
+      "slug": "cl0a5289-1"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 87156",
+      "slug": "south-america-peru-4a2da44d"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 87174",
+      "slug": "south-america-peru-d9077754"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 88924",
+      "slug": "costa-rica-gallery-peninsula-papagayo-dji-0875-6de867"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 87605",
+      "slug": "punta-leona-5a34e71a"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 89098",
+      "slug": "santa-teresa-malpais-dji-0788-31ddf7"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 87461",
+      "slug": "punta-leona-4d116540"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 88271",
+      "slug": "img-7631-5d598b55"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 88278",
+      "slug": "2019-04-02-19-15-44-1-3135ffff"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 88895",
+      "slug": "costa-rica-gallery-peninsula-papagayo-dji-0821-067c3f"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 89087",
+      "slug": "santa-teresa-malpais-dji-0759-2648c4"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 87215",
+      "slug": "dji-0112-1"
+    }
+  ],
+  "results": [
+    {
+      "queue_id": 89415,
+      "photo_id": 87206,
+      "slug": "south-america-peru-bcf7ae98",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 87206",
+          "slug": "south-america-peru-bcf7ae98"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 89416,
+      "photo_id": 14907,
+      "slug": "resplendent-quetzal-2",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 14907",
+          "slug": "resplendent-quetzal-2"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 89417,
+      "photo_id": 65915,
+      "slug": "dji-0205-beaches",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 65915",
+          "slug": "dji-0205-beaches"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 89418,
+      "photo_id": 87133,
+      "slug": "cl0a5327-1",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 87133",
+          "slug": "cl0a5327-1"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 89419,
+      "photo_id": 87140,
+      "slug": "cl0a5520-1",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 87140",
+          "slug": "cl0a5520-1"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 89420,
+      "photo_id": 87143,
+      "slug": "south-america-peru-2eb9a822",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 87143",
+          "slug": "south-america-peru-2eb9a822"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 89421,
+      "photo_id": 87146,
+      "slug": "cl0a6321-1",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 87146",
+          "slug": "cl0a6321-1"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 89422,
+      "photo_id": 87195,
+      "slug": "south-america-peru-075bbdc1",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 87195",
+          "slug": "south-america-peru-075bbdc1"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 89423,
+      "photo_id": 88295,
+      "slug": "2019-04-03-12-01-21-020a5857",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 88295",
+          "slug": "2019-04-03-12-01-21-020a5857"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 89424,
+      "photo_id": 87214,
+      "slug": "south-america-peru-fe58ce41",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 87214",
+          "slug": "south-america-peru-fe58ce41"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 89425,
+      "photo_id": 243,
+      "slug": "hermosa-beach-2",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 243",
+          "slug": "hermosa-beach-2"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 89426,
+      "photo_id": 87137,
+      "slug": "cl0a5445-1",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 87137",
+          "slug": "cl0a5445-1"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 89427,
+      "photo_id": 87177,
+      "slug": "dji-0049-1",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 87177",
+          "slug": "dji-0049-1"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 89428,
+      "photo_id": 87130,
+      "slug": "cl0a5289-1",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 87130",
+          "slug": "cl0a5289-1"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 89429,
+      "photo_id": 87156,
+      "slug": "south-america-peru-4a2da44d",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 87156",
+          "slug": "south-america-peru-4a2da44d"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 89430,
+      "photo_id": 87174,
+      "slug": "south-america-peru-d9077754",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 87174",
+          "slug": "south-america-peru-d9077754"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 89431,
+      "photo_id": 88924,
+      "slug": "costa-rica-gallery-peninsula-papagayo-dji-0875-6de867",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 88924",
+          "slug": "costa-rica-gallery-peninsula-papagayo-dji-0875-6de867"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 89432,
+      "photo_id": 87605,
+      "slug": "punta-leona-5a34e71a",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 87605",
+          "slug": "punta-leona-5a34e71a"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 89433,
+      "photo_id": 89098,
+      "slug": "santa-teresa-malpais-dji-0788-31ddf7",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 89098",
+          "slug": "santa-teresa-malpais-dji-0788-31ddf7"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 89434,
+      "photo_id": 87461,
+      "slug": "punta-leona-4d116540",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 87461",
+          "slug": "punta-leona-4d116540"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 89435,
+      "photo_id": 88271,
+      "slug": "img-7631-5d598b55",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 88271",
+          "slug": "img-7631-5d598b55"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 89436,
+      "photo_id": 88278,
+      "slug": "2019-04-02-19-15-44-1-3135ffff",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 88278",
+          "slug": "2019-04-02-19-15-44-1-3135ffff"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 89437,
+      "photo_id": 88895,
+      "slug": "costa-rica-gallery-peninsula-papagayo-dji-0821-067c3f",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 88895",
+          "slug": "costa-rica-gallery-peninsula-papagayo-dji-0821-067c3f"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 89438,
+      "photo_id": 89087,
+      "slug": "santa-teresa-malpais-dji-0759-2648c4",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 89087",
+          "slug": "santa-teresa-malpais-dji-0759-2648c4"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 89414,
+      "photo_id": 87215,
+      "slug": "dji-0112-1",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 87215",
+          "slug": "dji-0112-1"
+        }
+      ],
+      "status": "completed"
+    }
+  ]
+}

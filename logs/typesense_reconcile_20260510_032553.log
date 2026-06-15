@@ -1,0 +1,10 @@
+[reconcile] Starting Typesense reconcile v3 (individual upserts)
+[reconcile] Connected to Neon
+[reconcile] Eligible DB IDs loaded: 37522
+[reconcile] Exporting Typesense document IDs…
+[reconcile]   Typesense IDs loaded: 16767
+[reconcile]   Stale (TS only):    0
+[reconcile]   Missing (DB only): 20755
+[reconcile]   Capping to 500 per run
+[reconcile]   Processing 500 capped IDs
+[reconcile]   Fetched 500 full records from DB

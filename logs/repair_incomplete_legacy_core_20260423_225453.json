@@ -1,0 +1,905 @@
+{
+  "run_at": "2026-04-24T04:54:53.623051+00:00",
+  "total_photos": 34351,
+  "distinct_affected_photos": 792,
+  "all_clear": false,
+  "issues": {
+    "missing_original_r2_key": {
+      "description": "Missing original R2 storage key \u2014 cannot rebuild derivatives",
+      "count": 2,
+      "sample": [
+        {
+          "id": 38874,
+          "slug": "water-sports-and-surfing-cl0a1930-788ab556",
+          "status": "draft",
+          "updated_at": "2026-04-21T08:44:09.610334"
+        },
+        {
+          "id": 38875,
+          "slug": "water-sports-and-surfing-img-9967-2-be35de8a",
+          "status": "draft",
+          "updated_at": "2026-04-21T08:44:09.386749"
+        }
+      ]
+    },
+    "pending_derivatives_with_r2": {
+      "description": "Has R2 original but derivatives_complete=false \u2014 needs rebuild dispatch",
+      "count": 92,
+      "sample": [
+        {
+          "id": 36144,
+          "slug": "montezuma-costa-rica-DJI_0067-f3899a",
+          "status": "active",
+          "original_r2_key": "photos/60/montezuma-costa-rica-DJI_0067-f3899a/original.jpg"
+        },
+        {
+          "id": 36145,
+          "slug": "montezuma-costa-rica-DJI_0069-4001ea",
+          "status": "active",
+          "original_r2_key": "photos/60/montezuma-costa-rica-DJI_0069-4001ea/original.jpg"
+        },
+        {
+          "id": 36147,
+          "slug": "montezuma-costa-rica-DJI_0071-dae36f",
+          "status": "active",
+          "original_r2_key": "photos/60/montezuma-costa-rica-DJI_0071-dae36f/original.jpg"
+        },
+        {
+          "id": 36148,
+          "slug": "montezuma-costa-rica-DJI_0076-c5de82",
+          "status": "active",
+          "original_r2_key": "photos/60/montezuma-costa-rica-DJI_0076-c5de82/original.jpg"
+        },
+        {
+          "id": 36149,
+          "slug": "montezuma-costa-rica-DJI_0078-e20b31",
+          "status": "active",
+          "original_r2_key": "photos/60/montezuma-costa-rica-DJI_0078-e20b31/original.jpg"
+        },
+        {
+          "id": 36150,
+          "slug": "montezuma-costa-rica-DJI_0080-e9d2d6",
+          "status": "active",
+          "original_r2_key": "photos/60/montezuma-costa-rica-DJI_0080-e9d2d6/original.jpg"
+        },
+        {
+          "id": 36152,
+          "slug": "montezuma-costa-rica-DJI_0088-df537c",
+          "status": "active",
+          "original_r2_key": "photos/60/montezuma-costa-rica-DJI_0088-df537c/original.jpg"
+        },
+        {
+          "id": 36153,
+          "slug": "montezuma-costa-rica-DJI_0089-dd6e5d",
+          "status": "active",
+          "original_r2_key": "photos/60/montezuma-costa-rica-DJI_0089-dd6e5d/original.jpg"
+        },
+        {
+          "id": 36154,
+          "slug": "montezuma-costa-rica-DJI_0090-ddeeb1",
+          "status": "active",
+          "original_r2_key": "photos/60/montezuma-costa-rica-DJI_0090-ddeeb1/original.jpg"
+        },
+        {
+          "id": 36155,
+          "slug": "montezuma-costa-rica-DJI_0094-eb1391",
+          "status": "active",
+          "original_r2_key": "photos/60/montezuma-costa-rica-DJI_0094-eb1391/original.jpg"
+        },
+        {
+          "id": 36158,
+          "slug": "montezuma-costa-rica-DJI_0108-4f0314",
+          "status": "active",
+          "original_r2_key": "photos/60/montezuma-costa-rica-DJI_0108-4f0314/original.jpg"
+        },
+        {
+          "id": 36194,
+          "slug": "playa-hermosa-guanacaste-20250425_113435-edad9d",
+          "status": "active",
+          "original_r2_key": "photos/70/playa-hermosa-guanacaste-20250425_113435-edad9d/original.jpg"
+        },
+        {
+          "id": 36195,
+          "slug": "playa-hermosa-guanacaste-20250425_130428-9610ca",
+          "status": "active",
+          "original_r2_key": "photos/70/playa-hermosa-guanacaste-20250425_130428-9610ca/original.jpg"
+        },
+        {
+          "id": 36196,
+          "slug": "playa-hermosa-guanacaste-20250425_130617-c37538",
+          "status": "active",
+          "original_r2_key": "photos/70/playa-hermosa-guanacaste-20250425_130617-c37538/original.jpg"
+        },
+        {
+          "id": 36197,
+          "slug": "playa-hermosa-guanacaste-20250425_131657-7bc820",
+          "status": "active",
+          "original_r2_key": "photos/70/playa-hermosa-guanacaste-20250425_131657-7bc820/original.jpg"
+        },
+        {
+          "id": 36198,
+          "slug": "playa-hermosa-guanacaste-20250425_155545(0)-0b3707",
+          "status": "active",
+          "original_r2_key": "photos/70/playa-hermosa-guanacaste-20250425_155545(0)-0b3707/original.jpg"
+        },
+        {
+          "id": 36199,
+          "slug": "playa-hermosa-guanacaste-20250425_155545-967b41",
+          "status": "active",
+          "original_r2_key": "photos/70/playa-hermosa-guanacaste-20250425_155545-967b41/original.jpg"
+        },
+        {
+          "id": 36201,
+          "slug": "playa-hermosa-guanacaste-20250425_165524-c5e691",
+          "status": "active",
+          "original_r2_key": "photos/70/playa-hermosa-guanacaste-20250425_165524-c5e691/original.jpg"
+        },
+        {
+          "id": 36203,
+          "slug": "playa-hermosa-guanacaste-20250425_170836-ef4746",
+          "status": "active",
+          "original_r2_key": "photos/70/playa-hermosa-guanacaste-20250425_170836-ef4746/original.jpg"
+        },
+        {
+          "id": 36204,
+          "slug": "playa-hermosa-guanacaste-20250425_171041-cd4d83",
+          "status": "active",
+          "original_r2_key": "photos/70/playa-hermosa-guanacaste-20250425_171041-cd4d83/original.jpg"
+        },
+        {
+          "id": 36205,
+          "slug": "playa-hermosa-guanacaste-20250425_171150-cc599d",
+          "status": "active",
+          "original_r2_key": "photos/70/playa-hermosa-guanacaste-20250425_171150-cc599d/original.jpg"
+        },
+        {
+          "id": 36206,
+          "slug": "playa-hermosa-guanacaste-20250425_171200-059d13",
+          "status": "active",
+          "original_r2_key": "photos/70/playa-hermosa-guanacaste-20250425_171200-059d13/original.jpg"
+        },
+        {
+          "id": 36207,
+          "slug": "playa-hermosa-guanacaste-20250425_171247-8427ef",
+          "status": "active",
+          "original_r2_key": "photos/70/playa-hermosa-guanacaste-20250425_171247-8427ef/original.jpg"
+        },
+        {
+          "id": 36208,
+          "slug": "playa-hermosa-guanacaste-20250425_171325-271f2c",
+          "status": "active",
+          "original_r2_key": "photos/70/playa-hermosa-guanacaste-20250425_171325-271f2c/original.jpg"
+        },
+        {
+          "id": 36209,
+          "slug": "playa-hermosa-guanacaste-20250425_171546-bd5489",
+          "status": "active",
+          "original_r2_key": "photos/70/playa-hermosa-guanacaste-20250425_171546-bd5489/original.jpg"
+        },
+        {
+          "id": 36210,
+          "slug": "playa-hermosa-guanacaste-20250425_171631-525b88",
+          "status": "active",
+          "original_r2_key": "photos/70/playa-hermosa-guanacaste-20250425_171631-525b88/original.jpg"
+        },
+        {
+          "id": 36211,
+          "slug": "playa-hermosa-guanacaste-20250425_171643(1)-28ee55",
+          "status": "active",
+          "original_r2_key": "photos/70/playa-hermosa-guanacaste-20250425_171643(1)-28ee55/original.jpg"
+        },
+        {
+          "id": 36212,
+          "slug": "playa-hermosa-guanacaste-20250425_171649(0)-b4e4c9",
+          "status": "active",
+          "original_r2_key": "photos/70/playa-hermosa-guanacaste-20250425_171649(0)-b4e4c9/original.jpg"
+        },
+        {
+          "id": 36213,
+          "slug": "playa-hermosa-guanacaste-20250425_171651-05f24b",
+          "status": "active",
+          "original_r2_key": "photos/70/playa-hermosa-guanacaste-20250425_171651-05f24b/original.jpg"
+        },
+        {
+          "id": 36214,
+          "slug": "playa-hermosa-guanacaste-20250425_171719-81e3a4",
+          "status": "active",
+          "original_r2_key": "photos/70/playa-hermosa-guanacaste-20250425_171719-81e3a4/original.jpg"
+        },
+        {
+          "id": 36215,
+          "slug": "playa-hermosa-guanacaste-20250425_171733-624557",
+          "status": "active",
+          "original_r2_key": "photos/70/playa-hermosa-guanacaste-20250425_171733-624557/original.jpg"
+        },
+        {
+          "id": 36216,
+          "slug": "playa-hermosa-guanacaste-20250425_171909-a09efb",
+          "status": "active",
+          "original_r2_key": "photos/70/playa-hermosa-guanacaste-20250425_171909-a09efb/original.jpg"
+        },
+        {
+          "id": 36217,
+          "slug": "playa-hermosa-guanacaste-20250425_171924-108c8d",
+          "status": "active",
+          "original_r2_key": "photos/70/playa-hermosa-guanacaste-20250425_171924-108c8d/original.jpg"
+        },
+        {
+          "id": 36218,
+          "slug": "playa-hermosa-guanacaste-20250425_171942-eceea4",
+          "status": "active",
+          "original_r2_key": "photos/70/playa-hermosa-guanacaste-20250425_171942-eceea4/original.jpg"
+        },
+        {
+          "id": 38028,
+          "slug": "DJI0184-d2e6e119",
+          "status": "draft",
+          "original_r2_key": "lifestyle/originals/DJI0184_d2e6e119.mp4"
+        },
+        {
+          "id": 38458,
+          "slug": "punta-leona-dji-0240-jpg",
+          "status": "active",
+          "original_r2_key": "originals/80/punta-leona-dji-0240-jpg/DJI_0240.jpg"
+        },
+        {
+          "id": 38468,
+          "slug": "santa-teresa-malpais-dji-0449-jpg",
+          "status": "active",
+          "original_r2_key": "originals/91/santa-teresa-malpais-dji-0449-jpg/DJI_0449.JPG"
+        },
+        {
+          "id": 38470,
+          "slug": "santa-teresa-malpais-dji-0503-jpg",
+          "status": "active",
+          "original_r2_key": "originals/91/santa-teresa-malpais-dji-0503-jpg/DJI_0503.JPG"
+        },
+        {
+          "id": 38513,
+          "slug": "punta-leona-dji-0291-jpg",
+          "status": "active",
+          "original_r2_key": "originals/80/punta-leona-dji-0291-jpg/DJI_0291.JPG"
+        },
+        {
+          "id": 38520,
+          "slug": "santa-teresa-malpais-dji-0588-jpg",
+          "status": "active",
+          "original_r2_key": "originals/91/santa-teresa-malpais-dji-0588-jpg/DJI_0588.JPG"
+        },
+        {
+          "id": 38521,
+          "slug": "santa-teresa-malpais-dji-0590-jpg",
+          "status": "active",
+          "original_r2_key": "originals/91/santa-teresa-malpais-dji-0590-jpg/DJI_0590.JPG"
+        },
+        {
+          "id": 38525,
+          "slug": "santa-teresa-malpais-dji-0596-jpg",
+          "status": "active",
+          "original_r2_key": "originals/91/santa-teresa-malpais-dji-0596-jpg/DJI_0596.JPG"
+        },
+        {
+          "id": 38527,
+          "slug": "santa-teresa-malpais-dji-0600-jpg",
+          "status": "active",
+          "original_r2_key": "originals/91/santa-teresa-malpais-dji-0600-jpg/DJI_0600.JPG"
+        },
+        {
+          "id": 38534,
+          "slug": "santa-teresa-malpais-dji-0652-jpg",
+          "status": "active",
+          "original_r2_key": "originals/91/santa-teresa-malpais-dji-0652-jpg/DJI_0652.JPG"
+        },
+        {
+          "id": 38537,
+          "slug": "costa-rica-gallery-beaches-2016-01-13-12-58-06-jpg",
+          "status": "active",
+          "original_r2_key": "originals/110/costa-rica-gallery-beaches-2016-01-13-12-58-06-jpg/2016-01-13 12.58.06.jpg"
+        },
+        {
+          "id": 38539,
+          "slug": "costa-rica-gallery-beaches-2016-12-29-12-25-35-jpg",
+          "status": "active",
+          "original_r2_key": "originals/110/costa-rica-gallery-beaches-2016-12-29-12-25-35-jpg/2016-12-29 12.25.35.jpg"
+        },
+        {
+          "id": 38553,
+          "slug": "isla-tortuga-dji-0734-jpg",
+          "status": "active",
+          "original_r2_key": "originals/47/isla-tortuga-dji-0734-jpg/DJI_0734.JPG"
+        },
+        {
+          "id": 38555,
+          "slug": "isla-tortuga-dji-0739-jpg",
+          "status": "active",
+          "original_r2_key": "originals/47/isla-tortuga-dji-0739-jpg/DJI_0739.JPG"
+        },
+        {
+          "id": 38565,
+          "slug": "punta-leona-dji-0312-jpg",
+          "status": "active",
+          "original_r2_key": "originals/80/punta-leona-dji-0312-jpg/DJI_0312.JPG"
+        },
+        {
+          "id": 38567,
+          "slug": "punta-leona-dji-0322-jpg",
+          "status": "active",
+          "original_r2_key": "originals/80/punta-leona-dji-0322-jpg/DJI_0322.JPG"
+        }
+      ]
+    },
+    "render_ready_not_search_ready": {
+      "description": "ready_for_public_render=true but search_ready=false \u2014 blocked from Typesense",
+      "count": 0,
+      "sample": []
+    },
+    "missing_content_hash": {
+      "description": "No content_hash \u2014 cannot detect duplicates or verify integrity",
+      "count": 15586,
+      "sample": [
+        {
+          "id": 42,
+          "slug": "paddleboarding-adventure-on-a-tropical-coast-9kLkq4",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 44,
+          "slug": "img-9761-jpg-McvJMD",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 45,
+          "slug": "img-9867-jpg-ggnxV4",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 46,
+          "slug": "img-0133-jpg-t25Tbt",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 47,
+          "slug": "img-0148-jpg-WgXJsL",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 48,
+          "slug": "img-0135-jpg-x8LCKP",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 49,
+          "slug": "img-0154-jpg-P4g3jH",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 50,
+          "slug": "costa-rica-billabong-surf-2009-5QgMNB",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 51,
+          "slug": "img-0280-jpg-WR6t7s",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 52,
+          "slug": "costa-rica-billabong-surf-2009-PSWCnj",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 53,
+          "slug": "img-9578-jpg-CWp24N",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 54,
+          "slug": "img-9644-jpg-HCxCGn",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 55,
+          "slug": "img-3491-jpg-jHd5JG",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 56,
+          "slug": "img-6629-jpg-dqMnVs",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 57,
+          "slug": "img-0332-jpg-rSSd5X",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 58,
+          "slug": "img-6632-jpg-sTd7RM",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 59,
+          "slug": "img-0341-jpg-kZ3chM",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 60,
+          "slug": "img-9672-jpg-HSKLKj",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 61,
+          "slug": "img-9584-jpg-F3ffkg",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 62,
+          "slug": "img-9468-jpg-pQpxCC",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 63,
+          "slug": "img-9572-jpg-TC4cZc",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 64,
+          "slug": "img-9600-jpg-ZsctXJ",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 65,
+          "slug": "img-9717-jpg-7ZKCZv",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 66,
+          "slug": "img-9723-jpg-qsxkCW",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 67,
+          "slug": "img-9890-jpg-zBSPgj",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 68,
+          "slug": "img-9902-jpg-JwSZbr",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 69,
+          "slug": "img-9843-jpg-hxpDkp",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 71,
+          "slug": "img-9919-jpg-DXrP87",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 72,
+          "slug": "img-0021-jpg-GkKRzD",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 73,
+          "slug": "img-0235-jpg-9sPXtp",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 74,
+          "slug": "img-0236-jpg-S2T7WR",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 75,
+          "slug": "img-0238-jpg-ZGvNtp",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 76,
+          "slug": "img-0277-jpg-qt4QV8",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 77,
+          "slug": "img-0325-jpg-fmv7Qf",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 78,
+          "slug": "img-3493-jpg-gG4vff",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 79,
+          "slug": "img-5305-jpg-R4sG6V",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 80,
+          "slug": "img-2089-jpg-pnr28M",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 81,
+          "slug": "img-3478-jpg-BWjWP9",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 82,
+          "slug": "img-2099-jpg-4gf3qq",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 83,
+          "slug": "img-5307-jpg-CrgJfq",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 84,
+          "slug": "img-5426-jpg-jmdgbW",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 85,
+          "slug": "img-5373-jpg-SZQs9D",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 86,
+          "slug": "20160903-141053-jpg-zLDgJD",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 87,
+          "slug": "img-2084-jpg-DRShDG",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 88,
+          "slug": "img-2110-jpg-TxcVfN",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 89,
+          "slug": "img-2088-jpg-49xTs2",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 90,
+          "slug": "img-2098-jpg-72bZT5",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 91,
+          "slug": "img-2175-jpg-qRTw8D",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 92,
+          "slug": "img-3437-jpg-PLSc2W",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 93,
+          "slug": "img-3495-jpg-sPk7r8",
+          "status": "legacy_static",
+          "has_r2": true
+        }
+      ]
+    },
+    "missing_slug": {
+      "description": "Null or empty slug \u2014 cannot build public URL",
+      "count": 0,
+      "sample": []
+    },
+    "missing_gallery_slug": {
+      "description": "ready_for_public_render=true but gallery_slug is null \u2014 no gallery association",
+      "count": 2179,
+      "sample": [
+        {
+          "id": 242,
+          "slug": "hermosa-beach-1",
+          "status": "archived"
+        },
+        {
+          "id": 14905,
+          "slug": "resplendent-quetzal",
+          "status": "archived"
+        },
+        {
+          "id": 38439,
+          "slug": "punta-leona-dji-0202-jpg",
+          "status": "active"
+        },
+        {
+          "id": 38440,
+          "slug": "punta-leona-dji-0205-jpg",
+          "status": "active"
+        },
+        {
+          "id": 38441,
+          "slug": "punta-leona-dji-0207-jpg",
+          "status": "active"
+        },
+        {
+          "id": 38442,
+          "slug": "punta-leona-dji-0213-jpg",
+          "status": "active"
+        },
+        {
+          "id": 38443,
+          "slug": "punta-leona-dji-0214-jpg",
+          "status": "active"
+        },
+        {
+          "id": 38444,
+          "slug": "punta-leona-dji-0216-jpg",
+          "status": "active"
+        },
+        {
+          "id": 38445,
+          "slug": "punta-leona-dji-0218-jpg",
+          "status": "active"
+        },
+        {
+          "id": 38446,
+          "slug": "punta-leona-dji-0219-jpg",
+          "status": "active"
+        },
+        {
+          "id": 38447,
+          "slug": "punta-leona-dji-0223-jpg",
+          "status": "active"
+        },
+        {
+          "id": 38448,
+          "slug": "punta-leona-dji-0226-jpg",
+          "status": "active"
+        },
+        {
+          "id": 38449,
+          "slug": "punta-leona-dji-0227-jpg",
+          "status": "active"
+        },
+        {
+          "id": 38450,
+          "slug": "punta-leona-dji-0228-jpg",
+          "status": "active"
+        },
+        {
+          "id": 38451,
+          "slug": "punta-leona-dji-0230-jpg",
+          "status": "active"
+        },
+        {
+          "id": 38452,
+          "slug": "punta-leona-dji-0231-jpg",
+          "status": "active"
+        },
+        {
+          "id": 38453,
+          "slug": "punta-leona-dji-0233-jpg",
+          "status": "active"
+        },
+        {
+          "id": 38454,
+          "slug": "punta-leona-dji-0234-jpg",
+          "status": "active"
+        },
+        {
+          "id": 38455,
+          "slug": "punta-leona-dji-0235-jpg",
+          "status": "active"
+        },
+        {
+          "id": 38456,
+          "slug": "punta-leona-dji-0237-2-jpg",
+          "status": "active"
+        },
+        {
+          "id": 38457,
+          "slug": "punta-leona-dji-0237-jpg",
+          "status": "active"
+        },
+        {
+          "id": 38459,
+          "slug": "santa-teresa-malpais-dji-0091-jpg",
+          "status": "active"
+        },
+        {
+          "id": 38460,
+          "slug": "santa-teresa-malpais-dji-0100-jpg",
+          "status": "active"
+        },
+        {
+          "id": 38461,
+          "slug": "santa-teresa-malpais-dji-0112-jpg",
+          "status": "active"
+        },
+        {
+          "id": 38462,
+          "slug": "santa-teresa-malpais-dji-0115-jpg",
+          "status": "active"
+        },
+        {
+          "id": 38463,
+          "slug": "santa-teresa-malpais-dji-0118b-jpg",
+          "status": "active"
+        },
+        {
+          "id": 38466,
+          "slug": "santa-teresa-malpais-dji-0388-jpg",
+          "status": "active"
+        },
+        {
+          "id": 38467,
+          "slug": "santa-teresa-malpais-dji-0431-jpg",
+          "status": "active"
+        },
+        {
+          "id": 38469,
+          "slug": "santa-teresa-malpais-dji-0486-jpg",
+          "status": "active"
+        },
+        {
+          "id": 38471,
+          "slug": "santa-teresa-malpais-dji-0536-jpg",
+          "status": "active"
+        },
+        {
+          "id": 38472,
+          "slug": "santa-teresa-malpais-dji-0548-jpg",
+          "status": "active"
+        },
+        {
+          "id": 38473,
+          "slug": "santa-teresa-malpais-dji-0549-jpg",
+          "status": "active"
+        },
+        {
+          "id": 38474,
+          "slug": "santa-teresa-malpais-dji-0577-jpg",
+          "status": "active"
+        },
+        {
+          "id": 38475,
+          "slug": "santa-teresa-malpais-dji-0578-jpg",
+          "status": "active"
+        },
+        {
+          "id": 38476,
+          "slug": "isla-tortuga-dji-0555-1-jpg",
+          "status": "active"
+        },
+        {
+          "id": 38478,
+          "slug": "isla-tortuga-dji-0561-jpg",
+          "status": "active"
+        },
+        {
+          "id": 38479,
+          "slug": "isla-tortuga-dji-0563-jpg",
+          "status": "active"
+        },
+        {
+          "id": 38480,
+          "slug": "isla-tortuga-dji-0568-jpg",
+          "status": "active"
+        },
+        {
+          "id": 38482,
+          "slug": "isla-tortuga-dji-0575-jpg",
+          "status": "active"
+        },
+        {
+          "id": 38484,
+          "slug": "isla-tortuga-dji-0597-jpg",
+          "status": "active"
+        },
+        {
+          "id": 38485,
+          "slug": "isla-tortuga-dji-0601-jpg",
+          "status": "active"
+        },
+        {
+          "id": 38486,
+          "slug": "isla-tortuga-dji-0612-jpg",
+          "status": "active"
+        },
+        {
+          "id": 38487,
+          "slug": "isla-tortuga-dji-0614-2-jpg",
+          "status": "active"
+        },
+        {
+          "id": 38488,
+          "slug": "isla-tortuga-dji-0617-2-jpg",
+          "status": "active"
+        },
+        {
+          "id": 38490,
+          "slug": "isla-tortuga-dji-0694-jpg",
+          "status": "active"
+        },
+        {
+          "id": 38492,
+          "slug": "isla-tortuga-dji-0699-jpg",
+          "status": "active"
+        },
+        {
+          "id": 38493,
+          "slug": "isla-tortuga-dji-0701-jpg",
+          "status": "active"
+        },
+        {
+          "id": 38494,
+          "slug": "isla-tortuga-dji-0704-jpg",
+          "status": "active"
+        },
+        {
+          "id": 38495,
+          "slug": "isla-tortuga-dji-0706-jpg",
+          "status": "active"
+        },
+        {
+          "id": 38496,
+          "slug": "punta-leona-dji-0241-jpg",
+          "status": "active"
+        }
+      ]
+    }
+  },
+  "status": "success"
+}

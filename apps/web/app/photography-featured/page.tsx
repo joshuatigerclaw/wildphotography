@@ -8,16 +8,16 @@ const dbUrl = process.env.DATABASE_URL ||
   'postgresql://neondb_owner:npg_BvF2JsQ8drba@ep-calm-fire-ad0dfnqd-pooler.c-2.us-east-1.aws.neon.tech/wildphotography?sslmode=require';
 
 export const metadata: Metadata = {
-  title: 'Websites Featuring Photography by Joshua ten Brink',
+  title: 'Joshua ten Brink — Featured in Global Media',
   description:
-    'Public websites and publications where photography by Joshua ten Brink has been credited or featured.',
+    "Joshua ten Brink's photography featured across National Geographic, Travel + Leisure, Matador Network, and other global publications.",
   alternates: {
     canonical: `${SITE_URL}/photography-featured`,
   },
   openGraph: {
-    title: 'Websites Featuring Photography by Joshua ten Brink',
+    title: 'Joshua ten Brink — Featured in Global Media',
     description:
-      'Public websites and publications where photography by Joshua ten Brink has been credited or featured.',
+      "Joshua ten Brink's photography featured across National Geographic, Travel + Leisure, Matador Network, and other global publications.",
     url: `${SITE_URL}/photography-featured`,
   },
 };
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
 export default async function PhotographyFeaturedPage() {
   const sql = neon(dbUrl);
   const credits = await sql(`
-    SELECT site_name, article_title, source_url, domain, first_found_at
+    SELECT site_name, article_title, source_url, domain, photography_type, first_found_at
     FROM photo_usage_credits
     WHERE status = 'verified' AND published = true
     ORDER BY site_name ASC, article_title ASC
@@ -37,14 +37,13 @@ export default async function PhotographyFeaturedPage() {
     '@graph': [
       {
         '@type': 'WebPage',
-        name: 'Websites Featuring Photography by Joshua ten Brink',
+        name: 'Joshua ten Brink — Featured in Global Media',
         url: `${SITE_URL}/photography-featured`,
         description:
-          'Public websites and publications where photography by Joshua ten Brink has been credited or featured.',
-        about: 'Joshua ten Brink photography credits',
+          "Joshua ten Brink's photography featured across National Geographic, Travel + Leisure, Matador Network, and other global publications.",
         mainEntity: {
           '@type': 'ItemList',
-          name: 'Websites Featuring Photography by Joshua ten Brink',
+          name: 'Photography credits across global media',
           itemListElement: credits.map((c, i) => ({
             '@type': 'ListItem',
             position: i + 1,
@@ -80,7 +79,7 @@ export default async function PhotographyFeaturedPage() {
           {
             '@type': 'ListItem',
             position: 2,
-            name: 'Photography Featured',
+            name: 'Featured in Media',
             item: `${SITE_URL}/photography-featured`,
           },
         ],
@@ -138,7 +137,7 @@ export default async function PhotographyFeaturedPage() {
               </a>
             </li>
             <li>/</li>
-            <li style={{ color: 'var(--accent)' }}>Photography Featured</li>
+            <li style={{ color: 'var(--accent)' }}>Featured in Media</li>
           </ol>
         </nav>
 
@@ -162,11 +161,20 @@ export default async function PhotographyFeaturedPage() {
               fontSize: 'clamp(32px, 5vw, 56px)',
               fontWeight: 700,
               lineHeight: 1.1,
-              color: 'var(--paper)',
+              color: '#ffffff',
               marginBottom: '20px',
             }}
           >
-            Websites Featuring Photography by Joshua ten Brink
+            Joshua ten Brink{' '}
+            <span
+              style={{
+                color: 'var(--accent)',
+                fontStyle: 'italic',
+                fontWeight: 400,
+              }}
+            >
+              — Featured in Global Media
+            </span>
           </h1>
           <p
             style={{
@@ -178,7 +186,7 @@ export default async function PhotographyFeaturedPage() {
               marginBottom: '24px',
             }}
           >
-            This page highlights public websites and publications where
+            A curated index of public websites and publications where
             photography by Joshua ten Brink has been credited or featured.
           </p>
           <p
@@ -257,7 +265,21 @@ export default async function PhotographyFeaturedPage() {
                       fontWeight: 400,
                     }}
                   >
-                    Article Title
+                    Article
+                  </th>
+                  <th
+                    style={{
+                      padding: '14px 20px',
+                      textAlign: 'left',
+                      fontFamily: 'var(--font-mono)',
+                      fontSize: '10px',
+                      letterSpacing: '.12em',
+                      textTransform: 'uppercase',
+                      color: 'var(--ink-dim)',
+                      fontWeight: 400,
+                    }}
+                  >
+                    Photography Type
                   </th>
                 </tr>
               </thead>
@@ -297,6 +319,18 @@ export default async function PhotographyFeaturedPage() {
                       >
                         {credit.article_title}
                       </a>
+                    </td>
+                    <td
+                      style={{
+                        padding: '14px 20px',
+                        fontFamily: 'var(--font-mono)',
+                        fontSize: '11px',
+                        color: 'var(--ink-dim)',
+                        whiteSpace: 'nowrap',
+                        verticalAlign: 'top',
+                      }}
+                    >
+                      {credit.photography_type || '\u2014'}
                     </td>
                   </tr>
                 ))}

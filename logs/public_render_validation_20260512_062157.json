@@ -1,0 +1,654 @@
+{
+  "run_at": "2026-05-12T12:21:57.905064+00:00",
+  "total_photos": 42027,
+  "render_ready_total": 41968,
+  "photos_with_issues": 318,
+  "all_clear": false,
+  "checks": {
+    "missing_thumb_url": {
+      "count": 38,
+      "sample": [
+        {
+          "id": 49145,
+          "slug": "costa-rica-gallery-jaco-beach-pano00002",
+          "title": "pano00002.jpg",
+          "status": "imported"
+        },
+        {
+          "id": 49146,
+          "slug": "costa-rica-gallery-jaco-beach-pano00003",
+          "title": "pano00003.jpg",
+          "status": "imported"
+        },
+        {
+          "id": 49147,
+          "slug": "costa-rica-gallery-jaco-beach-pano00004",
+          "title": "pano00004.jpg",
+          "status": "imported"
+        },
+        {
+          "id": 49148,
+          "slug": "costa-rica-gallery-jaco-beach-pano00005",
+          "title": "pano00005.jpg",
+          "status": "imported"
+        },
+        {
+          "id": 49150,
+          "slug": "costa-rica-gallery-jaco-beach-pano00007",
+          "title": "pano00007.jpg",
+          "status": "imported"
+        },
+        {
+          "id": 49151,
+          "slug": "costa-rica-gallery-jaco-beach-pano00008",
+          "title": "pano00008.jpg",
+          "status": "imported"
+        },
+        {
+          "id": 49152,
+          "slug": "costa-rica-gallery-jaco-beach-pano00009",
+          "title": "pano00009.jpg",
+          "status": "imported"
+        },
+        {
+          "id": 49153,
+          "slug": "costa-rica-gallery-jaco-beach-pano00010",
+          "title": "pano00010.jpg",
+          "status": "imported"
+        },
+        {
+          "id": 49154,
+          "slug": "costa-rica-gallery-jaco-beach-pano00011",
+          "title": "pano00011.jpg",
+          "status": "imported"
+        },
+        {
+          "id": 49158,
+          "slug": "costa-rica-gallery-jaco-beach-pano00015",
+          "title": "pano00015.jpg",
+          "status": "imported"
+        },
+        {
+          "id": 49159,
+          "slug": "costa-rica-gallery-jaco-beach-pano00016",
+          "title": "pano00016.jpg",
+          "status": "imported"
+        },
+        {
+          "id": 49161,
+          "slug": "costa-rica-gallery-jaco-beach-pano00019",
+          "title": "pano00019.jpg",
+          "status": "imported"
+        },
+        {
+          "id": 49162,
+          "slug": "costa-rica-gallery-jaco-beach-pano00020",
+          "title": "pano00020.jpg",
+          "status": "imported"
+        },
+        {
+          "id": 49163,
+          "slug": "costa-rica-gallery-jaco-beach-pano00021",
+          "title": "pano00021.jpg",
+          "status": "imported"
+        },
+        {
+          "id": 49165,
+          "slug": "costa-rica-gallery-jaco-beach-pano00023",
+          "title": "pano00023.jpg",
+          "status": "imported"
+        },
+        {
+          "id": 49168,
+          "slug": "costa-rica-gallery-jaco-beach-pano00026",
+          "title": "pano00026.jpg",
+          "status": "imported"
+        },
+        {
+          "id": 49169,
+          "slug": "costa-rica-gallery-jaco-beach-pano00027",
+          "title": "pano00027.jpg",
+          "status": "imported"
+        },
+        {
+          "id": 49170,
+          "slug": "costa-rica-gallery-jaco-beach-pano00028",
+          "title": "pano00028.jpg",
+          "status": "imported"
+        },
+        {
+          "id": 49172,
+          "slug": "costa-rica-gallery-jaco-beach-pano00030",
+          "title": "pano00030.jpg",
+          "status": "imported"
+        },
+        {
+          "id": 49173,
+          "slug": "costa-rica-gallery-jaco-beach-pano00031",
+          "title": "pano00031.jpg",
+          "status": "imported"
+        }
+      ]
+    },
+    "missing_slug": {
+      "count": 0,
+      "sample": []
+    },
+    "missing_title": {
+      "count": 0,
+      "sample": []
+    },
+    "missing_gallery_slug": {
+      "count": 4605,
+      "sample": [
+        {
+          "id": 242,
+          "slug": "hermosa-beach-1",
+          "title": "Hermosa Beach Sunset",
+          "status": "archived"
+        },
+        {
+          "id": 14905,
+          "slug": "resplendent-quetzal",
+          "title": "Resplendent Quetzal \u2014 #14905 | WildPhotography",
+          "status": "archived"
+        },
+        {
+          "id": 36571,
+          "slug": "121619-hyperlapse-0051-caa78cf4",
+          "title": ". 121619 HYPERLAPSE 0051",
+          "status": "archived_unrecoverable"
+        },
+        {
+          "id": 41302,
+          "slug": "sunrise-sunset-2016-07-31-17-59-49",
+          "title": "Pacific Coast Sunrise, Guanacaste 2016",
+          "status": "published"
+        },
+        {
+          "id": 41303,
+          "slug": "sunrise-sunset-2017-07-15-18-57-45",
+          "title": "Tropical Sunset, Guanacaste 2017",
+          "status": "published"
+        },
+        {
+          "id": 41304,
+          "slug": "sunrise-sunset-2018-03-29-18-22-12",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41304 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41305,
+          "slug": "sunrise-sunset-2018-08-21-17-53-04",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41305 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41306,
+          "slug": "sunrise-sunset-2018-08-21-17-55-57",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41306 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41307,
+          "slug": "sunrise-sunset-2018-08-21-18-01-08",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41307 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41308,
+          "slug": "sunrise-sunset-2018-08-21-18-02-56",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41308 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41309,
+          "slug": "sunrise-sunset-2018-08-21-18-09-15",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41309 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41310,
+          "slug": "sunrise-sunset-2018-08-24-17-55-36",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41310 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41311,
+          "slug": "sunrise-sunset-2019-july-19-hyperlapse-0311",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41311 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41312,
+          "slug": "sunrise-sunset-2019-03-31-05-46-08",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41312 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41313,
+          "slug": "sunrise-sunset-2019-11-08-17-16-08",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41313 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41314,
+          "slug": "sunrise-sunset-2020-06-06-17-38-31",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41314 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41315,
+          "slug": "sunrise-sunset-2020-06-07-17-57-31",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41315 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41316,
+          "slug": "sunrise-sunset-2020-06-07-17-58-30",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41316 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41317,
+          "slug": "sunrise-sunset-2020-06-07-18-00-38",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41317 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41318,
+          "slug": "sunrise-sunset-2020-07-17-05-10-04",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41318 | WildPhotography",
+          "status": "published"
+        }
+      ]
+    },
+    "search_not_ready": {
+      "count": 117,
+      "sample": [
+        {
+          "id": 49145,
+          "slug": "costa-rica-gallery-jaco-beach-pano00002",
+          "title": "pano00002.jpg",
+          "status": "imported"
+        },
+        {
+          "id": 49146,
+          "slug": "costa-rica-gallery-jaco-beach-pano00003",
+          "title": "pano00003.jpg",
+          "status": "imported"
+        },
+        {
+          "id": 49147,
+          "slug": "costa-rica-gallery-jaco-beach-pano00004",
+          "title": "pano00004.jpg",
+          "status": "imported"
+        },
+        {
+          "id": 49148,
+          "slug": "costa-rica-gallery-jaco-beach-pano00005",
+          "title": "pano00005.jpg",
+          "status": "imported"
+        },
+        {
+          "id": 49150,
+          "slug": "costa-rica-gallery-jaco-beach-pano00007",
+          "title": "pano00007.jpg",
+          "status": "imported"
+        },
+        {
+          "id": 49151,
+          "slug": "costa-rica-gallery-jaco-beach-pano00008",
+          "title": "pano00008.jpg",
+          "status": "imported"
+        },
+        {
+          "id": 49152,
+          "slug": "costa-rica-gallery-jaco-beach-pano00009",
+          "title": "pano00009.jpg",
+          "status": "imported"
+        },
+        {
+          "id": 49153,
+          "slug": "costa-rica-gallery-jaco-beach-pano00010",
+          "title": "pano00010.jpg",
+          "status": "imported"
+        },
+        {
+          "id": 49154,
+          "slug": "costa-rica-gallery-jaco-beach-pano00011",
+          "title": "pano00011.jpg",
+          "status": "imported"
+        },
+        {
+          "id": 49158,
+          "slug": "costa-rica-gallery-jaco-beach-pano00015",
+          "title": "pano00015.jpg",
+          "status": "imported"
+        },
+        {
+          "id": 49159,
+          "slug": "costa-rica-gallery-jaco-beach-pano00016",
+          "title": "pano00016.jpg",
+          "status": "imported"
+        },
+        {
+          "id": 49161,
+          "slug": "costa-rica-gallery-jaco-beach-pano00019",
+          "title": "pano00019.jpg",
+          "status": "imported"
+        },
+        {
+          "id": 49162,
+          "slug": "costa-rica-gallery-jaco-beach-pano00020",
+          "title": "pano00020.jpg",
+          "status": "imported"
+        },
+        {
+          "id": 49163,
+          "slug": "costa-rica-gallery-jaco-beach-pano00021",
+          "title": "pano00021.jpg",
+          "status": "imported"
+        },
+        {
+          "id": 49165,
+          "slug": "costa-rica-gallery-jaco-beach-pano00023",
+          "title": "pano00023.jpg",
+          "status": "imported"
+        },
+        {
+          "id": 49168,
+          "slug": "costa-rica-gallery-jaco-beach-pano00026",
+          "title": "pano00026.jpg",
+          "status": "imported"
+        },
+        {
+          "id": 49169,
+          "slug": "costa-rica-gallery-jaco-beach-pano00027",
+          "title": "pano00027.jpg",
+          "status": "imported"
+        },
+        {
+          "id": 49170,
+          "slug": "costa-rica-gallery-jaco-beach-pano00028",
+          "title": "pano00028.jpg",
+          "status": "imported"
+        },
+        {
+          "id": 49172,
+          "slug": "costa-rica-gallery-jaco-beach-pano00030",
+          "title": "pano00030.jpg",
+          "status": "imported"
+        },
+        {
+          "id": 49173,
+          "slug": "costa-rica-gallery-jaco-beach-pano00031",
+          "title": "pano00031.jpg",
+          "status": "imported"
+        }
+      ]
+    },
+    "derivatives_incomplete": {
+      "count": 1,
+      "sample": [
+        {
+          "id": 25,
+          "slug": "rufous-hummingbird",
+          "title": "Test Title That Is Long Enough For SEO",
+          "status": "archived_unrecoverable"
+        }
+      ]
+    },
+    "missing_description": {
+      "count": 79,
+      "sample": [
+        {
+          "id": 49209,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-DJI_0737",
+          "title": "DJI_0737.JPG",
+          "status": "imported"
+        },
+        {
+          "id": 49210,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-DJI_0739",
+          "title": "DJI_0739.JPG",
+          "status": "imported"
+        },
+        {
+          "id": 49211,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-DJI_0744",
+          "title": "DJI_0744.JPG",
+          "status": "imported"
+        },
+        {
+          "id": 49212,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-DJI_0766",
+          "title": "DJI_0766.JPG",
+          "status": "imported"
+        },
+        {
+          "id": 49213,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-DJI_0801",
+          "title": "DJI_0801.JPG",
+          "status": "imported"
+        },
+        {
+          "id": 49214,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-DJI_0813",
+          "title": "DJI_0813.JPG",
+          "status": "imported"
+        },
+        {
+          "id": 49215,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-pano00001",
+          "title": "pano00001.jpg",
+          "status": "imported"
+        },
+        {
+          "id": 49216,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-pano00002",
+          "title": "pano00002.jpg",
+          "status": "imported"
+        },
+        {
+          "id": 49217,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-pano00003",
+          "title": "pano00003.jpg",
+          "status": "imported"
+        },
+        {
+          "id": 49218,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-pano00004",
+          "title": "pano00004.jpg",
+          "status": "imported"
+        },
+        {
+          "id": 49219,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-pano00005",
+          "title": "pano00005.jpg",
+          "status": "imported"
+        },
+        {
+          "id": 49220,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-pano00006",
+          "title": "pano00006.jpg",
+          "status": "imported"
+        },
+        {
+          "id": 49221,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-pano00007",
+          "title": "pano00007.jpg",
+          "status": "imported"
+        },
+        {
+          "id": 49222,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-pano00008",
+          "title": "pano00008.jpg",
+          "status": "imported"
+        },
+        {
+          "id": 49223,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-pano00009",
+          "title": "pano00009.jpg",
+          "status": "imported"
+        },
+        {
+          "id": 49224,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-pano00010",
+          "title": "pano00010.jpg",
+          "status": "imported"
+        },
+        {
+          "id": 49225,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-pano00011",
+          "title": "pano00011.jpg",
+          "status": "imported"
+        },
+        {
+          "id": 49226,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-pano00012",
+          "title": "pano00012.jpg",
+          "status": "imported"
+        },
+        {
+          "id": 49227,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-pano00013",
+          "title": "pano00013.jpg",
+          "status": "imported"
+        },
+        {
+          "id": 49228,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-pano00014",
+          "title": "pano00014.jpg",
+          "status": "imported"
+        }
+      ]
+    },
+    "missing_keywords": {
+      "count": 79,
+      "sample": [
+        {
+          "id": 49209,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-DJI_0737",
+          "title": "DJI_0737.JPG",
+          "status": "imported"
+        },
+        {
+          "id": 49210,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-DJI_0739",
+          "title": "DJI_0739.JPG",
+          "status": "imported"
+        },
+        {
+          "id": 49211,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-DJI_0744",
+          "title": "DJI_0744.JPG",
+          "status": "imported"
+        },
+        {
+          "id": 49212,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-DJI_0766",
+          "title": "DJI_0766.JPG",
+          "status": "imported"
+        },
+        {
+          "id": 49213,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-DJI_0801",
+          "title": "DJI_0801.JPG",
+          "status": "imported"
+        },
+        {
+          "id": 49214,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-DJI_0813",
+          "title": "DJI_0813.JPG",
+          "status": "imported"
+        },
+        {
+          "id": 49215,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-pano00001",
+          "title": "pano00001.jpg",
+          "status": "imported"
+        },
+        {
+          "id": 49216,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-pano00002",
+          "title": "pano00002.jpg",
+          "status": "imported"
+        },
+        {
+          "id": 49217,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-pano00003",
+          "title": "pano00003.jpg",
+          "status": "imported"
+        },
+        {
+          "id": 49218,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-pano00004",
+          "title": "pano00004.jpg",
+          "status": "imported"
+        },
+        {
+          "id": 49219,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-pano00005",
+          "title": "pano00005.jpg",
+          "status": "imported"
+        },
+        {
+          "id": 49220,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-pano00006",
+          "title": "pano00006.jpg",
+          "status": "imported"
+        },
+        {
+          "id": 49221,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-pano00007",
+          "title": "pano00007.jpg",
+          "status": "imported"
+        },
+        {
+          "id": 49222,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-pano00008",
+          "title": "pano00008.jpg",
+          "status": "imported"
+        },
+        {
+          "id": 49223,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-pano00009",
+          "title": "pano00009.jpg",
+          "status": "imported"
+        },
+        {
+          "id": 49224,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-pano00010",
+          "title": "pano00010.jpg",
+          "status": "imported"
+        },
+        {
+          "id": 49225,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-pano00011",
+          "title": "pano00011.jpg",
+          "status": "imported"
+        },
+        {
+          "id": 49226,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-pano00012",
+          "title": "pano00012.jpg",
+          "status": "imported"
+        },
+        {
+          "id": 49227,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-pano00013",
+          "title": "pano00013.jpg",
+          "status": "imported"
+        },
+        {
+          "id": 49228,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-pano00014",
+          "title": "pano00014.jpg",
+          "status": "imported"
+        }
+      ]
+    }
+  },
+  "status": "success"
+}

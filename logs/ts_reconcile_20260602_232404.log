@@ -1,0 +1,33 @@
+[reconcile] Starting Typesense reconcile v3 (Optimized)
+[reconcile] Connected to Neon
+[reconcile] Eligible DB records (estimated): 61081
+[reconcile] Eligible DB IDs loaded: 61081
+[reconcile] Exporting Typesense document IDs…
+[reconcile]   Typesense IDs loaded: 60810
+[reconcile]   Stale (TS only):   0
+[reconcile]   Missing (DB only): 271
+[reconcile] Upserting 271 missing docs in batches...
+[reconcile]   Fetched 271 full records from DB
+[reconcile]   Batch upsert failed HTTP 422: {"message":"Rejecting write: running out of resource type: OUT_OF_MEMORY"}, falling back to individual
+[reconcile]   Upsert doc 6678: HTTP 422 — {"message":"Rejecting write: running out of resource type: OUT_OF_MEMORY"}
+[reconcile]   Upsert doc 78250: HTTP 422 — {"message":"Rejecting write: running out of resource type: OUT_OF_MEMORY"}
+[reconcile]   Upsert doc 78251: HTTP 422 — {"message":"Rejecting write: running out of resource type: OUT_OF_MEMORY"}
+[reconcile]   Upsert doc 78252: HTTP 422 — {"message":"Rejecting write: running out of resource type: OUT_OF_MEMORY"}
+[reconcile]   Upsert doc 78253: HTTP 422 — {"message":"Rejecting write: running out of resource type: OUT_OF_MEMORY"}
+[reconcile]   Upsert doc 78254: HTTP 422 — {"message":"Rejecting write: running out of resource type: OUT_OF_MEMORY"}
+[reconcile]   Upsert doc 78255: HTTP 422 — {"message":"Rejecting write: running out of resource type: OUT_OF_MEMORY"}
+[reconcile]   Upsert doc 78256: HTTP 422 — {"message":"Rejecting write: running out of resource type: OUT_OF_MEMORY"}
+[reconcile]   Upsert doc 78257: HTTP 422 — {"message":"Rejecting write: running out of resource type: OUT_OF_MEMORY"}
+[reconcile]   Upsert doc 78258: HTTP 422 — {"message":"Rejecting write: running out of resource type: OUT_OF_MEMORY"}
+[reconcile]   Upsert doc 78259: HTTP 422 — {"message":"Rejecting write: running out of resource type: OUT_OF_MEMORY"}
+[reconcile]   Upsert doc 78260: HTTP 422 — {"message":"Rejecting write: running out of resource type: OUT_OF_MEMORY"}
+[reconcile]   Upsert doc 78261: HTTP 422 — {"message":"Rejecting write: running out of resource type: OUT_OF_MEMORY"}
+[reconcile]   Upsert doc 78262: HTTP 422 — {"message":"Rejecting write: running out of resource type: OUT_OF_MEMORY"}
+[reconcile]   Upsert doc 78263: HTTP 422 — {"message":"Rejecting write: running out of resource type: OUT_OF_MEMORY"}
+[reconcile]   Upsert doc 78264: HTTP 422 — {"message":"Rejecting write: running out of resource type: OUT_OF_MEMORY"}
+[reconcile]   Upsert doc 78266: HTTP 422 — {"message":"Rejecting write: running out of resource type: OUT_OF_MEMORY"}
+[reconcile]   Upsert doc 78267: HTTP 422 — {"message":"Rejecting write: running out of resource type: OUT_OF_MEMORY"}
+[reconcile]   Upsert doc 78268: HTTP 422 — {"message":"Rejecting write: running out of resource type: OUT_OF_MEMORY"}
+[reconcile]   Upsert doc 78269: HTTP 422 — {"message":"Rejecting write: running out of resource type: OUT_OF_MEMORY"}
+[reconcile]   Upsert doc 78270: HTTP 422 — {"message":"Rejecting write: running out of resource type: OUT_OF_MEMORY"}
+[reconcile]   Upsert doc 78271: HTTP 422 — {"message":"Rejecting write: running out of resource type: OUT_OF_MEMORY"}

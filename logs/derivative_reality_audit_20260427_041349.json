@@ -1,0 +1,16 @@
+{
+  "run_at": "2026-04-27T10:13:49.573557+00:00",
+  "total_rpr_photos": 34609,
+  "total_derivatives_complete": 34710,
+  "sample_size": 300,
+  "keys_checked": 1400,
+  "keys_present": 1400,
+  "keys_missing": 0,
+  "photo_results": {
+    "ok": 300,
+    "flag_mismatch": 0,
+    "flag_missing": 0
+  },
+  "mismatches": [],
+  "status": "success"
+}

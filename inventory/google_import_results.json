@@ -1,0 +1,35 @@
+{
+  "run_at": "2026-06-05T07:25:22.919741+00:00",
+  "folders_processed": [
+    "2025 Tambor New Years/R6 Selected"
+  ],
+  "total_items_in_queue": 5,
+  "imported": 0,
+  "skipped_dup": 0,
+  "skipped_no_gallery": 0,
+  "skipped_missing": 0,
+  "failed": 3,
+  "results": [
+    {
+      "id": "62eecb6c11ddb597",
+      "filename": "CL0A4432.JPG",
+      "status": "failed",
+      "reason": "duplicate key value violates unique constraint \"photos_slug_key\"\nDETAIL:  Key (slug)=(tambor-nicoya-peninsula-costa-rica-62eecb6c11ddb597) already exists.\n",
+      "gallery_slug": "tambor-nicoya-peninsula-costa-rica"
+    },
+    {
+      "id": "cf96d262837254ed",
+      "filename": "CL0A4594.JPG",
+      "status": "failed",
+      "reason": "duplicate key value violates unique constraint \"photos_slug_key\"\nDETAIL:  Key (slug)=(tambor-nicoya-peninsula-costa-rica-cf96d262837254ed) already exists.\n",
+      "gallery_slug": "tambor-nicoya-peninsula-costa-rica"
+    },
+    {
+      "id": "b6119f06f5fe453b",
+      "filename": "CL0A4631.JPG",
+      "status": "failed",
+      "reason": "duplicate key value violates unique constraint \"photos_slug_key\"\nDETAIL:  Key (slug)=(tambor-nicoya-peninsula-costa-rica-b6119f06f5fe453b) already exists.\n",
+      "gallery_slug": "tambor-nicoya-peninsula-costa-rica"
+    }
+  ]
+}

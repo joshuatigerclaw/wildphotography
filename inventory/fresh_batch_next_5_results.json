@@ -1,0 +1,618 @@
+{
+  "run_at": "2026-06-15T04:04:47.686302+00:00",
+  "folders_processed": [
+    "Costa-Rica-Gallery/Tambor-Nicoya-Peninsula-Costa-Rica",
+    "Costa-Rica-Gallery/Limon-Puerto-Viejo-Cocles-Playa-Chiquita-y-Punta-Uva",
+    "Costa-Rica-Gallery/Jaco-Beach",
+    "Costa-Rica-Gallery/Sunrise-Sunset",
+    "Costa-Rica-Gallery/Beaches"
+  ],
+  "total_items_in_queue": 500,
+  "total_photos_processed": 0,
+  "imported": 0,
+  "skipped_dup": 500,
+  "failed": 0,
+  "results": [
+    {
+      "id": "ext_Tambor_163b711b63ab0331",
+      "filename": "2020-06-27 05.37.35.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "tambor-nicoya-peninsula-costa-rica"
+    },
+    {
+      "id": "ext_Tambor_383367a469538c20",
+      "filename": "2020-10-31 05.51.19.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "tambor-nicoya-peninsula-costa-rica"
+    },
+    {
+      "id": "ext_Tambor_4f89fd5b9d87c040",
+      "filename": "2021-03-26 07.22.24.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "tambor-nicoya-peninsula-costa-rica"
+    },
+    {
+      "id": "ext_Tambor_7abaef1fdade2fe5",
+      "filename": "2021-03-26 07.23.05.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "tambor-nicoya-peninsula-costa-rica"
+    },
+    {
+      "id": "ext_Tambor_b85d9293e3bfd0e2",
+      "filename": "2021-03-27 15.46.50.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "tambor-nicoya-peninsula-costa-rica"
+    },
+    {
+      "id": "ext_Tambor_2ca32ade3b014c03",
+      "filename": "2021-03-28 16.23.59.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "tambor-nicoya-peninsula-costa-rica"
+    },
+    {
+      "id": "ext_Tambor_99def68fcb252619",
+      "filename": "2021-04-04 05.15.26.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "tambor-nicoya-peninsula-costa-rica"
+    },
+    {
+      "id": "ext_Tambor_e380b698d5b91db9",
+      "filename": "2021-04-04 05.45.24.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "tambor-nicoya-peninsula-costa-rica"
+    },
+    {
+      "id": "ext_Tambor_8c23f3563eeb61cf",
+      "filename": "2021-04-04 05.53.35.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "tambor-nicoya-peninsula-costa-rica"
+    },
+    {
+      "id": "ext_Tambor_12325f6a38f45edf",
+      "filename": "2021-05-21 15.17.12.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "tambor-nicoya-peninsula-costa-rica"
+    },
+    {
+      "id": "ext_Tambor_7ba5ddb51b5c9e73",
+      "filename": "2021-05-21 15.30.16.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "tambor-nicoya-peninsula-costa-rica"
+    },
+    {
+      "id": "ext_Tambor_a984fc8b345a383f",
+      "filename": "2021-10-09 06.39.14.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "tambor-nicoya-peninsula-costa-rica"
+    },
+    {
+      "id": "ext_Tambor_869515b6a2eb1746",
+      "filename": "2021-12-28 06.12.09.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "tambor-nicoya-peninsula-costa-rica"
+    },
+    {
+      "id": "ext_Tambor_48397c28d015ac86",
+      "filename": "2021-12-28 06.54.26.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "tambor-nicoya-peninsula-costa-rica"
+    },
+    {
+      "id": "ext_Tambor_15627541068286f1",
+      "filename": "2021-12-29 07.08.32.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "tambor-nicoya-peninsula-costa-rica"
+    },
+    {
+      "id": "ext_Tambor_92f00858047d8e22",
+      "filename": "2021-12-29 07.09.28.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "tambor-nicoya-peninsula-costa-rica"
+    },
+    {
+      "id": "ext_Tambor_f4f4ac9151c45e6c",
+      "filename": "2021-12-30 06.04.09.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "tambor-nicoya-peninsula-costa-rica"
+    },
+    {
+      "id": "ext_Tambor_8bfaf0b8c15b693a",
+      "filename": "2021-12-30 06.06.24.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "tambor-nicoya-peninsula-costa-rica"
+    },
+    {
+      "id": "ext_Tambor_0bd590f1181176fc",
+      "filename": "2021-12-31 17.01.48.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "tambor-nicoya-peninsula-costa-rica"
+    },
+    {
+      "id": "ext_Tambor_1e2fbfdaec354937",
+      "filename": "2022-01-04 16.02.02.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "tambor-nicoya-peninsula-costa-rica"
+    },
+    {
+      "id": "ext_Tambor_a5b36ae4bd403c0b",
+      "filename": "2022-01-04 16.10.36.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "tambor-nicoya-peninsula-costa-rica"
+    },
+    {
+      "id": "ext_Tambor_fa3bb0128a458a20",
+      "filename": "2022-01-04 16.20.34.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "tambor-nicoya-peninsula-costa-rica"
+    },
+    {
+      "id": "ext_Tambor_80822e36dc1912c1",
+      "filename": "2022-02-18 16.33.27.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "tambor-nicoya-peninsula-costa-rica"
+    },
+    {
+      "id": "ext_Tambor_af81b7d0845bb113",
+      "filename": "2022-02-18 16.34.23.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "tambor-nicoya-peninsula-costa-rica"
+    },
+    {
+      "id": "ext_Tambor_48d7fbb97c474746",
+      "filename": "2022-02-18 16.34.24.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "tambor-nicoya-peninsula-costa-rica"
+    },
+    {
+      "id": "ext_Tambor_37b73b8a9576ca2d",
+      "filename": "2022-02-19 08.28.02.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "tambor-nicoya-peninsula-costa-rica"
+    },
+    {
+      "id": "ext_Tambor_0895b9314236da50",
+      "filename": "2022-02-19 08.51.28.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "tambor-nicoya-peninsula-costa-rica"
+    },
+    {
+      "id": "ext_Tambor_dde513f9b1c21a69",
+      "filename": "2022-02-19 09.06.20.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "tambor-nicoya-peninsula-costa-rica"
+    },
+    {
+      "id": "ext_Tambor_3ca80fdfece671fb",
+      "filename": "2022-02-21 06.37.13.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "tambor-nicoya-peninsula-costa-rica"
+    },
+    {
+      "id": "ext_Tambor_be588e7be20d93d3",
+      "filename": "2023-02-13 05.39.37.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "tambor-nicoya-peninsula-costa-rica"
+    },
+    {
+      "id": "ext_Tambor_b7d257f8265d1822",
+      "filename": "2023-02-13 05.41.44.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "tambor-nicoya-peninsula-costa-rica"
+    },
+    {
+      "id": "ext_Tambor_57e691256c9973f3",
+      "filename": "2023-04-06 06.56.04.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "tambor-nicoya-peninsula-costa-rica"
+    },
+    {
+      "id": "ext_Tambor_0fa8f81fda368954",
+      "filename": "2023-04-12 11.10.11.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "tambor-nicoya-peninsula-costa-rica"
+    },
+    {
+      "id": "ext_Tambor_5da8923eb92d46b7",
+      "filename": "2024-12-27 14.50.59.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "tambor-nicoya-peninsula-costa-rica"
+    },
+    {
+      "id": "ext_Tambor_9b0addd745fffe52",
+      "filename": "2024-12-27 15.07.38.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "tambor-nicoya-peninsula-costa-rica"
+    },
+    {
+      "id": "ext_Tambor_f27085207676873d",
+      "filename": "2024-12-27 15.09.37.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "tambor-nicoya-peninsula-costa-rica"
+    },
+    {
+      "id": "ext_Tambor_2cb9a44369af5c1e",
+      "filename": "2024-12-27 15.12.37.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "tambor-nicoya-peninsula-costa-rica"
+    },
+    {
+      "id": "ext_Tambor_e878d7701e7a79ef",
+      "filename": "2024-12-27 15.21.06.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "tambor-nicoya-peninsula-costa-rica"
+    },
+    {
+      "id": "ext_Tambor_5423d6dee6ca9fc2",
+      "filename": "2024-12-27 15.22.02.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "tambor-nicoya-peninsula-costa-rica"
+    },
+    {
+      "id": "ext_Tambor_e9cdc96304457828",
+      "filename": "2024-12-27 15.22.37.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "tambor-nicoya-peninsula-costa-rica"
+    },
+    {
+      "id": "ext_Tambor_1370df433f4a476d",
+      "filename": "2024-12-27 17.32.52.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "tambor-nicoya-peninsula-costa-rica"
+    },
+    {
+      "id": "ext_Tambor_d5c9e040dce39646",
+      "filename": "2024-12-28 07.33.50.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "tambor-nicoya-peninsula-costa-rica"
+    },
+    {
+      "id": "ext_Tambor_cc83fd67244210cc",
+      "filename": "2024-12-28 07.46.14.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "tambor-nicoya-peninsula-costa-rica"
+    },
+    {
+      "id": "ext_Tambor_3f86407717586fba",
+      "filename": "2024-12-28 12.39.23.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "tambor-nicoya-peninsula-costa-rica"
+    },
+    {
+      "id": "ext_Tambor_62cd59aa32e87624",
+      "filename": "2024-12-28 15.01.42.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "tambor-nicoya-peninsula-costa-rica"
+    },
+    {
+      "id": "ext_Tambor_a9a21cb81d672234",
+      "filename": "2024-12-28 17.25.03.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "tambor-nicoya-peninsula-costa-rica"
+    },
+    {
+      "id": "ext_Tambor_f21a472c5c8ad722",
+      "filename": "2024-12-29 13.52.49-1.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "tambor-nicoya-peninsula-costa-rica"
+    },
+    {
+      "id": "ext_Tambor_4408c4ce1b773118",
+      "filename": "2024-12-29 13.52.49-2.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "tambor-nicoya-peninsula-costa-rica"
+    },
+    {
+      "id": "ext_Tambor_2f2956541b4c5fc7",
+      "filename": "2024-12-29 13.52.49.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "tambor-nicoya-peninsula-costa-rica"
+    },
+    {
+      "id": "ext_Tambor_62ca8d5ac68082c8",
+      "filename": "2024-12-29 15.37.11.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "tambor-nicoya-peninsula-costa-rica"
+    },
+    {
+      "id": "ext_Tambor_b34e6cfb525e621a",
+      "filename": "2024-12-30 06.06.48.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "tambor-nicoya-peninsula-costa-rica"
+    },
+    {
+      "id": "ext_Tambor_b72857de4cb88dfe",
+      "filename": "2024-12-30 06.53.05.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "tambor-nicoya-peninsula-costa-rica"
+    },
+    {
+      "id": "ext_Tambor_ac9c89494bb2a26a",
+      "filename": "2024-12-30 07.56.44.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "tambor-nicoya-peninsula-costa-rica"
+    },
+    {
+      "id": "ext_Tambor_3ce579fa997c5481",
+      "filename": "2024-12-30 07.57.06.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "tambor-nicoya-peninsula-costa-rica"
+    },
+    {
+      "id": "ext_Tambor_07a82fed49757183",
+      "filename": "2024-12-30 08.31.15.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "tambor-nicoya-peninsula-costa-rica"
+    },
+    {
+      "id": "ext_Tambor_f006d168bd525e40",
+      "filename": "2024-12-30 09.07.52.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "tambor-nicoya-peninsula-costa-rica"
+    },
+    {
+      "id": "ext_Tambor_ef82d145924fe0f8",
+      "filename": "2024-12-30 09.35.47.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "tambor-nicoya-peninsula-costa-rica"
+    },
+    {
+      "id": "ext_Tambor_326ba09778cc15e7",
+      "filename": "2024-12-30 12.12.53.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "tambor-nicoya-peninsula-costa-rica"
+    },
+    {
+      "id": "ext_Tambor_3e6cb64470e18d8b",
+      "filename": "2024-12-30 12.13.09.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "tambor-nicoya-peninsula-costa-rica"
+    },
+    {
+      "id": "ext_Tambor_39ac365d031727a5",
+      "filename": "2024-12-30 12.13.29.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "tambor-nicoya-peninsula-costa-rica"
+    },
+    {
+      "id": "ext_Tambor_51d9be0818fcaabf",
+      "filename": "2024-12-30 12.13.38.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "tambor-nicoya-peninsula-costa-rica"
+    },
+    {
+      "id": "ext_Tambor_8f134e82b4549c08",
+      "filename": "2024-12-30 12.46.11.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "tambor-nicoya-peninsula-costa-rica"
+    },
+    {
+      "id": "ext_Tambor_f110b5fda5b2538a",
+      "filename": "2024-12-31 07.51.34.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "tambor-nicoya-peninsula-costa-rica"
+    },
+    {
+      "id": "ext_Tambor_d5402632c2ba0437",
+      "filename": "2024-12-31 08.56.41.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "tambor-nicoya-peninsula-costa-rica"
+    },
+    {
+      "id": "ext_Tambor_8e7619ca06e52256",
+      "filename": "2024-12-31 09.01.49.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "tambor-nicoya-peninsula-costa-rica"
+    },
+    {
+      "id": "ext_Tambor_d2fc1336d597403f",
+      "filename": "2024-12-31 09.01.52-1.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "tambor-nicoya-peninsula-costa-rica"
+    },
+    {
+      "id": "ext_Tambor_f8b5376d23a9e903",
+      "filename": "2024-12-31 09.02.24.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "tambor-nicoya-peninsula-costa-rica"
+    },
+    {
+      "id": "ext_Tambor_297547a2a6f020b9",
+      "filename": "2024-12-31 09.05.57-1.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "tambor-nicoya-peninsula-costa-rica"
+    },
+    {
+      "id": "ext_Tambor_47e833558ce735b9",
+      "filename": "2024-12-31 09.14.13.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "tambor-nicoya-peninsula-costa-rica"
+    },
+    {
+      "id": "ext_Tambor_8847097978337ace",
+      "filename": "2024-12-31 09.19.20.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "tambor-nicoya-peninsula-costa-rica"
+    },
+    {
+      "id": "ext_Tambor_2a5616d3ca81d484",
+      "filename": "2024-12-31 09.19.32.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "tambor-nicoya-peninsula-costa-rica"
+    },
+    {
+      "id": "ext_Tambor_2931b09e7a06ad97",
+      "filename": "2024-12-31 09.27.39.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "tambor-nicoya-peninsula-costa-rica"
+    },
+    {
+      "id": "ext_Tambor_0fd9a09479f69dd9",
+      "filename": "2024-12-31 09.45.46.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "tambor-nicoya-peninsula-costa-rica"
+    },
+    {
+      "id": "ext_Tambor_eb040bcec59a7848",
+      "filename": "2024-12-31 09.56.25-1.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "tambor-nicoya-peninsula-costa-rica"
+    },
+    {
+      "id": "ext_Tambor_ead9453ca70de590",
+      "filename": "2024-12-31 13.06.50.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "tambor-nicoya-peninsula-costa-rica"
+    },
+    {
+      "id": "ext_Tambor_be47905ee007368b",
+      "filename": "2024-12-31 14.54.35.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "tambor-nicoya-peninsula-costa-rica"
+    },
+    {
+      "id": "ext_Tambor_7a82539c5f1aa2bb",
+      "filename": "2024-12-31 14.56.28.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "tambor-nicoya-peninsula-costa-rica"
+    },
+    {
+      "id": "ext_Tambor_5962ab153e55d34a",
+      "filename": "2024-12-31 16.27.02.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "tambor-nicoya-peninsula-costa-rica"
+    },
+    {
+      "id": "ext_Tambor_c12b099cd72c1426",
+      "filename": "2024-12-31 16.58.23.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "tambor-nicoya-peninsula-costa-rica"
+    },
+    {
+      "id": "ext_Tambor_e83989d6269861a3",
+      "filename": "2024-12-31 17.07.00.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "tambor-nicoya-peninsula-costa-rica"
+    },
+    {
+      "id": "ext_Tambor_5bac3ca6683a3092",
+      "filename": "2024-12-31 17.54.03.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "tambor-nicoya-peninsula-costa-rica"
+    },
+    {
+      "id": "ext_Tambor_694644fd3b668b78",
+      "filename": "2024-12-31 17.55.56.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "tambor-nicoya-peninsula-costa-rica"
+    },
+    {
+      "id": "ext_Tambor_343d7fde9c2f4379",
+      "filename": "2025-01-01 11.48.25.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "tambor-nicoya-peninsula-costa-rica"
+    },
+    {
+      "id": "ext_Tambor_d4cd1dbac9517cc1",
+      "filename": "2025-01-01 11.48.26.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "tambor-nicoya-peninsula-costa-rica"
+    },
+    {
+      "id": "ext_Tambor_267692a7b1930dd6",
+      "filename": "2025-01-02 07.08.44.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "tambor-nicoya-peninsula-costa-rica"
+    },
+    {
+      "id": "ext_Tambor_546850c119f56165",
+      "filename": "2025-01-02 07.08.57.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "tambor-nicoya-peninsula-costa-rica"
+    },
+    {
+      "id": "ext_Tambor_8879b1a96ce652fd",
+      "filename": "2025-01-02 09.25.04.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "tambor-nicoya-peninsula-costa-rica"
+    },
+    {
+      "id": "ext_Tambor_8c062b4b1e0b27a9",
+      "filename": "2025-01-02 09.50.18.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "tambor-nicoya-peninsula-costa-rica"
+    },
+    {
+      "id": "ext_Tambor_2db802efaa051328",
+      "filename": "2025-01-02 09.50.19.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "tambor-nicoya-peninsula-costa-rica"
+    },
+    {
+      "id": "ext_Tambor_5989e893d557853d",
+      "filename": "2025-01-02 09.50.33.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "tambor-nicoya-peninsula-costa-rica"
+    },
+    {
+      "id": "ext_Tambor_0490c3bab2fc1bc1",
+      "filename": "2025-01-02 09.50.46.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "tambor-nicoya-peninsula-costa-rica"
+    },
+    {
+      "id": "ext_Tambor_0adc2debb8dac2a3",
+      "filename": "2025-01-02 10.02.42.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "tambor-nicoya-peninsula-costa-rica"
+    },
+    {
+      "id": "ext_Tambor_70afa5f05af13482",
+      "filename": "2025-01-03 07.53.31.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "tambor-nicoya-peninsula-costa-rica"
+    },
+    {
+      "id": "ext_Tambor_f88bae3be3397606",
+      "filename": "2025-01-03 16.18.00.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "tambor-nicoya-peninsula-costa-rica"
+    },
+    {
+      "id": "ext_Tambor_a9a3736f6d1c55b0",
+      "filename": "2025-01-03 16.23.24.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "tambor-nicoya-peninsula-costa-rica"
+    },
+    {
+      "id": "ext_Tambor_48929f2dfd2f78e0",
+      "filename": "2025-01-03 16.31.18.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "tambor-nicoya-peninsula-costa-rica"
+    },
+    {
+      "id": "ext_Tambor_4e7ba9aa412b2192",
+      "filename": "2025-01-03 16.33.35.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "tambor-nicoya-peninsula-costa-rica"
+    },
+    {
+      "id": "ext_Tambor_898050bbab0b7231",
+      "filename": "2025-01-03 16.34.42.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "tambor-nicoya-peninsula-costa-rica"
+    },
+    {
+      "id": "ext_Tambor_d1cc1cc3e7200cb4",
+      "filename": "2025-01-03 16.34.50.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "tambor-nicoya-peninsula-costa-rica"
+    },
+    {
+      "id": "ext_Tambor_ed778cbb215372de",
+      "filename": "2025-01-03 16.36.11.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "tambor-nicoya-peninsula-costa-rica"
+    }
+  ],
+  "failure_log": []
+}

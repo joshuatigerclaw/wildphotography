@@ -1,0 +1,26 @@
+2026-04-28 04:52:40,980 INFO === WildPhotography Typesense Reconciliation (FIXED) ===
+2026-04-28 04:52:40,980 INFO 
+2026-04-28 04:52:41,290 INFO [1] Typesense current doc count: 34324
+2026-04-28 04:52:41,291 INFO [2] Loading eligible Neon docs...
+2026-04-28 04:52:43,308 INFO     Eligible Neon docs: 34393
+2026-04-28 04:52:43,308 INFO [3] Drift before reconcile: 69 (eligible=34393, TS=34324)
+2026-04-28 04:52:43,308 INFO [4] Exporting Typesense docs to identify stale...
+2026-04-28 04:52:45,610 INFO     TS docs: 34324, Stale: 0, Missing: 69
+2026-04-28 04:52:45,610 INFO [5] No stale docs to remove
+2026-04-28 04:52:45,610 INFO [6] Adding 69 missing docs...
+2026-04-28 04:52:45,999 WARNING     Error batch 1: Field `location` has been declared in the schema, but is not found in the document.
+2026-04-28 04:52:45,999 WARNING     Error batch 1: Field `location` has been declared in the schema, but is not found in the document.
+2026-04-28 04:52:45,999 WARNING     Error batch 1: Field `location` has been declared in the schema, but is not found in the document.
+2026-04-28 04:52:45,999 INFO   Batch 1/1: 0 ok, 69 errors
+2026-04-28 04:52:46,449 INFO     Missing added: 0, errors: 69
+2026-04-28 04:52:48,977 INFO 
+2026-04-28 04:52:48,977 INFO === Reconciliation Complete ===
+2026-04-28 04:52:48,977 INFO   Eligible Neon:     34393
+2026-04-28 04:52:48,977 INFO   TS before:         34324
+2026-04-28 04:52:48,977 INFO   Stale removed:     0
+2026-04-28 04:52:48,977 INFO   Missing added:     0
+2026-04-28 04:52:48,977 INFO   TS after:          34324
+2026-04-28 04:52:48,977 INFO   Drift before:      69
+2026-04-28 04:52:48,977 INFO   Drift after:       69
+2026-04-28 04:52:48,978 INFO   Duration:          8.0s
+2026-04-28 04:52:48,978 INFO   Report: /Users/joshuatenbrink/.openclaw/workspace/wildphotography/logs/typesense_reconcile_20260428T105248Z.json

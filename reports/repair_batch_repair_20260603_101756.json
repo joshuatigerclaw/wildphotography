@@ -1,0 +1,611 @@
+{
+  "batch_id": "repair_20260603_101756",
+  "jobs_processed": 25,
+  "repairs_completed": 75,
+  "failures": 0,
+  "items_requiring_approval": 25,
+  "approval_items": [
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 88843",
+      "slug": "marine-life-of-costa-rica-dji-0593-e3ba75"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 88844",
+      "slug": "marine-life-of-costa-rica-dji-0597-95f340"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 88845",
+      "slug": "marine-life-of-costa-rica-dji-0638-4de094"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 88846",
+      "slug": "marine-life-of-costa-rica-dji-0667-1d02bc"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 88847",
+      "slug": "marine-life-of-costa-rica-dji-0927-f65e11"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 88848",
+      "slug": "marine-life-of-costa-rica-dji-0937-d0cefc"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 88849",
+      "slug": "marine-life-of-costa-rica-dji-0760-0bf261"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 88850",
+      "slug": "marine-life-of-costa-rica-dji-0762-4ff2a0"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 88851",
+      "slug": "marine-life-of-costa-rica-dji-0768-366350"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 88852",
+      "slug": "marine-life-of-costa-rica-dji-0763-2aaf32"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 88853",
+      "slug": "marine-life-of-costa-rica-dji-0764-582cef"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 88854",
+      "slug": "marine-life-of-costa-rica-dji-0775-40156e"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 88855",
+      "slug": "marine-life-of-costa-rica-dji-0769-7d2e1e"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 88856",
+      "slug": "marine-life-of-costa-rica-dji-0772-7ee0fe"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 88857",
+      "slug": "costa-rica-gallery-peninsula-papagayo-dji-0535-bc2a47"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 88858",
+      "slug": "costa-rica-gallery-peninsula-papagayo-dji-0543-9a5f3e"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 88859",
+      "slug": "costa-rica-gallery-peninsula-papagayo-dji-0740-a93d30"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 88860",
+      "slug": "costa-rica-gallery-peninsula-papagayo-dji-0741-14f70d"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 88861",
+      "slug": "costa-rica-gallery-peninsula-papagayo-dji-0743-2809ae"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 88862",
+      "slug": "costa-rica-gallery-peninsula-papagayo-dji-0742-d60e9a"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 88863",
+      "slug": "costa-rica-gallery-peninsula-papagayo-dji-0745-7868e8"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 88864",
+      "slug": "costa-rica-gallery-peninsula-papagayo-dji-0749-11298b"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 88865",
+      "slug": "costa-rica-gallery-peninsula-papagayo-dji-0751-100c29"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 88866",
+      "slug": "costa-rica-gallery-peninsula-papagayo-dji-0750-0675b5"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 88842",
+      "slug": "marine-life-of-costa-rica-dji-0585-046c3f"
+    }
+  ],
+  "results": [
+    {
+      "queue_id": 78209,
+      "photo_id": 88843,
+      "slug": "marine-life-of-costa-rica-dji-0593-e3ba75",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 88843",
+          "slug": "marine-life-of-costa-rica-dji-0593-e3ba75"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 78210,
+      "photo_id": 88844,
+      "slug": "marine-life-of-costa-rica-dji-0597-95f340",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 88844",
+          "slug": "marine-life-of-costa-rica-dji-0597-95f340"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 78211,
+      "photo_id": 88845,
+      "slug": "marine-life-of-costa-rica-dji-0638-4de094",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 88845",
+          "slug": "marine-life-of-costa-rica-dji-0638-4de094"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 78212,
+      "photo_id": 88846,
+      "slug": "marine-life-of-costa-rica-dji-0667-1d02bc",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 88846",
+          "slug": "marine-life-of-costa-rica-dji-0667-1d02bc"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 78213,
+      "photo_id": 88847,
+      "slug": "marine-life-of-costa-rica-dji-0927-f65e11",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 88847",
+          "slug": "marine-life-of-costa-rica-dji-0927-f65e11"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 78214,
+      "photo_id": 88848,
+      "slug": "marine-life-of-costa-rica-dji-0937-d0cefc",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 88848",
+          "slug": "marine-life-of-costa-rica-dji-0937-d0cefc"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 78215,
+      "photo_id": 88849,
+      "slug": "marine-life-of-costa-rica-dji-0760-0bf261",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 88849",
+          "slug": "marine-life-of-costa-rica-dji-0760-0bf261"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 78216,
+      "photo_id": 88850,
+      "slug": "marine-life-of-costa-rica-dji-0762-4ff2a0",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 88850",
+          "slug": "marine-life-of-costa-rica-dji-0762-4ff2a0"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 78217,
+      "photo_id": 88851,
+      "slug": "marine-life-of-costa-rica-dji-0768-366350",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 88851",
+          "slug": "marine-life-of-costa-rica-dji-0768-366350"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 78218,
+      "photo_id": 88852,
+      "slug": "marine-life-of-costa-rica-dji-0763-2aaf32",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 88852",
+          "slug": "marine-life-of-costa-rica-dji-0763-2aaf32"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 78219,
+      "photo_id": 88853,
+      "slug": "marine-life-of-costa-rica-dji-0764-582cef",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 88853",
+          "slug": "marine-life-of-costa-rica-dji-0764-582cef"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 78220,
+      "photo_id": 88854,
+      "slug": "marine-life-of-costa-rica-dji-0775-40156e",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 88854",
+          "slug": "marine-life-of-costa-rica-dji-0775-40156e"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 78221,
+      "photo_id": 88855,
+      "slug": "marine-life-of-costa-rica-dji-0769-7d2e1e",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 88855",
+          "slug": "marine-life-of-costa-rica-dji-0769-7d2e1e"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 78222,
+      "photo_id": 88856,
+      "slug": "marine-life-of-costa-rica-dji-0772-7ee0fe",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 88856",
+          "slug": "marine-life-of-costa-rica-dji-0772-7ee0fe"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 78223,
+      "photo_id": 88857,
+      "slug": "costa-rica-gallery-peninsula-papagayo-dji-0535-bc2a47",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 88857",
+          "slug": "costa-rica-gallery-peninsula-papagayo-dji-0535-bc2a47"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 78224,
+      "photo_id": 88858,
+      "slug": "costa-rica-gallery-peninsula-papagayo-dji-0543-9a5f3e",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 88858",
+          "slug": "costa-rica-gallery-peninsula-papagayo-dji-0543-9a5f3e"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 78225,
+      "photo_id": 88859,
+      "slug": "costa-rica-gallery-peninsula-papagayo-dji-0740-a93d30",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 88859",
+          "slug": "costa-rica-gallery-peninsula-papagayo-dji-0740-a93d30"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 78226,
+      "photo_id": 88860,
+      "slug": "costa-rica-gallery-peninsula-papagayo-dji-0741-14f70d",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 88860",
+          "slug": "costa-rica-gallery-peninsula-papagayo-dji-0741-14f70d"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 78227,
+      "photo_id": 88861,
+      "slug": "costa-rica-gallery-peninsula-papagayo-dji-0743-2809ae",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 88861",
+          "slug": "costa-rica-gallery-peninsula-papagayo-dji-0743-2809ae"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 78228,
+      "photo_id": 88862,
+      "slug": "costa-rica-gallery-peninsula-papagayo-dji-0742-d60e9a",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 88862",
+          "slug": "costa-rica-gallery-peninsula-papagayo-dji-0742-d60e9a"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 78229,
+      "photo_id": 88863,
+      "slug": "costa-rica-gallery-peninsula-papagayo-dji-0745-7868e8",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 88863",
+          "slug": "costa-rica-gallery-peninsula-papagayo-dji-0745-7868e8"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 78230,
+      "photo_id": 88864,
+      "slug": "costa-rica-gallery-peninsula-papagayo-dji-0749-11298b",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 88864",
+          "slug": "costa-rica-gallery-peninsula-papagayo-dji-0749-11298b"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 78231,
+      "photo_id": 88865,
+      "slug": "costa-rica-gallery-peninsula-papagayo-dji-0751-100c29",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 88865",
+          "slug": "costa-rica-gallery-peninsula-papagayo-dji-0751-100c29"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 78232,
+      "photo_id": 88866,
+      "slug": "costa-rica-gallery-peninsula-papagayo-dji-0750-0675b5",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 88866",
+          "slug": "costa-rica-gallery-peninsula-papagayo-dji-0750-0675b5"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 78208,
+      "photo_id": 88842,
+      "slug": "marine-life-of-costa-rica-dji-0585-046c3f",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 88842",
+          "slug": "marine-life-of-costa-rica-dji-0585-046c3f"
+        }
+      ],
+      "status": "completed"
+    }
+  ]
+}

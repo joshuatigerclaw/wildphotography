@@ -1,0 +1,27 @@
+2026-04-29 23:54:04,773 INFO === WildPhotography Typesense Reconciliation (FIXED) ===
+2026-04-29 23:54:04,773 INFO 
+2026-04-29 23:54:05,172 INFO [1] Typesense current doc count: 35968
+2026-04-29 23:54:05,172 INFO [2] Loading eligible Neon docs...
+2026-04-29 23:54:07,407 INFO     Eligible Neon docs: 35649
+2026-04-29 23:54:07,407 INFO [3] Drift before reconcile: -319 (eligible=35649, TS=35968)
+2026-04-29 23:54:07,407 INFO [4] Exporting Typesense docs to identify stale...
+2026-04-29 23:54:10,560 INFO     TS docs: 35968, Stale: 363, Missing: 44
+2026-04-29 23:54:10,560 INFO [5] Removing 363 stale docs by slug...
+2026-04-29 23:54:13,633 INFO     Stale removed: 365
+2026-04-29 23:54:13,633 INFO [6] Adding 44 missing docs...
+2026-04-29 23:54:14,029 WARNING     Error batch 1: Field `orientation` has been declared in the schema, but is not found in the document.
+2026-04-29 23:54:14,029 WARNING     Error batch 1: Field `orientation` has been declared in the schema, but is not found in the document.
+2026-04-29 23:54:14,029 WARNING     Error batch 1: Field `orientation` has been declared in the schema, but is not found in the document.
+2026-04-29 23:54:14,029 INFO   Batch 1/1: 0 ok, 44 errors
+2026-04-29 23:54:14,479 INFO     Missing added: 0, errors: 44
+2026-04-29 23:54:16,944 INFO 
+2026-04-29 23:54:16,944 INFO === Reconciliation Complete ===
+2026-04-29 23:54:16,944 INFO   Eligible Neon:     35649
+2026-04-29 23:54:16,944 INFO   TS before:         35968
+2026-04-29 23:54:16,944 INFO   Stale removed:     365
+2026-04-29 23:54:16,944 INFO   Missing added:     0
+2026-04-29 23:54:16,944 INFO   TS after:          35603
+2026-04-29 23:54:16,944 INFO   Drift before:      -319
+2026-04-29 23:54:16,944 INFO   Drift after:       46
+2026-04-29 23:54:16,944 INFO   Duration:          12.2s
+2026-04-29 23:54:16,944 INFO   Report: /Users/joshuatenbrink/.openclaw/workspace/wildphotography/logs/typesense_reconcile_20260430T055416Z.json

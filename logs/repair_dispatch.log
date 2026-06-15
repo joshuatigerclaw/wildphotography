@@ -1,0 +1,30 @@
+
+=== REPAIR DISPATCH LOG 2026-06-03T15:17:00 UTC ===
+BATCH ID: repair_20260603_101756
+
+SUMMARY:
+- Jobs processed: 25
+- Repairs completed: 75
+- Failures: 0
+- Items requiring manual review (all originals missing from R2): 25
+
+MANUAL REVIEW QUEUE (26 items from manual_review_queue.json):
+- 25x unrecoverable_empty_hash (gallery_id=113, French Landscape Travel Photography)
+  Photo IDs: 51679-51703 (slugs: 2017-10-27-15-00-5c09 through .-5f13)
+- 1x unrecoverable_no_key_no_hash (photo_id=65915, slug=dji-0205-beaches)
+- 1x unrecoverable_metadata_file (photo_id=76217, slug=.-cl0a1100)
+
+BATCH RESULTS (25 jobs from derivative_rebuild_queue):
+All 25 jobs had missing originals in R2 — cannot regenerate derivatives.
+Affected photos: marine-life-of-costa-rica (88842-88855) and costa-rica-gallery-peninsula-papagayo (88857-88866) — all DJI drone photos.
+
+REPAIR BACKLOG STATUS:
+- 45 jobs were pending before this batch
+- 25 processed now (all marked completed but requiring manual review)
+- 20 remain in queue
+
+NEXT ACTIONS:
+1. [MANUAL] 26 unrecoverable photos in manual_review_queue.json need disposition decision
+2. [AUTOMATED] 20 remaining repair_backlog items should be processed in next batch
+3. [INVESTIGATE] The 25 DJI drone photos (88842-88866) missing originals — check if source files exist locally
+4. [MONITOR] stale_drift at 1535 — above threshold of 25, next validation run needed

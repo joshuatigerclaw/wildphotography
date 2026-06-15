@@ -1,0 +1,15 @@
+{
+  "timestamp": "2026-06-08T02:41:47.998654+00:00",
+  "workflow": "wild_gallery_cover_assignment",
+  "total_galleries": 166,
+  "galleries_with_valid_covers": 165,
+  "covers_assigned_null_galleries": 0,
+  "covers_upgraded_low_res": 0,
+  "total_improvements": 0,
+  "assignments": [],
+  "improvements": [],
+  "null_cover_inactive_galleries": [
+    "food-archived"
+  ],
+  "notes": "Applied 2x pixel threshold for upgrades. Galleries with no ready photos left inactive."
+}

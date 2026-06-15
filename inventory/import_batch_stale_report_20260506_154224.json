@@ -1,0 +1,15 @@
+{
+  "run_at": "2026-05-06T21:42:24.269172+00:00",
+  "folders_processed": [],
+  "folders_with_existing_gallery_match": [],
+  "folders_skipped_no_existing_gallery": [],
+  "folders_skipped_ambiguous_mapping": [],
+  "files_skipped_unmapped_gallery": 0,
+  "files_imported_to_existing_galleries": 0,
+  "existing_gallery_ids_used": [],
+  "classification": "stale_queue_cleanup",
+  "actionable_new_count": 0,
+  "duplicates_skipped": 0,
+  "unresolved_count": 0,
+  "note": "import_batch_active.json is now empty. All files from ADATA SC740 already exist in Neon DB. No new files found in any sampled folder across Costa-Rica-Gallery, Asia, Europe, Mexico, South-America, Family, Lifestyle."
+}

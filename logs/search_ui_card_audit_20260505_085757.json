@@ -1,0 +1,516 @@
+{
+  "run_at": "2026-05-05T14:57:57.187137+00:00",
+  "total_search_ready_photos": 37460,
+  "sample_size": 300,
+  "total_url_checks": 600,
+  "summary": {
+    "photos_ok": 273,
+    "photos_broken": 27,
+    "photos_missing_field": 0,
+    "ok_rate_pct": 91.0
+  },
+  "by_url_type": {
+    "thumb_url": {
+      "total": 300,
+      "accessible": 297,
+      "broken": 3,
+      "empty": 0
+    },
+    "og_image_url": {
+      "total": 300,
+      "accessible": 273,
+      "broken": 27,
+      "empty": 0
+    }
+  },
+  "broken_photos": {
+    "8470": {
+      "slug": "pano00031-isla-tortuga-5088",
+      "title": "landscape \u2014 Isla Tortuga \u2014 #8470 | WildPhotography",
+      "gallery_slug": "isla-tortuga",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        },
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        }
+      ]
+    },
+    "27031": {
+      "slug": "photo-125-DJI-0860",
+      "title": "Evening Glow Over Peninsula Papagayo Resort",
+      "gallery_slug": "costa-rica-gallery-peninsula-papagayo",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        },
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        }
+      ]
+    },
+    "42559": {
+      "slug": "land-animals-img_7489",
+      "title": "Costa Rica \u2014 Land Animals, Puntarenas, Costa Rica \u2014 #42559 | WildPhotography",
+      "gallery_slug": null,
+      "status": "broken",
+      "checks": [
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "URL_ERROR_SSLError"
+        },
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        }
+      ]
+    },
+    "42585": {
+      "slug": "costa-rica-travel-tourism-dji_0310",
+      "title": "Travel \u2014 #42585 | WildPhotography",
+      "gallery_slug": null,
+      "status": "broken",
+      "checks": [
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "URL_ERROR_SSLError"
+        },
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        }
+      ]
+    },
+    "1402": {
+      "slug": "img-9625-1100",
+      "title": "landscape \u2014 Arenal Volcano \u2014 #1402 | WildPhotography",
+      "gallery_slug": "arenal-volcano",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "ValueError"
+        },
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        }
+      ]
+    },
+    "41622": {
+      "slug": "flowers-plants-trees-2020-11-15-11-03-54",
+      "title": "Costa Rica \u2014 #41622 | WildPhotography",
+      "gallery_slug": null,
+      "status": "broken",
+      "checks": [
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "URL_ERROR_SSLError"
+        },
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        }
+      ]
+    },
+    "27218": {
+      "slug": "photo-127-2021-03-28 11-02-47",
+      "title": "landscape \u2014 Montezuma \u2014 #27218 | WildPhotography",
+      "gallery_slug": "costa-rica-gallery-montezuma-costa-rica",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": false,
+          "error": "InvalidURL"
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "27148": {
+      "slug": "photo-125-DJI-0017",
+      "title": "landscape \u2014 Peninsula Papagayo \u2014 #27148 | WildPhotography",
+      "gallery_slug": "costa-rica-gallery-peninsula-papagayo",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "7240": {
+      "slug": "20240817-095101-flowers-plants-trees-3858",
+      "title": "landscape \u2014 Guanacaste \u2014 #7240 | WildPhotography",
+      "gallery_slug": "flowers-plants-trees",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "41540": {
+      "slug": "cl0a5367-4695e86f",
+      "title": "Rural Costa Rica Landscape",
+      "gallery_slug": "rural-costa-rica",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "URL_ERROR_gaierror"
+        },
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        }
+      ]
+    },
+    "44458": {
+      "slug": "dji-0139-molx23i5",
+      "title": "Punta Cacique Guancaste Wildlife Photography",
+      "gallery_slug": null,
+      "status": "broken",
+      "checks": [
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "URL_ERROR_SSLError"
+        },
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        }
+      ]
+    },
+    "899": {
+      "slug": "2020-11-29-06-43-57-899",
+      "title": "landscape \u2014 Guanacaste Beaches \u2014 #899 | WildPhotography",
+      "gallery_slug": "beaches",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "27072": {
+      "slug": "photo-125-DJI-0909",
+      "title": "Forest and Secluded Bay Aerial, Peninsula Papagayo, Costa Rica",
+      "gallery_slug": "costa-rica-gallery-peninsula-papagayo",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        },
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        }
+      ]
+    },
+    "42433": {
+      "slug": "marine-life-of-costa-rica-CL0A4627",
+      "title": "Costa Rica: CL0A4627",
+      "gallery_slug": null,
+      "status": "broken",
+      "checks": [
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "URL_ERROR_gaierror"
+        },
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        }
+      ]
+    },
+    "14735": {
+      "slug": "img-7401-wildlife-11353",
+      "title": "landscape \u2014 Wildlife \u2014 #14735 | WildPhotography",
+      "gallery_slug": "wildlife",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        },
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        }
+      ]
+    },
+    "42513": {
+      "slug": "night-photography-2021-04-02-23-12-11",
+      "title": "2021-04-02 23.12.11 \u2014 Night Photography in Costa Rica",
+      "gallery_slug": null,
+      "status": "broken",
+      "checks": [
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "URL_ERROR_SSLError"
+        },
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        }
+      ]
+    },
+    "37230": {
+      "slug": "2023-03-12-12-06-31-09f450f6",
+      "title": "Jac\u00f3 Beach Shoreline under a Cloud-Filled Sky",
+      "gallery_slug": "jaco-beach",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        },
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        }
+      ]
+    },
+    "8211": {
+      "slug": "dji-0093-isla-tortuga-4829",
+      "title": "landscape \u2014 Isla Tortuga \u2014 #8211 | WildPhotography",
+      "gallery_slug": "isla-tortuga",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        },
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        }
+      ]
+    },
+    "45015": {
+      "slug": "tambor-photos-cl0a1206-9906af",
+      "title": "Tambor Beach, Nicoya Peninsula, Puntarenas Costa Rica",
+      "gallery_slug": "tambor-photos",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "42489": {
+      "slug": "wildlife-2022-09-11-12-59-34",
+      "title": "2022-09-11 12.59.34 \u2014 Costa Rica Wildlife",
+      "gallery_slug": null,
+      "status": "broken",
+      "checks": [
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "URL_ERROR_SSLError"
+        },
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        }
+      ]
+    },
+    "27122": {
+      "slug": "photo-125-CL0A6218",
+      "title": "Forested Headland and Protected Bay Beach, Peninsula Papagayo, Costa Rica",
+      "gallery_slug": "costa-rica-gallery-peninsula-papagayo",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        },
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        }
+      ]
+    },
+    "27231": {
+      "slug": "photo-127-CL0A6026",
+      "title": "landscape \u2014 Montezuma \u2014 #27231 | WildPhotography",
+      "gallery_slug": "costa-rica-gallery-montezuma-costa-rica",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        },
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        }
+      ]
+    },
+    "2252": {
+      "slug": "cl0a0990-beaches-1216",
+      "title": "landscape \u2014 Guanacaste Beaches \u2014 #2252 | WildPhotography",
+      "gallery_slug": "costa-rica-gallery-beaches",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "ValueError"
+        },
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        }
+      ]
+    },
+    "7292": {
+      "slug": "cl0a9038-flowers-plants-trees-3910",
+      "title": "landscape \u2014 Guanacaste \u2014 #7292 | WildPhotography",
+      "gallery_slug": "flowers-plants-trees",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "45065": {
+      "slug": "tambor-photos-cl0a4021-eae6fd",
+      "title": "Tambor Beach, Nicoya Peninsula, Puntarenas Costa Rica",
+      "gallery_slug": "tambor-photos",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        },
+        {
+          "type": "thumb_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "27045": {
+      "slug": "photo-125-CL0A6088",
+      "title": "landscape \u2014 Peninsula Papagayo \u2014 #27045 | WildPhotography",
+      "gallery_slug": "costa-rica-gallery-peninsula-papagayo",
+      "status": "broken",
+      "checks": [
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        },
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "HTTP_404"
+        }
+      ]
+    },
+    "42268": {
+      "slug": "la-sabana-estadio-nacional-costa-rica-san-jose-bpano0020",
+      "title": "La Sabana Photography",
+      "gallery_slug": null,
+      "status": "broken",
+      "checks": [
+        {
+          "type": "og_image_url",
+          "accessible": false,
+          "error": "URL_ERROR_SSLError"
+        },
+        {
+          "type": "thumb_url",
+          "accessible": true,
+          "error": null
+        }
+      ]
+    }
+  },
+  "empty_url_photos": {},
+  "status": "success"
+}

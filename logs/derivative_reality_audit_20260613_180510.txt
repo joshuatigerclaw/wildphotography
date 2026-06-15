@@ -1,0 +1,67 @@
+WILDPHOTOGRAPHY DERIVATIVE REALITY AUDIT
+Run: 2026-06-14T00:05:10.634636+00:00
+Total RPR photos: 69,201
+Total DB derivatives_complete: 69,530
+Sample size: 500
+
+--- REALITY CHECK ---
+Total keys checked (R2 HeadObject): 2396
+Keys present: 1723
+Keys missing: 673
+
+--- FLAG ACCURACY ---
+Photos OK (reality matches DB): 60
+Flag mismatch (DB=complete but objects missing): 440
+Flag missing (objects exist but DB=False): 0
+
+--- DISCREPANCIES ---
+  [42589] slug=costa-rica-travel-tourism-dji_0351 status=flag_mismatch db_flag=True present=0 missing=2
+  [86775] slug=2020-07-03-13.49.58 status=flag_mismatch db_flag=True present=0 missing=2
+  [3168] slug=img-5094-beaches-1487 status=flag_mismatch db_flag=True present=4 missing=1
+  [4213] slug=img-0647-best-of-costa-rica-1748 status=flag_mismatch db_flag=True present=4 missing=1
+  [70482] slug=hyperlapse-0550-1325c22e status=flag_mismatch db_flag=True present=0 missing=5
+  [5802] slug=img-7073-birds-2456 status=flag_mismatch db_flag=True present=4 missing=1
+  [7140] slug=2020-10-04-11-48-17-flowers-plants-trees-3758 status=flag_mismatch db_flag=True present=4 missing=1
+  [37540] slug=south-america-argentina-2025-12-06203024-f7dcac status=flag_mismatch db_flag=True present=4 missing=1
+  [51724] slug=img-1013-arenal-volcano status=flag_mismatch db_flag=True present=4 missing=1
+  [73869] slug=dji-0399-3f7f51fe status=flag_mismatch db_flag=True present=4 missing=1
+  [40999] slug=samara-playa-carillo-dji-0358 status=flag_mismatch db_flag=True present=4 missing=1
+  [37228] slug=2023-03-11-18-04-05-0701dd22 status=flag_mismatch db_flag=True present=1 missing=4
+  [41060] slug=golfo-de-nicoya-dji-0063 status=flag_mismatch db_flag=True present=4 missing=1
+  [14199] slug=hyperlapse-0020-tambor-nicoya-peninsula-costa-rica-10817 status=flag_mismatch db_flag=True present=4 missing=1
+  [66431] slug=dji-0534-b94e41966e2bcd26 status=flag_mismatch db_flag=True present=0 missing=5
+  [50905] slug=cl0a4277-1f09 status=flag_mismatch db_flag=True present=4 missing=1
+  [23160] slug=img-0207-39efea40 status=flag_mismatch db_flag=True present=4 missing=1
+  [35164] slug=peninsula-papagayo-dji-0120-56a4b5d5 status=flag_mismatch db_flag=True present=4 missing=1
+  [14782] slug=2019-03-31-061618-1 status=flag_mismatch db_flag=True present=0 missing=1
+  [11128] slug=dji-0300-playa-hermosa-guanacaste-7746 status=flag_mismatch db_flag=True present=4 missing=1
+  [67295] slug=dji-0288-aab22939 status=flag_mismatch db_flag=True present=0 missing=5
+  [13179] slug=cl0a0222-sunrise-sunset-9797 status=flag_mismatch db_flag=True present=4 missing=1
+  [30142] slug=dji0906 status=flag_mismatch db_flag=True present=4 missing=1
+  [68006] slug=2023-10-13-07-06-55-44127162 status=flag_mismatch db_flag=True present=0 missing=5
+  [93567] slug=20250426-114146 status=flag_mismatch db_flag=True present=4 missing=1
+  [67834] slug=dji-0990-c30e065d status=flag_mismatch db_flag=True present=0 missing=5
+  [52122] slug=costa-rica-gallery-jaco-beach-dji-0038 status=flag_mismatch db_flag=True present=4 missing=1
+  [33805] slug=dji-0553-ff0ab917 status=flag_mismatch db_flag=True present=4 missing=1
+  [54079] slug=food-2025-03-08-06-54-22 status=flag_mismatch db_flag=True present=4 missing=1
+  [16991] slug=img-0410-butterflies-1006 status=flag_mismatch db_flag=True present=4 missing=1
+  [4446] slug=img-7223-best-of-costa-rica-1823 status=flag_mismatch db_flag=True present=4 missing=1
+  [28991] slug=2024-12-30-07-57-06-3ce579fa status=flag_mismatch db_flag=True present=4 missing=1
+  [44490] slug=img-0893-molxaweu status=flag_mismatch db_flag=True present=4 missing=1
+  [50890] slug=2022-02-18-18-08-43-9aa0 status=flag_mismatch db_flag=True present=4 missing=1
+  [25095] slug=dji-0234-0035d6de status=flag_mismatch db_flag=True present=1 missing=4
+  [48359] slug=costa-rica-gallery-wildlife-cl0a1439-1 status=flag_mismatch db_flag=True present=4 missing=1
+  [11918] slug=dji-0938-punta-leona-8536 status=flag_mismatch db_flag=True present=4 missing=1
+  [53483] slug=isla-tortuga-dji-0930 status=flag_mismatch db_flag=True present=4 missing=1
+  [11258] slug=dji-0033-playas-del-coco-7876 status=flag_mismatch db_flag=True present=4 missing=1
+  [68787] slug=dji-0601-df7e494a status=flag_mismatch db_flag=True present=0 missing=5
+  [61399] slug=2022-02-18-17.03.41-7e981717 status=flag_mismatch db_flag=True present=4 missing=1
+  [13831] slug=cl0a7333-tambor-nicoya-peninsula-costa-rica-10449 status=flag_mismatch db_flag=True present=4 missing=1
+  [12152] slug=dji-0691-puntarenas-costa-rica-8770 status=flag_mismatch db_flag=True present=1 missing=4
+  [36471] slug=cl0a0022jpg status=flag_mismatch db_flag=True present=4 missing=1
+  [25503] slug=img-1535-55be17b7 status=flag_mismatch db_flag=True present=4 missing=1
+  [72328] slug=img-7447 status=flag_mismatch db_flag=True present=4 missing=1
+  [74313] slug=food-b2bc6a21 status=flag_mismatch db_flag=True present=4 missing=1
+  [30295] slug=hyperlapse0108 status=flag_mismatch db_flag=True present=4 missing=1
+  [7011] slug=img-1314-escazu-costa-rica-3629 status=flag_mismatch db_flag=True present=4 missing=1
+  [22053] slug=2023-12-27-07-32-03-beaches-1078 status=flag_mismatch db_flag=True present=4 missing=1

@@ -33,8 +33,8 @@ def load_galleries_needing_cover(conn, limit=200):
                    p.ready_for_public_render as cover_ready,
                    p.thumb_url as cover_thumb
             FROM galleries g
-            LEFT JOIN photos p ON g.cover_photo_id = p.id
-            WHERE g.cover_photo_id IS NULL
+            LEFT JOIN photos p ON NULLIF(g.cover_photo_id, '')::integer = p.id
+            WHERE (g.cover_photo_id IS NULL OR g.cover_photo_id = '')
                OR p.id IS NULL
                OR p.is_active = false
                OR p.ready_for_public_render = false
@@ -148,7 +148,7 @@ def assign_or_repair_covers(conn, assignments):
                 UPDATE galleries
                 SET cover_photo_id = %s
                 WHERE id = %s
-                  AND (cover_photo_id IS NULL OR cover_photo_id != %s)
+                  AND (cover_photo_id IS NULL OR cover_photo_id = '' OR NULLIF(cover_photo_id, '')::integer != %s)
             """, (item["photo_id"], item["gallery_id"], item["photo_id"]))
             if cur.rowcount > 0:
                 if item["original_status"] == "missing":

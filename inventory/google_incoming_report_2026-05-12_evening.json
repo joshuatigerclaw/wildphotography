@@ -1,0 +1,44 @@
+{
+  "report_date": "2026-05-12",
+  "workflow": "wild_google_incoming_supervisor",
+  "time_cst": "Monday, May 11, 2026 \u2014 8:20 PM CST",
+  "time_utc": "2026-05-12 02:20 UTC",
+  "scan_result": {
+    "status": "ok",
+    "new_files_detected": 0,
+    "total_in_incoming": 193,
+    "manifest_total": 386,
+    "all_files_already_manifested": true
+  },
+  "folders_last_modified": [
+    [
+      "2025 Tambor New Years",
+      "2026-04-25 11:09"
+    ],
+    [
+      "WIldphotography (1)",
+      "2026-04-18 21:16"
+    ],
+    [
+      "WP",
+      "2026-03-30 06:35"
+    ],
+    [
+      "Galleries",
+      "2026-03-24 17:46"
+    ],
+    [
+      "_uploaded_mirror",
+      "2026-03-24 17:31"
+    ]
+  ],
+  "batch": {
+    "batch_ready": false,
+    "batch_size": 0,
+    "action_taken": "none - no new files"
+  },
+  "import": {
+    "imported_count": 0,
+    "failed_count": 0
+  }
+}

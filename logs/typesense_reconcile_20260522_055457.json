@@ -1,0 +1,14 @@
+{
+  "run_at": "$(date -u +%Y-%m-%dT%H:%M:%SZ)",
+  "eligible_db_count": 40952,
+  "typesense_count_before": 43883,
+  "typesense_count_after": 41060,
+  "stale_removed": 2931,
+  "missing_added": 0,
+  "missing_errors": 0,
+  "stale_errors": 0,
+  "final_drift": 108,
+  "status": "ok",
+  "duration_seconds": null,
+  "error": null
+}

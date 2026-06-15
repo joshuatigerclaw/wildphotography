@@ -33,7 +33,7 @@ async function validateDerivativeUrls() {
   // Get recently rebuilt photos - those with derivatives_complete = true 
   // and updated recently (from derivative rebuild)
   // Note: No column aliases - Neon returns original column names
-  const recentPhotos = await sql(`
+const recentPhotos = await sql`
     SELECT id, slug, title, thumb_url, small_url, medium_url, large_url
     FROM photos 
     WHERE derivatives_complete = true 
@@ -41,7 +41,7 @@ async function validateDerivativeUrls() {
       AND (thumb_url IS NOT NULL AND thumb_url <> '')
     ORDER BY updated_at DESC NULLS LAST
     LIMIT 50
-  `);
+  `;
   
   console.log(`Found ${recentPhotos.length} photos with complete derivatives\n`);
   
@@ -88,21 +88,21 @@ async function validatePageRendering() {
   ];
   
   // Get a sample gallery and photo for detail page checks
-  const sampleGallery = await sql(`
+  const sampleGallery = await sql`
     SELECT g.slug FROM galleries g
-    JOIN photos p ON p.id = g.cover_photo_id
+    JOIN photos p ON p.id = g.cover_photo_id::integer
     WHERE p.thumb_url IS NOT NULL AND p.thumb_url <> ''
     LIMIT 1
-  `);
+  `;
   
-  const samplePhoto = await sql(`
+  const samplePhoto = await sql`
     SELECT slug FROM photos 
     WHERE thumb_url IS NOT NULL 
       AND thumb_url <> ''
       AND derivatives_complete = true
       AND ready_for_public_render = true
     LIMIT 1
-  `);
+  `;
   
   if (sampleGallery.length > 0) {
     pages.push({ name: 'Gallery Detail', url: `${SITE_BASE}/gallery/${sampleGallery[0].slug}` });

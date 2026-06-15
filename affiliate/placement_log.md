@@ -137,3 +137,11 @@ cd /Users/joshuatenbrink/.openclaw/workspace/wildphotography
 ```
 
 Note: Specific deployment depends on the current CI/CD setup (Vercel/Cloudflare Pages/other).
+[2026-05-24 12:06] === WILD_AFFILIATE_PHOTO_INJECTOR START ===
+[2026-05-24 12:06]   Batch: 250 processed, 409 blocks inserted, 0 skipped (cumulative: 409 inserted)
+[2026-05-24 12:07]   Batch: 196 processed, 346 blocks inserted, 0 skipped (cumulative: 755 inserted)
+[2026-05-24 12:07] === PHOTO INJECTION COMPLETE ===
+[2026-05-24 12:07] Total blocks inserted: 755
+[2026-05-24 12:07] Total skipped (no match): 0
+[2026-05-24 12:07] Total photo blocks in DB: 103299
+[2026-05-24 12:07] Photo blocks added (last 2 days): {datetime.date(2026, 5, 24): 6113, datetime.date(2026, 5, 23): 29632, datetime.date(2026, 5, 22): 60525}

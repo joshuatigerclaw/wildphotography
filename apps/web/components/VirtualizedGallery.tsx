@@ -238,10 +238,10 @@ function VirtuosoGalleryComponent({
         className="columns-2 sm:columns-3 md:columns-4 lg:columns-5 gap-4 space-y-4"
       >
         {photos.map((photo) => (
-          <PhotoTile 
-            key={photo.id} 
+          <PhotoTile
+            key={photo.id}
             photo={photo}
-            onClick={() => onPhotoClick?.(photo)}
+            onClick={onPhotoClick ? () => onPhotoClick(photo) : undefined}
           />
         ))}
       </div>
@@ -286,15 +286,15 @@ function SimpleGridComponent({
     <div className="w-full">
       <div 
         className="grid gap-4"
-        style={{ 
-          gridTemplateColumns: `repeat(${columns}, minmax(0, 1fr))` 
+        style={{
+          gridTemplateColumns: `repeat(${columns}, minmax(0, 1fr))`
         }}
       >
         {photos.map((photo) => (
-          <PhotoTile 
-            key={photo.id} 
+          <PhotoTile
+            key={photo.id}
             photo={photo}
-            onClick={() => onPhotoClick?.(photo)}
+            onClick={onPhotoClick ? () => onPhotoClick(photo) : undefined}
           />
         ))}
       </div>

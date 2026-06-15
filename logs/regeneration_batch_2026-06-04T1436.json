@@ -1,0 +1,23 @@
+{
+  "timestamp": "2026-06-04T15:41:02.861Z",
+  "results": [
+    {
+      "photo_id": 41781,
+      "status": "ok",
+      "derivs_complete": true
+    },
+    {
+      "photo_id": 41782,
+      "status": "ok",
+      "derivs_complete": true
+    },
+    {
+      "photo_id": 41787,
+      "status": "ok",
+      "derivs_complete": true
+    }
+  ],
+  "ok": 3,
+  "fail": 0,
+  "skip": 0
+}

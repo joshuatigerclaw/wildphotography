@@ -1,0 +1,892 @@
+{
+  "run_at": "2026-05-22T19:41:17.840799+00:00",
+  "total_photos": 44056,
+  "distinct_affected_photos": 800,
+  "all_clear": false,
+  "issues": {
+    "missing_original_r2_key": {
+      "description": "Missing original R2 storage key \u2014 cannot rebuild derivatives",
+      "count": 0,
+      "sample": []
+    },
+    "pending_derivatives_with_r2": {
+      "description": "Has R2 original but derivatives_complete=false \u2014 needs rebuild dispatch",
+      "count": 100,
+      "sample": [
+        {
+          "id": 46187,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2023-10-13-09-31-05",
+          "status": "imported",
+          "original_r2_key": "originals/costa-rica/421491ee70df55cc4a878f2b49fc708df5fceb7bae5d143dc4697b2c12e9e3d4.jpg"
+        },
+        {
+          "id": 46188,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2023-10-13-09-31-12",
+          "status": "imported",
+          "original_r2_key": "originals/costa-rica/46016170811ff52a3074710e8db81b0c51d4448eadafb4190c26d969d1fefd9e.jpg"
+        },
+        {
+          "id": 46189,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2023-10-13-09-39-15",
+          "status": "imported",
+          "original_r2_key": "originals/costa-rica/351f9ec46adbbc6a1897b1f0cbbc6e9c47d941bcf81e3f1c2db4cab9624d0f55.jpg"
+        },
+        {
+          "id": 46190,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2023-10-13-11-25-37",
+          "status": "imported",
+          "original_r2_key": "originals/costa-rica/1f7d6950077e62bb8a6742b42673cad11c7fe82879217b357ea5519815ca0b44.jpg"
+        },
+        {
+          "id": 46191,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2023-10-13-11-28-33",
+          "status": "imported",
+          "original_r2_key": "originals/costa-rica/23e042e9f3c7eeb13d3d5b87ae7798bf72b228e4cd553b4b90cdd9d52a977ccf.jpg"
+        },
+        {
+          "id": 46192,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2023-10-13-11-28-51",
+          "status": "imported",
+          "original_r2_key": "originals/costa-rica/886a4cf5445522cb3fa6ff05599bf73ec7d305c4116893397cc6ba7607c53509.jpg"
+        },
+        {
+          "id": 46193,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2023-10-13-11-31-15",
+          "status": "imported",
+          "original_r2_key": "originals/costa-rica/5536dd8c90f56c98b1e4e76c0d79d688bc17fa45056fcacb025eb616caad11a9.jpg"
+        },
+        {
+          "id": 46194,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2023-10-13-12-17-07",
+          "status": "imported",
+          "original_r2_key": "originals/costa-rica/b9f30e6ddca6a2692affb600066af1f6389e2d0c8e41682601865e57d3a82b92.jpg"
+        },
+        {
+          "id": 46195,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2023-10-13-14-51-10",
+          "status": "imported",
+          "original_r2_key": "originals/costa-rica/471c7258b4d07299f21a85e7358b8698a9d5f99d0510eae962640c8a3b4cb8db.jpg"
+        },
+        {
+          "id": 46196,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2023-10-13-17-07-06",
+          "status": "imported",
+          "original_r2_key": "originals/costa-rica/4b0c582d7985aff1b93b4d7e5b75a3ee68e9704810cbac552ba943ec7aa2e653.jpg"
+        },
+        {
+          "id": 46197,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2023-10-14-07-53-26",
+          "status": "imported",
+          "original_r2_key": "originals/costa-rica/c61dd105fffef2d61fb6fe6a2bec84ab49e3084c8891880ff1016e3a8c49a2b1.jpg"
+        },
+        {
+          "id": 46198,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2023-10-14-09-13-34",
+          "status": "imported",
+          "original_r2_key": "originals/costa-rica/de38c1d35859453615a1cd566ac84fdaecd1624442285199deefd8821564e0f8.jpg"
+        },
+        {
+          "id": 46199,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2023-10-14-09-13-38",
+          "status": "imported",
+          "original_r2_key": "originals/costa-rica/a4febad3965143f5b4ae71b90530b5acf8500058a11b1a7f86270477f7f492b8.jpg"
+        },
+        {
+          "id": 46200,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2023-10-14-10-06-03",
+          "status": "imported",
+          "original_r2_key": "originals/costa-rica/39efc33c11d8f80447a92d0270d0e89f45d1dd760998f828f41c5d112b75f82e.jpg"
+        },
+        {
+          "id": 46201,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2023-10-14-12-56-06",
+          "status": "imported",
+          "original_r2_key": "originals/costa-rica/833110c885d9f3354a1d59591e018f003a7f8f172b4275295a0a8d83cc72509f.jpg"
+        },
+        {
+          "id": 46202,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2023-10-14-15-33-20",
+          "status": "imported",
+          "original_r2_key": "originals/costa-rica/0dbbf9eff860a719d1a20e439501e7472e0ae702eef0d6d771a9b30205b07f5e.jpg"
+        },
+        {
+          "id": 46203,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2023-10-14-15-33-21",
+          "status": "imported",
+          "original_r2_key": "originals/costa-rica/4ce072c77ab6a8ccde4cc993db72ae94e1050f3ad524872d03b203a0780ecf91.jpg"
+        },
+        {
+          "id": 46204,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2023-10-14-15-33-22",
+          "status": "imported",
+          "original_r2_key": "originals/costa-rica/aefbef3af563680189421cce5e2948181fdffd4fbedcaf34b524543f161318f2.jpg"
+        },
+        {
+          "id": 46205,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2023-10-14-15-38-44",
+          "status": "imported",
+          "original_r2_key": "originals/costa-rica/1b2df1efef6b94fb140d10e309b076ad7275edf9f900a21d79bba79b93bab5b1.jpg"
+        },
+        {
+          "id": 46206,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2023-10-14-16-55-25",
+          "status": "imported",
+          "original_r2_key": "originals/costa-rica/588b8585d21598b03aebfd294bb1752d7a558b87039003a13d359e73efee089a.jpg"
+        },
+        {
+          "id": 46207,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2023-10-14-16-55-27",
+          "status": "imported",
+          "original_r2_key": "originals/costa-rica/1aff5466dff21e4e0f42988f7df2b59551c021e422dd9f79098259f41fa5597d.jpg"
+        },
+        {
+          "id": 46208,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2023-10-14-16-55-34",
+          "status": "imported",
+          "original_r2_key": "originals/costa-rica/f1c4fa8724fcdf9ab30da5908d04e085dd7f2d6b56f90ef66c8012470479ebbc.jpg"
+        },
+        {
+          "id": 46209,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2023-10-15-06-16-30",
+          "status": "imported",
+          "original_r2_key": "originals/costa-rica/79fcb3d339ae06647cda67bbcc89f0c406ee1be695e00206ef82e745bdd82f72.jpg"
+        },
+        {
+          "id": 46210,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2023-10-15-06-16-33",
+          "status": "imported",
+          "original_r2_key": "originals/costa-rica/a800208ec37d8860aa477e3abaa537a131b80c95f4655ba228e3272df0eea844.jpg"
+        },
+        {
+          "id": 46211,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-20240920_122435",
+          "status": "imported",
+          "original_r2_key": "originals/costa-rica/f75d5ca795935a6a7e9be1e1d988b3ceb95468f865417ad94d5f00b162f3e3e4.jpg"
+        },
+        {
+          "id": 46212,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-20240920_122449",
+          "status": "imported",
+          "original_r2_key": "originals/costa-rica/40309d73bb89ba8992da4a7af3e008efcb5de85262861a04ede0427e958190d7.jpg"
+        },
+        {
+          "id": 46213,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-20240920_122516",
+          "status": "imported",
+          "original_r2_key": "originals/costa-rica/efb360cb75db34e17abc4a164eef3ab47981a8e90eeb3afa4a72b479abae3eaf.jpg"
+        },
+        {
+          "id": 46214,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-20240920_122519",
+          "status": "imported",
+          "original_r2_key": "originals/costa-rica/4ffc9f57b11b19f442b9949fbe1ddb5ac163b4c2bdc56080016ce4b5bb9f7e6f.jpg"
+        },
+        {
+          "id": 46215,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-20240920_122524-0-",
+          "status": "imported",
+          "original_r2_key": "originals/costa-rica/e30685756c11d462b4abc2da85bba51a2a50032f5ddc826b040c657843cd9072.jpg"
+        },
+        {
+          "id": 46216,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-20240920_140542",
+          "status": "imported",
+          "original_r2_key": "originals/costa-rica/17a828d40f83704868ab200daf0adf4fdedcf9addf4f80c9987444d4c31961ff.jpg"
+        },
+        {
+          "id": 46217,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-20240920_140703",
+          "status": "imported",
+          "original_r2_key": "originals/costa-rica/2ffa39f24cf25b28221422bdcaa96a26e08b5a1c445d78758fc6491eab386873.jpg"
+        },
+        {
+          "id": 46218,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-20240920_141101",
+          "status": "imported",
+          "original_r2_key": "originals/costa-rica/91a93e64fd03aae74b09051525548d98a1f799e9095a677be28f7e6c5598c4d6.jpg"
+        },
+        {
+          "id": 46219,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-20240920_141113",
+          "status": "imported",
+          "original_r2_key": "originals/costa-rica/e04ac22f02a32e57ad4c4e2e5ef45eaafba4de669017f4b93b40a267da6f57da.jpg"
+        },
+        {
+          "id": 46220,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-dji_0193",
+          "status": "enriched",
+          "original_r2_key": "originals/costa-rica/3dfa2c50cccc13ee1b55b60b1ba9e73136bf4653a56124579b84e10accea98fa.jpg"
+        },
+        {
+          "id": 46221,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-dji_0194",
+          "status": "enriched",
+          "original_r2_key": "originals/costa-rica/0a58a793d4acc68b8b9392c3bb40d509fc57cf094fa6132ef9d56f61ef637d67.jpg"
+        },
+        {
+          "id": 46222,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-dji_0195",
+          "status": "enriched",
+          "original_r2_key": "originals/costa-rica/f611899a007c8914894a215e6f7eac7b341b366405b10df4642d064a1d0e5780.jpg"
+        },
+        {
+          "id": 46223,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-dji_0198",
+          "status": "enriched",
+          "original_r2_key": "originals/costa-rica/15326fdf5b3b9d81e1f6e3215805a8f586132524c3825b8d193f8ff416a04559.jpg"
+        },
+        {
+          "id": 46224,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-dji_0203",
+          "status": "enriched",
+          "original_r2_key": "originals/costa-rica/7dab3f23ee8e1eadbf7838a55a05c392aa361256a1d9e9a536dbd3ac420eaccd.jpg"
+        },
+        {
+          "id": 46225,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-dji_0204",
+          "status": "enriched",
+          "original_r2_key": "originals/costa-rica/9af6316b2347289312681a9905f3e91ec2e83aa1dc7fb5e705954a2968755dab.jpg"
+        },
+        {
+          "id": 46226,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-dji_0206",
+          "status": "enriched",
+          "original_r2_key": "originals/costa-rica/a6bada76c2e34a37ff8886c442782d469da631b2da371e1c8dddd13057ddc65b.jpg"
+        },
+        {
+          "id": 46227,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-dji_0209",
+          "status": "enriched",
+          "original_r2_key": "originals/costa-rica/0062536ab4b33cba66f042c9757c3fb2ca5b71f489486fd00d6a08bcf5b125df.jpg"
+        },
+        {
+          "id": 46228,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-dji_0211",
+          "status": "enriched",
+          "original_r2_key": "originals/costa-rica/cc12932db4e7bfa855cc37ff1c5deb41f97c886ab611fb5dcea505e9c6c741f8.jpg"
+        },
+        {
+          "id": 46229,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-dji_0212",
+          "status": "enriched",
+          "original_r2_key": "originals/costa-rica/52b7b41dda013946d8aec3b432993bf54e6e2d576537414782aba416df669fa6.jpg"
+        },
+        {
+          "id": 46230,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-dji_0218",
+          "status": "enriched",
+          "original_r2_key": "originals/costa-rica/4a459e56a55632419e5ac36dcce5851523a8e3f75a748ed9ca07ce36501122ab.jpg"
+        },
+        {
+          "id": 46231,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-dji_0219",
+          "status": "enriched",
+          "original_r2_key": "originals/costa-rica/4e90cd9b031cda0b9049eab68f6b19a2cd6f109e3ea6292639f29b912db330f0.jpg"
+        },
+        {
+          "id": 46232,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-dji_0221",
+          "status": "enriched",
+          "original_r2_key": "originals/costa-rica/db774c92d17ef65df09e0f67e9bbf16294bff034087f66e16d0a5a0c8953427c.jpg"
+        },
+        {
+          "id": 46233,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-dji_0222",
+          "status": "enriched",
+          "original_r2_key": "originals/costa-rica/4dd857dec62b97ab66a8b17ab74e2f4eb05c30bcd7d0f4867f5430ac288ec90c.jpg"
+        },
+        {
+          "id": 46234,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-dji_0224",
+          "status": "enriched",
+          "original_r2_key": "originals/costa-rica/f26cd16bdd8165094616247e891feab4fcea9015ebc98929bdb92cce7107e5a9.jpg"
+        },
+        {
+          "id": 46235,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-dji_0225",
+          "status": "enriched",
+          "original_r2_key": "originals/costa-rica/450e65d18f71a80f492a45d3bacd6855dcbcb50173944dfbf0b8fcbc9eb1f770.jpg"
+        },
+        {
+          "id": 46236,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-dji_0226",
+          "status": "enriched",
+          "original_r2_key": "originals/costa-rica/e8a36817684c6bb4b8a647893ff8331fae9805b392acc7b156425e0ac2dcd8d7.jpg"
+        }
+      ]
+    },
+    "render_ready_not_search_ready": {
+      "description": "ready_for_public_render=true but search_ready=false \u2014 blocked from Typesense",
+      "count": 0,
+      "sample": []
+    },
+    "missing_content_hash": {
+      "description": "No content_hash \u2014 cannot detect duplicates or verify integrity",
+      "count": 15434,
+      "sample": [
+        {
+          "id": 16,
+          "slug": "scarlet-macaw",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 17,
+          "slug": "quetzal",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 19,
+          "slug": "three-toed-sloth",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 21,
+          "slug": "green-iguana",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 23,
+          "slug": "spectacled-owl",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 24,
+          "slug": "toucan-barbet",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 27,
+          "slug": "collared-aracari",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 29,
+          "slug": "boat-billed-heron",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 30,
+          "slug": "fiery-hummingbird",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 31,
+          "slug": "montezuma-oropendola",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 32,
+          "slug": "volcano-view",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 33,
+          "slug": "pacific-sunset",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 35,
+          "slug": "rainforest-waterfall",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 42,
+          "slug": "paddleboarding-adventure-on-a-tropical-coast-9kLkq4",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 43,
+          "slug": "wading-angler-quiet-water-fishing-scene-dWHshx",
+          "status": "published",
+          "has_r2": true
+        },
+        {
+          "id": 44,
+          "slug": "img-9761-jpg-McvJMD",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 45,
+          "slug": "img-9867-jpg-ggnxV4",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 46,
+          "slug": "img-0133-jpg-t25Tbt",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 47,
+          "slug": "img-0148-jpg-WgXJsL",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 48,
+          "slug": "img-0135-jpg-x8LCKP",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 49,
+          "slug": "img-0154-jpg-P4g3jH",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 50,
+          "slug": "costa-rica-billabong-surf-2009-5QgMNB",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 51,
+          "slug": "img-0280-jpg-WR6t7s",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 52,
+          "slug": "costa-rica-billabong-surf-2009-PSWCnj",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 53,
+          "slug": "img-9578-jpg-CWp24N",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 54,
+          "slug": "img-9644-jpg-HCxCGn",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 55,
+          "slug": "img-3491-jpg-jHd5JG",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 56,
+          "slug": "img-6629-jpg-dqMnVs",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 57,
+          "slug": "img-0332-jpg-rSSd5X",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 58,
+          "slug": "img-6632-jpg-sTd7RM",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 59,
+          "slug": "img-0341-jpg-kZ3chM",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 60,
+          "slug": "img-9672-jpg-HSKLKj",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 61,
+          "slug": "img-9584-jpg-F3ffkg",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 62,
+          "slug": "img-9468-jpg-pQpxCC",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 63,
+          "slug": "img-9572-jpg-TC4cZc",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 64,
+          "slug": "img-9600-jpg-ZsctXJ",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 65,
+          "slug": "img-9717-jpg-7ZKCZv",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 66,
+          "slug": "img-9723-jpg-qsxkCW",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 67,
+          "slug": "img-9890-jpg-zBSPgj",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 68,
+          "slug": "img-9902-jpg-JwSZbr",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 69,
+          "slug": "img-9843-jpg-hxpDkp",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 71,
+          "slug": "img-9919-jpg-DXrP87",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 72,
+          "slug": "img-0021-jpg-GkKRzD",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 73,
+          "slug": "img-0235-jpg-9sPXtp",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 74,
+          "slug": "img-0236-jpg-S2T7WR",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 75,
+          "slug": "img-0238-jpg-ZGvNtp",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 76,
+          "slug": "img-0277-jpg-qt4QV8",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 77,
+          "slug": "img-0325-jpg-fmv7Qf",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 78,
+          "slug": "img-3493-jpg-gG4vff",
+          "status": "legacy_static",
+          "has_r2": true
+        },
+        {
+          "id": 79,
+          "slug": "img-5305-jpg-R4sG6V",
+          "status": "legacy_static",
+          "has_r2": true
+        }
+      ]
+    },
+    "missing_slug": {
+      "description": "Null or empty slug \u2014 cannot build public URL",
+      "count": 0,
+      "sample": []
+    },
+    "missing_gallery_slug": {
+      "description": "ready_for_public_render=true but gallery_slug is null \u2014 no gallery association",
+      "count": 5151,
+      "sample": [
+        {
+          "id": 242,
+          "slug": "hermosa-beach-1",
+          "status": "archived"
+        },
+        {
+          "id": 14905,
+          "slug": "resplendent-quetzal",
+          "status": "archived"
+        },
+        {
+          "id": 36571,
+          "slug": "121619-hyperlapse-0051-caa78cf4",
+          "status": "archived_unrecoverable"
+        },
+        {
+          "id": 41302,
+          "slug": "sunrise-sunset-2016-07-31-17-59-49",
+          "status": "published"
+        },
+        {
+          "id": 41303,
+          "slug": "sunrise-sunset-2017-07-15-18-57-45",
+          "status": "published"
+        },
+        {
+          "id": 41304,
+          "slug": "sunrise-sunset-2018-03-29-18-22-12",
+          "status": "published"
+        },
+        {
+          "id": 41305,
+          "slug": "sunrise-sunset-2018-08-21-17-53-04",
+          "status": "published"
+        },
+        {
+          "id": 41306,
+          "slug": "sunrise-sunset-2018-08-21-17-55-57",
+          "status": "published"
+        },
+        {
+          "id": 41307,
+          "slug": "sunrise-sunset-2018-08-21-18-01-08",
+          "status": "published"
+        },
+        {
+          "id": 41308,
+          "slug": "sunrise-sunset-2018-08-21-18-02-56",
+          "status": "published"
+        },
+        {
+          "id": 41309,
+          "slug": "sunrise-sunset-2018-08-21-18-09-15",
+          "status": "published"
+        },
+        {
+          "id": 41310,
+          "slug": "sunrise-sunset-2018-08-24-17-55-36",
+          "status": "published"
+        },
+        {
+          "id": 41311,
+          "slug": "sunrise-sunset-2019-july-19-hyperlapse-0311",
+          "status": "published"
+        },
+        {
+          "id": 41312,
+          "slug": "sunrise-sunset-2019-03-31-05-46-08",
+          "status": "published"
+        },
+        {
+          "id": 41313,
+          "slug": "sunrise-sunset-2019-11-08-17-16-08",
+          "status": "published"
+        },
+        {
+          "id": 41314,
+          "slug": "sunrise-sunset-2020-06-06-17-38-31",
+          "status": "published"
+        },
+        {
+          "id": 41315,
+          "slug": "sunrise-sunset-2020-06-07-17-57-31",
+          "status": "published"
+        },
+        {
+          "id": 41316,
+          "slug": "sunrise-sunset-2020-06-07-17-58-30",
+          "status": "published"
+        },
+        {
+          "id": 41317,
+          "slug": "sunrise-sunset-2020-06-07-18-00-38",
+          "status": "published"
+        },
+        {
+          "id": 41318,
+          "slug": "sunrise-sunset-2020-07-17-05-10-04",
+          "status": "published"
+        },
+        {
+          "id": 41319,
+          "slug": "sunrise-sunset-2020-07-17-05-18-15",
+          "status": "published"
+        },
+        {
+          "id": 41320,
+          "slug": "sunrise-sunset-2020-07-19-05-07-34",
+          "status": "published"
+        },
+        {
+          "id": 41321,
+          "slug": "sunrise-sunset-2020-07-19-05-19-48",
+          "status": "published"
+        },
+        {
+          "id": 41322,
+          "slug": "limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2021-05-01-08-24-07",
+          "status": "published"
+        },
+        {
+          "id": 41323,
+          "slug": "limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2021-05-01-11-09-45",
+          "status": "published"
+        },
+        {
+          "id": 41324,
+          "slug": "limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2021-05-01-11-11-08",
+          "status": "published"
+        },
+        {
+          "id": 41325,
+          "slug": "limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2021-05-02-09-43-23",
+          "status": "published"
+        },
+        {
+          "id": 41326,
+          "slug": "limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2021-05-02-14-32-01",
+          "status": "published"
+        },
+        {
+          "id": 41327,
+          "slug": "limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2021-05-02-14-33-07",
+          "status": "published"
+        },
+        {
+          "id": 41328,
+          "slug": "limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2023-10-12-16-46-01",
+          "status": "published"
+        },
+        {
+          "id": 41329,
+          "slug": "limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2023-10-12-17-26-45",
+          "status": "published"
+        },
+        {
+          "id": 41330,
+          "slug": "limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2023-10-12-17-26-50",
+          "status": "published"
+        },
+        {
+          "id": 41331,
+          "slug": "limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2023-10-12-17-29-35",
+          "status": "published"
+        },
+        {
+          "id": 41332,
+          "slug": "limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2023-10-12-17-29-38",
+          "status": "published"
+        },
+        {
+          "id": 41333,
+          "slug": "limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2023-10-12-17-29-49",
+          "status": "published"
+        },
+        {
+          "id": 41334,
+          "slug": "limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2023-10-13-07-06-41",
+          "status": "published"
+        },
+        {
+          "id": 41335,
+          "slug": "limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2023-10-13-07-06-43",
+          "status": "published"
+        },
+        {
+          "id": 41336,
+          "slug": "limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2023-10-13-07-06-55",
+          "status": "published"
+        },
+        {
+          "id": 41337,
+          "slug": "limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2023-10-13-08-39-12",
+          "status": "published"
+        },
+        {
+          "id": 41338,
+          "slug": "limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2023-10-13-08-39-17",
+          "status": "published"
+        },
+        {
+          "id": 41339,
+          "slug": "limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2023-10-13-09-17-18",
+          "status": "published"
+        },
+        {
+          "id": 41340,
+          "slug": "limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2023-10-13-09-19-00",
+          "status": "published"
+        },
+        {
+          "id": 41341,
+          "slug": "limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-2023-10-13-09-30-17",
+          "status": "published"
+        },
+        {
+          "id": 41342,
+          "slug": "costa-rica-20070520-2268",
+          "status": "published"
+        },
+        {
+          "id": 41343,
+          "slug": "costa-rica-2014-09-14-14-14-46-copy",
+          "status": "published"
+        },
+        {
+          "id": 41344,
+          "slug": "costa-rica-2014-09-20-16-02-57-copy",
+          "status": "published"
+        },
+        {
+          "id": 41345,
+          "slug": "costa-rica-2014-09-20-16-03-17-copy",
+          "status": "published"
+        },
+        {
+          "id": 41346,
+          "slug": "costa-rica-2014-12-07-10-49-29-copy",
+          "status": "published"
+        },
+        {
+          "id": 41347,
+          "slug": "costa-rica-2015-03-29-12-28-24-copy",
+          "status": "published"
+        },
+        {
+          "id": 41348,
+          "slug": "costa-rica-2015-04-01-14-20-11-copy",
+          "status": "published"
+        }
+      ]
+    }
+  },
+  "status": "success"
+}

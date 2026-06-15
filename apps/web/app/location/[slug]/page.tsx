@@ -9,46 +9,84 @@ export const dynamic = 'force-dynamic';
 
 const SITE_URL = 'https://wildphotography.com';
 
-export async function generateStaticParams() {
-  const { getAllLocations } = await import('@/lib/db');
-  const locations = await getAllLocations();
-  return locations.map(l => ({ slug: l.slug }));
-}
-
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
-  const { slug } = await params;
-  const location = await getLocationBySlug(slug);
-  if (!location) return { title: 'Location Not Found' };
-  
-  const canonical = `${SITE_URL}/location/${slug}`;
-  return {
-    title: `${location.name} Photography | Wildphotography`,
-    description: location.description || `Browse wildlife photography from ${location.name}, Costa Rica.`,
-    alternates: { canonical },
-    openGraph: {
+  try {
+    const { slug } = await params;
+    const location = await getLocationBySlug(slug);
+    if (!location) return { title: 'Location Not Found' };
+    
+    const canonical = `${SITE_URL}/location/${slug}`;
+    return {
       title: `${location.name} Photography | Wildphotography`,
-      description: location.description || '',
-      url: canonical,
-      siteName: 'Wildphotography',
-      type: 'website',
-    },
-  };
+      description: location.description || `Browse wildlife photography from ${location.name}, Costa Rica.`,
+      alternates: { canonical },
+      openGraph: {
+        title: `${location.name} Photography | Wildphotography`,
+        description: location.description || '',
+        url: canonical,
+        siteName: 'Wildphotography',
+        type: 'website',
+      },
+    };
+  } catch (e: any) {
+    console.error('[generateMetadata] error:', e.message);
+    return { title: 'Location | Wildphotography' };
+  }
 }
 
 export default async function LocationDetailPage({ params }: { params: Promise<{ slug: string }> }) {
-  const { slug } = await params;
+  let slug: string = '';
+  let location: any = null;
   
-  const location = await getLocationBySlug(slug);
-  if (!location) notFound();
+  try {
+    ({ slug } = await params);
+  } catch (e: any) {
+    console.error('[location page] params error:', e.message);
+    return <ErrorPage error="Invalid page parameters" />;
+  }
+  
+  try {
+    location = await getLocationBySlug(slug);
+  } catch (e: any) {
+    console.error('[location page] getLocationBySlug error:', e.message);
+    return <ErrorPage error="Could not load location" />;
+  }
+  
+  if (!location) {
+    notFound();
+  }
 
-  const regionLocations = await getLocationsByRegion(location.region || '');
-  const { photos, total } = await getPhotosByLocation(slug, 50, 0);
+  // Fetch with safe fallbacks
+  let regionLocations: any[] = [];
+  let photosData = { photos: [] as any[], total: 0 };
+  let affiliateBlocks: any[] = [];
+  
+  try {
+    const regionName = location.region || '';
+    if (regionName.trim()) {
+      regionLocations = await getLocationsByRegion(regionName) || [];
+    }
+  } catch (e: any) {
+    console.error('[location page] getLocationsByRegion error:', e.message);
+  }
+  
+  try {
+    photosData = await getPhotosByLocation(slug, 50, 0) || { photos: [], total: 0 };
+  } catch (e: any) {
+    console.error('[location page] getPhotosByLocation error:', e.message);
+  }
+  
+  try {
+    if (location.id) {
+      affiliateBlocks = await getAffiliateBlocksForEntity('location', Number(location.id)) || [];
+    }
+  } catch (e: any) {
+    console.error('[location page] getAffiliateBlocksForEntity error:', e.message);
+  }
 
-  const meta = location.metadata;
-  const nearbyLocs = regionLocations.filter(l => l.slug !== slug).slice(0, 6);
-
-  // Fetch affiliate blocks for this location
-  const affiliateBlocks = await getAffiliateBlocksForEntity('location', Number(location.id));
+  const meta = location.metadata || {};
+  const nearbyLocs = (regionLocations || []).filter((l: any) => l.slug !== slug).slice(0, 6);
+  const { photos, total } = photosData;
 
   return (
     <div className="container mx-auto px-4 py-6">
@@ -77,14 +115,14 @@ export default async function LocationDetailPage({ params }: { params: Promise<{
           </div>
           {location.latitude && location.longitude && (
             <div className="hidden md:block text-right text-sm text-gray-400">
-              <div>{location.latitude.toFixed(4)}°N</div>
-              <div>{Math.abs(location.longitude).toFixed(4)}°W</div>
+              <div>{Number(location.latitude).toFixed(4)}°N</div>
+              <div>{Math.abs(Number(location.longitude)).toFixed(4)}°W</div>
             </div>
           )}
         </div>
       </header>
 
-      {/* Overview (region-level) */}
+      {/* Overview */}
       {meta?.overview && (
         <section className="mb-8 p-6 bg-blue-50 rounded-xl">
           <h2 className="text-xl font-bold text-gray-900 mb-3">About {location.name}</h2>
@@ -107,9 +145,8 @@ export default async function LocationDetailPage({ params }: { params: Promise<{
         </section>
       )}
 
-      {/* Two-column: Info + Galleries */}
+      {/* Info + Galleries + Species */}
       <div className="grid md:grid-cols-3 gap-8 mb-8">
-        {/* Location Info */}
         <div className="space-y-4">
           {meta?.habitat && (
             <div>
@@ -127,8 +164,8 @@ export default async function LocationDetailPage({ params }: { params: Promise<{
             <div>
               <h3 className="font-semibold text-gray-900 text-sm uppercase tracking-wide mb-1">Target Species</h3>
               <div className="flex flex-wrap gap-1">
-                {meta.targetSpecies.slice(0, 12).map((s: string, i: number) => (
-                  <span key={i} className="inline-block px-2 py-0.5 bg-green-100 text-green-800 text-xs rounded-full">{s}</span>
+                {meta.targetSpecies.slice(0, 12).map((s: any, i: number) => (
+                  <span key={i} className="inline-block px-2 py-0.5 bg-green-100 text-green-800 text-xs rounded-full">{typeof s === 'string' ? s : s.name}</span>
                 ))}
               </div>
             </div>
@@ -147,7 +184,6 @@ export default async function LocationDetailPage({ params }: { params: Promise<{
           )}
         </div>
 
-        {/* Gallery Links */}
         <div>
           {(meta?.galleryLinks || meta?.nearbyGalleries) && (
             <div>
@@ -168,7 +204,6 @@ export default async function LocationDetailPage({ params }: { params: Promise<{
           )}
         </div>
 
-        {/* Species Links */}
         <div>
           {meta?.speciesLinks && meta.speciesLinks.length > 0 && (
             <div>
@@ -208,7 +243,7 @@ export default async function LocationDetailPage({ params }: { params: Promise<{
         </section>
       )}
 
-      {/* Book a Tour — Affiliate Blocks */}
+      {/* Book a Tour */}
       {affiliateBlocks.length > 0 && (
         <section className="mb-8">
           <h2 className="text-xl font-bold text-gray-900 mb-4">Book a Tour</h2>
@@ -216,9 +251,9 @@ export default async function LocationDetailPage({ params }: { params: Promise<{
             {affiliateBlocks.map(block => (
               <AffiliateBlock
                 key={block.id}
-                entityType={block.entityType as any}
+                entityType={block.entityType}
                 entityId={block.entityId}
-                provider={block.provider as any}
+                provider={block.provider}
                 title={block.title || 'Book Tours'}
                 destinationKey={block.destinationKey || undefined}
                 shortcode={block.shortcode || undefined}
@@ -234,7 +269,19 @@ export default async function LocationDetailPage({ params }: { params: Promise<{
           <h2 className="text-xl font-bold text-gray-900 mb-4">
             Photos from {location.name} ({total.toLocaleString()})
           </h2>
-          <VirtualizedGallery photos={photos} columns={4} />
+          <VirtualizedGallery
+            photos={photos.map((p: any) => ({
+              id: p.id,
+              slug: p.slug,
+              title: p.title || '',
+              thumbUrl: p.thumbUrl,
+              smallUrl: p.smallUrl,
+              mediumUrl: p.mediumUrl,
+              largeUrl: p.largeUrl,
+              locationName: p.locationName,
+            }))}
+            columns={4}
+          />
         </section>
       ) : (
         <div className="text-center py-12 text-gray-500">
@@ -244,6 +291,18 @@ export default async function LocationDetailPage({ params }: { params: Promise<{
           </Link>
         </div>
       )}
+    </div>
+  );
+}
+
+function ErrorPage({ error }: { error: string }) {
+  return (
+    <div className="container mx-auto px-4 py-6">
+      <div className="bg-red-50 border border-red-200 rounded-xl p-6 text-center">
+        <h1 className="text-2xl font-bold text-red-700 mb-2">Page Temporarily Unavailable</h1>
+        <p className="text-red-600 mb-4">{error}</p>
+        <Link href="/" className="text-blue-600 hover:underline">← Return Home</Link>
+      </div>
     </div>
   );
 }

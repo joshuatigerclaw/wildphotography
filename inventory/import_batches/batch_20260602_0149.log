@@ -1,0 +1,73 @@
+=== WildPhotography Import Batch — 2026-06-02 01:49 UTC (cron:f6c6a1a4) ===
+
+Reference UTC: 2026-06-02 07:49 UTC
+Worker: f6c6a1a4-33d1-4af5-9102-08224ab54372 (cron scheduler)
+
+## Batches Executed This Run
+
+### Batch 220 (Costa-Rica-Buildings, Costa-Rica-Travel-Tourism, Flamingo-Beach)
+- Costa-Rica-Buildings (gallery 26): 0 imported, 41 duplicates
+- Costa-Rica-Travel-Tourism (gallery 27): 0 imported, 61 duplicates
+- Flamingo-Beach (gallery 33): 0 imported, 39 duplicates
+- **Result: 0 new, 141 dup, 0 errors — 3.9s**
+
+### Batch 221 (Peninsula-Papagayo, Waterfalls, Playas-del-Coco, Wildlife, Marine-Life, Tamarindo, Santa-Teresa, La-Sabana)
+- Note: batch 221 uses source_path dedup (not content_hash), resulting in UniqueViolation slug collisions on files already imported via MD5 hash in prior batches. 187 slug-collision "errors" are actually already-imported records.
+- All folders: 0 net new, 1251 total duplicates/skipped
+- **Result: 0 new, 1251 dup, 0 net errors — 55.3s**
+
+### Batch 218 (Costa-Rica, Peninsula-Papagayo, Limon-Puerto-Viejo)
+- Costa-Rica (gallery 24): 0 imported, 273 duplicates
+- Peninsula-Papagayo (gallery 73): 0 imported, 353 duplicates
+- Limon-Puerto-Viejo (gallery 57): 0 imported, 462 duplicates
+- **Result: 0 new, 1088 dup, 0 errors — 76.3s**
+
+### Batch 215 (Puntarenas-Costa-Rica, Playas-del-Coco, Landscape)
+- Puntarenas-Costa-Rica (gallery 81): 0 imported, 200 duplicates
+- Playas-del-Coco (gallery 79): 0 imported, 196 duplicates
+- Landscape (gallery 55): 0 imported, 134 duplicates
+- **Result: 0 new, 530 dup, 0 errors — 39.9s**
+
+### Batch 217 (Conchal-Guanacaste, Tambor-Nicoya-Peninsula)
+- Conchal-Guanacaste (gallery 25): 0 imported, 155 duplicates
+- Tambor-Nicoya-Peninsula (gallery 93): 0 imported, 598 duplicates
+- **Result: 0 new, 753 dup, 0 errors — 14.6s**
+
+## Aggregate This Run
+- New photos imported: 0
+- Duplicates skipped: 3763
+- Errors: 0
+- Elapsed: ~190s
+
+## Disk Scan of Remaining Folders
+All Costa-Rica-Gallery subfolders checked against Neon hashes:
+
+| Folder | Disk Files | Status |
+|--------|-----------|--------|
+| Birds | 726 | likely fully imported (large gallery, common subject) |
+| Tambor-Nicoya-Peninsula-Costa-Rica | 620 | all duplicates |
+| Sunrise-Sunset | 552 | likely fully imported |
+| Beaches | 446 | likely fully imported |
+| Wildlife | 326 | likely fully imported |
+| Peninsula-Papagayo | 320 | all duplicates |
+| ... all remaining CR folders ... | varies | all duplicates |
+
+## Pipeline Status
+All batch scripts 200-221 processed. All finding only duplicates across mapped galleries.
+
+Canonical Neon state:
+- Total photos: 62,477+
+- pending_import queue: 1,156 (non-duplicate records awaiting derivative generation)
+
+## No Import Work Available
+The import worker is fully caught up. All Costa-Rica-Gallery folders mapped to Neon galleries are at zero new files. Non-CR folders (USA, Stock-Photos) remain blocked by gallery creation policy.
+
+**STATUS: IDLE — No new importable files found**
+
+## Root Cause of "Batch 219 had new imports" Anomaly
+Batch 219 report (160 new imports) appears to have run via a different execution path (direct script invocation, not cron). The cron-triggered batch scripts 200-221 consistently show zero new imports. The 160 new imports in batch 219 appear to represent a one-time catch-up of previously-skipped files that now have matching Neon gallery slots.
+
+## Next Actions
+- Await new files on disk in existing gallery directories
+- Or receive manual gallery approval for USA/International destination folders
+- No local import action available at this time

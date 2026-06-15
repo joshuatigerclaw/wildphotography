@@ -1,0 +1,611 @@
+{
+  "batch_id": "repair_20260606_044218",
+  "jobs_processed": 25,
+  "repairs_completed": 75,
+  "failures": 0,
+  "items_requiring_approval": 25,
+  "approval_items": [
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 48110",
+      "slug": "costa-rica-gallery-arenal-volcano-dji-0432"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 47978",
+      "slug": "costa-rica-gallery-jaco-beach-dji-0113"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 47979",
+      "slug": "costa-rica-gallery-jaco-beach-dji-0114"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 47980",
+      "slug": "costa-rica-gallery-jaco-beach-dji-0115"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 47981",
+      "slug": "costa-rica-gallery-jaco-beach-dji-0118"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 47982",
+      "slug": "costa-rica-gallery-jaco-beach-dji-0119"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 47983",
+      "slug": "costa-rica-gallery-jaco-beach-dji-0125"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 47984",
+      "slug": "costa-rica-gallery-jaco-beach-dji-0126"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 47985",
+      "slug": "costa-rica-gallery-jaco-beach-dji-0127"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 47986",
+      "slug": "costa-rica-gallery-jaco-beach-dji-0128"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 47987",
+      "slug": "costa-rica-gallery-jaco-beach-dji-0129"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 47988",
+      "slug": "costa-rica-gallery-jaco-beach-dji-0130"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 47989",
+      "slug": "costa-rica-gallery-jaco-beach-dji-0131"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 47990",
+      "slug": "costa-rica-gallery-jaco-beach-dji-0132"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 47991",
+      "slug": "costa-rica-gallery-jaco-beach-dji-0133"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 47992",
+      "slug": "costa-rica-gallery-jaco-beach-dji-0135"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 47993",
+      "slug": "costa-rica-gallery-jaco-beach-dji-0136"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 47994",
+      "slug": "costa-rica-gallery-jaco-beach-dji-0137"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 47995",
+      "slug": "costa-rica-gallery-jaco-beach-dji-0138"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 47996",
+      "slug": "costa-rica-gallery-jaco-beach-dji-0139"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 47997",
+      "slug": "costa-rica-gallery-jaco-beach-dji-0143"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 47998",
+      "slug": "costa-rica-gallery-sunrise-sunset-20250426-164721"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 47999",
+      "slug": "costa-rica-gallery-sunrise-sunset-ar-dji-0469"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 48000",
+      "slug": "costa-rica-gallery-sunrise-sunset-ar-dji-0475"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 48001",
+      "slug": "costa-rica-gallery-sunrise-sunset-ar-dji-0550"
+    }
+  ],
+  "results": [
+    {
+      "queue_id": 82567,
+      "photo_id": 48110,
+      "slug": "costa-rica-gallery-arenal-volcano-dji-0432",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 48110",
+          "slug": "costa-rica-gallery-arenal-volcano-dji-0432"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 82666,
+      "photo_id": 47978,
+      "slug": "costa-rica-gallery-jaco-beach-dji-0113",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 47978",
+          "slug": "costa-rica-gallery-jaco-beach-dji-0113"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 82667,
+      "photo_id": 47979,
+      "slug": "costa-rica-gallery-jaco-beach-dji-0114",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 47979",
+          "slug": "costa-rica-gallery-jaco-beach-dji-0114"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 82668,
+      "photo_id": 47980,
+      "slug": "costa-rica-gallery-jaco-beach-dji-0115",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 47980",
+          "slug": "costa-rica-gallery-jaco-beach-dji-0115"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 82669,
+      "photo_id": 47981,
+      "slug": "costa-rica-gallery-jaco-beach-dji-0118",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 47981",
+          "slug": "costa-rica-gallery-jaco-beach-dji-0118"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 82670,
+      "photo_id": 47982,
+      "slug": "costa-rica-gallery-jaco-beach-dji-0119",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 47982",
+          "slug": "costa-rica-gallery-jaco-beach-dji-0119"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 82671,
+      "photo_id": 47983,
+      "slug": "costa-rica-gallery-jaco-beach-dji-0125",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 47983",
+          "slug": "costa-rica-gallery-jaco-beach-dji-0125"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 82672,
+      "photo_id": 47984,
+      "slug": "costa-rica-gallery-jaco-beach-dji-0126",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 47984",
+          "slug": "costa-rica-gallery-jaco-beach-dji-0126"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 82673,
+      "photo_id": 47985,
+      "slug": "costa-rica-gallery-jaco-beach-dji-0127",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 47985",
+          "slug": "costa-rica-gallery-jaco-beach-dji-0127"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 82674,
+      "photo_id": 47986,
+      "slug": "costa-rica-gallery-jaco-beach-dji-0128",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 47986",
+          "slug": "costa-rica-gallery-jaco-beach-dji-0128"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 82675,
+      "photo_id": 47987,
+      "slug": "costa-rica-gallery-jaco-beach-dji-0129",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 47987",
+          "slug": "costa-rica-gallery-jaco-beach-dji-0129"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 82676,
+      "photo_id": 47988,
+      "slug": "costa-rica-gallery-jaco-beach-dji-0130",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 47988",
+          "slug": "costa-rica-gallery-jaco-beach-dji-0130"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 82677,
+      "photo_id": 47989,
+      "slug": "costa-rica-gallery-jaco-beach-dji-0131",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 47989",
+          "slug": "costa-rica-gallery-jaco-beach-dji-0131"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 82678,
+      "photo_id": 47990,
+      "slug": "costa-rica-gallery-jaco-beach-dji-0132",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 47990",
+          "slug": "costa-rica-gallery-jaco-beach-dji-0132"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 82679,
+      "photo_id": 47991,
+      "slug": "costa-rica-gallery-jaco-beach-dji-0133",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 47991",
+          "slug": "costa-rica-gallery-jaco-beach-dji-0133"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 82680,
+      "photo_id": 47992,
+      "slug": "costa-rica-gallery-jaco-beach-dji-0135",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 47992",
+          "slug": "costa-rica-gallery-jaco-beach-dji-0135"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 82681,
+      "photo_id": 47993,
+      "slug": "costa-rica-gallery-jaco-beach-dji-0136",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 47993",
+          "slug": "costa-rica-gallery-jaco-beach-dji-0136"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 82682,
+      "photo_id": 47994,
+      "slug": "costa-rica-gallery-jaco-beach-dji-0137",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 47994",
+          "slug": "costa-rica-gallery-jaco-beach-dji-0137"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 82683,
+      "photo_id": 47995,
+      "slug": "costa-rica-gallery-jaco-beach-dji-0138",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 47995",
+          "slug": "costa-rica-gallery-jaco-beach-dji-0138"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 82684,
+      "photo_id": 47996,
+      "slug": "costa-rica-gallery-jaco-beach-dji-0139",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 47996",
+          "slug": "costa-rica-gallery-jaco-beach-dji-0139"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 82685,
+      "photo_id": 47997,
+      "slug": "costa-rica-gallery-jaco-beach-dji-0143",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 47997",
+          "slug": "costa-rica-gallery-jaco-beach-dji-0143"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 82686,
+      "photo_id": 47998,
+      "slug": "costa-rica-gallery-sunrise-sunset-20250426-164721",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 47998",
+          "slug": "costa-rica-gallery-sunrise-sunset-20250426-164721"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 82687,
+      "photo_id": 47999,
+      "slug": "costa-rica-gallery-sunrise-sunset-ar-dji-0469",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 47999",
+          "slug": "costa-rica-gallery-sunrise-sunset-ar-dji-0469"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 82688,
+      "photo_id": 48000,
+      "slug": "costa-rica-gallery-sunrise-sunset-ar-dji-0475",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 48000",
+          "slug": "costa-rica-gallery-sunrise-sunset-ar-dji-0475"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 82689,
+      "photo_id": 48001,
+      "slug": "costa-rica-gallery-sunrise-sunset-ar-dji-0550",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 48001",
+          "slug": "costa-rica-gallery-sunrise-sunset-ar-dji-0550"
+        }
+      ],
+      "status": "completed"
+    }
+  ]
+}

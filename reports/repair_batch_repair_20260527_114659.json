@@ -1,0 +1,611 @@
+{
+  "batch_id": "repair_20260527_114659",
+  "jobs_processed": 25,
+  "repairs_completed": 75,
+  "failures": 0,
+  "items_requiring_approval": 25,
+  "approval_items": [
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 55947",
+      "slug": "south-america-argentina-2025-12-06-12-07-28-1"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 55946",
+      "slug": "south-america-argentina-2025-12-06-12-07-24-1"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 55945",
+      "slug": "south-america-argentina-2025-12-05-17-09-48-1"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 55944",
+      "slug": "south-america-argentina-2025-12-05-17-07-55-1"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 55943",
+      "slug": "south-america-argentina-2025-12-05-17-07-43-1"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 55942",
+      "slug": "south-america-argentina-2025-12-05-17-06-42-1"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 55941",
+      "slug": "south-america-argentina-2025-12-05-11-13-46-1"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 55940",
+      "slug": "south-america-argentina-2025-12-05-11-10-19-1"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 55939",
+      "slug": "south-america-argentina-2025-12-05-11-05-45-1"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 55938",
+      "slug": "south-america-argentina-2025-12-04-20-25-31-1"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 55937",
+      "slug": "south-america-argentina-2025-12-04-18-39-45-1"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 55936",
+      "slug": "south-america-argentina-2025-12-04-15-44-29-1"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 55935",
+      "slug": "south-america-argentina-2025-12-04-15-38-35-1"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 55934",
+      "slug": "south-america-argentina-2025-12-04-15-29-44-1"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 55933",
+      "slug": "south-america-argentina-2025-12-04-15-16-08-1"
+    },
+    {
+      "type": "derivative_regeneration",
+      "reason": "Original exists but derivatives missing for photo 57159",
+      "original_path": "originals/57159/DJI_0296.jpg"
+    },
+    {
+      "type": "derivative_regeneration",
+      "reason": "Original exists but derivatives missing for photo 57158",
+      "original_path": "originals/57158/DJI_0294.jpg"
+    },
+    {
+      "type": "derivative_regeneration",
+      "reason": "Original exists but derivatives missing for photo 57157",
+      "original_path": "originals/57157/DJI_0293.jpg"
+    },
+    {
+      "type": "derivative_regeneration",
+      "reason": "Original exists but derivatives missing for photo 57156",
+      "original_path": "originals/57156/DJI_0292.jpg"
+    },
+    {
+      "type": "derivative_regeneration",
+      "reason": "Original exists but derivatives missing for photo 57155",
+      "original_path": "originals/57155/DJI_0283_Croc_and_Nedleefish.jpg"
+    },
+    {
+      "type": "derivative_regeneration",
+      "reason": "Original exists but derivatives missing for photo 57154",
+      "original_path": "originals/57154/DJI_0282.jpg"
+    },
+    {
+      "type": "derivative_regeneration",
+      "reason": "Original exists but derivatives missing for photo 57153",
+      "original_path": "originals/57153/DJI_0280.jpg"
+    },
+    {
+      "type": "derivative_regeneration",
+      "reason": "Original exists but derivatives missing for photo 57152",
+      "original_path": "originals/57152/DJI_0278.jpg"
+    },
+    {
+      "type": "derivative_regeneration",
+      "reason": "Original exists but derivatives missing for photo 57151",
+      "original_path": "originals/57151/DJI_0272.jpg"
+    },
+    {
+      "type": "derivative_regeneration",
+      "reason": "Original exists but derivatives missing for photo 57150",
+      "original_path": "originals/57150/DJI_0264.jpg"
+    }
+  ],
+  "results": [
+    {
+      "queue_id": 69153,
+      "photo_id": 55947,
+      "slug": "south-america-argentina-2025-12-06-12-07-28-1",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 55947",
+          "slug": "south-america-argentina-2025-12-06-12-07-28-1"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 69154,
+      "photo_id": 55946,
+      "slug": "south-america-argentina-2025-12-06-12-07-24-1",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 55946",
+          "slug": "south-america-argentina-2025-12-06-12-07-24-1"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 69155,
+      "photo_id": 55945,
+      "slug": "south-america-argentina-2025-12-05-17-09-48-1",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 55945",
+          "slug": "south-america-argentina-2025-12-05-17-09-48-1"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 69156,
+      "photo_id": 55944,
+      "slug": "south-america-argentina-2025-12-05-17-07-55-1",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 55944",
+          "slug": "south-america-argentina-2025-12-05-17-07-55-1"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 69157,
+      "photo_id": 55943,
+      "slug": "south-america-argentina-2025-12-05-17-07-43-1",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 55943",
+          "slug": "south-america-argentina-2025-12-05-17-07-43-1"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 69158,
+      "photo_id": 55942,
+      "slug": "south-america-argentina-2025-12-05-17-06-42-1",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 55942",
+          "slug": "south-america-argentina-2025-12-05-17-06-42-1"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 69159,
+      "photo_id": 55941,
+      "slug": "south-america-argentina-2025-12-05-11-13-46-1",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 55941",
+          "slug": "south-america-argentina-2025-12-05-11-13-46-1"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 69160,
+      "photo_id": 55940,
+      "slug": "south-america-argentina-2025-12-05-11-10-19-1",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 55940",
+          "slug": "south-america-argentina-2025-12-05-11-10-19-1"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 69161,
+      "photo_id": 55939,
+      "slug": "south-america-argentina-2025-12-05-11-05-45-1",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 55939",
+          "slug": "south-america-argentina-2025-12-05-11-05-45-1"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 69162,
+      "photo_id": 55938,
+      "slug": "south-america-argentina-2025-12-04-20-25-31-1",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 55938",
+          "slug": "south-america-argentina-2025-12-04-20-25-31-1"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 69163,
+      "photo_id": 55937,
+      "slug": "south-america-argentina-2025-12-04-18-39-45-1",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 55937",
+          "slug": "south-america-argentina-2025-12-04-18-39-45-1"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 69164,
+      "photo_id": 55936,
+      "slug": "south-america-argentina-2025-12-04-15-44-29-1",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 55936",
+          "slug": "south-america-argentina-2025-12-04-15-44-29-1"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 69165,
+      "photo_id": 55935,
+      "slug": "south-america-argentina-2025-12-04-15-38-35-1",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 55935",
+          "slug": "south-america-argentina-2025-12-04-15-38-35-1"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 69166,
+      "photo_id": 55934,
+      "slug": "south-america-argentina-2025-12-04-15-29-44-1",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 55934",
+          "slug": "south-america-argentina-2025-12-04-15-29-44-1"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 69167,
+      "photo_id": 55933,
+      "slug": "south-america-argentina-2025-12-04-15-16-08-1",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 55933",
+          "slug": "south-america-argentina-2025-12-04-15-16-08-1"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 69168,
+      "photo_id": 57159,
+      "slug": "dji-0296-crocodiles",
+      "repairs": [
+        "original_r2: exists (1 files)",
+        "derivatives_r2: missing (0 files)",
+        "derivatives_missing: needs regeneration"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "derivative_regeneration",
+          "reason": "Original exists but derivatives missing for photo 57159",
+          "original_path": "originals/57159/DJI_0296.jpg"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 69169,
+      "photo_id": 57158,
+      "slug": "dji-0294-crocodiles",
+      "repairs": [
+        "original_r2: exists (1 files)",
+        "derivatives_r2: missing (0 files)",
+        "derivatives_missing: needs regeneration"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "derivative_regeneration",
+          "reason": "Original exists but derivatives missing for photo 57158",
+          "original_path": "originals/57158/DJI_0294.jpg"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 69170,
+      "photo_id": 57157,
+      "slug": "dji-0293-crocodiles",
+      "repairs": [
+        "original_r2: exists (1 files)",
+        "derivatives_r2: missing (0 files)",
+        "derivatives_missing: needs regeneration"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "derivative_regeneration",
+          "reason": "Original exists but derivatives missing for photo 57157",
+          "original_path": "originals/57157/DJI_0293.jpg"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 69171,
+      "photo_id": 57156,
+      "slug": "dji-0292-crocodiles",
+      "repairs": [
+        "original_r2: exists (1 files)",
+        "derivatives_r2: missing (0 files)",
+        "derivatives_missing: needs regeneration"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "derivative_regeneration",
+          "reason": "Original exists but derivatives missing for photo 57156",
+          "original_path": "originals/57156/DJI_0292.jpg"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 69172,
+      "photo_id": 57155,
+      "slug": "dji-0283-croc-and-nedleefish-crocodiles",
+      "repairs": [
+        "original_r2: exists (1 files)",
+        "derivatives_r2: missing (0 files)",
+        "derivatives_missing: needs regeneration"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "derivative_regeneration",
+          "reason": "Original exists but derivatives missing for photo 57155",
+          "original_path": "originals/57155/DJI_0283_Croc_and_Nedleefish.jpg"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 69173,
+      "photo_id": 57154,
+      "slug": "dji-0282-crocodiles",
+      "repairs": [
+        "original_r2: exists (1 files)",
+        "derivatives_r2: missing (0 files)",
+        "derivatives_missing: needs regeneration"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "derivative_regeneration",
+          "reason": "Original exists but derivatives missing for photo 57154",
+          "original_path": "originals/57154/DJI_0282.jpg"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 69174,
+      "photo_id": 57153,
+      "slug": "dji-0280-crocodiles",
+      "repairs": [
+        "original_r2: exists (1 files)",
+        "derivatives_r2: missing (0 files)",
+        "derivatives_missing: needs regeneration"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "derivative_regeneration",
+          "reason": "Original exists but derivatives missing for photo 57153",
+          "original_path": "originals/57153/DJI_0280.jpg"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 69175,
+      "photo_id": 57152,
+      "slug": "dji-0278-crocodiles",
+      "repairs": [
+        "original_r2: exists (1 files)",
+        "derivatives_r2: missing (0 files)",
+        "derivatives_missing: needs regeneration"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "derivative_regeneration",
+          "reason": "Original exists but derivatives missing for photo 57152",
+          "original_path": "originals/57152/DJI_0278.jpg"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 69176,
+      "photo_id": 57151,
+      "slug": "dji-0272-crocodiles",
+      "repairs": [
+        "original_r2: exists (1 files)",
+        "derivatives_r2: missing (0 files)",
+        "derivatives_missing: needs regeneration"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "derivative_regeneration",
+          "reason": "Original exists but derivatives missing for photo 57151",
+          "original_path": "originals/57151/DJI_0272.jpg"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 69177,
+      "photo_id": 57150,
+      "slug": "dji-0264-crocodiles",
+      "repairs": [
+        "original_r2: exists (1 files)",
+        "derivatives_r2: missing (0 files)",
+        "derivatives_missing: needs regeneration"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "derivative_regeneration",
+          "reason": "Original exists but derivatives missing for photo 57150",
+          "original_path": "originals/57150/DJI_0264.jpg"
+        }
+      ],
+      "status": "completed"
+    }
+  ]
+}

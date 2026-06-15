@@ -1,0 +1,485 @@
+{
+  "run_at": "2026-05-04T16:08:55.354283+00:00",
+  "total_photos": 38299,
+  "render_ready_total": 37296,
+  "photos_with_issues": 235,
+  "all_clear": false,
+  "checks": {
+    "missing_thumb_url": {
+      "count": 1,
+      "sample": [
+        {
+          "id": 42188,
+          "slug": "industrial-costa-rica-cl0a7467",
+          "title": "Costa Rica \u2014 Central Valley, Costa Rica \u2014 CL0A7467 | WildPhotography",
+          "status": "archived"
+        }
+      ]
+    },
+    "missing_slug": {
+      "count": 0,
+      "sample": []
+    },
+    "missing_title": {
+      "count": 18,
+      "sample": [
+        {
+          "id": 44978,
+          "slug": "dji-0517-1b5113a7-1",
+          "title": null,
+          "status": "draft"
+        },
+        {
+          "id": 44979,
+          "slug": "dji-0553-eb28aa1a-1",
+          "title": null,
+          "status": "draft"
+        },
+        {
+          "id": 44980,
+          "slug": "dji-0555-77d8f2b2-1",
+          "title": null,
+          "status": "draft"
+        },
+        {
+          "id": 44981,
+          "slug": "dji-0565-2927f1eb-1",
+          "title": null,
+          "status": "draft"
+        },
+        {
+          "id": 44982,
+          "slug": "dji-0566-d0b4f768-1",
+          "title": null,
+          "status": "draft"
+        },
+        {
+          "id": 44983,
+          "slug": "dji-0567-eac1cbb0-1",
+          "title": null,
+          "status": "draft"
+        },
+        {
+          "id": 44984,
+          "slug": "dji-0569-f40e8bbd-1",
+          "title": null,
+          "status": "draft"
+        },
+        {
+          "id": 44985,
+          "slug": "dji-0576-2-89e876cf",
+          "title": null,
+          "status": "draft"
+        },
+        {
+          "id": 44986,
+          "slug": "dji-0579-09bb1fb0-1",
+          "title": null,
+          "status": "draft"
+        },
+        {
+          "id": 44987,
+          "slug": "dji-0580-264d4ba1-1",
+          "title": null,
+          "status": "draft"
+        },
+        {
+          "id": 44988,
+          "slug": "dji-0584-f965df06-1",
+          "title": null,
+          "status": "draft"
+        },
+        {
+          "id": 44989,
+          "slug": "dji-0593-d317c340-1",
+          "title": null,
+          "status": "draft"
+        },
+        {
+          "id": 44990,
+          "slug": "dji-0594-930ed5fc-1",
+          "title": null,
+          "status": "draft"
+        },
+        {
+          "id": 44991,
+          "slug": "dji-0597-253b8359-1",
+          "title": null,
+          "status": "draft"
+        },
+        {
+          "id": 44992,
+          "slug": "dji-0600-990d502c-1",
+          "title": null,
+          "status": "draft"
+        },
+        {
+          "id": 44993,
+          "slug": "dji-0613-951c4dee-1",
+          "title": null,
+          "status": "draft"
+        },
+        {
+          "id": 44994,
+          "slug": "dji-0615-292e694c-1",
+          "title": null,
+          "status": "draft"
+        },
+        {
+          "id": 44995,
+          "slug": "dji-0618-5038978b",
+          "title": null,
+          "status": "draft"
+        }
+      ]
+    },
+    "missing_gallery_slug": {
+      "count": 1278,
+      "sample": [
+        {
+          "id": 242,
+          "slug": "hermosa-beach-1",
+          "title": "Hermosa Beach Sunset",
+          "status": "archived"
+        },
+        {
+          "id": 14905,
+          "slug": "resplendent-quetzal",
+          "title": "Resplendent Quetzal \u2014 #14905 | WildPhotography",
+          "status": "archived"
+        },
+        {
+          "id": 41302,
+          "slug": "sunrise-sunset-2016-07-31-17-59-49",
+          "title": "Pacific Coast Sunrise, Guanacaste 2016",
+          "status": "published"
+        },
+        {
+          "id": 41303,
+          "slug": "sunrise-sunset-2017-07-15-18-57-45",
+          "title": "Tropical Sunset, Guanacaste 2017",
+          "status": "published"
+        },
+        {
+          "id": 41304,
+          "slug": "sunrise-sunset-2018-03-29-18-22-12",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41304 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41305,
+          "slug": "sunrise-sunset-2018-08-21-17-53-04",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41305 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41306,
+          "slug": "sunrise-sunset-2018-08-21-17-55-57",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41306 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41307,
+          "slug": "sunrise-sunset-2018-08-21-18-01-08",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41307 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41308,
+          "slug": "sunrise-sunset-2018-08-21-18-02-56",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41308 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41309,
+          "slug": "sunrise-sunset-2018-08-21-18-09-15",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41309 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41310,
+          "slug": "sunrise-sunset-2018-08-24-17-55-36",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41310 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41311,
+          "slug": "sunrise-sunset-2019-july-19-hyperlapse-0311",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41311 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41312,
+          "slug": "sunrise-sunset-2019-03-31-05-46-08",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41312 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41313,
+          "slug": "sunrise-sunset-2019-11-08-17-16-08",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41313 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41314,
+          "slug": "sunrise-sunset-2020-06-06-17-38-31",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41314 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41315,
+          "slug": "sunrise-sunset-2020-06-07-17-57-31",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41315 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41316,
+          "slug": "sunrise-sunset-2020-06-07-17-58-30",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41316 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41317,
+          "slug": "sunrise-sunset-2020-06-07-18-00-38",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41317 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41318,
+          "slug": "sunrise-sunset-2020-07-17-05-10-04",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41318 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41319,
+          "slug": "sunrise-sunset-2020-07-17-05-18-15",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41319 | WildPhotography",
+          "status": "published"
+        }
+      ]
+    },
+    "search_not_ready": {
+      "count": 17,
+      "sample": [
+        {
+          "id": 42170,
+          "slug": "industrial-costa-rica-2021-02-28-10-23-18",
+          "title": "2021-02-28 10.23.18.jpg",
+          "status": "archived"
+        },
+        {
+          "id": 42171,
+          "slug": "industrial-costa-rica-2021-02-28-10-42-57",
+          "title": "2021-02-28 10.42.57.jpg",
+          "status": "archived"
+        },
+        {
+          "id": 42172,
+          "slug": "industrial-costa-rica-2021-10-09-06-38-24",
+          "title": "2021-10-09 06.38.24.jpg",
+          "status": "archived"
+        },
+        {
+          "id": 42173,
+          "slug": "industrial-costa-rica-2021-10-09-06-38-34",
+          "title": "2021-10-09 06.38.34.jpg",
+          "status": "archived"
+        },
+        {
+          "id": 42174,
+          "slug": "industrial-costa-rica-cl0a1170",
+          "title": "Costa Rica \u2014 Central Valley, Costa Rica \u2014 CL0A1170 | WildPhotography",
+          "status": "archived"
+        },
+        {
+          "id": 42175,
+          "slug": "industrial-costa-rica-cl0a3868",
+          "title": "Costa Rica \u2014 Industrial Costa Rica \u2014 CL0A3868 | WildPhotography",
+          "status": "archived"
+        },
+        {
+          "id": 42176,
+          "slug": "industrial-costa-rica-cl0a3869",
+          "title": "Costa Rica \u2014 Industrial Costa Rica \u2014 CL0A3869 | WildPhotography",
+          "status": "archived"
+        },
+        {
+          "id": 42177,
+          "slug": "industrial-costa-rica-cl0a3876",
+          "title": "Costa Rica \u2014 Industrial Costa Rica \u2014 CL0A3876 | WildPhotography",
+          "status": "archived"
+        },
+        {
+          "id": 42178,
+          "slug": "industrial-costa-rica-cl0a3877",
+          "title": "Costa Rica \u2014 Industrial Costa Rica \u2014 CL0A3877 | WildPhotography",
+          "status": "archived"
+        },
+        {
+          "id": 42179,
+          "slug": "industrial-costa-rica-cl0a3890",
+          "title": "Costa Rica \u2014 Industrial Costa Rica \u2014 CL0A3890 | WildPhotography",
+          "status": "archived"
+        },
+        {
+          "id": 42180,
+          "slug": "industrial-costa-rica-cl0a3896",
+          "title": "Costa Rica \u2014 Industrial Costa Rica \u2014 CL0A3896 | WildPhotography",
+          "status": "archived"
+        },
+        {
+          "id": 42182,
+          "slug": "industrial-costa-rica-cl0a3981",
+          "title": "Costa Rica \u2014 Industrial Costa Rica \u2014 CL0A3981 | WildPhotography",
+          "status": "archived"
+        },
+        {
+          "id": 42183,
+          "slug": "industrial-costa-rica-cl0a4028",
+          "title": "Costa Rica \u2014 Industrial Costa Rica \u2014 CL0A4028 | WildPhotography",
+          "status": "archived"
+        },
+        {
+          "id": 42184,
+          "slug": "industrial-costa-rica-cl0a4029",
+          "title": "Costa Rica \u2014 Industrial Costa Rica \u2014 CL0A4029 | WildPhotography",
+          "status": "archived"
+        },
+        {
+          "id": 42185,
+          "slug": "industrial-costa-rica-cl0a4035",
+          "title": "Costa Rica \u2014 Central Valley, Costa Rica \u2014 CL0A4035 | WildPhotography",
+          "status": "archived"
+        },
+        {
+          "id": 42186,
+          "slug": "industrial-costa-rica-cl0a4193",
+          "title": "Costa Rica \u2014 Central Valley, Costa Rica \u2014 CL0A4193 | WildPhotography",
+          "status": "archived"
+        },
+        {
+          "id": 42188,
+          "slug": "industrial-costa-rica-cl0a7467",
+          "title": "Costa Rica \u2014 Central Valley, Costa Rica \u2014 CL0A7467 | WildPhotography",
+          "status": "archived"
+        }
+      ]
+    },
+    "derivatives_incomplete": {
+      "count": 17,
+      "sample": [
+        {
+          "id": 42170,
+          "slug": "industrial-costa-rica-2021-02-28-10-23-18",
+          "title": "2021-02-28 10.23.18.jpg",
+          "status": "archived"
+        },
+        {
+          "id": 42171,
+          "slug": "industrial-costa-rica-2021-02-28-10-42-57",
+          "title": "2021-02-28 10.42.57.jpg",
+          "status": "archived"
+        },
+        {
+          "id": 42172,
+          "slug": "industrial-costa-rica-2021-10-09-06-38-24",
+          "title": "2021-10-09 06.38.24.jpg",
+          "status": "archived"
+        },
+        {
+          "id": 42173,
+          "slug": "industrial-costa-rica-2021-10-09-06-38-34",
+          "title": "2021-10-09 06.38.34.jpg",
+          "status": "archived"
+        },
+        {
+          "id": 42174,
+          "slug": "industrial-costa-rica-cl0a1170",
+          "title": "Costa Rica \u2014 Central Valley, Costa Rica \u2014 CL0A1170 | WildPhotography",
+          "status": "archived"
+        },
+        {
+          "id": 42175,
+          "slug": "industrial-costa-rica-cl0a3868",
+          "title": "Costa Rica \u2014 Industrial Costa Rica \u2014 CL0A3868 | WildPhotography",
+          "status": "archived"
+        },
+        {
+          "id": 42176,
+          "slug": "industrial-costa-rica-cl0a3869",
+          "title": "Costa Rica \u2014 Industrial Costa Rica \u2014 CL0A3869 | WildPhotography",
+          "status": "archived"
+        },
+        {
+          "id": 42177,
+          "slug": "industrial-costa-rica-cl0a3876",
+          "title": "Costa Rica \u2014 Industrial Costa Rica \u2014 CL0A3876 | WildPhotography",
+          "status": "archived"
+        },
+        {
+          "id": 42178,
+          "slug": "industrial-costa-rica-cl0a3877",
+          "title": "Costa Rica \u2014 Industrial Costa Rica \u2014 CL0A3877 | WildPhotography",
+          "status": "archived"
+        },
+        {
+          "id": 42179,
+          "slug": "industrial-costa-rica-cl0a3890",
+          "title": "Costa Rica \u2014 Industrial Costa Rica \u2014 CL0A3890 | WildPhotography",
+          "status": "archived"
+        },
+        {
+          "id": 42180,
+          "slug": "industrial-costa-rica-cl0a3896",
+          "title": "Costa Rica \u2014 Industrial Costa Rica \u2014 CL0A3896 | WildPhotography",
+          "status": "archived"
+        },
+        {
+          "id": 42182,
+          "slug": "industrial-costa-rica-cl0a3981",
+          "title": "Costa Rica \u2014 Industrial Costa Rica \u2014 CL0A3981 | WildPhotography",
+          "status": "archived"
+        },
+        {
+          "id": 42183,
+          "slug": "industrial-costa-rica-cl0a4028",
+          "title": "Costa Rica \u2014 Industrial Costa Rica \u2014 CL0A4028 | WildPhotography",
+          "status": "archived"
+        },
+        {
+          "id": 42184,
+          "slug": "industrial-costa-rica-cl0a4029",
+          "title": "Costa Rica \u2014 Industrial Costa Rica \u2014 CL0A4029 | WildPhotography",
+          "status": "archived"
+        },
+        {
+          "id": 42185,
+          "slug": "industrial-costa-rica-cl0a4035",
+          "title": "Costa Rica \u2014 Central Valley, Costa Rica \u2014 CL0A4035 | WildPhotography",
+          "status": "archived"
+        },
+        {
+          "id": 42186,
+          "slug": "industrial-costa-rica-cl0a4193",
+          "title": "Costa Rica \u2014 Central Valley, Costa Rica \u2014 CL0A4193 | WildPhotography",
+          "status": "archived"
+        },
+        {
+          "id": 42188,
+          "slug": "industrial-costa-rica-cl0a7467",
+          "title": "Costa Rica \u2014 Central Valley, Costa Rica \u2014 CL0A7467 | WildPhotography",
+          "status": "archived"
+        }
+      ]
+    },
+    "missing_description": {
+      "count": 0,
+      "sample": []
+    },
+    "missing_keywords": {
+      "count": 0,
+      "sample": []
+    }
+  },
+  "status": "success"
+}

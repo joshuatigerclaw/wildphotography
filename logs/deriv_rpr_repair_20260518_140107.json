@@ -1,0 +1,124 @@
+{
+  "timestamp": "2026-05-18T20:01:07.196424+00:00",
+  "batch_size": 250,
+  "flag_fixed_only": 0,
+  "url_fixed": 81,
+  "rebuild_queued": 0,
+  "errors": 169,
+  "flag_fixed_samples": [],
+  "url_fixed_samples": [
+    [
+      41496,
+      "https://images.wildphotography.com/derivatives/thumb/41496_thumb.jpg",
+      "https://images.wildphotography.com/derivatives/thumb/41496_thumb.jpg"
+    ],
+    [
+      41539,
+      "https://images.wildphotography.com/derivatives/thumb/41539_thumb.jpg",
+      "https://images.wildphotography.com/derivatives/thumb/41539_thumb.jpg"
+    ],
+    [
+      49209,
+      "https://images.wildphotography.com/derivatives/thumb/costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-DJI_0737-thumb.jpg",
+      "https://images.wildphotography.com/derivatives/thumb/4245fee1ef34450af0199572ae2cb6c958c6be6ae78a96a2ce5fad252c52acb0.jpg"
+    ],
+    [
+      49210,
+      "https://images.wildphotography.com/derivatives/thumb/costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-DJI_0739-thumb.jpg",
+      "https://images.wildphotography.com/derivatives/thumb/810d1fe1f88d6cf9e42eb94dfd91dc7357d61eeb4200511424554c9baa89716f.jpg"
+    ],
+    [
+      49211,
+      "https://wildphotography.net/photos/49211/thumb.jpg",
+      "https://images.wildphotography.com/derivatives/thumb/1ccdb2707b68ed881cfd9fdc69835393ca29637cf368f831f3f56eaf3bbb7737.jpg"
+    ],
+    [
+      49212,
+      "https://images.wildphotography.com/derivatives/thumb/costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-DJI_0766-thumb.jpg",
+      "https://images.wildphotography.com/derivatives/thumb/44c5ec6cfcf9e6736e28382143d5dffad2df742fc6fb5a33223231bd2272491b.jpg"
+    ],
+    [
+      49213,
+      "https://images.wildphotography.com/derivatives/thumb/costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-DJI_0801-thumb.jpg",
+      "https://images.wildphotography.com/derivatives/thumb/3792b97d6fa205d9174f4aab0f7785117c899d1c26db8d9347efe44ebb0958d7.jpg"
+    ],
+    [
+      49214,
+      "https://wildphotography.net/photos/49214/thumb.jpg",
+      "https://images.wildphotography.com/derivatives/thumb/266d340ea869e30c0cfa972e470fa75be80e5924297eaf840d216176801edb79.jpg"
+    ],
+    [
+      49215,
+      "https://wildphotography.net/photos/49215/thumb.jpg",
+      "https://images.wildphotography.com/derivatives/thumb/09e6a46fc5a97b7e32ad9248b9fa803786c18d6d0ecc9229379fd382d1d4ddd3.jpg"
+    ],
+    [
+      49216,
+      "https://wildphotography.net/photos/49216/thumb.jpg",
+      "https://images.wildphotography.com/derivatives/thumb/daa6f595dd57103944eb53c6fa15302ff08eeabdb0c8dc95cb32bc6730d91057.jpg"
+    ]
+  ],
+  "rebuild_queued_samples": [],
+  "error_samples": [
+    [
+      41534,
+      "unknown case",
+      "https://images.wildphotography.com/originals/rural-costa-rica/23ea068cde0266491ec7eca295a207d675f631b5d40042535f7726126c095e6e-thumb.jpg",
+      "https://wildphoto-storage.r2.cloudflarestorage.com/originals/rural-costa-rica/23ea068cde0266491ec7eca295a207d675f631b5d40042535f7726126c095e6e_thumb.jpg"
+    ],
+    [
+      49288,
+      "column \"reason\" of relation \"derivative_rebuild_queue\" does not exist\nLINE 2: ...  INSERT INTO derivative_rebuild_queue (photo_id, reason, cr...\n                                                             ^\n",
+      "https://pub-xxx.r2.dev/thumb.jpg",
+      null
+    ],
+    [
+      49429,
+      "current transaction is aborted, commands ignored until end of transaction block\n",
+      "https://pub-3ec62f93675c404fe4a9a4949e38e5e5.wildphoto-storage.r2.cloudflarestorage.com/photos/derivatives/thumb/costa-rica-gallery-tambor-nicoya-peninsula-costa-rica-dji-0188.jpg",
+      "derivatives/thumb/ff3c9a5c2c075aff6695517f14ccdfd9996109cf03755f7601fa8b3d8ee46da1.jpg"
+    ],
+    [
+      49430,
+      "current transaction is aborted, commands ignored until end of transaction block\n",
+      "https://pub-3ec62f93675c404fe4a9a4949e38e5e5.wildphoto-storage.r2.cloudflarestorage.com/photos/derivatives/thumb/costa-rica-gallery-tambor-nicoya-peninsula-costa-rica-dji-0190.JPG",
+      "derivatives/thumb/5c788e0fadcf9872f26e109450bb992f2bb319d28e1878d5828a093fd069223a.jpg"
+    ],
+    [
+      49431,
+      "current transaction is aborted, commands ignored until end of transaction block\n",
+      "https://pub-3ec62f93675c404fe4a9a4949e38e5e5.wildphoto-storage.r2.cloudflarestorage.com/photos/derivatives/thumb/costa-rica-gallery-tambor-nicoya-peninsula-costa-rica-dji-0192.JPG",
+      "derivatives/thumb/ae7b0460e2a3cd6f78c928cb85c7317229b2a743a7e8c675f1290ae06bd2252d.jpg"
+    ],
+    [
+      49432,
+      "current transaction is aborted, commands ignored until end of transaction block\n",
+      "https://pub-3ec62f93675c404fe4a9a4949e38e5e5.wildphoto-storage.r2.cloudflarestorage.com/photos/derivatives/thumb/costa-rica-gallery-tambor-nicoya-peninsula-costa-rica-dji-0198.JPG",
+      "derivatives/thumb/56eeb890fb6280b6731229e46a23791dd1b6879ceb61720e238e51b9148e1553.jpg"
+    ],
+    [
+      49433,
+      "current transaction is aborted, commands ignored until end of transaction block\n",
+      "https://pub-3ec62f93675c404fe4a9a4949e38e5e5.wildphoto-storage.r2.cloudflarestorage.com/photos/derivatives/thumb/costa-rica-gallery-tambor-nicoya-peninsula-costa-rica-dji-0200.JPG",
+      "derivatives/thumb/54bc0a325a23820cb07b5785b007c4830724030e0e8b4e7cf1ebaea0dc8a4191.jpg"
+    ],
+    [
+      49434,
+      "current transaction is aborted, commands ignored until end of transaction block\n",
+      "https://pub-3ec62f93675c404fe4a9a4949e38e5e5.wildphoto-storage.r2.cloudflarestorage.com/photos/derivatives/thumb/costa-rica-gallery-tambor-nicoya-peninsula-costa-rica-dji-0206.JPG",
+      "derivatives/thumb/18660959a21d0c88b50de38475d09f54b4e23516c3099168a7001f21da43fa8d.jpg"
+    ],
+    [
+      49435,
+      "current transaction is aborted, commands ignored until end of transaction block\n",
+      "https://pub-3ec62f93675c404fe4a9a4949e38e5e5.wildphoto-storage.r2.cloudflarestorage.com/photos/derivatives/thumb/costa-rica-gallery-tambor-nicoya-peninsula-costa-rica-dji-0207.JPG",
+      "derivatives/thumb/c6dcae6dc93f1a728f8b0818a6a176d619075b3f6b168dbcb1e6eae7472a4691.jpg"
+    ],
+    [
+      49436,
+      "current transaction is aborted, commands ignored until end of transaction block\n",
+      "https://pub-3ec62f93675c404fe4a9a4949e38e5e5.wildphoto-storage.r2.cloudflarestorage.com/photos/derivatives/thumb/costa-rica-gallery-tambor-nicoya-peninsula-costa-rica-dji-0208.JPG",
+      "derivatives/thumb/34ec242c162e1909b8f5a955677b8c347235acdbd686608c6de9bb5d6f00748e.jpg"
+    ]
+  ]
+}

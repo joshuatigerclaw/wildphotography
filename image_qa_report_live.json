@@ -1,50 +1,20 @@
 {
   "qa_summary": {
-    "items_loaded": 613,
+    "items_loaded": 614,
     "photos_audited": 500,
-    "galleries_audited": 113,
-    "issues_found": 23,
-    "safe_fixes_available": 3,
+    "galleries_audited": 114,
+    "issues_found": 20,
+    "safe_fixes_available": 0,
     "manual_review_required": 0,
     "missing_thumb_count": 0,
     "broken_thumb_count": 0,
     "missing_derivatives_count": 0,
-    "gallery_cover_issues": 3,
+    "gallery_cover_issues": 0,
     "duplicate_r2_keys_count": 20,
     "missing_metadata_count": 0,
-    "timestamp": "2026-03-29T04:21:54.606968+00:00"
+    "timestamp": "2026-05-21T03:14:03.264551+00:00"
   },
   "issues": [
-    {
-      "item_id": 126,
-      "item_slug": "costa-rica-gallery-wildlife",
-      "item_type": "gallery",
-      "issue_type": "missing_cover_photo",
-      "description": "Gallery has no cover photo assigned",
-      "current_value": "",
-      "suggested_fix": null,
-      "confidence": "high"
-    },
-    {
-      "item_id": 127,
-      "item_slug": "costa-rica-gallery-montezuma-costa-rica",
-      "item_type": "gallery",
-      "issue_type": "missing_cover_photo",
-      "description": "Gallery has no cover photo assigned",
-      "current_value": "",
-      "suggested_fix": null,
-      "confidence": "high"
-    },
-    {
-      "item_id": 128,
-      "item_slug": "costa-rica-gallery-flowers-plants-trees",
-      "item_type": "gallery",
-      "issue_type": "missing_cover_photo",
-      "description": "Gallery has no cover photo assigned",
-      "current_value": "",
-      "suggested_fix": null,
-      "confidence": "high"
-    },
     {
       "item_id": 0,
       "item_slug": "",
@@ -52,46 +22,6 @@
       "issue_type": "duplicate_r2_key",
       "description": "Duplicate R2 original key found in 2 photos",
       "current_value": "originals/1878/CL0A0160.jpg",
-      "suggested_fix": null,
-      "confidence": "high"
-    },
-    {
-      "item_id": 0,
-      "item_slug": "",
-      "item_type": "system",
-      "issue_type": "duplicate_r2_key",
-      "description": "Duplicate R2 original key found in 2 photos",
-      "current_value": "originals/2514/IMG_9287-2.jpg",
-      "suggested_fix": null,
-      "confidence": "high"
-    },
-    {
-      "item_id": 0,
-      "item_slug": "",
-      "item_type": "system",
-      "issue_type": "duplicate_r2_key",
-      "description": "Duplicate R2 original key found in 2 photos",
-      "current_value": "originals/5610/DJI_0818.JPG",
-      "suggested_fix": null,
-      "confidence": "high"
-    },
-    {
-      "item_id": 0,
-      "item_slug": "",
-      "item_type": "system",
-      "issue_type": "duplicate_r2_key",
-      "description": "Duplicate R2 original key found in 2 photos",
-      "current_value": "originals/7a964e7c0e49fbc85285d8e5cd05244de1b326ec78c99e8bc23d25dedb7dde34.jpg",
-      "suggested_fix": null,
-      "confidence": "high"
-    },
-    {
-      "item_id": 0,
-      "item_slug": "",
-      "item_type": "system",
-      "issue_type": "duplicate_r2_key",
-      "description": "Duplicate R2 original key found in 2 photos",
-      "current_value": "originals/2160/CL0A7822.jpg",
       "suggested_fix": null,
       "confidence": "high"
     },
@@ -111,7 +41,7 @@
       "item_type": "system",
       "issue_type": "duplicate_r2_key",
       "description": "Duplicate R2 original key found in 2 photos",
-      "current_value": "originals/2291/CL0A9262.jpg",
+      "current_value": "originals/d8c4d54ba6c3d6ade876aca4fde920d3d68c6454c645153b7272e80f42c76667.jpg",
       "suggested_fix": null,
       "confidence": "high"
     },
@@ -131,16 +61,6 @@
       "item_type": "system",
       "issue_type": "duplicate_r2_key",
       "description": "Duplicate R2 original key found in 2 photos",
-      "current_value": "originals/11060/CL0A8714.jpg",
-      "suggested_fix": null,
-      "confidence": "high"
-    },
-    {
-      "item_id": 0,
-      "item_slug": "",
-      "item_type": "system",
-      "issue_type": "duplicate_r2_key",
-      "description": "Duplicate R2 original key found in 2 photos",
       "current_value": "originals/c4a34d255be240af194568eec932f98be26b6299f03152f71c8d131a74f191d0.jpg",
       "suggested_fix": null,
       "confidence": "high"
@@ -151,17 +71,7 @@
       "item_type": "system",
       "issue_type": "duplicate_r2_key",
       "description": "Duplicate R2 original key found in 2 photos",
-      "current_value": "originals/a5d692d04c6f648d329f9edc1821e7e07e4a841ab3700bc1449b4002d63b12b0.jpg",
-      "suggested_fix": null,
-      "confidence": "high"
-    },
-    {
-      "item_id": 0,
-      "item_slug": "",
-      "item_type": "system",
-      "issue_type": "duplicate_r2_key",
-      "description": "Duplicate R2 original key found in 2 photos",
-      "current_value": "originals/11031/IMG_4922.JPG",
+      "current_value": "originals/7ad4df89f8952816146d5b6a4fd18bd2b3ddb2ac5e05e5570230c1b090a89bc9.jpg",
       "suggested_fix": null,
       "confidence": "high"
     },
@@ -172,16 +82,6 @@
       "issue_type": "duplicate_r2_key",
       "description": "Duplicate R2 original key found in 2 photos",
       "current_value": "originals/d8896a7ce89bbc7cbe403126ac89ce6df37a9a438f4ae47699c23665c0c75a8c.jpg",
-      "suggested_fix": null,
-      "confidence": "high"
-    },
-    {
-      "item_id": 0,
-      "item_slug": "",
-      "item_type": "system",
-      "issue_type": "duplicate_r2_key",
-      "description": "Duplicate R2 original key found in 2 photos",
-      "current_value": "originals/1950/CL0A2904.jpg",
       "suggested_fix": null,
       "confidence": "high"
     },
@@ -211,7 +111,7 @@
       "item_type": "system",
       "issue_type": "duplicate_r2_key",
       "description": "Duplicate R2 original key found in 2 photos",
-      "current_value": "originals/jaco-beach/fca0016d5f302ce081f21caeef64f224bce25570.jpg",
+      "current_value": "originals/83cdf0b006e50ee731885cc0938281162419b0a55ab3d7f9a654218f7895f359.jpg",
       "suggested_fix": null,
       "confidence": "high"
     },
@@ -230,8 +130,8 @@
       "item_slug": "",
       "item_type": "system",
       "issue_type": "duplicate_r2_key",
-      "description": "Duplicate R2 original key found in 2 photos",
-      "current_value": "originals/b2ae0e36d60ce9f1d33935f71bbd4bd9895fa49d4ae91f258c8c35a53de6b2b0.jpg",
+      "description": "Duplicate R2 original key found in 4 photos",
+      "current_value": "originals/f66f0e4fded06a4a7dc549ffb8cb944c20c7c944bc45b4746ab6f4ab70e0a84a.jpg",
       "suggested_fix": null,
       "confidence": "high"
     },
@@ -241,34 +141,82 @@
       "item_type": "system",
       "issue_type": "duplicate_r2_key",
       "description": "Duplicate R2 original key found in 2 photos",
-      "current_value": "originals/1337/DJI_0356.jpg",
+      "current_value": "originals/f75d5ca795935a6a7e9be1e1d988b3ceb95468f865417ad94d5f00b162f3e3e4.jpg",
+      "suggested_fix": null,
+      "confidence": "high"
+    },
+    {
+      "item_id": 0,
+      "item_slug": "",
+      "item_type": "system",
+      "issue_type": "duplicate_r2_key",
+      "description": "Duplicate R2 original key found in 2 photos",
+      "current_value": "originals/1922/CL0A1835.jpg",
+      "suggested_fix": null,
+      "confidence": "high"
+    },
+    {
+      "item_id": 0,
+      "item_slug": "",
+      "item_type": "system",
+      "issue_type": "duplicate_r2_key",
+      "description": "Duplicate R2 original key found in 2 photos",
+      "current_value": "originals/f9060cf31611cda98faa03fa3fd8e576cbfa1cbdcb6167e345309f17ee8d446f.jpg",
+      "suggested_fix": null,
+      "confidence": "high"
+    },
+    {
+      "item_id": 0,
+      "item_slug": "",
+      "item_type": "system",
+      "issue_type": "duplicate_r2_key",
+      "description": "Duplicate R2 original key found in 2 photos",
+      "current_value": "originals/1943/CL0A2779.JPG",
+      "suggested_fix": null,
+      "confidence": "high"
+    },
+    {
+      "item_id": 0,
+      "item_slug": "",
+      "item_type": "system",
+      "issue_type": "duplicate_r2_key",
+      "description": "Duplicate R2 original key found in 2 photos",
+      "current_value": "originals/6d90a6a792ac47ff1cb2ef539e40e25461ac6f72c722ec4c929efacd1cd3d861.jpg",
+      "suggested_fix": null,
+      "confidence": "high"
+    },
+    {
+      "item_id": 0,
+      "item_slug": "",
+      "item_type": "system",
+      "issue_type": "duplicate_r2_key",
+      "description": "Duplicate R2 original key found in 2 photos",
+      "current_value": "originals/09bbb71fc9377697422e8dffddcd556c6c2bd575c785b227d1a7782368c481b1.jpg",
+      "suggested_fix": null,
+      "confidence": "high"
+    },
+    {
+      "item_id": 0,
+      "item_slug": "",
+      "item_type": "system",
+      "issue_type": "duplicate_r2_key",
+      "description": "Duplicate R2 original key found in 2 photos",
+      "current_value": "originals/0bc5cd1809711f0812c731e40fef73a53c253c0fda7816bd46d3de57c852f7a8.jpg",
+      "suggested_fix": null,
+      "confidence": "high"
+    },
+    {
+      "item_id": 0,
+      "item_slug": "",
+      "item_type": "system",
+      "issue_type": "duplicate_r2_key",
+      "description": "Duplicate R2 original key found in 2 photos",
+      "current_value": "originals/0da7f045dc0ff64258c2bf015a3f3523c4ef6c8549ab211b69233c5d651f56a1.jpg",
       "suggested_fix": null,
       "confidence": "high"
     }
   ],
-  "safe_fixes": [
-    {
-      "type": "gallery_cover",
-      "gallery_id": 126,
-      "gallery_slug": "costa-rica-gallery-wildlife",
-      "photo_id": 24274,
-      "action": "assign_cover_photo"
-    },
-    {
-      "type": "gallery_cover",
-      "gallery_id": 127,
-      "gallery_slug": "costa-rica-gallery-montezuma-costa-rica",
-      "photo_id": 24456,
-      "action": "assign_cover_photo"
-    },
-    {
-      "type": "gallery_cover",
-      "gallery_id": 128,
-      "gallery_slug": "costa-rica-gallery-flowers-plants-trees",
-      "photo_id": 24549,
-      "action": "assign_cover_photo"
-    }
-  ],
+  "safe_fixes": [],
   "manual_review_items": [],
   "broken_thumb_details": [],
   "missing_derivative_details": [],
@@ -278,27 +226,11 @@
       "count": 2
     },
     {
-      "r2_key": "originals/2514/IMG_9287-2.jpg",
-      "count": 2
-    },
-    {
-      "r2_key": "originals/5610/DJI_0818.JPG",
-      "count": 2
-    },
-    {
-      "r2_key": "originals/7a964e7c0e49fbc85285d8e5cd05244de1b326ec78c99e8bc23d25dedb7dde34.jpg",
-      "count": 2
-    },
-    {
-      "r2_key": "originals/2160/CL0A7822.jpg",
-      "count": 2
-    },
-    {
       "r2_key": "originals/1508/P1012082.jpg",
       "count": 2
     },
     {
-      "r2_key": "originals/2291/CL0A9262.jpg",
+      "r2_key": "originals/d8c4d54ba6c3d6ade876aca4fde920d3d68c6454c645153b7272e80f42c76667.jpg",
       "count": 2
     },
     {
@@ -306,27 +238,15 @@
       "count": 2
     },
     {
-      "r2_key": "originals/11060/CL0A8714.jpg",
-      "count": 2
-    },
-    {
       "r2_key": "originals/c4a34d255be240af194568eec932f98be26b6299f03152f71c8d131a74f191d0.jpg",
       "count": 2
     },
     {
-      "r2_key": "originals/a5d692d04c6f648d329f9edc1821e7e07e4a841ab3700bc1449b4002d63b12b0.jpg",
-      "count": 2
-    },
-    {
-      "r2_key": "originals/11031/IMG_4922.JPG",
+      "r2_key": "originals/7ad4df89f8952816146d5b6a4fd18bd2b3ddb2ac5e05e5570230c1b090a89bc9.jpg",
       "count": 2
     },
     {
       "r2_key": "originals/d8896a7ce89bbc7cbe403126ac89ce6df37a9a438f4ae47699c23665c0c75a8c.jpg",
-      "count": 2
-    },
-    {
-      "r2_key": "originals/1950/CL0A2904.jpg",
       "count": 2
     },
     {
@@ -338,7 +258,7 @@
       "count": 2
     },
     {
-      "r2_key": "originals/jaco-beach/fca0016d5f302ce081f21caeef64f224bce25570.jpg",
+      "r2_key": "originals/83cdf0b006e50ee731885cc0938281162419b0a55ab3d7f9a654218f7895f359.jpg",
       "count": 2
     },
     {
@@ -346,11 +266,39 @@
       "count": 2
     },
     {
-      "r2_key": "originals/b2ae0e36d60ce9f1d33935f71bbd4bd9895fa49d4ae91f258c8c35a53de6b2b0.jpg",
+      "r2_key": "originals/f66f0e4fded06a4a7dc549ffb8cb944c20c7c944bc45b4746ab6f4ab70e0a84a.jpg",
+      "count": 4
+    },
+    {
+      "r2_key": "originals/f75d5ca795935a6a7e9be1e1d988b3ceb95468f865417ad94d5f00b162f3e3e4.jpg",
       "count": 2
     },
     {
-      "r2_key": "originals/1337/DJI_0356.jpg",
+      "r2_key": "originals/1922/CL0A1835.jpg",
+      "count": 2
+    },
+    {
+      "r2_key": "originals/f9060cf31611cda98faa03fa3fd8e576cbfa1cbdcb6167e345309f17ee8d446f.jpg",
+      "count": 2
+    },
+    {
+      "r2_key": "originals/1943/CL0A2779.JPG",
+      "count": 2
+    },
+    {
+      "r2_key": "originals/6d90a6a792ac47ff1cb2ef539e40e25461ac6f72c722ec4c929efacd1cd3d861.jpg",
+      "count": 2
+    },
+    {
+      "r2_key": "originals/09bbb71fc9377697422e8dffddcd556c6c2bd575c785b227d1a7782368c481b1.jpg",
+      "count": 2
+    },
+    {
+      "r2_key": "originals/0bc5cd1809711f0812c731e40fef73a53c253c0fda7816bd46d3de57c852f7a8.jpg",
+      "count": 2
+    },
+    {
+      "r2_key": "originals/0da7f045dc0ff64258c2bf015a3f3523c4ef6c8549ab211b69233c5d651f56a1.jpg",
       "count": 2
     }
   ],

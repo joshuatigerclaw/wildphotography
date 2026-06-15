@@ -1,0 +1,67 @@
+WILDPHOTOGRAPHY DERIVATIVE REALITY AUDIT
+Run: 2026-06-08T12:38:41.370418+00:00
+Total RPR photos: 68,150
+Total DB derivatives_complete: 68,938
+Sample size: 300
+
+--- REALITY CHECK ---
+Total keys checked (R2 HeadObject): 1407
+Keys present: 1212
+Keys missing: 195
+
+--- FLAG ACCURACY ---
+Photos OK (reality matches DB): 244
+Flag mismatch (DB=complete but objects missing): 56
+Flag missing (objects exist but DB=False): 0
+
+--- DISCREPANCIES ---
+  [80515] slug=2023-03-10-16.04.50 status=flag_mismatch db_flag=True present=1 missing=4
+  [68348] slug=dji-0400-f6dc1ad6 status=flag_mismatch db_flag=True present=1 missing=4
+  [87971] slug=img-fcb7bb76 status=flag_mismatch db_flag=True present=4 missing=1
+  [64710] slug=dji-0202-3c42c2f63641fb29 status=flag_mismatch db_flag=True present=1 missing=4
+  [49552] slug=costa-rica-gallery-tambor-nicoya-peninsula-costa-rica-dji-0393-jpg status=flag_mismatch db_flag=True present=1 missing=4
+  [78132] slug=img-9407 status=flag_mismatch db_flag=True present=0 missing=5
+  [91840] slug=landscape-dji-0918-c11b75 status=flag_mismatch db_flag=True present=0 missing=1
+  [70677] slug=pc316543-1e721ffb status=flag_mismatch db_flag=True present=1 missing=4
+  [67401] slug=dji-0372-ba238e26 status=flag_mismatch db_flag=True present=0 missing=5
+  [68227] slug=dji-0302-4915ef94 status=flag_mismatch db_flag=True present=1 missing=4
+  [70801] slug=CL0A3378-9d8c75 status=flag_mismatch db_flag=True present=1 missing=4
+  [64820] slug=cl0a0627-b61e71f2dc5d1f5c status=flag_mismatch db_flag=True present=0 missing=5
+  [42422] slug=marine-life-of-costa-rica-2021-12-28-14.19.13 status=flag_mismatch db_flag=True present=4 missing=1
+  [54045] slug=food-2025-03-08-06-46-29 status=flag_mismatch db_flag=True present=4 missing=1
+  [68909] slug=pano00054-26274e7f status=flag_mismatch db_flag=True present=1 missing=4
+  [75205] slug=img-3594-1 status=flag_mismatch db_flag=True present=2 missing=3
+  [70348] slug=dji-0951-35a80765 status=flag_mismatch db_flag=True present=1 missing=4
+  [77964] slug=dji-0330 status=flag_mismatch db_flag=True present=0 missing=5
+  [91499] slug=golfo-de-nicoya-pano00002-b118a7 status=flag_mismatch db_flag=True present=0 missing=1
+  [67911] slug=hyperlapse-0394-60276b9b status=flag_mismatch db_flag=True present=1 missing=4
+  [44510] slug=20240817-095212-molxcx35 status=flag_mismatch db_flag=True present=4 missing=1
+  [70116] slug=cl0a2904-8d38e47e status=flag_mismatch db_flag=True present=1 missing=4
+  [69777] slug=pano00004-759047d8 status=flag_mismatch db_flag=True present=1 missing=4
+  [68338] slug=dji-0384-2937c1f0 status=flag_mismatch db_flag=True present=1 missing=4
+  [81719] slug=2019-03-27-12.01.30 status=flag_mismatch db_flag=True present=4 missing=1
+  [16875] slug=dji-0167-golfo-de-nicoya-1034 status=flag_mismatch db_flag=True present=2 missing=3
+  [66038] slug=dji-0146-jpg status=flag_mismatch db_flag=True present=1 missing=4
+  [49672] slug=costa-rica-gallery-la-sabana-estadio-nacional-costa-rica-san-jose-rpano0003-jpg status=flag_mismatch db_flag=True present=1 missing=4
+  [61545] slug=dji_0364-22637905 status=flag_mismatch db_flag=True present=4 missing=1
+  [64987] slug=2025-01-04-11-21-19-04e24a22ed58e326 status=flag_mismatch db_flag=True present=1 missing=4
+  [70037] slug=20250214-062534-c20aa212 status=flag_mismatch db_flag=True present=1 missing=4
+  [92210] slug=playa-real-roble-f389875d status=flag_mismatch db_flag=True present=4 missing=1
+  [66752] slug=2025-01-04-11-47-21-ce1f122d status=flag_mismatch db_flag=True present=0 missing=5
+  [66234] slug=2022-03-12-12-24-08 status=flag_mismatch db_flag=True present=1 missing=4
+  [66369] slug=dji-0357-jpg status=flag_mismatch db_flag=True present=1 missing=4
+  [43002] slug=sunrise-sunset--dji-0995 status=flag_mismatch db_flag=True present=1 missing=4
+  [43243] slug=beaches--p2161562 status=flag_mismatch db_flag=True present=1 missing=4
+  [70796] slug=CL0A3338-385822 status=flag_mismatch db_flag=True present=1 missing=4
+  [77231] slug=cl0a6587 status=flag_mismatch db_flag=True present=0 missing=5
+  [68231] slug=dji-0312-8b505188 status=flag_mismatch db_flag=True present=1 missing=4
+  [67186] slug=dji-0207-8a1ed2c8 status=flag_mismatch db_flag=True present=0 missing=5
+  [70723] slug=CL0A1164-6c58a5 status=flag_mismatch db_flag=True present=1 missing=4
+  [67142] slug=dji-0188-a56a665e status=flag_mismatch db_flag=True present=0 missing=5
+  [35664] slug=santateresa-dji-0761-70d26257 status=flag_mismatch db_flag=True present=0 missing=5
+  [61794] slug=2019-04-14-11.37.37-314f5722 status=flag_mismatch db_flag=True present=4 missing=1
+  [68483] slug=dji-0495-c251322b status=flag_mismatch db_flag=True present=1 missing=4
+  [91697] slug=best-of-costa-rica-9f137d7ecb3a status=flag_mismatch db_flag=True present=4 missing=1
+  [66225] slug=img-9340 status=flag_mismatch db_flag=True present=1 missing=4
+  [69886] slug=2023-02-13-06-12-10-d8b99f97 status=flag_mismatch db_flag=True present=1 missing=4
+  [90476] slug=papagayo-bahia-culebra-dji-0178-7173f5 status=flag_mismatch db_flag=True present=4 missing=1

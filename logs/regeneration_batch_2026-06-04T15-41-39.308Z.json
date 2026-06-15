@@ -1,0 +1,25 @@
+{
+  "timestamp": "2026-06-04T15:41:39.308Z",
+  "results": [
+    {
+      "photo_id": 42063,
+      "status": "skipped",
+      "reason": "file_read_error",
+      "error": "Unknown system error -11: Unknown system error -11, read"
+    },
+    {
+      "photo_id": 42065,
+      "status": "skipped",
+      "reason": "file_read_error",
+      "error": "Unknown system error -11: Unknown system error -11, read"
+    },
+    {
+      "photo_id": 42071,
+      "status": "ok",
+      "derivs_complete": true
+    }
+  ],
+  "ok": 1,
+  "fail": 0,
+  "skip": 2
+}

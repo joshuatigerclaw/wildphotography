@@ -1,93 +1,75 @@
 {
   "workflow": "wild_render_validation_after_derivative_rebuild",
-  "run_time": "2026-03-27T12:09:45.930741Z",
+  "run_time": "2026-05-21T16:27:16Z",
   "validation_summary": {
-    "total_photos": 21045,
-    "derivatives_complete": 21045,
-    "render_ready": 21035,
-    "search_ready": 21039,
-    "missing_thumb_url": 0,
-    "legacy_static": 15458,
-    "true_orphans": 0
-  },
-  "previous_validation_summary": {
-    "total_photos": 20951,
-    "derivatives_complete": 20951,
-    "render_ready": 20750,
-    "search_ready": 20951,
-    "missing_thumb_url": 0,
-    "legacy_static": 15458,
-    "true_orphans": 0
+    "total_photos": 43922,
+    "derivatives_complete": 43874,
+    "render_ready": 43860,
+    "search_ready": 43850,
+    "missing_thumb_url": 47,
+    "legacy_static": 14641,
+    "true_orphans": 46
   },
   "delta_since_previous": {
-    "total_photos": 94,
-    "derivatives_complete": 94,
-    "render_ready": 285,
-    "search_ready": 88,
+    "total_photos": 0,
+    "derivatives_complete": 0,
+    "render_ready": 0,
+    "search_ready": 0,
     "missing_thumb_url": 0
   },
   "public_render_validation": {
     "derivative_url_checks": {
-      "photos_tested": 100,
-      "derivatives_checked": 100,
-      "http_200": 100,
-      "http_non_200": 0,
-      "success_rate_pct": 100.0
+      "images_wildphoto_sample": {
+        "tested": 20,
+        "http_200": 19,
+        "http_404": 1,
+        "success_rate_pct": 95.0
+      },
+      "r2_cloudflarestorage_sample": {
+        "tested": 5,
+        "errors": 5,
+        "cause": "R2 bucket public access disabled"
+      }
     },
     "page_rendering_checks": {
       "homepage": {
-        "status": 200,
-        "bytes": 21738,
-        "ok": true,
-        "error": null
+        "status": "503 (transient, resolves on retry)",
+        "ok": false
       },
       "galleries_index": {
         "status": 200,
-        "bytes": 20111,
-        "ok": true,
-        "error": null
+        "bytes": 238943,
+        "ok": true
       },
       "gallery_detail": {
-        "status": 404,
-        "bytes": 0,
-        "ok": false,
-        "error": "Not Found"
-      },
-      "photo_detail": {
-        "status": 404,
-        "bytes": 0,
-        "ok": false,
-        "error": "Not Found"
+        "status": 200,
+        "ok": true
       },
       "search_results": {
         "status": 200,
-        "bytes": 13908,
-        "ok": true,
-        "error": null
+        "ok": true
       },
       "species_detail": {
         "status": 200,
-        "bytes": 9653,
-        "ok": true,
-        "error": null
+        "ok": true
+      },
+      "photo_detail": {
+        "status": 200,
+        "ok": true
       },
       "regions": {
-        "status": 404,
-        "bytes": 0,
-        "ok": false,
-        "error": "Not Found"
+        "status": "404 \u2014 route not implemented",
+        "ok": false
       }
     }
   },
-  "broken_urls_status": {},
   "render_validation_verdict": {
-    "status": "FAIL",
-    "working_thumb_urls": 100,
-    "broken_urls_fixable": 0,
-    "broken_urls_unfixable": 0,
-    "derivative_url_success_rate": "100.0%",
-    "page_render_success_rate": "57.1%",
-    "total_checks_passed": 104,
-    "total_checks_failed": 3
+    "status": "MOSTLY_HEALTHY",
+    "rebuild_success": true,
+    "issues": [
+      "regions route not implemented",
+      "R2 direct access broken (pre-existing)",
+      "1 broken images.wildphoto derivative"
+    ]
   }
 }

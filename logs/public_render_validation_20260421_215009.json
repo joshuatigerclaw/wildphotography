@@ -1,0 +1,284 @@
+{
+  "run_at": "2026-04-22T03:50:09.453477+00:00",
+  "total_photos": 32383,
+  "render_ready_total": 30704,
+  "photos_with_issues": 399,
+  "all_clear": false,
+  "checks": {
+    "missing_thumb_url": {
+      "count": 0,
+      "sample": []
+    },
+    "missing_slug": {
+      "count": 0,
+      "sample": []
+    },
+    "missing_title": {
+      "count": 0,
+      "sample": []
+    },
+    "missing_gallery_slug": {
+      "count": 292,
+      "sample": [
+        {
+          "id": 242,
+          "slug": "hermosa-beach-1",
+          "title": "Hermosa Beach Sunset",
+          "status": "archived"
+        },
+        {
+          "id": 38439,
+          "slug": "punta-leona-dji-0202-jpg",
+          "title": "Punta Leona Aerial View",
+          "status": "active"
+        },
+        {
+          "id": 38440,
+          "slug": "punta-leona-dji-0205-jpg",
+          "title": "Punta Leona Aerial View",
+          "status": "active"
+        },
+        {
+          "id": 38441,
+          "slug": "punta-leona-dji-0207-jpg",
+          "title": "Punta Leona Aerial View",
+          "status": "active"
+        },
+        {
+          "id": 38442,
+          "slug": "punta-leona-dji-0213-jpg",
+          "title": "Punta Leona Aerial View",
+          "status": "active"
+        },
+        {
+          "id": 38443,
+          "slug": "punta-leona-dji-0214-jpg",
+          "title": "Punta Leona Aerial View",
+          "status": "active"
+        },
+        {
+          "id": 38444,
+          "slug": "punta-leona-dji-0216-jpg",
+          "title": "Punta Leona Aerial View",
+          "status": "active"
+        },
+        {
+          "id": 38445,
+          "slug": "punta-leona-dji-0218-jpg",
+          "title": "Punta Leona Aerial View",
+          "status": "active"
+        },
+        {
+          "id": 38446,
+          "slug": "punta-leona-dji-0219-jpg",
+          "title": "Punta Leona Aerial View",
+          "status": "active"
+        },
+        {
+          "id": 38447,
+          "slug": "punta-leona-dji-0223-jpg",
+          "title": "Punta Leona Aerial View",
+          "status": "active"
+        },
+        {
+          "id": 38448,
+          "slug": "punta-leona-dji-0226-jpg",
+          "title": "Punta Leona Aerial View",
+          "status": "active"
+        },
+        {
+          "id": 38449,
+          "slug": "punta-leona-dji-0227-jpg",
+          "title": "Punta Leona Aerial View",
+          "status": "active"
+        },
+        {
+          "id": 38450,
+          "slug": "punta-leona-dji-0228-jpg",
+          "title": "Punta Leona Aerial View",
+          "status": "active"
+        },
+        {
+          "id": 38451,
+          "slug": "punta-leona-dji-0230-jpg",
+          "title": "Punta Leona Aerial View",
+          "status": "active"
+        },
+        {
+          "id": 38452,
+          "slug": "punta-leona-dji-0231-jpg",
+          "title": "Punta Leona Aerial View",
+          "status": "active"
+        },
+        {
+          "id": 38453,
+          "slug": "punta-leona-dji-0233-jpg",
+          "title": "Punta Leona Aerial View",
+          "status": "active"
+        },
+        {
+          "id": 38454,
+          "slug": "punta-leona-dji-0234-jpg",
+          "title": "Punta Leona Aerial View",
+          "status": "active"
+        },
+        {
+          "id": 38455,
+          "slug": "punta-leona-dji-0235-jpg",
+          "title": "Punta Leona Aerial View",
+          "status": "active"
+        },
+        {
+          "id": 38456,
+          "slug": "punta-leona-dji-0237-2-jpg",
+          "title": "Punta Leona Aerial View",
+          "status": "active"
+        },
+        {
+          "id": 38457,
+          "slug": "punta-leona-dji-0237-jpg",
+          "title": "Punta Leona Aerial View",
+          "status": "active"
+        }
+      ]
+    },
+    "search_not_ready": {
+      "count": 3505,
+      "sample": [
+        {
+          "id": 16,
+          "slug": "scarlet-macaw",
+          "title": "Scarlet Macaw",
+          "status": "archived"
+        },
+        {
+          "id": 18,
+          "slug": "keel-billed-toucan",
+          "title": "Keel-billed Toucan",
+          "status": "archived"
+        },
+        {
+          "id": 19,
+          "slug": "three-toed-sloth",
+          "title": "Three-toed Sloth",
+          "status": "archived"
+        },
+        {
+          "id": 22,
+          "slug": "blue-morpho",
+          "title": "Blue Morpho in Costa Rica, Costa Rica",
+          "status": "archived"
+        },
+        {
+          "id": 23,
+          "slug": "spectacled-owl",
+          "title": "Birds in Costa Rica, Costa Rica",
+          "status": "archived"
+        },
+        {
+          "id": 24,
+          "slug": "toucan-barbet",
+          "title": "Toucan Barbet",
+          "status": "archived"
+        },
+        {
+          "id": 30,
+          "slug": "fiery-hummingbird",
+          "title": "Fiery-throated Hummingbird",
+          "status": "archived"
+        },
+        {
+          "id": 32,
+          "slug": "volcano-view",
+          "title": "Volcano View",
+          "status": "archived"
+        },
+        {
+          "id": 33,
+          "slug": "pacific-sunset",
+          "title": "Landscapes in Pacific Coast, Costa Rica",
+          "status": "archived"
+        },
+        {
+          "id": 35,
+          "slug": "rainforest-waterfall",
+          "title": "Rainforest Waterfall",
+          "status": "archived"
+        },
+        {
+          "id": 41,
+          "slug": "img-9967-2-jpg-J88LxN",
+          "title": "Central Pacific Surf Scene",
+          "status": "archived"
+        },
+        {
+          "id": 44,
+          "slug": "img-9761-jpg-McvJMD",
+          "title": "Surfing-Costa-Rica - Img-9761-Jpg-Mcvjmd",
+          "status": "legacy_static"
+        },
+        {
+          "id": 45,
+          "slug": "img-9867-jpg-ggnxV4",
+          "title": "Costa Rica Surfing Photography \u2014 Pacific Coast Waves",
+          "status": "legacy_static"
+        },
+        {
+          "id": 46,
+          "slug": "img-0133-jpg-t25Tbt",
+          "title": "Surfing-Costa-Rica - Img-0133-Jpg-T25tbt",
+          "status": "legacy_static"
+        },
+        {
+          "id": 47,
+          "slug": "img-0148-jpg-WgXJsL",
+          "title": "Surfing-Costa-Rica - Img-0148-Jpg-Wgxjsl",
+          "status": "legacy_static"
+        },
+        {
+          "id": 48,
+          "slug": "img-0135-jpg-x8LCKP",
+          "title": "Surfing-Costa-Rica - Img-0135-Jpg-X8lckp",
+          "status": "legacy_static"
+        },
+        {
+          "id": 49,
+          "slug": "img-0154-jpg-P4g3jH",
+          "title": "Surfing-Costa-Rica - Img-0154-Jpg-P4g3jh",
+          "status": "legacy_static"
+        },
+        {
+          "id": 50,
+          "slug": "costa-rica-billabong-surf-2009-5QgMNB",
+          "title": "Costa Rica Billabong Surf 2009",
+          "status": "legacy_static"
+        },
+        {
+          "id": 51,
+          "slug": "img-0280-jpg-WR6t7s",
+          "title": "Surfing-Costa-Rica - Img-0280-Jpg-Wr6t7s",
+          "status": "legacy_static"
+        },
+        {
+          "id": 52,
+          "slug": "costa-rica-billabong-surf-2009-PSWCnj",
+          "title": "Costa Rica Billabong Surf 2009",
+          "status": "legacy_static"
+        }
+      ]
+    },
+    "derivatives_incomplete": {
+      "count": 0,
+      "sample": []
+    },
+    "missing_description": {
+      "count": 0,
+      "sample": []
+    },
+    "missing_keywords": {
+      "count": 0,
+      "sample": []
+    }
+  },
+  "status": "success"
+}

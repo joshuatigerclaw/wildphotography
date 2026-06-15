@@ -1,0 +1,618 @@
+{
+  "run_at": "2026-05-31T06:08:48.251600+00:00",
+  "folders_processed": [
+    "South-America/Argentina",
+    "South-America/Colombia-Cartagena-Islas-Baru",
+    "South-America/Panama-",
+    "South-America/Peru",
+    "Asia/China"
+  ],
+  "total_items_in_queue": 769,
+  "imported": 0,
+  "skipped_dup": 549,
+  "skipped_no_gallery": 164,
+  "failed": 0,
+  "results": [
+    {
+      "id": "batch26_South-America_Argentina_462c9c59aa9853e5",
+      "filename": "2025-11-30 19.28.57.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "south-america-argentina"
+    },
+    {
+      "id": "batch26_South-America_Argentina_253bf468f9db9aeb",
+      "filename": "2025-12-01 03.22.04 - Copy.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "south-america-argentina"
+    },
+    {
+      "id": "batch26_South-America_Argentina_5eae61ab58297c3c",
+      "filename": "2025-12-01 06.08.38 - Copy.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "south-america-argentina"
+    },
+    {
+      "id": "batch26_South-America_Argentina_7e67c8b2da932440",
+      "filename": "2025-12-01 06.08.38.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "south-america-argentina"
+    },
+    {
+      "id": "batch26_South-America_Argentina_7f2faed259058d03",
+      "filename": "2025-12-01 10.29.21.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "south-america-argentina"
+    },
+    {
+      "id": "batch26_South-America_Argentina_3fd6324fdcf29153",
+      "filename": "2025-12-01 10.43.49.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "south-america-argentina"
+    },
+    {
+      "id": "batch26_South-America_Argentina_0bb3502ef1a6e56c",
+      "filename": "2025-12-01 11.15.14.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "south-america-argentina"
+    },
+    {
+      "id": "batch26_South-America_Argentina_ddb1d980ae2f6bec",
+      "filename": "2025-12-01 11.23.12.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "south-america-argentina"
+    },
+    {
+      "id": "batch26_South-America_Argentina_1279bd453db0fcfd",
+      "filename": "2025-12-01 11.27.15.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "south-america-argentina"
+    },
+    {
+      "id": "batch26_South-America_Argentina_205012ec64406e9e",
+      "filename": "2025-12-01 13.48.29.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "south-america-argentina"
+    },
+    {
+      "id": "batch26_South-America_Argentina_749da53c90461e57",
+      "filename": "2025-12-01 15.18.03.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "south-america-argentina"
+    },
+    {
+      "id": "batch26_South-America_Argentina_328de695c7f12157",
+      "filename": "2025-12-01 17.38.49.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "south-america-argentina"
+    },
+    {
+      "id": "batch26_South-America_Argentina_9f01dc0fd63755c2",
+      "filename": "2025-12-01 17.38.52.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "south-america-argentina"
+    },
+    {
+      "id": "batch26_South-America_Argentina_bb9541309b0e1712",
+      "filename": "2025-12-01 17.39.05.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "south-america-argentina"
+    },
+    {
+      "id": "batch26_South-America_Argentina_b6d089ea712e0184",
+      "filename": "2025-12-01 17.39.52.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "south-america-argentina"
+    },
+    {
+      "id": "batch26_South-America_Argentina_6f25f6f93d33e9e8",
+      "filename": "2025-12-01 21.20.37.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "south-america-argentina"
+    },
+    {
+      "id": "batch26_South-America_Argentina_8637ab8eff0c29d6",
+      "filename": "2025-12-01 21.58.15.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "south-america-argentina"
+    },
+    {
+      "id": "batch26_South-America_Argentina_d092e70f0789554d",
+      "filename": "2025-12-01 21.58.18.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "south-america-argentina"
+    },
+    {
+      "id": "batch26_South-America_Argentina_1e4e739f1853a176",
+      "filename": "2025-12-01 21.58.22.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "south-america-argentina"
+    },
+    {
+      "id": "batch26_South-America_Argentina_8c4c1a1b9fb61adb",
+      "filename": "2025-12-02 11.58.31.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "south-america-argentina"
+    },
+    {
+      "id": "batch26_South-America_Argentina_5546e687ef401d6c",
+      "filename": "2025-12-02 12.21.51-1.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "south-america-argentina"
+    },
+    {
+      "id": "batch26_South-America_Argentina_f29a271b936d2f15",
+      "filename": "2025-12-02 12.50.28.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "south-america-argentina"
+    },
+    {
+      "id": "batch26_South-America_Argentina_116d75938b9ae224",
+      "filename": "2025-12-02 12.53.01.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "south-america-argentina"
+    },
+    {
+      "id": "batch26_South-America_Argentina_44374e76ccd13ea0",
+      "filename": "2025-12-02 12.53.06.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "south-america-argentina"
+    },
+    {
+      "id": "batch26_South-America_Argentina_153f5e77a8efcf3f",
+      "filename": "2025-12-02 12.53.14.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "south-america-argentina"
+    },
+    {
+      "id": "batch26_South-America_Argentina_b3421b544d9b35ed",
+      "filename": "2025-12-02 12.53.17.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "south-america-argentina"
+    },
+    {
+      "id": "batch26_South-America_Argentina_14f6a132d917752b",
+      "filename": "2025-12-02 12.53.24.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "south-america-argentina"
+    },
+    {
+      "id": "batch26_South-America_Argentina_667647fd7f601920",
+      "filename": "2025-12-02 12.53.26.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "south-america-argentina"
+    },
+    {
+      "id": "batch26_South-America_Argentina_6535b50b6cd81fb2",
+      "filename": "2025-12-02 12.53.28.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "south-america-argentina"
+    },
+    {
+      "id": "batch26_South-America_Argentina_3cfa743964ed27ac",
+      "filename": "2025-12-02 12.53.30.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "south-america-argentina"
+    },
+    {
+      "id": "batch26_South-America_Argentina_2e1a547ff9fa6e93",
+      "filename": "2025-12-02 12.53.31.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "south-america-argentina"
+    },
+    {
+      "id": "batch26_South-America_Argentina_eb8988550304b880",
+      "filename": "2025-12-02 12.53.44.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "south-america-argentina"
+    },
+    {
+      "id": "batch26_South-America_Argentina_b42dec2b26964acf",
+      "filename": "2025-12-02 12.53.46.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "south-america-argentina"
+    },
+    {
+      "id": "batch26_South-America_Argentina_959778656acbbe4c",
+      "filename": "2025-12-02 12.53.48.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "south-america-argentina"
+    },
+    {
+      "id": "batch26_South-America_Argentina_ea1b23b994024abe",
+      "filename": "2025-12-02 12.54.02.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "south-america-argentina"
+    },
+    {
+      "id": "batch26_South-America_Argentina_b17ebd2ea0b77fe5",
+      "filename": "2025-12-02 12.54.27.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "south-america-argentina"
+    },
+    {
+      "id": "batch26_South-America_Argentina_277b9136ad437505",
+      "filename": "2025-12-02 12.55.11.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "south-america-argentina"
+    },
+    {
+      "id": "batch26_South-America_Argentina_725c03c4e8ad7335",
+      "filename": "2025-12-02 12.55.13.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "south-america-argentina"
+    },
+    {
+      "id": "batch26_South-America_Argentina_a6a210d58c556232",
+      "filename": "2025-12-02 12.55.17.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "south-america-argentina"
+    },
+    {
+      "id": "batch26_South-America_Argentina_8d3dcf28f5d0fe46",
+      "filename": "2025-12-02 12.55.47.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "south-america-argentina"
+    },
+    {
+      "id": "batch26_South-America_Argentina_e7b85ccac4e3bfc8",
+      "filename": "2025-12-02 12.55.49.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "south-america-argentina"
+    },
+    {
+      "id": "batch26_South-America_Argentina_54169d38b1de38ac",
+      "filename": "2025-12-02 13.33.05.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "south-america-argentina"
+    },
+    {
+      "id": "batch26_South-America_Argentina_ecfa89ad8b1a8184",
+      "filename": "2025-12-02 13.59.04.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "south-america-argentina"
+    },
+    {
+      "id": "batch26_South-America_Argentina_a9c25f33eb5c512a",
+      "filename": "2025-12-02 14.00.07.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "south-america-argentina"
+    },
+    {
+      "id": "batch26_South-America_Argentina_469fa16127475ed3",
+      "filename": "2025-12-02 14.35.19.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "south-america-argentina"
+    },
+    {
+      "id": "batch26_South-America_Argentina_f7a4adb0d80d49f7",
+      "filename": "2025-12-02 15.51.15.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "south-america-argentina"
+    },
+    {
+      "id": "batch26_South-America_Argentina_aa95eb35a1a291c5",
+      "filename": "2025-12-02 16.00.57.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "south-america-argentina"
+    },
+    {
+      "id": "batch26_South-America_Argentina_66d7f8e593758728",
+      "filename": "2025-12-02 18.34.51.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "south-america-argentina"
+    },
+    {
+      "id": "batch26_South-America_Argentina_499f1292edac23e4",
+      "filename": "2025-12-02 18.35.48.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "south-america-argentina"
+    },
+    {
+      "id": "batch26_South-America_Argentina_ddcf7ffde4f46e2e",
+      "filename": "2025-12-02 18.38.36.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "south-america-argentina"
+    },
+    {
+      "id": "batch26_South-America_Argentina_ee58aaea5d695e7b",
+      "filename": "2025-12-02 18.38.43.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "south-america-argentina"
+    },
+    {
+      "id": "batch26_South-America_Argentina_9349b6a80893cff4",
+      "filename": "2025-12-02 18.41.46.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "south-america-argentina"
+    },
+    {
+      "id": "batch26_South-America_Argentina_b26accd1c3a4fc5d",
+      "filename": "2025-12-02 18.43.11.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "south-america-argentina"
+    },
+    {
+      "id": "batch26_South-America_Argentina_3971ff0c64c83418",
+      "filename": "2025-12-02 18.43.14.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "south-america-argentina"
+    },
+    {
+      "id": "batch26_South-America_Argentina_71a4d479d24c213a",
+      "filename": "2025-12-02 18.45.27.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "south-america-argentina"
+    },
+    {
+      "id": "batch26_South-America_Argentina_aa4e9d4953bf4ab5",
+      "filename": "2025-12-02 18.47.41.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "south-america-argentina"
+    },
+    {
+      "id": "batch26_South-America_Argentina_a434c4c58ae791ef",
+      "filename": "2025-12-02 18.55.10-1.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "south-america-argentina"
+    },
+    {
+      "id": "batch26_South-America_Argentina_a6abffed724afdd4",
+      "filename": "2025-12-02 18.55.41.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "south-america-argentina"
+    },
+    {
+      "id": "batch26_South-America_Argentina_b35a637afd6f3fff",
+      "filename": "2025-12-02 18.58.48.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "south-america-argentina"
+    },
+    {
+      "id": "batch26_South-America_Argentina_b2e16ea51c9cb5d7",
+      "filename": "2025-12-02 19.01.47.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "south-america-argentina"
+    },
+    {
+      "id": "batch26_South-America_Argentina_dd2949bdfe4e1477",
+      "filename": "2025-12-02 19.01.49.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "south-america-argentina"
+    },
+    {
+      "id": "batch26_South-America_Argentina_759affc9ecbd17e9",
+      "filename": "2025-12-02 19.01.56.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "south-america-argentina"
+    },
+    {
+      "id": "batch26_South-America_Argentina_0c967c1cf2466b82",
+      "filename": "2025-12-02 19.02.04.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "south-america-argentina"
+    },
+    {
+      "id": "batch26_South-America_Argentina_b7d071509bd13791",
+      "filename": "2025-12-03 11.41.42.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "south-america-argentina"
+    },
+    {
+      "id": "batch26_South-America_Argentina_65d9c6057dfbcbf8",
+      "filename": "2025-12-03 11.52.25.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "south-america-argentina"
+    },
+    {
+      "id": "batch26_South-America_Argentina_7983299b1c41b493",
+      "filename": "2025-12-03 11.52.34.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "south-america-argentina"
+    },
+    {
+      "id": "batch26_South-America_Argentina_17b114e2aa77df81",
+      "filename": "2025-12-03 11.52.50.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "south-america-argentina"
+    },
+    {
+      "id": "batch26_South-America_Argentina_3404eb8ad32d4f97",
+      "filename": "2025-12-03 11.55.07.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "south-america-argentina"
+    },
+    {
+      "id": "batch26_South-America_Argentina_df93b9f48d3bc473",
+      "filename": "2025-12-03 11.55.25.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "south-america-argentina"
+    },
+    {
+      "id": "batch26_South-America_Argentina_8878e98fa034b6ae",
+      "filename": "2025-12-03 12.48.07.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "south-america-argentina"
+    },
+    {
+      "id": "batch26_South-America_Argentina_0805071861fefc6f",
+      "filename": "2025-12-03 12.48.08.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "south-america-argentina"
+    },
+    {
+      "id": "batch26_South-America_Argentina_0f4bc62e41ccfd37",
+      "filename": "2025-12-03 12.48.17.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "south-america-argentina"
+    },
+    {
+      "id": "batch26_South-America_Argentina_b579267efc062e08",
+      "filename": "2025-12-03 12.48.58.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "south-america-argentina"
+    },
+    {
+      "id": "batch26_South-America_Argentina_97e42d4579e42ce2",
+      "filename": "2025-12-03 12.50.01.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "south-america-argentina"
+    },
+    {
+      "id": "batch26_South-America_Argentina_644ac122240865a5",
+      "filename": "2025-12-03 12.50.12.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "south-america-argentina"
+    },
+    {
+      "id": "batch26_South-America_Argentina_6135dceb169250fd",
+      "filename": "2025-12-03 14.09.27.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "south-america-argentina"
+    },
+    {
+      "id": "batch26_South-America_Argentina_c09f0b865517526a",
+      "filename": "2025-12-03 14.25.01.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "south-america-argentina"
+    },
+    {
+      "id": "batch26_South-America_Argentina_57a0ee3c605b5d25",
+      "filename": "2025-12-03 15.28.08.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "south-america-argentina"
+    },
+    {
+      "id": "batch26_South-America_Argentina_72d1194006ebe0d4",
+      "filename": "2025-12-03 20.16.16.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "south-america-argentina"
+    },
+    {
+      "id": "batch26_South-America_Argentina_32308608cb79f0c2",
+      "filename": "2025-12-03 20.16.25.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "south-america-argentina"
+    },
+    {
+      "id": "batch26_South-America_Argentina_fc6df5ecbf1af54a",
+      "filename": "2025-12-03 20.16.57.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "south-america-argentina"
+    },
+    {
+      "id": "batch26_South-America_Argentina_2319b5f80594d51c",
+      "filename": "2025-12-03 20.16.59.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "south-america-argentina"
+    },
+    {
+      "id": "batch26_South-America_Argentina_1576b16e404e6bb2",
+      "filename": "2025-12-03 20.17.03.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "south-america-argentina"
+    },
+    {
+      "id": "batch26_South-America_Argentina_a54e3f5b103b46e4",
+      "filename": "2025-12-04 11.27.23.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "south-america-argentina"
+    },
+    {
+      "id": "batch26_South-America_Argentina_d79518156f8e4f54",
+      "filename": "2025-12-04 11.27.27.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "south-america-argentina"
+    },
+    {
+      "id": "batch26_South-America_Argentina_1470ac510331d4e8",
+      "filename": "2025-12-04 11.27.38.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "south-america-argentina"
+    },
+    {
+      "id": "batch26_South-America_Argentina_7458ac1a84ce9d88",
+      "filename": "2025-12-04 13.43.19.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "south-america-argentina"
+    },
+    {
+      "id": "batch26_South-America_Argentina_fa326a464091c1df",
+      "filename": "2025-12-04 13.43.22.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "south-america-argentina"
+    },
+    {
+      "id": "batch26_South-America_Argentina_1a76842326d8610e",
+      "filename": "2025-12-04 13.43.28.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "south-america-argentina"
+    },
+    {
+      "id": "batch26_South-America_Argentina_773df33c981fec10",
+      "filename": "2025-12-04 13.43.34.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "south-america-argentina"
+    },
+    {
+      "id": "batch26_South-America_Argentina_13ea3bb09e101c7d",
+      "filename": "2025-12-04 14.23.17.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "south-america-argentina"
+    },
+    {
+      "id": "batch26_South-America_Argentina_4609c2dcc7e50108",
+      "filename": "2025-12-04 14.42.35.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "south-america-argentina"
+    },
+    {
+      "id": "batch26_South-America_Argentina_2f82cf31c3eada26",
+      "filename": "2025-12-04 14.47.22.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "south-america-argentina"
+    },
+    {
+      "id": "batch26_South-America_Argentina_5d6ebcfc0a3d8a2c",
+      "filename": "2025-12-04 15.16.04.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "south-america-argentina"
+    },
+    {
+      "id": "batch26_South-America_Argentina_ff242d03a60f8f40",
+      "filename": "2025-12-04 15.16.08.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "south-america-argentina"
+    },
+    {
+      "id": "batch26_South-America_Argentina_af718ab99e69f749",
+      "filename": "2025-12-04 15.29.44.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "south-america-argentina"
+    },
+    {
+      "id": "batch26_South-America_Argentina_2c8eac7e535e7c20",
+      "filename": "2025-12-04 15.38.35.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "south-america-argentina"
+    },
+    {
+      "id": "batch26_South-America_Argentina_8b0f1ff809327ee9",
+      "filename": "2025-12-04 15.44.29.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "south-america-argentina"
+    },
+    {
+      "id": "batch26_South-America_Argentina_ee57ec4787f90ef3",
+      "filename": "2025-12-04 18.39.45.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "south-america-argentina"
+    },
+    {
+      "id": "batch26_South-America_Argentina_1f7f6e6b1ec5d31e",
+      "filename": "2025-12-04 20.25.31.jpg",
+      "status": "skipped_dup",
+      "gallery_slug": "south-america-argentina"
+    }
+  ],
+  "failure_log": []
+}

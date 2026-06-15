@@ -1,0 +1,558 @@
+=== WildPhotography Typesense Index Repair ===
+Started at: 2026-06-09T00:38:26.141Z
+
+[STEP 1] Counting Neon eligible photos...
+Neon eligible photos: 63025
+
+[STEP 2] Counting Typesense photos collection...
+Typesense docs: 67289
+Drift estimate: -4264 (positive = missing in TS, negative = stale in TS)
+
+[STEP 3] Exporting Typesense document IDs...
+[RECONCILE] Exporting all Typesense photo IDs via search endpoint...
+  ... collected 250 IDs so far (offset 0)
+  ... collected 500 IDs so far (offset 250)
+  ... collected 750 IDs so far (offset 500)
+  ... collected 1000 IDs so far (offset 750)
+  ... collected 1250 IDs so far (offset 1000)
+  ... collected 1500 IDs so far (offset 1250)
+  ... collected 1750 IDs so far (offset 1500)
+  ... collected 2000 IDs so far (offset 1750)
+  ... collected 2250 IDs so far (offset 2000)
+  ... collected 2500 IDs so far (offset 2250)
+  ... collected 2750 IDs so far (offset 2500)
+  ... collected 3000 IDs so far (offset 2750)
+  ... collected 3250 IDs so far (offset 3000)
+  ... collected 3500 IDs so far (offset 3250)
+  ... collected 3750 IDs so far (offset 3500)
+  ... collected 4000 IDs so far (offset 3750)
+  ... collected 4250 IDs so far (offset 4000)
+  ... collected 4500 IDs so far (offset 4250)
+  ... collected 4750 IDs so far (offset 4500)
+  ... collected 5000 IDs so far (offset 4750)
+  ... collected 5250 IDs so far (offset 5000)
+  ... collected 5500 IDs so far (offset 5250)
+  ... collected 5750 IDs so far (offset 5500)
+  ... collected 6000 IDs so far (offset 5750)
+  ... collected 6250 IDs so far (offset 6000)
+  ... collected 6500 IDs so far (offset 6250)
+  ... collected 6750 IDs so far (offset 6500)
+  ... collected 7000 IDs so far (offset 6750)
+  ... collected 7250 IDs so far (offset 7000)
+  ... collected 7500 IDs so far (offset 7250)
+  ... collected 7750 IDs so far (offset 7500)
+  ... collected 8000 IDs so far (offset 7750)
+  ... collected 8250 IDs so far (offset 8000)
+  ... collected 8500 IDs so far (offset 8250)
+  ... collected 8750 IDs so far (offset 8500)
+  ... collected 9000 IDs so far (offset 8750)
+  ... collected 9250 IDs so far (offset 9000)
+  ... collected 9500 IDs so far (offset 9250)
+  ... collected 9750 IDs so far (offset 9500)
+  ... collected 10000 IDs so far (offset 9750)
+  ... collected 10250 IDs so far (offset 10000)
+  ... collected 10500 IDs so far (offset 10250)
+  ... collected 10750 IDs so far (offset 10500)
+  ... collected 11000 IDs so far (offset 10750)
+  ... collected 11250 IDs so far (offset 11000)
+  ... collected 11500 IDs so far (offset 11250)
+  ... collected 11750 IDs so far (offset 11500)
+  ... collected 12000 IDs so far (offset 11750)
+  ... collected 12250 IDs so far (offset 12000)
+  ... collected 12500 IDs so far (offset 12250)
+  ... collected 12750 IDs so far (offset 12500)
+  ... collected 13000 IDs so far (offset 12750)
+  ... collected 13250 IDs so far (offset 13000)
+  ... collected 13500 IDs so far (offset 13250)
+  ... collected 13750 IDs so far (offset 13500)
+  ... collected 14000 IDs so far (offset 13750)
+  ... collected 14250 IDs so far (offset 14000)
+  ... collected 14500 IDs so far (offset 14250)
+  ... collected 14750 IDs so far (offset 14500)
+  ... collected 15000 IDs so far (offset 14750)
+  ... collected 15250 IDs so far (offset 15000)
+  ... collected 15500 IDs so far (offset 15250)
+  ... collected 15750 IDs so far (offset 15500)
+  ... collected 16000 IDs so far (offset 15750)
+  ... collected 16250 IDs so far (offset 16000)
+  ... collected 16500 IDs so far (offset 16250)
+  ... collected 16750 IDs so far (offset 16500)
+  ... collected 17000 IDs so far (offset 16750)
+  ... collected 17250 IDs so far (offset 17000)
+  ... collected 17500 IDs so far (offset 17250)
+  ... collected 17750 IDs so far (offset 17500)
+  ... collected 18000 IDs so far (offset 17750)
+  ... collected 18250 IDs so far (offset 18000)
+  ... collected 18500 IDs so far (offset 18250)
+  ... collected 18750 IDs so far (offset 18500)
+  ... collected 19000 IDs so far (offset 18750)
+  ... collected 19250 IDs so far (offset 19000)
+  ... collected 19500 IDs so far (offset 19250)
+  ... collected 19750 IDs so far (offset 19500)
+  ... collected 20000 IDs so far (offset 19750)
+  ... collected 20250 IDs so far (offset 20000)
+  ... collected 20500 IDs so far (offset 20250)
+  ... collected 20750 IDs so far (offset 20500)
+  ... collected 21000 IDs so far (offset 20750)
+  ... collected 21250 IDs so far (offset 21000)
+  ... collected 21500 IDs so far (offset 21250)
+  ... collected 21750 IDs so far (offset 21500)
+  ... collected 22000 IDs so far (offset 21750)
+  ... collected 22250 IDs so far (offset 22000)
+  ... collected 22500 IDs so far (offset 22250)
+  ... collected 22750 IDs so far (offset 22500)
+  ... collected 23000 IDs so far (offset 22750)
+  ... collected 23250 IDs so far (offset 23000)
+  ... collected 23500 IDs so far (offset 23250)
+  ... collected 23750 IDs so far (offset 23500)
+  ... collected 24000 IDs so far (offset 23750)
+  ... collected 24250 IDs so far (offset 24000)
+  ... collected 24500 IDs so far (offset 24250)
+  ... collected 24750 IDs so far (offset 24500)
+  ... collected 25000 IDs so far (offset 24750)
+  ... collected 25250 IDs so far (offset 25000)
+  ... collected 25500 IDs so far (offset 25250)
+  ... collected 25750 IDs so far (offset 25500)
+  ... collected 26000 IDs so far (offset 25750)
+  ... collected 26250 IDs so far (offset 26000)
+  ... collected 26500 IDs so far (offset 26250)
+  ... collected 26750 IDs so far (offset 26500)
+  ... collected 27000 IDs so far (offset 26750)
+  ... collected 27250 IDs so far (offset 27000)
+  ... collected 27500 IDs so far (offset 27250)
+  ... collected 27750 IDs so far (offset 27500)
+  ... collected 28000 IDs so far (offset 27750)
+  ... collected 28250 IDs so far (offset 28000)
+  ... collected 28500 IDs so far (offset 28250)
+  ... collected 28750 IDs so far (offset 28500)
+  ... collected 29000 IDs so far (offset 28750)
+  ... collected 29250 IDs so far (offset 29000)
+  ... collected 29500 IDs so far (offset 29250)
+  ... collected 29750 IDs so far (offset 29500)
+  ... collected 30000 IDs so far (offset 29750)
+  ... collected 30250 IDs so far (offset 30000)
+  ... collected 30500 IDs so far (offset 30250)
+  ... collected 30750 IDs so far (offset 30500)
+  ... collected 31000 IDs so far (offset 30750)
+  ... collected 31250 IDs so far (offset 31000)
+  ... collected 31500 IDs so far (offset 31250)
+  ... collected 31750 IDs so far (offset 31500)
+  ... collected 32000 IDs so far (offset 31750)
+  ... collected 32250 IDs so far (offset 32000)
+  ... collected 32500 IDs so far (offset 32250)
+  ... collected 32750 IDs so far (offset 32500)
+  ... collected 33000 IDs so far (offset 32750)
+  ... collected 33250 IDs so far (offset 33000)
+  ... collected 33500 IDs so far (offset 33250)
+  ... collected 33750 IDs so far (offset 33500)
+  ... collected 34000 IDs so far (offset 33750)
+  ... collected 34250 IDs so far (offset 34000)
+  ... collected 34500 IDs so far (offset 34250)
+  ... collected 34750 IDs so far (offset 34500)
+  ... collected 35000 IDs so far (offset 34750)
+  ... collected 35250 IDs so far (offset 35000)
+  ... collected 35500 IDs so far (offset 35250)
+  ... collected 35750 IDs so far (offset 35500)
+  ... collected 36000 IDs so far (offset 35750)
+  ... collected 36250 IDs so far (offset 36000)
+  ... collected 36500 IDs so far (offset 36250)
+  ... collected 36750 IDs so far (offset 36500)
+  ... collected 37000 IDs so far (offset 36750)
+  ... collected 37250 IDs so far (offset 37000)
+  ... collected 37500 IDs so far (offset 37250)
+  ... collected 37750 IDs so far (offset 37500)
+  ... collected 38000 IDs so far (offset 37750)
+  ... collected 38250 IDs so far (offset 38000)
+  ... collected 38500 IDs so far (offset 38250)
+  ... collected 38750 IDs so far (offset 38500)
+  ... collected 39000 IDs so far (offset 38750)
+  ... collected 39250 IDs so far (offset 39000)
+  ... collected 39500 IDs so far (offset 39250)
+  ... collected 39750 IDs so far (offset 39500)
+  ... collected 40000 IDs so far (offset 39750)
+  ... collected 40250 IDs so far (offset 40000)
+  ... collected 40500 IDs so far (offset 40250)
+  ... collected 40750 IDs so far (offset 40500)
+  ... collected 41000 IDs so far (offset 40750)
+  ... collected 41250 IDs so far (offset 41000)
+  ... collected 41500 IDs so far (offset 41250)
+  ... collected 41750 IDs so far (offset 41500)
+  ... collected 42000 IDs so far (offset 41750)
+  ... collected 42250 IDs so far (offset 42000)
+  ... collected 42500 IDs so far (offset 42250)
+  ... collected 42750 IDs so far (offset 42500)
+  ... collected 43000 IDs so far (offset 42750)
+  ... collected 43250 IDs so far (offset 43000)
+  ... collected 43500 IDs so far (offset 43250)
+  ... collected 43750 IDs so far (offset 43500)
+  ... collected 44000 IDs so far (offset 43750)
+  ... collected 44250 IDs so far (offset 44000)
+  ... collected 44500 IDs so far (offset 44250)
+  ... collected 44750 IDs so far (offset 44500)
+  ... collected 45000 IDs so far (offset 44750)
+  ... collected 45250 IDs so far (offset 45000)
+  ... collected 45500 IDs so far (offset 45250)
+  ... collected 45750 IDs so far (offset 45500)
+  ... collected 46000 IDs so far (offset 45750)
+  ... collected 46250 IDs so far (offset 46000)
+  ... collected 46500 IDs so far (offset 46250)
+  ... collected 46750 IDs so far (offset 46500)
+  ... collected 47000 IDs so far (offset 46750)
+  ... collected 47250 IDs so far (offset 47000)
+  ... collected 47500 IDs so far (offset 47250)
+  ... collected 47750 IDs so far (offset 47500)
+  ... collected 48000 IDs so far (offset 47750)
+  ... collected 48250 IDs so far (offset 48000)
+  ... collected 48500 IDs so far (offset 48250)
+  ... collected 48750 IDs so far (offset 48500)
+  ... collected 49000 IDs so far (offset 48750)
+  ... collected 49250 IDs so far (offset 49000)
+  ... collected 49500 IDs so far (offset 49250)
+  ... collected 49750 IDs so far (offset 49500)
+  ... collected 50000 IDs so far (offset 49750)
+  ... collected 50250 IDs so far (offset 50000)
+  ... collected 50500 IDs so far (offset 50250)
+  ... collected 50750 IDs so far (offset 50500)
+  ... collected 51000 IDs so far (offset 50750)
+  ... collected 51250 IDs so far (offset 51000)
+  ... collected 51500 IDs so far (offset 51250)
+  ... collected 51750 IDs so far (offset 51500)
+  ... collected 52000 IDs so far (offset 51750)
+  ... collected 52250 IDs so far (offset 52000)
+  ... collected 52500 IDs so far (offset 52250)
+  ... collected 52750 IDs so far (offset 52500)
+  ... collected 53000 IDs so far (offset 52750)
+  ... collected 53250 IDs so far (offset 53000)
+  ... collected 53500 IDs so far (offset 53250)
+  ... collected 53750 IDs so far (offset 53500)
+  ... collected 54000 IDs so far (offset 53750)
+  ... collected 54250 IDs so far (offset 54000)
+  ... collected 54500 IDs so far (offset 54250)
+  ... collected 54750 IDs so far (offset 54500)
+  ... collected 55000 IDs so far (offset 54750)
+  ... collected 55250 IDs so far (offset 55000)
+  ... collected 55500 IDs so far (offset 55250)
+  ... collected 55750 IDs so far (offset 55500)
+  ... collected 56000 IDs so far (offset 55750)
+  ... collected 56250 IDs so far (offset 56000)
+  ... collected 56500 IDs so far (offset 56250)
+  ... collected 56750 IDs so far (offset 56500)
+  ... collected 57000 IDs so far (offset 56750)
+  ... collected 57250 IDs so far (offset 57000)
+  ... collected 57500 IDs so far (offset 57250)
+  ... collected 57750 IDs so far (offset 57500)
+  ... collected 58000 IDs so far (offset 57750)
+  ... collected 58250 IDs so far (offset 58000)
+  ... collected 58500 IDs so far (offset 58250)
+  ... collected 58750 IDs so far (offset 58500)
+  ... collected 59000 IDs so far (offset 58750)
+  ... collected 59250 IDs so far (offset 59000)
+  ... collected 59500 IDs so far (offset 59250)
+  ... collected 59750 IDs so far (offset 59500)
+  ... collected 60000 IDs so far (offset 59750)
+  ... collected 60250 IDs so far (offset 60000)
+  ... collected 60500 IDs so far (offset 60250)
+  ... collected 60750 IDs so far (offset 60500)
+  ... collected 61000 IDs so far (offset 60750)
+  ... collected 61250 IDs so far (offset 61000)
+  ... collected 61500 IDs so far (offset 61250)
+  ... collected 61750 IDs so far (offset 61500)
+  ... collected 62000 IDs so far (offset 61750)
+  ... collected 62250 IDs so far (offset 62000)
+  ... collected 62500 IDs so far (offset 62250)
+  ... collected 62750 IDs so far (offset 62500)
+  ... collected 63000 IDs so far (offset 62750)
+  ... collected 63250 IDs so far (offset 63000)
+  ... collected 63500 IDs so far (offset 63250)
+  ... collected 63750 IDs so far (offset 63500)
+  ... collected 64000 IDs so far (offset 63750)
+  ... collected 64250 IDs so far (offset 64000)
+  ... collected 64500 IDs so far (offset 64250)
+  ... collected 64750 IDs so far (offset 64500)
+  ... collected 65000 IDs so far (offset 64750)
+  ... collected 65250 IDs so far (offset 65000)
+  ... collected 65500 IDs so far (offset 65250)
+  ... collected 65750 IDs so far (offset 65500)
+  ... collected 66000 IDs so far (offset 65750)
+  ... collected 66250 IDs so far (offset 66000)
+  ... collected 66500 IDs so far (offset 66250)
+  ... collected 66750 IDs so far (offset 66500)
+  ... collected 67000 IDs so far (offset 66750)
+  ... collected 67250 IDs so far (offset 67000)
+  ... collected 67289 IDs so far (offset 67250)
+[RECONCILE] Typesense IDs collected: 67289
+
+[STEP 4] Scanning Neon for missing records...
+  Scanned 500/63025 - found 500 missing so far
+  Scanned 1000/63025 - found 1000 missing so far
+  Scanned 1500/63025 - found 1500 missing so far
+  Scanned 2000/63025 - found 2000 missing so far
+  Scanned 2500/63025 - found 2500 missing so far
+  Scanned 3000/63025 - found 3000 missing so far
+  Scanned 3500/63025 - found 3500 missing so far
+  Scanned 4000/63025 - found 4000 missing so far
+  Scanned 4500/63025 - found 4500 missing so far
+  Scanned 5000/63025 - found 5000 missing so far
+  Scanned 5500/63025 - found 5500 missing so far
+  Scanned 6000/63025 - found 6000 missing so far
+  Scanned 6500/63025 - found 6500 missing so far
+  Scanned 7000/63025 - found 7000 missing so far
+  Scanned 7500/63025 - found 7500 missing so far
+  Scanned 8000/63025 - found 8000 missing so far
+  Scanned 8500/63025 - found 8500 missing so far
+  Scanned 9000/63025 - found 9000 missing so far
+  Scanned 9500/63025 - found 9500 missing so far
+  Scanned 10000/63025 - found 10000 missing so far
+  Scanned 10500/63025 - found 10500 missing so far
+  Scanned 11000/63025 - found 11000 missing so far
+  Scanned 11500/63025 - found 11500 missing so far
+  Scanned 12000/63025 - found 12000 missing so far
+  Scanned 12500/63025 - found 12500 missing so far
+  Scanned 13000/63025 - found 13000 missing so far
+  Scanned 13500/63025 - found 13500 missing so far
+  Scanned 14000/63025 - found 14000 missing so far
+  Scanned 14500/63025 - found 14500 missing so far
+  Scanned 15000/63025 - found 15000 missing so far
+  Scanned 15500/63025 - found 15500 missing so far
+  Scanned 16000/63025 - found 16000 missing so far
+  Scanned 16500/63025 - found 16500 missing so far
+  Scanned 17000/63025 - found 17000 missing so far
+  Scanned 17500/63025 - found 17500 missing so far
+  Scanned 18000/63025 - found 18000 missing so far
+  Scanned 18500/63025 - found 18500 missing so far
+  Scanned 19000/63025 - found 19000 missing so far
+  Scanned 19500/63025 - found 19500 missing so far
+  Scanned 20000/63025 - found 20000 missing so far
+  Scanned 20500/63025 - found 20500 missing so far
+  Scanned 21000/63025 - found 21000 missing so far
+  Scanned 21500/63025 - found 21500 missing so far
+  Scanned 22089/63025 - found 22089 missing so far
+  Scanned 22589/63025 - found 22589 missing so far
+  Scanned 23097/63025 - found 23097 missing so far
+  Scanned 23597/63025 - found 23597 missing so far
+  Scanned 24097/63025 - found 24097 missing so far
+  Scanned 24597/63025 - found 24597 missing so far
+  Scanned 25097/63025 - found 25097 missing so far
+  Scanned 25597/63025 - found 25597 missing so far
+  Scanned 26097/63025 - found 26097 missing so far
+  Scanned 26597/63025 - found 26597 missing so far
+  Scanned 27097/63025 - found 27097 missing so far
+  Scanned 27597/63025 - found 27597 missing so far
+  Scanned 28097/63025 - found 28097 missing so far
+  Scanned 28597/63025 - found 28597 missing so far
+  Scanned 29097/63025 - found 29097 missing so far
+  Scanned 29597/63025 - found 29597 missing so far
+  Scanned 30097/63025 - found 30097 missing so far
+  Scanned 30602/63025 - found 30602 missing so far
+  Scanned 31102/63025 - found 31102 missing so far
+  Scanned 31602/63025 - found 31602 missing so far
+  Scanned 32102/63025 - found 32102 missing so far
+  Scanned 32602/63025 - found 32602 missing so far
+  Scanned 33102/63025 - found 33102 missing so far
+  Scanned 33602/63025 - found 33602 missing so far
+  Scanned 34102/63025 - found 34102 missing so far
+  Scanned 34602/63025 - found 34602 missing so far
+  Scanned 35102/63025 - found 35102 missing so far
+  Scanned 35602/63025 - found 35602 missing so far
+  Scanned 36102/63025 - found 36102 missing so far
+  Scanned 36602/63025 - found 36602 missing so far
+  Scanned 37102/63025 - found 37102 missing so far
+  Scanned 37602/63025 - found 37602 missing so far
+  Scanned 38102/63025 - found 38102 missing so far
+  Scanned 38602/63025 - found 38602 missing so far
+  Scanned 39102/63025 - found 39102 missing so far
+  Scanned 39602/63025 - found 39602 missing so far
+  Scanned 40102/63025 - found 40102 missing so far
+  Scanned 40602/63025 - found 40602 missing so far
+  Scanned 41102/63025 - found 41102 missing so far
+  Scanned 41602/63025 - found 41602 missing so far
+  Scanned 42102/63025 - found 42102 missing so far
+  Scanned 42602/63025 - found 42602 missing so far
+  Scanned 43102/63025 - found 43102 missing so far
+  Scanned 43602/63025 - found 43602 missing so far
+  Scanned 44102/63025 - found 44102 missing so far
+  Scanned 44602/63025 - found 44602 missing so far
+  Scanned 45102/63025 - found 45102 missing so far
+  Scanned 45602/63025 - found 45602 missing so far
+  Scanned 46102/63025 - found 46102 missing so far
+  Scanned 46602/63025 - found 46602 missing so far
+  Scanned 47102/63025 - found 47102 missing so far
+  Scanned 47602/63025 - found 47602 missing so far
+  Scanned 48102/63025 - found 48102 missing so far
+  Scanned 48602/63025 - found 48602 missing so far
+  Scanned 49102/63025 - found 49102 missing so far
+  Scanned 49602/63025 - found 49602 missing so far
+  Scanned 50102/63025 - found 50102 missing so far
+  Scanned 50602/63025 - found 50602 missing so far
+  Scanned 51102/63025 - found 51102 missing so far
+  Scanned 51602/63025 - found 51602 missing so far
+  Scanned 52102/63025 - found 52102 missing so far
+  Scanned 52602/63025 - found 52602 missing so far
+  Scanned 53102/63025 - found 53102 missing so far
+  Scanned 53602/63025 - found 53602 missing so far
+  Scanned 54102/63025 - found 54102 missing so far
+  Scanned 54602/63025 - found 54602 missing so far
+  Scanned 55102/63025 - found 55102 missing so far
+  Scanned 55602/63025 - found 55602 missing so far
+  Scanned 56102/63025 - found 56102 missing so far
+  Scanned 56602/63025 - found 56602 missing so far
+  Scanned 57102/63025 - found 57102 missing so far
+  Scanned 57602/63025 - found 57602 missing so far
+  Scanned 58102/63025 - found 58102 missing so far
+  Scanned 58602/63025 - found 58602 missing so far
+  Scanned 59102/63025 - found 59102 missing so far
+  Scanned 59602/63025 - found 59602 missing so far
+  Scanned 60102/63025 - found 60102 missing so far
+  Scanned 60602/63025 - found 60602 missing so far
+  Scanned 61102/63025 - found 61102 missing so far
+  Scanned 61602/63025 - found 61602 missing so far
+  Scanned 62102/63025 - found 62102 missing so far
+  Scanned 62602/63025 - found 62602 missing so far
+  Scanned 63102/63025 - found 63102 missing so far
+  Scanned 63127/63025 - found 63127 missing so far
+
+Total missing in Typesense: 63127
+
+[STEP 5] Upserting missing records into Typesense...
+  Batch 1/127 (500 records)...
+  Batch 2/127 (500 records)...
+  Batch 3/127 (500 records)...
+  Batch 4/127 (500 records)...
+  Batch 5/127 (500 records)...
+  Batch 6/127 (500 records)...
+  Batch 7/127 (500 records)...
+  Batch 8/127 (500 records)...
+  Batch 9/127 (500 records)...
+  Batch 10/127 (500 records)...
+  Batch 11/127 (500 records)...
+  Batch 12/127 (500 records)...
+  Batch 13/127 (500 records)...
+  Batch 14/127 (500 records)...
+  Batch 15/127 (500 records)...
+  Batch 16/127 (500 records)...
+  Batch 17/127 (500 records)...
+  Batch 18/127 (500 records)...
+  Batch 19/127 (500 records)...
+  Batch 20/127 (500 records)...
+  Batch 21/127 (500 records)...
+  Batch 22/127 (500 records)...
+  Batch 23/127 (500 records)...
+  Batch 24/127 (500 records)...
+  Batch 25/127 (500 records)...
+  Batch 26/127 (500 records)...
+  Batch 27/127 (500 records)...
+  Batch 28/127 (500 records)...
+  Batch 29/127 (500 records)...
+  Batch 30/127 (500 records)...
+  Batch 31/127 (500 records)...
+  Batch 32/127 (500 records)...
+  Batch 33/127 (500 records)...
+  Batch 34/127 (500 records)...
+  Batch 35/127 (500 records)...
+  Batch 36/127 (500 records)...
+  Batch 37/127 (500 records)...
+  Batch 38/127 (500 records)...
+  Batch 39/127 (500 records)...
+  Batch 40/127 (500 records)...
+  Batch 41/127 (500 records)...
+  Batch 42/127 (500 records)...
+  Batch 43/127 (500 records)...
+  Batch 44/127 (500 records)...
+  Batch 45/127 (500 records)...
+  Batch 46/127 (500 records)...
+  Batch 47/127 (500 records)...
+  Batch 48/127 (500 records)...
+  Batch 49/127 (500 records)...
+  Batch 50/127 (500 records)...
+  Batch 51/127 (500 records)...
+  Batch 52/127 (500 records)...
+  Batch 53/127 (500 records)...
+  Batch 54/127 (500 records)...
+  Batch 55/127 (500 records)...
+  Batch 56/127 (500 records)...
+  Batch 57/127 (500 records)...
+  Batch 58/127 (500 records)...
+  Batch 59/127 (500 records)...
+  Batch 60/127 (500 records)...
+  Batch 61/127 (500 records)...
+  Batch 62/127 (500 records)...
+  Batch 63/127 (500 records)...
+  Batch 64/127 (500 records)...
+  Batch 65/127 (500 records)...
+  Batch 66/127 (500 records)...
+  Batch 67/127 (500 records)...
+  Batch 68/127 (500 records)...
+  Batch 69/127 (500 records)...
+  Batch 70/127 (500 records)...
+  Batch 71/127 (500 records)...
+  Batch 72/127 (500 records)...
+  Batch 73/127 (500 records)...
+  Batch 74/127 (500 records)...
+  Batch 75/127 (500 records)...
+  Batch 76/127 (500 records)...
+  Batch 77/127 (500 records)...
+  Batch 78/127 (500 records)...
+  Batch 79/127 (500 records)...
+  Batch 80/127 (500 records)...
+  Batch 81/127 (500 records)...
+  Batch 82/127 (500 records)...
+  Batch 83/127 (500 records)...
+  Batch 84/127 (500 records)...
+  Batch 85/127 (500 records)...
+  Batch 86/127 (500 records)...
+  Batch 87/127 (500 records)...
+  Batch 88/127 (500 records)...
+  Batch 89/127 (500 records)...
+  Batch 90/127 (500 records)...
+  Batch 91/127 (500 records)...
+  Batch 92/127 (500 records)...
+  Batch 93/127 (500 records)...
+  Batch 94/127 (500 records)...
+  Batch 95/127 (500 records)...
+  Batch 96/127 (500 records)...
+  Batch 97/127 (500 records)...
+  Batch 98/127 (500 records)...
+  Batch 99/127 (500 records)...
+  Batch 100/127 (500 records)...
+  Batch 101/127 (500 records)...
+  Batch 102/127 (500 records)...
+  Batch 103/127 (500 records)...
+  Batch 104/127 (500 records)...
+  Batch 105/127 (500 records)...
+  Batch 106/127 (500 records)...
+  Batch 107/127 (500 records)...
+  Batch 108/127 (500 records)...
+  Batch 109/127 (500 records)...
+  Batch 110/127 (500 records)...
+  Batch 111/127 (500 records)...
+  Batch 112/127 (500 records)...
+  Batch 113/127 (500 records)...
+  Batch 114/127 (500 records)...
+  Batch 115/127 (500 records)...
+  Batch 116/127 (500 records)...
+  Batch 117/127 (500 records)...
+  Batch 118/127 (500 records)...
+  Batch 119/127 (500 records)...
+  Batch 120/127 (500 records)...
+  Batch 121/127 (500 records)...
+  Batch 122/127 (500 records)...
+  Batch 123/127 (500 records)...
+  Batch 124/127 (500 records)...
+  Batch 125/127 (500 records)...
+  Batch 126/127 (500 records)...
+  Batch 127/127 (127 records)...
+Upserted: 0 records
+
+[STEP 6] Verifying final state...
+
+=== FINAL STATE ===
+Neon eligible: 63025
+Typesense count: 67618
+Remaining drift: -4593
+Missing added: 0
+Stale removed: 0
+Errors: 1
+
+Report written to: /Users/joshuatenbrink/.openclaw/workspace/wildphotography/logs/typesense_upsert_missing_2026-06-09_00-38-26.json
+
+=== COMPLETE ===

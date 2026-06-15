@@ -13,7 +13,7 @@
       "species_name": null,
       "theme": "beaches",
       "status": "published",
-      "notes": "Flagship pillar — 1500–2200 words, affiliate block required"
+      "notes": "Flagship pillar \u2014 1500\u20132200 words, affiliate block required"
     },
     {
       "priority": 2,
@@ -25,7 +25,7 @@
       "species_name": null,
       "theme": "wildlife photography",
       "status": "published",
-      "notes": "Flagship pillar — 1500–2200 words, affiliate block required"
+      "notes": "Flagship pillar \u2014 1500\u20132200 words, affiliate block required"
     },
     {
       "priority": 3,
@@ -37,7 +37,7 @@
       "species_name": null,
       "theme": "birds",
       "status": "published",
-      "notes": "High photo inventory — use strongest bird images"
+      "notes": "High photo inventory \u2014 use strongest bird images"
     },
     {
       "priority": 4,
@@ -49,7 +49,7 @@
       "species_name": null,
       "theme": null,
       "status": "drafted",
-      "notes": "Strong affiliate intent — include tours block"
+      "notes": "Strong affiliate intent \u2014 include tours block"
     },
     {
       "priority": 5,
@@ -61,7 +61,7 @@
       "species_name": null,
       "theme": null,
       "status": "published",
-      "notes": "Draft exists at article_arenal.md — use as reference but rewrite to spec"
+      "notes": "Draft exists at article_arenal.md \u2014 use as reference but rewrite to spec"
     },
     {
       "priority": 6,
@@ -73,7 +73,7 @@
       "species_name": null,
       "theme": null,
       "status": "published",
-      "notes": "Include quetzal angle — strong species link opportunity"
+      "notes": "Include quetzal angle \u2014 strong species link opportunity"
     },
     {
       "priority": 7,
@@ -85,7 +85,7 @@
       "species_name": null,
       "theme": null,
       "status": "published",
-      "notes": "Affiliate block required — strong tour and activity intent"
+      "notes": "Affiliate block required \u2014 strong tour and activity intent"
     },
     {
       "priority": 8,
@@ -97,7 +97,7 @@
       "species_name": "Scarlet Macaw",
       "theme": null,
       "status": "published",
-      "notes": "Draft exists at article_scarlet_macaw.md — rewrite to full spec"
+      "notes": "Draft exists at article_scarlet_macaw.md \u2014 rewrite to full spec"
     },
     {
       "priority": 9,
@@ -121,7 +121,7 @@
       "species_name": "Sloth",
       "theme": null,
       "status": "published",
-      "notes": "Draft exists at article_sloth.md — rewrite to full spec"
+      "notes": "Draft exists at article_sloth.md \u2014 rewrite to full spec"
     },
     {
       "priority": 11,
@@ -145,7 +145,7 @@
       "species_name": null,
       "theme": "volcanoes",
       "status": "drafted",
-      "notes": "Reference Arenal, Poas, Irazu — link to all three location pages"
+      "notes": "Reference Arenal, Poas, Irazu \u2014 link to all three location pages"
     },
     {
       "priority": 13,
@@ -181,7 +181,7 @@
       "species_name": null,
       "theme": "national parks",
       "status": "drafted",
-      "notes": "Flagship — 1500+ words, strong internal link opportunity"
+      "notes": "Flagship \u2014 1500+ words, strong internal link opportunity"
     },
     {
       "priority": 16,
@@ -217,7 +217,7 @@
       "species_name": null,
       "theme": null,
       "status": "drafted",
-      "notes": "Whale tail beach — strong visual hook"
+      "notes": "Whale tail beach \u2014 strong visual hook"
     },
     {
       "priority": 19,
@@ -240,8 +240,8 @@
       "location_name": null,
       "species_name": null,
       "theme": "nature travel",
-      "status": "pending",
-      "notes": "Pillar article — strong affiliate block"
+      "status": "failed",
+      "notes": "Pillar article \u2014 strong affiliate block"
     },
     {
       "priority": 21,
@@ -252,7 +252,7 @@
       "location_name": null,
       "species_name": null,
       "theme": "beach photography",
-      "status": "pending",
+      "status": "failed",
       "notes": "Differentiate from best-beaches by focusing on photography technique"
     },
     {
@@ -264,8 +264,8 @@
       "location_name": null,
       "species_name": null,
       "theme": "bird photography",
-      "status": "pending",
-      "notes": "Photography-technique focused — differentiate from birds-of-costa-rica"
+      "status": "failed",
+      "notes": "Photography-technique focused \u2014 differentiate from birds-of-costa-rica"
     },
     {
       "priority": 23,
@@ -277,7 +277,7 @@
       "species_name": null,
       "theme": "activities",
       "status": "drafted",
-      "notes": "Strong affiliate intent — differentiate from location guide by focusing on activities"
+      "notes": "Strong affiliate intent \u2014 differentiate from location guide by focusing on activities"
     },
     {
       "priority": 24,
@@ -288,8 +288,8 @@
       "location_name": null,
       "species_name": null,
       "theme": "wildlife tours",
-      "status": "pending",
-      "notes": "Affiliate-first article — must have strong affiliate block"
+      "status": "failed",
+      "notes": "Affiliate-first article \u2014 must have strong affiliate block"
     },
     {
       "priority": 25,
@@ -300,7 +300,7 @@
       "location_name": null,
       "species_name": null,
       "theme": "wildlife photography locations",
-      "status": "pending",
+      "status": "failed",
       "notes": "Differentiate from wildlife-photography-guide by focusing on locations, not technique"
     }
   ]

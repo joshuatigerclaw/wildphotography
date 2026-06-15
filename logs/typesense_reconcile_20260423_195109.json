@@ -1,0 +1,12 @@
+{
+  "timestamp": "2026-04-24T01:51:09.649669",
+  "workflow": "wild_typesense_reconcile_no_llm",
+  "status": "ok",
+  "typesense_collection": "photos_v3",
+  "typesense_count": 34063,
+  "neon_count": 34063,
+  "missing_count": 0,
+  "indexed_count": 0,
+  "final_drift": 0,
+  "duration_seconds": null
+}

@@ -1,0 +1,46 @@
+[reconcile] Starting Typesense reconcile (ZERO LLM)
+[reconcile] Connected to Neon
+[reconcile] Eligible DB records (estimated): 64142
+[reconcile] Eligible DB IDs loaded: 64142
+[reconcile] Exporting Typesense document IDs…
+[reconcile]   Typesense IDs loaded: 68330
+[reconcile]   Stale (TS only):   4188
+[reconcile]   Missing (DB only): 0
+[reconcile] Deleting 4188 stale docs via batch upsert/delete…
+[reconcile]   Batch 1 fallback: 200/200 deleted
+[reconcile]   Batch 2 fallback: 200/200 deleted
+[reconcile]   Batch 3 fallback: 200/200 deleted
+[reconcile]   Batch 4 fallback: 200/200 deleted
+[reconcile]   Batch 5 fallback: 200/200 deleted
+[reconcile]   Batch 6 fallback: 200/200 deleted
+[reconcile]   Batch 7 fallback: 200/200 deleted
+[reconcile]   Batch 8 fallback: 200/200 deleted
+[reconcile]   Batch 9 fallback: 200/200 deleted
+[reconcile]   Batch 10 fallback: 200/200 deleted
+[reconcile]   Batch 11 fallback: 200/200 deleted
+[reconcile]   Batch 12 fallback: 200/200 deleted
+[reconcile]   Batch 13 fallback: 200/200 deleted
+[reconcile]   Batch 14 fallback: 200/200 deleted
+[reconcile]   Batch 15 fallback: 200/200 deleted
+[reconcile]   Batch 16 fallback: 200/200 deleted
+[reconcile]   Batch 17 fallback: 200/200 deleted
+[reconcile]   Batch 18 fallback: 200/200 deleted
+[reconcile]   Batch 19 fallback: 200/200 deleted
+[reconcile]   Batch 20 fallback: 200/200 deleted
+[reconcile]   Batch 21 fallback: 188/188 deleted
+[reconcile]   Deleted 4188/4188 docs OK
+[reconcile] Exporting Typesense document IDs…
+[reconcile]   Typesense IDs loaded: 67512
+[reconcile] Neon connection closed
+[reconcile] Report saved: /Users/joshuatenbrink/.openclaw/workspace/wildphotography/scripts/../logs/typesense_reconcile_20260609_064910.json
+{
+  "eligible_db_count": 64142,
+  "typesense_count_before": 68330,
+  "stale_removed": 4188,
+  "missing_added": 0,
+  "typesense_count_after": 67512,
+  "final_drift": 3370,
+  "status": "success",
+  "duration_seconds": 1343.21,
+  "timestamp": "2026-06-09T06:49:10.589368+00:00"
+}

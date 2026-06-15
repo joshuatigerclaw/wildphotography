@@ -1,0 +1,1010 @@
+{
+  "batch_id": "repair_20260603",
+  "timestamp": "2026-06-04T05:11:03.146736+00:00",
+  "total_fetched": 200,
+  "updated_count": 0,
+  "failed_count": 200,
+  "results": [],
+  "failures": [
+    {
+      "photo_id": 91995,
+      "reason": "db_update_failed",
+      "slug": "best-of-costa-rica-6112787f7b0c"
+    },
+    {
+      "photo_id": 91994,
+      "reason": "db_update_failed",
+      "slug": "best-of-costa-rica-beab37fa9b1a"
+    },
+    {
+      "photo_id": 91993,
+      "reason": "db_update_failed",
+      "slug": "best-of-costa-rica-a8eaf1db9e4a"
+    },
+    {
+      "photo_id": 91992,
+      "reason": "db_update_failed",
+      "slug": "best-of-costa-rica-f84b7ae04b78"
+    },
+    {
+      "photo_id": 91991,
+      "reason": "db_update_failed",
+      "slug": "best-of-costa-rica-6a75e00026d6"
+    },
+    {
+      "photo_id": 91990,
+      "reason": "db_update_failed",
+      "slug": "best-of-costa-rica-21b48dd9df80"
+    },
+    {
+      "photo_id": 91989,
+      "reason": "db_update_failed",
+      "slug": "best-of-costa-rica-de222a26168c"
+    },
+    {
+      "photo_id": 91988,
+      "reason": "db_update_failed",
+      "slug": "best-of-costa-rica-78ebb00bd4ba"
+    },
+    {
+      "photo_id": 91987,
+      "reason": "db_update_failed",
+      "slug": "best-of-costa-rica-4062e217702d"
+    },
+    {
+      "photo_id": 91986,
+      "reason": "db_update_failed",
+      "slug": "best-of-costa-rica-bb361b80ce2b"
+    },
+    {
+      "photo_id": 91985,
+      "reason": "db_update_failed",
+      "slug": "best-of-costa-rica-a63bef1406db"
+    },
+    {
+      "photo_id": 91984,
+      "reason": "db_update_failed",
+      "slug": "best-of-costa-rica-881c91ea6196"
+    },
+    {
+      "photo_id": 91983,
+      "reason": "db_update_failed",
+      "slug": "best-of-costa-rica-6871408c7766"
+    },
+    {
+      "photo_id": 91982,
+      "reason": "db_update_failed",
+      "slug": "best-of-costa-rica-6a5b1a0ff6fc"
+    },
+    {
+      "photo_id": 91981,
+      "reason": "db_update_failed",
+      "slug": "best-of-costa-rica-f58450be0863"
+    },
+    {
+      "photo_id": 91980,
+      "reason": "db_update_failed",
+      "slug": "best-of-costa-rica-66a5432851cf"
+    },
+    {
+      "photo_id": 91979,
+      "reason": "db_update_failed",
+      "slug": "best-of-costa-rica-19e53b2224a2"
+    },
+    {
+      "photo_id": 91978,
+      "reason": "db_update_failed",
+      "slug": "best-of-costa-rica-ba6fe5beb955"
+    },
+    {
+      "photo_id": 91977,
+      "reason": "db_update_failed",
+      "slug": "best-of-costa-rica-8880bb59bdec"
+    },
+    {
+      "photo_id": 91976,
+      "reason": "db_update_failed",
+      "slug": "best-of-costa-rica-91745cde3cb4"
+    },
+    {
+      "photo_id": 91975,
+      "reason": "db_update_failed",
+      "slug": "best-of-costa-rica-7fc062262dbb"
+    },
+    {
+      "photo_id": 91974,
+      "reason": "db_update_failed",
+      "slug": "best-of-costa-rica-dbac4a4ff24c"
+    },
+    {
+      "photo_id": 91973,
+      "reason": "db_update_failed",
+      "slug": "best-of-costa-rica-66c5c7902088"
+    },
+    {
+      "photo_id": 91972,
+      "reason": "db_update_failed",
+      "slug": "best-of-costa-rica-4429461ddf13"
+    },
+    {
+      "photo_id": 91971,
+      "reason": "db_update_failed",
+      "slug": "best-of-costa-rica-f4f6cf00cb5e"
+    },
+    {
+      "photo_id": 91970,
+      "reason": "db_update_failed",
+      "slug": "best-of-costa-rica-a92b3e08708a"
+    },
+    {
+      "photo_id": 91969,
+      "reason": "db_update_failed",
+      "slug": "best-of-costa-rica-c34e03bc2c04"
+    },
+    {
+      "photo_id": 91968,
+      "reason": "db_update_failed",
+      "slug": "best-of-costa-rica-cd4e70ee3e2b"
+    },
+    {
+      "photo_id": 91967,
+      "reason": "db_update_failed",
+      "slug": "best-of-costa-rica-98b23225105b"
+    },
+    {
+      "photo_id": 91966,
+      "reason": "db_update_failed",
+      "slug": "best-of-costa-rica-dfdd59e00999"
+    },
+    {
+      "photo_id": 91965,
+      "reason": "db_update_failed",
+      "slug": "best-of-costa-rica-19d1d4cebfa1"
+    },
+    {
+      "photo_id": 91964,
+      "reason": "db_update_failed",
+      "slug": "best-of-costa-rica-192245a993e2"
+    },
+    {
+      "photo_id": 91963,
+      "reason": "db_update_failed",
+      "slug": "best-of-costa-rica-14c24efb8f40"
+    },
+    {
+      "photo_id": 91962,
+      "reason": "db_update_failed",
+      "slug": "best-of-costa-rica-876468c88a0a"
+    },
+    {
+      "photo_id": 91961,
+      "reason": "db_update_failed",
+      "slug": "best-of-costa-rica-c7b249e1d672"
+    },
+    {
+      "photo_id": 91960,
+      "reason": "db_update_failed",
+      "slug": "best-of-costa-rica-eba1ac40bd92"
+    },
+    {
+      "photo_id": 91959,
+      "reason": "db_update_failed",
+      "slug": "best-of-costa-rica-9f9f7a0804e6"
+    },
+    {
+      "photo_id": 91958,
+      "reason": "db_update_failed",
+      "slug": "best-of-costa-rica-afdbbdfc70b1"
+    },
+    {
+      "photo_id": 91957,
+      "reason": "db_update_failed",
+      "slug": "best-of-costa-rica-8173a931c08e"
+    },
+    {
+      "photo_id": 91956,
+      "reason": "db_update_failed",
+      "slug": "best-of-costa-rica-1c3e7994fff5"
+    },
+    {
+      "photo_id": 91955,
+      "reason": "db_update_failed",
+      "slug": "best-of-costa-rica-907cee93900f"
+    },
+    {
+      "photo_id": 91954,
+      "reason": "db_update_failed",
+      "slug": "best-of-costa-rica-12a2aeb65596"
+    },
+    {
+      "photo_id": 91953,
+      "reason": "db_update_failed",
+      "slug": "best-of-costa-rica-367f460bb93c"
+    },
+    {
+      "photo_id": 91952,
+      "reason": "db_update_failed",
+      "slug": "best-of-costa-rica-76f963bb51cd"
+    },
+    {
+      "photo_id": 91951,
+      "reason": "db_update_failed",
+      "slug": "best-of-costa-rica-4fcda12eb699"
+    },
+    {
+      "photo_id": 91950,
+      "reason": "db_update_failed",
+      "slug": "best-of-costa-rica-7bc9c032b454"
+    },
+    {
+      "photo_id": 91949,
+      "reason": "db_update_failed",
+      "slug": "best-of-costa-rica-b7306cd10057"
+    },
+    {
+      "photo_id": 91919,
+      "reason": "db_update_failed",
+      "slug": "best-of-costa-rica-810c6321f684"
+    },
+    {
+      "photo_id": 91917,
+      "reason": "db_update_failed",
+      "slug": "best-of-costa-rica-185bde176f5e"
+    },
+    {
+      "photo_id": 91916,
+      "reason": "db_update_failed",
+      "slug": "best-of-costa-rica-5b40d8263348"
+    },
+    {
+      "photo_id": 91915,
+      "reason": "db_update_failed",
+      "slug": "best-of-costa-rica-36239754a659"
+    },
+    {
+      "photo_id": 91914,
+      "reason": "db_update_failed",
+      "slug": "best-of-costa-rica-23e5e6332948"
+    },
+    {
+      "photo_id": 91913,
+      "reason": "db_update_failed",
+      "slug": "best-of-costa-rica-b0a7b8118e69"
+    },
+    {
+      "photo_id": 91912,
+      "reason": "db_update_failed",
+      "slug": "best-of-costa-rica-a1c7085df63a"
+    },
+    {
+      "photo_id": 91911,
+      "reason": "db_update_failed",
+      "slug": "best-of-costa-rica-2820df72b661"
+    },
+    {
+      "photo_id": 91910,
+      "reason": "db_update_failed",
+      "slug": "best-of-costa-rica-0e130bf5d5dd"
+    },
+    {
+      "photo_id": 91909,
+      "reason": "db_update_failed",
+      "slug": "best-of-costa-rica-0f0bdc4860c2"
+    },
+    {
+      "photo_id": 91908,
+      "reason": "db_update_failed",
+      "slug": "best-of-costa-rica-04470610c546"
+    },
+    {
+      "photo_id": 91907,
+      "reason": "db_update_failed",
+      "slug": "best-of-costa-rica-2aceae58d617"
+    },
+    {
+      "photo_id": 91906,
+      "reason": "db_update_failed",
+      "slug": "best-of-costa-rica-1a3b6ce6e54b"
+    },
+    {
+      "photo_id": 91905,
+      "reason": "db_update_failed",
+      "slug": "best-of-costa-rica-bb603128d0ff"
+    },
+    {
+      "photo_id": 91904,
+      "reason": "db_update_failed",
+      "slug": "best-of-costa-rica-bf972cc0cee9"
+    },
+    {
+      "photo_id": 91903,
+      "reason": "db_update_failed",
+      "slug": "best-of-costa-rica-8fb5a190afcd"
+    },
+    {
+      "photo_id": 91902,
+      "reason": "db_update_failed",
+      "slug": "best-of-costa-rica-b9aa825cf325"
+    },
+    {
+      "photo_id": 91901,
+      "reason": "db_update_failed",
+      "slug": "best-of-costa-rica-f5631670e63b"
+    },
+    {
+      "photo_id": 91900,
+      "reason": "db_update_failed",
+      "slug": "best-of-costa-rica-07bbf2f66736"
+    },
+    {
+      "photo_id": 91899,
+      "reason": "db_update_failed",
+      "slug": "best-of-costa-rica-1874eb1b01bf"
+    },
+    {
+      "photo_id": 91898,
+      "reason": "db_update_failed",
+      "slug": "best-of-costa-rica-9db09ae34a78"
+    },
+    {
+      "photo_id": 91893,
+      "reason": "db_update_failed",
+      "slug": "best-of-costa-rica-b98f23c977c9"
+    },
+    {
+      "photo_id": 91890,
+      "reason": "db_update_failed",
+      "slug": "best-of-costa-rica-1a4f05c346cf"
+    },
+    {
+      "photo_id": 91884,
+      "reason": "db_update_failed",
+      "slug": "best-of-costa-rica-da69240f601d"
+    },
+    {
+      "photo_id": 91881,
+      "reason": "db_update_failed",
+      "slug": "best-of-costa-rica-9e94a88958b0"
+    },
+    {
+      "photo_id": 91880,
+      "reason": "db_update_failed",
+      "slug": "best-of-costa-rica-18a742a03742"
+    },
+    {
+      "photo_id": 91879,
+      "reason": "db_update_failed",
+      "slug": "best-of-costa-rica-2ceefba8b644"
+    },
+    {
+      "photo_id": 91878,
+      "reason": "db_update_failed",
+      "slug": "best-of-costa-rica-92e9cc252a98"
+    },
+    {
+      "photo_id": 91876,
+      "reason": "db_update_failed",
+      "slug": "best-of-costa-rica-73babfebfd8c"
+    },
+    {
+      "photo_id": 91875,
+      "reason": "db_update_failed",
+      "slug": "best-of-costa-rica-3759c7dc3c06"
+    },
+    {
+      "photo_id": 91874,
+      "reason": "db_update_failed",
+      "slug": "best-of-costa-rica-575665a81a21"
+    },
+    {
+      "photo_id": 91873,
+      "reason": "db_update_failed",
+      "slug": "best-of-costa-rica-d5ad8fe1da11"
+    },
+    {
+      "photo_id": 91872,
+      "reason": "db_update_failed",
+      "slug": "best-of-costa-rica-1f2fca62f656"
+    },
+    {
+      "photo_id": 91871,
+      "reason": "db_update_failed",
+      "slug": "cartago-dji-0002-4e1da0"
+    },
+    {
+      "photo_id": 91870,
+      "reason": "db_update_failed",
+      "slug": "volcan-irazu-2021-04-11-09-08-12-fa1564"
+    },
+    {
+      "photo_id": 91869,
+      "reason": "db_update_failed",
+      "slug": "power-of-nature-cl0a8144-6ceb0e"
+    },
+    {
+      "photo_id": 91868,
+      "reason": "db_update_failed",
+      "slug": "land-animals-img-9782-98fe2f"
+    },
+    {
+      "photo_id": 91867,
+      "reason": "db_update_failed",
+      "slug": "land-animals-img-7568-603d0b"
+    },
+    {
+      "photo_id": 91866,
+      "reason": "db_update_failed",
+      "slug": "land-animals-img-7489-a8b10c"
+    },
+    {
+      "photo_id": 91865,
+      "reason": "db_update_failed",
+      "slug": "land-animals-img-0280-10b865"
+    },
+    {
+      "photo_id": 91864,
+      "reason": "db_update_failed",
+      "slug": "rivers-p1034306-710c09"
+    },
+    {
+      "photo_id": 91863,
+      "reason": "db_update_failed",
+      "slug": "rivers-dji-0581-376ebe"
+    },
+    {
+      "photo_id": 91862,
+      "reason": "db_update_failed",
+      "slug": "rivers-dji-0580-753b76"
+    },
+    {
+      "photo_id": 91861,
+      "reason": "db_update_failed",
+      "slug": "rivers-dji-0572-d6a4b7"
+    },
+    {
+      "photo_id": 91860,
+      "reason": "db_update_failed",
+      "slug": "rivers-dji-0568-043c55"
+    },
+    {
+      "photo_id": 91859,
+      "reason": "db_update_failed",
+      "slug": "rivers-dji-0069-3faaa0"
+    },
+    {
+      "photo_id": 91858,
+      "reason": "db_update_failed",
+      "slug": "rivers-dji-0068-2-9c9c76"
+    },
+    {
+      "photo_id": 91857,
+      "reason": "db_update_failed",
+      "slug": "rivers-dji-0065-2-0314e9"
+    },
+    {
+      "photo_id": 91856,
+      "reason": "db_update_failed",
+      "slug": "rivers-dji-0054-539a24"
+    },
+    {
+      "photo_id": 91855,
+      "reason": "db_update_failed",
+      "slug": "landmarks-dji-0904-f35f9b"
+    },
+    {
+      "photo_id": 91854,
+      "reason": "db_update_failed",
+      "slug": "landmarks-dji-0903-51b9cb"
+    },
+    {
+      "photo_id": 91853,
+      "reason": "db_update_failed",
+      "slug": "landmarks-dji-0902-c40a2a"
+    },
+    {
+      "photo_id": 91852,
+      "reason": "db_update_failed",
+      "slug": "landmarks-dji-0901-95eef5"
+    },
+    {
+      "photo_id": 91851,
+      "reason": "db_update_failed",
+      "slug": "landmarks-dji-0900-37b04c"
+    },
+    {
+      "photo_id": 91850,
+      "reason": "db_update_failed",
+      "slug": "landmarks-dji-0899-944cc0"
+    },
+    {
+      "photo_id": 91849,
+      "reason": "db_update_failed",
+      "slug": "landmarks-dji-0878-ad80ad"
+    },
+    {
+      "photo_id": 91848,
+      "reason": "db_update_failed",
+      "slug": "landmarks-dji-0874-8934a9"
+    },
+    {
+      "photo_id": 91847,
+      "reason": "db_update_failed",
+      "slug": "landmarks-dji-0863-d35cbe"
+    },
+    {
+      "photo_id": 91846,
+      "reason": "db_update_failed",
+      "slug": "landmarks-dji-0081-8fc58f"
+    },
+    {
+      "photo_id": 91845,
+      "reason": "db_update_failed",
+      "slug": "landscape-img-5090-21d2ee"
+    },
+    {
+      "photo_id": 91844,
+      "reason": "db_update_failed",
+      "slug": "landscape-img-3021-f15a87"
+    },
+    {
+      "photo_id": 91843,
+      "reason": "db_update_failed",
+      "slug": "landscape-img-2617-25f725"
+    },
+    {
+      "photo_id": 91842,
+      "reason": "db_update_failed",
+      "slug": "landscape-hyperlapse-0103-b26707"
+    },
+    {
+      "photo_id": 91841,
+      "reason": "db_update_failed",
+      "slug": "landscape-dji-0972-9b302e"
+    },
+    {
+      "photo_id": 91840,
+      "reason": "db_update_failed",
+      "slug": "landscape-dji-0918-c11b75"
+    },
+    {
+      "photo_id": 91839,
+      "reason": "db_update_failed",
+      "slug": "playas-del-coco-pano00012-108166"
+    },
+    {
+      "photo_id": 91838,
+      "reason": "db_update_failed",
+      "slug": "playas-del-coco-pano00011-9e9f3f"
+    },
+    {
+      "photo_id": 91837,
+      "reason": "db_update_failed",
+      "slug": "playas-del-coco-pano00010-d4ac27"
+    },
+    {
+      "photo_id": 91836,
+      "reason": "db_update_failed",
+      "slug": "playas-del-coco-pano00009-d61b02"
+    },
+    {
+      "photo_id": 91835,
+      "reason": "db_update_failed",
+      "slug": "playas-del-coco-pano00008-1bc8c7"
+    },
+    {
+      "photo_id": 91834,
+      "reason": "db_update_failed",
+      "slug": "playas-del-coco-pano00007-189527"
+    },
+    {
+      "photo_id": 91833,
+      "reason": "db_update_failed",
+      "slug": "playas-del-coco-pano00006-ac9860"
+    },
+    {
+      "photo_id": 91832,
+      "reason": "db_update_failed",
+      "slug": "playas-del-coco-pano00005-3a68e9"
+    },
+    {
+      "photo_id": 91831,
+      "reason": "db_update_failed",
+      "slug": "playas-del-coco-pano00004-b8d377"
+    },
+    {
+      "photo_id": 91830,
+      "reason": "db_update_failed",
+      "slug": "playas-del-coco-pano00003-bf3c32"
+    },
+    {
+      "photo_id": 91829,
+      "reason": "db_update_failed",
+      "slug": "playas-del-coco-pano00002-48ec5e"
+    },
+    {
+      "photo_id": 91828,
+      "reason": "db_update_failed",
+      "slug": "playas-del-coco-pano00001-8359ea"
+    },
+    {
+      "photo_id": 91827,
+      "reason": "db_update_failed",
+      "slug": "playas-del-coco-dji-0813-d25dd1"
+    },
+    {
+      "photo_id": 91826,
+      "reason": "db_update_failed",
+      "slug": "playas-del-coco-dji-0808-da44ed"
+    },
+    {
+      "photo_id": 91825,
+      "reason": "db_update_failed",
+      "slug": "playas-del-coco-dji-0771-ba176d"
+    },
+    {
+      "photo_id": 91824,
+      "reason": "db_update_failed",
+      "slug": "playas-del-coco-dji-0768-4b41db"
+    },
+    {
+      "photo_id": 91823,
+      "reason": "db_update_failed",
+      "slug": "playas-del-coco-dji-0764-efcc47"
+    },
+    {
+      "photo_id": 91822,
+      "reason": "db_update_failed",
+      "slug": "playas-del-coco-dji-0760-19dd08"
+    },
+    {
+      "photo_id": 91821,
+      "reason": "db_update_failed",
+      "slug": "playas-del-coco-dji-0758-98ebad"
+    },
+    {
+      "photo_id": 91820,
+      "reason": "db_update_failed",
+      "slug": "playas-del-coco-dji-0757-31c389"
+    },
+    {
+      "photo_id": 91819,
+      "reason": "db_update_failed",
+      "slug": "playas-del-coco-dji-0752-9b6910"
+    },
+    {
+      "photo_id": 91818,
+      "reason": "db_update_failed",
+      "slug": "playas-del-coco-dji-0736-1e5b9d"
+    },
+    {
+      "photo_id": 91817,
+      "reason": "db_update_failed",
+      "slug": "playas-del-coco-dji-0733-1f6009"
+    },
+    {
+      "photo_id": 91816,
+      "reason": "db_update_failed",
+      "slug": "playas-del-coco-dji-0732-a91d96"
+    },
+    {
+      "photo_id": 91815,
+      "reason": "db_update_failed",
+      "slug": "playas-del-coco-dji-0730-bce1e8"
+    },
+    {
+      "photo_id": 91814,
+      "reason": "db_update_failed",
+      "slug": "playas-del-coco-dji-0729-b9e72e"
+    },
+    {
+      "photo_id": 91813,
+      "reason": "db_update_failed",
+      "slug": "playas-del-coco-dji-0724-123e18"
+    },
+    {
+      "photo_id": 91812,
+      "reason": "db_update_failed",
+      "slug": "playas-del-coco-dji-0714-b99440"
+    },
+    {
+      "photo_id": 91811,
+      "reason": "db_update_failed",
+      "slug": "playas-del-coco-dji-0706-fb4376"
+    },
+    {
+      "photo_id": 91810,
+      "reason": "db_update_failed",
+      "slug": "playas-del-coco-dji-0702-47473e"
+    },
+    {
+      "photo_id": 91809,
+      "reason": "db_update_failed",
+      "slug": "playas-del-coco-dji-0693-4e0592"
+    },
+    {
+      "photo_id": 91808,
+      "reason": "db_update_failed",
+      "slug": "playas-del-coco-dji-0692-504e2c"
+    },
+    {
+      "photo_id": 91807,
+      "reason": "db_update_failed",
+      "slug": "playas-del-coco-dji-0691-4ffa85"
+    },
+    {
+      "photo_id": 91806,
+      "reason": "db_update_failed",
+      "slug": "playas-del-coco-dji-0686-13917e"
+    },
+    {
+      "photo_id": 91805,
+      "reason": "db_update_failed",
+      "slug": "playas-del-coco-dji-0684-a2a37d"
+    },
+    {
+      "photo_id": 91804,
+      "reason": "db_update_failed",
+      "slug": "playas-del-coco-dji-0683-be7495"
+    },
+    {
+      "photo_id": 91803,
+      "reason": "db_update_failed",
+      "slug": "playas-del-coco-dji-0680-5f6b49"
+    },
+    {
+      "photo_id": 91802,
+      "reason": "db_update_failed",
+      "slug": "playas-del-coco-dji-0679-1cd3a3"
+    },
+    {
+      "photo_id": 91801,
+      "reason": "db_update_failed",
+      "slug": "playas-del-coco-dji-0361-8afc88"
+    },
+    {
+      "photo_id": 91800,
+      "reason": "db_update_failed",
+      "slug": "playas-del-coco-dji-0354-a663e6"
+    },
+    {
+      "photo_id": 91799,
+      "reason": "db_update_failed",
+      "slug": "playas-del-coco-dji-0345-f779d4"
+    },
+    {
+      "photo_id": 91798,
+      "reason": "db_update_failed",
+      "slug": "playas-del-coco-dji-0343-004b4b"
+    },
+    {
+      "photo_id": 91797,
+      "reason": "db_update_failed",
+      "slug": "playas-del-coco-dji-0338-d2542b"
+    },
+    {
+      "photo_id": 91796,
+      "reason": "db_update_failed",
+      "slug": "playas-del-coco-dji-0310-df658d"
+    },
+    {
+      "photo_id": 91795,
+      "reason": "db_update_failed",
+      "slug": "playas-del-coco-dji-0309-34d15e"
+    },
+    {
+      "photo_id": 91794,
+      "reason": "db_update_failed",
+      "slug": "playas-del-coco-dji-0305-04e414"
+    },
+    {
+      "photo_id": 91793,
+      "reason": "db_update_failed",
+      "slug": "playas-del-coco-dji-0302-cfac2c"
+    },
+    {
+      "photo_id": 91792,
+      "reason": "db_update_failed",
+      "slug": "playas-del-coco-dji-0299-720d61"
+    },
+    {
+      "photo_id": 91791,
+      "reason": "db_update_failed",
+      "slug": "playas-del-coco-dji-0284-75c87b"
+    },
+    {
+      "photo_id": 91790,
+      "reason": "db_update_failed",
+      "slug": "playas-del-coco-dji-0283-640e27"
+    },
+    {
+      "photo_id": 91789,
+      "reason": "db_update_failed",
+      "slug": "playas-del-coco-dji-0282-14568d"
+    },
+    {
+      "photo_id": 91788,
+      "reason": "db_update_failed",
+      "slug": "playas-del-coco-dji-0278-583b10"
+    },
+    {
+      "photo_id": 91787,
+      "reason": "db_update_failed",
+      "slug": "playas-del-coco-dji-0276-8c681f"
+    },
+    {
+      "photo_id": 91786,
+      "reason": "db_update_failed",
+      "slug": "playas-del-coco-dji-0263-06e9cd"
+    },
+    {
+      "photo_id": 91785,
+      "reason": "db_update_failed",
+      "slug": "playas-del-coco-dji-0262-f6261d"
+    },
+    {
+      "photo_id": 91784,
+      "reason": "db_update_failed",
+      "slug": "playas-del-coco-dji-0257-8332dd"
+    },
+    {
+      "photo_id": 91783,
+      "reason": "db_update_failed",
+      "slug": "playas-del-coco-dji-0255-39ad2a"
+    },
+    {
+      "photo_id": 91782,
+      "reason": "db_update_failed",
+      "slug": "playas-del-coco-dji-0254-dffb1e"
+    },
+    {
+      "photo_id": 91781,
+      "reason": "db_update_failed",
+      "slug": "playas-del-coco-dji-0245-ce229f"
+    },
+    {
+      "photo_id": 91780,
+      "reason": "db_update_failed",
+      "slug": "playas-del-coco-dji-0244-596ba7"
+    },
+    {
+      "photo_id": 91779,
+      "reason": "db_update_failed",
+      "slug": "playas-del-coco-dji-0241-351cf0"
+    },
+    {
+      "photo_id": 91778,
+      "reason": "db_update_failed",
+      "slug": "playas-del-coco-dji-0236-510354"
+    },
+    {
+      "photo_id": 91777,
+      "reason": "db_update_failed",
+      "slug": "playas-del-coco-dji-0231-9a5706"
+    },
+    {
+      "photo_id": 91776,
+      "reason": "db_update_failed",
+      "slug": "playas-del-coco-dji-0228-553b94"
+    },
+    {
+      "photo_id": 91775,
+      "reason": "db_update_failed",
+      "slug": "playas-del-coco-dji-0225-14bade"
+    },
+    {
+      "photo_id": 91774,
+      "reason": "db_update_failed",
+      "slug": "playas-del-coco-dji-0224-065847"
+    },
+    {
+      "photo_id": 91773,
+      "reason": "db_update_failed",
+      "slug": "playas-del-coco-dji-0220-0453a1"
+    },
+    {
+      "photo_id": 91772,
+      "reason": "db_update_failed",
+      "slug": "playas-del-coco-dji-0218-9de0b0"
+    },
+    {
+      "photo_id": 91771,
+      "reason": "db_update_failed",
+      "slug": "playas-del-coco-dji-0204-dcfd30"
+    },
+    {
+      "photo_id": 91770,
+      "reason": "db_update_failed",
+      "slug": "playas-del-coco-dji-0198-648a8b"
+    },
+    {
+      "photo_id": 91769,
+      "reason": "db_update_failed",
+      "slug": "playas-del-coco-dji-0195-b29747"
+    },
+    {
+      "photo_id": 91768,
+      "reason": "db_update_failed",
+      "slug": "playas-del-coco-dji-0193-210068"
+    },
+    {
+      "photo_id": 91767,
+      "reason": "db_update_failed",
+      "slug": "playas-del-coco-dji-0178-63191a"
+    },
+    {
+      "photo_id": 91766,
+      "reason": "db_update_failed",
+      "slug": "playas-del-coco-dji-0177-80f90d"
+    },
+    {
+      "photo_id": 91765,
+      "reason": "db_update_failed",
+      "slug": "playas-del-coco-dji-0176-573019"
+    },
+    {
+      "photo_id": 91764,
+      "reason": "db_update_failed",
+      "slug": "playas-del-coco-dji-0174-46aa42"
+    },
+    {
+      "photo_id": 91763,
+      "reason": "db_update_failed",
+      "slug": "playas-del-coco-dji-0171-788b80"
+    },
+    {
+      "photo_id": 91762,
+      "reason": "db_update_failed",
+      "slug": "playas-del-coco-dji-0169-1d8cb4"
+    },
+    {
+      "photo_id": 91761,
+      "reason": "db_update_failed",
+      "slug": "playas-del-coco-dji-0166-c0d197"
+    },
+    {
+      "photo_id": 91760,
+      "reason": "db_update_failed",
+      "slug": "playas-del-coco-dji-0165-691dbe"
+    },
+    {
+      "photo_id": 91759,
+      "reason": "db_update_failed",
+      "slug": "playas-del-coco-dji-0161-a3e050"
+    },
+    {
+      "photo_id": 91758,
+      "reason": "db_update_failed",
+      "slug": "playas-del-coco-dji-0159-ca16a8"
+    },
+    {
+      "photo_id": 91757,
+      "reason": "db_update_failed",
+      "slug": "playas-del-coco-dji-0157-f7b6dd"
+    },
+    {
+      "photo_id": 91756,
+      "reason": "db_update_failed",
+      "slug": "playas-del-coco-dji-0153-9f6627"
+    },
+    {
+      "photo_id": 91755,
+      "reason": "db_update_failed",
+      "slug": "playas-del-coco-dji-0149-a643a0"
+    },
+    {
+      "photo_id": 91754,
+      "reason": "db_update_failed",
+      "slug": "playas-del-coco-dji-0144-e4c14c"
+    },
+    {
+      "photo_id": 91753,
+      "reason": "db_update_failed",
+      "slug": "playas-del-coco-dji-0137-2153ef"
+    },
+    {
+      "photo_id": 91752,
+      "reason": "db_update_failed",
+      "slug": "playas-del-coco-dji-0102-39f14b"
+    }
+  ]
+}

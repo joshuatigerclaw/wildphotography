@@ -1,0 +1,189 @@
+{
+  "batch_id": "repair_20260530_024905",
+  "jobs_processed": 7,
+  "repairs_completed": 31,
+  "failures": 0,
+  "items_requiring_approval": 7,
+  "approval_items": [
+    {
+      "type": "derivative_regeneration",
+      "reason": "Original exists but derivatives missing for photo 65840",
+      "original_path": "originals/65840/DJI_0102.jpg"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 65915",
+      "slug": "dji-0205-beaches"
+    },
+    {
+      "type": "derivative_regeneration",
+      "reason": "Original exists but derivatives missing for photo 51786",
+      "original_path": "originals/51786/2021-04-11_11.47.45.jpg"
+    },
+    {
+      "type": "manual_review",
+      "reason": "No original found in R2 for photo 41204",
+      "slug": "test-slug-debug"
+    },
+    {
+      "type": "derivative_regeneration",
+      "reason": "Original exists but derivatives missing for photo 65815",
+      "original_path": "originals/65815/DJI_0141.JPG"
+    },
+    {
+      "type": "derivative_regeneration",
+      "reason": "Original exists but derivatives missing for photo 65637",
+      "original_path": "originals/65637/2021-03-28_13.36.40.jpg"
+    },
+    {
+      "type": "derivative_regeneration",
+      "reason": "Original exists but derivatives missing for photo 51740",
+      "original_path": "originals/51740/2016-12-29_12.25.27.jpg"
+    }
+  ],
+  "results": [
+    {
+      "queue_id": 74011,
+      "photo_id": 65840,
+      "slug": "dji-0102-beaches",
+      "repairs": [
+        "original_r2: exists (1 files)",
+        "derivatives_r2: missing (0 files)",
+        "db_r2_mismatch: missing keys ['r2_original_key']",
+        "auto_repaired_db_keys: ['r2_original_key']",
+        "derivatives_missing: needs regeneration"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "derivative_regeneration",
+          "reason": "Original exists but derivatives missing for photo 65840",
+          "original_path": "originals/65840/DJI_0102.jpg"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 74012,
+      "photo_id": 65915,
+      "slug": "dji-0205-beaches",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 65915",
+          "slug": "dji-0205-beaches"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 74013,
+      "photo_id": 51786,
+      "slug": "2021-04-11-11-47-45-random-places-of-costa-rica",
+      "repairs": [
+        "original_r2: exists (1 files)",
+        "derivatives_r2: missing (0 files)",
+        "db_r2_mismatch: missing keys ['r2_original_key']",
+        "auto_repaired_db_keys: ['r2_original_key']",
+        "derivatives_missing: needs regeneration"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "derivative_regeneration",
+          "reason": "Original exists but derivatives missing for photo 51786",
+          "original_path": "originals/51786/2021-04-11_11.47.45.jpg"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 74014,
+      "photo_id": 41204,
+      "slug": "test-slug-debug",
+      "repairs": [
+        "original_r2: missing (0 files)",
+        "derivatives_r2: missing (0 files)",
+        "original_missing: cannot regenerate"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "manual_review",
+          "reason": "No original found in R2 for photo 41204",
+          "slug": "test-slug-debug"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 74015,
+      "photo_id": 65815,
+      "slug": "dji-0141-best-of-costa-rica",
+      "repairs": [
+        "original_r2: exists (1 files)",
+        "derivatives_r2: missing (0 files)",
+        "db_r2_mismatch: missing keys ['r2_original_key']",
+        "auto_repaired_db_keys: ['r2_original_key']",
+        "derivatives_missing: needs regeneration"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "derivative_regeneration",
+          "reason": "Original exists but derivatives missing for photo 65815",
+          "original_path": "originals/65815/DJI_0141.JPG"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 74016,
+      "photo_id": 65637,
+      "slug": "2021-03-28-13-36-40-beaches",
+      "repairs": [
+        "original_r2: exists (1 files)",
+        "derivatives_r2: missing (0 files)",
+        "db_r2_mismatch: missing keys ['r2_original_key']",
+        "auto_repaired_db_keys: ['r2_original_key']",
+        "derivatives_missing: needs regeneration"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "derivative_regeneration",
+          "reason": "Original exists but derivatives missing for photo 65637",
+          "original_path": "originals/65637/2021-03-28_13.36.40.jpg"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "queue_id": 74017,
+      "photo_id": 51740,
+      "slug": "2016-12-29-12-25-27-beaches",
+      "repairs": [
+        "original_r2: exists (1 files)",
+        "derivatives_r2: missing (0 files)",
+        "db_r2_mismatch: missing keys ['r2_original_key']",
+        "auto_repaired_db_keys: ['r2_original_key']",
+        "derivatives_missing: needs regeneration"
+      ],
+      "errors": [],
+      "approval_required": [
+        {
+          "type": "derivative_regeneration",
+          "reason": "Original exists but derivatives missing for photo 51740",
+          "original_path": "originals/51740/2016-12-29_12.25.27.jpg"
+        }
+      ],
+      "status": "completed"
+    }
+  ]
+}

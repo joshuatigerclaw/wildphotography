@@ -1,0 +1,83 @@
+=== WildPhotography Typesense Index Repair ===
+Started at: 2026-06-09T00:37:01.433Z
+
+[STEP 1] Counting Neon eligible photos...
+Neon eligible photos: 63025
+
+[STEP 2] Counting Typesense photos collection...
+Typesense docs: 67289
+Drift estimate: -4264 (positive = missing in TS, negative = stale in TS)
+
+[STEP 3] Exporting Typesense document IDs...
+[RECONCILE] Exporting all Typesense photo IDs...
+[RECONCILE] Typesense IDs collected: 0
+
+[STEP 4] Scanning Neon for missing records...
+  Scanned 500/63025 - found 500 missing so far
+  Scanned 1000/63025 - found 1000 missing so far
+  Scanned 1500/63025 - found 1500 missing so far
+  Scanned 2000/63025 - found 2000 missing so far
+  Scanned 2500/63025 - found 2500 missing so far
+  Scanned 3000/63025 - found 3000 missing so far
+  Scanned 3500/63025 - found 3500 missing so far
+  Scanned 4000/63025 - found 4000 missing so far
+  Scanned 4500/63025 - found 4500 missing so far
+  Scanned 5000/63025 - found 5000 missing so far
+  Scanned 5500/63025 - found 5500 missing so far
+  Scanned 6000/63025 - found 6000 missing so far
+  Scanned 6500/63025 - found 6500 missing so far
+  Scanned 7000/63025 - found 7000 missing so far
+  Scanned 7500/63025 - found 7500 missing so far
+  Scanned 8000/63025 - found 8000 missing so far
+  Scanned 8500/63025 - found 8500 missing so far
+  Scanned 9000/63025 - found 9000 missing so far
+  Scanned 9500/63025 - found 9500 missing so far
+  Scanned 10000/63025 - found 10000 missing so far
+  Scanned 10500/63025 - found 10500 missing so far
+  Scanned 11000/63025 - found 11000 missing so far
+  Scanned 11500/63025 - found 11500 missing so far
+  Scanned 12000/63025 - found 12000 missing so far
+  Scanned 12500/63025 - found 12500 missing so far
+  Scanned 13000/63025 - found 13000 missing so far
+  Scanned 13500/63025 - found 13500 missing so far
+  Scanned 14000/63025 - found 14000 missing so far
+  Scanned 14500/63025 - found 14500 missing so far
+  Scanned 15000/63025 - found 15000 missing so far
+  Scanned 15500/63025 - found 15500 missing so far
+  Scanned 16000/63025 - found 16000 missing so far
+  Scanned 16500/63025 - found 16500 missing so far
+  Scanned 17000/63025 - found 17000 missing so far
+  Scanned 17500/63025 - found 17500 missing so far
+  Scanned 18000/63025 - found 18000 missing so far
+  Scanned 18500/63025 - found 18500 missing so far
+  Scanned 19000/63025 - found 19000 missing so far
+  Scanned 19500/63025 - found 19500 missing so far
+  Scanned 20000/63025 - found 20000 missing so far
+  Scanned 20500/63025 - found 20500 missing so far
+  Scanned 21000/63025 - found 21000 missing so far
+  Scanned 21500/63025 - found 21500 missing so far
+  Scanned 22089/63025 - found 22089 missing so far
+  Scanned 22589/63025 - found 22589 missing so far
+  Scanned 23097/63025 - found 23097 missing so far
+  Scanned 23597/63025 - found 23597 missing so far
+  Scanned 24097/63025 - found 24097 missing so far
+  Scanned 24597/63025 - found 24597 missing so far
+  Scanned 25097/63025 - found 25097 missing so far
+  Scanned 25597/63025 - found 25597 missing so far
+  Scanned 26097/63025 - found 26097 missing so far
+  Scanned 26597/63025 - found 26597 missing so far
+  Scanned 27097/63025 - found 27097 missing so far
+  Scanned 27597/63025 - found 27597 missing so far
+  Scanned 28097/63025 - found 28097 missing so far
+  Scanned 28597/63025 - found 28597 missing so far
+  Scanned 29097/63025 - found 29097 missing so far
+  Scanned 29597/63025 - found 29597 missing so far
+  Scanned 30097/63025 - found 30097 missing so far
+  Scanned 30602/63025 - found 30602 missing so far
+  Scanned 31102/63025 - found 31102 missing so far
+  Scanned 31602/63025 - found 31602 missing so far
+  Scanned 32102/63025 - found 32102 missing so far
+  Scanned 32602/63025 - found 32602 missing so far
+  Scanned 33102/63025 - found 33102 missing so far
+  Scanned 33602/63025 - found 33602 missing so far
+  Scanned 34102/63025 - found 34102 missing so far

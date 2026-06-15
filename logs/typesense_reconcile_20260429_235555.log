@@ -1,0 +1,23 @@
+2026-04-29 23:55:55,009 INFO === WildPhotography Typesense Reconciliation (FIXED) ===
+2026-04-29 23:55:55,009 INFO 
+2026-04-29 23:55:55,463 INFO [1] Typesense current doc count: 35603
+2026-04-29 23:55:55,463 INFO [2] Loading eligible Neon docs...
+2026-04-29 23:55:57,490 INFO     Eligible Neon docs: 35649
+2026-04-29 23:55:57,490 INFO [3] Drift before reconcile: 46 (eligible=35649, TS=35603)
+2026-04-29 23:55:57,490 INFO [4] Exporting Typesense docs to identify stale...
+2026-04-29 23:56:00,702 INFO     TS docs: 35603, Stale: 0, Missing: 46
+2026-04-29 23:56:00,702 INFO [5] No stale docs to remove
+2026-04-29 23:56:00,702 INFO [6] Adding 46 missing docs...
+2026-04-29 23:56:01,096 INFO   Batch 1/1: 46 ok, 0 errors
+2026-04-29 23:56:01,522 INFO     Missing added: 46, errors: 0
+2026-04-29 23:56:03,982 INFO 
+2026-04-29 23:56:03,982 INFO === Reconciliation Complete ===
+2026-04-29 23:56:03,982 INFO   Eligible Neon:     35649
+2026-04-29 23:56:03,982 INFO   TS before:         35603
+2026-04-29 23:56:03,982 INFO   Stale removed:     0
+2026-04-29 23:56:03,982 INFO   Missing added:     46
+2026-04-29 23:56:03,982 INFO   TS after:          35649
+2026-04-29 23:56:03,982 INFO   Drift before:      46
+2026-04-29 23:56:03,982 INFO   Drift after:       0
+2026-04-29 23:56:03,982 INFO   Duration:          9.0s
+2026-04-29 23:56:03,983 INFO   Report: /Users/joshuatenbrink/.openclaw/workspace/wildphotography/logs/typesense_reconcile_20260430T055603Z.json

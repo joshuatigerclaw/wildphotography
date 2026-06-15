@@ -1,0 +1,526 @@
+{
+  "run_at": "2026-05-07T04:40:05.482038+00:00",
+  "total_photos": 39925,
+  "render_ready_total": 37316,
+  "photos_with_issues": 512,
+  "all_clear": false,
+  "checks": {
+    "missing_thumb_url": {
+      "count": 0,
+      "sample": []
+    },
+    "missing_slug": {
+      "count": 0,
+      "sample": []
+    },
+    "missing_title": {
+      "count": 0,
+      "sample": []
+    },
+    "missing_gallery_slug": {
+      "count": 1418,
+      "sample": [
+        {
+          "id": 242,
+          "slug": "hermosa-beach-1",
+          "title": "Hermosa Beach Sunset",
+          "status": "archived"
+        },
+        {
+          "id": 14905,
+          "slug": "resplendent-quetzal",
+          "title": "Resplendent Quetzal \u2014 #14905 | WildPhotography",
+          "status": "archived"
+        },
+        {
+          "id": 41344,
+          "slug": "costa-rica-2014-09-20-16-02-57-copy",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41344 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41348,
+          "slug": "costa-rica-2015-04-01-14-20-11-copy",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41348 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41351,
+          "slug": "costa-rica-2015-07-14-12-45-12-copy",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41351 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41355,
+          "slug": "costa-rica-2015-10-11-10-02-01-copy",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41355 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41363,
+          "slug": "flowers-plants-trees-2019-03-31-06-30-13",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41363 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41364,
+          "slug": "flowers-plants-trees-2019-11-30-07-06-16",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41364 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41370,
+          "slug": "flowers-plants-trees-2020-10-04-14-38-47",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41370 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41372,
+          "slug": "flowers-plants-trees-2020-10-10-06-54-24",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41372 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41385,
+          "slug": "playas-del-coco-2022-03-12-12-24-06",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41385 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41399,
+          "slug": "playas-del-coco-20240817-063232",
+          "title": "Costa Rica \u2014 Guanacaste \u2014 #41399 | WildPhotography",
+          "status": "published"
+        },
+        {
+          "id": 41410,
+          "slug": "20240920-122524-0-jpg",
+          "title": "Costa Rica \u2014 Puerto Viejo de Lim\u00f3n, Limon \u2014 #41410 | WildPhotography",
+          "status": "active"
+        },
+        {
+          "id": 41423,
+          "slug": "2018-04-30-11-41-37-jpg",
+          "title": "Costa Rica in Costa Rica \u2014 Photo #41423 | WildPhotography",
+          "status": "archived"
+        },
+        {
+          "id": 41462,
+          "slug": "dji-0102-jpg",
+          "title": "Costa Rica \u2014 Playas del Coco, Guanacaste \u2014 #41462 | WildPhotography",
+          "status": "archived"
+        },
+        {
+          "id": 41463,
+          "slug": "dji-0110-jpg",
+          "title": "Costa Rica \u2014 Playas del Coco, Guanacaste \u2014 #41463 | WildPhotography",
+          "status": "archived"
+        },
+        {
+          "id": 41464,
+          "slug": "dji-0118-jpg",
+          "title": "Costa Rica \u2014 Playas del Coco, Guanacaste \u2014 #41464 | WildPhotography",
+          "status": "archived"
+        },
+        {
+          "id": 41465,
+          "slug": "dji-0137-jpg",
+          "title": "Costa Rica \u2014 Playas del Coco, Guanacaste \u2014 #41465 | WildPhotography",
+          "status": "archived"
+        },
+        {
+          "id": 41466,
+          "slug": "dji-0144-jpg",
+          "title": "Costa Rica \u2014 Playas del Coco, Guanacaste \u2014 #41466 | WildPhotography",
+          "status": "archived"
+        },
+        {
+          "id": 41468,
+          "slug": "dji-0153-jpg",
+          "title": "Costa Rica \u2014 Playas del Coco, Guanacaste \u2014 #41468 | WildPhotography",
+          "status": "archived"
+        }
+      ]
+    },
+    "search_not_ready": {
+      "count": 297,
+      "sample": [
+        {
+          "id": 16,
+          "slug": "scarlet-macaw",
+          "title": "Scarlet Macaw \u2014 Birds \u2014 #16 | WildPhotography",
+          "status": "archived"
+        },
+        {
+          "id": 18,
+          "slug": "keel-billed-toucan",
+          "title": "Keel-billed Toucan \u2014 Birds \u2014 #18 | WildPhotography",
+          "status": "archived"
+        },
+        {
+          "id": 19,
+          "slug": "three-toed-sloth",
+          "title": "Three-toed Sloth",
+          "status": "archived"
+        },
+        {
+          "id": 22,
+          "slug": "blue-morpho",
+          "title": "Blue Morpho in Costa Rica, Costa Rica",
+          "status": "archived"
+        },
+        {
+          "id": 23,
+          "slug": "spectacled-owl",
+          "title": "wildlife \u2014 Birds \u2014 #23 | WildPhotography",
+          "status": "archived"
+        },
+        {
+          "id": 24,
+          "slug": "toucan-barbet",
+          "title": "Toucan Barbet",
+          "status": "archived"
+        },
+        {
+          "id": 30,
+          "slug": "fiery-hummingbird",
+          "title": "Fiery-throated Hummingbird",
+          "status": "archived"
+        },
+        {
+          "id": 32,
+          "slug": "volcano-view",
+          "title": "Volcano View",
+          "status": "archived"
+        },
+        {
+          "id": 33,
+          "slug": "pacific-sunset",
+          "title": "Landscapes in Pacific Coast, Costa Rica",
+          "status": "archived"
+        },
+        {
+          "id": 35,
+          "slug": "rainforest-waterfall",
+          "title": "Rainforest Waterfall",
+          "status": "archived"
+        },
+        {
+          "id": 41,
+          "slug": "img-9967-2-jpg-J88LxN",
+          "title": "landscape \u2014 Water Sports And Surfing \u2014 #41 | WildPhotography",
+          "status": "archived"
+        },
+        {
+          "id": 41225,
+          "slug": "tambor-nicoya-peninsula-costa-rica-2020-06-27-05-37-35",
+          "title": "2020-06-27 05.37.35",
+          "status": "published"
+        },
+        {
+          "id": 41226,
+          "slug": "tambor-nicoya-peninsula-costa-rica-2021-03-26-07-22-24",
+          "title": "2021-03-26 07.22.24",
+          "status": "published"
+        },
+        {
+          "id": 41227,
+          "slug": "tambor-nicoya-peninsula-costa-rica-2021-03-26-07-23-05",
+          "title": "Coastal Sunset at Nicoya Peninsula, Costa Rica |",
+          "status": "published"
+        },
+        {
+          "id": 41228,
+          "slug": "tambor-nicoya-peninsula-costa-rica-2021-03-27-15-46-50",
+          "title": "Palm-Framed Beach Sunset, Nicoya Peninsula, Costa Rica |",
+          "status": "published"
+        },
+        {
+          "id": 41229,
+          "slug": "tambor-nicoya-peninsula-costa-rica-2021-03-28-16-23-59",
+          "title": "Beach and Forest Panorama, Nicoya Peninsula, Costa Rica |",
+          "status": "published"
+        },
+        {
+          "id": 41230,
+          "slug": "tambor-nicoya-peninsula-costa-rica-2021-04-04-05-15-26",
+          "title": "Coastal Headland at Sunset, Nicoya Peninsula, Costa Rica |",
+          "status": "published"
+        },
+        {
+          "id": 41231,
+          "slug": "tambor-nicoya-peninsula-costa-rica-2021-04-04-05-45-24",
+          "title": "Sunset Silhouette of Nicoya Peninsula, Costa Rica |",
+          "status": "published"
+        },
+        {
+          "id": 41232,
+          "slug": "tambor-nicoya-peninsula-costa-rica-2021-04-04-05-53-35",
+          "title": "Tropical Beach at Sunset, Nicoya Peninsula, Costa Rica |",
+          "status": "published"
+        },
+        {
+          "id": 41233,
+          "slug": "tambor-nicoya-peninsula-costa-rica-2021-05-21-15-17-12",
+          "title": "Forest Edge and Boardwalk, Nicoya Peninsula, Costa Rica |",
+          "status": "published"
+        }
+      ]
+    },
+    "derivatives_incomplete": {
+      "count": 0,
+      "sample": []
+    },
+    "missing_description": {
+      "count": 341,
+      "sample": [
+        {
+          "id": 46246,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-dji_0242",
+          "title": "DJI_0242",
+          "status": "imported"
+        },
+        {
+          "id": 46247,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-dji_0244",
+          "title": "DJI_0244",
+          "status": "imported"
+        },
+        {
+          "id": 46248,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-dji_0246",
+          "title": "DJI_0246",
+          "status": "imported"
+        },
+        {
+          "id": 46249,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-dji_0247",
+          "title": "DJI_0247",
+          "status": "imported"
+        },
+        {
+          "id": 46250,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-dji_0249",
+          "title": "DJI_0249",
+          "status": "imported"
+        },
+        {
+          "id": 46251,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-dji_0250",
+          "title": "DJI_0250",
+          "status": "imported"
+        },
+        {
+          "id": 46252,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-dji_0253",
+          "title": "DJI_0253",
+          "status": "imported"
+        },
+        {
+          "id": 46253,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-dji_0254",
+          "title": "DJI_0254",
+          "status": "imported"
+        },
+        {
+          "id": 46254,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-dji_0255",
+          "title": "DJI_0255",
+          "status": "imported"
+        },
+        {
+          "id": 46255,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-dji_0257",
+          "title": "DJI_0257",
+          "status": "imported"
+        },
+        {
+          "id": 46256,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-dji_0258",
+          "title": "DJI_0258",
+          "status": "imported"
+        },
+        {
+          "id": 46257,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-dji_0259",
+          "title": "DJI_0259",
+          "status": "imported"
+        },
+        {
+          "id": 46258,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-dji_0261",
+          "title": "DJI_0261",
+          "status": "imported"
+        },
+        {
+          "id": 46259,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-dji_0262",
+          "title": "DJI_0262",
+          "status": "imported"
+        },
+        {
+          "id": 46260,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-dji_0263",
+          "title": "DJI_0263",
+          "status": "imported"
+        },
+        {
+          "id": 46261,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-dji_0264",
+          "title": "DJI_0264",
+          "status": "imported"
+        },
+        {
+          "id": 46262,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-dji_0265",
+          "title": "DJI_0265",
+          "status": "imported"
+        },
+        {
+          "id": 46263,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-dji_0267",
+          "title": "DJI_0267",
+          "status": "imported"
+        },
+        {
+          "id": 46264,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-dji_0268",
+          "title": "DJI_0268",
+          "status": "imported"
+        },
+        {
+          "id": 46265,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-dji_0270",
+          "title": "DJI_0270",
+          "status": "imported"
+        }
+      ]
+    },
+    "missing_keywords": {
+      "count": 341,
+      "sample": [
+        {
+          "id": 46246,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-dji_0242",
+          "title": "DJI_0242",
+          "status": "imported"
+        },
+        {
+          "id": 46247,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-dji_0244",
+          "title": "DJI_0244",
+          "status": "imported"
+        },
+        {
+          "id": 46248,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-dji_0246",
+          "title": "DJI_0246",
+          "status": "imported"
+        },
+        {
+          "id": 46249,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-dji_0247",
+          "title": "DJI_0247",
+          "status": "imported"
+        },
+        {
+          "id": 46250,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-dji_0249",
+          "title": "DJI_0249",
+          "status": "imported"
+        },
+        {
+          "id": 46251,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-dji_0250",
+          "title": "DJI_0250",
+          "status": "imported"
+        },
+        {
+          "id": 46252,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-dji_0253",
+          "title": "DJI_0253",
+          "status": "imported"
+        },
+        {
+          "id": 46253,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-dji_0254",
+          "title": "DJI_0254",
+          "status": "imported"
+        },
+        {
+          "id": 46254,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-dji_0255",
+          "title": "DJI_0255",
+          "status": "imported"
+        },
+        {
+          "id": 46255,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-dji_0257",
+          "title": "DJI_0257",
+          "status": "imported"
+        },
+        {
+          "id": 46256,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-dji_0258",
+          "title": "DJI_0258",
+          "status": "imported"
+        },
+        {
+          "id": 46257,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-dji_0259",
+          "title": "DJI_0259",
+          "status": "imported"
+        },
+        {
+          "id": 46258,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-dji_0261",
+          "title": "DJI_0261",
+          "status": "imported"
+        },
+        {
+          "id": 46259,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-dji_0262",
+          "title": "DJI_0262",
+          "status": "imported"
+        },
+        {
+          "id": 46260,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-dji_0263",
+          "title": "DJI_0263",
+          "status": "imported"
+        },
+        {
+          "id": 46261,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-dji_0264",
+          "title": "DJI_0264",
+          "status": "imported"
+        },
+        {
+          "id": 46262,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-dji_0265",
+          "title": "DJI_0265",
+          "status": "imported"
+        },
+        {
+          "id": 46263,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-dji_0267",
+          "title": "DJI_0267",
+          "status": "imported"
+        },
+        {
+          "id": 46264,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-dji_0268",
+          "title": "DJI_0268",
+          "status": "imported"
+        },
+        {
+          "id": 46265,
+          "slug": "costa-rica-gallery-limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva-dji_0270",
+          "title": "DJI_0270",
+          "status": "imported"
+        }
+      ]
+    }
+  },
+  "status": "success"
+}

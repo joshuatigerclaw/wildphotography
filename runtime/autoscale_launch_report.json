@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-05-21T00:58:16.610069Z",
+  "workflow": "wild_derivative_autoscale_controller",
+  "workers_dispatched": 2,
+  "pids": [
+    74018,
+    74019
+  ],
+  "logs": [
+    "/tmp/wild_autoscale/worker_1779325096_1.log",
+    "/tmp/wild_autoscale/worker_1779325096_2.log"
+  ],
+  "queue_depth": 25,
+  "target_workers": 2,
+  "active_workers": 2,
+  "recent_failures": 0
+}

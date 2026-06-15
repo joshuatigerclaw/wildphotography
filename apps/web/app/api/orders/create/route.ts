@@ -94,7 +94,13 @@ export async function POST(req: NextRequest) {
     };
 
     await appendOrderRow(order);
-    await sendOrderStartedEmail(order);
+
+    // Send admin notification — non-blocking so email config issues don't block orders
+    try {
+      await sendOrderStartedEmail(order);
+    } catch (emailError) {
+      console.error("Admin email failed (order still created):", String(emailError));
+    }
 
     const paypalUrl = buildPayPalUrl({
       businessEmail: order.paypal_business_email,
@@ -112,7 +118,7 @@ export async function POST(req: NextRequest) {
       priceUsd: order.price_usd,
     });
   } catch (error) {
-    console.error(error);
+    console.error("Order create error:", String(error));
     return NextResponse.json({ ok: false, error: "Server error" }, { status: 500 });
   }
 }

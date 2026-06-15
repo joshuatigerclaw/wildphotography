@@ -1,14 +1,34 @@
-import { Resend } from "resend";
 import { PhotoOrder } from "@/types/orders";
 
-function getResend() {
-  const key = process.env.RESEND_API_KEY;
-  if (!key) throw new Error("RESEND_API_KEY is not set");
-  return new Resend(key);
-}
+const RESEND_API_KEY = process.env.RESEND_API_KEY;
+const adminEmail = "cash@pobox.com";
+const fromEmail = "orders@wildphotography.com";
 
-const adminEmail = process.env.WILDPHOTO_ADMIN_EMAIL!;
-const fromEmail = process.env.RESEND_FROM_EMAIL!;
+async function resendEmail(subject: string, text: string): Promise<string> {
+  if (!RESEND_API_KEY) throw new Error("RESEND_API_KEY is not set");
+
+  const response = await fetch("https://api.resend.com/emails", {
+    method: "POST",
+    headers: {
+      "Authorization": `Bearer ${RESEND_API_KEY}`,
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      from: fromEmail,
+      to: adminEmail,
+      subject,
+      text,
+    }),
+  });
+
+  if (!response.ok) {
+    const err = await response.text();
+    throw new Error(`Resend error ${response.status}: ${err}`);
+  }
+
+  const data = await response.json() as { id?: string };
+  return data.id || "";
+}
 
 export async function sendOrderStartedEmail(order: PhotoOrder): Promise<string> {
   const subject = `[WildPhotography Sale] New order started - ${order.order_ref}`;
@@ -45,15 +65,7 @@ PayPal Item Name: ${order.paypal_item_name}
 PayPal Custom: ${order.paypal_custom}
   `.trim();
 
-  const { data, error } = await getResend().emails.send({
-    from: fromEmail,
-    to: adminEmail,
-    subject,
-    text,
-  });
-
-  if (error) throw new Error(error.message);
-  return data?.id || "";
+  return resendEmail(subject, text);
 }
 
 export async function sendOrderReturnedEmail(order: PhotoOrder): Promise<string> {
@@ -79,13 +91,5 @@ Action Required:
 Verify payment manually in PayPal and fulfill manually.
   `.trim();
 
-  const { data, error } = await getResend().emails.send({
-    from: fromEmail,
-    to: adminEmail,
-    subject,
-    text,
-  });
-
-  if (error) throw new Error(error.message);
-  return data?.id || "";
+  return resendEmail(subject, text);
 }

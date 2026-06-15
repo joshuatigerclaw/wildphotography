@@ -1,0 +1,526 @@
+{
+  "run_at": "2026-06-10T00:10:58.144087+00:00",
+  "total_photos": 69334,
+  "render_ready_total": 68308,
+  "photos_with_issues": 149,
+  "all_clear": false,
+  "checks": {
+    "missing_thumb_url": {
+      "count": 0,
+      "sample": []
+    },
+    "missing_slug": {
+      "count": 0,
+      "sample": []
+    },
+    "missing_title": {
+      "count": 34,
+      "sample": [
+        {
+          "id": 93688,
+          "slug": "montezuma-dji_0001",
+          "title": null,
+          "status": "active"
+        },
+        {
+          "id": 93689,
+          "slug": "montezuma-dji_0011",
+          "title": null,
+          "status": "active"
+        },
+        {
+          "id": 93690,
+          "slug": "montezuma-dji_0026",
+          "title": null,
+          "status": "active"
+        },
+        {
+          "id": 93691,
+          "slug": "montezuma-dji_0030",
+          "title": null,
+          "status": "active"
+        },
+        {
+          "id": 93692,
+          "slug": "montezuma-dji_0041",
+          "title": null,
+          "status": "active"
+        },
+        {
+          "id": 93693,
+          "slug": "montezuma-dji_0045",
+          "title": null,
+          "status": "active"
+        },
+        {
+          "id": 93694,
+          "slug": "montezuma-dji_0047",
+          "title": null,
+          "status": "active"
+        },
+        {
+          "id": 93695,
+          "slug": "montezuma-dji_0069",
+          "title": null,
+          "status": "active"
+        },
+        {
+          "id": 93696,
+          "slug": "montezuma-dji_0076",
+          "title": null,
+          "status": "active"
+        },
+        {
+          "id": 93697,
+          "slug": "montezuma-dji_0080",
+          "title": null,
+          "status": "active"
+        },
+        {
+          "id": 93698,
+          "slug": "montezuma-dji_0088",
+          "title": null,
+          "status": "active"
+        },
+        {
+          "id": 93699,
+          "slug": "montezuma-dji_0089",
+          "title": null,
+          "status": "active"
+        },
+        {
+          "id": 93700,
+          "slug": "montezuma-dji_0090",
+          "title": null,
+          "status": "active"
+        },
+        {
+          "id": 93701,
+          "slug": "montezuma-dji_0100",
+          "title": null,
+          "status": "active"
+        },
+        {
+          "id": 93702,
+          "slug": "montezuma-dji_0994",
+          "title": null,
+          "status": "active"
+        },
+        {
+          "id": 93703,
+          "slug": "montezuma-dji_0997",
+          "title": null,
+          "status": "active"
+        },
+        {
+          "id": 93704,
+          "slug": "tambor-photos-cl0a1897",
+          "title": null,
+          "status": "imported"
+        },
+        {
+          "id": 93705,
+          "slug": "tambor-photos-cl0a3904",
+          "title": null,
+          "status": "imported"
+        },
+        {
+          "id": 93706,
+          "slug": "tambor-photos-cl0a4432",
+          "title": null,
+          "status": "imported"
+        },
+        {
+          "id": 93707,
+          "slug": "tambor-photos-cl0a4594",
+          "title": null,
+          "status": "imported"
+        }
+      ]
+    },
+    "missing_gallery_slug": {
+      "count": 149,
+      "sample": [
+        {
+          "id": 92814,
+          "slug": "2019-11-20-13.25.16",
+          "title": "Costa Rica Landscape Video November 2019",
+          "status": "active"
+        },
+        {
+          "id": 92815,
+          "slug": "2019-11-20-13.28.00",
+          "title": "Costa Rica Scenery Video November 2019",
+          "status": "active"
+        },
+        {
+          "id": 92816,
+          "slug": "amanecer-irazu-abr-25-2020-logo",
+          "title": "Volcano Irazu Sunrise Aerial Video",
+          "status": "active"
+        },
+        {
+          "id": 92819,
+          "slug": "dji-0115a-tortuga-boats-to-sand",
+          "title": "Turtle Beach Aerial Video Costa Rica",
+          "status": "active"
+        },
+        {
+          "id": 92820,
+          "slug": "dji-0199-mp4",
+          "title": "Costa Rica Aerial Landscape Video",
+          "status": "active"
+        },
+        {
+          "id": 93154,
+          "slug": "costa-rica-gallery-puntarenas-costa-rica-dji-0328-1780891602444",
+          "title": "Puntarenas Costa Rica Aerial Drone Photo - Coastal Path Aerial View (DJI 0328)",
+          "status": "published"
+        },
+        {
+          "id": 93155,
+          "slug": "costa-rica-gallery-puntarenas-costa-rica-dji-0331-1780891602589",
+          "title": "Puntarenas Costa Rica Aerial Drone Photo - Tropical Beach Aerial View (DJI 0331)",
+          "status": "published"
+        },
+        {
+          "id": 93156,
+          "slug": "costa-rica-gallery-puntarenas-costa-rica-dji-0333-1780891602732",
+          "title": "Puntarenas Costa Rica Aerial Drone Photo - Sweeping Coastal Aerial Vista (DJI 0333)",
+          "status": "published"
+        },
+        {
+          "id": 93157,
+          "slug": "costa-rica-gallery-puntarenas-costa-rica-dji-0339-1780891602873",
+          "title": "Puntarenas Costa Rica Aerial Drone Photo - Golden Hour Aerial Glow (DJI 0339)",
+          "status": "published"
+        },
+        {
+          "id": 93158,
+          "slug": "costa-rica-gallery-puntarenas-costa-rica-dji-0341-1780891603016",
+          "title": "Puntarenas Costa Rica Aerial Drone Photo - Pacific Sunset Aerial (DJI 0341)",
+          "status": "published"
+        },
+        {
+          "id": 93159,
+          "slug": "costa-rica-gallery-puntarenas-costa-rica-dji-0343-1780891603157",
+          "title": "Puntarenas Costa Rica Aerial Drone Photo - Morning Light Aerial (DJI 0343)",
+          "status": "published"
+        },
+        {
+          "id": 93160,
+          "slug": "costa-rica-gallery-puntarenas-costa-rica-dji-0398-1780891603302",
+          "title": "Puntarenas Costa Rica Aerial Drone Photo - Harbor and Bay Aerial Scene (DJI 0398)",
+          "status": "published"
+        },
+        {
+          "id": 93161,
+          "slug": "costa-rica-gallery-puntarenas-costa-rica-dji-0405-1780891603444",
+          "title": "Puntarenas Costa Rica Aerial Drone Photo - Afternoon Pacific Aerial (DJI 0405)",
+          "status": "published"
+        },
+        {
+          "id": 93162,
+          "slug": "costa-rica-gallery-puntarenas-costa-rica-dji-0408-1780891603586",
+          "title": "Puntarenas Costa Rica Aerial Drone Photo - Palm-Studded Coast Aerial (DJI 0408)",
+          "status": "published"
+        },
+        {
+          "id": 93163,
+          "slug": "costa-rica-gallery-puntarenas-costa-rica-dji-0421-1780891603728",
+          "title": "Puntarenas Costa Rica Aerial Drone Photo - Midday Coastal Aerial (DJI 0421)",
+          "status": "published"
+        },
+        {
+          "id": 93164,
+          "slug": "costa-rica-gallery-puntarenas-costa-rica-dji-0422-1780891603870",
+          "title": "Puntarenas Costa Rica Aerial Drone Photo - Waves Crash Aerial View (DJI 0422)",
+          "status": "published"
+        },
+        {
+          "id": 93165,
+          "slug": "costa-rica-gallery-puntarenas-costa-rica-dji-0425-1780891604017",
+          "title": "Puntarenas Costa Rica Aerial Drone Photo - Dusk Aerial Pacific (DJI 0425)",
+          "status": "published"
+        },
+        {
+          "id": 93166,
+          "slug": "costa-rica-gallery-puntarenas-costa-rica-dji-0429-1780891604158",
+          "title": "Puntarenas Costa Rica Aerial Drone Photo - Cliffside Pacific Aerial (DJI 0429)",
+          "status": "published"
+        },
+        {
+          "id": 93167,
+          "slug": "costa-rica-gallery-puntarenas-costa-rica-dji-0433-1780891604307",
+          "title": "Puntarenas Costa Rica Aerial Drone Photo - Tropical Pacific Aerial (DJI 0433)",
+          "status": "published"
+        },
+        {
+          "id": 93168,
+          "slug": "costa-rica-gallery-puntarenas-costa-rica-dji-0436-1780891604449",
+          "title": "Puntarenas Costa Rica Aerial Drone Photo - Sandy Shore Aerial Panorama (DJI 0436)",
+          "status": "published"
+        }
+      ]
+    },
+    "search_not_ready": {
+      "count": 0,
+      "sample": []
+    },
+    "derivatives_incomplete": {
+      "count": 0,
+      "sample": []
+    },
+    "missing_description": {
+      "count": 34,
+      "sample": [
+        {
+          "id": 93688,
+          "slug": "montezuma-dji_0001",
+          "title": null,
+          "status": "active"
+        },
+        {
+          "id": 93689,
+          "slug": "montezuma-dji_0011",
+          "title": null,
+          "status": "active"
+        },
+        {
+          "id": 93690,
+          "slug": "montezuma-dji_0026",
+          "title": null,
+          "status": "active"
+        },
+        {
+          "id": 93691,
+          "slug": "montezuma-dji_0030",
+          "title": null,
+          "status": "active"
+        },
+        {
+          "id": 93692,
+          "slug": "montezuma-dji_0041",
+          "title": null,
+          "status": "active"
+        },
+        {
+          "id": 93693,
+          "slug": "montezuma-dji_0045",
+          "title": null,
+          "status": "active"
+        },
+        {
+          "id": 93694,
+          "slug": "montezuma-dji_0047",
+          "title": null,
+          "status": "active"
+        },
+        {
+          "id": 93695,
+          "slug": "montezuma-dji_0069",
+          "title": null,
+          "status": "active"
+        },
+        {
+          "id": 93696,
+          "slug": "montezuma-dji_0076",
+          "title": null,
+          "status": "active"
+        },
+        {
+          "id": 93697,
+          "slug": "montezuma-dji_0080",
+          "title": null,
+          "status": "active"
+        },
+        {
+          "id": 93698,
+          "slug": "montezuma-dji_0088",
+          "title": null,
+          "status": "active"
+        },
+        {
+          "id": 93699,
+          "slug": "montezuma-dji_0089",
+          "title": null,
+          "status": "active"
+        },
+        {
+          "id": 93700,
+          "slug": "montezuma-dji_0090",
+          "title": null,
+          "status": "active"
+        },
+        {
+          "id": 93701,
+          "slug": "montezuma-dji_0100",
+          "title": null,
+          "status": "active"
+        },
+        {
+          "id": 93702,
+          "slug": "montezuma-dji_0994",
+          "title": null,
+          "status": "active"
+        },
+        {
+          "id": 93703,
+          "slug": "montezuma-dji_0997",
+          "title": null,
+          "status": "active"
+        },
+        {
+          "id": 93704,
+          "slug": "tambor-photos-cl0a1897",
+          "title": null,
+          "status": "imported"
+        },
+        {
+          "id": 93705,
+          "slug": "tambor-photos-cl0a3904",
+          "title": null,
+          "status": "imported"
+        },
+        {
+          "id": 93706,
+          "slug": "tambor-photos-cl0a4432",
+          "title": null,
+          "status": "imported"
+        },
+        {
+          "id": 93707,
+          "slug": "tambor-photos-cl0a4594",
+          "title": null,
+          "status": "imported"
+        }
+      ]
+    },
+    "missing_keywords": {
+      "count": 34,
+      "sample": [
+        {
+          "id": 93688,
+          "slug": "montezuma-dji_0001",
+          "title": null,
+          "status": "active"
+        },
+        {
+          "id": 93689,
+          "slug": "montezuma-dji_0011",
+          "title": null,
+          "status": "active"
+        },
+        {
+          "id": 93690,
+          "slug": "montezuma-dji_0026",
+          "title": null,
+          "status": "active"
+        },
+        {
+          "id": 93691,
+          "slug": "montezuma-dji_0030",
+          "title": null,
+          "status": "active"
+        },
+        {
+          "id": 93692,
+          "slug": "montezuma-dji_0041",
+          "title": null,
+          "status": "active"
+        },
+        {
+          "id": 93693,
+          "slug": "montezuma-dji_0045",
+          "title": null,
+          "status": "active"
+        },
+        {
+          "id": 93694,
+          "slug": "montezuma-dji_0047",
+          "title": null,
+          "status": "active"
+        },
+        {
+          "id": 93695,
+          "slug": "montezuma-dji_0069",
+          "title": null,
+          "status": "active"
+        },
+        {
+          "id": 93696,
+          "slug": "montezuma-dji_0076",
+          "title": null,
+          "status": "active"
+        },
+        {
+          "id": 93697,
+          "slug": "montezuma-dji_0080",
+          "title": null,
+          "status": "active"
+        },
+        {
+          "id": 93698,
+          "slug": "montezuma-dji_0088",
+          "title": null,
+          "status": "active"
+        },
+        {
+          "id": 93699,
+          "slug": "montezuma-dji_0089",
+          "title": null,
+          "status": "active"
+        },
+        {
+          "id": 93700,
+          "slug": "montezuma-dji_0090",
+          "title": null,
+          "status": "active"
+        },
+        {
+          "id": 93701,
+          "slug": "montezuma-dji_0100",
+          "title": null,
+          "status": "active"
+        },
+        {
+          "id": 93702,
+          "slug": "montezuma-dji_0994",
+          "title": null,
+          "status": "active"
+        },
+        {
+          "id": 93703,
+          "slug": "montezuma-dji_0997",
+          "title": null,
+          "status": "active"
+        },
+        {
+          "id": 93704,
+          "slug": "tambor-photos-cl0a1897",
+          "title": null,
+          "status": "imported"
+        },
+        {
+          "id": 93705,
+          "slug": "tambor-photos-cl0a3904",
+          "title": null,
+          "status": "imported"
+        },
+        {
+          "id": 93706,
+          "slug": "tambor-photos-cl0a4432",
+          "title": null,
+          "status": "imported"
+        },
+        {
+          "id": 93707,
+          "slug": "tambor-photos-cl0a4594",
+          "title": null,
+          "status": "imported"
+        }
+      ]
+    }
+  },
+  "status": "success"
+}

@@ -27,6 +27,8 @@ export default function RootLayout({
             gtag('config', 'G-EPPFTRYF92');
           `}
         </Script>
+        {/* GetYourGuide Widget */}
+        <Script async defer src="https://widget.getyourguide.com/dist/pa.umd.production.min.js" data-gyg-partner-id="6ZV7KMH" />
       </head>
       <body>
         <Masthead />

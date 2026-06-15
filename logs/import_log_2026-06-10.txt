@@ -1,0 +1,26 @@
+=== WildPhotography Import Worker Run ===
+Time: 2026-06-10 16:05 PM (America/Costa_Rica)
+Reference UTC: 2026-06-10 22:05 UTC
+
+SOURCE SCAN:
+- External drive: /Volumes/ADATA SC740/Smugmug Backup/Galleries/
+- Costa-Rica-Gallery folders: 95 subfolders
+- New-Uploads: 3 DJI photos (already in DB)
+- Best-Pictures: 164 JPG files (already in DB)
+- Family: 6 photos (already in DB)
+
+QUEUE STATUS:
+- fresh_batch_next_5.json: EMPTY []
+- google_import_queue.json: EMPTY []
+- working_batch_queue.json: 0 items
+- google_incoming_new_files.json: EMPTY []
+- import_hash_staging: 0 rows
+
+DATABASE STATE:
+- Total photos: 69,953
+- Recent import batches (jun2026_batch1, jun2026_batch2): 0 new imports (duplicates only)
+- No pending ingest_jobs
+
+RESULT: NO ACTION
+The import queue is effectively exhausted. No new photos found that aren't already in the database.
+All Costa-Rica source folders have been previously processed.
