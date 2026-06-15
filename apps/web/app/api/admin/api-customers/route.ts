@@ -1,5 +1,4 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { getAdminClient } from '@/lib/admin/db';
 import { d1QueryAll } from '@/lib/d1';
 
 export const dynamic = 'force-dynamic';
@@ -26,7 +25,7 @@ type CustomerRow = {
   created_at: string;
 };
 
-// GET /api/admin/api-customers — list all customers with usage
+// GET /api/admin/api-customers — list all customers with usage (D1 only)
 export async function GET(req: NextRequest) {
   if (!await adminAuth(req)) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
@@ -35,7 +34,6 @@ export async function GET(req: NextRequest) {
   const now = new Date();
   const yearMonth = now.getUTCFullYear() * 100 + now.getUTCMonth() + 1;
 
-  // ── Try D1 first ────────────────────────────────────────────────────────
   const rows = await d1QueryAll<CustomerRow>(
     `SELECT c.id, c.email, c.name, c.company,
             c.plan_id, c.plan_name, c.monthly_call_limit, c.status,
@@ -51,34 +49,9 @@ export async function GET(req: NextRequest) {
     [yearMonth]
   );
 
-  if (rows) {
-    return NextResponse.json({ customers: rows });
+  if (!rows) {
+    return NextResponse.json({ error: 'D1 query failed' }, { status: 500 });
   }
 
-  // ── Fallback: Neon ──────────────────────────────────────────────────────
-  console.log('[admin] api-customers: D1 failed, falling back to Neon');
-  const client = getAdminClient();
-  try {
-    await client.connect();
-    const res = await client.query(
-      `SELECT c.id, c.email, c.name, c.company,
-              c.plan_id, c.plan_name, c.monthly_call_limit, c.status,
-              c.created_at::text,
-              k.key_prefix,
-              k.status AS key_status,
-              k.last_used_at::text AS last_used_at,
-              u.calls_used
-       FROM api_customers c
-       LEFT JOIN api_keys k ON k.customer_id = c.id AND k.status = 'active'
-       LEFT JOIN api_monthly_usage u ON u.customer_id = c.id AND u.period_yyyymm = $1
-       ORDER BY c.created_at DESC`,
-      [yearMonth]
-    );
-    return NextResponse.json({ customers: res.rows });
-  } catch (e) {
-    console.error('api-customers list error:', e);
-    return NextResponse.json({ error: String(e) }, { status: 500 });
-  } finally {
-    await client.end();
-  }
+  return NextResponse.json({ customers: rows });
 }

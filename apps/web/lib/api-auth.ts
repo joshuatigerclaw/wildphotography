@@ -6,7 +6,7 @@
  * Behavior:
  *   missing key → 401 | invalid key → 401 | inactive sub → 403
  *   quota exceeded → 429 | valid key → 200
- *   usage increments every authenticated request (D1 async post-response)
+ *   usage increments every authenticated request (D1 inline, non-blocking fire-and-forget)
  *   never returns raw API key
  *
  * Observability:
@@ -15,7 +15,6 @@
 
 import { createHash } from 'crypto';
 import { NextRequest } from 'next/server';
-import { after } from 'next/server';
 
 // ── Types ───────────────────────────────────────────────────────────────────
 
@@ -117,6 +116,10 @@ export function hashApiKey(key: string): string {
   return createHash('sha256').update(key).digest('hex');
 }
 
+function hashField(value: string): string {
+  return createHash('sha256').update(value).digest('hex');
+}
+
 // ── Year-month helpers ───────────────────────────────────────────────────────
 
 function currentYearMonthInt(): number {
@@ -127,6 +130,39 @@ function currentYearMonthInt(): number {
 function currentYearMonthStr(): string {
   const now = new Date();
   return `${now.getUTCFullYear()}-${String(now.getUTCMonth() + 1).padStart(2, '0')}`;
+}
+
+// ── Usage event logging (D1) ─────────────────────────────────────────────────
+
+interface UsageEvent {
+  customerId: number;
+  keyId: number;
+  endpoint: string;
+  requestPath: string;
+  responseStatus: number;
+  unitsUsed?: number;
+  userAgent?: string;
+  ipAddress?: string;
+}
+
+async function logUsageEvent(event: UsageEvent): Promise<void> {
+  const uaHash = event.userAgent ? hashField(event.userAgent).slice(0, 16) : null;
+  const ipHash = event.ipAddress ? hashField(event.ipAddress).slice(0, 16) : null;
+  await d1Exec(
+    `INSERT INTO api_usage_events
+       (customer_id, api_key_id, endpoint, request_path, response_status, units_used, user_agent_hash, ip_hash)
+     VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
+    [
+      event.customerId,
+      event.keyId,
+      event.endpoint,
+      event.requestPath,
+      event.responseStatus,
+      event.unitsUsed ?? 1,
+      uaHash,
+      ipHash,
+    ]
+  );
 }
 
 // ── Auth: D1 only (Neon removed) ────────────────────────────────────────────
@@ -151,7 +187,7 @@ export async function validateApiKey(
   const yearMonthInt = currentYearMonthInt();
   const yearMonthStr = currentYearMonthStr();
 
-  // ── Try D1 ──────────────────────────────────────────────────────────────
+  // ── D1 auth ──────────────────────────────────────────────────────────────
   const d1Row = await d1Query<{
     key_id: number;
     customer_id: number;
@@ -186,12 +222,42 @@ export async function validateApiKey(
     console.log('[d1] Auth success key_id=' + d1Row.key_id);
 
     if (d1Row.key_status !== 'active') {
+      const endpoint = req.nextUrl.pathname.split('/').pop() || 'unknown';
+      logUsageEvent({
+        customerId: d1Row.customer_id,
+        keyId: d1Row.key_id,
+        endpoint,
+        requestPath: req.nextUrl.pathname,
+        responseStatus: 401,
+        userAgent: req.headers.get('user-agent') || undefined,
+        ipAddress: req.headers.get('x-forwarded-for')?.split(',')[0] || req.headers.get('cf-connecting-ip') || undefined,
+      }).catch(() => {});
       return { authorized: false, status: 401, message: 'API key has been revoked.' };
     }
     if (d1Row.customer_status !== 'active') {
+      const endpoint = req.nextUrl.pathname.split('/').pop() || 'unknown';
+      logUsageEvent({
+        customerId: d1Row.customer_id,
+        keyId: d1Row.key_id,
+        endpoint,
+        requestPath: req.nextUrl.pathname,
+        responseStatus: 403,
+        userAgent: req.headers.get('user-agent') || undefined,
+        ipAddress: req.headers.get('x-forwarded-for')?.split(',')[0] || req.headers.get('cf-connecting-ip') || undefined,
+      }).catch(() => {});
       return { authorized: false, status: 403, message: 'Account is not active. Please contact support.' };
     }
     if (d1Row.calls_used >= d1Row.monthly_call_limit) {
+      const endpoint = req.nextUrl.pathname.split('/').pop() || 'unknown';
+      logUsageEvent({
+        customerId: d1Row.customer_id,
+        keyId: d1Row.key_id,
+        endpoint,
+        requestPath: req.nextUrl.pathname,
+        responseStatus: 429,
+        userAgent: req.headers.get('user-agent') || undefined,
+        ipAddress: req.headers.get('x-forwarded-for')?.split(',')[0] || req.headers.get('cf-connecting-ip') || undefined,
+      }).catch(() => {});
       return {
         authorized: false,
         status: 429,
@@ -199,12 +265,23 @@ export async function validateApiKey(
       };
     }
 
-    // Increment usage in D1 (non-blocking, after response sent)
-    after(() => {
-      d1IncrementUsage(d1Row.key_id, d1Row.customer_id, yearMonthInt).catch(
-        (e: Error) => console.error('[d1] Usage increment error:', e.message)
-      );
-    });
+    // Increment usage in D1 (inline — after() not reliable in CF Workers for outbound fetch)
+    d1IncrementUsage(d1Row.key_id, d1Row.customer_id, yearMonthInt).catch(
+      (e: Error) => console.error('[d1] Usage increment error:', e.message)
+    );
+    // Log successful call (sample ~10%)
+    if (Math.random() < 0.1) {
+      const endpoint = req.nextUrl.pathname.split('/').pop() || 'unknown';
+      logUsageEvent({
+        customerId: d1Row.customer_id,
+        keyId: d1Row.key_id,
+        endpoint,
+        requestPath: req.nextUrl.pathname,
+        responseStatus: 200,
+        userAgent: req.headers.get('user-agent') || undefined,
+        ipAddress: req.headers.get('x-forwarded-for')?.split(',')[0] || req.headers.get('cf-connecting-ip') || undefined,
+      }).catch(() => {});
+    }
 
     return {
       authorized: true,
@@ -238,5 +315,3 @@ async function d1IncrementUsage(
     [customerId, keyId, yearMonthInt]
   );
 }
-
-
