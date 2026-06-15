@@ -6,19 +6,29 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "deploy:worker": "npm run build && cp -rf .next/static/* .open-next/assets/_next/static/ && cp .next/BUILD_ID .open-next/assets/BUILD_ID && npx opennextjs-cloudflare build --dangerouslyUseUnsupportedNextVersion && node scripts/patch-env.mjs && npx wrangler deploy --config wrangler.toml",
+    "deploy:visit-consumer": "npx wrangler deploy --config wrangler.visit.toml"
   },
   "dependencies": {
+    "@aws-sdk/client-s3": "^3.1039.0",
+    "@aws-sdk/s3-request-presigner": "^3.1053.0",
     "@cloudflare/next-on-pages": "^1.13.16",
     "@neondatabase/serverless": "^0.9.0",
-    "@opennextjs/cloudflare": "^1.17.1",
+    "@opennextjs/cloudflare": "^1.19.4",
+    "busboy": "^1.6.0",
     "drizzle-orm": "^0.29.0",
+    "google-auth-library": "^10.6.2",
+    "googleapis": "^171.4.0",
     "next": "^14.2.5",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-virtuoso": "^4.18.3",
+    "resend": "^6.12.2",
+    "stripe": "^22.1.1",
+    "styled-jsx": "^5.1.1",
     "typesense": "^3.0.2",
-    "wrangler": "^4.71.0",
+    "wrangler": "^4.94.0",
     "yet-another-react-lightbox": "^3.29.1"
   },
   "devDependencies": {
