@@ -12,29 +12,32 @@ const typesense = new Client({
 
 const COLLECTION = 'photos';
 
+// Typesense schema fields: slug, title, description, keywords[], category, country,
+// region, location_name, gallery_slug, gallery_title, url, thumb_url, location,
+// species, derivatives_complete, ready_for_public_render, search_ready,
+// species_common_name, city_name
+// Note: sort_by 'popularity' does NOT exist in the schema
+
 export const dynamic = 'force-dynamic';
 
 export async function GET(request: NextRequest) {
   const searchParams = request.nextUrl.searchParams;
   const query = searchParams.get('q') || '*';
-  const page = parseInt(searchParams.get('page') || '1', 10);
-  const perPage = parseInt(searchParams.get('per_page') || searchParams.get('limit') || '50', 10);
-  
+  const page = Math.max(1, parseInt(searchParams.get('page') || '1', 10));
+  const perPage = Math.min(
+    parseInt(searchParams.get('per_page') || searchParams.get('limit') || '20', 10),
+    30  // cap at 30 for public search
+  );
+
   // Filter parameters
   const gallery = searchParams.get('gallery');
   const location = searchParams.get('location');
-  const camera = searchParams.get('camera');
-  const year = searchParams.get('year');
-  const orientation = searchParams.get('orientation');
-  
+
   // Build filter_by
   const filters: string[] = [];
-  if (gallery) filters.push(`gallery:=${gallery}`);
-  if (location) filters.push(`location:=${location}`);
-  if (camera) filters.push(`camera_model:=${camera}`);
-  if (year) filters.push(`taken_year:=${year}`);
-  if (orientation) filters.push(`orientation:=${orientation}`);
-  
+  if (gallery) filters.push(`gallery_slug:=${gallery}`);
+  if (location) filters.push(`location_name:${location}`);
+
   const filterBy = filters.length > 0 ? filters.join(' && ') : undefined;
 
   try {
@@ -43,30 +46,24 @@ export async function GET(request: NextRequest) {
       .documents()
       .search({
         q: query === '*' || !query ? '*' : query,
-        query_by: 'title,description,keywords,location,gallery',
+        query_by: "title,keywords,location_name,species_common_name",
         filter_by: filterBy,
-        sort_by: 'date_uploaded:desc',
+        // Removed sort_by: 'popularity:desc' — field does not exist in schema
+        // Default sort is by relevance for text queries
         page,
         per_page: perPage,
-        facet_by: ['keywords', 'gallery', 'location', 'orientation', 'camera_model', 'lens', 'taken_year'],
-        include_fields: 'id,slug,title,thumb_url,small_url,medium_url,large_url,preview_url,keywords,gallery,location,taken_year',
+        // Only return fields actually used by SearchClient
+        include_fields: "id,slug,title,thumb_url,location_name,species_common_name",
       });
 
-    // Transform to API response format
+    // Transform to API response — minimal fields for search cards
     const response = {
       photos: (searchResult.hits || []).map((hit: any) => ({
         id: hit.document.id,
         slug: hit.document.slug,
         title: hit.document.title,
         thumbUrl: hit.document.thumb_url,
-        smallUrl: hit.document.small_url,
-        mediumUrl: hit.document.medium_url,
-        largeUrl: hit.document.large_url,
-        previewUrl: hit.document.preview_url,
-        keywords: hit.document.keywords,
-        locationName: hit.document.location,
-        gallery: hit.document.gallery,
-        takenYear: hit.document.taken_year,
+        locationName: hit.document.location_name,
       })),
       total: searchResult.found || 0,
       page: searchResult.page || page,
@@ -74,7 +71,12 @@ export async function GET(request: NextRequest) {
       hasMore: (searchResult.page || page) * perPage < (searchResult.found || 0),
     };
 
-    return NextResponse.json(response);
+    return NextResponse.json(response, {
+      headers: {
+        // Cache at CDN edge for 5 minutes — search results are personalized but stable
+        'Cache-Control': 'public, s-maxage=300, stale-while-revalidate=60',
+      },
+    });
   } catch (error) {
     console.error('Search API error:', error);
     return NextResponse.json(
