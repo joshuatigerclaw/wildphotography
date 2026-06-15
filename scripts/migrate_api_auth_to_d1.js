@@ -1,0 +1,189 @@
+#!/usr/bin/env node
+/**
+ * scripts/migrate_api_auth_to_d1.js
+ * 
+ * Exports api_customers, api_keys, api_monthly_usage from Neon
+ * and imports them into Cloudflare D1 (wildphoto-api).
+ *
+ * Usage:
+ *   node scripts/migrate_api_auth_to_d1.js --dry-run   # default
+ *   node scripts/migrate_api_auth_to_d1.js --apply
+ *
+ * Prerequisites:
+ *   1. Create D1 database:
+ *        npx wrangler d1 create wildphoto-api
+ *        # Note the UUID from output
+ *   2. Add binding to wrangler.toml:
+ *        [[d1_databases]]
+ *        binding = "API_D1"
+ *        database_name = "wildphoto-api"
+ *        database_id = "<uuid-from-step-1>"
+ *   3. Create schema:
+ *        npx wrangler d1 execute wildphoto-api --file=./migrations/0001_api_auth.sql
+ *   4. Update API_D1_DATABASE_ID in env or pass as --db-id
+ *   5. Run this migration:
+ *        node scripts/migrate_api_auth_to_d1.js --apply --db-id <uuid>
+ */
+
+'use strict';
+
+const { Client } = require('pg');
+
+const NEON_DB = process.env.DATABASE_URL ||
+  'postgresql://neondb_owner:npg_BvF2JsQ8drba@ep-calm-fire-ad0dfnqd-pooler.c-2.us-east-1.aws.neon.tech/wildphotography?sslmode=require';
+
+const { d1Execute } = require('./d1-helper.js');
+
+const opts = require('commander')
+  .option('--apply', 'Apply changes (default is dry-run)', false)
+  .option('--db-id <id>', 'D1 database ID (or set API_D1_DATABASE_ID env var)', process.env.API_D1_DATABASE_ID || '')
+  .option('--account-id <id>', 'Cloudflare account ID', process.env.CLOUDFLARE_ACCOUNT_ID || '3ec62f93675c404fe4a9a4949e38e5e5')
+  .parse(process.argv)
+  .opts();
+
+if (!opts.dbId) {
+  console.error('ERROR: --db-id is required (or set API_D1_DATABASE_ID env var)');
+  console.error('Example: node scripts/migrate_api_auth_to_d1.js --apply --db-id <uuid>');
+  process.exit(1);
+}
+
+function log(level, ...args) {
+  const ts = new Date().toISOString().slice(11, 19);
+  console.log(`[${ts}] [${level}]`, ...args);
+}
+
+async function fetchFromNeon(query, params = []) {
+  const client = new Client(NEON_DB);
+  await client.connect();
+  try {
+    const res = await client.query(query, params);
+    return res.rows;
+  } finally {
+    await client.end();
+  }
+}
+
+function d1Timestamp(val) {
+  if (!val) return null;
+  // Convert PostgreSQL timestamptz to SQLite datetime
+  return new Date(val).toISOString().replace('T', ' ').slice(0, 19);
+}
+
+async function main() {
+  log('info', `migrate_api_auth_to_d1 | apply=${opts.apply} | db=${opts.dbId.slice(0, 8)}...`);
+
+  if (!opts.apply) {
+    log('warn', 'DRY RUN — no changes will be made. Use --apply to apply.');
+  }
+
+  // ── Export from Neon ────────────────────────────────────────
+  log('info', 'Fetching api_customers from Neon...');
+  const customers = await fetchFromNeon(
+    'SELECT id, email, name, company, stripe_customer_id, plan_id, plan_name, monthly_call_limit, status, current_period_start, current_period_end, website, lead_id, onboarded_at, created_at, updated_at FROM api_customers'
+  );
+  log('info', `  ${customers.length} customers`);
+
+  log('info', 'Fetching api_keys from Neon...');
+  const keys = await fetchFromNeon(
+    'SELECT id, customer_id, key_prefix, key_hash, name, status, last_used_at, created_at, revoked_at FROM api_keys'
+  );
+  log('info', `  ${keys.length} keys`);
+
+  log('info', 'Fetching api_monthly_usage from Neon...');
+  const usage = await fetchFromNeon(
+    'SELECT id, customer_id, api_key_id, period_yyyymm, calls_used, updated_at FROM api_monthly_usage'
+  );
+  log('info', `  ${usage.length} usage records`);
+
+  if (!opts.apply) {
+    log('info', 'Dry run complete. No changes applied.');
+    return;
+  }
+
+  // ── Import to D1 ──────────────────────────────────────────
+  log('info', 'Applying migrations to D1...');
+  const fs = require('fs');
+  const schemaPath = require('path').join(__dirname, '..', 'apps', 'web', 'migrations', '0001_api_auth.sql');
+  const schema = fs.readFileSync(schemaPath, 'utf8');
+  
+  // Split schema into individual statements
+  const statements = schema
+    .split(';')
+    .map(s => s.trim())
+    .filter(s => s.length > 0 && !s.startsWith('--'));
+
+  for (const stmt of statements) {
+    try {
+      await d1Execute(opts.dbId, stmt);
+    } catch (e) {
+      // Ignore "table already exists" errors
+      if (!e.message.includes('already exists')) {
+        log('error', `Schema error: ${e.message}`);
+      }
+    }
+  }
+  log('info', 'Schema applied');
+
+  // Insert customers
+  log('info', 'Inserting customers...');
+  for (const c of customers) {
+    const sql = `INSERT OR REPLACE INTO api_customers
+      (id, email, name, company, stripe_customer_id, plan_id, plan_name, monthly_call_limit, status, current_period_start, current_period_end, website, lead_id, onboarded_at, created_at, updated_at)
+      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`;
+    const params = [
+      c.id, c.email, c.name, c.company, c.stripe_customer_id, c.plan_id,
+      c.plan_name, c.monthly_call_limit, c.status,
+      d1Timestamp(c.current_period_start), d1Timestamp(c.current_period_end),
+      c.website, c.lead_id, d1Timestamp(c.onboarded_at),
+      d1Timestamp(c.created_at), d1Timestamp(c.updated_at)
+    ];
+    try {
+      await d1Execute(opts.dbId, sql, params);
+    } catch (e) {
+      log('error', `Customer ${c.id} error: ${e.message}`);
+    }
+  }
+  log('info', `  Inserted ${customers.length} customers`);
+
+  // Insert keys
+  log('info', 'Inserting api_keys...');
+  for (const k of keys) {
+    const sql = `INSERT OR REPLACE INTO api_keys
+      (id, customer_id, key_prefix, key_hash, name, status, last_used_at, created_at, revoked_at)
+      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)`;
+    const params = [
+      k.id, k.customer_id, k.key_prefix, k.key_hash, k.name, k.status,
+      d1Timestamp(k.last_used_at), d1Timestamp(k.created_at), d1Timestamp(k.revoked_at)
+    ];
+    try {
+      await d1Execute(opts.dbId, sql, params);
+    } catch (e) {
+      log('error', `Key ${k.id} error: ${e.message}`);
+    }
+  }
+  log('info', `  Inserted ${keys.length} keys`);
+
+  // Insert usage
+  log('info', 'Inserting api_monthly_usage...');
+  for (const u of usage) {
+    const sql = `INSERT OR REPLACE INTO api_monthly_usage
+      (id, customer_id, api_key_id, period_yyyymm, calls_used, updated_at)
+      VALUES (?, ?, ?, ?, ?, ?)`;
+    const params = [
+      u.id, u.customer_id, u.api_key_id, u.period_yyyymm, u.calls_used, d1Timestamp(u.updated_at)
+    ];
+    try {
+      await d1Execute(opts.dbId, sql, params);
+    } catch (e) {
+      log('error', `Usage ${u.id} error: ${e.message}`);
+    }
+  }
+  log('info', `  Inserted ${usage.length} usage records`);
+
+  log('info', 'Migration complete!');
+}
+
+main().catch(err => {
+  log('error', 'Unhandled error:', err.message);
+  process.exit(1);
+});

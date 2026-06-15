@@ -1,11 +1,7 @@
-/**
- * API v1: Usage endpoint — check current quota usage
- * GET /api/v1/usage
- * Auth: Bearer token (wpa_...)
- */
 import { NextRequest, NextResponse } from 'next/server';
 import { getAdminClient } from '@/lib/admin/db';
 import { validateApiKey } from '@/lib/api-auth';
+import { d1Query } from '@/lib/d1';
 
 export const dynamic = 'force-dynamic';
 
@@ -16,28 +12,24 @@ export async function GET(request: NextRequest) {
   }
 
   const { customer } = auth;
+  const yearMonthInt = new Date().getUTCFullYear() * 100 + (new Date().getUTCMonth() + 1);
 
-  const client = getAdminClient();
-  try {
-    await client.connect();
+  // ── Try D1 first ────────────────────────────────────────────────────────
+  const row = await d1Query<{ calls_used: number }>(
+    `SELECT calls_used FROM api_monthly_usage
+     WHERE customer_id = ? AND period_yyyymm = ?`,
+    [customer.customerId, yearMonthInt]
+  );
 
-    const usageRes = await client.query(
-      `SELECT calls_used FROM api_monthly_usage WHERE customer_id = $1 AND period_yyyymm = $2`,
-      [customer.customerId, customer.yearMonth]
-    );
+  const used = row?.calls_used ?? 0;
+  const remaining = Math.max(0, customer.monthlyLimit - used);
 
-    const used = usageRes.rows[0]?.calls_used || 0;
-    const remaining = Math.max(0, customer.monthlyLimit - used);
-
-    return NextResponse.json({
-      plan: customer.planName,
-      limit: customer.monthlyLimit,
-      used,
-      remaining,
-      resetsAt: `${customer.yearMonth}-01`,
-      period: customer.yearMonth,
-    });
-  } finally {
-    await client.end();
-  }
+  return NextResponse.json({
+    plan: customer.planName,
+    limit: customer.monthlyLimit,
+    used,
+    remaining,
+    resetsAt: `${customer.yearMonth}-01`,
+    period: customer.yearMonth,
+  });
 }

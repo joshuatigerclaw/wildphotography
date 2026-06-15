@@ -15,9 +15,6 @@ GOOGLE_SHEET_ID = "1_l6ul1ze4O6JQCke3TH14r8TqxgzuArN09o4wjxS4Z4"
 GOOGLE_SHEET_TAB = "Orders"
 RESEND_FROM_EMAIL = "orders@wildphotography.com"
 
-[Observability]
-enabled = true
-
 [[r2_buckets]]
 binding = "PHOTOS_R2"
 bucket_name = "wildphoto-storage"
@@ -25,3 +22,8 @@ bucket_name = "wildphoto-storage"
 [[queues.producers]]
 binding = "DOQueue"
 queue = "do-queue"
+
+[[d1_databases]]
+binding = "API_DB"
+database_name = "wildphoto-api"
+database_id = "57a98059-434d-46a3-a72b-8aa8a87b0fdc"

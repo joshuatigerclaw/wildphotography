@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getAdminClient } from '@/lib/admin/db';
+import { d1Exec } from '@/lib/d1';
 
 export const dynamic = 'force-dynamic';
 
@@ -17,6 +18,13 @@ export async function POST(req: NextRequest, { params }: { params: Promise<{ id:
   const customerId = parseInt(id, 10);
   if (isNaN(customerId)) return NextResponse.json({ error: 'Invalid ID' }, { status: 400 });
 
+  // ── D1 primary ─────────────────────────────────────────────────────────
+  await d1Exec(
+    `UPDATE api_keys SET status = 'revoked' WHERE customer_id = ? AND status = 'active'`,
+    [customerId]
+  );
+
+  // ── Neon secondary (consistency) ─────────────────────────────────────────
   const client = getAdminClient();
   try {
     await client.connect();
@@ -24,11 +32,11 @@ export async function POST(req: NextRequest, { params }: { params: Promise<{ id:
       `UPDATE api_keys SET status = 'revoked' WHERE customer_id = $1 AND status = 'active'`,
       [customerId]
     );
-    return NextResponse.json({ success: true });
   } catch (e) {
-    console.error('revoke key error:', e);
-    return NextResponse.json({ error: String(e) }, { status: 500 });
+    console.error('revoke key neon error:', e);
   } finally {
     await client.end();
   }
+
+  return NextResponse.json({ success: true });
 }
