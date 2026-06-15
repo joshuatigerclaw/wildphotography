@@ -1,23 +1,21 @@
 /**
- * API Key auth + usage tracking — D1 primary, Neon fallback.
+ * API Key auth + usage tracking — D1 only (Neon removed).
  *
- * Hot path: D1 via Cloudflare REST API (~50-150ms from CF edge)
- * Fallback: Neon via pg (WebSocket, ~1000ms)
+ * Auth path: D1 via Cloudflare REST API (~50-150ms from CF edge)
  *
- * Behavior identical to original:
+ * Behavior:
  *   missing key → 401 | invalid key → 401 | inactive sub → 403
  *   quota exceeded → 429 | valid key → 200
- *   usage increments every authenticated request
+ *   usage increments every authenticated request (D1 async post-response)
  *   never returns raw API key
  *
  * Observability:
- *   console.log: d1_auth_success | d1_auth_fallback | d1_auth_error | neon_auth_fallback
+ *   console.log: d1_auth_success | d1_auth_error
  */
 
 import { createHash } from 'crypto';
 import { NextRequest } from 'next/server';
 import { after } from 'next/server';
-import { getAdminClient } from '@/lib/admin/db';
 
 // ── Types ───────────────────────────────────────────────────────────────────
 
@@ -32,7 +30,7 @@ export type AuthenticatedCustomer = {
 
 // ── D1 via Cloudflare REST API ───────────────────────────────────────────────
 // Uses CLOUDFLARE_API_TOKEN secret via process.env.
-// D1 REST API is fast from CF edge (~50-150ms vs ~1000ms for Neon).
+// D1 REST API from CF edge: ~50-150ms.
 
 const D1_ACCOUNT_ID = '3ec62f93675c404fe4a9a4949e38e5e5';
 const D1_DB_ID = '57a98059-434d-46a3-a72b-8aa8a87b0fdc';
@@ -131,7 +129,7 @@ function currentYearMonthStr(): string {
   return `${now.getUTCFullYear()}-${String(now.getUTCMonth() + 1).padStart(2, '0')}`;
 }
 
-// ── Auth: try D1 first, fallback to Neon ─────────────────────────────────────
+// ── Auth: D1 only (Neon removed) ────────────────────────────────────────────
 
 export async function validateApiKey(
   req: NextRequest
@@ -221,89 +219,8 @@ export async function validateApiKey(
     };
   }
 
-  // ── Fallback: Neon ────────────────────────────────────────────────────
-  console.log('[d1] D1 miss — falling back to Neon');
-  return await validateApiKeyFromNeon(keyHash, yearMonthInt, yearMonthStr);
-}
-
-async function validateApiKeyFromNeon(
-  keyHash: string,
-  yearMonthInt: number,
-  yearMonthStr: string
-): Promise<
-  | { authorized: true; customer: AuthenticatedCustomer }
-  | { authorized: false; status: number; message: string }
-> {
-  const client = getAdminClient();
-  try {
-    await client.connect();
-    const result = await client.query(
-      `SELECT
-        k.id AS key_id,
-        k.customer_id,
-        k.status AS key_status,
-        c.status AS customer_status,
-        c.email,
-        c.plan_id,
-        c.plan_name,
-        c.monthly_call_limit,
-        COALESCE(u.calls_used, 0) AS calls_used
-      FROM api_keys k
-      JOIN api_customers c ON c.id = k.customer_id
-      LEFT JOIN api_monthly_usage u
-        ON u.customer_id = k.customer_id
-       AND u.period_yyyymm = $1
-      WHERE k.key_hash = $2`,
-      [yearMonthInt, keyHash]
-    );
-
-    if (!result.rows.length) {
-      console.log('[neon] Auth fallback: key not found');
-      return { authorized: false, status: 401, message: 'Invalid API key.' };
-    }
-
-    const row = result.rows[0] as Record<string, unknown>;
-
-    if ((row.key_status as string) !== 'active') {
-      return { authorized: false, status: 401, message: 'API key has been revoked.' };
-    }
-    if ((row.customer_status as string) !== 'active') {
-      return { authorized: false, status: 403, message: 'Account is not active. Please contact support.' };
-    }
-    if ((row.calls_used as number) >= (row.monthly_call_limit as number)) {
-      return {
-        authorized: false,
-        status: 429,
-        message: `Monthly limit reached (${row.monthly_call_limit} calls/month). Resets on the 1st of next month.`,
-      };
-    }
-
-    // Increment usage in Neon (non-blocking)
-    after(() => {
-      neonIncrementUsage(row.key_id as number, row.customer_id as number, yearMonthInt).catch(
-        (e: Error) => console.error('[neon] Usage increment error:', e.message)
-      );
-    });
-
-    console.log('[neon] Auth fallback success customer_id=' + row.customer_id);
-
-    return {
-      authorized: true,
-      customer: {
-        customerId: row.customer_id as number,
-        email: row.email as string,
-        planId: row.plan_id as string,
-        planName: row.plan_name as string,
-        monthlyLimit: row.monthly_call_limit as number,
-        yearMonth: yearMonthStr,
-      },
-    };
-  } catch (e) {
-    console.error('[neon] Auth fallback error:', (e as Error).message);
-    return { authorized: false, status: 500, message: 'Internal error during authentication.' };
-  } finally {
-    await client.end();
-  }
+  // D1 is authoritative — key not found in D1
+  return { authorized: false, status: 401, message: 'Invalid API key.' };
 }
 
 // ── Usage increment ─────────────────────────────────────────────────────────────
@@ -322,22 +239,4 @@ async function d1IncrementUsage(
   );
 }
 
-async function neonIncrementUsage(
-  keyId: number,
-  customerId: number,
-  yearMonthInt: number
-): Promise<void> {
-  const client = getAdminClient();
-  try {
-    await client.connect();
-    await client.query(
-      `INSERT INTO api_monthly_usage (customer_id, api_key_id, period_yyyymm, calls_used)
-       VALUES ($1, $2, $3, 1)
-       ON CONFLICT (customer_id, period_yyyymm)
-       DO UPDATE SET calls_used = api_monthly_usage.calls_used + 1, updated_at = NOW()`,
-      [customerId, keyId, yearMonthInt]
-    );
-  } finally {
-    await client.end();
-  }
-}
+
