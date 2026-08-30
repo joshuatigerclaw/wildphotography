@@ -7,7 +7,7 @@ import VirtualizedGallery from '@/components/VirtualizedGallery';
 export const dynamic = 'force-dynamic';
 
 const DATABASE_URL = process.env.DATABASE_URL ||
-  'postgresql://neondb_owner:npg_BvF2JsQ8drba@ep-calm-fire-ad0dfnqd-pooler.c-2.us-east-1.aws.neon.tech/wildphotography?sslmode=require';
+  'postgresql://neondb_owner:npg_GonqSbJlRi71@ep-calm-fire-ad0dfnqd-pooler.c-2.us-east-1.aws.neon.tech/wildphotography?sslmode=require';
 
 const R2_PUBLIC = 'https://pub-7d412c6efb5943b5bc587e695e22001e.r2.dev';
 const SITE_URL = 'https://www.wildphotography.com';
