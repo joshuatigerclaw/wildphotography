@@ -145,6 +145,7 @@ export interface Photo {
   locationName?: string | null;
   region?: string | null;
   country?: string | null;
+  gallerySlug?: string | null;
   species_common_name?: string | null;
   species_scientific_name?: string | null;
   /** JSONB — contains seo_title, meta_description, keyword_clusters, affiliate_blurb */
@@ -191,6 +192,7 @@ function mapPhoto(row: any): Photo {
     locationName: row.location,
     region: row.region || null,
     country: row.country || null,
+    gallerySlug: row.gallery_slug || null,
     species_common_name: row.species_common_name || null,
     species_scientific_name: row.species_scientific_name || null,
     metadata: row.metadata || null,
@@ -502,7 +504,8 @@ export async function getPopularPhotos(limit = 12): Promise<Photo[]> {
            p.width, p.height, p.camera_make, p.camera_model, p.lens,
            p.iso, p.aperture, p.shutter_speed, p.focal_length_mm,
            p.lat, p.lon, p.views_count, p.date_taken, p.date_uploaded,
-           p.thumb_url, p.small_url, p.medium_url, p.large_url, p.location
+           p.thumb_url, p.small_url, p.medium_url, p.large_url, p.location,
+           p.gallery_slug
     FROM photos p
     WHERE p.is_active = true 
       AND p.ready_for_public_render = true

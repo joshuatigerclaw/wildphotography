@@ -141,11 +141,13 @@ export default async function Home() {
                 return (
                   <div key={photo.id} className={`m-cell ${cls}`}>
                     {photo.thumbUrl ? (
-                      <img
-                        src={photo.thumbUrl}
-                        alt={photo.title || 'WildPhotography Costa Rica'}
-                        loading={i < 3 ? 'eager' : 'lazy'}
-                      />
+                      <Link href={`/gallery/${photo.gallerySlug}`}>
+                        <img
+                          src={photo.thumbUrl}
+                          alt={photo.title || 'WildPhotography Costa Rica'}
+                          loading={i < 3 ? 'eager' : 'lazy'}
+                        />
+                      </Link>
                     ) : (
                       <div className="ph">No preview</div>
                     )}
