@@ -10,7 +10,7 @@ const { Client } = require('pg');
 
 const COOKIES_FILE = '/Users/joshuatenbrink/.openclaw/workspace/pinterest_cookies.json';
 const LOG_FILE = '/Users/joshuatenbrink/wildphotography_cloudflare_src/reports/pinterest_publish_log.txt';
-const DB = 'postgresql://neondb_owner:npg_BvF2JsQ8drba@ep-calm-fire-ad0dfnqd-pooler.c-2.us-east-1.aws.neon.tech/wildphotography?sslmode=require';
+const DB = 'postgresql://neondb_owner:npg_8MuC1tvKIOoj@ep-calm-fire-ad0dfnqd-pooler.c-2.us-east-1.aws.neon.tech/wildphotography?sslmode=require';
 const PROFILE_PATH = '/Users/joshuatenbrink/Downloads/.pinterest-profile';
 
 function log(msg) {

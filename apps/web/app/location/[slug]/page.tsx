@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { getLocationBySlug, getLocationsByRegion, getPhotosByLocation, getAffiliateBlocksForEntity } from '@/lib/db';
+import { generateBreadcrumbJsonLd } from '@/lib/seo';
 import VirtualizedGallery from '@/components/VirtualizedGallery';
 import AffiliateBlock from '@/components/AffiliateBlock';
 
@@ -50,8 +51,17 @@ export default async function LocationDetailPage({ params }: { params: Promise<{
   // Fetch affiliate blocks for this location
   const affiliateBlocks = await getAffiliateBlocksForEntity('location', Number(location.id));
 
+  // ── BreadcrumbList JSON-LD ─────────────────────────────────────────
+  const breadcrumbJsonLd = generateBreadcrumbJsonLd([
+    { name: 'Home', url: '/' },
+    { name: 'Locations', url: '/location' },
+    { name: location.name, url: `/location/${slug}` },
+  ]);
+
   return (
-    <div className="container mx-auto px-4 py-6">
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
+      <div className="container mx-auto px-4 py-6">
       {/* Breadcrumb */}
       <nav className="text-sm mb-4" aria-label="Breadcrumb">
         <ol className="flex items-center gap-2">
@@ -249,5 +259,6 @@ export default async function LocationDetailPage({ params }: { params: Promise<{
         </div>
       )}
     </div>
+    </>
   );
 }

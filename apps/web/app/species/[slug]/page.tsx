@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { neon } from '@neondatabase/serverless';
+import { generateBreadcrumbJsonLd } from '@/lib/seo';
 import VirtualizedGallery from '@/components/VirtualizedGallery';
 
 export const dynamic = 'force-dynamic';
@@ -148,8 +149,17 @@ export default async function SpeciesDetailPage({ params }: { params: Promise<{ 
   `;
   const articles = articlesResult as any[];
 
+  // ── BreadcrumbList JSON-LD ─────────────────────────────────────────
+  const breadcrumbJsonLd = generateBreadcrumbJsonLd([
+    { name: 'Home', url: '/' },
+    { name: 'Species', url: '/species' },
+    { name: species.common_name, url: `/species/${species.slug}` },
+  ]);
+
   return (
-    <div className="container" style={{paddingTop:'var(--gutter)',paddingBottom:'calc(var(--gutter) * 2)'}}>
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
+      <div className="container" style={{paddingTop:'var(--gutter)',paddingBottom:'calc(var(--gutter) * 2)'}}>
       {/* Breadcrumb */}
       <nav aria-label="Breadcrumb" style={{marginBottom:'var(--gutter)'}}>
         <ol style={{display:'flex',alignItems:'center',gap:'10px',listStyle:'none',margin:0,padding:0,fontSize:'13px',fontFamily:'var(--font-mono)',textTransform:'uppercase',letterSpacing:'.1em',color:'var(--ink-dim)'}}>
@@ -314,5 +324,6 @@ export default async function SpeciesDetailPage({ params }: { params: Promise<{ 
         </section>
       )}
     </div>
+    </>
   );
 }

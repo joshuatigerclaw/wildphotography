@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 const { Client } = require('pg');
-const PG = 'postgresql://neondb_owner:npg_BvF2JsQ8drba@ep-calm-fire-ad0dfnqd-pooler.c-2.us-east-1.aws.neon.tech/wildphotography?sslmode=require&channel_binding=require';
+const PG = 'postgresql://neondb_owner:npg_8MuC1tvKIOoj@ep-calm-fire-ad0dfnqd-pooler.c-2.us-east-1.aws.neon.tech/wildphotography?sslmode=require&channel_binding=require';
 const client = new Client({ connectionString: PG });
 const slug = 'arenal-volcano-travel-photography-guide';
 const content = `Arenal Volcano dominates the northern Costa Rica landscape at 1,657 meters, a near-perfect conical stratovolcano that was in nearly continuous low-level eruption from 1968 until 2010. For nearly 50 years, it produced multiple daily explosions of gas and ash, lit up the night sky with molten ejecta, and fed the natural thermal streams that made the area below it a natural spa. That eruptive period ended abruptly in 2010, and the volcano now sits quietly — but its slopes remain lush with recovery forest, its base is ringed with thermal springs, and the surrounding landscape remains one of Costa Rica's most compelling photographic environments.

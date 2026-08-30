@@ -13,7 +13,7 @@ import path from 'path';
 
 const HOME = process.env.HOME || '/Users/joshuatenbrink';
 const LOG_DIR = path.join(HOME, 'wildphotography_cloudflare_src', 'logs');
-const NEON_CONNECTION = 'postgresql://neondb_owner:npg_BvF2JsQ8drba@ep-calm-fire-ad0dfnqd-pooler.c-2.us-east-1.aws.neon.tech/wildphotography?sslmode=require';
+const NEON_CONNECTION = 'postgresql://neondb_owner:npg_8MuC1tvKIOoj@ep-calm-fire-ad0dfnqd-pooler.c-2.us-east-1.aws.neon.tech/wildphotography?sslmode=require';
 
 const R2 = {
   endpoint: 'https://3ec62f93675c404fe4a9a4949e38e5e5.r2.cloudflarestorage.com',

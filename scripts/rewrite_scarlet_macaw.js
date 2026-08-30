@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 const { Client } = require('pg');
-const PG = 'postgresql://neondb_owner:npg_BvF2JsQ8drba@ep-calm-fire-ad0dfnqd-pooler.c-2.us-east-1.aws.neon.tech/wildphotography?sslmode=require&channel_binding=require';
+const PG = 'postgresql://neondb_owner:npg_8MuC1tvKIOoj@ep-calm-fire-ad0dfnqd-pooler.c-2.us-east-1.aws.neon.tech/wildphotography?sslmode=require&channel_binding=require';
 const client = new Client({ connectionString: PG });
 const slug = 'scarlet-macaw-costa-rica';
 const content = `The scarlet macaw is among the most unmistakable birds in the Western Hemisphere — a meter-long parrot dressed in primary red, yellow, blue, and green, with a bare white face patch and a massive curved beak that has evolved to crack the hardest tropical nuts. In flight, a scarlet macaw is loud and conspicuous — their calls carry more than a kilometer through forest air, and a flying flock of six or eight birds moving between roosting and feeding sites is one of the most spectacular sights tropical wildlife photography has to offer.

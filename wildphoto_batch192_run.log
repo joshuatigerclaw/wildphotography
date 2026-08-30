@@ -1,0 +1,68 @@
+/Users/joshuatenbrink/Library/Python/3.9/lib/python/site-packages/boto3/compat.py:89: PythonDeprecationWarning: Boto3 will no longer support Python 3.9 starting April 29, 2026. To continue receiving service updates, bug fixes, and security updates please upgrade to Python 3.10 or later. More information can be found here: https://aws.amazon.com/blogs/developer/python-support-policy-updates-for-aws-sdks-and-tools/
+  warnings.warn(warning, PythonDeprecationWarning)
+=== WildPhotography Batch 192 ===
+Start: 2026-06-17T05:26:30.518178Z
+
+GALLERY: Papagayo-Bahia-Culebra → gallery_id=64 slug=papagayo-bahia-culebra
+GALLERY: Peninsula-Papagayo → gallery_id=65 slug=peninsula-papagayo
+GALLERY: Peninsula-de-Nicoya → gallery_id=66 slug=peninsula-de-nicoya
+GALLERY: Peninsula-de-Osa → gallery_id=67 slug=peninsula-de-osa
+GALLERY: People-Watching → gallery_id=68 slug=people-watching
+
+Folders seen: 5
+Folders matched to existing galleries: 5
+Processing 5 folders, max 15 photos per folder...
+
+--- Processing: Papagayo-Bahia-Culebra ---
+  Existing hashes in gallery 64: 425
+  Total images found: 162
+  Imported 0 new photos from Papagayo-Bahia-Culebra (15 dupes, 0 collisions)
+
+--- Processing: Peninsula-Papagayo ---
+  Existing hashes in gallery 65: 726
+  Total images found: 353
+  Imported 0 new photos from Peninsula-Papagayo (15 dupes, 0 collisions)
+
+--- Processing: Peninsula-de-Nicoya ---
+  Existing hashes in gallery 66: 39
+  Total images found: 18
+  Imported 0 new photos from Peninsula-de-Nicoya (15 dupes, 0 collisions)
+
+--- Processing: Peninsula-de-Osa ---
+  Existing hashes in gallery 67: 493
+  Total images found: 125
+  Imported 0 new photos from Peninsula-de-Osa (15 dupes, 0 collisions)
+
+--- Processing: People-Watching ---
+  Existing hashes in gallery 68: 41
+  Total images found: 16
+  Imported 0 new photos from People-Watching (15 dupes, 0 collisions)
+
+==================================================
+BATCH 192 SUMMARY
+==================================================
+folders_processed: 5
+folders_seen: ['Papagayo-Bahia-Culebra', 'Peninsula-Papagayo', 'Peninsula-de-Nicoya', 'Peninsula-de-Osa', 'People-Watching']
+folders_with_existing_gallery_match: ['Papagayo-Bahia-Culebra', 'Peninsula-Papagayo', 'Peninsula-de-Nicoya', 'Peninsula-de-Osa', 'People-Watching']
+folders_skipped_no_existing_gallery: []
+folders_skipped_ambiguous_mapping: []
+files_skipped_unmapped_gallery: 0
+files_imported_to_existing_galleries: 0
+duplicates_skipped: 75
+filename_collisions_renamed: 0
+originals_uploaded: 0
+derivatives_generated: 0
+seo_metadata_generated: 0
+seo_titles_generated: 0
+og_images_set: 0
+skipped_existing_high_quality: 0
+repaired_prior_collision_records: 0
+ready_for_public_render: 0
+search_ready: 0
+failed_files: 0
+failed_file_paths: []
+existing_gallery_ids_used: [64, 65, 66, 67, 68]
+per_gallery: {'Papagayo-Bahia-Culebra': {'total_on_disk': 162, 'new': 0, 'duplicates': 15, 'filename_collisions': 0, 'status': 'fully_imported'}, 'Peninsula-Papagayo': {'total_on_disk': 353, 'new': 0, 'duplicates': 15, 'filename_collisions': 0, 'status': 'fully_imported'}, 'Peninsula-de-Nicoya': {'total_on_disk': 18, 'new': 0, 'duplicates': 15, 'filename_collisions': 0, 'status': 'fully_imported'}, 'Peninsula-de-Osa': {'total_on_disk': 125, 'new': 0, 'duplicates': 15, 'filename_collisions': 0, 'status': 'fully_imported'}, 'People-Watching': {'total_on_disk': 16, 'new': 0, 'duplicates': 15, 'filename_collisions': 0, 'status': 'fully_imported'}}
+
+Complete: 2026-06-17T05:26:33.948980Z
+EXIT:0

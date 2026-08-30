@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 const { Client } = require('pg');
-const PG = 'postgresql://neondb_owner:npg_BvF2JsQ8drba@ep-calm-fire-ad0dfnqd-pooler.c-2.us-east-1.aws.neon.tech/wildphotography?sslmode=require&channel_binding=require';
+const PG = 'postgresql://neondb_owner:npg_8MuC1tvKIOoj@ep-calm-fire-ad0dfnqd-pooler.c-2.us-east-1.aws.neon.tech/wildphotography?sslmode=require&channel_binding=require';
 const client = new Client({ connectionString: PG });
 const slug = 'where-to-see-sloths-costa-rica';
 const content = `Costa Rica is one of the best places in the world to see sloths in the wild — both the two-toed sloth and the smaller, rounder Hoffmann's two-toed sloth. The country's extensive protected forest areas, combined with a guiding culture that has developed over decades around wildlife tourism, means that encounters with sloths are genuinely achievable for visitors who make even minimal effort. Unlike many wildlife targets that require early alarms and uncomfortable field craft, sloths often appear on the most accessible trails with little effort beyond knowing where to look.

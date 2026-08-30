@@ -8,7 +8,7 @@ import type { PhotoDerivatives, Gallery } from '../types';
 import { neon } from '@neondatabase/serverless';
 
 // Neon connection string (from env)
-const NEON_CONNECTION = 'postgresql://neondb_owner:npg_BvF2JsQ8drba@ep-calm-fire-ad0dfnqd-pooler.c-2.us-east-1.aws.neon.tech/wildphotography?sslmode=require';
+const NEON_CONNECTION = 'postgresql://neondb_owner:npg_8MuC1tvKIOoj@ep-calm-fire-ad0dfnqd-pooler.c-2.us-east-1.aws.neon.tech/wildphotography?sslmode=require&channel_binding=require';
 
 /**
  * Execute SQL query via Neon serverless with timeout.

@@ -126,6 +126,8 @@ interface PhotoPageClientProps {
    * Used for multi-gallery "Also appears in" discovery without breaking active context.
    */
   allGalleries?: GalleryContext[];
+  /** Descriptive alt text — computed server-side from species/location/title */
+  altText?: string;
 }
 
 // ============================================================
@@ -574,9 +576,23 @@ export default function PhotoPageClient({
         <div style={{marginBottom:'var(--gutter)'}}>
           {(() => {
             const seoTitle = photo.metadata?.seo_title;
-            const h1Text = seoTitle || (displayTitle.isUgly
-              ? (photo.locationName || photo.species_common_name || (gallery ? `From ${gallery.name}` : 'Photo'))
-              : displayTitle.title);
+            // When displayTitle is a raw camera filename, build a descriptive H1
+            const buildDescriptiveH1 = () => {
+              if (photo.species_common_name) {
+                const loc = photo.locationName && photo.locationName !== 'Costa Rica' && photo.locationName !== 'Power-Of-Nature'
+                  ? photo.locationName
+                  : (photo.region || '');
+                return loc
+                  ? `${photo.species_common_name} in ${loc}, Costa Rica`
+                  : `${photo.species_common_name} in Costa Rica`;
+              }
+              if (photo.locationName && photo.locationName !== 'Costa Rica' && photo.locationName !== 'Power-Of-Nature') {
+                return `${photo.locationName}${photo.region ? `, ${photo.region}` : ''}, Costa Rica`;
+              }
+              if (gallery) return `From ${gallery.name}`;
+              return 'Photo';
+            };
+            const h1Text = seoTitle || (displayTitle.isUgly ? buildDescriptiveH1() : displayTitle.title);
             return (
               <h1 style={{fontFamily:'var(--font-display)',fontWeight:500,color:'var(--ink)',lineHeight:1.1,margin:0,fontSize:'clamp(1.5rem,4vw,2.5rem)'}}>
                 {h1Text}
@@ -594,7 +610,7 @@ export default function PhotoPageClient({
             {photo.mediumUrl && (
               <img
                 src={photo.mediumUrl}
-                alt={displayTitle.title || 'Photo'}
+                alt={altText || displayTitle.title || 'Photo'}
                 className="w-full h-auto rounded-xl"
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1400px"
                 loading="eager"

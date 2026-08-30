@@ -1,0 +1,68 @@
+/Users/joshuatenbrink/Library/Python/3.9/lib/python/site-packages/boto3/compat.py:89: PythonDeprecationWarning: Boto3 will no longer support Python 3.9 starting April 29, 2026. To continue receiving service updates, bug fixes, and security updates please upgrade to Python 3.10 or later. More information can be found here: https://aws.amazon.com/blogs/developer/python-support-policy-updates-for-aws-sdks-and-tools/
+  warnings.warn(warning, PythonDeprecationWarning)
+=== WildPhotography Batch 189 ===
+Start: 2026-06-17T05:18:42.724858Z
+
+GALLERY: Juan-Santamaria-San-Jose-Airport-SJO- → gallery_id=49 slug=juan-santamaria-san-jose-airport-sjo
+GALLERY: La-Sabana-Estadio-Nacional-Costa-Rica-San-Jose → gallery_id=50 slug=la-sabana-estadio-nacional-costa-rica-san-jose
+GALLERY: Lakes → gallery_id=51 slug=lakes
+GALLERY: Land-Animals → gallery_id=52 slug=land-animals
+GALLERY: Landmarks → gallery_id=53 slug=landmarks
+
+Folders seen: 5
+Folders matched to existing galleries: 5
+Processing 5 folders, max 15 photos per folder...
+
+--- Processing: Juan-Santamaria-San-Jose-Airport-SJO- ---
+  Existing hashes in gallery 49: 46
+  Total images found: 15
+  Imported 15 new photos from Juan-Santamaria-San-Jose-Airport-SJO- (0 dupes, 0 collisions)
+
+--- Processing: La-Sabana-Estadio-Nacional-Costa-Rica-San-Jose ---
+  Existing hashes in gallery 50: 386
+  Total images found: 172
+  Imported 1 new photos from La-Sabana-Estadio-Nacional-Costa-Rica-San-Jose (14 dupes, 0 collisions)
+
+--- Processing: Lakes ---
+  Existing hashes in gallery 51: 22
+  Total images found: 7
+  Imported 0 new photos from Lakes (7 dupes, 0 collisions)
+
+--- Processing: Land-Animals ---
+  Existing hashes in gallery 52: 81
+  Total images found: 20
+  Imported 0 new photos from Land-Animals (15 dupes, 0 collisions)
+
+--- Processing: Landmarks ---
+  Existing hashes in gallery 53: 212
+  Total images found: 69
+  Imported 0 new photos from Landmarks (15 dupes, 0 collisions)
+
+==================================================
+BATCH 189 SUMMARY
+==================================================
+folders_processed: 5
+folders_seen: ['Juan-Santamaria-San-Jose-Airport-SJO-', 'La-Sabana-Estadio-Nacional-Costa-Rica-San-Jose', 'Lakes', 'Land-Animals', 'Landmarks']
+folders_with_existing_gallery_match: ['Juan-Santamaria-San-Jose-Airport-SJO-', 'La-Sabana-Estadio-Nacional-Costa-Rica-San-Jose', 'Lakes', 'Land-Animals', 'Landmarks']
+folders_skipped_no_existing_gallery: []
+folders_skipped_ambiguous_mapping: []
+files_skipped_unmapped_gallery: 0
+files_imported_to_existing_galleries: 16
+duplicates_skipped: 51
+filename_collisions_renamed: 0
+originals_uploaded: 16
+derivatives_generated: 80
+seo_metadata_generated: 0
+seo_titles_generated: 0
+og_images_set: 0
+skipped_existing_high_quality: 0
+repaired_prior_collision_records: 0
+ready_for_public_render: 16
+search_ready: 16
+failed_files: 0
+failed_file_paths: []
+existing_gallery_ids_used: [49, 50, 51, 52, 53]
+per_gallery: {'Juan-Santamaria-San-Jose-Airport-SJO-': {'total_on_disk': 15, 'new': 15, 'duplicates': 0, 'filename_collisions': 0, 'status': 'new_import'}, 'La-Sabana-Estadio-Nacional-Costa-Rica-San-Jose': {'total_on_disk': 172, 'new': 1, 'duplicates': 14, 'filename_collisions': 0, 'status': 'new_import'}, 'Lakes': {'total_on_disk': 7, 'new': 0, 'duplicates': 7, 'filename_collisions': 0, 'status': 'fully_imported'}, 'Land-Animals': {'total_on_disk': 20, 'new': 0, 'duplicates': 15, 'filename_collisions': 0, 'status': 'fully_imported'}, 'Landmarks': {'total_on_disk': 69, 'new': 0, 'duplicates': 15, 'filename_collisions': 0, 'status': 'fully_imported'}}
+
+Complete: 2026-06-17T05:19:51.434119Z
+EXIT:0

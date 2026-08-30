@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 const { Client } = require('pg');
-const PG = 'postgresql://neondb_owner:npg_BvF2JsQ8drba@ep-calm-fire-ad0dfnqd-pooler.c-2.us-east-1.aws.neon.tech/wildphotography?sslmode=require&channel_binding=require';
+const PG = 'postgresql://neondb_owner:npg_8MuC1tvKIOoj@ep-calm-fire-ad0dfnqd-pooler.c-2.us-east-1.aws.neon.tech/wildphotography?sslmode=require&channel_binding=require';
 const client = new Client({ connectionString: PG });
 const slug = 'monteverde-cloud-forest-wildlife-guide';
 const content = `Monteverde sits at 1,500 meters in the Tilaran mountain range, where the trade winds off the Caribbean push moisture-laden clouds up the western slopes and produce a near-constant mist that gives the cloud forest its name. The effect on the landscape is remarkable — every surface covered in mosses and ferns, bromeliads and orchids growing from tree branches, the air thick with moisture and the calls of birds that are often heard but not seen in the dim interior light. This is one of the most genuinely atmospheric environments I know of for nature photography.

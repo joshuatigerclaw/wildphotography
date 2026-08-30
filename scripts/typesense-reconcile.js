@@ -23,7 +23,7 @@ const { neon } = require('@neondatabase/serverless');
 
 // ── Credentials ────────────────────────────────────────────────────────────────
 const NEON_DB = process.env.DATABASE_URL ||
-  'postgresql://neondb_owner:npg_BvF2JsQ8drba@ep-calm-fire-ad0dfnqd-pooler.c-2.us-east-1.aws.neon.tech/wildphotography?sslmode=require';
+  'postgresql://neondb_owner:npg_8MuC1tvKIOoj@ep-calm-fire-ad0dfnqd-pooler.c-2.us-east-1.aws.neon.tech/wildphotography?sslmode=require';
 const TS_HOST = process.env.TYPESENSE_HOST || 'uibn03zvateqwdx2p-1.a1.typesense.net';
 const TS_PORT = parseInt(process.env.TYPESENSE_PORT || '443', 10);
 const TS_KEY  = process.env.TYPESENSE_ADMIN_KEY || 'MPphr9zDlLzHRFQHDH4AyQb5hw2ugew7';

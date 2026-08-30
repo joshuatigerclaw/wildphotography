@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 const { Client } = require('pg');
-const PG = 'postgresql://neondb_owner:npg_BvF2JsQ8drba@ep-calm-fire-ad0dfnqd-pooler.c-2.us-east-1.aws.neon.tech/wildphotography?sslmode=require&channel_binding=require';
+const PG = 'postgresql://neondb_owner:npg_8MuC1tvKIOoj@ep-calm-fire-ad0dfnqd-pooler.c-2.us-east-1.aws.neon.tech/wildphotography?sslmode=require&channel_binding=require';
 const client = new Client({ connectionString: PG });
 const slug = 'birds-of-costa-rica';
 const content = `Costa Rica holds an extraordinary concentration of bird life for a country of its size — more than 900 species recorded in an area smaller than West Virginia. That figure includes resident species, migrants from North America that winter here, and rare vagrants that turn up in unexpected places. For birdwatchers and wildlife photographers, the country functions as a greatest-hits album of Neotropical birds: quetzals, macaws, toucans, antbirds, manakins, and hummingbirds filling every habitat from mangrove swamps to cloud forest peaks.

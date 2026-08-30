@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { getArticleBySlug, getRelatedArticles, getLocationIdBySlug, getAffiliateBlocksForEntity } from '@/lib/db';
+import { generateArticleJsonLd, generateBreadcrumbJsonLd } from '@/lib/seo';
 import AffiliateBlock from '@/components/AffiliateBlock';
 
 export const dynamic = 'force-dynamic';
@@ -77,8 +78,30 @@ export default async function ArticlePage({ params }: Props) {
     // no-op: affiliate blocks are optional
   }
 
+  // ── Article JSON-LD schema ──────────────────────────────────────────
+  const articleJsonLd = generateArticleJsonLd({
+    title: article.title,
+    description: article.excerpt || undefined,
+    url: canonical,
+    authorName: 'Joshua ten Brink',
+    publishedDate: article.createdAt ? new Date(article.createdAt) : undefined,
+    modifiedDate: article.updatedAt ? new Date(article.updatedAt) : undefined,
+    imageUrl: ogImage || undefined,
+    publisherName: 'WildPhotography',
+  });
+
+  // ── BreadcrumbList JSON-LD ─────────────────────────────────────────
+  const breadcrumbJsonLd = generateBreadcrumbJsonLd([
+    { name: 'Home', url: '/' },
+    { name: 'Articles', url: '/article' },
+    { name: article.title, url: `/article/${article.slug}` },
+  ]);
+
   return (
-    <article className="container mx-auto px-4 py-6 max-w-4xl">
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
+      <article className="container mx-auto px-4 py-6 max-w-4xl">
       {/* Breadcrumb */}
       <nav className="text-sm mb-6" aria-label="Breadcrumb">
         <ol className="flex items-center gap-2">
@@ -209,5 +232,6 @@ export default async function ArticlePage({ params }: Props) {
         </section>
       )}
     </article>
+    </>
   );
 }

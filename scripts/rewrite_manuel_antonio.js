@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 const { Client } = require('pg');
-const PG = 'postgresql://neondb_owner:npg_BvF2JsQ8drba@ep-calm-fire-ad0dfnqd-pooler.c-2.us-east-1.aws.neon.tech/wildphotography?sslmode=require&channel_binding=require';
+const PG = 'postgresql://neondb_owner:npg_8MuC1tvKIOoj@ep-calm-fire-ad0dfnqd-pooler.c-2.us-east-1.aws.neon.tech/wildphotography?sslmode=require&channel_binding=require';
 const client = new Client({ connectionString: PG });
 const slug = 'manuel-antonio-travel-wildlife-guide';
 const content = `Manuel Antonio National Park is small by Costa Rica's standards — just 1,983 hectares — but what it delivers is disproportionate to its size. The park encompasses coastal rainforest that drops directly onto white-sand beaches, a granite point that creates natural tidal pools, and a marine zone that shelters dolphins and migrating humpback whales. On any given morning, a visitor might photograph a two-toed sloth in the trees overhead, a white-faced capuchin checking for dropped food at the picnic tables, and a spectacular sunset over the Pacific — all before lunch.

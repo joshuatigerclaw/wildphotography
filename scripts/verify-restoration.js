@@ -25,7 +25,7 @@ const R2_ENDPOINT = `https://${R2_ACCOUNT_ID}.r2.cloudflarestorage.com`;
 const NEW_PUBLIC_HOSTNAME = process.env.NEW_PUBLIC_HOSTNAME || 'pub-YOUR-NEW-PUBLIC-HOSTNAME.r2.dev';
 
 const R2_SECRET_KEY = process.env.R2_SECRET_KEY;
-const NEON_DB = process.env.DATABASE_URL || 'postgresql://neondb_owner:npg_BvF2JsQ8drba@ep-calm-fire-ad0dfnqd-pooler.c-2.us-east-1.aws.neon.tech/wildphotography?sslmode=require';
+const NEON_DB = process.env.DATABASE_URL || 'postgresql://neondb_owner:npg_8MuC1tvKIOoj@ep-calm-fire-ad0dfnqd-pooler.c-2.us-east-1.aws.neon.tech/wildphotography?sslmode=require';
 
 const r2 = R2_SECRET_KEY ? new S3Client({
   endpoint: R2_ENDPOINT,

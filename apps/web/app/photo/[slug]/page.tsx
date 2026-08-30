@@ -10,7 +10,7 @@ import {
   getGalleriesForPhoto,
   getGallerySequenceForPhoto,
 } from '@/lib/db';
-import { generatePhotoJsonLd, canonicalUrl } from '@/lib/seo';
+import { generatePhotoJsonLd, generateBreadcrumbJsonLd, canonicalUrl, buildAltText } from '@/lib/seo';
 import { getDisplayTitle } from '@/lib/titles';
 import PhotoPageClient from './PhotoPageClient';
 
@@ -40,10 +40,11 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const canonical = canonicalUrl(`/photo/${photo.slug}`);
   const ogImage = photo.mediumUrl || photo.smallUrl || photo.thumbUrl;
 
-  // Use SEO metadata from DB when available
+  // Use SEO metadata from DB when available; fall back to rule-based pattern
   const seoTitle = photo.metadata?.seo_title;
   const seoDescription = photo.metadata?.meta_description;
 
+  // Build description from available metadata
   let description = seoDescription || photo.description || '';
   if (!description && photo.locationName) {
     description = `${displayTitle || 'Photo'} from ${photo.locationName}, Costa Rica`;
@@ -52,7 +53,18 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     description = `${displayTitle || 'Photo'} in ${gallery.name} gallery`;
   }
 
-  const pageTitle = seoTitle || displayTitle || 'Photo';
+  // Better SEO title: prefer DB seo_title, then subject+location pattern, then displayTitle
+  let pageTitle = seoTitle;
+  if (!pageTitle) {
+    const subject = photo.species_common_name || displayTitle || 'Costa Rica';
+    const location = photo.locationName && photo.locationName !== 'Costa Rica'
+      ? photo.locationName
+      : (photo.region || 'Costa Rica');
+    pageTitle = `${subject} in ${location}, Costa Rica | WildPhotography`;
+    if (pageTitle.length > 70) {
+      pageTitle = `${subject} in Costa Rica | WildPhotography`;
+    }
+  }
 
   return {
     title: `${pageTitle} | Wildphotography`,
@@ -263,21 +275,59 @@ export default async function PhotoPage({
   const displayTitle = getDisplayTitle(photo.title);
   const seoTitle = photo.metadata?.seo_title;
   const seoDescription = photo.metadata?.meta_description;
+  const photoTitle = seoTitle || displayTitle || 'Photo';
+
+  // Build descriptive alt text (rule-based fallback; DB seo metadata takes priority)
+  const altText = seoTitle || buildAltText({
+    speciesCommonName: photo.species_common_name,
+    speciesScientificName: photo.species_scientific_name,
+    locationName: photo.locationName,
+    region: photo.region,
+    description: photo.description,
+    title: photo.title,
+  });
+
   const jsonLd = generatePhotoJsonLd({
-    title: seoTitle || displayTitle || 'Photo',
+    title: photoTitle,
     description: seoDescription || photo.description || undefined,
     imageUrl: photo.mediumUrl || photo.smallUrl || '',
+    thumbUrl: photo.thumbUrl || undefined,
     dateTaken: photo.date_taken ? new Date(photo.date_taken) : undefined,
     location: photo.locationName || undefined,
+    region: photo.region || undefined,
+    country: photo.country || undefined,
     width: photo.width || undefined,
     height: photo.height || undefined,
+    slug: photo.slug,
+    photographerName: 'Joshua ten Brink',
   });
+
+  // ── BreadcrumbList JSON-LD ────────────────────────────────────────────
+  const breadcrumbs = [
+    { name: 'Home', url: '/' },
+  ];
+  if (photo.species_common_name) {
+    breadcrumbs.push({ name: 'Costa Rica Wildlife', url: '/species' });
+    breadcrumbs.push({ name: photo.species_common_name, url: `/species/${photo.species_common_name.toLowerCase().replace(/\s+/g, '-')}` });
+  } else if (photo.locationName && photo.locationName !== 'Costa Rica' && photo.locationName !== 'Power-Of-Nature') {
+    breadcrumbs.push({ name: 'Locations', url: '/location' });
+    breadcrumbs.push({ name: photo.locationName, url: `/location/${photo.locationName.toLowerCase().replace(/\s+/g, '-')}` });
+  }
+  if (primaryGallery) {
+    breadcrumbs.push({ name: primaryGallery.name, url: `/gallery/${primaryGallery.slug}` });
+  }
+  breadcrumbs.push({ name: photoTitle, url: `/photo/${photo.slug}` });
+  const breadcrumbJsonLd = generateBreadcrumbJsonLd(breadcrumbs);
 
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
       <PhotoPageClient
         photo={photo}
@@ -290,6 +340,7 @@ export default async function PhotoPage({
         speciesPhotos={speciesPhotos}
         locationPhotos={locationPhotos}
         alternateGalleryPhotos={alternateGalleryPhotos}
+        altText={altText}
       />
     </>
   );

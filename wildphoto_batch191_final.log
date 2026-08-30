@@ -1,0 +1,62 @@
+/Users/joshuatenbrink/Library/Python/3.9/lib/python/site-packages/boto3/compat.py:89: PythonDeprecationWarning: Boto3 will no longer support Python 3.9 starting April 29, 2026. To continue receiving service updates, bug fixes, and security updates please upgrade to Python 3.10 or later. More information can be found here: https://aws.amazon.com/blogs/developer/python-support-policy-updates-for-aws-sdks-and-tools/
+  warnings.warn(warning, PythonDeprecationWarning)
+=== WildPhotography Batch 191 ===
+Start: 2026-06-17T05:24:34.524402Z
+
+GALLERY: Montezuma-Costa-Rica → gallery_id=60 slug=montezuma-costa-rica
+GALLERY: Moon → gallery_id=61 slug=moon
+GALLERY: Nauyaca-Waterfalls → gallery_id=62 slug=nauyaca-waterfalls
+GALLERY: Night-Photography → gallery_id=63 slug=night-photography
+
+Folders seen: 4
+Folders matched to existing galleries: 4
+Processing 4 folders, max 15 photos per folder...
+
+--- Processing: Montezuma-Costa-Rica ---
+  Existing hashes in gallery 60: 358
+  Total images found: 231
+  Imported 0 new photos from Montezuma-Costa-Rica (15 dupes, 0 collisions)
+
+--- Processing: Moon ---
+  Existing hashes in gallery 61: 132
+  Total images found: 29
+  Imported 2 new photos from Moon (13 dupes, 0 collisions)
+
+--- Processing: Nauyaca-Waterfalls ---
+  Existing hashes in gallery 62: 97
+  Total images found: 38
+  Imported 0 new photos from Nauyaca-Waterfalls (15 dupes, 0 collisions)
+
+--- Processing: Night-Photography ---
+  Existing hashes in gallery 63: 71
+  Total images found: 17
+  Imported 0 new photos from Night-Photography (15 dupes, 0 collisions)
+
+==================================================
+BATCH 191 SUMMARY
+==================================================
+folders_processed: 4
+folders_seen: ['Montezuma-Costa-Rica', 'Moon', 'Nauyaca-Waterfalls', 'Night-Photography']
+folders_with_existing_gallery_match: ['Montezuma-Costa-Rica', 'Moon', 'Nauyaca-Waterfalls', 'Night-Photography']
+folders_skipped_no_existing_gallery: []
+folders_skipped_ambiguous_mapping: []
+files_skipped_unmapped_gallery: 0
+files_imported_to_existing_galleries: 2
+duplicates_skipped: 58
+filename_collisions_renamed: 0
+originals_uploaded: 2
+derivatives_generated: 10
+seo_metadata_generated: 0
+seo_titles_generated: 0
+og_images_set: 0
+skipped_existing_high_quality: 0
+repaired_prior_collision_records: 0
+ready_for_public_render: 2
+search_ready: 2
+failed_files: 0
+failed_file_paths: []
+existing_gallery_ids_used: [60, 61, 62, 63]
+per_gallery: {'Montezuma-Costa-Rica': {'total_on_disk': 231, 'new': 0, 'duplicates': 15, 'filename_collisions': 0, 'status': 'fully_imported'}, 'Moon': {'total_on_disk': 29, 'new': 2, 'duplicates': 13, 'filename_collisions': 0, 'status': 'new_import'}, 'Nauyaca-Waterfalls': {'total_on_disk': 38, 'new': 0, 'duplicates': 15, 'filename_collisions': 0, 'status': 'fully_imported'}, 'Night-Photography': {'total_on_disk': 17, 'new': 0, 'duplicates': 15, 'filename_collisions': 0, 'status': 'fully_imported'}}
+
+Complete: 2026-06-17T05:24:49.335442Z
+EXIT:0

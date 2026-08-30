@@ -11,7 +11,7 @@ const { Client } = require('typesense');
 
 // Configuration
 const NEON_DB_URL = process.env.DATABASE_URL || 
-  'postgresql://neondb_owner:npg_BvF2JsQ8drba@ep-calm-fire-ad0dfnqd-pooler.c-2.us-east-1.aws.neon.tech/wildphotography?sslmode=require';
+  'postgresql://neondb_owner:npg_8MuC1tvKIOoj@ep-calm-fire-ad0dfnqd-pooler.c-2.us-east-1.aws.neon.tech/wildphotography?sslmode=require';
 
 const TYPESENSE_HOST = process.env.TYPESENSE_HOST || 'uibn03zvateqwdx2p-1.a1.typesense.net';
 const TYPESENSE_API_KEY = process.env.TYPESENSE_API_KEY || 'MPphr9zDlLzHRFQHDH4AyQb5hw2ugew7';

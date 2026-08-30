@@ -12,7 +12,7 @@ const NEON_CONFIG = {
   host: 'ep-calm-fire-ad0dfnqd-pooler.c-2.us-east-1.aws.neon.tech',
   database: 'wildphotography',
   user: 'neondb_owner',
-  password: 'npg_BvF2JsQ8drba',
+  password: 'npg_8MuC1tvKIOoj',
   ssl: { rejectUnauthorized: false },
   max: 3,
 };
@@ -77,7 +77,7 @@ async function putObject(key, data, contentType = 'image/jpeg') {
 }
 
 async function processPhotoQueueItem(item) {
-  const { photo_id, queue_id } = item;
+  const { photo_id, id: queue_id } = item;
   
   // Fetch photo details
   const photoResult = await dbPool.query(
@@ -177,13 +177,14 @@ async function processPhotoQueueItem(item) {
   
   // Update queue status
   const newStatus = (generated > 0 && failed === 0) ? 'done' : (generated === 0 && failed > 0) ? 'permanently_failed' : 'partial';
-  await dbPool.query(
+  const qResult = await dbPool.query(
     `UPDATE derivative_rebuild_queue SET 
        status = $1, 
        attempts = attempts + 1, 
        last_error = $2,
        date_modified = NOW()
-     WHERE id = $3`,
+     WHERE id = $3
+     RETURNING id, status`,
     [newStatus, generated === 0 && failed > 0 ? 'all_derivatives_failed' : null, queue_id]
   );
   
@@ -200,7 +201,7 @@ async function main() {
   
   // Get pending queue items
   const queueResult = await dbPool.query(
-    `SELECT id, photo_id FROM derivative_rebuild_queue WHERE status = 'pending_rebuild' ORDER BY date_created ASC LIMIT $1`,
+    `SELECT id, photo_id FROM derivative_rebuild_queue WHERE status IN ('pending', 'processing') ORDER BY date_created ASC LIMIT $1`,
     [batchLimit]
   );
   

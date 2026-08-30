@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 const { Client } = require('pg');
-const PG = 'postgresql://neondb_owner:npg_BvF2JsQ8drba@ep-calm-fire-ad0dfnqd-pooler.c-2.us-east-1.aws.neon.tech/wildphotography?sslmode=require&channel_binding=require';
+const PG = 'postgresql://neondb_owner:npg_8MuC1tvKIOoj@ep-calm-fire-ad0dfnqd-pooler.c-2.us-east-1.aws.neon.tech/wildphotography?sslmode=require&channel_binding=require';
 const client = new Client({ connectionString: PG });
 const slug = 'guanacaste-beaches-travel-guide';
 const content = `Guanacaste province covers the northwestern corner of Costa Rica, stretching from the Pacific coast at the Nicaragua border down to the Nicoya Peninsula. The region occupies the drier Pacific slope of the country — the tempisque climate zone — where the dry season runs longer and more pronounced than in the Central Valley or the Caribbean slope. The landscape reflects this: dry forest trees shed their leaves in January and February, the hills turn golden, and the light takes on the warm amber quality that photographers prize.

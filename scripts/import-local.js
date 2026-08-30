@@ -16,7 +16,7 @@ const R2_ACCOUNT_ID = '3ec62f93675c404fe4a9a4949e38e5e5';
 const R2_BUCKET = 'wildphoto-storage';
 const R2_ACCESS_KEY = '3ec62f93675c404fe4a9a4949e38e5e5';
 const R2_SECRET_KEY = ''; // Need to get from wrangler
-const NEON_DB = process.env.DATABASE_URL || 'postgresql://neondb_owner:npg_BvF2JsQ8drba@ep-calm-fire-ad0dfnqd-pooler.c-2.us-east-1.aws.neon.tech/wildphotography?sslmode=require';
+const NEON_DB = process.env.DATABASE_URL || 'postgresql://neondb_owner:npg_8MuC1tvKIOoj@ep-calm-fire-ad0dfnqd-pooler.c-2.us-east-1.aws.neon.tech/wildphotography?sslmode=require';
 
 const sql = neon(NEON_DB);
 

@@ -18,7 +18,7 @@ import { neon } from '@neondatabase/serverless';
 import https from 'https';
 import http from 'http';
 
-const NEON_CONNECTION = 'postgresql://neondb_owner:npg_BvF2JsQ8drba@ep-calm-fire-ad0dfnqd-pooler.c-2.us-east-1.aws.neon.tech/wildphotography?sslmode=require';
+const NEON_CONNECTION = 'postgresql://neondb_owner:npg_8MuC1tvKIOoj@ep-calm-fire-ad0dfnqd-pooler.c-2.us-east-1.aws.neon.tech/wildphotography?sslmode=require';
 
 // R2 config
 const R2_CONFIG = {

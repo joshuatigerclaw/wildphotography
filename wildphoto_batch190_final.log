@@ -1,0 +1,68 @@
+/Users/joshuatenbrink/Library/Python/3.9/lib/python/site-packages/boto3/compat.py:89: PythonDeprecationWarning: Boto3 will no longer support Python 3.9 starting April 29, 2026. To continue receiving service updates, bug fixes, and security updates please upgrade to Python 3.10 or later. More information can be found here: https://aws.amazon.com/blogs/developer/python-support-policy-updates-for-aws-sdks-and-tools/
+  warnings.warn(warning, PythonDeprecationWarning)
+=== WildPhotography Batch 190 ===
+Start: 2026-06-17T05:21:28.904114Z
+
+GALLERY: Landscape → gallery_id=54 slug=landscape
+GALLERY: Las-Catalinas-Guanacaste → gallery_id=55 slug=las-catalinas-guanacaste
+GALLERY: Lifestyle → gallery_id=56 slug=lifestyle
+GALLERY: Limon-Puerto-Viejo-Cocles-Playa-Chiquita-y-Punta-Uva → gallery_id=57 slug=limon-puerto-viejo-cocles-playa-chiquita-y-punta-uva
+GALLERY: Marine-Life-of-Costa-Rica → gallery_id=58 slug=marine-life-of-costa-rica
+
+Folders seen: 5
+Folders matched to existing galleries: 5
+Processing 5 folders, max 15 photos per folder...
+
+--- Processing: Landscape ---
+  Existing hashes in gallery 54: 367
+  Total images found: 134
+  Imported 0 new photos from Landscape (15 dupes, 0 collisions)
+
+--- Processing: Las-Catalinas-Guanacaste ---
+  Existing hashes in gallery 55: 224
+  Total images found: 90
+  Imported 0 new photos from Las-Catalinas-Guanacaste (15 dupes, 0 collisions)
+
+--- Processing: Lifestyle ---
+  Existing hashes in gallery 56: 119
+  Total images found: 13
+  Imported 9 new photos from Lifestyle (4 dupes, 0 collisions)
+
+--- Processing: Limon-Puerto-Viejo-Cocles-Playa-Chiquita-y-Punta-Uva ---
+  Existing hashes in gallery 57: 984
+  Total images found: 462
+  Imported 0 new photos from Limon-Puerto-Viejo-Cocles-Playa-Chiquita-y-Punta-Uva (15 dupes, 0 collisions)
+
+--- Processing: Marine-Life-of-Costa-Rica ---
+  Existing hashes in gallery 58: 446
+  Total images found: 111
+  Imported 0 new photos from Marine-Life-of-Costa-Rica (15 dupes, 0 collisions)
+
+==================================================
+BATCH 190 SUMMARY
+==================================================
+folders_processed: 5
+folders_seen: ['Landscape', 'Las-Catalinas-Guanacaste', 'Lifestyle', 'Limon-Puerto-Viejo-Cocles-Playa-Chiquita-y-Punta-Uva', 'Marine-Life-of-Costa-Rica']
+folders_with_existing_gallery_match: ['Landscape', 'Las-Catalinas-Guanacaste', 'Lifestyle', 'Limon-Puerto-Viejo-Cocles-Playa-Chiquita-y-Punta-Uva', 'Marine-Life-of-Costa-Rica']
+folders_skipped_no_existing_gallery: []
+folders_skipped_ambiguous_mapping: []
+files_skipped_unmapped_gallery: 0
+files_imported_to_existing_galleries: 9
+duplicates_skipped: 64
+filename_collisions_renamed: 0
+originals_uploaded: 9
+derivatives_generated: 45
+seo_metadata_generated: 0
+seo_titles_generated: 0
+og_images_set: 0
+skipped_existing_high_quality: 0
+repaired_prior_collision_records: 0
+ready_for_public_render: 9
+search_ready: 9
+failed_files: 0
+failed_file_paths: []
+existing_gallery_ids_used: [54, 55, 56, 57, 58]
+per_gallery: {'Landscape': {'total_on_disk': 134, 'new': 0, 'duplicates': 15, 'filename_collisions': 0, 'status': 'fully_imported'}, 'Las-Catalinas-Guanacaste': {'total_on_disk': 90, 'new': 0, 'duplicates': 15, 'filename_collisions': 0, 'status': 'fully_imported'}, 'Lifestyle': {'total_on_disk': 13, 'new': 9, 'duplicates': 4, 'filename_collisions': 0, 'status': 'new_import'}, 'Limon-Puerto-Viejo-Cocles-Playa-Chiquita-y-Punta-Uva': {'total_on_disk': 462, 'new': 0, 'duplicates': 15, 'filename_collisions': 0, 'status': 'fully_imported'}, 'Marine-Life-of-Costa-Rica': {'total_on_disk': 111, 'new': 0, 'duplicates': 15, 'filename_collisions': 0, 'status': 'fully_imported'}}
+
+Complete: 2026-06-17T05:22:08.742853Z
+EXIT:0

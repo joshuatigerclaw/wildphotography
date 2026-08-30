@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 const { Client } = require('pg');
-const PG = 'postgresql://neondb_owner:npg_BvF2JsQ8drba@ep-calm-fire-ad0dfnqd-pooler.c-2.us-east-1.aws.neon.tech/wildphotography?sslmode=require&channel_binding=require';
+const PG = 'postgresql://neondb_owner:npg_8MuC1tvKIOoj@ep-calm-fire-ad0dfnqd-pooler.c-2.us-east-1.aws.neon.tech/wildphotography?sslmode=require&channel_binding=require';
 const client = new Client({ connectionString: PG });
 const slug = 'resplendent-quetzal-costa-rica';
 const content = `The resplendent quetzal occupies an unusual position in the birding world — it is simultaneously one of the most well-known birds in the Americas and one of the least reliably seen by casual visitors. The male's extraordinary tail streamers, which can exceed 60 centimeters in length, make it one of the most distinctive birds anywhere. Yet the quetzal lives in cloud forests that are inherently difficult to navigate, moves through a large territorial range, and is most active in the early morning when most visitors are still waking up. Seeing a quetzal well requires patience, local knowledge, and often more than one early start.

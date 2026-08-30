@@ -34,10 +34,11 @@ import { renderSearch } from './pages/search';
 import { renderGallery } from './pages/gallery';
 import { renderPhoto } from './pages/photo';
 import { renderArticle } from './pages/article';
-import { renderLocation } from './pages/location';
 import { renderSpecies } from './pages/species';
 import { renderSpeciesIndex } from './pages/species-index';
 import { renderRegion } from './pages/region';
+import { renderLocation } from './pages/location';
+import { renderLocationIndex } from './pages/location-index';
 import { renderArticleIndex } from './pages/article-index';
 import { renderRegionIndex } from './pages/region-index';
 import { renderGYGRedirect } from './pages/affiliate-gyg';
@@ -699,6 +700,22 @@ Disallow: /api/
         return routes[path](env, url);
       }
 
+      // === PUBLIC API: Region & Location data ===
+      if (path === 'api/regions') {
+        const { getRegionApi } = await import('./pages/region');
+        return await getRegionApi('all', env);
+      }
+      if (path.startsWith('api/region/')) {
+        const regionSlug = path.replace('api/region/', '').replace(/\/$/, '');
+        const { getRegionApi } = await import('./pages/region');
+        return await getRegionApi(regionSlug, env);
+      }
+      if (path.startsWith('api/location/')) {
+        const locationSlug = path.replace('api/location/', '').replace(/\/$/, '');
+        const { getLocationApi } = await import('./pages/location');
+        return await getLocationApi(locationSlug, env);
+      }
+
       // Dynamic routes
       try {
         if (path.startsWith('gallery/')) {
@@ -738,12 +755,16 @@ Disallow: /api/
           return await renderRegion(regionSlug, env, url);
         }
 
+        if (path === 'location') {
+          return await renderLocationIndex(env, url);
+        }
+
         if (path.startsWith('location/')) {
           const locationSlug = path.replace('location/', '').replace(/\/$/, '');
           return await renderLocation(locationSlug, env, url);
         }
 
-        if (url.pathname === '/feed/daily-random.xml') {
+if (url.pathname === '/feed/daily-random.xml') {
           return handleDailyRandomFeed(request, env);
         }
 
@@ -768,21 +789,6 @@ Disallow: /api/
           return renderTripadvisorRedirect();
         }
 
-      // API: region data
-        if (path === 'api/regions') {
-          const { getRegionApi } = await import('./pages/region');
-          return await getRegionApi('all', env);
-        }
-        if (path.startsWith('api/region/')) {
-          const regionSlug = path.replace('api/region/', '').replace(/\/$/, '');
-          const { getRegionApi } = await import('./pages/region');
-          return await getRegionApi(regionSlug, env);
-        }
-        if (path.startsWith('api/location/')) {
-          const locationSlug = path.replace('api/location/', '').replace(/\/$/, '');
-          const { getLocationApi } = await import('./pages/region');
-          return await getLocationApi(locationSlug, env);
-        }
       } catch (e) {
         console.error('[worker] Dynamic route error:', e);
         return new Response('Error: ' + String(e), { status: 500 });

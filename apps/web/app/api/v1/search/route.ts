@@ -2,75 +2,85 @@
  * API v1: Search endpoint — requires valid API key
  * GET /api/v1/search?q=...
  * Auth: Bearer token (wpa_...)
+ *
+ * Uses Neon PostgreSQL with GIN trigram indexes for full-text search.
+ * Replaces Typesense (which died Aug 2025).
  */
 import { NextRequest, NextResponse } from 'next/server';
-import { Client } from 'typesense';
+import { neon } from '@neondatabase/serverless';
 import { validateApiKey } from '@/lib/api-auth';
 
-const TYPESENSE_HOST = process.env.TYPESENSE_HOST || 'uibn03zvateqwdx2p-1.a1.typesense.net';
-const TYPESENSE_SEARCH_KEY = process.env.TYPESENSE_SEARCH_KEY || 'Hhg7V2CK3DsS94nZwgEkRzikLnEYiizE';
-const COLLECTION = 'photos';
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const sql = neon(
+  process.env.DATABASE_URL ||
+    'postgresql://neondb_owner:npg_8MuC1tvKIOoj@ep-calm-fire-ad0dfnqd-pooler.c-2.us-east-1.aws.neon.tech/wildphotography?sslmode=require'
+) as ReturnType<typeof neon> & { unsafe: (sql: string) => any };
 
 export const dynamic = 'force-dynamic';
 
-// Plan-based include_fields gating (uses only fields that exist in production schema)
-function getIncludeFields(planId: string): string {
-  // Production schema fields: title, description, keywords, location, region, country,
-  //   species, gallery_slug, gallery_title, slug, url,
-  //   search_ready, derivatives_complete, ready_for_public_render,
-  //   location_name, thumb_url, species_common_name
-  switch (planId) {
-    case 'explorer':
-      return 'slug,title,location_name,thumb_url,gallery_slug';
-    case 'professional':
-      return 'slug,title,location_name,thumb_url,gallery_slug,species_common_name,keywords';
-    case 'enterprise':
-    default:
-      return 'slug,title,description,keywords,location_name,thumb_url,gallery_slug,gallery_title,species_common_name,search_ready';
+async function doSearch(q: string, page: number, perPage: number, planId: string) {
+  const offset = (page - 1) * perPage;
+  const baseFields = `p.id, p.slug, p.title, p.thumb_url, p.medium_url, p.small_url,
+    p.gallery_slug, p.location_name, p.keywords, p.species_common_name,
+    p.description, g.name as gallery_title, p.search_ready`;
+
+  if (!q || q === '*') {
+    const [countRows, photoRows] = await Promise.all([
+      sql`SELECT COUNT(*) FROM photos p WHERE p.search_ready = true AND p.is_active = true`,
+      sql`SELECT ${sql.unsafe(baseFields)}
+          FROM photos p
+          LEFT JOIN galleries g ON g.slug = p.gallery_slug AND g.is_active = true
+          WHERE p.search_ready = true AND p.is_active = true
+          ORDER BY p.id DESC
+          LIMIT ${perPage} OFFSET ${offset}`,
+    ]);
+    return { total: parseInt((countRows as any)[0].count, 10), photos: photoRows as any[] };
   }
+
+  const term = q.replace(/[%_\\]/g, '\\$&');
+  const [countRows, photoRows] = await Promise.all([
+    sql`SELECT COUNT(*) FROM photos p
+        WHERE p.search_ready = true AND p.is_active = true
+          AND (p.title ILIKE '%' || ${term} || '%'
+               OR p.keywords::text ILIKE '%' || ${term} || '%'
+               OR p.location_name ILIKE '%' || ${term} || '%'
+               OR p.species_common_name ILIKE '%' || ${term} || '%')`,
+    sql`SELECT ${sql.unsafe(baseFields)}
+        FROM photos p
+        LEFT JOIN galleries g ON g.slug = p.gallery_slug AND g.is_active = true
+        WHERE p.search_ready = true AND p.is_active = true
+          AND (p.title ILIKE '%' || ${term} || '%'
+               OR p.keywords::text ILIKE '%' || ${term} || '%'
+               OR p.location_name ILIKE '%' || ${term} || '%'
+               OR p.species_common_name ILIKE '%' || ${term} || '%')
+        ORDER BY p.id DESC
+        LIMIT ${perPage} OFFSET ${offset}`,
+  ]);
+  return { total: parseInt((countRows as any)[0].count, 10), photos: photoRows as any[] };
 }
 
-function mapHitToResponse(hit: any, planId: string) {
-  const doc = hit.document;
-  const base = {
-    slug: doc.slug,
-    title: doc.title,
-  };
-  switch (planId) {
-    case 'explorer':
-      return {
-        ...base,
-        thumbUrl: doc.thumb_url,
-        locationName: doc.location_name,
-        gallery: doc.gallery_slug,
-      };
-    case 'professional':
-      return {
-        ...base,
-        thumbUrl: doc.thumb_url,
-        locationName: doc.location_name,
-        gallery: doc.gallery_slug,
-        species: doc.species_common_name,
-        keywords: doc.keywords,
-      };
-    case 'enterprise':
-    default:
-      return {
-        ...base,
-        title: doc.title,
-        description: doc.description,
-        keywords: doc.keywords,
-        locationName: doc.location_name,
-        gallery: doc.gallery_slug,
-        galleryTitle: doc.gallery_title,
-        species: doc.species_common_name,
-        searchReady: doc.search_ready,
-      };
+function mapFields(row: any, planId: string) {
+  const base: Record<string, unknown> = { slug: row.slug, title: row.title };
+  if (planId === 'explorer') {
+    return { ...base, thumbUrl: row.thumb_url, locationName: row.location_name, gallery: row.gallery_slug };
   }
+  if (planId === 'professional') {
+    return { ...base, thumbUrl: row.thumb_url, locationName: row.location_name, gallery: row.gallery_slug, species: row.species_common_name, keywords: row.keywords };
+  }
+  return {
+    ...base,
+    title: row.title,
+    description: row.description,
+    keywords: row.keywords,
+    locationName: row.location_name,
+    gallery: row.gallery_slug,
+    galleryTitle: row.gallery_title,
+    species: row.species_common_name,
+    searchReady: row.search_ready,
+  };
 }
 
 export async function GET(request: NextRequest) {
-  // Authenticate
   const auth = await validateApiKey(request);
   if (!auth.authorized) {
     return NextResponse.json({ error: auth.message }, { status: auth.status });
@@ -82,35 +92,13 @@ export async function GET(request: NextRequest) {
   const query = searchParams.get('q') || '*';
   const page = Math.max(1, parseInt(searchParams.get('page') || '1', 10));
   let perPage = Math.min(50, Math.max(1, parseInt(searchParams.get('per_page') || searchParams.get('limit') || '20', 10)));
-
-  // Plan-based per_page cap
   if (perPage > 20) perPage = 20;
 
-  const typesense = new Client({
-    nodes: [{ host: TYPESENSE_HOST, port: 443, protocol: 'https' }],
-    apiKey: TYPESENSE_SEARCH_KEY,
-    additionalHeaders: { 'Accept-Encoding': 'gzip' },
-  });
-
-  const includeFields = getIncludeFields(customer.planId);
-
   try {
-    const result = await typesense
-      .collections(COLLECTION)
-      .documents()
-      .search({
-        q: query === '*' || !query ? '*' : query,
-        query_by: 'title,keywords,location_name,species',
-        sort_by: 'search_ready:desc',
-        page,
-        per_page: perPage,
-        include_fields: includeFields,
-      });
-
-    const total = result.found || 0;
+    const { total, photos } = await doSearch(query, page, perPage, customer.planId);
 
     return NextResponse.json({
-      photos: (result.hits || []).map((hit: any) => mapHitToResponse(hit, customer.planId)),
+      photos: photos.map((row) => mapFields(row, customer.planId)),
       total,
       page,
       per_page: perPage,
@@ -129,6 +117,9 @@ export async function GET(request: NextRequest) {
     });
   } catch (e) {
     console.error('v1/search error:', e);
-    return NextResponse.json({ error: 'Search failed' }, { status: 500 });
+    return NextResponse.json(
+      { error: e instanceof Error ? e.message : 'Search failed' },
+      { status: 500 }
+    );
   }
 }

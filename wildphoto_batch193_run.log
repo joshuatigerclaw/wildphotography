@@ -1,0 +1,68 @@
+/Users/joshuatenbrink/Library/Python/3.9/lib/python/site-packages/boto3/compat.py:89: PythonDeprecationWarning: Boto3 will no longer support Python 3.9 starting April 29, 2026. To continue receiving service updates, bug fixes, and security updates please upgrade to Python 3.10 or later. More information can be found here: https://aws.amazon.com/blogs/developer/python-support-policy-updates-for-aws-sdks-and-tools/
+  warnings.warn(warning, PythonDeprecationWarning)
+=== WildPhotography Batch 193 ===
+Start: 2026-06-17T05:28:39.268123Z
+
+GALLERY: Perez-Zeledon-San-Isidro-del-General → gallery_id=69 slug=perez-zeledon-san-isidro-del-general
+GALLERY: Playa-Hermosa-Jaco-Garabito → gallery_id=71 slug=playa-hermosa-jaco-garabito
+GALLERY: Random-Places-of-Costa-Rica → gallery_id=82 slug=random-places-of-costa-rica
+GALLERY: Rio-Savagre-Costa-Rica → gallery_id=84 slug=rio-savagre-costa-rica
+GALLERY: Roads-Bridges-and-Infrastructure → gallery_id=85 slug=roads-bridges-and-infrastructure
+
+Folders seen: 5
+Folders matched to existing galleries: 5
+Processing 5 folders, max 15 photos per folder...
+
+--- Processing: Perez-Zeledon-San-Isidro-del-General ---
+  Existing hashes in gallery 69: 40
+  Total images found: 20
+  Imported 0 new photos from Perez-Zeledon-San-Isidro-del-General (15 dupes, 0 collisions)
+
+--- Processing: Playa-Hermosa-Jaco-Garabito ---
+  Existing hashes in gallery 71: 24
+  Total images found: 4
+  Imported 4 new photos from Playa-Hermosa-Jaco-Garabito (0 dupes, 0 collisions)
+
+--- Processing: Random-Places-of-Costa-Rica ---
+  Existing hashes in gallery 82: 148
+  Total images found: 18
+  Imported 0 new photos from Random-Places-of-Costa-Rica (15 dupes, 0 collisions)
+
+--- Processing: Rio-Savagre-Costa-Rica ---
+  Existing hashes in gallery 84: 212
+  Total images found: 171
+  Imported 10 new photos from Rio-Savagre-Costa-Rica (5 dupes, 0 collisions)
+
+--- Processing: Roads-Bridges-and-Infrastructure ---
+  Existing hashes in gallery 85: 235
+  Total images found: 6
+  Imported 0 new photos from Roads-Bridges-and-Infrastructure (6 dupes, 0 collisions)
+
+==================================================
+BATCH 193 SUMMARY
+==================================================
+folders_processed: 5
+folders_seen: ['Perez-Zeledon-San-Isidro-del-General', 'Playa-Hermosa-Jaco-Garabito', 'Random-Places-of-Costa-Rica', 'Rio-Savagre-Costa-Rica', 'Roads-Bridges-and-Infrastructure']
+folders_with_existing_gallery_match: ['Perez-Zeledon-San-Isidro-del-General', 'Playa-Hermosa-Jaco-Garabito', 'Random-Places-of-Costa-Rica', 'Rio-Savagre-Costa-Rica', 'Roads-Bridges-and-Infrastructure']
+folders_skipped_no_existing_gallery: []
+folders_skipped_ambiguous_mapping: []
+files_skipped_unmapped_gallery: 0
+files_imported_to_existing_galleries: 14
+duplicates_skipped: 41
+filename_collisions_renamed: 0
+originals_uploaded: 14
+derivatives_generated: 70
+seo_metadata_generated: 0
+seo_titles_generated: 0
+og_images_set: 0
+skipped_existing_high_quality: 0
+repaired_prior_collision_records: 0
+ready_for_public_render: 14
+search_ready: 14
+failed_files: 0
+failed_file_paths: []
+existing_gallery_ids_used: [69, 71, 82, 84, 85]
+per_gallery: {'Perez-Zeledon-San-Isidro-del-General': {'total_on_disk': 20, 'new': 0, 'duplicates': 15, 'filename_collisions': 0, 'status': 'fully_imported'}, 'Playa-Hermosa-Jaco-Garabito': {'total_on_disk': 4, 'new': 4, 'duplicates': 0, 'filename_collisions': 0, 'status': 'new_import'}, 'Random-Places-of-Costa-Rica': {'total_on_disk': 18, 'new': 0, 'duplicates': 15, 'filename_collisions': 0, 'status': 'fully_imported'}, 'Rio-Savagre-Costa-Rica': {'total_on_disk': 171, 'new': 10, 'duplicates': 5, 'filename_collisions': 0, 'status': 'new_import'}, 'Roads-Bridges-and-Infrastructure': {'total_on_disk': 6, 'new': 0, 'duplicates': 6, 'filename_collisions': 0, 'status': 'fully_imported'}}
+
+Complete: 2026-06-17T05:29:45.444628Z
+EXIT:0

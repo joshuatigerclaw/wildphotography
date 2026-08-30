@@ -8,7 +8,7 @@ const { neon } = require('@neondatabase/serverless');
 const { Client: TypesenseClient } = require('typesense');
 
 const NEON_DB_URL = process.env.DATABASE_URL ||
-  'postgresql://neondb_owner:npg_BvF2JsQ8drba@ep-calm-fire-ad0dfnqd-pooler.c-2.us-east-1.aws.neon.tech/wildphotography?sslmode=require';
+  'postgresql://neondb_owner:npg_8MuC1tvKIOoj@ep-calm-fire-ad0dfnqd-pooler.c-2.us-east-1.aws.neon.tech/wildphotography?sslmode=require';
 const TYPESENSE_HOST = process.env.TYPESENSE_HOST || 'uibn03zvateqwdx2p-1.a1.typesense.net';
 const TYPESENSE_API_KEY = process.env.TYPESENSE_ADMIN_KEY || 'MPphr9zDlLzHRFQHDH4AyQb5hw2ugew7';
 const SITE_URL = process.env.SITE_URL || 'https://wildphotography.com';
@@ -203,7 +203,19 @@ async function storeResults(data) {
   const { inventory, derivatives, searchQuality, endpoints, recordedAt = new Date().toISOString() } = data;
   const overallHealthy = !inventory.driftAlert && !derivatives.alert && !searchQuality.alert && !endpoints.alert;
 
-  await sql`
+  // Ensure all numeric values are safe integers or properly rounded decimals
+  const toNum = (v) => (typeof v === 'number' && isFinite(v) ? v : 0);
+  const toInt = (v) => (typeof v === 'number' && isFinite(v) ? Math.round(v) : 0);
+  const toPct = (v) => (typeof v === 'number' && isFinite(v) ? Math.round(v * 1000) / 1000 : 0);
+  const safeErrors = Array.isArray(derivatives.errors) ? derivatives.errors.slice(0, 20) : [];
+
+  // Debug log all numeric values before insert
+  console.log('[DEBUG] driftPct raw:', inventory.driftPct, '-> toPct:', toPct(inventory.driftPct));
+  console.log('[DEBUG] failPct raw:', derivatives.failPct, '-> toPct:', toPct(derivatives.failPct));
+  console.log('[DEBUG] neonEligible:', toInt(inventory.neonEligible), 'neonTotal:', toInt(inventory.neonTotal));
+
+  try {
+    await sql`
     INSERT INTO system_health_history (
       recorded_at,
       typesense_count, neon_eligible_count, neon_total_count,
@@ -217,18 +229,21 @@ async function storeResults(data) {
       snapshot_data
     ) VALUES (
       ${recordedAt},
-      ${inventory.typesenseCount}, ${inventory.neonEligible}, ${inventory.neonTotal},
-      ${inventory.neonReady}, ${inventory.neonSearchReady}, ${inventory.neonDerivativesComplete},
-      ${inventory.driftPct},
-      ${derivatives.sampleSize}, ${derivatives.thumbMissing}, ${derivatives.smallMissing},
-      ${derivatives.mediumMissing}, ${derivatives.largeMissing}, ${derivatives.failPct},
+      ${toInt(inventory.typesenseCount)}, ${toInt(inventory.neonEligible)}, ${toInt(inventory.neonTotal)},
+      ${toInt(inventory.neonReady)}, ${toInt(inventory.neonSearchReady)}, ${toInt(inventory.neonDerivativesComplete)},
+      ${toPct(inventory.driftPct)},
+      ${toInt(derivatives.sampleSize)}, ${toInt(derivatives.thumbMissing)}, ${toInt(derivatives.smallMissing)},
+      ${toInt(derivatives.mediumMissing)}, ${toInt(derivatives.largeMissing)}, ${toPct(derivatives.failPct)},
       ${JSON.stringify(searchQuality)}::jsonb,
       ${JSON.stringify(endpoints)}::jsonb,
       ${inventory.driftAlert}, ${derivatives.alert}, ${searchQuality.alert}, ${endpoints.alert},
       ${overallHealthy},
-      ${JSON.stringify({ errors: derivatives.errors || [] })}::jsonb
+      ${JSON.stringify({ errors: safeErrors })}::jsonb
     )
   `;
+  } catch (e) {
+    console.error('[storeResults] DB insert failed:', e.message);
+  }
 
   return overallHealthy;
 }

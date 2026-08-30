@@ -10,7 +10,7 @@
 const { neon } = require('@neondatabase/serverless');
 
 const NEON_DB_URL = process.env.DATABASE_URL || 
-  'postgresql://neondb_owner:npg_BvF2JsQ8drba@ep-calm-fire-ad0dfnqd-pooler.c-2.us-east-1.aws.neon.tech/wildphotography?sslmode=require';
+  'postgresql://neondb_owner:npg_8MuC1tvKIOoj@ep-calm-fire-ad0dfnqd-pooler.c-2.us-east-1.aws.neon.tech/wildphotography?sslmode=require';
 
 /**
  * Update photo with derivative metadata

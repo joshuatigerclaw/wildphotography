@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { sql, getGalleryBySlug } from '@/lib/db';
+import { generateBreadcrumbJsonLd, canonicalUrl } from '@/lib/seo';
 import GalleryClient from './GalleryClient';
 
 // ISR — revalidate every 60s instead of hitting Neon on every request
@@ -91,10 +92,11 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
   const canonical = `${SITE_URL}/gallery/${gallery.slug}`;
   const ogImage = gallery.coverPhotoUrl;
+  const desc = gallery.description || `${gallery.name} - ${gallery.photoCount} beautiful nature photography images from Costa Rica`;
 
   return {
     title: `${gallery.name} | WildPhotography`,
-    description: gallery.description || `${gallery.name} - ${gallery.photoCount} beautiful nature photography images from Costa Rica`,
+    description: desc,
     alternates: { canonical },
     openGraph: {
       title: `${gallery.name} | WildPhotography`,
@@ -181,8 +183,48 @@ export default async function GalleryPage({ params }: { params: Promise<{ slug: 
   `;
   const relatedGalleries = relatedResult as any[];
 
+  // ── JSON-LD: Gallery Page schema ─────────────────────────────────
+  const galleryJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: gallery.name,
+    description: gallery.description || undefined,
+    url: `${SITE_URL}/gallery/${gallery.slug}`,
+    image: gallery.coverPhotoUrl ? { '@type': 'ImageObject', url: gallery.coverPhotoUrl } : undefined,
+    mainEntity: {
+      '@type': 'ItemList',
+      numberOfItems: total,
+      itemListElement: photos.slice(0, 20).map((p: any, i: number) => ({
+        '@type': 'ListItem',
+        position: i + 1,
+        url: `${SITE_URL}/photo/${p.slug}`,
+        name: p.title || p.species_common_name || 'Photo',
+      })),
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'WildPhotography',
+      url: SITE_URL,
+    },
+    author: {
+      '@type': 'Person',
+      name: 'Joshua ten Brink',
+      url: SITE_URL,
+    },
+  };
+
+  // ── BreadcrumbList JSON-LD ───────────────────────────────────────
+  const breadcrumbJsonLd = generateBreadcrumbJsonLd([
+    { name: 'Home', url: '/' },
+    { name: 'Galleries', url: '/galleries' },
+    { name: gallery.name, url: `/gallery/${gallery.slug}` },
+  ]);
+
   return (
-    <div className="container" style={{paddingTop: 'var(--gutter)', paddingBottom: 'calc(var(--gutter) * 2)'}}>
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(galleryJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
+      <div className="container" style={{paddingTop: 'var(--gutter)', paddingBottom: 'calc(var(--gutter) * 2)'}}>
       {/* Breadcrumb */}
       <nav aria-label="Breadcrumb" style={{marginBottom: 'var(--gutter)'}}>
         <ol style={{display:'flex',alignItems:'center',gap:'10px',listStyle:'none',margin:0,padding:0,fontSize:'13px',fontFamily:'var(--font-mono)',textTransform:'uppercase',letterSpacing:'.1em',color:'var(--ink-dim)'}}>
@@ -216,6 +258,47 @@ export default async function GalleryPage({ params }: { params: Promise<{ slug: 
           )}
         </div>
       </header>
+
+      {/* ── Birds gallery editorial introduction ── */}
+      {gallery.slug === 'birds' && (
+        <section style={{marginBottom:'var(--gutter)',padding:'24px',background:'var(--bg-inset)',borderRadius:'var(--r-md)',border:'1px solid var(--rule)'}}>
+          <h2 style={{fontFamily:'var(--font-display)',fontSize:'1.4rem',fontWeight:500,color:'var(--ink)',margin:'0 0 16px 0'}}>
+            Costa Rica Bird Photography
+          </h2>
+          <div style={{color:'var(--ink-muted)',fontSize:'15px',lineHeight:1.7,maxWidth:'680px'}}>
+            <p style={{margin:'0 0 14px 0'}}>
+              With more than 900 bird species recorded within its borders, Costa Rica consistently ranks among the best birdwatching destinations on the planet. That diversity across an area smaller than West Virginia — spanning volcanic highlands, Pacific coastline, Caribbean lowlands, and cloud forests — is what drew me here fifteen years ago, and it's what keeps me finding new subjects to photograph.
+            </p>
+            <p style={{margin:'0 0 14px 0'}}>
+              This gallery represents years of field work across the country: tracking Scarlet Macaw pairs along the Pacific coast at dawn, waiting for the Resplendent Quetzal to appear in the Monteverde mist, and photographing the iridescent hummingbirds that crowd the highland feeders year-round. Each image in this collection comes from actual field sessions — no captive specimens, no staged setups.
+            </p>
+            <p style={{margin:'0 0 14px 0'}}>
+              The gallery spans a range of families: toucans and aracaris in the lowland rainforests, waders and shorebirds along both coasts, hawks and raptors soaring over mountain ridges, and the dozens of hummingbird species that make Costa Rica a hummer destination rivaling Ecuador and Peru. I have particular depth in Scarlet Macaw photography from the Nicoya Peninsula and in the waterbird populations of the Guanacaste wetlands.
+            </p>
+            <p style={{margin:'0 0 14px 0'}}>
+              The sub-galleries below represent some of the strongest concentrations of images — macaws, toucans, hummingbirds, motmots, and wading birds each have their own dedicated collections. Browse by species if you are looking for something specific, or explore by location if your trip is focused on a particular region.
+            </p>
+            <p style={{margin:0}}>
+              Every photograph in this collection is available as a museum-quality print or for licensing. If you are planning a birding trip to Costa Rica and want photography guidance for specific locations or species, the individual species pages include notes on where and when to find each bird.
+            </p>
+          </div>
+          {/* Sub-gallery quick links */}
+          <div style={{display:'flex',flexWrap:'wrap',gap:'10px',marginTop:'20px'}}>
+            {[
+              { slug: 'birds-macaws-lapas', label: 'Scarlet Macaws' },
+              { slug: 'birds-toucans', label: 'Toucans' },
+              { slug: 'birds-hummingbirds', label: 'Hummingbirds' },
+              { slug: 'birds-motmots', label: 'Motmots' },
+              { slug: 'birds-waders', label: 'Wading Birds' },
+            ].map(g => (
+              <Link key={g.slug} href={`/gallery/${g.slug}`}
+                style={{display:'inline-flex',alignItems:'center',padding:'7px 14px',border:'1px solid var(--rule)',borderRadius:'var(--r-sm)',fontFamily:'var(--font-mono)',fontSize:'11px',textTransform:'uppercase',letterSpacing:'.1em',color:'var(--ink-muted)',textDecoration:'none'}}>
+                {g.label} &rarr;
+              </Link>
+            ))}
+          </div>
+        </section>
+      )}
 
       {/* Species in this gallery */}
       {species.length > 0 && (
@@ -325,5 +408,6 @@ export default async function GalleryPage({ params }: { params: Promise<{ slug: 
         </div>
       )}
     </div>
+    </>
   );
 }
