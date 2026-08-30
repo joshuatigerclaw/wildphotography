@@ -52,12 +52,12 @@ export default function GalleryClient({ photos, gallerySlug, galleryName }: Gall
   }));
 
   // ── Map to the shape GalleryLightboxModal expects ──────────
-  // Use medium URL for modal display (large would be too slow)
+  // Use large URL for modal — medium derivatives are missing from R2 for most photos
 
   const lightboxPhotos: LightboxPhoto[] = photos.map(p => ({
     id: p.id,
     slug: p.slug,
-    src: p.mediumUrl || p.smallUrl || p.thumbUrl || '',
+    src: p.largeUrl || p.mediumUrl || p.smallUrl || p.thumbUrl || '',
     title: p.title || null,
     locationName: p.locationName || null,
     region: p.region || null,
