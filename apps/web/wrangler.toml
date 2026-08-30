@@ -4,6 +4,9 @@ compatibility_date = "2026-03-07"
 compatibility_flags = ["nodejs_compat"]
 workers_dev = false
 
+# Serve static assets from the OpenNext assets directory
+assets = { directory = ".open-next/assets" }
+
 [vars]
 NEXTJS_ENV = "production"
 VISIT_DIRECT_NEON_FALLBACK = "false"
