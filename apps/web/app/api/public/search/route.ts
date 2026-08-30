@@ -10,7 +10,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { logSecurityEvent, hashIP, hashUA } from '@/lib/security/logger';
 
 const POOLER_HOST = 'ep-calm-fire-ad0dfnqd-pooler.c-2.us-east-1.aws.neon.tech';
-const CONN_STR = `postgresql://neondb_owner:npg_8MuC1tvKIOoj@${POOLER_HOST}/wildphotography?sslmode=require`;
+const CONN_STR = `postgresql://neondb_owner:npg_GonqSbJlRi71@${POOLER_HOST}/wildphotography?sslmode=require`;
 
 export const dynamic = 'force-dynamic';
 

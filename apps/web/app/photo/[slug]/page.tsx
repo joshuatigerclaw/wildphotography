@@ -41,28 +41,50 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const ogImage = photo.mediumUrl || photo.smallUrl || photo.thumbUrl;
 
   // Use SEO metadata from DB when available; fall back to rule-based pattern
-  const seoTitle = photo.metadata?.seo_title;
+  // Validate stored titles to avoid malformed outputs (e.g. trailing 'in', 'Costa Rica, Costa Rica')
+  const rawSeoTitle = photo.metadata?.seo_title;
+  const seoTitle = rawSeoTitle && !/\s+in$/.test(rawSeoTitle) && !/Costa Rica,\s+Costa Rica/.test(rawSeoTitle)
+    ? rawSeoTitle
+    : null;
   const seoDescription = photo.metadata?.meta_description;
 
   // Build description from available metadata
+  // Build description: avoid 'Costa Rica, Costa Rica' duplication
   let description = seoDescription || photo.description || '';
-  if (!description && photo.locationName) {
-    description = `${displayTitle || 'Photo'} from ${photo.locationName}, Costa Rica`;
-  }
-  if (!description && gallery) {
-    description = `${displayTitle || 'Photo'} in ${gallery.name} gallery`;
+  if (!description) {
+    const loc = photo.locationName
+      ? photo.locationName.replace(/,\s*Costa Rica$/, '').trim()
+      : (photo.region && photo.region !== 'Costa Rica' ? photo.region : null);
+    if (loc) {
+      description = `${displayTitle || 'Photo'} from ${loc}, Costa Rica`;
+    } else if (gallery) {
+      description = `${displayTitle || 'Photo'} in ${gallery.name} gallery`;
+    }
   }
 
   // Better SEO title: prefer DB seo_title, then subject+location pattern, then displayTitle
   let pageTitle = seoTitle;
   if (!pageTitle) {
     const subject = photo.species_common_name || displayTitle || 'Costa Rica';
-    const location = photo.locationName && photo.locationName !== 'Costa Rica'
-      ? photo.locationName
-      : (photo.region || 'Costa Rica');
-    pageTitle = `${subject} in ${location}, Costa Rica | WildPhotography`;
-    if (pageTitle.length > 70) {
-      pageTitle = `${subject} in Costa Rica | WildPhotography`;
+    const rawLocation = photo.locationName || photo.region || null;
+    // Avoid appending location if it would duplicate geographic context in the subject
+    // e.g. subject "Yacht in Costa Rican Waters" + location "Puntarenas, Costa Rica" → redundant
+    const subjectLower = (photo.species_common_name || displayTitle || '').toLowerCase();
+    const locationIsRedundant = rawLocation && (
+      subjectLower.includes('costa ric') ||
+      subjectLower.includes(rawLocation.toLowerCase().split(',')[0].trim())
+    );
+    const location = !locationIsRedundant && rawLocation && rawLocation !== 'Costa Rica'
+      ? rawLocation
+      : (!locationIsRedundant ? (photo.region || null) : null);
+
+    if (location) {
+      pageTitle = `${subject} in ${location}, Costa Rica | WildPhotography`;
+      if (pageTitle.length > 70) {
+        pageTitle = `${subject} in Costa Rica | WildPhotography`;
+      }
+    } else {
+      pageTitle = `${subject} | WildPhotography`;
     }
   }
 

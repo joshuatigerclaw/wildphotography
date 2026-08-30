@@ -90,17 +90,48 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
   if (!gallery) return { title: 'Gallery Not Found' };
 
-  const canonical = `${SITE_URL}/gallery/${gallery.slug}`;
+  const canonical = canonicalUrl(`/gallery/${gallery.slug}`);
   const ogImage = gallery.coverPhotoUrl;
-  const desc = gallery.description || `${gallery.name} - ${gallery.photoCount} beautiful nature photography images from Costa Rica`;
+
+  // SEO-optimized title patterns for key galleries (Phase 7 & Phase 16)
+  const SEO_GALLERY_TITLES: Record<string, { title: string; description: string }> = {
+    'birds': {
+      title: 'Costa Rica Bird Photos & Bird Species | WildPhotography',
+      description: `${gallery.photoCount} bird and wildlife photographs from Costa Rica — Scarlet Macaws, hummingbirds, toucans, quetzals, and 200+ more species. Original photography by Joshua ten Brink.`,
+    },
+    'birds-macaws-lapas': {
+      title: 'Scarlet Macaw Photos Costa Rica | WildPhotography',
+      description: `Browse ${gallery.photoCount} Scarlet Macaw photographs from Costa Rica — Carara, Nicoya Peninsula, and the Pacific coast. Original field photography by Joshua ten Brink.`,
+    },
+    'wildlife': {
+      title: 'Costa Rica Wildlife Photography | WildPhotography',
+      description: `${gallery.photoCount} wildlife photographs from Costa Rica — monkeys, sloths, crocodiles, and more. Original nature photography by Joshua ten Brink.`,
+    },
+    'beaches': {
+      title: 'Costa Rica Beach Photos | WildPhotography',
+      description: `${gallery.photoCount} beach and coastal photographs from Costa Rica — Pacific beaches, Caribbean shores, and volcanic sand coves. Original photography by Joshua ten Brink.`,
+    },
+    'waterfalls-in-costa-rica': {
+      title: 'Costa Rica Waterfall Photos | WildPhotography',
+      description: `${gallery.photoCount} waterfall photographs from Costa Rica — Nauyaca, Rio Fortuna, and jungle cascades. Original nature photography by Joshua ten Brink.`,
+    },
+    'peninsula-de-osa': {
+      title: 'Peninsula de Osa Costa Rica Photos | WildPhotography',
+      description: `${gallery.photoCount} photographs from Peninsula de Osa — Corcovado National Park, Drake Bay, and Costa Rica's most biodiverse region. Original wildlife photography.`,
+    },
+  };
+
+  const seoMeta = SEO_GALLERY_TITLES[slug];
+  const pageTitle = seoMeta?.title || `${gallery.name} | WildPhotography`;
+  const pageDesc = seoMeta?.description || gallery.description || `${gallery.name} — ${gallery.photoCount} beautiful nature photography images from Costa Rica`;
 
   return {
-    title: `${gallery.name} | WildPhotography`,
-    description: desc,
+    title: pageTitle,
+    description: pageDesc,
     alternates: { canonical },
     openGraph: {
-      title: `${gallery.name} | WildPhotography`,
-      description: gallery.description || `${gallery.name} - ${gallery.photoCount} photos from Costa Rica`,
+      title: pageTitle,
+      description: seoMeta?.description || gallery.description || `${gallery.name} — ${gallery.photoCount} photos from Costa Rica`,
       url: canonical,
       siteName: 'WildPhotography',
       images: ogImage ? [{ url: ogImage, width: 1200, height: 630, alt: gallery.name }] : [],
@@ -108,8 +139,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     },
     twitter: {
       card: 'summary_large_image',
-      title: `${gallery.name} | WildPhotography`,
-      description: gallery.description || undefined,
+      title: pageTitle,
+      description: pageDesc,
       images: ogImage ? [ogImage] : [],
     },
   };
@@ -124,64 +155,87 @@ export default async function GalleryPage({ params }: { params: Promise<{ slug: 
   const { photos, total } = await getPhotosByGallery(slug, 100, 0);
 
   // Species featured in this gallery's photos (via photo_species junction)
-  const speciesResult = await sql`
-    SELECT s.id, s.common_name, s.scientific_name, s.slug, s.photo_count,
-           COUNT(ps.photo_id) as photo_in_gallery
-    FROM species s
-    JOIN photo_species ps ON ps.species_id = s.id
-    JOIN gallery_photos gp ON gp.photo_id = ps.photo_id
-    JOIN galleries g ON g.id = gp.gallery_id
-    WHERE g.slug = ${slug}
-    GROUP BY s.id, s.common_name, s.scientific_name, s.slug, s.photo_count
-    ORDER BY photo_in_gallery DESC, s.common_name
-    LIMIT 6
-  `;
-  const species = speciesResult as any[];
+  // Gracefully handle missing photo_species table
+  let species: any[] = [];
+  try {
+    const speciesResult = await sql`
+      SELECT s.id, s.common_name, s.scientific_name, s.slug, s.photo_count,
+             COUNT(ps.photo_id) as photo_in_gallery
+      FROM species s
+      JOIN photo_species ps ON ps.species_id = s.id
+      JOIN gallery_photos gp ON gp.photo_id = ps.photo_id
+      JOIN galleries g ON g.id = gp.gallery_id
+      WHERE g.slug = ${slug}
+      GROUP BY s.id, s.common_name, s.scientific_name, s.slug, s.photo_count
+      ORDER BY photo_in_gallery DESC, s.common_name
+      LIMIT 6
+    `;
+    species = speciesResult as any[];
+  } catch {
+    species = [];
+  }
 
   // Locations covered by this gallery's photos (via photo_locations)
-  const locationsResult = await sql`
-    SELECT l.id, l.name, l.slug, l.region,
-           COUNT(DISTINCT gp.photo_id) as photo_count
-    FROM locations l
-    JOIN photo_locations ploc ON ploc.location_id = l.id
-    JOIN gallery_photos gp ON gp.photo_id = ploc.photo_id
-    JOIN galleries g ON g.id = gp.gallery_id
-    WHERE g.slug = ${slug}
-    GROUP BY l.id, l.name, l.slug, l.region
-    ORDER BY photo_count DESC, l.name
-    LIMIT 6
-  `;
-  const locations = locationsResult as any[];
+  // Gracefully handle missing photo_locations table
+  let locations: any[] = [];
+  try {
+    const locationsResult = await sql`
+      SELECT l.id, l.name, l.slug, l.region,
+             COUNT(DISTINCT gp.photo_id) as photo_count
+      FROM locations l
+      JOIN photo_locations ploc ON ploc.location_id = l.id
+      JOIN gallery_photos gp ON gp.photo_id = ploc.photo_id
+      JOIN galleries g ON g.id = gp.gallery_id
+      WHERE g.slug = ${slug}
+      GROUP BY l.id, l.name, l.slug, l.region
+      ORDER BY photo_count DESC, l.name
+      LIMIT 6
+    `;
+    locations = locationsResult as any[];
+  } catch {
+    locations = [];
+  }
 
   // Fallback: locations from photo.location field
-  const locationFallback = await sql`
-    SELECT DISTINCT p.location as name, l.slug,
-           COUNT(*) as photo_count
-    FROM photos p
-    JOIN gallery_photos gp ON gp.photo_id = p.id
-    JOIN galleries g ON g.id = gp.gallery_id
-    LEFT JOIN locations l ON l.name = p.location
-    WHERE g.slug = ${slug}
-      AND p.location IS NOT NULL AND p.location != ''
-    GROUP BY p.location, l.slug
-    ORDER BY COUNT(*) DESC
-    LIMIT 6
-  `;
-  const photoLocations = locationFallback as any[];
+  let photoLocations: any[] = [];
+  try {
+    const locationFallback = await sql`
+      SELECT DISTINCT p.location as name, l.slug,
+             COUNT(*) as photo_count
+      FROM photos p
+      JOIN gallery_photos gp ON gp.photo_id = p.id
+      JOIN galleries g ON g.id = gp.gallery_id
+      LEFT JOIN locations l ON l.name = p.location
+      WHERE g.slug = ${slug}
+        AND p.location IS NOT NULL AND p.location != ''
+      GROUP BY p.location, l.slug
+      ORDER BY COUNT(*) DESC
+      LIMIT 6
+    `;
+    photoLocations = locationFallback as any[];
+  } catch {
+    photoLocations = [];
+  }
 
   // Related galleries: galleries sharing species with this gallery
-  const relatedResult = await sql`
-    SELECT DISTINCT g2.id, g2.name, g2.slug, g2.description
-    FROM galleries g1
-    JOIN gallery_photos gp1 ON gp1.gallery_id = g1.id
-    JOIN photo_species ps1 ON ps1.photo_id = gp1.photo_id
-    JOIN gallery_photos gp2 ON gp2.photo_id = ps1.photo_id
-    JOIN galleries g2 ON g2.id = gp2.gallery_id
-    WHERE g1.slug = ${slug} AND g2.slug != ${slug} AND g2.is_active = true
-    ORDER BY g2.name
-    LIMIT 6
-  `;
-  const relatedGalleries = relatedResult as any[];
+  // Gracefully handle missing photo_species table
+  let relatedGalleries: any[] = [];
+  try {
+    const relatedResult = await sql`
+      SELECT DISTINCT g2.id, g2.name, g2.slug, g2.description
+      FROM galleries g1
+      JOIN gallery_photos gp1 ON gp1.gallery_id = g1.id
+      JOIN photo_species ps1 ON ps1.photo_id = gp1.photo_id
+      JOIN gallery_photos gp2 ON gp2.photo_id = ps1.photo_id
+      JOIN galleries g2 ON g2.id = gp2.gallery_id
+      WHERE g1.slug = ${slug} AND g2.slug != ${slug} AND g2.is_active = true
+      ORDER BY g2.name
+      LIMIT 6
+    `;
+    relatedGalleries = relatedResult as any[];
+  } catch {
+    relatedGalleries = [];
+  }
 
   // ── JSON-LD: Gallery Page schema ─────────────────────────────────
   const galleryJsonLd = {
@@ -239,7 +293,7 @@ export default async function GalleryPage({ params }: { params: Promise<{ slug: 
       {/* Gallery header */}
       <header style={{marginBottom:'calc(var(--gutter) * 1.5)',paddingBottom:'var(--gutter)',borderBottom:'1px solid var(--rule)'}}>
         <h1 style={{fontFamily:'var(--font-display)',fontSize:'clamp(2rem,5vw,3.5rem)',fontWeight:500,color:'var(--ink)',lineHeight:1.1,margin:'0 0 16px 0'}}>
-          {gallery.name}
+          {slug === 'birds' ? 'Birds of Costa Rica \u2014 Wildlife Photography' : gallery.name}
         </h1>
         {gallery.description && (
           <p style={{color:'var(--ink-muted)',fontSize:'18px',maxWidth:'640px',margin:'0 0 16px 0',lineHeight:1.6}}>

@@ -290,7 +290,7 @@ export function buildPhotoSeoTitle(opts: {
       /^\d{3,}$/,
       /^cl0[a-z0-9]+$/i,
     ];
-    const isTemplate = skipPatterns.some(p => p.test(opts.title));
+    const isTemplate = skipPatterns.some(p => p.test(opts.title || ''));
     if (!isTemplate) {
       subject = opts.title.replace(/\s*\|\s*WildPhotography\s*$/i, '').trim();
     }

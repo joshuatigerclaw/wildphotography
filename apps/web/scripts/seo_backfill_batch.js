@@ -12,7 +12,7 @@ const fs = require('fs');
 const path = require('path');
 
 // ─── Configuration ───────────────────────────────────────────────────────────
-const DATABASE_URL = 'postgresql://neondb_owner:npg_8MuC1tvKIOoj@ep-calm-fire-ad0dfnqd-pooler.c-2.us-east-1.aws.neon.tech/wildphotography?sslmode=require';
+const DATABASE_URL = 'postgresql://neondb_owner:npg_GonqSbJlRi71@ep-calm-fire-ad0dfnqd-pooler.c-2.us-east-1.aws.neon.tech/wildphotography?sslmode=require';
 const LOG_FILE = '/Users/joshuatenbrink/.openclaw/workspace/wild_seo_backfill_log.txt';
 const BATCH_SIZE = 200;
 const PROGRESS_EVERY = 1000;

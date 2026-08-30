@@ -6,12 +6,48 @@
 
 import { neon } from '@neondatabase/serverless';
 
-const DATABASE_URL = process.env.DATABASE_URL || 
-  'postgresql://neondb_owner:npg_8MuC1tvKIOoj@ep-calm-fire-ad0dfnqd-pooler.c-2.us-east-1.aws.neon.tech/wildphotography?sslmode=require';
+const POOLER_HOST = 'ep-calm-fire-ad0dfnqd-pooler.c-2.us-east-1.aws.neon.tech';
+const DATABASE_URL = process.env.DATABASE_URL ||
+  `postgresql://neondb_owner:npg_GonqSbJlRi71@${POOLER_HOST}/wildphotography?sslmode=require`;
 
 const R2_PUBLIC = 'https://images.wildphotography.com';
 
-export const sql = neon(DATABASE_URL);
+// neon() uses HTTP with the Neon pooler, but needs Host header in CF Workers
+const rawSql = neon(DATABASE_URL);
+
+// Patch global fetch to add Host header for Neon pooler requests
+export const sql = ((strings: TemplateStringsArray, ...values: any[]) => {
+  // Call neon to get the query promise
+  const neonQuery = rawSql(strings, ...values);
+
+  // Override the fetch call within this query's execution
+  // by wrapping the query's then/catch with a fetch override
+  const origFetch = globalThis.fetch;
+  const patchedFetch: typeof fetch = (input, init) => {
+    const url = typeof input === 'string' ? input : input instanceof Request ? input.url : (input as URL).href;
+    if (url && url.includes(POOLER_HOST)) {
+      const headers = new Headers(init?.headers);
+      headers.set('Host', POOLER_HOST);
+      return origFetch(input, { ...init, headers });
+    }
+    return origFetch(input, init);
+  };
+
+  // Return a promise that patches fetch during execution
+  return new Promise((resolve, reject) => {
+    const originalFetch = globalThis.fetch;
+    (globalThis as any).fetch = patchedFetch;
+    Promise.resolve(neonQuery)
+      .then((r: any) => {
+        (globalThis as any).fetch = originalFetch;
+        resolve(r);
+      })
+      .catch((e: any) => {
+        (globalThis as any).fetch = originalFetch;
+        reject(e);
+      });
+  }) as any;
+}) as typeof rawSql;
 
 // ============================================================
 // CANONICAL GALLERY SEQUENCE ORDER

@@ -414,6 +414,7 @@ export default function PhotoPageClient({
   sequence,
   sourceGallery,
   allGalleries = [],
+  altText,
 }: PhotoPageClientProps) {
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [lightboxIndex, setLightboxIndex] = useState(0);
@@ -575,19 +576,27 @@ export default function PhotoPageClient({
         {/* Title — full width */}
         <div style={{marginBottom:'var(--gutter)'}}>
           {(() => {
-            const seoTitle = photo.metadata?.seo_title;
+            const rawSeoTitle = photo.metadata?.seo_title;
+            // Reject stored seo_title if it looks malformed (trailing 'in', duplicate 'Costa Rica')
+            const seoTitle = rawSeoTitle && !/\s+in$/.test(rawSeoTitle) && !/Costa Rica,\s+Costa Rica/.test(rawSeoTitle)
+              ? rawSeoTitle
+              : null;
             // When displayTitle is a raw camera filename, build a descriptive H1
             const buildDescriptiveH1 = () => {
+              // Clean location: avoid 'Costa Rica' duplication
+              const rawLoc = photo.locationName && photo.locationName !== 'Costa Rica' && photo.locationName !== 'Power-Of-Nature'
+                ? photo.locationName.replace(/,\s*Costa Rica$/, '').trim()
+                : null;
+              const region = photo.region && photo.region !== 'Costa Rica' ? photo.region : null;
+              const loc = rawLoc || region || '';
+
               if (photo.species_common_name) {
-                const loc = photo.locationName && photo.locationName !== 'Costa Rica' && photo.locationName !== 'Power-Of-Nature'
-                  ? photo.locationName
-                  : (photo.region || '');
                 return loc
                   ? `${photo.species_common_name} in ${loc}, Costa Rica`
                   : `${photo.species_common_name} in Costa Rica`;
               }
-              if (photo.locationName && photo.locationName !== 'Costa Rica' && photo.locationName !== 'Power-Of-Nature') {
-                return `${photo.locationName}${photo.region ? `, ${photo.region}` : ''}, Costa Rica`;
+              if (loc) {
+                return `${loc}, Costa Rica`;
               }
               if (gallery) return `From ${gallery.name}`;
               return 'Photo';

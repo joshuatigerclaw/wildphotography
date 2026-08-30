@@ -1,0 +1,29 @@
+name = "wildphotography-web"
+main = "apps/web/.open-next/worker.js"
+compatibility_date = "2026-03-29"
+compatibility_flags = ["nodejs_compat", "global_fetch_strictly_public"]
+workers_dev = false
+
+[[routes]]
+pattern = "wildphotography.com/*"
+zone_name = "wildphotography.com"
+
+[assets]
+binding = "ASSETS"
+directory = "apps/web/.open-next/assets"
+
+[[services]]
+binding = "WORKER_SELF_REFERENCE"
+service = "wildphotography-web"
+
+[[r2_buckets]]
+binding = "NEXT_INC_CACHE_R2_BUCKET"
+bucket_name = "web-opennext-cache"
+
+[images]
+binding = "IMAGES"
+
+[env.production.vars]
+DATABASE_URL = "postgresql://neondb_owner:npg_GonqSbJlRi71@ep-calm-fire-ad0dfnqd-pooler.c-2.us-east-1.aws.neon.tech/wildphotography?sslmode=require&preferHttp=true"
+APP_ENV = "production"
+SITE_URL = "https://wildphotography.com"

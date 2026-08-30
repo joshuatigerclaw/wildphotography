@@ -8555,3 +8555,7 @@ Sample failing derivatives (for debug):
 [DEBUG] neonEligible: 71224 neonTotal: 75220
 
 ❌ Alerts: DRIFT, DERIVATIVE, ENDPOINT
+=== WildPhotography System Health Check ===
+
+⚠️  Advisory lock check failed (continuing anyway): password authentication failed for user 'neondb_owner'
+Health check exception: password authentication failed for user 'neondb_owner'

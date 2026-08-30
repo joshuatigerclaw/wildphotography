@@ -13,7 +13,7 @@ import { validateApiKey } from '@/lib/api-auth';
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const sql = neon(
   process.env.DATABASE_URL ||
-    'postgresql://neondb_owner:npg_8MuC1tvKIOoj@ep-calm-fire-ad0dfnqd-pooler.c-2.us-east-1.aws.neon.tech/wildphotography?sslmode=require'
+    'postgresql://neondb_owner:npg_GonqSbJlRi71@ep-calm-fire-ad0dfnqd-pooler.c-2.us-east-1.aws.neon.tech/wildphotography?sslmode=require'
 ) as ReturnType<typeof neon> & { unsafe: (sql: string) => any };
 
 export const dynamic = 'force-dynamic';

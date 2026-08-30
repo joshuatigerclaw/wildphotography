@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: ['/api/', '/admin/', '/_next/'],
     },
-    sitemap: 'https://wildphotography.com/sitemap.xml',
+    sitemap: 'https://wildphotography.com/api/sitemap-index',
   };
 }

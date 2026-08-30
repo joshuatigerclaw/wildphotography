@@ -2,7 +2,8 @@ import Link from 'next/link';
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { getLocationBySlug, getLocationsByRegion, getPhotosByLocation, getAffiliateBlocksForEntity } from '@/lib/db';
-import { generateBreadcrumbJsonLd } from '@/lib/seo';
+import { generateBreadcrumbJsonLd, canonicalUrl } from '@/lib/seo';
+import { locationIndexable } from '@/lib/seo-config';
 import VirtualizedGallery from '@/components/VirtualizedGallery';
 import AffiliateBlock from '@/components/AffiliateBlock';
 
@@ -20,18 +21,38 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const location = await getLocationBySlug(slug);
   if (!location) return { title: 'Location Not Found' };
-  
-  const canonical = `${SITE_URL}/location/${slug}`;
+
+  // Get photo count for this location (used for indexability check)
+  const { total: photoCount } = await getPhotosByLocation(slug, 0, 0);
+
+  const canonical = canonicalUrl(`/location/${slug}`);
+
+  // Determine if this page should be indexed
+  const indexable = locationIndexable(
+    photoCount,
+    !!(location.description || location.metadata?.overview)
+  );
+
+  // Better SEO title pattern: "Location Name, Region, Costa Rica Photos | WildPhotography"
+  const region = location.region ? `, ${location.region}` : '';
+  const title = `${location.name}${region}, Costa Rica Photos | WildPhotography`;
+
   return {
-    title: `${location.name} Photography | Wildphotography`,
+    title,
     description: location.description || `Browse wildlife photography from ${location.name}, Costa Rica.`,
     alternates: { canonical },
+    robots: indexable.indexable ? undefined : { index: false, follow: true },
     openGraph: {
-      title: `${location.name} Photography | Wildphotography`,
+      title: `${location.name}${region} | WildPhotography`,
       description: location.description || '',
       url: canonical,
-      siteName: 'Wildphotography',
+      siteName: 'WildPhotography',
       type: 'website',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${location.name}${region} | WildPhotography`,
+      description: location.description || undefined,
     },
   };
 }
@@ -51,6 +72,27 @@ export default async function LocationDetailPage({ params }: { params: Promise<{
   // Fetch affiliate blocks for this location
   const affiliateBlocks = await getAffiliateBlocksForEntity('location', Number(location.id));
 
+  // ── CollectionPage JSON-LD ────────────────────────────────────────
+  const collectionJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: `${location.name}, Costa Rica`,
+    description: location.description || `Photography collection from ${location.name}, Costa Rica.`,
+    url: canonicalUrl(`/location/${slug}`),
+    mainEntity: {
+      '@type': 'ItemList',
+      numberOfItems: total,
+      itemListElement: photos.slice(0, 10).map((p: any, i: number) => ({
+        '@type': 'ListItem',
+        position: i + 1,
+        url: `${SITE_URL}/photo/${p.slug}`,
+        name: p.title || location.name,
+      })),
+    },
+    publisher: { '@type': 'Organization', name: 'WildPhotography', url: SITE_URL },
+    author: { '@type': 'Person', name: 'Joshua ten Brink', url: SITE_URL },
+  };
+
   // ── BreadcrumbList JSON-LD ─────────────────────────────────────────
   const breadcrumbJsonLd = generateBreadcrumbJsonLd([
     { name: 'Home', url: '/' },
@@ -60,6 +102,7 @@ export default async function LocationDetailPage({ params }: { params: Promise<{
 
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
       <div className="container mx-auto px-4 py-6">
       {/* Breadcrumb */}

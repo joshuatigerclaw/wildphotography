@@ -1787,323 +1787,7 @@ var require_middleware = __commonJS({
           } }), f.default = { context: s.context, diag: t.diag, metrics: u.metrics, propagation: v.propagation, trace: w.trace };
         })(), a.exports = f;
       })();
-    }, 521: (a) => {
-      "use strict";
-      a.exports = (init_node_async_hooks(), __toCommonJS(node_async_hooks_exports));
-    }, 572: (a) => {
-      (() => {
-        "use strict";
-        var b = { 993: (a2) => {
-          var b2 = Object.prototype.hasOwnProperty, c2 = "~";
-          function d2() {
-          }
-          function e2(a3, b3, c3) {
-            this.fn = a3, this.context = b3, this.once = c3 || false;
-          }
-          function f(a3, b3, d3, f2, g2) {
-            if ("function" != typeof d3) throw TypeError("The listener must be a function");
-            var h2 = new e2(d3, f2 || a3, g2), i = c2 ? c2 + b3 : b3;
-            return a3._events[i] ? a3._events[i].fn ? a3._events[i] = [a3._events[i], h2] : a3._events[i].push(h2) : (a3._events[i] = h2, a3._eventsCount++), a3;
-          }
-          function g(a3, b3) {
-            0 == --a3._eventsCount ? a3._events = new d2() : delete a3._events[b3];
-          }
-          function h() {
-            this._events = new d2(), this._eventsCount = 0;
-          }
-          Object.create && (d2.prototype = /* @__PURE__ */ Object.create(null), new d2().__proto__ || (c2 = false)), h.prototype.eventNames = function() {
-            var a3, d3, e3 = [];
-            if (0 === this._eventsCount) return e3;
-            for (d3 in a3 = this._events) b2.call(a3, d3) && e3.push(c2 ? d3.slice(1) : d3);
-            return Object.getOwnPropertySymbols ? e3.concat(Object.getOwnPropertySymbols(a3)) : e3;
-          }, h.prototype.listeners = function(a3) {
-            var b3 = c2 ? c2 + a3 : a3, d3 = this._events[b3];
-            if (!d3) return [];
-            if (d3.fn) return [d3.fn];
-            for (var e3 = 0, f2 = d3.length, g2 = Array(f2); e3 < f2; e3++) g2[e3] = d3[e3].fn;
-            return g2;
-          }, h.prototype.listenerCount = function(a3) {
-            var b3 = c2 ? c2 + a3 : a3, d3 = this._events[b3];
-            return d3 ? d3.fn ? 1 : d3.length : 0;
-          }, h.prototype.emit = function(a3, b3, d3, e3, f2, g2) {
-            var h2 = c2 ? c2 + a3 : a3;
-            if (!this._events[h2]) return false;
-            var i, j, k = this._events[h2], l = arguments.length;
-            if (k.fn) {
-              switch (k.once && this.removeListener(a3, k.fn, void 0, true), l) {
-                case 1:
-                  return k.fn.call(k.context), true;
-                case 2:
-                  return k.fn.call(k.context, b3), true;
-                case 3:
-                  return k.fn.call(k.context, b3, d3), true;
-                case 4:
-                  return k.fn.call(k.context, b3, d3, e3), true;
-                case 5:
-                  return k.fn.call(k.context, b3, d3, e3, f2), true;
-                case 6:
-                  return k.fn.call(k.context, b3, d3, e3, f2, g2), true;
-              }
-              for (j = 1, i = Array(l - 1); j < l; j++) i[j - 1] = arguments[j];
-              k.fn.apply(k.context, i);
-            } else {
-              var m, n = k.length;
-              for (j = 0; j < n; j++) switch (k[j].once && this.removeListener(a3, k[j].fn, void 0, true), l) {
-                case 1:
-                  k[j].fn.call(k[j].context);
-                  break;
-                case 2:
-                  k[j].fn.call(k[j].context, b3);
-                  break;
-                case 3:
-                  k[j].fn.call(k[j].context, b3, d3);
-                  break;
-                case 4:
-                  k[j].fn.call(k[j].context, b3, d3, e3);
-                  break;
-                default:
-                  if (!i) for (m = 1, i = Array(l - 1); m < l; m++) i[m - 1] = arguments[m];
-                  k[j].fn.apply(k[j].context, i);
-              }
-            }
-            return true;
-          }, h.prototype.on = function(a3, b3, c3) {
-            return f(this, a3, b3, c3, false);
-          }, h.prototype.once = function(a3, b3, c3) {
-            return f(this, a3, b3, c3, true);
-          }, h.prototype.removeListener = function(a3, b3, d3, e3) {
-            var f2 = c2 ? c2 + a3 : a3;
-            if (!this._events[f2]) return this;
-            if (!b3) return g(this, f2), this;
-            var h2 = this._events[f2];
-            if (h2.fn) h2.fn !== b3 || e3 && !h2.once || d3 && h2.context !== d3 || g(this, f2);
-            else {
-              for (var i = 0, j = [], k = h2.length; i < k; i++) (h2[i].fn !== b3 || e3 && !h2[i].once || d3 && h2[i].context !== d3) && j.push(h2[i]);
-              j.length ? this._events[f2] = 1 === j.length ? j[0] : j : g(this, f2);
-            }
-            return this;
-          }, h.prototype.removeAllListeners = function(a3) {
-            var b3;
-            return a3 ? (b3 = c2 ? c2 + a3 : a3, this._events[b3] && g(this, b3)) : (this._events = new d2(), this._eventsCount = 0), this;
-          }, h.prototype.off = h.prototype.removeListener, h.prototype.addListener = h.prototype.on, h.prefixed = c2, h.EventEmitter = h, a2.exports = h;
-        }, 213: (a2) => {
-          a2.exports = (a3, b2) => (b2 = b2 || (() => {
-          }), a3.then((a4) => new Promise((a5) => {
-            a5(b2());
-          }).then(() => a4), (a4) => new Promise((a5) => {
-            a5(b2());
-          }).then(() => {
-            throw a4;
-          })));
-        }, 574: (a2, b2) => {
-          Object.defineProperty(b2, "__esModule", { value: true }), b2.default = function(a3, b3, c2) {
-            let d2 = 0, e2 = a3.length;
-            for (; e2 > 0; ) {
-              let f = e2 / 2 | 0, g = d2 + f;
-              0 >= c2(a3[g], b3) ? (d2 = ++g, e2 -= f + 1) : e2 = f;
-            }
-            return d2;
-          };
-        }, 821: (a2, b2, c2) => {
-          Object.defineProperty(b2, "__esModule", { value: true });
-          let d2 = c2(574);
-          class e2 {
-            constructor() {
-              this._queue = [];
-            }
-            enqueue(a3, b3) {
-              let c3 = { priority: (b3 = Object.assign({ priority: 0 }, b3)).priority, run: a3 };
-              if (this.size && this._queue[this.size - 1].priority >= b3.priority) return void this._queue.push(c3);
-              let e3 = d2.default(this._queue, c3, (a4, b4) => b4.priority - a4.priority);
-              this._queue.splice(e3, 0, c3);
-            }
-            dequeue() {
-              let a3 = this._queue.shift();
-              return null == a3 ? void 0 : a3.run;
-            }
-            filter(a3) {
-              return this._queue.filter((b3) => b3.priority === a3.priority).map((a4) => a4.run);
-            }
-            get size() {
-              return this._queue.length;
-            }
-          }
-          b2.default = e2;
-        }, 816: (a2, b2, c2) => {
-          let d2 = c2(213);
-          class e2 extends Error {
-            constructor(a3) {
-              super(a3), this.name = "TimeoutError";
-            }
-          }
-          let f = (a3, b3, c3) => new Promise((f2, g) => {
-            if ("number" != typeof b3 || b3 < 0) throw TypeError("Expected `milliseconds` to be a positive number");
-            if (b3 === 1 / 0) return void f2(a3);
-            let h = setTimeout(() => {
-              if ("function" == typeof c3) {
-                try {
-                  f2(c3());
-                } catch (a4) {
-                  g(a4);
-                }
-                return;
-              }
-              let d3 = "string" == typeof c3 ? c3 : `Promise timed out after ${b3} milliseconds`, h2 = c3 instanceof Error ? c3 : new e2(d3);
-              "function" == typeof a3.cancel && a3.cancel(), g(h2);
-            }, b3);
-            d2(a3.then(f2, g), () => {
-              clearTimeout(h);
-            });
-          });
-          a2.exports = f, a2.exports.default = f, a2.exports.TimeoutError = e2;
-        } }, c = {};
-        function d(a2) {
-          var e2 = c[a2];
-          if (void 0 !== e2) return e2.exports;
-          var f = c[a2] = { exports: {} }, g = true;
-          try {
-            b[a2](f, f.exports, d), g = false;
-          } finally {
-            g && delete c[a2];
-          }
-          return f.exports;
-        }
-        d.ab = "//";
-        var e = {};
-        (() => {
-          Object.defineProperty(e, "__esModule", { value: true });
-          let a2 = d(993), b2 = d(816), c2 = d(821), f = () => {
-          }, g = new b2.TimeoutError();
-          class h extends a2 {
-            constructor(a3) {
-              var b3, d2, e2, g2;
-              if (super(), this._intervalCount = 0, this._intervalEnd = 0, this._pendingCount = 0, this._resolveEmpty = f, this._resolveIdle = f, !("number" == typeof (a3 = Object.assign({ carryoverConcurrencyCount: false, intervalCap: 1 / 0, interval: 0, concurrency: 1 / 0, autoStart: true, queueClass: c2.default }, a3)).intervalCap && a3.intervalCap >= 1)) throw TypeError(`Expected \`intervalCap\` to be a number from 1 and up, got \`${null != (d2 = null == (b3 = a3.intervalCap) ? void 0 : b3.toString()) ? d2 : ""}\` (${typeof a3.intervalCap})`);
-              if (void 0 === a3.interval || !(Number.isFinite(a3.interval) && a3.interval >= 0)) throw TypeError(`Expected \`interval\` to be a finite number >= 0, got \`${null != (g2 = null == (e2 = a3.interval) ? void 0 : e2.toString()) ? g2 : ""}\` (${typeof a3.interval})`);
-              this._carryoverConcurrencyCount = a3.carryoverConcurrencyCount, this._isIntervalIgnored = a3.intervalCap === 1 / 0 || 0 === a3.interval, this._intervalCap = a3.intervalCap, this._interval = a3.interval, this._queue = new a3.queueClass(), this._queueClass = a3.queueClass, this.concurrency = a3.concurrency, this._timeout = a3.timeout, this._throwOnTimeout = true === a3.throwOnTimeout, this._isPaused = false === a3.autoStart;
-            }
-            get _doesIntervalAllowAnother() {
-              return this._isIntervalIgnored || this._intervalCount < this._intervalCap;
-            }
-            get _doesConcurrentAllowAnother() {
-              return this._pendingCount < this._concurrency;
-            }
-            _next() {
-              this._pendingCount--, this._tryToStartAnother(), this.emit("next");
-            }
-            _resolvePromises() {
-              this._resolveEmpty(), this._resolveEmpty = f, 0 === this._pendingCount && (this._resolveIdle(), this._resolveIdle = f, this.emit("idle"));
-            }
-            _onResumeInterval() {
-              this._onInterval(), this._initializeIntervalIfNeeded(), this._timeoutId = void 0;
-            }
-            _isIntervalPaused() {
-              let a3 = Date.now();
-              if (void 0 === this._intervalId) {
-                let b3 = this._intervalEnd - a3;
-                if (!(b3 < 0)) return void 0 === this._timeoutId && (this._timeoutId = setTimeout(() => {
-                  this._onResumeInterval();
-                }, b3)), true;
-                this._intervalCount = this._carryoverConcurrencyCount ? this._pendingCount : 0;
-              }
-              return false;
-            }
-            _tryToStartAnother() {
-              if (0 === this._queue.size) return this._intervalId && clearInterval(this._intervalId), this._intervalId = void 0, this._resolvePromises(), false;
-              if (!this._isPaused) {
-                let a3 = !this._isIntervalPaused();
-                if (this._doesIntervalAllowAnother && this._doesConcurrentAllowAnother) {
-                  let b3 = this._queue.dequeue();
-                  return !!b3 && (this.emit("active"), b3(), a3 && this._initializeIntervalIfNeeded(), true);
-                }
-              }
-              return false;
-            }
-            _initializeIntervalIfNeeded() {
-              this._isIntervalIgnored || void 0 !== this._intervalId || (this._intervalId = setInterval(() => {
-                this._onInterval();
-              }, this._interval), this._intervalEnd = Date.now() + this._interval);
-            }
-            _onInterval() {
-              0 === this._intervalCount && 0 === this._pendingCount && this._intervalId && (clearInterval(this._intervalId), this._intervalId = void 0), this._intervalCount = this._carryoverConcurrencyCount ? this._pendingCount : 0, this._processQueue();
-            }
-            _processQueue() {
-              for (; this._tryToStartAnother(); ) ;
-            }
-            get concurrency() {
-              return this._concurrency;
-            }
-            set concurrency(a3) {
-              if (!("number" == typeof a3 && a3 >= 1)) throw TypeError(`Expected \`concurrency\` to be a number from 1 and up, got \`${a3}\` (${typeof a3})`);
-              this._concurrency = a3, this._processQueue();
-            }
-            async add(a3, c3 = {}) {
-              return new Promise((d2, e2) => {
-                let f2 = async () => {
-                  this._pendingCount++, this._intervalCount++;
-                  try {
-                    let f3 = void 0 === this._timeout && void 0 === c3.timeout ? a3() : b2.default(Promise.resolve(a3()), void 0 === c3.timeout ? this._timeout : c3.timeout, () => {
-                      (void 0 === c3.throwOnTimeout ? this._throwOnTimeout : c3.throwOnTimeout) && e2(g);
-                    });
-                    d2(await f3);
-                  } catch (a4) {
-                    e2(a4);
-                  }
-                  this._next();
-                };
-                this._queue.enqueue(f2, c3), this._tryToStartAnother(), this.emit("add");
-              });
-            }
-            async addAll(a3, b3) {
-              return Promise.all(a3.map(async (a4) => this.add(a4, b3)));
-            }
-            start() {
-              return this._isPaused && (this._isPaused = false, this._processQueue()), this;
-            }
-            pause() {
-              this._isPaused = true;
-            }
-            clear() {
-              this._queue = new this._queueClass();
-            }
-            async onEmpty() {
-              if (0 !== this._queue.size) return new Promise((a3) => {
-                let b3 = this._resolveEmpty;
-                this._resolveEmpty = () => {
-                  b3(), a3();
-                };
-              });
-            }
-            async onIdle() {
-              if (0 !== this._pendingCount || 0 !== this._queue.size) return new Promise((a3) => {
-                let b3 = this._resolveIdle;
-                this._resolveIdle = () => {
-                  b3(), a3();
-                };
-              });
-            }
-            get size() {
-              return this._queue.size;
-            }
-            sizeBy(a3) {
-              return this._queue.filter(a3).length;
-            }
-            get pending() {
-              return this._pendingCount;
-            }
-            get isPaused() {
-              return this._isPaused;
-            }
-            get timeout() {
-              return this._timeout;
-            }
-            set timeout(a3) {
-              this._timeout = a3;
-            }
-          }
-          e.default = h;
-        })(), a.exports = e;
-      })();
-    }, 854: (a, b, c) => {
+    }, 470: (a, b, c) => {
       "use strict";
       let d;
       c.r(b), c.d(b, { default: () => bi });
@@ -3259,10 +2943,26 @@ Learn More: https://nextjs.org/docs/messages/node-module-in-edge-runtime`;
       }("Route %%% needs to bail out of prerendering at this point because it used ^^^. React throws this special object to indicate where. It should not be caught by your own try/catch. Learn more: https://nextjs.org/docs/messages/ppr-caught-error")) throw Object.defineProperty(Error("Invariant: isDynamicPostpone misidentified a postpone reason. This is a bug in Next.js"), "__NEXT_ERROR_CODE", { value: "E296", enumerable: false, configurable: true });
       function bd(a10) {
         let { pathname: b2 } = a10.nextUrl;
-        return "/admin" === b2 ? R.redirect(new URL("/admin/dashboard", a10.url)) : R.next();
+        if ("/admin" === b2) return R.redirect(new URL("/admin/dashboard", a10.url));
+        let c2 = { "/article/whale-watching-costa-rica": "/article/whale-watching-season-costa-rica-photography", "/article/humpback-whale-costa-rica": "/article/whale-watching-season-costa-rica-photography", "/article/humpback-whale-costa-rica-photography-guide": "/article/whale-watching-season-costa-rica-photography", "/article/humpback-whale-costa-rica-photography-guide-2026": "/article/whale-watching-season-costa-rica-photography", "/article/humpback-whale-photography-costa-rica-guide": "/article/whale-watching-season-costa-rica-photography", "/article/whale-watching-dolphin-encounters-costa-rica-2026": "/article/whale-watching-season-costa-rica-photography" };
+        if (c2[b2]) {
+          let d3 = new URL(c2[b2], a10.url);
+          return d3.search = a10.nextUrl.search, R.redirect(d3, 301);
+        }
+        let d2 = { "/article/playa-hermosa-guanacaste": "/article/playa-hermosa-guanacaste-costa-rica-photography-guide-2026", "/article/playa-hermosa-guanacaste-costa-rica": "/article/playa-hermosa-guanacaste-costa-rica-photography-guide-2026", "/article/playa-hermosa-guanacaste-complete-photography-guide": "/article/playa-hermosa-guanacaste-costa-rica-photography-guide-2026", "/article/playa-hermosa-guanacaste-costa-rica-2026-photography-guide": "/article/playa-hermosa-guanacaste-costa-rica-photography-guide-2026" };
+        if (d2[b2]) {
+          let c3 = new URL(d2[b2], a10.url);
+          return c3.search = a10.nextUrl.search, R.redirect(c3, 301);
+        }
+        let e2 = { "/article/playa-hermosa-jaco-garabito": "/article/jaco-beach-playa-hermosa-costa-rica-photography-guide", "/article/jaco-beach-playa-hermosa-central-pacific-photography-guide": "/article/jaco-beach-playa-hermosa-costa-rica-photography-guide" };
+        if (e2[b2]) {
+          let c3 = new URL(e2[b2], a10.url);
+          return c3.search = a10.nextUrl.search, R.redirect(c3, 301);
+        }
+        return R.next();
       }
       RegExp(`\\n\\s+at __next_metadata_boundary__[\\n\\s]`), RegExp(`\\n\\s+at __next_viewport_boundary__[\\n\\s]`), RegExp(`\\n\\s+at __next_outlet_boundary__[\\n\\s]`), /* @__PURE__ */ new WeakMap();
-      let be = { matcher: ["/admin"] };
+      let be = { matcher: ["/admin", "/article/whale-watching-costa-rica", "/article/humpback-whale-costa-rica", "/article/humpback-whale-costa-rica-photography-guide", "/article/humpback-whale-costa-rica-photography-guide-2026", "/article/humpback-whale-photography-costa-rica-guide", "/article/whale-watching-dolphin-encounters-costa-rica-2026", "/article/playa-hermosa-guanacaste", "/article/playa-hermosa-guanacaste-costa-rica", "/article/playa-hermosa-guanacaste-complete-photography-guide", "/article/playa-hermosa-guanacaste-costa-rica-2026-photography-guide", "/article/playa-hermosa-jaco-garabito", "/article/jaco-beach-playa-hermosa-central-pacific-photography-guide"] };
       Object.values({ NOT_FOUND: 404, FORBIDDEN: 403, UNAUTHORIZED: 401 });
       let bf = { ...e }, bg = bf.middleware || bf.default, bh = "/middleware";
       if ("function" != typeof bg) throw Object.defineProperty(Error(`The Middleware "${bh}" must export a \`middleware\` or a \`default\` function`), "__NEXT_ERROR_CODE", { value: "E120", enumerable: false, configurable: true });
@@ -3276,6 +2976,322 @@ Learn More: https://nextjs.org/docs/messages/node-module-in-edge-runtime`;
           }
         } });
       }
+    }, 521: (a) => {
+      "use strict";
+      a.exports = (init_node_async_hooks(), __toCommonJS(node_async_hooks_exports));
+    }, 572: (a) => {
+      (() => {
+        "use strict";
+        var b = { 993: (a2) => {
+          var b2 = Object.prototype.hasOwnProperty, c2 = "~";
+          function d2() {
+          }
+          function e2(a3, b3, c3) {
+            this.fn = a3, this.context = b3, this.once = c3 || false;
+          }
+          function f(a3, b3, d3, f2, g2) {
+            if ("function" != typeof d3) throw TypeError("The listener must be a function");
+            var h2 = new e2(d3, f2 || a3, g2), i = c2 ? c2 + b3 : b3;
+            return a3._events[i] ? a3._events[i].fn ? a3._events[i] = [a3._events[i], h2] : a3._events[i].push(h2) : (a3._events[i] = h2, a3._eventsCount++), a3;
+          }
+          function g(a3, b3) {
+            0 == --a3._eventsCount ? a3._events = new d2() : delete a3._events[b3];
+          }
+          function h() {
+            this._events = new d2(), this._eventsCount = 0;
+          }
+          Object.create && (d2.prototype = /* @__PURE__ */ Object.create(null), new d2().__proto__ || (c2 = false)), h.prototype.eventNames = function() {
+            var a3, d3, e3 = [];
+            if (0 === this._eventsCount) return e3;
+            for (d3 in a3 = this._events) b2.call(a3, d3) && e3.push(c2 ? d3.slice(1) : d3);
+            return Object.getOwnPropertySymbols ? e3.concat(Object.getOwnPropertySymbols(a3)) : e3;
+          }, h.prototype.listeners = function(a3) {
+            var b3 = c2 ? c2 + a3 : a3, d3 = this._events[b3];
+            if (!d3) return [];
+            if (d3.fn) return [d3.fn];
+            for (var e3 = 0, f2 = d3.length, g2 = Array(f2); e3 < f2; e3++) g2[e3] = d3[e3].fn;
+            return g2;
+          }, h.prototype.listenerCount = function(a3) {
+            var b3 = c2 ? c2 + a3 : a3, d3 = this._events[b3];
+            return d3 ? d3.fn ? 1 : d3.length : 0;
+          }, h.prototype.emit = function(a3, b3, d3, e3, f2, g2) {
+            var h2 = c2 ? c2 + a3 : a3;
+            if (!this._events[h2]) return false;
+            var i, j, k = this._events[h2], l = arguments.length;
+            if (k.fn) {
+              switch (k.once && this.removeListener(a3, k.fn, void 0, true), l) {
+                case 1:
+                  return k.fn.call(k.context), true;
+                case 2:
+                  return k.fn.call(k.context, b3), true;
+                case 3:
+                  return k.fn.call(k.context, b3, d3), true;
+                case 4:
+                  return k.fn.call(k.context, b3, d3, e3), true;
+                case 5:
+                  return k.fn.call(k.context, b3, d3, e3, f2), true;
+                case 6:
+                  return k.fn.call(k.context, b3, d3, e3, f2, g2), true;
+              }
+              for (j = 1, i = Array(l - 1); j < l; j++) i[j - 1] = arguments[j];
+              k.fn.apply(k.context, i);
+            } else {
+              var m, n = k.length;
+              for (j = 0; j < n; j++) switch (k[j].once && this.removeListener(a3, k[j].fn, void 0, true), l) {
+                case 1:
+                  k[j].fn.call(k[j].context);
+                  break;
+                case 2:
+                  k[j].fn.call(k[j].context, b3);
+                  break;
+                case 3:
+                  k[j].fn.call(k[j].context, b3, d3);
+                  break;
+                case 4:
+                  k[j].fn.call(k[j].context, b3, d3, e3);
+                  break;
+                default:
+                  if (!i) for (m = 1, i = Array(l - 1); m < l; m++) i[m - 1] = arguments[m];
+                  k[j].fn.apply(k[j].context, i);
+              }
+            }
+            return true;
+          }, h.prototype.on = function(a3, b3, c3) {
+            return f(this, a3, b3, c3, false);
+          }, h.prototype.once = function(a3, b3, c3) {
+            return f(this, a3, b3, c3, true);
+          }, h.prototype.removeListener = function(a3, b3, d3, e3) {
+            var f2 = c2 ? c2 + a3 : a3;
+            if (!this._events[f2]) return this;
+            if (!b3) return g(this, f2), this;
+            var h2 = this._events[f2];
+            if (h2.fn) h2.fn !== b3 || e3 && !h2.once || d3 && h2.context !== d3 || g(this, f2);
+            else {
+              for (var i = 0, j = [], k = h2.length; i < k; i++) (h2[i].fn !== b3 || e3 && !h2[i].once || d3 && h2[i].context !== d3) && j.push(h2[i]);
+              j.length ? this._events[f2] = 1 === j.length ? j[0] : j : g(this, f2);
+            }
+            return this;
+          }, h.prototype.removeAllListeners = function(a3) {
+            var b3;
+            return a3 ? (b3 = c2 ? c2 + a3 : a3, this._events[b3] && g(this, b3)) : (this._events = new d2(), this._eventsCount = 0), this;
+          }, h.prototype.off = h.prototype.removeListener, h.prototype.addListener = h.prototype.on, h.prefixed = c2, h.EventEmitter = h, a2.exports = h;
+        }, 213: (a2) => {
+          a2.exports = (a3, b2) => (b2 = b2 || (() => {
+          }), a3.then((a4) => new Promise((a5) => {
+            a5(b2());
+          }).then(() => a4), (a4) => new Promise((a5) => {
+            a5(b2());
+          }).then(() => {
+            throw a4;
+          })));
+        }, 574: (a2, b2) => {
+          Object.defineProperty(b2, "__esModule", { value: true }), b2.default = function(a3, b3, c2) {
+            let d2 = 0, e2 = a3.length;
+            for (; e2 > 0; ) {
+              let f = e2 / 2 | 0, g = d2 + f;
+              0 >= c2(a3[g], b3) ? (d2 = ++g, e2 -= f + 1) : e2 = f;
+            }
+            return d2;
+          };
+        }, 821: (a2, b2, c2) => {
+          Object.defineProperty(b2, "__esModule", { value: true });
+          let d2 = c2(574);
+          class e2 {
+            constructor() {
+              this._queue = [];
+            }
+            enqueue(a3, b3) {
+              let c3 = { priority: (b3 = Object.assign({ priority: 0 }, b3)).priority, run: a3 };
+              if (this.size && this._queue[this.size - 1].priority >= b3.priority) return void this._queue.push(c3);
+              let e3 = d2.default(this._queue, c3, (a4, b4) => b4.priority - a4.priority);
+              this._queue.splice(e3, 0, c3);
+            }
+            dequeue() {
+              let a3 = this._queue.shift();
+              return null == a3 ? void 0 : a3.run;
+            }
+            filter(a3) {
+              return this._queue.filter((b3) => b3.priority === a3.priority).map((a4) => a4.run);
+            }
+            get size() {
+              return this._queue.length;
+            }
+          }
+          b2.default = e2;
+        }, 816: (a2, b2, c2) => {
+          let d2 = c2(213);
+          class e2 extends Error {
+            constructor(a3) {
+              super(a3), this.name = "TimeoutError";
+            }
+          }
+          let f = (a3, b3, c3) => new Promise((f2, g) => {
+            if ("number" != typeof b3 || b3 < 0) throw TypeError("Expected `milliseconds` to be a positive number");
+            if (b3 === 1 / 0) return void f2(a3);
+            let h = setTimeout(() => {
+              if ("function" == typeof c3) {
+                try {
+                  f2(c3());
+                } catch (a4) {
+                  g(a4);
+                }
+                return;
+              }
+              let d3 = "string" == typeof c3 ? c3 : `Promise timed out after ${b3} milliseconds`, h2 = c3 instanceof Error ? c3 : new e2(d3);
+              "function" == typeof a3.cancel && a3.cancel(), g(h2);
+            }, b3);
+            d2(a3.then(f2, g), () => {
+              clearTimeout(h);
+            });
+          });
+          a2.exports = f, a2.exports.default = f, a2.exports.TimeoutError = e2;
+        } }, c = {};
+        function d(a2) {
+          var e2 = c[a2];
+          if (void 0 !== e2) return e2.exports;
+          var f = c[a2] = { exports: {} }, g = true;
+          try {
+            b[a2](f, f.exports, d), g = false;
+          } finally {
+            g && delete c[a2];
+          }
+          return f.exports;
+        }
+        d.ab = "//";
+        var e = {};
+        (() => {
+          Object.defineProperty(e, "__esModule", { value: true });
+          let a2 = d(993), b2 = d(816), c2 = d(821), f = () => {
+          }, g = new b2.TimeoutError();
+          class h extends a2 {
+            constructor(a3) {
+              var b3, d2, e2, g2;
+              if (super(), this._intervalCount = 0, this._intervalEnd = 0, this._pendingCount = 0, this._resolveEmpty = f, this._resolveIdle = f, !("number" == typeof (a3 = Object.assign({ carryoverConcurrencyCount: false, intervalCap: 1 / 0, interval: 0, concurrency: 1 / 0, autoStart: true, queueClass: c2.default }, a3)).intervalCap && a3.intervalCap >= 1)) throw TypeError(`Expected \`intervalCap\` to be a number from 1 and up, got \`${null != (d2 = null == (b3 = a3.intervalCap) ? void 0 : b3.toString()) ? d2 : ""}\` (${typeof a3.intervalCap})`);
+              if (void 0 === a3.interval || !(Number.isFinite(a3.interval) && a3.interval >= 0)) throw TypeError(`Expected \`interval\` to be a finite number >= 0, got \`${null != (g2 = null == (e2 = a3.interval) ? void 0 : e2.toString()) ? g2 : ""}\` (${typeof a3.interval})`);
+              this._carryoverConcurrencyCount = a3.carryoverConcurrencyCount, this._isIntervalIgnored = a3.intervalCap === 1 / 0 || 0 === a3.interval, this._intervalCap = a3.intervalCap, this._interval = a3.interval, this._queue = new a3.queueClass(), this._queueClass = a3.queueClass, this.concurrency = a3.concurrency, this._timeout = a3.timeout, this._throwOnTimeout = true === a3.throwOnTimeout, this._isPaused = false === a3.autoStart;
+            }
+            get _doesIntervalAllowAnother() {
+              return this._isIntervalIgnored || this._intervalCount < this._intervalCap;
+            }
+            get _doesConcurrentAllowAnother() {
+              return this._pendingCount < this._concurrency;
+            }
+            _next() {
+              this._pendingCount--, this._tryToStartAnother(), this.emit("next");
+            }
+            _resolvePromises() {
+              this._resolveEmpty(), this._resolveEmpty = f, 0 === this._pendingCount && (this._resolveIdle(), this._resolveIdle = f, this.emit("idle"));
+            }
+            _onResumeInterval() {
+              this._onInterval(), this._initializeIntervalIfNeeded(), this._timeoutId = void 0;
+            }
+            _isIntervalPaused() {
+              let a3 = Date.now();
+              if (void 0 === this._intervalId) {
+                let b3 = this._intervalEnd - a3;
+                if (!(b3 < 0)) return void 0 === this._timeoutId && (this._timeoutId = setTimeout(() => {
+                  this._onResumeInterval();
+                }, b3)), true;
+                this._intervalCount = this._carryoverConcurrencyCount ? this._pendingCount : 0;
+              }
+              return false;
+            }
+            _tryToStartAnother() {
+              if (0 === this._queue.size) return this._intervalId && clearInterval(this._intervalId), this._intervalId = void 0, this._resolvePromises(), false;
+              if (!this._isPaused) {
+                let a3 = !this._isIntervalPaused();
+                if (this._doesIntervalAllowAnother && this._doesConcurrentAllowAnother) {
+                  let b3 = this._queue.dequeue();
+                  return !!b3 && (this.emit("active"), b3(), a3 && this._initializeIntervalIfNeeded(), true);
+                }
+              }
+              return false;
+            }
+            _initializeIntervalIfNeeded() {
+              this._isIntervalIgnored || void 0 !== this._intervalId || (this._intervalId = setInterval(() => {
+                this._onInterval();
+              }, this._interval), this._intervalEnd = Date.now() + this._interval);
+            }
+            _onInterval() {
+              0 === this._intervalCount && 0 === this._pendingCount && this._intervalId && (clearInterval(this._intervalId), this._intervalId = void 0), this._intervalCount = this._carryoverConcurrencyCount ? this._pendingCount : 0, this._processQueue();
+            }
+            _processQueue() {
+              for (; this._tryToStartAnother(); ) ;
+            }
+            get concurrency() {
+              return this._concurrency;
+            }
+            set concurrency(a3) {
+              if (!("number" == typeof a3 && a3 >= 1)) throw TypeError(`Expected \`concurrency\` to be a number from 1 and up, got \`${a3}\` (${typeof a3})`);
+              this._concurrency = a3, this._processQueue();
+            }
+            async add(a3, c3 = {}) {
+              return new Promise((d2, e2) => {
+                let f2 = async () => {
+                  this._pendingCount++, this._intervalCount++;
+                  try {
+                    let f3 = void 0 === this._timeout && void 0 === c3.timeout ? a3() : b2.default(Promise.resolve(a3()), void 0 === c3.timeout ? this._timeout : c3.timeout, () => {
+                      (void 0 === c3.throwOnTimeout ? this._throwOnTimeout : c3.throwOnTimeout) && e2(g);
+                    });
+                    d2(await f3);
+                  } catch (a4) {
+                    e2(a4);
+                  }
+                  this._next();
+                };
+                this._queue.enqueue(f2, c3), this._tryToStartAnother(), this.emit("add");
+              });
+            }
+            async addAll(a3, b3) {
+              return Promise.all(a3.map(async (a4) => this.add(a4, b3)));
+            }
+            start() {
+              return this._isPaused && (this._isPaused = false, this._processQueue()), this;
+            }
+            pause() {
+              this._isPaused = true;
+            }
+            clear() {
+              this._queue = new this._queueClass();
+            }
+            async onEmpty() {
+              if (0 !== this._queue.size) return new Promise((a3) => {
+                let b3 = this._resolveEmpty;
+                this._resolveEmpty = () => {
+                  b3(), a3();
+                };
+              });
+            }
+            async onIdle() {
+              if (0 !== this._pendingCount || 0 !== this._queue.size) return new Promise((a3) => {
+                let b3 = this._resolveIdle;
+                this._resolveIdle = () => {
+                  b3(), a3();
+                };
+              });
+            }
+            get size() {
+              return this._queue.size;
+            }
+            sizeBy(a3) {
+              return this._queue.filter(a3).length;
+            }
+            get pending() {
+              return this._pendingCount;
+            }
+            get isPaused() {
+              return this._isPaused;
+            }
+            get timeout() {
+              return this._timeout;
+            }
+            set timeout(a3) {
+              this._timeout = a3;
+            }
+          }
+          e.default = h;
+        })(), a.exports = e;
+      })();
     }, 930: (a, b, c) => {
       "use strict";
       var d = c(356).Buffer;
@@ -3474,7 +3490,7 @@ Learn More: https://nextjs.org/docs/messages/node-module-in-edge-runtime`;
         }
       };
     } }, (a) => {
-      var b = a(a.s = 854);
+      var b = a(a.s = 470);
       (_ENTRIES = "undefined" == typeof _ENTRIES ? {} : _ENTRIES).middleware_middleware = b;
     }]);
   }
@@ -3510,7 +3526,7 @@ var init_edgeFunctionHandler = __esm({
   "../../node_modules/@opennextjs/aws/dist/core/edgeFunctionHandler.js"() {
     globalThis._ENTRIES = {};
     globalThis.self = globalThis;
-    globalThis._ROUTES = [{ "name": "middleware", "page": "/", "regex": ["^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/admin(\\.json)?[\\/#\\?]?$"] }];
+    globalThis._ROUTES = [{ "name": "middleware", "page": "/", "regex": ["^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/admin(\\.json)?[\\/#\\?]?$", "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/article\\/whale-watching-costa-rica(\\.json)?[\\/#\\?]?$", "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/article\\/humpback-whale-costa-rica(\\.json)?[\\/#\\?]?$", "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/article\\/humpback-whale-costa-rica-photography-guide(\\.json)?[\\/#\\?]?$", "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/article\\/humpback-whale-costa-rica-photography-guide-2026(\\.json)?[\\/#\\?]?$", "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/article\\/humpback-whale-photography-costa-rica-guide(\\.json)?[\\/#\\?]?$", "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/article\\/whale-watching-dolphin-encounters-costa-rica-2026(\\.json)?[\\/#\\?]?$", "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/article\\/playa-hermosa-guanacaste(\\.json)?[\\/#\\?]?$", "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/article\\/playa-hermosa-guanacaste-costa-rica(\\.json)?[\\/#\\?]?$", "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/article\\/playa-hermosa-guanacaste-complete-photography-guide(\\.json)?[\\/#\\?]?$", "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/article\\/playa-hermosa-guanacaste-costa-rica-2026-photography-guide(\\.json)?[\\/#\\?]?$", "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/article\\/playa-hermosa-jaco-garabito(\\.json)?[\\/#\\?]?$", "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/article\\/jaco-beach-playa-hermosa-central-pacific-photography-guide(\\.json)?[\\/#\\?]?$"] }];
     require_edge_runtime_webpack();
     require_middleware();
   }
@@ -3664,12 +3680,12 @@ var NEXT_DIR = path.join(__dirname, ".next");
 var OPEN_NEXT_DIR = path.join(__dirname, ".open-next");
 debug({ NEXT_DIR, OPEN_NEXT_DIR });
 var NextConfig = { "env": {}, "webpack": null, "eslint": { "ignoreDuringBuilds": false }, "typescript": { "ignoreBuildErrors": false, "tsconfigPath": "tsconfig.json" }, "distDir": ".next", "cleanDistDir": true, "assetPrefix": "", "cacheMaxMemorySize": 52428800, "configOrigin": "next.config.js", "useFileSystemPublicRoutes": true, "generateEtags": true, "pageExtensions": ["tsx", "ts", "jsx", "js"], "poweredByHeader": true, "compress": true, "images": { "deviceSizes": [640, 750, 828, 1080, 1200, 1920, 2048, 3840], "imageSizes": [16, 32, 48, 64, 96, 128, 256, 384], "path": "/_next/image", "loader": "default", "loaderFile": "", "domains": [], "disableStaticImages": false, "minimumCacheTTL": 60, "formats": ["image/webp"], "dangerouslyAllowSVG": false, "contentSecurityPolicy": "script-src 'none'; frame-src 'none'; sandbox;", "contentDispositionType": "attachment", "remotePatterns": [{ "protocol": "https", "hostname": "**.smugmug.com" }, { "protocol": "https", "hostname": "images.unsplash.com" }], "unoptimized": false }, "devIndicators": { "position": "bottom-left" }, "onDemandEntries": { "maxInactiveAge": 6e4, "pagesBufferLength": 5 }, "amp": { "canonicalBase": "" }, "basePath": "", "sassOptions": {}, "trailingSlash": false, "i18n": null, "productionBrowserSourceMaps": false, "excludeDefaultMomentLocales": true, "serverRuntimeConfig": {}, "publicRuntimeConfig": {}, "reactProductionProfiling": false, "reactStrictMode": null, "reactMaxHeadersLength": 6e3, "httpAgentOptions": { "keepAlive": true }, "logging": {}, "compiler": {}, "expireTime": 31536e3, "staticPageGenerationTimeout": 60, "output": "standalone", "modularizeImports": { "@mui/icons-material": { "transform": "@mui/icons-material/{{member}}" }, "lodash": { "transform": "lodash/{{member}}" } }, "outputFileTracingRoot": "/Users/joshuatenbrink/wildphotography_cloudflare_src", "experimental": { "useSkewCookie": false, "nodeMiddleware": false, "cacheLife": { "default": { "stale": 300, "revalidate": 900, "expire": 4294967294 }, "seconds": { "stale": 0, "revalidate": 1, "expire": 60 }, "minutes": { "stale": 300, "revalidate": 60, "expire": 3600 }, "hours": { "stale": 300, "revalidate": 3600, "expire": 86400 }, "days": { "stale": 300, "revalidate": 86400, "expire": 604800 }, "weeks": { "stale": 300, "revalidate": 604800, "expire": 2592e3 }, "max": { "stale": 300, "revalidate": 2592e3, "expire": 4294967294 } }, "cacheHandlers": {}, "cssChunking": true, "multiZoneDraftMode": false, "appNavFailHandling": false, "prerenderEarlyExit": true, "serverMinification": true, "serverSourceMaps": false, "linkNoTouchStart": false, "caseSensitiveRoutes": false, "clientSegmentCache": false, "dynamicOnHover": false, "preloadEntriesOnStart": true, "clientRouterFilter": true, "clientRouterFilterRedirects": false, "fetchCacheKeyPrefix": "", "middlewarePrefetch": "flexible", "optimisticClientCache": true, "manualClientBasePath": false, "cpus": 9, "memoryBasedWorkersCount": false, "imgOptConcurrency": null, "imgOptTimeoutInSeconds": 7, "imgOptMaxInputPixels": 268402689, "imgOptSequentialRead": null, "isrFlushToDisk": true, "workerThreads": false, "optimizeCss": false, "nextScriptWorkers": false, "scrollRestoration": false, "externalDir": false, "disableOptimizedLoading": false, "gzipSize": true, "craCompat": false, "esmExternals": true, "fullySpecified": false, "swcTraceProfiling": false, "forceSwcTransforms": false, "largePageDataBytes": 128e3, "typedRoutes": false, "typedEnv": false, "parallelServerCompiles": false, "parallelServerBuildTraces": false, "ppr": false, "authInterrupts": false, "webpackMemoryOptimizations": false, "optimizeServerReact": true, "viewTransition": false, "routerBFCache": false, "removeUncaughtErrorAndRejectionListeners": false, "validateRSCRequestHeaders": false, "staleTimes": { "dynamic": 0, "static": 300 }, "serverComponentsHmrCache": true, "staticGenerationMaxConcurrency": 8, "staticGenerationMinPagesPerWorker": 25, "dynamicIO": false, "inlineCss": false, "useCache": false, "globalNotFound": false, "devtoolNewPanelUI": false, "devtoolSegmentExplorer": false, "browserDebugInfoInTerminal": false, "optimizeRouterScrolling": false, "strictNextHead": true, "middlewareClientMaxBodySize": 10485760, "optimizePackageImports": ["lucide-react", "date-fns", "lodash-es", "ramda", "antd", "react-bootstrap", "ahooks", "@ant-design/icons", "@headlessui/react", "@headlessui-float/react", "@heroicons/react/20/solid", "@heroicons/react/24/solid", "@heroicons/react/24/outline", "@visx/visx", "@tremor/react", "rxjs", "@mui/material", "@mui/icons-material", "recharts", "react-use", "effect", "@effect/schema", "@effect/platform", "@effect/platform-node", "@effect/platform-browser", "@effect/platform-bun", "@effect/sql", "@effect/sql-mssql", "@effect/sql-mysql2", "@effect/sql-pg", "@effect/sql-sqlite-node", "@effect/sql-sqlite-bun", "@effect/sql-sqlite-wasm", "@effect/sql-sqlite-react-native", "@effect/rpc", "@effect/rpc-http", "@effect/typeclass", "@effect/experimental", "@effect/opentelemetry", "@material-ui/core", "@material-ui/icons", "@tabler/icons-react", "mui-core", "react-icons/ai", "react-icons/bi", "react-icons/bs", "react-icons/cg", "react-icons/ci", "react-icons/di", "react-icons/fa", "react-icons/fa6", "react-icons/fc", "react-icons/fi", "react-icons/gi", "react-icons/go", "react-icons/gr", "react-icons/hi", "react-icons/hi2", "react-icons/im", "react-icons/io", "react-icons/io5", "react-icons/lia", "react-icons/lib", "react-icons/lu", "react-icons/md", "react-icons/pi", "react-icons/ri", "react-icons/rx", "react-icons/si", "react-icons/sl", "react-icons/tb", "react-icons/tfi", "react-icons/ti", "react-icons/vsc", "react-icons/wi"], "trustHostHeader": false, "isExperimentalCompile": false }, "htmlLimitedBots": "Mediapartners-Google|Chrome-Lighthouse|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|Yeti", "bundlePagesRouterDependencies": false, "configFileName": "next.config.js", "turbopack": { "root": "/Users/joshuatenbrink/wildphotography_cloudflare_src" } };
-var BuildId = "xhKoYYjBceY3Sm0jmANdY";
-var RoutesManifest = { "basePath": "", "rewrites": { "beforeFiles": [], "afterFiles": [], "fallback": [] }, "redirects": [{ "source": "/:path+/", "destination": "/:path+", "internal": true, "statusCode": 308, "regex": "^(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))/$" }], "routes": { "static": [{ "page": "/", "regex": "^/(?:/)?$", "routeKeys": {}, "namedRegex": "^/(?:/)?$" }, { "page": "/_not-found", "regex": "^/_not\\-found(?:/)?$", "routeKeys": {}, "namedRegex": "^/_not\\-found(?:/)?$" }, { "page": "/account/api", "regex": "^/account/api(?:/)?$", "routeKeys": {}, "namedRegex": "^/account/api(?:/)?$" }, { "page": "/admin", "regex": "^/admin(?:/)?$", "routeKeys": {}, "namedRegex": "^/admin(?:/)?$" }, { "page": "/admin/api-customers", "regex": "^/admin/api\\-customers(?:/)?$", "routeKeys": {}, "namedRegex": "^/admin/api\\-customers(?:/)?$" }, { "page": "/admin/api-leads", "regex": "^/admin/api\\-leads(?:/)?$", "routeKeys": {}, "namedRegex": "^/admin/api\\-leads(?:/)?$" }, { "page": "/admin/backlink-opportunities", "regex": "^/admin/backlink\\-opportunities(?:/)?$", "routeKeys": {}, "namedRegex": "^/admin/backlink\\-opportunities(?:/)?$" }, { "page": "/admin/bulk", "regex": "^/admin/bulk(?:/)?$", "routeKeys": {}, "namedRegex": "^/admin/bulk(?:/)?$" }, { "page": "/admin/dashboard", "regex": "^/admin/dashboard(?:/)?$", "routeKeys": {}, "namedRegex": "^/admin/dashboard(?:/)?$" }, { "page": "/admin/photos", "regex": "^/admin/photos(?:/)?$", "routeKeys": {}, "namedRegex": "^/admin/photos(?:/)?$" }, { "page": "/admin/quality", "regex": "^/admin/quality(?:/)?$", "routeKeys": {}, "namedRegex": "^/admin/quality(?:/)?$" }, { "page": "/admin/security", "regex": "^/admin/security(?:/)?$", "routeKeys": {}, "namedRegex": "^/admin/security(?:/)?$" }, { "page": "/admin/security/cloudflare-rules", "regex": "^/admin/security/cloudflare\\-rules(?:/)?$", "routeKeys": {}, "namedRegex": "^/admin/security/cloudflare\\-rules(?:/)?$" }, { "page": "/admin/system-health", "regex": "^/admin/system\\-health(?:/)?$", "routeKeys": {}, "namedRegex": "^/admin/system\\-health(?:/)?$" }, { "page": "/api-access", "regex": "^/api\\-access(?:/)?$", "routeKeys": {}, "namedRegex": "^/api\\-access(?:/)?$" }, { "page": "/article", "regex": "^/article(?:/)?$", "routeKeys": {}, "namedRegex": "^/article(?:/)?$" }, { "page": "/developers/api", "regex": "^/developers/api(?:/)?$", "routeKeys": {}, "namedRegex": "^/developers/api(?:/)?$" }, { "page": "/galleries", "regex": "^/galleries(?:/)?$", "routeKeys": {}, "namedRegex": "^/galleries(?:/)?$" }, { "page": "/location", "regex": "^/location(?:/)?$", "routeKeys": {}, "namedRegex": "^/location(?:/)?$" }, { "page": "/map", "regex": "^/map(?:/)?$", "routeKeys": {}, "namedRegex": "^/map(?:/)?$" }, { "page": "/payment-cancelled", "regex": "^/payment\\-cancelled(?:/)?$", "routeKeys": {}, "namedRegex": "^/payment\\-cancelled(?:/)?$" }, { "page": "/photography-featured", "regex": "^/photography\\-featured(?:/)?$", "routeKeys": {}, "namedRegex": "^/photography\\-featured(?:/)?$" }, { "page": "/region", "regex": "^/region(?:/)?$", "routeKeys": {}, "namedRegex": "^/region(?:/)?$" }, { "page": "/robots.txt", "regex": "^/robots\\.txt(?:/)?$", "routeKeys": {}, "namedRegex": "^/robots\\.txt(?:/)?$" }, { "page": "/search", "regex": "^/search(?:/)?$", "routeKeys": {}, "namedRegex": "^/search(?:/)?$" }, { "page": "/sitemap.xml", "regex": "^/sitemap\\.xml(?:/)?$", "routeKeys": {}, "namedRegex": "^/sitemap\\.xml(?:/)?$" }, { "page": "/species", "regex": "^/species(?:/)?$", "routeKeys": {}, "namedRegex": "^/species(?:/)?$" }, { "page": "/thank-you", "regex": "^/thank\\-you(?:/)?$", "routeKeys": {}, "namedRegex": "^/thank\\-you(?:/)?$" }], "dynamic": [{ "page": "/admin/photos/[id]", "regex": "^/admin/photos/([^/]+?)(?:/)?$", "routeKeys": { "nxtPid": "nxtPid" }, "namedRegex": "^/admin/photos/(?<nxtPid>[^/]+?)(?:/)?$" }, { "page": "/api/admin/api-customers/[id]", "regex": "^/api/admin/api\\-customers/([^/]+?)(?:/)?$", "routeKeys": { "nxtPid": "nxtPid" }, "namedRegex": "^/api/admin/api\\-customers/(?<nxtPid>[^/]+?)(?:/)?$" }, { "page": "/api/admin/api-customers/[id]/deactivate", "regex": "^/api/admin/api\\-customers/([^/]+?)/deactivate(?:/)?$", "routeKeys": { "nxtPid": "nxtPid" }, "namedRegex": "^/api/admin/api\\-customers/(?<nxtPid>[^/]+?)/deactivate(?:/)?$" }, { "page": "/api/admin/api-customers/[id]/revoke", "regex": "^/api/admin/api\\-customers/([^/]+?)/revoke(?:/)?$", "routeKeys": { "nxtPid": "nxtPid" }, "namedRegex": "^/api/admin/api\\-customers/(?<nxtPid>[^/]+?)/revoke(?:/)?$" }, { "page": "/api/admin/api-leads/[id]", "regex": "^/api/admin/api\\-leads/([^/]+?)(?:/)?$", "routeKeys": { "nxtPid": "nxtPid" }, "namedRegex": "^/api/admin/api\\-leads/(?<nxtPid>[^/]+?)(?:/)?$" }, { "page": "/api/admin/api-leads/[id]/onboard", "regex": "^/api/admin/api\\-leads/([^/]+?)/onboard(?:/)?$", "routeKeys": { "nxtPid": "nxtPid" }, "namedRegex": "^/api/admin/api\\-leads/(?<nxtPid>[^/]+?)/onboard(?:/)?$" }, { "page": "/api/admin/photos/[id]", "regex": "^/api/admin/photos/([^/]+?)(?:/)?$", "routeKeys": { "nxtPid": "nxtPid" }, "namedRegex": "^/api/admin/photos/(?<nxtPid>[^/]+?)(?:/)?$" }, { "page": "/api/download/[photoId]", "regex": "^/api/download/([^/]+?)(?:/)?$", "routeKeys": { "nxtPphotoId": "nxtPphotoId" }, "namedRegex": "^/api/download/(?<nxtPphotoId>[^/]+?)(?:/)?$" }, { "page": "/api/photos/related/[id]", "regex": "^/api/photos/related/([^/]+?)(?:/)?$", "routeKeys": { "nxtPid": "nxtPid" }, "namedRegex": "^/api/photos/related/(?<nxtPid>[^/]+?)(?:/)?$" }, { "page": "/api/public/gallery/[slug]", "regex": "^/api/public/gallery/([^/]+?)(?:/)?$", "routeKeys": { "nxtPslug": "nxtPslug" }, "namedRegex": "^/api/public/gallery/(?<nxtPslug>[^/]+?)(?:/)?$" }, { "page": "/api/public/location/[slug]", "regex": "^/api/public/location/([^/]+?)(?:/)?$", "routeKeys": { "nxtPslug": "nxtPslug" }, "namedRegex": "^/api/public/location/(?<nxtPslug>[^/]+?)(?:/)?$" }, { "page": "/api/public/photos/[slug]", "regex": "^/api/public/photos/([^/]+?)(?:/)?$", "routeKeys": { "nxtPslug": "nxtPslug" }, "namedRegex": "^/api/public/photos/(?<nxtPslug>[^/]+?)(?:/)?$" }, { "page": "/api/public/region/[slug]", "regex": "^/api/public/region/([^/]+?)(?:/)?$", "routeKeys": { "nxtPslug": "nxtPslug" }, "namedRegex": "^/api/public/region/(?<nxtPslug>[^/]+?)(?:/)?$" }, { "page": "/api/public/tag/[keywordSlug]", "regex": "^/api/public/tag/([^/]+?)(?:/)?$", "routeKeys": { "nxtPkeywordSlug": "nxtPkeywordSlug" }, "namedRegex": "^/api/public/tag/(?<nxtPkeywordSlug>[^/]+?)(?:/)?$" }, { "page": "/article/[slug]", "regex": "^/article/([^/]+?)(?:/)?$", "routeKeys": { "nxtPslug": "nxtPslug" }, "namedRegex": "^/article/(?<nxtPslug>[^/]+?)(?:/)?$" }, { "page": "/buy/[slug]", "regex": "^/buy/([^/]+?)(?:/)?$", "routeKeys": { "nxtPslug": "nxtPslug" }, "namedRegex": "^/buy/(?<nxtPslug>[^/]+?)(?:/)?$" }, { "page": "/gallery/[slug]", "regex": "^/gallery/([^/]+?)(?:/)?$", "routeKeys": { "nxtPslug": "nxtPslug" }, "namedRegex": "^/gallery/(?<nxtPslug>[^/]+?)(?:/)?$" }, { "page": "/guides/[slug]", "regex": "^/guides/([^/]+?)(?:/)?$", "routeKeys": { "nxtPslug": "nxtPslug" }, "namedRegex": "^/guides/(?<nxtPslug>[^/]+?)(?:/)?$" }, { "page": "/location/[slug]", "regex": "^/location/([^/]+?)(?:/)?$", "routeKeys": { "nxtPslug": "nxtPslug" }, "namedRegex": "^/location/(?<nxtPslug>[^/]+?)(?:/)?$" }, { "page": "/photo/[slug]", "regex": "^/photo/([^/]+?)(?:/)?$", "routeKeys": { "nxtPslug": "nxtPslug" }, "namedRegex": "^/photo/(?<nxtPslug>[^/]+?)(?:/)?$" }, { "page": "/region/[slug]", "regex": "^/region/([^/]+?)(?:/)?$", "routeKeys": { "nxtPslug": "nxtPslug" }, "namedRegex": "^/region/(?<nxtPslug>[^/]+?)(?:/)?$" }, { "page": "/species/[slug]", "regex": "^/species/([^/]+?)(?:/)?$", "routeKeys": { "nxtPslug": "nxtPslug" }, "namedRegex": "^/species/(?<nxtPslug>[^/]+?)(?:/)?$" }], "data": { "static": [], "dynamic": [] } }, "locales": [] };
+var BuildId = "3GFPjCmI5WNL1yS60hdal";
+var RoutesManifest = { "basePath": "", "rewrites": { "beforeFiles": [], "afterFiles": [], "fallback": [] }, "redirects": [{ "source": "/:path+/", "destination": "/:path+", "internal": true, "statusCode": 308, "regex": "^(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))/$" }], "routes": { "static": [{ "page": "/", "regex": "^/(?:/)?$", "routeKeys": {}, "namedRegex": "^/(?:/)?$" }, { "page": "/_not-found", "regex": "^/_not\\-found(?:/)?$", "routeKeys": {}, "namedRegex": "^/_not\\-found(?:/)?$" }, { "page": "/account/api", "regex": "^/account/api(?:/)?$", "routeKeys": {}, "namedRegex": "^/account/api(?:/)?$" }, { "page": "/admin", "regex": "^/admin(?:/)?$", "routeKeys": {}, "namedRegex": "^/admin(?:/)?$" }, { "page": "/admin/api-customers", "regex": "^/admin/api\\-customers(?:/)?$", "routeKeys": {}, "namedRegex": "^/admin/api\\-customers(?:/)?$" }, { "page": "/admin/api-leads", "regex": "^/admin/api\\-leads(?:/)?$", "routeKeys": {}, "namedRegex": "^/admin/api\\-leads(?:/)?$" }, { "page": "/admin/backlink-opportunities", "regex": "^/admin/backlink\\-opportunities(?:/)?$", "routeKeys": {}, "namedRegex": "^/admin/backlink\\-opportunities(?:/)?$" }, { "page": "/admin/bulk", "regex": "^/admin/bulk(?:/)?$", "routeKeys": {}, "namedRegex": "^/admin/bulk(?:/)?$" }, { "page": "/admin/dashboard", "regex": "^/admin/dashboard(?:/)?$", "routeKeys": {}, "namedRegex": "^/admin/dashboard(?:/)?$" }, { "page": "/admin/photos", "regex": "^/admin/photos(?:/)?$", "routeKeys": {}, "namedRegex": "^/admin/photos(?:/)?$" }, { "page": "/admin/quality", "regex": "^/admin/quality(?:/)?$", "routeKeys": {}, "namedRegex": "^/admin/quality(?:/)?$" }, { "page": "/admin/security", "regex": "^/admin/security(?:/)?$", "routeKeys": {}, "namedRegex": "^/admin/security(?:/)?$" }, { "page": "/admin/security/cloudflare-rules", "regex": "^/admin/security/cloudflare\\-rules(?:/)?$", "routeKeys": {}, "namedRegex": "^/admin/security/cloudflare\\-rules(?:/)?$" }, { "page": "/admin/system-health", "regex": "^/admin/system\\-health(?:/)?$", "routeKeys": {}, "namedRegex": "^/admin/system\\-health(?:/)?$" }, { "page": "/api-access", "regex": "^/api\\-access(?:/)?$", "routeKeys": {}, "namedRegex": "^/api\\-access(?:/)?$" }, { "page": "/article", "regex": "^/article(?:/)?$", "routeKeys": {}, "namedRegex": "^/article(?:/)?$" }, { "page": "/developers/api", "regex": "^/developers/api(?:/)?$", "routeKeys": {}, "namedRegex": "^/developers/api(?:/)?$" }, { "page": "/galleries", "regex": "^/galleries(?:/)?$", "routeKeys": {}, "namedRegex": "^/galleries(?:/)?$" }, { "page": "/location", "regex": "^/location(?:/)?$", "routeKeys": {}, "namedRegex": "^/location(?:/)?$" }, { "page": "/map", "regex": "^/map(?:/)?$", "routeKeys": {}, "namedRegex": "^/map(?:/)?$" }, { "page": "/payment-cancelled", "regex": "^/payment\\-cancelled(?:/)?$", "routeKeys": {}, "namedRegex": "^/payment\\-cancelled(?:/)?$" }, { "page": "/photography-featured", "regex": "^/photography\\-featured(?:/)?$", "routeKeys": {}, "namedRegex": "^/photography\\-featured(?:/)?$" }, { "page": "/region", "regex": "^/region(?:/)?$", "routeKeys": {}, "namedRegex": "^/region(?:/)?$" }, { "page": "/robots.txt", "regex": "^/robots\\.txt(?:/)?$", "routeKeys": {}, "namedRegex": "^/robots\\.txt(?:/)?$" }, { "page": "/search", "regex": "^/search(?:/)?$", "routeKeys": {}, "namedRegex": "^/search(?:/)?$" }, { "page": "/species", "regex": "^/species(?:/)?$", "routeKeys": {}, "namedRegex": "^/species(?:/)?$" }, { "page": "/thank-you", "regex": "^/thank\\-you(?:/)?$", "routeKeys": {}, "namedRegex": "^/thank\\-you(?:/)?$" }], "dynamic": [{ "page": "/admin/photos/[id]", "regex": "^/admin/photos/([^/]+?)(?:/)?$", "routeKeys": { "nxtPid": "nxtPid" }, "namedRegex": "^/admin/photos/(?<nxtPid>[^/]+?)(?:/)?$" }, { "page": "/api/admin/api-customers/[id]", "regex": "^/api/admin/api\\-customers/([^/]+?)(?:/)?$", "routeKeys": { "nxtPid": "nxtPid" }, "namedRegex": "^/api/admin/api\\-customers/(?<nxtPid>[^/]+?)(?:/)?$" }, { "page": "/api/admin/api-customers/[id]/deactivate", "regex": "^/api/admin/api\\-customers/([^/]+?)/deactivate(?:/)?$", "routeKeys": { "nxtPid": "nxtPid" }, "namedRegex": "^/api/admin/api\\-customers/(?<nxtPid>[^/]+?)/deactivate(?:/)?$" }, { "page": "/api/admin/api-customers/[id]/revoke", "regex": "^/api/admin/api\\-customers/([^/]+?)/revoke(?:/)?$", "routeKeys": { "nxtPid": "nxtPid" }, "namedRegex": "^/api/admin/api\\-customers/(?<nxtPid>[^/]+?)/revoke(?:/)?$" }, { "page": "/api/admin/api-leads/[id]", "regex": "^/api/admin/api\\-leads/([^/]+?)(?:/)?$", "routeKeys": { "nxtPid": "nxtPid" }, "namedRegex": "^/api/admin/api\\-leads/(?<nxtPid>[^/]+?)(?:/)?$" }, { "page": "/api/admin/api-leads/[id]/onboard", "regex": "^/api/admin/api\\-leads/([^/]+?)/onboard(?:/)?$", "routeKeys": { "nxtPid": "nxtPid" }, "namedRegex": "^/api/admin/api\\-leads/(?<nxtPid>[^/]+?)/onboard(?:/)?$" }, { "page": "/api/admin/photos/[id]", "regex": "^/api/admin/photos/([^/]+?)(?:/)?$", "routeKeys": { "nxtPid": "nxtPid" }, "namedRegex": "^/api/admin/photos/(?<nxtPid>[^/]+?)(?:/)?$" }, { "page": "/api/download/[photoId]", "regex": "^/api/download/([^/]+?)(?:/)?$", "routeKeys": { "nxtPphotoId": "nxtPphotoId" }, "namedRegex": "^/api/download/(?<nxtPphotoId>[^/]+?)(?:/)?$" }, { "page": "/api/photos/related/[id]", "regex": "^/api/photos/related/([^/]+?)(?:/)?$", "routeKeys": { "nxtPid": "nxtPid" }, "namedRegex": "^/api/photos/related/(?<nxtPid>[^/]+?)(?:/)?$" }, { "page": "/api/public/gallery/[slug]", "regex": "^/api/public/gallery/([^/]+?)(?:/)?$", "routeKeys": { "nxtPslug": "nxtPslug" }, "namedRegex": "^/api/public/gallery/(?<nxtPslug>[^/]+?)(?:/)?$" }, { "page": "/api/public/location/[slug]", "regex": "^/api/public/location/([^/]+?)(?:/)?$", "routeKeys": { "nxtPslug": "nxtPslug" }, "namedRegex": "^/api/public/location/(?<nxtPslug>[^/]+?)(?:/)?$" }, { "page": "/api/public/photos/[slug]", "regex": "^/api/public/photos/([^/]+?)(?:/)?$", "routeKeys": { "nxtPslug": "nxtPslug" }, "namedRegex": "^/api/public/photos/(?<nxtPslug>[^/]+?)(?:/)?$" }, { "page": "/api/public/region/[slug]", "regex": "^/api/public/region/([^/]+?)(?:/)?$", "routeKeys": { "nxtPslug": "nxtPslug" }, "namedRegex": "^/api/public/region/(?<nxtPslug>[^/]+?)(?:/)?$" }, { "page": "/api/public/tag/[keywordSlug]", "regex": "^/api/public/tag/([^/]+?)(?:/)?$", "routeKeys": { "nxtPkeywordSlug": "nxtPkeywordSlug" }, "namedRegex": "^/api/public/tag/(?<nxtPkeywordSlug>[^/]+?)(?:/)?$" }, { "page": "/article/[slug]", "regex": "^/article/([^/]+?)(?:/)?$", "routeKeys": { "nxtPslug": "nxtPslug" }, "namedRegex": "^/article/(?<nxtPslug>[^/]+?)(?:/)?$" }, { "page": "/buy/[slug]", "regex": "^/buy/([^/]+?)(?:/)?$", "routeKeys": { "nxtPslug": "nxtPslug" }, "namedRegex": "^/buy/(?<nxtPslug>[^/]+?)(?:/)?$" }, { "page": "/gallery/[slug]", "regex": "^/gallery/([^/]+?)(?:/)?$", "routeKeys": { "nxtPslug": "nxtPslug" }, "namedRegex": "^/gallery/(?<nxtPslug>[^/]+?)(?:/)?$" }, { "page": "/guides/[slug]", "regex": "^/guides/([^/]+?)(?:/)?$", "routeKeys": { "nxtPslug": "nxtPslug" }, "namedRegex": "^/guides/(?<nxtPslug>[^/]+?)(?:/)?$" }, { "page": "/location/[slug]", "regex": "^/location/([^/]+?)(?:/)?$", "routeKeys": { "nxtPslug": "nxtPslug" }, "namedRegex": "^/location/(?<nxtPslug>[^/]+?)(?:/)?$" }, { "page": "/photo/[slug]", "regex": "^/photo/([^/]+?)(?:/)?$", "routeKeys": { "nxtPslug": "nxtPslug" }, "namedRegex": "^/photo/(?<nxtPslug>[^/]+?)(?:/)?$" }, { "page": "/region/[slug]", "regex": "^/region/([^/]+?)(?:/)?$", "routeKeys": { "nxtPslug": "nxtPslug" }, "namedRegex": "^/region/(?<nxtPslug>[^/]+?)(?:/)?$" }, { "page": "/species/[slug]", "regex": "^/species/([^/]+?)(?:/)?$", "routeKeys": { "nxtPslug": "nxtPslug" }, "namedRegex": "^/species/(?<nxtPslug>[^/]+?)(?:/)?$" }], "data": { "static": [], "dynamic": [] } }, "locales": [] };
 var ConfigHeaders = [];
-var PrerenderManifest = { "version": 4, "routes": { "/robots.txt": { "initialHeaders": { "cache-control": "public, max-age=0, must-revalidate", "content-type": "text/plain", "x-next-cache-tags": "_N_T_/layout,_N_T_/robots.txt/layout,_N_T_/robots.txt/route,_N_T_/robots.txt" }, "experimentalBypassFor": [{ "type": "header", "key": "Next-Action" }, { "type": "header", "key": "content-type", "value": "multipart/form-data;.*" }], "initialRevalidateSeconds": false, "srcRoute": "/robots.txt", "dataRoute": null, "allowHeader": ["host", "x-matched-path", "x-prerender-revalidate", "x-prerender-revalidate-if-generated", "x-next-revalidated-tags", "x-next-revalidate-tag-token"] }, "/sitemap.xml": { "initialHeaders": { "cache-control": "public, max-age=0, must-revalidate", "content-type": "application/xml", "x-next-cache-tags": "_N_T_/layout,_N_T_/sitemap.xml/layout,_N_T_/sitemap.xml/route,_N_T_/sitemap.xml" }, "experimentalBypassFor": [{ "type": "header", "key": "Next-Action" }, { "type": "header", "key": "content-type", "value": "multipart/form-data;.*" }], "initialRevalidateSeconds": 3600, "initialExpireSeconds": 31536e3, "srcRoute": "/sitemap.xml", "dataRoute": null, "allowHeader": ["host", "x-matched-path", "x-prerender-revalidate", "x-prerender-revalidate-if-generated", "x-next-revalidated-tags", "x-next-revalidate-tag-token"] }, "/developers/api": { "experimentalBypassFor": [{ "type": "header", "key": "Next-Action" }, { "type": "header", "key": "content-type", "value": "multipart/form-data;.*" }], "initialRevalidateSeconds": false, "srcRoute": "/developers/api", "dataRoute": "/developers/api.rsc", "allowHeader": ["host", "x-matched-path", "x-prerender-revalidate", "x-prerender-revalidate-if-generated", "x-next-revalidated-tags", "x-next-revalidate-tag-token"] }, "/api-access": { "experimentalBypassFor": [{ "type": "header", "key": "Next-Action" }, { "type": "header", "key": "content-type", "value": "multipart/form-data;.*" }], "initialRevalidateSeconds": false, "srcRoute": "/api-access", "dataRoute": "/api-access.rsc", "allowHeader": ["host", "x-matched-path", "x-prerender-revalidate", "x-prerender-revalidate-if-generated", "x-next-revalidated-tags", "x-next-revalidate-tag-token"] }, "/search": { "experimentalBypassFor": [{ "type": "header", "key": "Next-Action" }, { "type": "header", "key": "content-type", "value": "multipart/form-data;.*" }], "initialRevalidateSeconds": false, "srcRoute": "/search", "dataRoute": "/search.rsc", "allowHeader": ["host", "x-matched-path", "x-prerender-revalidate", "x-prerender-revalidate-if-generated", "x-next-revalidated-tags", "x-next-revalidate-tag-token"] }, "/account/api": { "experimentalBypassFor": [{ "type": "header", "key": "Next-Action" }, { "type": "header", "key": "content-type", "value": "multipart/form-data;.*" }], "initialRevalidateSeconds": false, "srcRoute": "/account/api", "dataRoute": "/account/api.rsc", "allowHeader": ["host", "x-matched-path", "x-prerender-revalidate", "x-prerender-revalidate-if-generated", "x-next-revalidated-tags", "x-next-revalidate-tag-token"] }, "/payment-cancelled": { "experimentalBypassFor": [{ "type": "header", "key": "Next-Action" }, { "type": "header", "key": "content-type", "value": "multipart/form-data;.*" }], "initialRevalidateSeconds": false, "srcRoute": "/payment-cancelled", "dataRoute": "/payment-cancelled.rsc", "allowHeader": ["host", "x-matched-path", "x-prerender-revalidate", "x-prerender-revalidate-if-generated", "x-next-revalidated-tags", "x-next-revalidate-tag-token"] }, "/galleries": { "experimentalBypassFor": [{ "type": "header", "key": "Next-Action" }, { "type": "header", "key": "content-type", "value": "multipart/form-data;.*" }], "initialRevalidateSeconds": 60, "initialExpireSeconds": 31536e3, "srcRoute": "/galleries", "dataRoute": "/galleries.rsc", "allowHeader": ["host", "x-matched-path", "x-prerender-revalidate", "x-prerender-revalidate-if-generated", "x-next-revalidated-tags", "x-next-revalidate-tag-token"] }, "/thank-you": { "experimentalBypassFor": [{ "type": "header", "key": "Next-Action" }, { "type": "header", "key": "content-type", "value": "multipart/form-data;.*" }], "initialRevalidateSeconds": false, "srcRoute": "/thank-you", "dataRoute": "/thank-you.rsc", "allowHeader": ["host", "x-matched-path", "x-prerender-revalidate", "x-prerender-revalidate-if-generated", "x-next-revalidated-tags", "x-next-revalidate-tag-token"] }, "/admin/api-customers": { "experimentalBypassFor": [{ "type": "header", "key": "Next-Action" }, { "type": "header", "key": "content-type", "value": "multipart/form-data;.*" }], "initialRevalidateSeconds": false, "srcRoute": "/admin/api-customers", "dataRoute": "/admin/api-customers.rsc", "allowHeader": ["host", "x-matched-path", "x-prerender-revalidate", "x-prerender-revalidate-if-generated", "x-next-revalidated-tags", "x-next-revalidate-tag-token"] }, "/admin/dashboard": { "experimentalBypassFor": [{ "type": "header", "key": "Next-Action" }, { "type": "header", "key": "content-type", "value": "multipart/form-data;.*" }], "initialRevalidateSeconds": false, "srcRoute": "/admin/dashboard", "dataRoute": "/admin/dashboard.rsc", "allowHeader": ["host", "x-matched-path", "x-prerender-revalidate", "x-prerender-revalidate-if-generated", "x-next-revalidated-tags", "x-next-revalidate-tag-token"] }, "/admin": { "experimentalBypassFor": [{ "type": "header", "key": "Next-Action" }, { "type": "header", "key": "content-type", "value": "multipart/form-data;.*" }], "initialRevalidateSeconds": false, "srcRoute": "/admin", "dataRoute": "/admin.rsc", "allowHeader": ["host", "x-matched-path", "x-prerender-revalidate", "x-prerender-revalidate-if-generated", "x-next-revalidated-tags", "x-next-revalidate-tag-token"] }, "/admin/api-leads": { "experimentalBypassFor": [{ "type": "header", "key": "Next-Action" }, { "type": "header", "key": "content-type", "value": "multipart/form-data;.*" }], "initialRevalidateSeconds": false, "srcRoute": "/admin/api-leads", "dataRoute": "/admin/api-leads.rsc", "allowHeader": ["host", "x-matched-path", "x-prerender-revalidate", "x-prerender-revalidate-if-generated", "x-next-revalidated-tags", "x-next-revalidate-tag-token"] }, "/admin/bulk": { "experimentalBypassFor": [{ "type": "header", "key": "Next-Action" }, { "type": "header", "key": "content-type", "value": "multipart/form-data;.*" }], "initialRevalidateSeconds": false, "srcRoute": "/admin/bulk", "dataRoute": "/admin/bulk.rsc", "allowHeader": ["host", "x-matched-path", "x-prerender-revalidate", "x-prerender-revalidate-if-generated", "x-next-revalidated-tags", "x-next-revalidate-tag-token"] }, "/admin/photos": { "experimentalBypassFor": [{ "type": "header", "key": "Next-Action" }, { "type": "header", "key": "content-type", "value": "multipart/form-data;.*" }], "initialRevalidateSeconds": false, "srcRoute": "/admin/photos", "dataRoute": "/admin/photos.rsc", "allowHeader": ["host", "x-matched-path", "x-prerender-revalidate", "x-prerender-revalidate-if-generated", "x-next-revalidated-tags", "x-next-revalidate-tag-token"] }, "/admin/backlink-opportunities": { "experimentalBypassFor": [{ "type": "header", "key": "Next-Action" }, { "type": "header", "key": "content-type", "value": "multipart/form-data;.*" }], "initialRevalidateSeconds": false, "srcRoute": "/admin/backlink-opportunities", "dataRoute": "/admin/backlink-opportunities.rsc", "allowHeader": ["host", "x-matched-path", "x-prerender-revalidate", "x-prerender-revalidate-if-generated", "x-next-revalidated-tags", "x-next-revalidate-tag-token"] }, "/admin/quality": { "experimentalBypassFor": [{ "type": "header", "key": "Next-Action" }, { "type": "header", "key": "content-type", "value": "multipart/form-data;.*" }], "initialRevalidateSeconds": false, "srcRoute": "/admin/quality", "dataRoute": "/admin/quality.rsc", "allowHeader": ["host", "x-matched-path", "x-prerender-revalidate", "x-prerender-revalidate-if-generated", "x-next-revalidated-tags", "x-next-revalidate-tag-token"] }, "/admin/security/cloudflare-rules": { "experimentalBypassFor": [{ "type": "header", "key": "Next-Action" }, { "type": "header", "key": "content-type", "value": "multipart/form-data;.*" }], "initialRevalidateSeconds": false, "srcRoute": "/admin/security/cloudflare-rules", "dataRoute": "/admin/security/cloudflare-rules.rsc", "allowHeader": ["host", "x-matched-path", "x-prerender-revalidate", "x-prerender-revalidate-if-generated", "x-next-revalidated-tags", "x-next-revalidate-tag-token"] }, "/": { "experimentalBypassFor": [{ "type": "header", "key": "Next-Action" }, { "type": "header", "key": "content-type", "value": "multipart/form-data;.*" }], "initialRevalidateSeconds": 900, "initialExpireSeconds": 31536e3, "srcRoute": "/", "dataRoute": "/index.rsc", "allowHeader": ["host", "x-matched-path", "x-prerender-revalidate", "x-prerender-revalidate-if-generated", "x-next-revalidated-tags", "x-next-revalidate-tag-token"] }, "/admin/system-health": { "experimentalBypassFor": [{ "type": "header", "key": "Next-Action" }, { "type": "header", "key": "content-type", "value": "multipart/form-data;.*" }], "initialRevalidateSeconds": false, "srcRoute": "/admin/system-health", "dataRoute": "/admin/system-health.rsc", "allowHeader": ["host", "x-matched-path", "x-prerender-revalidate", "x-prerender-revalidate-if-generated", "x-next-revalidated-tags", "x-next-revalidate-tag-token"] }, "/admin/security": { "experimentalBypassFor": [{ "type": "header", "key": "Next-Action" }, { "type": "header", "key": "content-type", "value": "multipart/form-data;.*" }], "initialRevalidateSeconds": false, "srcRoute": "/admin/security", "dataRoute": "/admin/security.rsc", "allowHeader": ["host", "x-matched-path", "x-prerender-revalidate", "x-prerender-revalidate-if-generated", "x-next-revalidated-tags", "x-next-revalidate-tag-token"] } }, "dynamicRoutes": {}, "notFoundRoutes": [], "preview": { "previewModeId": "58b67de9299e82645ca41da0491f14ee", "previewModeSigningKey": "d78bea71c2090b1dfd30b5519ac26d313951a0c2e2d238b0592b9a4d10c42a73", "previewModeEncryptionKey": "0a64211db7a65f8d777bcd33f08bc33ad11ca4bb2f0f9161ace3616efc531248" } };
-var MiddlewareManifest = { "version": 3, "middleware": { "/": { "files": ["server/edge-runtime-webpack.js", "server/middleware.js"], "name": "middleware", "page": "/", "matchers": [{ "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/admin(\\.json)?[\\/#\\?]?$", "originalSource": "/admin" }], "wasm": [], "assets": [], "env": { "__NEXT_BUILD_ID": "xhKoYYjBceY3Sm0jmANdY", "NEXT_SERVER_ACTIONS_ENCRYPTION_KEY": "Nb3PW9Q5ptdx0ct1zUKMknjzyNjrV0Fhg0Q1X2O2yWM=", "__NEXT_PREVIEW_MODE_ID": "58b67de9299e82645ca41da0491f14ee", "__NEXT_PREVIEW_MODE_SIGNING_KEY": "d78bea71c2090b1dfd30b5519ac26d313951a0c2e2d238b0592b9a4d10c42a73", "__NEXT_PREVIEW_MODE_ENCRYPTION_KEY": "0a64211db7a65f8d777bcd33f08bc33ad11ca4bb2f0f9161ace3616efc531248" } } }, "functions": {}, "sortedMiddleware": ["/"] };
-var AppPathRoutesManifest = { "/api/admin/backlink-opportunities/route": "/api/admin/backlink-opportunities", "/api/admin/photos/route": "/api/admin/photos", "/api/admin/auth/login/route": "/api/admin/auth/login", "/api/admin/bulk/route": "/api/admin/bulk", "/api/admin/photos/[id]/route": "/api/admin/photos/[id]", "/api/admin/quality/route": "/api/admin/quality", "/api/admin/stats/route": "/api/admin/stats", "/api/admin/security/route": "/api/admin/security", "/api/download/[photoId]/route": "/api/download/[photoId]", "/api/orders/return/route": "/api/orders/return", "/api/orders/create/route": "/api/orders/create", "/api/paypal/webhook/route": "/api/paypal/webhook", "/api/paypal/ipn-placeholder/route": "/api/paypal/ipn-placeholder", "/api/admin/galleries/route": "/api/admin/galleries", "/api/paypal/checkout/route": "/api/paypal/checkout", "/robots.txt/route": "/robots.txt", "/api/admin/api-customers/[id]/route": "/api/admin/api-customers/[id]", "/api/account/me/route": "/api/account/me", "/api/admin/api-customers/[id]/revoke/route": "/api/admin/api-customers/[id]/revoke", "/api/admin/api-customers/[id]/deactivate/route": "/api/admin/api-customers/[id]/deactivate", "/api/admin/api-customers/route": "/api/admin/api-customers", "/api/admin/api-leads/[id]/route": "/api/admin/api-leads/[id]", "/api/admin/api-leads/[id]/onboard/route": "/api/admin/api-leads/[id]/onboard", "/api/admin/api-leads/route": "/api/admin/api-leads", "/api/admin/system-health/route": "/api/admin/system-health", "/api/api-access/apply/route": "/api/api-access/apply", "/api/diag-galleries/route": "/api/diag-galleries", "/api/public/locations/route": "/api/public/locations", "/api/public/location/[slug]/route": "/api/public/location/[slug]", "/api/public/photos/[slug]/route": "/api/public/photos/[slug]", "/api/photos/related/[id]/route": "/api/photos/related/[id]", "/api/public/gallery/[slug]/route": "/api/public/gallery/[slug]", "/api/public/region/[slug]/route": "/api/public/region/[slug]", "/api/public/region/route": "/api/public/region", "/api/public/tag/[keywordSlug]/route": "/api/public/tag/[keywordSlug]", "/api/sitemap/route": "/api/sitemap", "/api/robots/route": "/api/robots", "/api/public/search/route": "/api/public/search", "/api/test-simple/route": "/api/test-simple", "/api/v1/search/route": "/api/v1/search", "/api/v1/usage/route": "/api/v1/usage", "/api/visit/route": "/api/visit", "/api/search/route": "/api/search", "/sitemap.xml/route": "/sitemap.xml", "/account/api/page": "/account/api", "/_not-found/page": "/_not-found", "/search/page": "/search", "/api-access/page": "/api-access", "/buy/[slug]/page": "/buy/[slug]", "/article/[slug]/page": "/article/[slug]", "/article/page": "/article", "/developers/api/page": "/developers/api", "/gallery/[slug]/page": "/gallery/[slug]", "/payment-cancelled/page": "/payment-cancelled", "/map/page": "/map", "/guides/[slug]/page": "/guides/[slug]", "/photography-featured/page": "/photography-featured", "/location/[slug]/page": "/location/[slug]", "/location/page": "/location", "/region/page": "/region", "/photo/[slug]/page": "/photo/[slug]", "/page": "/", "/region/[slug]/page": "/region/[slug]", "/thank-you/page": "/thank-you", "/species/page": "/species", "/species/[slug]/page": "/species/[slug]", "/galleries/page": "/galleries", "/admin/api-customers/page": "/admin/api-customers", "/admin/api-leads/page": "/admin/api-leads", "/admin/backlink-opportunities/page": "/admin/backlink-opportunities", "/admin/bulk/page": "/admin/bulk", "/admin/page": "/admin", "/admin/photos/page": "/admin/photos", "/admin/dashboard/page": "/admin/dashboard", "/admin/security/page": "/admin/security", "/admin/quality/page": "/admin/quality", "/admin/system-health/page": "/admin/system-health", "/admin/photos/[id]/page": "/admin/photos/[id]", "/admin/security/cloudflare-rules/page": "/admin/security/cloudflare-rules" };
+var PrerenderManifest = { "version": 4, "routes": { "/robots.txt": { "initialHeaders": { "cache-control": "public, max-age=0, must-revalidate", "content-type": "text/plain", "x-next-cache-tags": "_N_T_/layout,_N_T_/robots.txt/layout,_N_T_/robots.txt/route,_N_T_/robots.txt" }, "experimentalBypassFor": [{ "type": "header", "key": "Next-Action" }, { "type": "header", "key": "content-type", "value": "multipart/form-data;.*" }], "initialRevalidateSeconds": false, "srcRoute": "/robots.txt", "dataRoute": null, "allowHeader": ["host", "x-matched-path", "x-prerender-revalidate", "x-prerender-revalidate-if-generated", "x-next-revalidated-tags", "x-next-revalidate-tag-token"] }, "/account/api": { "experimentalBypassFor": [{ "type": "header", "key": "Next-Action" }, { "type": "header", "key": "content-type", "value": "multipart/form-data;.*" }], "initialRevalidateSeconds": false, "srcRoute": "/account/api", "dataRoute": "/account/api.rsc", "allowHeader": ["host", "x-matched-path", "x-prerender-revalidate", "x-prerender-revalidate-if-generated", "x-next-revalidated-tags", "x-next-revalidate-tag-token"] }, "/api-access": { "experimentalBypassFor": [{ "type": "header", "key": "Next-Action" }, { "type": "header", "key": "content-type", "value": "multipart/form-data;.*" }], "initialRevalidateSeconds": false, "srcRoute": "/api-access", "dataRoute": "/api-access.rsc", "allowHeader": ["host", "x-matched-path", "x-prerender-revalidate", "x-prerender-revalidate-if-generated", "x-next-revalidated-tags", "x-next-revalidate-tag-token"] }, "/search": { "experimentalBypassFor": [{ "type": "header", "key": "Next-Action" }, { "type": "header", "key": "content-type", "value": "multipart/form-data;.*" }], "initialRevalidateSeconds": false, "srcRoute": "/search", "dataRoute": "/search.rsc", "allowHeader": ["host", "x-matched-path", "x-prerender-revalidate", "x-prerender-revalidate-if-generated", "x-next-revalidated-tags", "x-next-revalidate-tag-token"] }, "/payment-cancelled": { "experimentalBypassFor": [{ "type": "header", "key": "Next-Action" }, { "type": "header", "key": "content-type", "value": "multipart/form-data;.*" }], "initialRevalidateSeconds": false, "srcRoute": "/payment-cancelled", "dataRoute": "/payment-cancelled.rsc", "allowHeader": ["host", "x-matched-path", "x-prerender-revalidate", "x-prerender-revalidate-if-generated", "x-next-revalidated-tags", "x-next-revalidate-tag-token"] }, "/developers/api": { "experimentalBypassFor": [{ "type": "header", "key": "Next-Action" }, { "type": "header", "key": "content-type", "value": "multipart/form-data;.*" }], "initialRevalidateSeconds": false, "srcRoute": "/developers/api", "dataRoute": "/developers/api.rsc", "allowHeader": ["host", "x-matched-path", "x-prerender-revalidate", "x-prerender-revalidate-if-generated", "x-next-revalidated-tags", "x-next-revalidate-tag-token"] }, "/galleries": { "experimentalBypassFor": [{ "type": "header", "key": "Next-Action" }, { "type": "header", "key": "content-type", "value": "multipart/form-data;.*" }], "initialRevalidateSeconds": 60, "initialExpireSeconds": 31536e3, "srcRoute": "/galleries", "dataRoute": "/galleries.rsc", "allowHeader": ["host", "x-matched-path", "x-prerender-revalidate", "x-prerender-revalidate-if-generated", "x-next-revalidated-tags", "x-next-revalidate-tag-token"] }, "/": { "experimentalBypassFor": [{ "type": "header", "key": "Next-Action" }, { "type": "header", "key": "content-type", "value": "multipart/form-data;.*" }], "initialRevalidateSeconds": 900, "initialExpireSeconds": 31536e3, "srcRoute": "/", "dataRoute": "/index.rsc", "allowHeader": ["host", "x-matched-path", "x-prerender-revalidate", "x-prerender-revalidate-if-generated", "x-next-revalidated-tags", "x-next-revalidate-tag-token"] }, "/thank-you": { "experimentalBypassFor": [{ "type": "header", "key": "Next-Action" }, { "type": "header", "key": "content-type", "value": "multipart/form-data;.*" }], "initialRevalidateSeconds": false, "srcRoute": "/thank-you", "dataRoute": "/thank-you.rsc", "allowHeader": ["host", "x-matched-path", "x-prerender-revalidate", "x-prerender-revalidate-if-generated", "x-next-revalidated-tags", "x-next-revalidate-tag-token"] }, "/admin/api-customers": { "experimentalBypassFor": [{ "type": "header", "key": "Next-Action" }, { "type": "header", "key": "content-type", "value": "multipart/form-data;.*" }], "initialRevalidateSeconds": false, "srcRoute": "/admin/api-customers", "dataRoute": "/admin/api-customers.rsc", "allowHeader": ["host", "x-matched-path", "x-prerender-revalidate", "x-prerender-revalidate-if-generated", "x-next-revalidated-tags", "x-next-revalidate-tag-token"] }, "/admin/dashboard": { "experimentalBypassFor": [{ "type": "header", "key": "Next-Action" }, { "type": "header", "key": "content-type", "value": "multipart/form-data;.*" }], "initialRevalidateSeconds": false, "srcRoute": "/admin/dashboard", "dataRoute": "/admin/dashboard.rsc", "allowHeader": ["host", "x-matched-path", "x-prerender-revalidate", "x-prerender-revalidate-if-generated", "x-next-revalidated-tags", "x-next-revalidate-tag-token"] }, "/admin": { "experimentalBypassFor": [{ "type": "header", "key": "Next-Action" }, { "type": "header", "key": "content-type", "value": "multipart/form-data;.*" }], "initialRevalidateSeconds": false, "srcRoute": "/admin", "dataRoute": "/admin.rsc", "allowHeader": ["host", "x-matched-path", "x-prerender-revalidate", "x-prerender-revalidate-if-generated", "x-next-revalidated-tags", "x-next-revalidate-tag-token"] }, "/admin/backlink-opportunities": { "experimentalBypassFor": [{ "type": "header", "key": "Next-Action" }, { "type": "header", "key": "content-type", "value": "multipart/form-data;.*" }], "initialRevalidateSeconds": false, "srcRoute": "/admin/backlink-opportunities", "dataRoute": "/admin/backlink-opportunities.rsc", "allowHeader": ["host", "x-matched-path", "x-prerender-revalidate", "x-prerender-revalidate-if-generated", "x-next-revalidated-tags", "x-next-revalidate-tag-token"] }, "/admin/api-leads": { "experimentalBypassFor": [{ "type": "header", "key": "Next-Action" }, { "type": "header", "key": "content-type", "value": "multipart/form-data;.*" }], "initialRevalidateSeconds": false, "srcRoute": "/admin/api-leads", "dataRoute": "/admin/api-leads.rsc", "allowHeader": ["host", "x-matched-path", "x-prerender-revalidate", "x-prerender-revalidate-if-generated", "x-next-revalidated-tags", "x-next-revalidate-tag-token"] }, "/admin/security/cloudflare-rules": { "experimentalBypassFor": [{ "type": "header", "key": "Next-Action" }, { "type": "header", "key": "content-type", "value": "multipart/form-data;.*" }], "initialRevalidateSeconds": false, "srcRoute": "/admin/security/cloudflare-rules", "dataRoute": "/admin/security/cloudflare-rules.rsc", "allowHeader": ["host", "x-matched-path", "x-prerender-revalidate", "x-prerender-revalidate-if-generated", "x-next-revalidated-tags", "x-next-revalidate-tag-token"] }, "/admin/bulk": { "experimentalBypassFor": [{ "type": "header", "key": "Next-Action" }, { "type": "header", "key": "content-type", "value": "multipart/form-data;.*" }], "initialRevalidateSeconds": false, "srcRoute": "/admin/bulk", "dataRoute": "/admin/bulk.rsc", "allowHeader": ["host", "x-matched-path", "x-prerender-revalidate", "x-prerender-revalidate-if-generated", "x-next-revalidated-tags", "x-next-revalidate-tag-token"] }, "/admin/quality": { "experimentalBypassFor": [{ "type": "header", "key": "Next-Action" }, { "type": "header", "key": "content-type", "value": "multipart/form-data;.*" }], "initialRevalidateSeconds": false, "srcRoute": "/admin/quality", "dataRoute": "/admin/quality.rsc", "allowHeader": ["host", "x-matched-path", "x-prerender-revalidate", "x-prerender-revalidate-if-generated", "x-next-revalidated-tags", "x-next-revalidate-tag-token"] }, "/admin/security": { "experimentalBypassFor": [{ "type": "header", "key": "Next-Action" }, { "type": "header", "key": "content-type", "value": "multipart/form-data;.*" }], "initialRevalidateSeconds": false, "srcRoute": "/admin/security", "dataRoute": "/admin/security.rsc", "allowHeader": ["host", "x-matched-path", "x-prerender-revalidate", "x-prerender-revalidate-if-generated", "x-next-revalidated-tags", "x-next-revalidate-tag-token"] }, "/admin/photos": { "experimentalBypassFor": [{ "type": "header", "key": "Next-Action" }, { "type": "header", "key": "content-type", "value": "multipart/form-data;.*" }], "initialRevalidateSeconds": false, "srcRoute": "/admin/photos", "dataRoute": "/admin/photos.rsc", "allowHeader": ["host", "x-matched-path", "x-prerender-revalidate", "x-prerender-revalidate-if-generated", "x-next-revalidated-tags", "x-next-revalidate-tag-token"] }, "/admin/system-health": { "experimentalBypassFor": [{ "type": "header", "key": "Next-Action" }, { "type": "header", "key": "content-type", "value": "multipart/form-data;.*" }], "initialRevalidateSeconds": false, "srcRoute": "/admin/system-health", "dataRoute": "/admin/system-health.rsc", "allowHeader": ["host", "x-matched-path", "x-prerender-revalidate", "x-prerender-revalidate-if-generated", "x-next-revalidated-tags", "x-next-revalidate-tag-token"] } }, "dynamicRoutes": {}, "notFoundRoutes": [], "preview": { "previewModeId": "de05949340251138b735cb7da7262aad", "previewModeSigningKey": "a68de5c563e4d94dfd6c07d4067cbd56dc141cd8d65eb4317bc077a22b818404", "previewModeEncryptionKey": "4642ae848e40fda318235374972c45a23a3eeb941d5075a7fadf97c2d9344d3f" } };
+var MiddlewareManifest = { "version": 3, "middleware": { "/": { "files": ["server/edge-runtime-webpack.js", "server/middleware.js"], "name": "middleware", "page": "/", "matchers": [{ "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/admin(\\.json)?[\\/#\\?]?$", "originalSource": "/admin" }, { "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/article\\/whale-watching-costa-rica(\\.json)?[\\/#\\?]?$", "originalSource": "/article/whale-watching-costa-rica" }, { "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/article\\/humpback-whale-costa-rica(\\.json)?[\\/#\\?]?$", "originalSource": "/article/humpback-whale-costa-rica" }, { "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/article\\/humpback-whale-costa-rica-photography-guide(\\.json)?[\\/#\\?]?$", "originalSource": "/article/humpback-whale-costa-rica-photography-guide" }, { "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/article\\/humpback-whale-costa-rica-photography-guide-2026(\\.json)?[\\/#\\?]?$", "originalSource": "/article/humpback-whale-costa-rica-photography-guide-2026" }, { "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/article\\/humpback-whale-photography-costa-rica-guide(\\.json)?[\\/#\\?]?$", "originalSource": "/article/humpback-whale-photography-costa-rica-guide" }, { "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/article\\/whale-watching-dolphin-encounters-costa-rica-2026(\\.json)?[\\/#\\?]?$", "originalSource": "/article/whale-watching-dolphin-encounters-costa-rica-2026" }, { "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/article\\/playa-hermosa-guanacaste(\\.json)?[\\/#\\?]?$", "originalSource": "/article/playa-hermosa-guanacaste" }, { "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/article\\/playa-hermosa-guanacaste-costa-rica(\\.json)?[\\/#\\?]?$", "originalSource": "/article/playa-hermosa-guanacaste-costa-rica" }, { "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/article\\/playa-hermosa-guanacaste-complete-photography-guide(\\.json)?[\\/#\\?]?$", "originalSource": "/article/playa-hermosa-guanacaste-complete-photography-guide" }, { "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/article\\/playa-hermosa-guanacaste-costa-rica-2026-photography-guide(\\.json)?[\\/#\\?]?$", "originalSource": "/article/playa-hermosa-guanacaste-costa-rica-2026-photography-guide" }, { "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/article\\/playa-hermosa-jaco-garabito(\\.json)?[\\/#\\?]?$", "originalSource": "/article/playa-hermosa-jaco-garabito" }, { "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/article\\/jaco-beach-playa-hermosa-central-pacific-photography-guide(\\.json)?[\\/#\\?]?$", "originalSource": "/article/jaco-beach-playa-hermosa-central-pacific-photography-guide" }], "wasm": [], "assets": [], "env": { "__NEXT_BUILD_ID": "3GFPjCmI5WNL1yS60hdal", "NEXT_SERVER_ACTIONS_ENCRYPTION_KEY": "xU9GXIgSySbsny6iMK50KTuElkxygxkTX6mmttVpyao=", "__NEXT_PREVIEW_MODE_ID": "de05949340251138b735cb7da7262aad", "__NEXT_PREVIEW_MODE_SIGNING_KEY": "a68de5c563e4d94dfd6c07d4067cbd56dc141cd8d65eb4317bc077a22b818404", "__NEXT_PREVIEW_MODE_ENCRYPTION_KEY": "4642ae848e40fda318235374972c45a23a3eeb941d5075a7fadf97c2d9344d3f" } } }, "functions": {}, "sortedMiddleware": ["/"] };
+var AppPathRoutesManifest = { "/api/admin/auth/login/route": "/api/admin/auth/login", "/api/admin/backlink-opportunities/route": "/api/admin/backlink-opportunities", "/api/admin/bulk/route": "/api/admin/bulk", "/api/admin/galleries/route": "/api/admin/galleries", "/api/admin/photos/[id]/route": "/api/admin/photos/[id]", "/api/admin/photos/route": "/api/admin/photos", "/api/admin/quality/route": "/api/admin/quality", "/api/admin/stats/route": "/api/admin/stats", "/api/admin/security/route": "/api/admin/security", "/api/orders/create/route": "/api/orders/create", "/api/orders/return/route": "/api/orders/return", "/api/download/[photoId]/route": "/api/download/[photoId]", "/api/paypal/checkout/route": "/api/paypal/checkout", "/api/paypal/ipn-placeholder/route": "/api/paypal/ipn-placeholder", "/api/paypal/webhook/route": "/api/paypal/webhook", "/api/sitemap/articles/route": "/api/sitemap/articles", "/api/sitemap/galleries/route": "/api/sitemap/galleries", "/api/sitemap/locations/route": "/api/sitemap/locations", "/api/sitemap/photos/route": "/api/sitemap/photos", "/api/sitemap/species/route": "/api/sitemap/species", "/robots.txt/route": "/robots.txt", "/api/admin/api-customers/[id]/deactivate/route": "/api/admin/api-customers/[id]/deactivate", "/api/admin/api-customers/[id]/revoke/route": "/api/admin/api-customers/[id]/revoke", "/api/account/me/route": "/api/account/me", "/api/admin/api-customers/[id]/route": "/api/admin/api-customers/[id]", "/api/admin/api-customers/route": "/api/admin/api-customers", "/api/admin/api-leads/[id]/route": "/api/admin/api-leads/[id]", "/api/admin/api-leads/[id]/onboard/route": "/api/admin/api-leads/[id]/onboard", "/api/admin/api-leads/route": "/api/admin/api-leads", "/api/admin/system-health/route": "/api/admin/system-health", "/api/diag-galleries/route": "/api/diag-galleries", "/api/api-access/apply/route": "/api/api-access/apply", "/api/public/locations/route": "/api/public/locations", "/api/public/gallery/[slug]/route": "/api/public/gallery/[slug]", "/api/public/location/[slug]/route": "/api/public/location/[slug]", "/api/public/region/route": "/api/public/region", "/api/public/region/[slug]/route": "/api/public/region/[slug]", "/api/photos/related/[id]/route": "/api/photos/related/[id]", "/api/public/tag/[keywordSlug]/route": "/api/public/tag/[keywordSlug]", "/api/robots/route": "/api/robots", "/api/public/photos/[slug]/route": "/api/public/photos/[slug]", "/api/sitemap-index/route": "/api/sitemap-index", "/api/test-simple/route": "/api/test-simple", "/api/sitemap/route": "/api/sitemap", "/api/public/search/route": "/api/public/search", "/api/search/route": "/api/search", "/api/v1/search/route": "/api/v1/search", "/api/v1/usage/route": "/api/v1/usage", "/api/visit/route": "/api/visit", "/_not-found/page": "/_not-found", "/account/api/page": "/account/api", "/search/page": "/search", "/api-access/page": "/api-access", "/buy/[slug]/page": "/buy/[slug]", "/galleries/page": "/galleries", "/article/[slug]/page": "/article/[slug]", "/guides/[slug]/page": "/guides/[slug]", "/location/[slug]/page": "/location/[slug]", "/gallery/[slug]/page": "/gallery/[slug]", "/developers/api/page": "/developers/api", "/payment-cancelled/page": "/payment-cancelled", "/map/page": "/map", "/article/page": "/article", "/region/page": "/region", "/location/page": "/location", "/photo/[slug]/page": "/photo/[slug]", "/page": "/", "/species/page": "/species", "/thank-you/page": "/thank-you", "/photography-featured/page": "/photography-featured", "/region/[slug]/page": "/region/[slug]", "/species/[slug]/page": "/species/[slug]", "/admin/api-customers/page": "/admin/api-customers", "/admin/bulk/page": "/admin/bulk", "/admin/api-leads/page": "/admin/api-leads", "/admin/dashboard/page": "/admin/dashboard", "/admin/page": "/admin", "/admin/photos/page": "/admin/photos", "/admin/photos/[id]/page": "/admin/photos/[id]", "/admin/security/cloudflare-rules/page": "/admin/security/cloudflare-rules", "/admin/quality/page": "/admin/quality", "/admin/backlink-opportunities/page": "/admin/backlink-opportunities", "/admin/security/page": "/admin/security", "/admin/system-health/page": "/admin/system-health" };
 var FunctionsConfigManifest = { "version": 1, "functions": {} };
 var PagesManifest = { "/_app": "pages/_app.js", "/_error": "pages/_error.js", "/_document": "pages/_document.js", "/404": "pages/404.html" };
 process.env.NEXT_BUILD_ID = BuildId;

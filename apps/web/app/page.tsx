@@ -44,16 +44,59 @@ const FEATURED_TOURS = [
   { id: 4, title: 'Carara & Pacific Coast Macaws', operator: 'Pacific Wings', location: 'Carara', days: 4, price_usd: 320, is_partner: false },
 ];
 
+async function fetchWithTimeout<T>(fn: () => Promise<T>, ms: number, fallback: T): Promise<T> {
+  try {
+    return await Promise.race([
+      fn(),
+      new Promise<never>((_, reject) =>
+        setTimeout(() => reject(new Error(`TIMEOUT_${ms}ms`)), ms)
+      ),
+    ]) as T;
+  } catch {
+    return fallback;
+  }
+}
+
 export default async function Home() {
-  const [galleries, recentPhotos, randomPhotos, popularPhotos, species, articles] =
-    await Promise.all([
-      getGalleries(),
-      getAllPhotos(8),
-      getRandomPhotos(6),
-      getPopularPhotos(8),
-      getAllSpecies(),
-      getAllArticles(),
-    ]);
+  // Parallel fetch with timeout protection + outer error boundary
+  let galleries: any[] = [], recentPhotos: any[] = [], randomPhotos: any[] = [], popularPhotos: any[] = [], species: any[] = [], articles: any[] = [];
+  try {
+    [galleries, recentPhotos, randomPhotos, popularPhotos, species, articles] =
+      await Promise.all([
+        fetchWithTimeout<any[]>(
+          () => getGalleries(),
+          8000,
+          [] as unknown as any[]
+        ),
+        fetchWithTimeout<any[]>(
+          () => getAllPhotos(8),
+          8000,
+          [] as unknown as any[]
+        ),
+        fetchWithTimeout<any[]>(
+          () => getRandomPhotos(6),
+          8000,
+          [] as unknown as any[]
+        ),
+        fetchWithTimeout<any[]>(
+          () => getPopularPhotos(8),
+          8000,
+          [] as unknown as any[]
+        ),
+        fetchWithTimeout<any[]>(
+          () => getAllSpecies(),
+          8000,
+          [] as unknown as any[]
+        ),
+        fetchWithTimeout<any[]>(
+          () => getAllArticles(),
+          8000,
+          [] as unknown as any[]
+        ),
+      ]);
+  } catch (e) {
+    console.error('[homepage] data fetch error:', e);
+  }
 
   const featuredSpecies = species.slice(0, 12);
   const featuredArticles = articles.slice(0, 3);
